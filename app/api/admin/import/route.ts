@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     const url = rawUrl.trim();
     if (!url) continue;
 
-    const { asin, tag, cleanUrl } = parseAmazonUrl(url);
+    const { asin, cleanUrl } = parseAmazonUrl(url);
 
     // Try to fetch Amazon metadata (graceful fallback if blocked)
     const meta = asin ? await fetchAmazonMeta(asin) : { title: '', image: '', price: '' };

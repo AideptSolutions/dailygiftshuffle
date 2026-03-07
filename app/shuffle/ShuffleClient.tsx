@@ -7,7 +7,7 @@ import WishlistModal from '@/components/WishlistModal';
 import AdSlot from '@/components/AdSlot';
 import { shuffleMultiple, clearShownIds } from '@/lib/shuffle';
 
-import { products as staticProducts, Product, Recipient, BudgetTier, Occasion, NicheTag } from '@/data/products';
+import { Product, Recipient, BudgetTier, Occasion, NicheTag } from '@/data/products';
 import { useFavorites } from '@/lib/useFavorites';
 
 const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
@@ -68,7 +68,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-function ProductCard({ product, onSave, isSaved }: { product: Product; onSave: () => void; isSaved: boolean }) {
+function ProductCard({ product }: { product: Product; onSave?: () => void; isSaved?: boolean }) {
   const { toggle: toggleFavorite, isFavorited } = useFavorites();
   return (
     <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm overflow-hidden flex flex-col">
