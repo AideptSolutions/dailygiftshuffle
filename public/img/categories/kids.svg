@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#B7791F"/>
+  <!-- Five-point star -->
+  <polygon points="
+    200,80
+    224,155 302,155
+    240,200 264,278
+    200,233 136,278
+    160,200 98,155
+    176,155
+  " fill="white"/>
+</svg>

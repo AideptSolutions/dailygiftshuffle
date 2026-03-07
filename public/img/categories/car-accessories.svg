@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#1A365D"/>
+  <!-- Car body lower -->
+  <rect x="70" y="220" width="260" height="80" rx="16" fill="white"/>
+  <!-- Car body upper (cabin) -->
+  <path d="M120 220 L140 155 Q145 140 165 140 L235 140 Q255 140 260 155 L280 220 Z" fill="white"/>
+  <!-- Windshield -->
+  <path d="M148 215 L162 160 Q165 152 175 152 L225 152 Q235 152 238 160 L252 215 Z" fill="#1A365D" opacity="0.3"/>
+  <!-- Left wheel -->
+  <circle cx="128" cy="300" r="38" fill="#1A365D"/>
+  <circle cx="128" cy="300" r="24" fill="white"/>
+  <circle cx="128" cy="300" r="10" fill="#1A365D"/>
+  <!-- Right wheel -->
+  <circle cx="272" cy="300" r="38" fill="#1A365D"/>
+  <circle cx="272" cy="300" r="24" fill="white"/>
+  <circle cx="272" cy="300" r="10" fill="#1A365D"/>
+  <!-- Left headlight -->
+  <rect x="75" y="238" width="32" height="18" rx="6" fill="#1A365D" opacity="0.25"/>
+  <!-- Right taillight -->
+  <rect x="293" y="238" width="32" height="18" rx="6" fill="#1A365D" opacity="0.25"/>
+</svg>

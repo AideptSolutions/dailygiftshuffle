@@ -1,0 +1,32 @@
+[
+  {
+    "email": "test@example.com",
+    "productId": "her-u25-1",
+    "timestamp": "2026-03-05T00:00:00Z"
+  },
+  {
+    "email": "test@example.com",
+    "productId": "prod-1",
+    "timestamp": "2026-03-07T07:23:02.127Z"
+  },
+  {
+    "email": "test@example.com",
+    "productId": "prod-1",
+    "timestamp": "2026-03-07T07:23:02.143Z"
+  },
+  {
+    "email": "test@example.com",
+    "productId": "prod-1",
+    "timestamp": "2026-03-07T07:23:02.159Z"
+  },
+  {
+    "email": "test@example.com",
+    "productId": "prod-1",
+    "timestamp": "2026-03-07T07:23:02.172Z"
+  },
+  {
+    "email": "test@example.com",
+    "productId": "prod-1",
+    "timestamp": "2026-03-07T07:23:02.201Z"
+  }
+]

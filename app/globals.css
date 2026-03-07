@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --coral: #E64126;
+  --golden: #FFD93D;
+}
+
+body {
+  color: #1A202C;
+  background: #FFFAF5;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ── Star ratings ────────────────────────────────────────────────────────── */
+.star-gold {
+  color: #D69E2E;
+}
+
+/* ── Primary CTA (Shuffle buttons) ──────────────────────────────────────── */
+.btn-shuffle {
+  background: #E64126;
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(230, 65, 38, 0.35);
+}
+
+.btn-shuffle:hover {
+  background: linear-gradient(135deg, #E64126 0%, #FF7F50 100%);
+  box-shadow: 0 6px 20px rgba(230, 65, 38, 0.45);
+}
+
+.btn-shuffle:active {
+  opacity: 0.9;
+}
+
+/* ── Affiliate / Amazon buttons ─────────────────────────────────────────── */
+.btn-amazon {
+  background: #232F3E;
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.btn-amazon:hover {
+  background: #1a2530;
+}

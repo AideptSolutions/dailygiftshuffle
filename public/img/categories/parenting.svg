@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#97266D"/>
+  <!-- Baby bottle body -->
+  <path d="M162 195 L162 305 Q162 330 200 330 Q238 330 238 305 L238 195 Z" fill="white"/>
+  <!-- Bottle neck -->
+  <rect x="172" y="158" width="56" height="45" rx="6" fill="white"/>
+  <!-- Collar ring -->
+  <rect x="162" y="188" width="76" height="16" rx="5" fill="white"/>
+  <!-- Nipple -->
+  <path d="M183 158 Q183 130 200 118 Q217 130 217 158 Z" fill="white"/>
+  <!-- Nipple tip -->
+  <circle cx="200" cy="118" r="10" fill="white"/>
+  <!-- Milk level line -->
+  <rect x="168" y="260" width="64" height="8" rx="4" fill="#97266D" opacity="0.2"/>
+  <!-- Measurement marks -->
+  <rect x="237" y="220" width="8" height="3" rx="1" fill="#97266D" opacity="0.3"/>
+  <rect x="237" y="245" width="8" height="3" rx="1" fill="#97266D" opacity="0.3"/>
+  <rect x="237" y="270" width="8" height="3" rx="1" fill="#97266D" opacity="0.3"/>
+  <rect x="237" y="295" width="8" height="3" rx="1" fill="#97266D" opacity="0.3"/>
+</svg>

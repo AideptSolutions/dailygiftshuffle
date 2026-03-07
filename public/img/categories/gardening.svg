@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#276749"/>
+  <!-- Main stem -->
+  <path d="M200 320 Q200 240 200 180" stroke="white" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- Right large leaf -->
+  <path d="M200 220 Q255 185 275 145 Q230 148 200 220 Z" fill="white"/>
+  <!-- Left large leaf -->
+  <path d="M200 255 Q145 220 125 180 Q170 183 200 255 Z" fill="white"/>
+  <!-- Right small leaf -->
+  <path d="M200 180 Q240 150 252 115 Q218 125 200 180 Z" fill="white" opacity="0.8"/>
+  <!-- Sprout top bud -->
+  <circle cx="200" cy="155" r="28" fill="white"/>
+  <!-- Bud detail -->
+  <path d="M185 155 Q200 130 215 155" stroke="#276749" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Ground line -->
+  <rect x="140" y="315" width="120" height="16" rx="8" fill="white" opacity="0.5"/>
+</svg>

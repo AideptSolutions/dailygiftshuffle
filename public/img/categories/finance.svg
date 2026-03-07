@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#22543D"/>
+  <!-- Coin outer circle -->
+  <circle cx="200" cy="200" r="120" fill="white"/>
+  <!-- Coin inner circle -->
+  <circle cx="200" cy="200" r="100" fill="#22543D"/>
+  <!-- Dollar sign vertical bar -->
+  <rect x="193" y="130" width="14" height="140" rx="5" fill="white"/>
+  <!-- Dollar sign top curve (S upper) -->
+  <path d="M200 145 Q240 145 240 175 Q240 200 200 200" stroke="white" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- Dollar sign bottom curve (S lower) -->
+  <path d="M200 200 Q160 200 160 228 Q160 258 200 258" stroke="white" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <!-- Coin ridged edge detail -->
+  <circle cx="200" cy="200" r="113" fill="none" stroke="white" stroke-width="4" stroke-dasharray="12 8"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#553C9A"/>
+  <!-- Controller body -->
+  <path d="M110 170 Q100 160 100 185 L108 255 Q112 280 135 285 L175 285 Q190 265 200 265 Q210 265 225 285 L265 285 Q288 280 292 255 L300 185 Q300 160 290 170 Q270 155 200 155 Q130 155 110 170 Z" fill="white"/>
+  <!-- D-pad horizontal -->
+  <rect x="133" y="200" width="50" height="18" rx="4" fill="#553C9A"/>
+  <!-- D-pad vertical -->
+  <rect x="149" y="184" width="18" height="50" rx="4" fill="#553C9A"/>
+  <!-- Right buttons (ABXY style) -->
+  <circle cx="258" cy="200" r="9" fill="#553C9A"/>
+  <circle cx="275" cy="216" r="9" fill="#553C9A"/>
+  <circle cx="241" cy="216" r="9" fill="#553C9A"/>
+  <circle cx="258" cy="232" r="9" fill="#553C9A"/>
+  <!-- Center buttons -->
+  <rect x="186" y="206" width="12" height="10" rx="3" fill="#553C9A"/>
+  <rect x="202" y="206" width="12" height="10" rx="3" fill="#553C9A"/>
+  <!-- Left bump -->
+  <ellipse cx="140" cy="163" rx="28" ry="10" fill="white" opacity="0.5"/>
+  <!-- Right bump -->
+  <ellipse cx="260" cy="163" rx="28" ry="10" fill="white" opacity="0.5"/>
+</svg>

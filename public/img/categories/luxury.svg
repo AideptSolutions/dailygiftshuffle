@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#97266D"/>
+  <!-- Diamond gem shape -->
+  <!-- Top facets -->
+  <polygon points="200,95 260,165 200,145 140,165" fill="white"/>
+  <!-- Upper girdle -->
+  <polygon points="140,165 200,145 260,165 290,165 260,165 200,145 140,165 110,165" fill="white" opacity="0.9"/>
+  <!-- Wide girdle band -->
+  <polygon points="110,165 290,165 260,165 140,165" fill="white"/>
+  <!-- Bottom facets -->
+  <polygon points="110,165 140,165 200,310 " fill="white" opacity="0.75"/>
+  <polygon points="140,165 260,165 200,310" fill="white" opacity="0.9"/>
+  <polygon points="260,165 290,165 200,310" fill="white" opacity="0.75"/>
+  <!-- Top flat face -->
+  <polygon points="200,95 260,165 140,165" fill="white" opacity="0.5"/>
+  <!-- Inner highlight line -->
+  <line x1="200" y1="95" x2="200" y2="145" stroke="#97266D" stroke-width="2" opacity="0.3"/>
+</svg>

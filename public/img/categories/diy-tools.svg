@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#7B341E"/>
+  <!-- Wrench handle -->
+  <rect x="188" y="195" width="24" height="145" rx="10" fill="white"/>
+  <!-- Wrench head (open end) -->
+  <path d="M155 140 Q142 110 160 90 Q175 75 200 80 Q225 75 240 90 Q258 110 245 140 L230 155 L230 195 L170 195 L170 155 Z" fill="white"/>
+  <!-- Wrench jaw opening (top) -->
+  <path d="M163 115 Q163 95 200 95 Q237 95 237 115 L237 135 Q237 145 220 148 L180 148 Q163 145 163 135 Z" fill="#7B341E"/>
+  <!-- Wrench inner cutout (open end gap) -->
+  <rect x="180" y="88" width="40" height="35" rx="4" fill="#7B341E"/>
+  <!-- Handle grip lines -->
+  <rect x="190" y="225" width="20" height="5" rx="2" fill="#7B341E" opacity="0.25"/>
+  <rect x="190" y="242" width="20" height="5" rx="2" fill="#7B341E" opacity="0.25"/>
+  <rect x="190" y="259" width="20" height="5" rx="2" fill="#7B341E" opacity="0.25"/>
+  <rect x="190" y="276" width="20" height="5" rx="2" fill="#7B341E" opacity="0.25"/>
+</svg>

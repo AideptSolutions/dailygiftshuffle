@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#2B6CB0"/>
+  <!-- Trophy cup body -->
+  <path d="M148 155 L148 248 Q148 268 200 272 Q252 268 252 248 L252 155 Z" fill="white"/>
+  <!-- Trophy cup rim -->
+  <rect x="138" y="145" width="124" height="20" rx="8" fill="white"/>
+  <!-- Left handle -->
+  <path d="M148 170 Q105 170 105 205 Q105 240 148 240" stroke="white" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <!-- Right handle -->
+  <path d="M252 170 Q295 170 295 205 Q295 240 252 240" stroke="white" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <!-- Trophy stem -->
+  <rect x="188" y="270" width="24" height="45" rx="4" fill="white"/>
+  <!-- Trophy base plate -->
+  <rect x="148" y="308" width="104" height="22" rx="8" fill="white"/>
+  <!-- Star on cup -->
+  <polygon points="200,180 207,200 228,200 212,213 218,233 200,221 182,233 188,213 172,200 193,200" fill="#2B6CB0"/>
+</svg>

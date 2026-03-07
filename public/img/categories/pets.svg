@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#7B341E"/>
+  <!-- Main paw pad (large center) -->
+  <ellipse cx="200" cy="240" rx="70" ry="60" fill="white"/>
+  <!-- Top-left toe pad -->
+  <ellipse cx="138" cy="168" rx="28" ry="32" fill="white"/>
+  <!-- Top-center toe pad -->
+  <ellipse cx="200" cy="148" rx="28" ry="32" fill="white"/>
+  <!-- Top-right toe pad -->
+  <ellipse cx="262" cy="168" rx="28" ry="32" fill="white"/>
+  <!-- Small inner toe (left) -->
+  <ellipse cx="155" cy="205" rx="20" ry="22" fill="white"/>
+  <!-- Small inner toe (right) -->
+  <ellipse cx="245" cy="205" rx="20" ry="22" fill="white"/>
+  <!-- Center pad details (darker spots) -->
+  <ellipse cx="200" cy="240" rx="42" ry="36" fill="#7B341E" opacity="0.12"/>
+</svg>
