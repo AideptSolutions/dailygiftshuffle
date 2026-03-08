@@ -910,7 +910,7 @@
         "image":  "https://m.media-amazon.com/images/I/71qZ1jkOlyL._AC_SL1500_.jpg",
         "rating":  4.7,
         "reviewCount":  18432,
-        "affiliateUrl":  "https://www.amazon.com/dp/B0DBPXDYWT?tag=dailygiftshuf-20",
+        "affiliateUrl":  "https://www.amazon.com/dp/B0DBPXDYWT?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=86603a044a6666299bcb3a6a6b87fbaf\u0026language=en_US\u0026ref_=as_li_ss_tl",
         "asin":  "B0DBPXDYWT",
         "recipients":  [
                            "kids",
@@ -930,6 +930,6 @@
         "status":  "published",
         "cranes":  true,
         "createdAt":  "2026-03-08T13:13:08.9743531-07:00",
-        "updatedAt":  "2026-03-08T13:13:08.9743531-07:00"
+        "updatedAt":  "2026-03-08T13:15:17.0091073-07:00"
     }
 ]
