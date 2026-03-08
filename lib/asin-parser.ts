@@ -33,7 +33,7 @@ export async function fetchAmazonMeta(asin: string): Promise<{ title: string; im
         'Accept-Language': 'en-US,en;q=0.9',
         'Accept': 'text/html,application/xhtml+xml',
       },
-      signal: AbortSignal.timeout(8000),
+      signal: AbortSignal.timeout(3000),
     });
 
     if (!res.ok) return { title: '', image: '', price: '' };
