@@ -48,8 +48,8 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
-              { step: '1', title: 'Pick a Recipient', desc: 'Choose from 10 categories — Mom, Dad, Teens, Pets, and more.' },
-              { step: '2', title: 'Set Your Budget',  desc: 'Six budget tiers from under $25 to $250+.' },
+              { step: '1', title: 'Pick a Recipient', desc: 'Choose from 18 recipient types — Mom, Dad, Teens, Couples, Pets, and more.' },
+              { step: '2', title: 'Set Your Budget',  desc: 'Nine budget tiers from under $25 to $250+.' },
               { step: '3', title: 'Hit Shuffle',      desc: 'Get an instant curated gift with a buy link and save it to your wishlist.' },
             ].map((item) => (
               <div key={item.step} className="text-center">
