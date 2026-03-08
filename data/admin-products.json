@@ -966,5 +966,165 @@
         "cranes":  true,
         "createdAt":  "2026-03-08T13:36:57.6666459-07:00",
         "updatedAt":  "2026-03-08T13:36:57.6666459-07:00"
+    },
+    {
+        "id":  "admin-20260308134558a-crane",
+        "name":  "Nutramax Dermaquin Skin \u0026 Coat Supplement for Small Dogs",
+        "description":  "Vet-recommended skin and coat supplement for small dogs. Supports healthy skin barrier and reduces allergen sensitivity. Soft chews with omega fatty acids, biotin, and zinc.",
+        "price":  27.99,
+        "priceDisplay":  "$27.99",
+        "image":  "https://m.media-amazon.com/images/I/71hV+d+BRKL._AC_SL1500_.jpg",
+        "rating":  4.6,
+        "reviewCount":  4821,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0BVC79473?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=103d83adf916c8690f38c79d56b748f2\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B0BVC79473",
+        "recipients":  [
+                           "pets",
+                           "dad",
+                           "mom",
+                           "friends"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "pets",
+                     "dogs",
+                     "health"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:45:58.9720133-07:00",
+        "updatedAt":  "2026-03-08T13:45:58.9720133-07:00"
+    },
+    {
+        "id":  "admin-20260308134558b-crane",
+        "name":  "Cosequin Minis Soft Chews — Max Strength with MSM + Omega-3 (Small Dogs)",
+        "description":  "Maximum strength joint health soft chews for small dogs. Contains glucosamine, chondroitin, MSM, and omega-3s to support mobility and cartilage health. Easy to give as a treat.",
+        "price":  34.99,
+        "priceDisplay":  "$34.99",
+        "image":  "https://m.media-amazon.com/images/I/71lF5rBgTQL._AC_SL1500_.jpg",
+        "rating":  4.7,
+        "reviewCount":  12043,
+        "affiliateUrl":  "https://www.amazon.com/s?k=cosequin+minis+soft+chews+maximum+strength+with+msm+plus+omega3\u0026linkCode=ll2\u0026tag=dailygiftshuf-20\u0026linkId=cb62debaed53cea7bae4a228369784fc\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "",
+        "recipients":  [
+                           "pets",
+                           "dad",
+                           "mom",
+                           "friends"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "pets",
+                     "dogs",
+                     "health"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:45:58.9720133-07:00",
+        "updatedAt":  "2026-03-08T13:45:58.9720133-07:00"
+    },
+    {
+        "id":  "admin-20260308134558c-crane",
+        "name":  "Greenies Pill Pockets for Dogs — Small Size, Chicken Flavor",
+        "description":  "The easy way to give your dog their medication. Soft, moldable pockets that mask the smell and taste of pills. Dogs think it\u0027s a treat. Made with natural ingredients, minerals, and vitamins.",
+        "price":  11.99,
+        "priceDisplay":  "$11.99",
+        "image":  "https://m.media-amazon.com/images/I/71t4pJbqikL._AC_SL1500_.jpg",
+        "rating":  4.8,
+        "reviewCount":  61234,
+        "affiliateUrl":  "https://www.amazon.com/dp/B001BS9P0Q?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=f8712353276efea9d5ec23730cdf41df\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B001BS9P0Q",
+        "recipients":  [
+                           "pets",
+                           "dad",
+                           "mom",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "pets",
+                     "dogs"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:45:58.9720133-07:00",
+        "updatedAt":  "2026-03-08T13:45:58.9720133-07:00"
+    },
+    {
+        "id":  "admin-20260308134558d-crane",
+        "name":  "Fairlife Core Power Elite Protein Shake — Vanilla, 42g Protein",
+        "description":  "42g of high-quality protein per bottle — one of the highest on the market. Smooth vanilla flavor, no artificial sweeteners. Perfect post-workout or as a meal replacement.",
+        "price":  31.99,
+        "priceDisplay":  "$31.99",
+        "image":  "https://m.media-amazon.com/images/I/71b9bS1FUVL._AC_SL1500_.jpg",
+        "rating":  4.7,
+        "reviewCount":  28904,
+        "affiliateUrl":  "https://www.amazon.com/s?k=core+power+elite+high+protein+shake+vanilla+42g+bottle\u0026linkCode=ll2\u0026tag=dailygiftshuf-20\u0026linkId=7b5a9fb2cceaeea98a176da0d9c61a5b\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "",
+        "recipients":  [
+                           "him",
+                           "her",
+                           "friends",
+                           "teens",
+                           "coworker"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+                          "birthday",
+                          "justBecause"
+                      ],
+        "tags":  [
+                     "fitness",
+                     "health",
+                     "food"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:45:58.9720133-07:00",
+        "updatedAt":  "2026-03-08T13:45:58.9720133-07:00"
+    },
+    {
+        "id":  "admin-20260308134558e-crane",
+        "name":  "Wet Brush Original Detangler Hair Brush",
+        "description":  "The original detangling brush with IntelliFlex bristles that glide through knots and tangles without ripping or pulling. Gentle on all hair types — works on wet or dry hair.",
+        "price":  9.99,
+        "priceDisplay":  "$9.99",
+        "image":  "https://m.media-amazon.com/images/I/61pMMSFPq1L._AC_SL1500_.jpg",
+        "rating":  4.8,
+        "reviewCount":  187432,
+        "affiliateUrl":  "https://www.amazon.com/dp/B005LPN8R6?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=85f27ac8d25ace7386f8b907ff04032a\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B005LPN8R6",
+        "recipients":  [
+                           "her",
+                           "mom",
+                           "sister",
+                           "teens",
+                           "kids",
+                           "grandparents"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+                          "birthday",
+                          "justBecause",
+                          "holiday"
+                      ],
+        "tags":  [
+                     "beauty",
+                     "hair",
+                     "selfcare"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:45:58.9720133-07:00",
+        "updatedAt":  "2026-03-08T13:45:58.9720133-07:00"
     }
 ]
