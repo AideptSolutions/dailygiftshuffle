@@ -150,7 +150,7 @@ export default function SelectionsPage() {
               </div>
 
               <p className="text-xs text-gray-300 text-center mt-4">
-                As an Amazon Associate, DailyGiftShuffle earns from qualifying purchases.
+                As an Amazon Associate, TheGiftShuffle earns from qualifying purchases.
               </p>
             </div>
 

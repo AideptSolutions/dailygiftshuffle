@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 
 export const metadata: Metadata = {
-  title: 'DailyGiftShuffle — Find the Perfect Gift in Seconds',
+  title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
 };
 
 const features = [

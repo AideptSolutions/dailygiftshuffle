@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Gift Categories - DailyGiftShuffle',
+  title: 'Gift Categories - TheGiftShuffle',
   description: 'Browse all gift categories. Find gifts by interest, hobby, or lifestyle.',
 };
 

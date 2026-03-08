@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://dailygiftshuffle.com/sitemap.xml',
+    sitemap: 'https://thegiftshuffle.com/sitemap.xml',
   };
 }

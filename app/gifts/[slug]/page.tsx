@@ -118,10 +118,10 @@ export async function generateMetadata(
   const { label, budget } = parseSlug(params.slug);
   const count = filterProducts(params.slug).length;
 
-  const title = `${label} | DailyGiftShuffle`;
+  const title = `${label} | TheGiftShuffle`;
   const description = budget
-    ? `Shop ${count} hand-picked ${label.toLowerCase()}. Curated by DailyGiftShuffle for every taste and style.`
-    : `Discover ${count} thoughtful ${label.toLowerCase()}. Find the perfect present with DailyGiftShuffle.`;
+    ? `Shop ${count} hand-picked ${label.toLowerCase()}. Curated by TheGiftShuffle for every taste and style.`
+    : `Discover ${count} thoughtful ${label.toLowerCase()}. Find the perfect present with TheGiftShuffle.`;
 
   return {
     title,
@@ -129,7 +129,7 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url: `https://dailygiftshuffle.com/gifts/${params.slug}`,
+      url: `https://thegiftshuffle.com/gifts/${params.slug}`,
     },
   };
 }
@@ -217,7 +217,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
     },
     {
       q: `Can I save these gift ideas for later?`,
-      a: `Absolutely! Use DailyGiftShuffle's wishlist feature to save your favorite picks and come back to them anytime.`,
+      a: `Absolutely! Use TheGiftShuffle's wishlist feature to save your favorite picks and come back to them anytime.`,
     },
   ];
 

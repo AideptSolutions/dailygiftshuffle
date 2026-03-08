@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <p className="text-white font-extrabold text-lg mb-2">🎁 DailyGiftShuffle</p>
+            <p className="text-white font-extrabold text-lg mb-2">🎁 TheGiftShuffle</p>
             <p className="text-gray-500 text-xs leading-relaxed">
               Your daily gift discovery engine. Find the perfect gift for anyone in seconds.
             </p>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>&copy; 2025 DailyGiftShuffle. All rights reserved.</p>
+          <p>&copy; 2025 TheGiftShuffle. All rights reserved.</p>
           <p className="text-xs text-gray-600">
             As an Amazon Associate, we earn from qualifying purchases.
           </p>

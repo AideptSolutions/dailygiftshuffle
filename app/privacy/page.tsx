@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | DailyGiftShuffle',
-  description: 'Learn how DailyGiftShuffle collects, uses, and protects your personal information.',
+  title: 'Privacy Policy | TheGiftShuffle',
+  description: 'Learn how TheGiftShuffle collects, uses, and protects your personal information.',
 };
 
 export default function PrivacyPage() {
@@ -20,8 +20,8 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-2">1. Overview</h2>
             <p>
-              DailyGiftShuffle (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) operates
-              dailygiftshuffle.com (the &ldquo;Site&rdquo;). This Privacy Policy explains what information
+              TheGiftShuffle (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) operates
+              thegiftshuffle.com (the &ldquo;Site&rdquo;). This Privacy Policy explains what information
               we collect, how we use it, and your rights regarding that information.
             </p>
           </section>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-2">4. Affiliate Links &amp; Third-Party Services</h2>
             <p>
-              DailyGiftShuffle participates in the Amazon Services LLC Associates Program, an affiliate
+              TheGiftShuffle participates in the Amazon Services LLC Associates Program, an affiliate
               advertising program. When you click an affiliate link and make a purchase on Amazon or
               another retailer&rsquo;s site, that retailer may place cookies on your device per their own
               privacy policy. We earn a small commission on qualifying purchases at no additional cost to you.
@@ -98,8 +98,8 @@ export default function PrivacyPage() {
               Depending on your location, you may have the right to request access to, correction of, or
               deletion of any personal data we hold about you (limited to your email address if you
               submitted one). To exercise these rights, contact us at{' '}
-              <a href="mailto:privacy@dailygiftshuffle.com" className="text-[#F04E30] underline">
-                privacy@dailygiftshuffle.com
+              <a href="mailto:privacy@thegiftshuffle.com" className="text-[#F04E30] underline">
+                privacy@thegiftshuffle.com
               </a>.
             </p>
           </section>
@@ -126,8 +126,8 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-2">10. Contact</h2>
             <p>
               Questions about this Privacy Policy? Email us at{' '}
-              <a href="mailto:privacy@dailygiftshuffle.com" className="text-[#F04E30] underline">
-                privacy@dailygiftshuffle.com
+              <a href="mailto:privacy@thegiftshuffle.com" className="text-[#F04E30] underline">
+                privacy@thegiftshuffle.com
               </a>.
             </p>
           </section>

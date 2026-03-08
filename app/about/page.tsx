@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'About - DailyGiftShuffle',
-  description: 'Learn about DailyGiftShuffle - your daily gift discovery engine.',
+  title: 'About - TheGiftShuffle',
+  description: 'Learn about TheGiftShuffle - your daily gift discovery engine.',
 };
 
 export default function AboutPage() {
@@ -14,13 +14,13 @@ export default function AboutPage() {
       <main className="flex-1 max-w-2xl mx-auto w-full px-4 py-12">
         <div className="bg-white rounded-3xl shadow-sm p-8 sm:p-12">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-extrabold text-gray-900 mb-2">About DailyGiftShuffle</h1>
+            <h1 className="text-3xl font-extrabold text-gray-900 mb-2">About TheGiftShuffle</h1>
             <p className="text-gray-500">Your daily gift discovery engine</p>
           </div>
 
           <div className="space-y-6 text-gray-700 leading-relaxed">
             <p>
-              <strong>DailyGiftShuffle</strong> was built to solve one of life&apos;s most common
+              <strong>TheGiftShuffle</strong> was built to solve one of life&apos;s most common
               problems: finding the right gift for someone you care about. Whether it&apos;s a birthday,
               anniversary, holiday, or just because — we&apos;ve got you covered.
             </p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
 
             <h2 className="text-xl font-bold text-gray-900 mt-8">Affiliate Disclosure</h2>
             <p className="text-sm text-gray-500">
-              DailyGiftShuffle participates in the Amazon Associates Program. We earn a small
+              TheGiftShuffle participates in the Amazon Associates Program. We earn a small
               commission when you purchase through our links — at no extra cost to you. This helps
               keep the site free and the recommendations flowing.
             </p>

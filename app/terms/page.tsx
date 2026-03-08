@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | DailyGiftShuffle',
-  description: 'Read the Terms of Service for DailyGiftShuffle, including affiliate disclosures and usage terms.',
+  title: 'Terms of Service | TheGiftShuffle',
+  description: 'Read the Terms of Service for TheGiftShuffle, including affiliate disclosures and usage terms.',
 };
 
 export default function TermsPage() {
@@ -21,7 +21,7 @@ export default function TermsPage() {
             📢 Affiliate Disclosure
           </p>
           <p className="text-sm text-amber-700 mt-1">
-            DailyGiftShuffle participates in the Amazon Services LLC Associates Program and other
+            TheGiftShuffle participates in the Amazon Services LLC Associates Program and other
             affiliate advertising programs. We earn commissions on qualifying purchases made through
             links on this site, at <strong>no additional cost to you</strong>. This helps us keep
             the site free for everyone.
@@ -33,7 +33,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-2">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using DailyGiftShuffle (&ldquo;the Site&rdquo;), you agree to be bound by
+              By accessing or using TheGiftShuffle (&ldquo;the Site&rdquo;), you agree to be bound by
               these Terms of Service. If you do not agree, please do not use the Site. You must be at
               least 13 years of age to use this Site.
             </p>
@@ -42,7 +42,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-2">2. Affiliate Relationships &amp; Compensation</h2>
             <p>
-              DailyGiftShuffle is a participant in the <strong>Amazon Services LLC Associates Program</strong>,
+              TheGiftShuffle is a participant in the <strong>Amazon Services LLC Associates Program</strong>,
               an affiliate advertising program designed to provide a means for sites to earn advertising
               fees by advertising and linking to Amazon.com. We may also participate in affiliate programs
               with other retailers.
@@ -60,7 +60,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-2">3. No Warranty on Recommendations</h2>
             <p>
-              Product recommendations on DailyGiftShuffle are provided &ldquo;as is&rdquo; for
+              Product recommendations on TheGiftShuffle are provided &ldquo;as is&rdquo; for
               informational and entertainment purposes only. We make no warranties, express or implied,
               regarding the accuracy, completeness, or fitness for a particular purpose of any
               recommendation.
@@ -72,7 +72,7 @@ export default function TermsPage() {
             <p>
               Prices, availability, and product details displayed on this Site are approximate and subject
               to change without notice. Always verify current prices and availability on the retailer&rsquo;s
-              site before purchasing. DailyGiftShuffle is not responsible for discrepancies between
+              site before purchasing. TheGiftShuffle is not responsible for discrepancies between
               displayed and actual prices.
             </p>
           </section>
@@ -80,7 +80,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold text-gray-900 mb-2">5. Limitation of Liability</h2>
             <p>
-              To the fullest extent permitted by applicable law, DailyGiftShuffle and its operators shall
+              To the fullest extent permitted by applicable law, TheGiftShuffle and its operators shall
               not be liable for any indirect, incidental, special, consequential, or punitive damages
               arising from your use of the Site or purchase of any products through affiliate links.
             </p>
@@ -90,7 +90,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-2">6. Intellectual Property</h2>
             <p>
               All original content on this Site, including text, graphics, and code, is the property of
-              DailyGiftShuffle. Product names, images, and trademarks belong to their respective owners.
+              TheGiftShuffle. Product names, images, and trademarks belong to their respective owners.
               Reproduction or redistribution of Site content without permission is prohibited.
             </p>
           </section>
@@ -135,8 +135,8 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-2">11. Contact</h2>
             <p>
               Questions about these Terms? Contact us at{' '}
-              <a href="mailto:legal@dailygiftshuffle.com" className="text-[#F04E30] underline">
-                legal@dailygiftshuffle.com
+              <a href="mailto:legal@thegiftshuffle.com" className="text-[#F04E30] underline">
+                legal@thegiftshuffle.com
               </a>.
             </p>
           </section>

@@ -60,7 +60,7 @@ export default function Navbar() {
     <nav aria-label="Main navigation" className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="font-extrabold text-xl" style={{ color: '#F04E30' }}>
-          DailyGiftShuffle
+          TheGiftShuffle
         </Link>
         <div className="flex items-center gap-4 text-sm font-medium text-gray-600">
           <Link href="/shuffle" className="hover:text-[#F04E30] transition-colors hidden sm:block">

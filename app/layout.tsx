@@ -7,28 +7,28 @@ import FavoritesSidebar from '@/components/FavoritesSidebar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'DailyGiftShuffle — Find the Perfect Gift in Seconds',
+  title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
   description:
-    'Discover the perfect gift for anyone on your list. Pick a recipient, set a budget, and let DailyGiftShuffle curate a surprise recommendation just for you.',
+    'Discover the perfect gift for anyone on your list. Pick a recipient, set a budget, and let TheGiftShuffle curate a surprise recommendation just for you.',
   keywords: ['gift ideas', 'gift finder', 'gift recommendations', 'birthday gifts', 'holiday gifts'],
   openGraph: {
-    title: 'DailyGiftShuffle — Find the Perfect Gift in Seconds',
+    title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
     description:
       'Pick a recipient, set a budget, hit SHUFFLE. Get a curated gift recommendation with a direct buy link.',
     type: 'website',
-    url: 'https://dailygiftshuffle.com',
+    url: 'https://thegiftshuffle.com',
     images: [
       {
-        url: 'https://placehold.co/1200x630/FF6B6B/FFFFFF?text=DailyGiftShuffle',
+        url: 'https://placehold.co/1200x630/FF6B6B/FFFFFF?text=TheGiftShuffle',
         width: 1200,
         height: 630,
-        alt: 'DailyGiftShuffle',
+        alt: 'TheGiftShuffle',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DailyGiftShuffle — Find the Perfect Gift',
+    title: 'TheGiftShuffle — Find the Perfect Gift',
     description: 'Pick a recipient, set a budget, hit SHUFFLE!',
   },
   icons: {

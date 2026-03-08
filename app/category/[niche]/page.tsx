@@ -252,12 +252,12 @@ export async function generateMetadata(
   const meta = NICHE_META[params.niche as Niche];
   if (!meta) return { title: 'Category Not Found' };
   return {
-    title: `${meta.title} | DailyGiftShuffle`,
+    title: `${meta.title} | TheGiftShuffle`,
     description: meta.description,
     openGraph: {
-      title: `${meta.title} | DailyGiftShuffle`,
+      title: `${meta.title} | TheGiftShuffle`,
       description: meta.description,
-      url: `https://dailygiftshuffle.com/category/${params.niche}`,
+      url: `https://thegiftshuffle.com/category/${params.niche}`,
     },
   };
 }
@@ -400,7 +400,7 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
 
         {filtered.length === 0 && (
           <p className="text-gray-500 mb-8">
-            Browse our full catalog — every item on DailyGiftShuffle is hand-picked for quality.
+            Browse our full catalog — every item on TheGiftShuffle is hand-picked for quality.
           </p>
         )}
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import WishlistClient from './WishlistClient';
 
 export const metadata: Metadata = {
-  title: 'My Wishlist — DailyGiftShuffle',
+  title: 'My Wishlist — TheGiftShuffle',
   description: 'View your saved gift ideas.',
 };
 

@@ -49,7 +49,7 @@ export default function PicksPage() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 py-10 px-4 text-center">
         <p className="text-sm uppercase tracking-widest font-semibold mb-2" style={{ color: '#F04E30' }}>
-          Curated by DailyGiftShuffle
+          Curated by TheGiftShuffle
         </p>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">20 Gifts Under $10</h1>
         <p className="text-gray-500 max-w-xl mx-auto text-base">
@@ -113,11 +113,11 @@ export default function PicksPage() {
       {/* Footer note */}
       <div className="text-center pb-10 px-4">
         <p className="text-xs text-gray-400 max-w-md mx-auto">
-          As an Amazon Associate, DailyGiftShuffle earns from qualifying purchases.
+          As an Amazon Associate, TheGiftShuffle earns from qualifying purchases.
           Prices are approximate and may vary.
         </p>
         <Link href="/" className="inline-block mt-4 text-sm text-orange-500 hover:underline">
-          Back to DailyGiftShuffle
+          Back to TheGiftShuffle
         </Link>
       </div>
     </main>

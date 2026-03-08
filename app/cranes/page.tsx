@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { readAdminProducts } from '@/lib/admin-store';
 
 export const metadata: Metadata = {
-  title: "Crane's List — DailyGiftShuffle",
+  title: "Crane's List — TheGiftShuffle",
   description: 'A curated list of items — pick something you love!',
   robots: 'noindex',
 };
@@ -89,7 +89,7 @@ export default function CranesPage() {
       {/* Footer */}
       <div className="text-center pb-10">
         <Link href="/" className="text-sm text-gray-400 hover:text-[#E64126] transition-colors">
-          ← Back to DailyGiftShuffle
+          ← Back to TheGiftShuffle
         </Link>
       </div>
 

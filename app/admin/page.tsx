@@ -155,7 +155,7 @@ export default function AdminPage() {
     <main className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="bg-white rounded-xl shadow p-8 w-full max-w-sm">
         <h1 className="text-xl font-bold text-gray-900 mb-1">Admin</h1>
-        <p className="text-sm text-gray-500 mb-6">DailyGiftShuffle backend</p>
+        <p className="text-sm text-gray-500 mb-6">TheGiftShuffle backend</p>
         <input
           type="password"
           placeholder="Password"
@@ -180,7 +180,7 @@ export default function AdminPage() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
         <div>
-          <h1 className="text-lg font-bold text-gray-900">DailyGiftShuffle Admin</h1>
+          <h1 className="text-lg font-bold text-gray-900">TheGiftShuffle Admin</h1>
           <p className="text-xs text-gray-400">{published} published &bull; {drafts} drafts</p>
         </div>
         <button onClick={logout} className="text-xs text-gray-400 hover:text-gray-600">Sign out</button>

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { giftSlugs } from '@/data/gift-slugs';
 
-const BASE_URL = 'https://dailygiftshuffle.com';
+const BASE_URL = 'https://thegiftshuffle.com';
 
 const NICHES = [
   'tech', 'diy-tools', 'home', 'gaming', 'sports', 'gardening', 'finance', 'fitness', 'parenting',
