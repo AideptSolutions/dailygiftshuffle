@@ -1,572 +1,935 @@
 [
-  {
-    "id": "admin-1772854853091-qevcc",
-    "name": "Pokémon Obsidian Flames Booster Pack Lot (x4)",
-    "description": "Four sealed Obsidian Flames booster packs — each with 10 random cards including Pokémon ex, holo rares, and potential chase cards. Perfect for collectors and fans of all ages.",
-    "price": 48.99,
-    "priceDisplay": "$48.99",
-    "image": "/img/categories/gaming.svg",
-    "rating": 4.5,
-    "reviewCount": 246,
-    "affiliateUrl": "https://www.amazon.com/dp/B0CG4YYJ2B?tag=dailygiftshuf-20",
-    "asin": "B0CG4YYJ2B",
-    "recipients": ["kids","teens","friends"],
-    "budgetTier": "25to50",
-    "occasions": [],
-    "tags": ["kids","gaming"],
-    "status": "published",
-    "createdAt": "2026-03-07T03:40:52.840Z",
-    "updatedAt": "2026-03-07T04:40:04.866Z"
-  },
-  {
-    "id": "admin-1772854909719-6eyu0",
-    "name": "Pokémon Cards — 3 Sealed Booster Packs",
-    "description": "Three sealed Pokémon booster packs from random sets — 30 cards total with a chance at holos, rares, and foils. A go-to gift for any Pokémon fan.",
-    "price": 26.90,
-    "priceDisplay": "$26.90",
-    "image": "/img/categories/gaming.svg",
-    "rating": 4.3,
-    "reviewCount": 19203,
-    "affiliateUrl": "https://www.amazon.com/dp/B001DIJ48C?tag=dailygiftshuf-20",
-    "asin": "B001DIJ48C",
-    "recipients": ["kids","teens","friends"],
-    "budgetTier": "25to50",
-    "occasions": [],
-    "tags": ["kids","gaming"],
-    "status": "published",
-    "createdAt": "2026-03-07T03:41:49.516Z",
-    "updatedAt": "2026-03-07T04:40:04.863Z"
-  },
-  {
-    "id": "admin-1772855004896-p3ozq",
-    "name": "Ring Battery Doorbell (Newest Model)",
-    "description": "The latest Ring Battery Doorbell with head-to-toe video, live two-way talk, and motion alerts sent straight to your phone. Easy wireless install — no wiring required.",
-    "price": 99.99,
-    "priceDisplay": "$99.99",
-    "image": "/img/categories/tech.svg",
-    "rating": 4.6,
-    "reviewCount": 44152,
-    "affiliateUrl": "https://www.amazon.com/dp/B0BZWRSRWV?tag=dailygiftshuf-20",
-    "asin": "B0BZWRSRWV",
-    "recipients": ["dad","him","her","mom","friends","employees","coworker"],
-    "budgetTier": "50to100",
-    "occasions": [],
-    "tags": ["tech","home"],
-    "status": "published",
-    "createdAt": "2026-03-07T03:43:24.615Z",
-    "updatedAt": "2026-03-07T04:40:04.864Z"
-  },
-  {
-    "id": "admin-1772855047803-flwbb",
-    "name": "Amazon Kindle Paperwhite 16GB (Newest Model)",
-    "description": "Amazon's newest Kindle Paperwhite with a 7\" glare-free display, 16GB storage, and weeks of battery life. The best dedicated e-reader for avid readers.",
-    "price": 159.99,
-    "priceDisplay": "$159.99",
-    "image": "/img/categories/tech.svg",
-    "rating": 3.5,
-    "reviewCount": 17434,
-    "affiliateUrl": "https://www.amazon.com/dp/B0CFPJYX7P?tag=dailygiftshuf-20",
-    "asin": "B0CFPJYX7P",
-    "recipients": ["her","him","mom","dad","friends","employees","coworker"],
-    "budgetTier": "150to250",
-    "occasions": [],
-    "tags": ["tech"],
-    "status": "published",
-    "createdAt": "2026-03-07T03:44:07.545Z",
-    "updatedAt": "2026-03-07T04:40:04.865Z"
-  },
-  {
-    "id": "admin-1772855086765-euucn",
-    "name": "Amazon Echo Spot Smart Alarm Clock (Newest Model)",
-    "description": "A compact smart alarm clock with a round screen, Alexa built in, and customizable clock faces. Perfect for nightstands, kitchens, and home offices.",
-    "price": 79.99,
-    "priceDisplay": "$79.99",
-    "image": "/img/categories/tech.svg",
-    "rating": 3.1,
-    "reviewCount": 39948,
-    "affiliateUrl": "https://www.amazon.com/dp/B0BFC7WQ6R?tag=dailygiftshuf-20",
-    "asin": "B0BFC7WQ6R",
-    "recipients": ["her","him","mom","dad","friends","employees","coworker"],
-    "budgetTier": "50to100",
-    "occasions": [],
-    "tags": ["tech"],
-    "status": "published",
-    "createdAt": "2026-03-07T03:44:46.522Z",
-    "updatedAt": "2026-03-07T04:40:04.865Z"
-  },
-  {
-    "id": "admin-1772856687628-pyrp5",
-    "name": "3-in-1 Cold Press Juicer with 100oz Capacity",
-    "description": "A powerful cold press juicer that makes fresh juice, nut milk, and sorbet. Features a 6.5\" extra-large chute for whole fruits and a massive 100oz pitcher.",
-    "price": 149.99,
-    "priceDisplay": "$149.99",
-    "image": "/img/categories/kitchen.svg",
-    "rating": 4.5,
-    "reviewCount": 2369,
-    "affiliateUrl": "https://www.amazon.com/dp/B0FZH8VQTG?tag=dailygiftshuf-20",
-    "asin": "B0FZH8VQTG",
-    "recipients": ["her","him","mom","dad","friends"],
-    "budgetTier": "100to150",
-    "occasions": [],
-    "tags": ["tech","kitchen"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:11:27.402Z",
-    "updatedAt": "2026-03-07T04:40:04.866Z"
-  },
-  {
-    "id": "admin-1772856745550-kbulf",
-    "name": "SANSUI 24-Inch FHD 1080P Computer Monitor",
-    "description": "A clean frameless 24-inch monitor with 1080P resolution, 178° viewing angle, and both HDMI and VGA ports. A sharp, affordable upgrade for any desk setup.",
-    "price": 79.99,
-    "priceDisplay": "$79.99",
-    "image": "/img/categories/tech.svg",
-    "rating": 4.4,
-    "reviewCount": 5436,
-    "affiliateUrl": "https://www.amazon.com/dp/B0CD253J1Q?tag=dailygiftshuf-20",
-    "asin": "B0CD253J1Q",
-    "recipients": ["her","him","mom","dad","friends","teens","coworker","employees"],
-    "budgetTier": "50to100",
-    "occasions": [],
-    "tags": ["tech","office"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:12:25.387Z",
-    "updatedAt": "2026-03-07T04:40:04.884Z"
-  },
-  {
-    "id": "admin-1772856864684-372c1",
-    "name": "Oura Ring 4 — Smart Health & Sleep Tracker",
-    "description": "The most advanced health ring available, tracking sleep stages, readiness, activity, and stress with clinically validated accuracy. No subscription fee required.",
-    "price": 499.99,
-    "priceDisplay": "$499.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.6,
-    "reviewCount": 164,
-    "affiliateUrl": "https://www.amazon.com/dp/B0FKQZ3QDB?tag=dailygiftshuf-20",
-    "asin": "B0FKQZ3QDB",
-    "recipients": ["her","him","mom","dad","friends"],
-    "budgetTier": "250plus",
-    "occasions": [],
-    "tags": ["tech","fitness"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:14:24.439Z",
-    "updatedAt": "2026-03-07T04:40:04.885Z"
-  },
-  {
-    "id": "admin-1772856932576-iklri",
-    "name": "DORESshop LED Night Lights — Plug-In 2-Pack",
-    "description": "A 2-pack of plug-in LED night lights with 3 color temperatures and a dusk-to-dawn auto sensor. Soft, unobtrusive lighting for hallways, bathrooms, and bedrooms.",
-    "price": 18.99,
-    "priceDisplay": "$18.99",
-    "image": "/img/categories/home.svg",
-    "rating": 4.6,
-    "reviewCount": 1763,
-    "affiliateUrl": "https://www.amazon.com/dp/B0FDQLL37Z?tag=dailygiftshuf-20",
-    "asin": "B0FDQLL37Z",
-    "recipients": ["her","him","mom","dad","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["home"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:15:32.265Z",
-    "updatedAt": "2026-03-07T04:40:04.885Z"
-  },
-  {
-    "id": "admin-1772856953569-0qrbm",
-    "name": "STANLEY 5-Gallon Wet/Dry Shop Vac with Blower",
-    "description": "A 5-gallon, 4 HP peak wet/dry shop vacuum with 3-in-1 blower functionality and 15 feet of cleaning range. A garage essential for any DIYer or car enthusiast.",
-    "price": 60.99,
-    "priceDisplay": "$60.99",
-    "image": "/img/categories/diy-tools.svg",
-    "rating": 4.5,
-    "reviewCount": 3651,
-    "affiliateUrl": "https://www.amazon.com/dp/B01J9LEI4E?tag=dailygiftshuf-20",
-    "asin": "B01J9LEI4E",
-    "recipients": ["him","dad"],
-    "budgetTier": "50to100",
-    "occasions": [],
-    "tags": ["diy-tools"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:15:53.289Z",
-    "updatedAt": "2026-03-07T04:40:04.886Z"
-  },
-  {
-    "id": "admin-1772856989344-4iczg",
-    "name": "WUBEN G5 Rechargeable RGB EDC Flashlight",
-    "description": "A compact 400-lumen rechargeable keychain flashlight with RGB color modes, magnetic base, and waterproof build. A clever and practical everyday carry gift.",
-    "price": 19.99,
-    "priceDisplay": "$19.99",
-    "image": "/img/categories/diy-tools.svg",
-    "rating": 4.4,
-    "reviewCount": 6119,
-    "affiliateUrl": "https://www.amazon.com/dp/B0DT6S7363?tag=dailygiftshuf-20",
-    "asin": "B0DT6S7363",
-    "recipients": ["him","dad","her","mom","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["diy-tools"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:16:29.156Z",
-    "updatedAt": "2026-03-07T04:40:04.887Z"
-  },
-  {
-    "id": "admin-1772857013321-zg1re",
-    "name": "Klein Tools 11-in-1 Multi-Bit Screwdriver",
-    "description": "A professional-grade 11-in-1 impact-rated screwdriver with Phillips, slotted, square, and Torx tips. Trusted by electricians and contractors — beloved by DIYers.",
-    "price": 22.99,
-    "priceDisplay": "$22.99",
-    "image": "/img/categories/diy-tools.svg",
-    "rating": 4.8,
-    "reviewCount": 30530,
-    "affiliateUrl": "https://www.amazon.com/dp/B0C9V6NYZ4?tag=dailygiftshuf-20",
-    "asin": "B0C9V6NYZ4",
-    "recipients": ["him","dad","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["diy-tools"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:16:53.093Z",
-    "updatedAt": "2026-03-07T04:40:04.887Z"
-  },
-  {
-    "id": "admin-1772857268970-kk2fc",
-    "name": "Nex Playground — Active Indoor Play System for Kids",
-    "description": "Nex Playground turns your living room into an active gaming zone — kids use their bodies as the controller to play games, jump, and compete. No screens or handheld devices needed.",
-    "price": 249.99,
-    "priceDisplay": "$249.99",
-    "image": "/img/categories/gaming.svg",
-    "rating": 4.7,
-    "reviewCount": 4019,
-    "affiliateUrl": "https://www.amazon.com/dp/B0D2JGYX3F?tag=dailygiftshuf-20",
-    "asin": "B0D2JGYX3F",
-    "recipients": ["kids","teens"],
-    "budgetTier": "150to250",
-    "occasions": [],
-    "tags": ["tech","gaming","kids"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:21:08.631Z",
-    "updatedAt": "2026-03-07T04:40:04.904Z"
-  },
-  {
-    "id": "admin-1772857448333-9ejqp",
-    "name": "Legend of Zelda Master Sword Hanayama Brain Teaser (Level 6)",
-    "description": "An officially licensed Legend of Zelda Master Sword metal puzzle at Mensa-rated difficulty Level 6 — the hardest level. A satisfying challenge for teens, gamers, and puzzle lovers.",
-    "price": 23.99,
-    "priceDisplay": "$23.99",
-    "image": "/img/categories/gaming.svg",
-    "rating": 4.8,
-    "reviewCount": 584,
-    "affiliateUrl": "https://www.amazon.com/dp/B0CMFFTTN7?tag=dailygiftshuf-20",
-    "asin": "B0CMFFTTN7",
-    "recipients": ["kids","teens","him","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["kids","gaming","hobby"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:24:08.172Z",
-    "updatedAt": "2026-03-07T04:40:04.906Z"
-  },
-  {
-    "id": "admin-1772857717456-p1u0m",
-    "name": "Gaiam Print Yoga Mat — Non-Slip Exercise Mat",
-    "description": "A lightweight 68\" yoga mat with premium non-slip texture and a vibrant printed pattern. Great for yoga, Pilates, stretching, and all floor exercises.",
-    "price": 21.99,
-    "priceDisplay": "$21.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.5,
-    "reviewCount": 12211,
-    "affiliateUrl": "https://www.amazon.com/dp/B0D4M9JTGV?tag=dailygiftshuf-20",
-    "asin": "B0D4M9JTGV",
-    "recipients": ["teens","her","mom","friends","coworker","myself"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["sports","fitness","hobby"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:28:37.129Z",
-    "updatedAt": "2026-03-07T04:40:04.906Z"
-  },
-  {
-    "id": "admin-1772857746578-q9r2n",
-    "name": "Adjustable Weighted Vest for Training & Walking",
-    "description": "An adjustable weighted vest available in sizes from 6 to 30 lbs — perfect for strength training, running, walking, and bodyweight workouts. Includes a reflective stripe for outdoor safety.",
-    "price": 19.99,
-    "priceDisplay": "$19.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.6,
-    "reviewCount": 1695,
-    "affiliateUrl": "https://www.amazon.com/dp/B0FF4RTGTG?tag=dailygiftshuf-20",
-    "asin": "B0FF4RTGTG",
-    "recipients": ["teens","her","mom","friends","him","dad"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["sports","fitness"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:29:06.370Z",
-    "updatedAt": "2026-03-07T04:40:04.905Z"
-  },
-  {
-    "id": "admin-1772857769806-94v7k",
-    "name": "Callaway Golf Supersoft Golf Balls (2023)",
-    "description": "Callaway's best-selling Supersoft golf balls with ultra-low compression for maximum distance and a buttery soft feel. Suitable for all skill levels — a reliable go-to gift for any golfer.",
-    "price": 19.99,
-    "priceDisplay": "$19.99",
-    "image": "/img/categories/sports.svg",
-    "rating": 4.8,
-    "reviewCount": 5077,
-    "affiliateUrl": "https://www.amazon.com/dp/B0BMGYT38K?tag=dailygiftshuf-20",
-    "asin": "B0BMGYT38K",
-    "recipients": ["teens","her","mom","friends","him","dad","employees","coworker"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["sports","hobby"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:29:28.330Z",
-    "updatedAt": "2026-03-07T04:40:04.906Z"
-  },
-  {
-    "id": "admin-1772857803717-t7fo5",
-    "name": "Walking Pad Treadmill with Incline & Handle Bar",
-    "description": "A portable under-desk walking treadmill with incline, handle bar, 3 HP motor, and speeds up to 7.6 MPH. Folds compact for home or office use — supports up to 350 lbs.",
-    "price": 109.99,
-    "priceDisplay": "$109.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.0,
-    "reviewCount": 1116,
-    "affiliateUrl": "https://www.amazon.com/dp/B0G51V78YK?tag=dailygiftshuf-20",
-    "asin": "B0G51V78YK",
-    "recipients": ["mom","friends","dad","employees","coworker","her","him","myself"],
-    "budgetTier": "100to150",
-    "occasions": [],
-    "tags": ["sports","fitness"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:30:03.355Z",
-    "updatedAt": "2026-03-07T04:40:04.907Z"
-  },
-  {
-    "id": "admin-1772857834029-6e5xk",
-    "name": "EILISON FitMaxx 3D XL Vibration Plate Machine",
-    "description": "A whole-body vibration plate with 3D oscillation technology for lymphatic drainage, weight management, and muscle recovery. Includes resistance loop bands and a remote control.",
-    "price": 179.99,
-    "priceDisplay": "$179.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.4,
-    "reviewCount": 3736,
-    "affiliateUrl": "https://www.amazon.com/dp/B09ZYLPG3Z?tag=dailygiftshuf-20",
-    "asin": "B09ZYLPG3Z",
-    "recipients": ["mom","her","friends","myself"],
-    "budgetTier": "150to250",
-    "occasions": [],
-    "tags": ["fitness"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:30:33.796Z",
-    "updatedAt": "2026-03-07T04:40:04.923Z"
-  },
-  {
-    "id": "admin-1772857866550-xbzjg",
-    "name": "Sperax Under-Desk Walking Pad Treadmill with App",
-    "description": "A whisper-quiet under-desk treadmill with app connectivity, remote control, and a foldable design. Great for staying active during work-from-home days.",
-    "price": 139.99,
-    "priceDisplay": "$139.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.1,
-    "reviewCount": 10290,
-    "affiliateUrl": "https://www.amazon.com/dp/B0DJ8ZL7RX?tag=dailygiftshuf-20",
-    "asin": "B0DJ8ZL7RX",
-    "recipients": ["mom","coworker","her","him","friends","employees","myself"],
-    "budgetTier": "100to150",
-    "occasions": [],
-    "tags": ["fitness","office"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:31:06.319Z",
-    "updatedAt": "2026-03-07T04:40:04.924Z"
-  },
-  {
-    "id": "admin-1772857904969-rvn7g",
-    "name": "Smart Health Ring — Sleep & Stress Tracker",
-    "description": "A sleek smart ring that tracks sleep stages, stress, heart rate, and activity with no subscription fee. Compatible with iOS and Android — waterproof and lightweight.",
-    "price": 59.99,
-    "priceDisplay": "$59.99",
-    "image": "/img/categories/fitness.svg",
-    "rating": 4.7,
-    "reviewCount": 272,
-    "affiliateUrl": "https://www.amazon.com/dp/B0FW569YY4?tag=dailygiftshuf-20",
-    "asin": "B0FW569YY4",
-    "recipients": ["mom","coworker","her","him","dad","teens","employees","friends","myself"],
-    "budgetTier": "50to100",
-    "occasions": [],
-    "tags": ["fitness","tech"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:31:44.727Z",
-    "updatedAt": "2026-03-07T04:40:04.925Z"
-  },
-  {
-    "id": "admin-1772857976780-x8wha",
-    "name": "Gritin Rechargeable LED Book Light — 80hr Battery",
-    "description": "A rechargeable clip-on book light with 9 LEDs, 3 color temperatures, stepless dimming, and 80 hours of battery life. Lightweight and perfect for reading without disturbing others.",
-    "price": 18.99,
-    "priceDisplay": "$18.99",
-    "image": "/img/categories/hobby.svg",
-    "rating": 4.8,
-    "reviewCount": 52193,
-    "affiliateUrl": "https://www.amazon.com/dp/B0BWN28STW?tag=dailygiftshuf-20",
-    "asin": "B0BWN28STW",
-    "recipients": ["mom","coworker","dad","teens","employees","friends","kids","grandparents","her","him"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["office","hobby"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:32:56.497Z",
-    "updatedAt": "2026-03-07T04:40:04.925Z"
-  },
-  {
-    "id": "admin-1772858071303-dscxe",
-    "name": "OLANLY Front Door Mat — Absorbent Non-Slip Rubber",
-    "description": "A thick natural rubber doormat with a diamond pattern that traps dirt and absorbs moisture. Stain and fade resistant, non-slip, and fits any entryway door.",
-    "price": 14.99,
-    "priceDisplay": "$14.99",
-    "image": "/img/categories/home.svg",
-    "rating": 4.8,
-    "reviewCount": 23,
-    "affiliateUrl": "https://www.amazon.com/dp/B0G3F895KK?tag=dailygiftshuf-20",
-    "asin": "B0G3F895KK",
-    "recipients": ["her","him","mom","dad","friends","coworker","employees","grandparents"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["home"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:34:31.110Z",
-    "updatedAt": "2026-03-07T04:40:04.925Z"
-  },
-  {
-    "id": "admin-1772858103884-9cp0i",
-    "name": "Mini Cordless Chainsaw (2026 Upgraded)",
-    "description": "A lightweight cordless mini chainsaw for trimming branches, cutting wood, and yard work. Easy to use for any skill level — a crowd-favorite gift for dads and outdoor enthusiasts.",
-    "price": 45.99,
-    "priceDisplay": "$45.99",
-    "image": "/img/categories/gardening.svg",
-    "rating": 4.5,
-    "reviewCount": 3165,
-    "affiliateUrl": "https://www.amazon.com/dp/B0F6KBYW1F?tag=dailygiftshuf-20",
-    "asin": "B0F6KBYW1F",
-    "recipients": ["dad","him","friends"],
-    "budgetTier": "25to50",
-    "occasions": [],
-    "tags": ["gardening","diy-tools"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:35:03.606Z",
-    "updatedAt": "2026-03-07T04:40:04.926Z"
-  },
-  {
-    "id": "admin-1772858124860-z4m7w",
-    "name": "Zinnia Wildflower Seed Mix — 5 Colors, 3,000+ Seeds",
-    "description": "A generous 1-oz mix of zinnia seeds in pink, yellow, orange, white, and purple — over 3,000 seeds for a full season of vibrant blooms. Easy to grow, open pollinated.",
-    "price": 5.99,
-    "priceDisplay": "$5.99",
-    "image": "/img/categories/gardening.svg",
-    "rating": 4.5,
-    "reviewCount": 1091,
-    "affiliateUrl": "https://www.amazon.com/dp/B0DJSXC1BC?tag=dailygiftshuf-20",
-    "asin": "B0DJSXC1BC",
-    "recipients": ["dad","mom","grandparents","her","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["gardening"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:35:24.704Z",
-    "updatedAt": "2026-03-07T04:40:04.943Z"
-  },
-  {
-    "id": "admin-1772858153973-7dzc3",
-    "name": "Mibao Front Door Mat — Machine Washable, All-Weather",
-    "description": "A machine-washable, waterproof front door mat in classic black with a non-slip rubber backing and low profile that fits under any door. Holds up in rain, mud, and snow.",
-    "price": 13.99,
-    "priceDisplay": "$13.99",
-    "image": "/img/categories/home.svg",
-    "rating": 4.4,
-    "reviewCount": 8526,
-    "affiliateUrl": "https://www.amazon.com/dp/B0BX554RKY?tag=dailygiftshuf-20",
-    "asin": "B0BX554RKY",
-    "recipients": ["dad","mom","her","him","friends","grandparents"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["home"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:35:53.767Z",
-    "updatedAt": "2026-03-07T04:40:04.943Z"
-  },
-  {
-    "id": "admin-1772858263030-bcnp6",
-    "name": "Gorilla Grip Extra-Thick Garden Kneeling Pad",
-    "description": "A thick foam kneeling pad that cushions knees during gardening, floor work, and baby bath time. Dirt and water resistant with a non-slip bottom — built to last.",
-    "price": 21.99,
-    "priceDisplay": "$21.99",
-    "image": "/img/categories/gardening.svg",
-    "rating": 4.5,
-    "reviewCount": 20544,
-    "affiliateUrl": "https://www.amazon.com/dp/B07QN89LKX?tag=dailygiftshuf-20",
-    "asin": "B07QN89LKX",
-    "recipients": ["dad","mom","grandparents","her"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["gardening"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:37:42.765Z",
-    "updatedAt": "2026-03-07T04:40:04.944Z"
-  },
-  {
-    "id": "admin-1772858366395-uanuj",
-    "name": "Miracle-Gro Shake 'N Feed All Purpose Plant Food",
-    "description": "Miracle-Gro's popular slow-release plant food feeds plants for up to 3 months. Works for indoor and outdoor plants in containers and in-ground — a practical gift any gardener will use.",
-    "price": 8.99,
-    "priceDisplay": "$8.99",
-    "image": "/img/categories/gardening.svg",
-    "rating": 4.7,
-    "reviewCount": 16883,
-    "affiliateUrl": "https://www.amazon.com/dp/B01NALSCN0?tag=dailygiftshuf-20",
-    "asin": "B01NALSCN0",
-    "recipients": ["dad","mom","grandparents","her","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["gardening"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:39:26.216Z",
-    "updatedAt": "2026-03-07T04:40:04.944Z"
-  },
-  {
-    "id": "admin-1772858385693-dv00e",
-    "name": "Solar Mole & Pest Repellent Stakes — 4-Pack",
-    "description": "Solar-powered ultrasonic pest repellent stakes that drive away moles, voles, gophers, rabbits, and deer without chemicals. Weatherproof and covers up to 7,000 sq ft.",
-    "price": 47.99,
-    "priceDisplay": "$47.99",
-    "image": "/img/categories/gardening.svg",
-    "rating": 4.6,
-    "reviewCount": 103,
-    "affiliateUrl": "https://www.amazon.com/dp/B0F9DK1NKW?tag=dailygiftshuf-20",
-    "asin": "B0F9DK1NKW",
-    "recipients": ["dad","mom","grandparents"],
-    "budgetTier": "25to50",
-    "occasions": [],
-    "tags": ["gardening"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:39:45.262Z",
-    "updatedAt": "2026-03-07T04:40:04.945Z"
-  },
-  {
-    "id": "admin-1772858398579-wxka1",
-    "name": "Yellow Sticky Gnat & Fruit Fly Traps — 36-Pack",
-    "description": "36 non-toxic yellow sticky traps that catch fungus gnats, fruit flies, whiteflies, and other flying pests. Safe for indoor plants, outdoor gardens, and homes with pets and kids.",
-    "price": 5.99,
-    "priceDisplay": "$5.99",
-    "image": "/img/categories/gardening.svg",
-    "rating": 4.4,
-    "reviewCount": 30515,
-    "affiliateUrl": "https://www.amazon.com/dp/B08MZN1K2Y?tag=dailygiftshuf-20",
-    "asin": "B08MZN1K2Y",
-    "recipients": ["dad","mom","grandparents","her","friends"],
-    "budgetTier": "under25",
-    "occasions": [],
-    "tags": ["gardening"],
-    "status": "published",
-    "createdAt": "2026-03-07T04:39:58.357Z",
-    "updatedAt": "2026-03-07T04:40:04.944Z"
-  }
+    {
+        "id":  "admin-1772854853091-qevcc",
+        "name":  "Pokémon Obsidian Flames Booster Pack Lot (x4)",
+        "description":  "Four sealed Obsidian Flames booster packs — each with 10 random cards including Pokémon ex, holo rares, and potential chase cards. Perfect for collectors and fans of all ages.",
+        "price":  48.99,
+        "priceDisplay":  "$48.99",
+        "image":  "/img/categories/gaming.svg",
+        "rating":  4.5,
+        "reviewCount":  246,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0CG4YYJ2B?tag=dailygiftshuf-20",
+        "asin":  "B0CG4YYJ2B",
+        "recipients":  [
+                           "kids",
+                           "teens",
+                           "friends"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "kids",
+                     "gaming"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T03:40:52.840Z",
+        "updatedAt":  "2026-03-07T04:40:04.866Z"
+    },
+    {
+        "id":  "admin-1772854909719-6eyu0",
+        "name":  "Pokémon Cards — 3 Sealed Booster Packs",
+        "description":  "Three sealed Pokémon booster packs from random sets — 30 cards total with a chance at holos, rares, and foils. A go-to gift for any Pokémon fan.",
+        "price":  26.90,
+        "priceDisplay":  "$26.90",
+        "image":  "/img/categories/gaming.svg",
+        "rating":  4.3,
+        "reviewCount":  19203,
+        "affiliateUrl":  "https://www.amazon.com/dp/B001DIJ48C?tag=dailygiftshuf-20",
+        "asin":  "B001DIJ48C",
+        "recipients":  [
+                           "kids",
+                           "teens",
+                           "friends"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "kids",
+                     "gaming"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T03:41:49.516Z",
+        "updatedAt":  "2026-03-07T04:40:04.863Z"
+    },
+    {
+        "id":  "admin-1772855004896-p3ozq",
+        "name":  "Ring Battery Doorbell (Newest Model)",
+        "description":  "The latest Ring Battery Doorbell with head-to-toe video, live two-way talk, and motion alerts sent straight to your phone. Easy wireless install — no wiring required.",
+        "price":  99.99,
+        "priceDisplay":  "$99.99",
+        "image":  "/img/categories/tech.svg",
+        "rating":  4.6,
+        "reviewCount":  44152,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0BZWRSRWV?tag=dailygiftshuf-20",
+        "asin":  "B0BZWRSRWV",
+        "recipients":  [
+                           "dad",
+                           "him",
+                           "her",
+                           "mom",
+                           "friends",
+                           "employees",
+                           "coworker"
+                       ],
+        "budgetTier":  "50to100",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech",
+                     "home"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T03:43:24.615Z",
+        "updatedAt":  "2026-03-07T04:40:04.864Z"
+    },
+    {
+        "id":  "admin-1772855047803-flwbb",
+        "name":  "Amazon Kindle Paperwhite 16GB (Newest Model)",
+        "description":  "Amazon\u0027s newest Kindle Paperwhite with a 7\" glare-free display, 16GB storage, and weeks of battery life. The best dedicated e-reader for avid readers.",
+        "price":  159.99,
+        "priceDisplay":  "$159.99",
+        "image":  "/img/categories/tech.svg",
+        "rating":  3.5,
+        "reviewCount":  17434,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0CFPJYX7P?tag=dailygiftshuf-20",
+        "asin":  "B0CFPJYX7P",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends",
+                           "employees",
+                           "coworker"
+                       ],
+        "budgetTier":  "150to250",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T03:44:07.545Z",
+        "updatedAt":  "2026-03-07T04:40:04.865Z"
+    },
+    {
+        "id":  "admin-1772855086765-euucn",
+        "name":  "Amazon Echo Spot Smart Alarm Clock (Newest Model)",
+        "description":  "A compact smart alarm clock with a round screen, Alexa built in, and customizable clock faces. Perfect for nightstands, kitchens, and home offices.",
+        "price":  79.99,
+        "priceDisplay":  "$79.99",
+        "image":  "/img/categories/tech.svg",
+        "rating":  3.1,
+        "reviewCount":  39948,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0BFC7WQ6R?tag=dailygiftshuf-20",
+        "asin":  "B0BFC7WQ6R",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends",
+                           "employees",
+                           "coworker"
+                       ],
+        "budgetTier":  "50to100",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T03:44:46.522Z",
+        "updatedAt":  "2026-03-07T04:40:04.865Z"
+    },
+    {
+        "id":  "admin-1772856687628-pyrp5",
+        "name":  "3-in-1 Cold Press Juicer with 100oz Capacity",
+        "description":  "A powerful cold press juicer that makes fresh juice, nut milk, and sorbet. Features a 6.5\" extra-large chute for whole fruits and a massive 100oz pitcher.",
+        "price":  149.99,
+        "priceDisplay":  "$149.99",
+        "image":  "/img/categories/kitchen.svg",
+        "rating":  4.5,
+        "reviewCount":  2369,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0FZH8VQTG?tag=dailygiftshuf-20",
+        "asin":  "B0FZH8VQTG",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends"
+                       ],
+        "budgetTier":  "100to150",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech",
+                     "kitchen"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:11:27.402Z",
+        "updatedAt":  "2026-03-07T04:40:04.866Z"
+    },
+    {
+        "id":  "admin-1772856745550-kbulf",
+        "name":  "SANSUI 24-Inch FHD 1080P Computer Monitor",
+        "description":  "A clean frameless 24-inch monitor with 1080P resolution, 178° viewing angle, and both HDMI and VGA ports. A sharp, affordable upgrade for any desk setup.",
+        "price":  79.99,
+        "priceDisplay":  "$79.99",
+        "image":  "/img/categories/tech.svg",
+        "rating":  4.4,
+        "reviewCount":  5436,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0CD253J1Q?tag=dailygiftshuf-20",
+        "asin":  "B0CD253J1Q",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends",
+                           "teens",
+                           "coworker",
+                           "employees"
+                       ],
+        "budgetTier":  "50to100",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech",
+                     "office"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:12:25.387Z",
+        "updatedAt":  "2026-03-07T04:40:04.884Z"
+    },
+    {
+        "id":  "admin-1772856864684-372c1",
+        "name":  "Oura Ring 4 — Smart Health \u0026 Sleep Tracker",
+        "description":  "The most advanced health ring available, tracking sleep stages, readiness, activity, and stress with clinically validated accuracy. No subscription fee required.",
+        "price":  499.99,
+        "priceDisplay":  "$499.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.6,
+        "reviewCount":  164,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0FKQZ3QDB?tag=dailygiftshuf-20",
+        "asin":  "B0FKQZ3QDB",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends"
+                       ],
+        "budgetTier":  "250plus",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech",
+                     "fitness"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:14:24.439Z",
+        "updatedAt":  "2026-03-07T04:40:04.885Z"
+    },
+    {
+        "id":  "admin-1772856932576-iklri",
+        "name":  "DORESshop LED Night Lights — Plug-In 2-Pack",
+        "description":  "A 2-pack of plug-in LED night lights with 3 color temperatures and a dusk-to-dawn auto sensor. Soft, unobtrusive lighting for hallways, bathrooms, and bedrooms.",
+        "price":  18.99,
+        "priceDisplay":  "$18.99",
+        "image":  "/img/categories/home.svg",
+        "rating":  4.6,
+        "reviewCount":  1763,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0FDQLL37Z?tag=dailygiftshuf-20",
+        "asin":  "B0FDQLL37Z",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "home"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:15:32.265Z",
+        "updatedAt":  "2026-03-07T04:40:04.885Z"
+    },
+    {
+        "id":  "admin-1772856953569-0qrbm",
+        "name":  "STANLEY 5-Gallon Wet/Dry Shop Vac with Blower",
+        "description":  "A 5-gallon, 4 HP peak wet/dry shop vacuum with 3-in-1 blower functionality and 15 feet of cleaning range. A garage essential for any DIYer or car enthusiast.",
+        "price":  60.99,
+        "priceDisplay":  "$60.99",
+        "image":  "/img/categories/diy-tools.svg",
+        "rating":  4.5,
+        "reviewCount":  3651,
+        "affiliateUrl":  "https://www.amazon.com/dp/B01J9LEI4E?tag=dailygiftshuf-20",
+        "asin":  "B01J9LEI4E",
+        "recipients":  [
+                           "him",
+                           "dad"
+                       ],
+        "budgetTier":  "50to100",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "diy-tools"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:15:53.289Z",
+        "updatedAt":  "2026-03-07T04:40:04.886Z"
+    },
+    {
+        "id":  "admin-1772856989344-4iczg",
+        "name":  "WUBEN G5 Rechargeable RGB EDC Flashlight",
+        "description":  "A compact 400-lumen rechargeable keychain flashlight with RGB color modes, magnetic base, and waterproof build. A clever and practical everyday carry gift.",
+        "price":  19.99,
+        "priceDisplay":  "$19.99",
+        "image":  "/img/categories/diy-tools.svg",
+        "rating":  4.4,
+        "reviewCount":  6119,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0DT6S7363?tag=dailygiftshuf-20",
+        "asin":  "B0DT6S7363",
+        "recipients":  [
+                           "him",
+                           "dad",
+                           "her",
+                           "mom",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "diy-tools"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:16:29.156Z",
+        "updatedAt":  "2026-03-07T04:40:04.887Z"
+    },
+    {
+        "id":  "admin-1772857013321-zg1re",
+        "name":  "Klein Tools 11-in-1 Multi-Bit Screwdriver",
+        "description":  "A professional-grade 11-in-1 impact-rated screwdriver with Phillips, slotted, square, and Torx tips. Trusted by electricians and contractors — beloved by DIYers.",
+        "price":  22.99,
+        "priceDisplay":  "$22.99",
+        "image":  "/img/categories/diy-tools.svg",
+        "rating":  4.8,
+        "reviewCount":  30530,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0C9V6NYZ4?tag=dailygiftshuf-20",
+        "asin":  "B0C9V6NYZ4",
+        "recipients":  [
+                           "him",
+                           "dad",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "diy-tools"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:16:53.093Z",
+        "updatedAt":  "2026-03-07T04:40:04.887Z"
+    },
+    {
+        "id":  "admin-1772857268970-kk2fc",
+        "name":  "Nex Playground — Active Indoor Play System for Kids",
+        "description":  "Nex Playground turns your living room into an active gaming zone — kids use their bodies as the controller to play games, jump, and compete. No screens or handheld devices needed.",
+        "price":  249.99,
+        "priceDisplay":  "$249.99",
+        "image":  "/img/categories/gaming.svg",
+        "rating":  4.7,
+        "reviewCount":  4019,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0D2JGYX3F?tag=dailygiftshuf-20",
+        "asin":  "B0D2JGYX3F",
+        "recipients":  [
+                           "kids",
+                           "teens"
+                       ],
+        "budgetTier":  "150to250",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "tech",
+                     "gaming",
+                     "kids"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:21:08.631Z",
+        "updatedAt":  "2026-03-07T04:40:04.904Z"
+    },
+    {
+        "id":  "admin-1772857448333-9ejqp",
+        "name":  "Legend of Zelda Master Sword Hanayama Brain Teaser (Level 6)",
+        "description":  "An officially licensed Legend of Zelda Master Sword metal puzzle at Mensa-rated difficulty Level 6 — the hardest level. A satisfying challenge for teens, gamers, and puzzle lovers.",
+        "price":  23.99,
+        "priceDisplay":  "$23.99",
+        "image":  "/img/categories/gaming.svg",
+        "rating":  4.8,
+        "reviewCount":  584,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0CMFFTTN7?tag=dailygiftshuf-20",
+        "asin":  "B0CMFFTTN7",
+        "recipients":  [
+                           "kids",
+                           "teens",
+                           "him",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "kids",
+                     "gaming",
+                     "hobby"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:24:08.172Z",
+        "updatedAt":  "2026-03-07T04:40:04.906Z"
+    },
+    {
+        "id":  "admin-1772857717456-p1u0m",
+        "name":  "Gaiam Print Yoga Mat — Non-Slip Exercise Mat",
+        "description":  "A lightweight 68\" yoga mat with premium non-slip texture and a vibrant printed pattern. Great for yoga, Pilates, stretching, and all floor exercises.",
+        "price":  21.99,
+        "priceDisplay":  "$21.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.5,
+        "reviewCount":  12211,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0D4M9JTGV?tag=dailygiftshuf-20",
+        "asin":  "B0D4M9JTGV",
+        "recipients":  [
+                           "teens",
+                           "her",
+                           "mom",
+                           "friends",
+                           "coworker",
+                           "myself"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "sports",
+                     "fitness",
+                     "hobby"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:28:37.129Z",
+        "updatedAt":  "2026-03-07T04:40:04.906Z"
+    },
+    {
+        "id":  "admin-1772857746578-q9r2n",
+        "name":  "Adjustable Weighted Vest for Training \u0026 Walking",
+        "description":  "An adjustable weighted vest available in sizes from 6 to 30 lbs — perfect for strength training, running, walking, and bodyweight workouts. Includes a reflective stripe for outdoor safety.",
+        "price":  19.99,
+        "priceDisplay":  "$19.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.6,
+        "reviewCount":  1695,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0FF4RTGTG?tag=dailygiftshuf-20",
+        "asin":  "B0FF4RTGTG",
+        "recipients":  [
+                           "teens",
+                           "her",
+                           "mom",
+                           "friends",
+                           "him",
+                           "dad"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "sports",
+                     "fitness"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:29:06.370Z",
+        "updatedAt":  "2026-03-07T04:40:04.905Z"
+    },
+    {
+        "id":  "admin-1772857769806-94v7k",
+        "name":  "Callaway Golf Supersoft Golf Balls (2023)",
+        "description":  "Callaway\u0027s best-selling Supersoft golf balls with ultra-low compression for maximum distance and a buttery soft feel. Suitable for all skill levels — a reliable go-to gift for any golfer.",
+        "price":  19.99,
+        "priceDisplay":  "$19.99",
+        "image":  "/img/categories/sports.svg",
+        "rating":  4.8,
+        "reviewCount":  5077,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0BMGYT38K?tag=dailygiftshuf-20",
+        "asin":  "B0BMGYT38K",
+        "recipients":  [
+                           "teens",
+                           "her",
+                           "mom",
+                           "friends",
+                           "him",
+                           "dad",
+                           "employees",
+                           "coworker"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "sports",
+                     "hobby"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:29:28.330Z",
+        "updatedAt":  "2026-03-07T04:40:04.906Z"
+    },
+    {
+        "id":  "admin-1772857803717-t7fo5",
+        "name":  "Walking Pad Treadmill with Incline \u0026 Handle Bar",
+        "description":  "A portable under-desk walking treadmill with incline, handle bar, 3 HP motor, and speeds up to 7.6 MPH. Folds compact for home or office use — supports up to 350 lbs.",
+        "price":  109.99,
+        "priceDisplay":  "$109.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.0,
+        "reviewCount":  1116,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0G51V78YK?tag=dailygiftshuf-20",
+        "asin":  "B0G51V78YK",
+        "recipients":  [
+                           "mom",
+                           "friends",
+                           "dad",
+                           "employees",
+                           "coworker",
+                           "her",
+                           "him",
+                           "myself"
+                       ],
+        "budgetTier":  "100to150",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "sports",
+                     "fitness"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:30:03.355Z",
+        "updatedAt":  "2026-03-07T04:40:04.907Z"
+    },
+    {
+        "id":  "admin-1772857834029-6e5xk",
+        "name":  "EILISON FitMaxx 3D XL Vibration Plate Machine",
+        "description":  "A whole-body vibration plate with 3D oscillation technology for lymphatic drainage, weight management, and muscle recovery. Includes resistance loop bands and a remote control.",
+        "price":  179.99,
+        "priceDisplay":  "$179.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.4,
+        "reviewCount":  3736,
+        "affiliateUrl":  "https://www.amazon.com/dp/B09ZYLPG3Z?tag=dailygiftshuf-20",
+        "asin":  "B09ZYLPG3Z",
+        "recipients":  [
+                           "mom",
+                           "her",
+                           "friends",
+                           "myself"
+                       ],
+        "budgetTier":  "150to250",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "fitness"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:30:33.796Z",
+        "updatedAt":  "2026-03-07T04:40:04.923Z"
+    },
+    {
+        "id":  "admin-1772857866550-xbzjg",
+        "name":  "Sperax Under-Desk Walking Pad Treadmill with App",
+        "description":  "A whisper-quiet under-desk treadmill with app connectivity, remote control, and a foldable design. Great for staying active during work-from-home days.",
+        "price":  139.99,
+        "priceDisplay":  "$139.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.1,
+        "reviewCount":  10290,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0DJ8ZL7RX?tag=dailygiftshuf-20",
+        "asin":  "B0DJ8ZL7RX",
+        "recipients":  [
+                           "mom",
+                           "coworker",
+                           "her",
+                           "him",
+                           "friends",
+                           "employees",
+                           "myself"
+                       ],
+        "budgetTier":  "100to150",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "fitness",
+                     "office"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:31:06.319Z",
+        "updatedAt":  "2026-03-07T04:40:04.924Z"
+    },
+    {
+        "id":  "admin-1772857904969-rvn7g",
+        "name":  "Smart Health Ring — Sleep \u0026 Stress Tracker",
+        "description":  "A sleek smart ring that tracks sleep stages, stress, heart rate, and activity with no subscription fee. Compatible with iOS and Android — waterproof and lightweight.",
+        "price":  59.99,
+        "priceDisplay":  "$59.99",
+        "image":  "/img/categories/fitness.svg",
+        "rating":  4.7,
+        "reviewCount":  272,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0FW569YY4?tag=dailygiftshuf-20",
+        "asin":  "B0FW569YY4",
+        "recipients":  [
+                           "mom",
+                           "coworker",
+                           "her",
+                           "him",
+                           "dad",
+                           "teens",
+                           "employees",
+                           "friends",
+                           "myself"
+                       ],
+        "budgetTier":  "50to100",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "fitness",
+                     "tech"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:31:44.727Z",
+        "updatedAt":  "2026-03-07T04:40:04.925Z"
+    },
+    {
+        "id":  "admin-1772857976780-x8wha",
+        "name":  "Gritin Rechargeable LED Book Light — 80hr Battery",
+        "description":  "A rechargeable clip-on book light with 9 LEDs, 3 color temperatures, stepless dimming, and 80 hours of battery life. Lightweight and perfect for reading without disturbing others.",
+        "price":  18.99,
+        "priceDisplay":  "$18.99",
+        "image":  "/img/categories/hobby.svg",
+        "rating":  4.8,
+        "reviewCount":  52193,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0BWN28STW?tag=dailygiftshuf-20",
+        "asin":  "B0BWN28STW",
+        "recipients":  [
+                           "mom",
+                           "coworker",
+                           "dad",
+                           "teens",
+                           "employees",
+                           "friends",
+                           "kids",
+                           "grandparents",
+                           "her",
+                           "him"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "office",
+                     "hobby"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:32:56.497Z",
+        "updatedAt":  "2026-03-07T04:40:04.925Z"
+    },
+    {
+        "id":  "admin-1772858071303-dscxe",
+        "name":  "OLANLY Front Door Mat — Absorbent Non-Slip Rubber",
+        "description":  "A thick natural rubber doormat with a diamond pattern that traps dirt and absorbs moisture. Stain and fade resistant, non-slip, and fits any entryway door.",
+        "price":  14.99,
+        "priceDisplay":  "$14.99",
+        "image":  "/img/categories/home.svg",
+        "rating":  4.8,
+        "reviewCount":  23,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0G3F895KK?tag=dailygiftshuf-20",
+        "asin":  "B0G3F895KK",
+        "recipients":  [
+                           "her",
+                           "him",
+                           "mom",
+                           "dad",
+                           "friends",
+                           "coworker",
+                           "employees",
+                           "grandparents"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "home"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:34:31.110Z",
+        "updatedAt":  "2026-03-07T04:40:04.925Z"
+    },
+    {
+        "id":  "admin-1772858103884-9cp0i",
+        "name":  "Mini Cordless Chainsaw (2026 Upgraded)",
+        "description":  "A lightweight cordless mini chainsaw for trimming branches, cutting wood, and yard work. Easy to use for any skill level — a crowd-favorite gift for dads and outdoor enthusiasts.",
+        "price":  45.99,
+        "priceDisplay":  "$45.99",
+        "image":  "/img/categories/gardening.svg",
+        "rating":  4.5,
+        "reviewCount":  3165,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0F6KBYW1F?tag=dailygiftshuf-20",
+        "asin":  "B0F6KBYW1F",
+        "recipients":  [
+                           "dad",
+                           "him",
+                           "friends"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "gardening",
+                     "diy-tools"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:35:03.606Z",
+        "updatedAt":  "2026-03-07T04:40:04.926Z"
+    },
+    {
+        "id":  "admin-1772858124860-z4m7w",
+        "name":  "Zinnia Wildflower Seed Mix — 5 Colors, 3,000+ Seeds",
+        "description":  "A generous 1-oz mix of zinnia seeds in pink, yellow, orange, white, and purple — over 3,000 seeds for a full season of vibrant blooms. Easy to grow, open pollinated.",
+        "price":  5.99,
+        "priceDisplay":  "$5.99",
+        "image":  "/img/categories/gardening.svg",
+        "rating":  4.5,
+        "reviewCount":  1091,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0DJSXC1BC?tag=dailygiftshuf-20",
+        "asin":  "B0DJSXC1BC",
+        "recipients":  [
+                           "dad",
+                           "mom",
+                           "grandparents",
+                           "her",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "gardening"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:35:24.704Z",
+        "updatedAt":  "2026-03-07T04:40:04.943Z"
+    },
+    {
+        "id":  "admin-1772858153973-7dzc3",
+        "name":  "Mibao Front Door Mat — Machine Washable, All-Weather",
+        "description":  "A machine-washable, waterproof front door mat in classic black with a non-slip rubber backing and low profile that fits under any door. Holds up in rain, mud, and snow.",
+        "price":  13.99,
+        "priceDisplay":  "$13.99",
+        "image":  "/img/categories/home.svg",
+        "rating":  4.4,
+        "reviewCount":  8526,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0BX554RKY?tag=dailygiftshuf-20",
+        "asin":  "B0BX554RKY",
+        "recipients":  [
+                           "dad",
+                           "mom",
+                           "her",
+                           "him",
+                           "friends",
+                           "grandparents"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "home"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:35:53.767Z",
+        "updatedAt":  "2026-03-07T04:40:04.943Z"
+    },
+    {
+        "id":  "admin-1772858263030-bcnp6",
+        "name":  "Gorilla Grip Extra-Thick Garden Kneeling Pad",
+        "description":  "A thick foam kneeling pad that cushions knees during gardening, floor work, and baby bath time. Dirt and water resistant with a non-slip bottom — built to last.",
+        "price":  21.99,
+        "priceDisplay":  "$21.99",
+        "image":  "/img/categories/gardening.svg",
+        "rating":  4.5,
+        "reviewCount":  20544,
+        "affiliateUrl":  "https://www.amazon.com/dp/B07QN89LKX?tag=dailygiftshuf-20",
+        "asin":  "B07QN89LKX",
+        "recipients":  [
+                           "dad",
+                           "mom",
+                           "grandparents",
+                           "her"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "gardening"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:37:42.765Z",
+        "updatedAt":  "2026-03-07T04:40:04.944Z"
+    },
+    {
+        "id":  "admin-1772858366395-uanuj",
+        "name":  "Miracle-Gro Shake \u0027N Feed All Purpose Plant Food",
+        "description":  "Miracle-Gro\u0027s popular slow-release plant food feeds plants for up to 3 months. Works for indoor and outdoor plants in containers and in-ground — a practical gift any gardener will use.",
+        "price":  8.99,
+        "priceDisplay":  "$8.99",
+        "image":  "/img/categories/gardening.svg",
+        "rating":  4.7,
+        "reviewCount":  16883,
+        "affiliateUrl":  "https://www.amazon.com/dp/B01NALSCN0?tag=dailygiftshuf-20",
+        "asin":  "B01NALSCN0",
+        "recipients":  [
+                           "dad",
+                           "mom",
+                           "grandparents",
+                           "her",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "gardening"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:39:26.216Z",
+        "updatedAt":  "2026-03-07T04:40:04.944Z"
+    },
+    {
+        "id":  "admin-1772858385693-dv00e",
+        "name":  "Solar Mole \u0026 Pest Repellent Stakes — 4-Pack",
+        "description":  "Solar-powered ultrasonic pest repellent stakes that drive away moles, voles, gophers, rabbits, and deer without chemicals. Weatherproof and covers up to 7,000 sq ft.",
+        "price":  47.99,
+        "priceDisplay":  "$47.99",
+        "image":  "/img/categories/gardening.svg",
+        "rating":  4.6,
+        "reviewCount":  103,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0F9DK1NKW?tag=dailygiftshuf-20",
+        "asin":  "B0F9DK1NKW",
+        "recipients":  [
+                           "dad",
+                           "mom",
+                           "grandparents"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "gardening"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:39:45.262Z",
+        "updatedAt":  "2026-03-07T04:40:04.945Z"
+    },
+    {
+        "id":  "admin-1772858398579-wxka1",
+        "name":  "Yellow Sticky Gnat \u0026 Fruit Fly Traps — 36-Pack",
+        "description":  "36 non-toxic yellow sticky traps that catch fungus gnats, fruit flies, whiteflies, and other flying pests. Safe for indoor plants, outdoor gardens, and homes with pets and kids.",
+        "price":  5.99,
+        "priceDisplay":  "$5.99",
+        "image":  "/img/categories/gardening.svg",
+        "rating":  4.4,
+        "reviewCount":  30515,
+        "affiliateUrl":  "https://www.amazon.com/dp/B08MZN1K2Y?tag=dailygiftshuf-20",
+        "asin":  "B08MZN1K2Y",
+        "recipients":  [
+                           "dad",
+                           "mom",
+                           "grandparents",
+                           "her",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "gardening"
+                 ],
+        "status":  "published",
+        "createdAt":  "2026-03-07T04:39:58.357Z",
+        "updatedAt":  "2026-03-07T04:40:04.944Z"
+    },
+    {
+        "id":  "admin-20260308131308-crane1",
+        "name":  "Zarbee\u0027s Kids Melatonin Gummies � 1mg, Natural Strawberry, 60ct",
+        "description":  "Drug-free, non-habit-forming sleep gummies for kids with 1mg melatonin per gummy. Made with natural strawberry flavor. Helps kids fall asleep faster without medication. 60 count.",
+        "price":  14.97,
+        "priceDisplay":  "$14.97",
+        "image":  "https://m.media-amazon.com/images/I/71qZ1jkOlyL._AC_SL1500_.jpg",
+        "rating":  4.7,
+        "reviewCount":  18432,
+        "affiliateUrl":  "https://www.amazon.com/dp/B0DBPXDYWT?tag=dailygiftshuf-20",
+        "asin":  "B0DBPXDYWT",
+        "recipients":  [
+                           "kids",
+                           "baby",
+                           "mom",
+                           "dad",
+                           "grandparents"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+
+                      ],
+        "tags":  [
+                     "parenting",
+                     "kids"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:13:08.9743531-07:00",
+        "updatedAt":  "2026-03-08T13:13:08.9743531-07:00"
+    }
 ]
