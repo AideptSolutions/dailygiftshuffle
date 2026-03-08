@@ -931,5 +931,40 @@
         "cranes":  true,
         "createdAt":  "2026-03-08T13:13:08.9743531-07:00",
         "updatedAt":  "2026-03-08T13:15:17.0091073-07:00"
+    },
+    {
+        "id":  "admin-20260308133657-crane2",
+        "name":  "Albanese World\u0027s Best Gummi Bears — Assorted Flavors, Snack Pack",
+        "description":  "The world\u0027s best gummy bears, period. Soft, fresh, and bursting with 12 true-to-life fruit flavors. A crowd-pleaser for all ages — impossible to eat just one.",
+        "price":  13.99,
+        "priceDisplay":  "$13.99",
+        "image":  "https://m.media-amazon.com/images/I/81z2MZAlPXL._AC_SL1500_.jpg",
+        "rating":  4.8,
+        "reviewCount":  82341,
+        "affiliateUrl":  "https://www.amazon.com/dp/B07X89D1CT?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=2fe63af8cb7476d432e5a69edbbcd0be\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B07X89D1CT",
+        "recipients":  [
+                           "kids",
+                           "teens",
+                           "friends",
+                           "coworker",
+                           "her",
+                           "him"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+                          "birthday",
+                          "holiday",
+                          "justBecause"
+                      ],
+        "tags":  [
+                     "kids",
+                     "food",
+                     "snacks"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T13:36:57.6666459-07:00",
+        "updatedAt":  "2026-03-08T13:36:57.6666459-07:00"
     }
 ]
