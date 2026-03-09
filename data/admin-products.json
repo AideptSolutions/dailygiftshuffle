@@ -1126,5 +1126,37 @@
         "cranes":  true,
         "createdAt":  "2026-03-08T13:45:58.9720133-07:00",
         "updatedAt":  "2026-03-08T13:45:58.9720133-07:00"
+    },
+    {
+        "id":  "admin-20260308200804-manspot",
+        "name":  "MANSPOT Electric Groin \u0026 Body Trimmer for Men",
+        "description":  "Waterproof electric trimmer designed for men\u0027s sensitive areas. Replaceable ceramic blade heads for a safe, nick-free trim. Rechargeable with long battery life. Perfect for manscaping on your schedule.",
+        "price":  29.99,
+        "priceDisplay":  "$29.99",
+        "image":  "https://m.media-amazon.com/images/I/61tmnPdKqGL._AC_SL1500_.jpg",
+        "rating":  4.5,
+        "reviewCount":  14832,
+        "affiliateUrl":  "https://www.amazon.com/dp/B09HZTKLNP?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=f09f17813366398b83958c42fd81e05c\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B09HZTKLNP",
+        "recipients":  [
+                           "him",
+                           "dad",
+                           "brother",
+                           "teens"
+                       ],
+        "budgetTier":  "25to50",
+        "occasions":  [
+                          "birthday",
+                          "holiday",
+                          "justBecause"
+                      ],
+        "tags":  [
+                     "fitness",
+                     "luxury"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-08T20:08:04.0029433-07:00",
+        "updatedAt":  "2026-03-08T20:08:04.0029433-07:00"
     }
 ]
