@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import Footer from '@/components/Footer';
 import FavoritesSidebar from '@/components/FavoritesSidebar';
@@ -9,20 +10,30 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
   description:
-    'Discover the perfect gift for anyone on your list. Pick a recipient, set a budget, and let TheGiftShuffle curate a surprise recommendation just for you.',
-  keywords: ['gift ideas', 'gift finder', 'gift recommendations', 'birthday gifts', 'holiday gifts'],
+    'Find the perfect gift for anyone in seconds. Pick a recipient, set a budget, and hit Shuffle for instant curated gift recommendations. Free to use, no sign-up required.',
+  keywords: [
+    'gift ideas',
+    'gift finder',
+    'gifts for mom',
+    'gifts for dad',
+    'gifts under 50',
+    'birthday gift ideas',
+    'christmas gift ideas',
+    'unique gifts',
+  ],
   openGraph: {
     title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
     description:
       'Pick a recipient, set a budget, hit SHUFFLE. Get a curated gift recommendation with a direct buy link.',
     type: 'website',
     url: 'https://thegiftshuffle.com',
+    siteName: 'TheGiftShuffle',
     images: [
       {
-        url: 'https://placehold.co/1200x630/FF6B6B/FFFFFF?text=TheGiftShuffle',
+        url: 'https://thegiftshuffle.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'TheGiftShuffle',
+        alt: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
       },
     ],
   },
@@ -30,10 +41,42 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TheGiftShuffle — Find the Perfect Gift',
     description: 'Pick a recipient, set a budget, hit SHUFFLE!',
+    site: '@thegiftshuffle',
   },
   icons: {
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>",
   },
+  metadataBase: new URL('https://thegiftshuffle.com'),
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://thegiftshuffle.com/#organization',
+      name: 'TheGiftShuffle',
+      url: 'https://thegiftshuffle.com',
+      logo: 'https://thegiftshuffle.com/og-image.png',
+      description:
+        'AI-curated gift recommendations for every recipient, budget, and occasion.',
+      sameAs: [],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://thegiftshuffle.com/#website',
+      url: 'https://thegiftshuffle.com',
+      name: 'TheGiftShuffle',
+      description:
+        'Find the perfect gift in seconds. Pick a recipient, set a budget, hit Shuffle.',
+      publisher: { '@id': 'https://thegiftshuffle.com/#organization' },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://thegiftshuffle.com/shuffle?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -50,6 +93,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <FavoritesSidebar />
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </body>
     </html>
   );

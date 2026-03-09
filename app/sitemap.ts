@@ -17,6 +17,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, changeFrequency: 'monthly', priority: 0.4 },
   ];
 
+  const recipientLandingPages: MetadataRoute.Sitemap = [
+    '/gift-ideas-for-mom',
+    '/gift-ideas-for-dad',
+    '/gift-ideas-for-him',
+    '/gift-ideas-for-her',
+    '/gift-ideas-for-kids',
+    '/gift-ideas-for-teens',
+    '/gift-ideas-for-grandparents',
+    '/gift-ideas-for-friends',
+  ].map((path) => ({
+    url: `${BASE_URL}${path}`,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
+  const occasionBudgetLandingPages: MetadataRoute.Sitemap = [
+    '/gifts-under-25',
+    '/gifts-under-50',
+    '/gifts-under-100',
+    '/christmas-gift-ideas',
+    '/birthday-gift-ideas',
+    '/mothers-day-gifts',
+    '/fathers-day-gifts',
+    '/blog',
+  ].map((path) => ({
+    url: `${BASE_URL}${path}`,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
   const categoryRoutes: MetadataRoute.Sitemap = NICHES.map((niche) => ({
     url: `${BASE_URL}/category/${niche}`,
     changeFrequency: 'weekly' as const,
@@ -29,5 +59,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...giftRoutes];
+  return [
+    ...staticRoutes,
+    ...recipientLandingPages,
+    ...occasionBudgetLandingPages,
+    ...categoryRoutes,
+    ...giftRoutes,
+  ];
 }

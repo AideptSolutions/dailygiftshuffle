@@ -19,11 +19,21 @@ const CATEGORIES = [
   { slug: 'car-accessories', label: 'Car Accessories' },
 ];
 
+const GIFT_GUIDES = [
+  { href: '/gift-ideas-for-mom', label: 'Gifts for Mom' },
+  { href: '/gift-ideas-for-dad', label: 'Gifts for Dad' },
+  { href: '/gift-ideas-for-him', label: 'Gifts for Him' },
+  { href: '/gift-ideas-for-her', label: 'Gifts for Her' },
+  { href: '/gifts-under-50', label: 'Gifts Under $50' },
+  { href: '/christmas-gift-ideas', label: 'Christmas Gifts' },
+  { href: '/birthday-gift-ideas', label: 'Birthday Gifts' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 text-sm">
-      <div className="max-w-5xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <p className="text-white font-extrabold text-lg mb-2">🎁 TheGiftShuffle</p>
@@ -42,6 +52,20 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
+            </ul>
+          </div>
+
+          {/* Gift Guides */}
+          <div>
+            <p className="text-white font-semibold mb-3">Gift Guides</p>
+            <ul className="space-y-2">
+              {GIFT_GUIDES.map((g) => (
+                <li key={g.href}>
+                  <Link href={g.href} className="hover:text-white transition-colors">
+                    {g.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

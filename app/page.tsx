@@ -5,12 +5,73 @@ import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 
 export const metadata: Metadata = {
   title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
+  description:
+    'Find the perfect gift for anyone in seconds. Pick a recipient, set a budget, and hit Shuffle for instant curated gift recommendations. Free to use, no sign-up required.',
+  keywords: [
+    'gift ideas',
+    'gift finder',
+    'gifts for mom',
+    'gifts for dad',
+    'gifts under 50',
+    'birthday gift ideas',
+    'christmas gift ideas',
+    'unique gifts',
+  ],
+  openGraph: {
+    type: 'website',
+    url: 'https://thegiftshuffle.com',
+  },
 };
 
 const features = [
   { title: 'Personalized', desc: 'Filter by recipient and budget for spot-on recommendations.' },
   { title: 'Instant',      desc: 'Get a curated gift idea in under 5 seconds. No more decision fatigue.' },
   { title: 'Ready to Buy', desc: 'Every result comes with a direct Amazon link so you can shop immediately.' },
+];
+
+const giftGuides = [
+  {
+    href: '/gift-ideas-for-mom',
+    emoji: '🌸',
+    title: 'Gifts for Mom',
+    desc: 'Thoughtful picks she\'ll actually love — spa sets, jewelry, and more.',
+  },
+  {
+    href: '/gift-ideas-for-dad',
+    emoji: '🔧',
+    title: 'Gifts for Dad',
+    desc: 'Skip the boring tie. Gadgets, grilling gear, and experiences he\'ll use.',
+  },
+  {
+    href: '/gift-ideas-for-him',
+    emoji: '🎯',
+    title: 'Gifts for Him',
+    desc: 'Practical picks for husbands, boyfriends, and best friends.',
+  },
+  {
+    href: '/gift-ideas-for-her',
+    emoji: '✨',
+    title: 'Gifts for Her',
+    desc: 'From self-care to personal style — gifts she\'ll adore.',
+  },
+  {
+    href: '/gifts-under-50',
+    emoji: '💰',
+    title: 'Gifts Under $50',
+    desc: 'Great gifts that prove you don\'t need a big budget.',
+  },
+  {
+    href: '/christmas-gift-ideas',
+    emoji: '🎄',
+    title: 'Christmas Gift Ideas',
+    desc: 'Top holiday picks for everyone on your list.',
+  },
+  {
+    href: '/birthday-gift-ideas',
+    emoji: '🎂',
+    title: 'Birthday Gift Ideas',
+    desc: 'Unique picks that make birthdays unforgettable.',
+  },
 ];
 
 export default function HomePage() {
@@ -76,6 +137,33 @@ export default function HomePage() {
                 <h3 className="font-bold mb-1" style={{ color: '#1A202C' }}>{f.title}</h3>
                 <p className="text-gray-500 text-sm">{f.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Gift Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3" style={{ color: '#1A202C' }}>
+            Popular Gift Guides
+          </h2>
+          <p className="text-center text-gray-500 mb-10 text-sm">
+            Browse our hand-curated gift guides — filtered by recipient, budget, and occasion.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {giftGuides.map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="group bg-white border border-[#E2E8F0] rounded-2xl p-5 shadow-sm hover:border-[#F04E30] hover:shadow-md transition-all flex flex-col gap-2"
+              >
+                <span className="text-3xl">{guide.emoji}</span>
+                <h3 className="font-bold text-sm text-[#1A202C] group-hover:text-[#F04E30] transition-colors leading-tight">
+                  {guide.title}
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">{guide.desc}</p>
+              </Link>
             ))}
           </div>
         </div>
