@@ -1,5 +1,6 @@
 import { BudgetTier, NicheTag, Occasion, Recipient } from '@/data/products';
 import { redis } from '@/lib/redis';
+import { revalidatePath } from 'next/cache';
 
 export interface AdminProduct {
   id: string;
@@ -39,6 +40,13 @@ export async function readAdminProducts(): Promise<AdminProduct[]> {
 
 export async function writeAdminProducts(products: AdminProduct[]): Promise<void> {
   await redis.set(REDIS_KEY, products);
+  // Bust page cache so new products appear immediately
+  try {
+    revalidatePath('/');
+    revalidatePath('/cranes');
+  } catch {
+    // revalidatePath only works in Server Actions/Route Handlers — safe to ignore otherwise
+  }
 }
 
 export async function getPublishedAdminProducts(): Promise<AdminProduct[]> {
