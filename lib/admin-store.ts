@@ -27,10 +27,17 @@ const STORE_PATH = path.join(process.cwd(), 'data', 'admin-products.json');
 
 export function readAdminProducts(): AdminProduct[] {
   try {
+    // Try filesystem first (local dev / writable environments)
     const data = fs.readFileSync(STORE_PATH, 'utf-8');
     return JSON.parse(data) as AdminProduct[];
   } catch {
-    return [];
+    // Fallback: static require() — Next.js/Vercel bundles this at build time
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      return require('../data/admin-products.json') as AdminProduct[];
+    } catch {
+      return [];
+    }
   }
 }
 
