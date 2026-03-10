@@ -136,14 +136,16 @@ function Dropdown<T extends string>({
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
-export default function HomeFeaturedSection() {
+export default function HomeFeaturedSection({ initialProducts = [] }: { initialProducts?: Product[] }) {
   const router  = useRouter();
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
-  // Admin catalog fetched on mount
-  const [catalog, setCatalog] = useState<Product[]>([]);
+  // Catalog seeded from server props — no client fetch needed
+  const [catalog, setCatalog] = useState<Product[]>(initialProducts);
 
   useEffect(() => {
+    // Only fetch if server didn't provide products (fallback)
+    if (initialProducts.length > 0) return;
     fetch('/api/products/all')
       .then(r => r.ok ? r.json() : [])
       .then((data: Product[]) => {
@@ -151,10 +153,10 @@ export default function HomeFeaturedSection() {
         setCards(getTrending(data));
       })
       .catch(() => {});
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Product cards
-  const [cards, setCards]         = useState<Product[]>([]);
+  // Product cards — seeded from server props immediately
+  const [cards, setCards]         = useState<Product[]>(() => getTrending(initialProducts));
   const [fading, setFading]       = useState(false);
   const [isTrending, setIsTrending] = useState(true);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);

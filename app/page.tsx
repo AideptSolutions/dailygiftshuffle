@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
+import { getPublishedAdminProducts } from '@/lib/admin-store';
+import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
 
 export const metadata: Metadata = {
   title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
@@ -74,7 +76,23 @@ const giftGuides = [
   },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const adminProducts = await getPublishedAdminProducts();
+  const products = adminProducts.map(p => ({
+    id: p.id,
+    name: p.name,
+    description: p.description,
+    price: p.price,
+    priceDisplay: p.priceDisplay,
+    image: isAmazonCdnUrl(p.image ?? '') ? getCategoryImageUrl(p.tags ?? []) : (p.image || getCategoryImageUrl(p.tags ?? [])),
+    rating: p.rating,
+    reviewCount: p.reviewCount,
+    affiliateUrl: p.affiliateUrl,
+    recipients: p.recipients,
+    budgetTier: p.budgetTier,
+    occasions: p.occasions,
+    tags: p.tags,
+  }));
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -97,7 +115,7 @@ export default function HomePage() {
 
         {/* Featured gifts + shuffle widgets */}
         <div className="w-full mt-2">
-          <HomeFeaturedSection />
+          <HomeFeaturedSection initialProducts={products} />
         </div>
       </section>
 
