@@ -43,11 +43,6 @@ export const metadata: Metadata = {
     description: 'Pick a recipient, set a budget, hit SHUFFLE!',
     site: '@thegiftshuffle',
   },
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
   metadataBase: new URL('https://thegiftshuffle.com'),
 };
 
