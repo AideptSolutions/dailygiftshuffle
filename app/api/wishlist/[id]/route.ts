@@ -14,6 +14,7 @@ export async function GET(
     const wishlist: ShareableWishlist =
       typeof raw === 'string' ? JSON.parse(raw) : (raw as ShareableWishlist);
     // Never expose ownerToken to public
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ownerToken: _, ...publicData } = wishlist;
     return NextResponse.json(publicData);
   } catch (err) {
@@ -54,6 +55,7 @@ export async function PUT(
     };
 
     await redis.set(wishlistKey(params.id), JSON.stringify(updated), { ex: 60 * 60 * 24 * 365 });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ownerToken: _, ...publicData } = updated;
     return NextResponse.json(publicData);
   } catch (err) {
