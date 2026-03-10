@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Tell Vercel's bundler to include the admin product catalog in serverless functions
+  outputFileTracingIncludes: {
+    '/api/products/all': ['./data/**/*'],
+    '/api/admin/**/*':   ['./data/**/*'],
+    '/cranes':           ['./data/**/*'],
+  },
+
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'placehold.co' },
