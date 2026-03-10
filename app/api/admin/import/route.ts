@@ -24,8 +24,6 @@ export async function POST(req: NextRequest) {
     if (!url) continue;
 
     const { asin, cleanUrl } = parseAmazonUrl(url);
-
-    // Try to fetch Amazon metadata (graceful fallback if blocked)
     const meta = asin ? await fetchAmazonMeta(asin) : { title: '', image: '', price: '' };
 
     const product: AdminProduct = {
@@ -52,9 +50,8 @@ export async function POST(req: NextRequest) {
     results.push(product);
   }
 
-  // Save to store
-  const existing = readAdminProducts();
-  writeAdminProducts([...existing, ...results]);
+  const existing = await readAdminProducts();
+  await writeAdminProducts([...existing, ...results]);
 
   return NextResponse.json({ imported: results });
 }

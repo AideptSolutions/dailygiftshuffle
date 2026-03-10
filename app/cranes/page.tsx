@@ -15,8 +15,9 @@ export const metadata: Metadata = {
   robots: 'noindex',
 };
 
-export default function CranesPage() {
-  const items = readAdminProducts().filter(p => p.cranes && p.status === 'published');
+export default async function CranesPage() {
+  const all = await readAdminProducts();
+  const items = all.filter(p => p.cranes && p.status === 'published');
 
   return (
     <div className="min-h-screen" style={{ background: '#FFFAF5' }}>

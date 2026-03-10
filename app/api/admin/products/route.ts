@@ -8,7 +8,7 @@ function checkAuth(req: NextRequest): boolean {
 
 export async function GET(req: NextRequest) {
   if (!checkAuth(req)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  return NextResponse.json(readAdminProducts());
+  return NextResponse.json(await readAdminProducts());
 }
 
 export async function POST(req: NextRequest) {
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
     createdAt: now,
     updatedAt: now,
   };
-  const all = readAdminProducts();
-  writeAdminProducts([...all, product]);
+  const all = await readAdminProducts();
+  await writeAdminProducts([...all, product]);
   return NextResponse.json(product, { status: 201 });
 }
