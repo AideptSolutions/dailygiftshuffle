@@ -77,9 +77,18 @@ const organizationSchema = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 min-h-screen`}>
+        {gaId && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${gaId}');`}
+            </Script>
+          </>
+        )}
         {/* Skip-to-content link for keyboard/screen reader users */}
         <a
           href="#main-content"
