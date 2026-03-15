@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
+import GiftCupAnimation from '@/components/GiftCupAnimation';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
 
@@ -114,6 +115,11 @@ export default async function HomePage() {
           <strong style={{ color: '#F04E30' }}>SHUFFLE</strong> — we will curate a surprise gift
           recommendation just for you.
         </p>
+
+        {/* Cup animation */}
+        <div className="-mt-8 -mb-3">
+          <GiftCupAnimation />
+        </div>
 
         {/* Featured gifts + shuffle widgets */}
         <div className="w-full mt-2">

@@ -188,7 +188,7 @@ export default function CategoryShuffleClient({ niche, label, emoji }: Props) {
             </div>
           ) : picks.length > 0 ? (
             <>
-              <div key={gridKey} className="grid grid-cols-2 gap-3 mb-4">
+              <div key={gridKey} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                 {picks.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}

@@ -71,50 +71,52 @@ function StarRating({ rating }: { rating: number }) {
 function ProductCard({ product }: { product: Product; onSave?: () => void; isSaved?: boolean }) {
   const { toggle: toggleFavorite, isFavorited } = useFavorites();
   return (
-    <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm overflow-hidden flex flex-col">
-      <div className="relative w-full h-40 bg-gray-50">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col">
+      {/* Image — fixed compact height */}
+      <div className="relative w-full h-28 bg-gray-50">
         <Image
           src={product.image}
           alt={product.name}
           fill
-          className="object-contain p-4"
+          className="object-contain p-2"
           unoptimized
         />
         <button
           onClick={() => toggleFavorite(product)}
           aria-label={isFavorited(product.id) ? 'Remove from picks' : 'Save to My Picks'}
           title={isFavorited(product.id) ? 'Remove from picks' : 'Save to My Picks'}
-          className="absolute top-2 right-2 h-7 px-2.5 flex items-center justify-center rounded-full shadow text-xs font-bold transition-all"
+          className="absolute top-1.5 right-1.5 h-6 px-2 rounded-full text-[10px] font-bold transition-all"
           style={{
             background: isFavorited(product.id) ? '#F04E30' : 'rgba(255,255,255,0.92)',
             color: isFavorited(product.id) ? '#fff' : '#F04E30',
-            border: '1.5px solid #F04E30',
+            border: '1px solid #F04E30',
           }}
         >
           {isFavorited(product.id) ? 'Saved' : 'Save'}
         </button>
       </div>
-      <div className="p-4 flex flex-col flex-1">
-        <div className="flex items-start justify-between gap-2 mb-1">
-          <h3 className="text-sm font-bold leading-tight line-clamp-2" style={{ color: '#1A202C' }}>{product.name}</h3>
-          <span className="text-sm font-extrabold flex-shrink-0" style={{ color: '#1A202C' }}>
-            {product.priceDisplay}
-          </span>
-        </div>
-        <div className="flex items-center gap-1 mb-2">
+      {/* Info — compact, no description */}
+      <div className="p-3 flex flex-col flex-1">
+        <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2 flex-1">
+          {product.name}
+        </p>
+        <div className="mt-1.5">
           <StarRating rating={product.rating} />
-          <span className="text-xs text-gray-400">({product.reviewCount.toLocaleString()})</span>
+          <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
         </div>
-        <p className="text-xs text-gray-500 leading-relaxed mb-3 line-clamp-2 flex-1">{product.description}</p>
-        <a
-          href={product.affiliateUrl}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className="btn-amazon font-bold text-center py-2.5 px-4 rounded-xl text-sm block"
-        >
-          Buy on Amazon
-        </a>
+        <p className="text-sm font-extrabold mt-1.5" style={{ color: '#1A202C' }}>
+          {product.priceDisplay}
+        </p>
       </div>
+      {/* Buy button — full width */}
+      <a
+        href={product.affiliateUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="btn-amazon block text-center text-xs font-bold py-2 px-3"
+      >
+        Shop on Amazon
+      </a>
     </div>
   );
 }
@@ -210,7 +212,7 @@ export default function ShuffleClient() {
     <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #FFF9E6 100%)' }}>
       <Navbar />
 
-      <main id="main-content" tabIndex={-1} className="flex-1 max-w-3xl mx-auto w-full px-4 py-8">
+      <main id="main-content" tabIndex={-1} className="flex-1 max-w-3xl mx-auto w-full px-4 py-4">
 
         {/* Progress bar */}
         <div className="flex items-center justify-center gap-2 mb-8">
@@ -340,7 +342,7 @@ export default function ShuffleClient() {
               </button>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold text-center mb-6" style={{ color: '#1A202C' }}>
+            <h2 className="text-lg font-extrabold text-center mb-3" style={{ color: '#1A202C' }}>
               Here are 4 gift ideas for you
             </h2>
 
@@ -351,7 +353,7 @@ export default function ShuffleClient() {
               </div>
             ) : products.length > 0 ? (
               <>
-                <div key={gridKey} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div key={gridKey} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                   {products.map((product) => (
                     <ProductCard
                       key={product.id}

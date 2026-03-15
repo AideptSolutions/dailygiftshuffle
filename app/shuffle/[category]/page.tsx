@@ -88,9 +88,9 @@ export default function CategoryShufflePage() {
 
         {/* Cards */}
         {loading ? (
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[0,1,2,3].map(i => (
-              <div key={i} className="bg-white rounded-2xl h-64 animate-pulse border border-[#E2E8F0]" />
+              <div key={i} className="bg-white rounded-2xl h-48 animate-pulse border border-[#E2E8F0]" />
             ))}
           </div>
         ) : cards.length === 0 ? (
@@ -101,19 +101,19 @@ export default function CategoryShufflePage() {
             </Link>
           </div>
         ) : (
-          <div className={`grid grid-cols-2 gap-4 transition-opacity duration-200 ${fading ? 'opacity-0' : 'opacity-100'}`}>
+          <div className={`grid grid-cols-2 sm:grid-cols-4 gap-3 transition-opacity duration-200 ${fading ? 'opacity-0' : 'opacity-100'}`}>
             {cards.map(p => (
               <div
                 key={p.id}
                 className="bg-white rounded-2xl shadow-sm border border-[#E2E8F0] overflow-hidden hover:shadow-md transition-shadow cursor-pointer group"
                 onClick={() => setModal(p)}
               >
-                <div className="relative w-full aspect-video bg-gray-50">
+                <div className="relative w-full h-28 bg-gray-50">
                   <Image
                     src={p.image}
                     alt={p.name}
                     fill
-                    className="object-cover"
+                    className="object-contain p-2"
                     unoptimized
                   />
                   {/* Save button */}

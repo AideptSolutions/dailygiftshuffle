@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
+import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
   title: 'Gifts Under $50 — 30 Great Ideas for Any Occasion | TheGiftShuffle',
@@ -112,36 +113,9 @@ export default function GiftsUnder50Page() {
           <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>
             Top Picks Under $50
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {under50Products.map((p) => (
-              <div
-                key={p.id}
-                className="bg-white rounded-2xl p-5 shadow-sm border border-[#E2E8F0] flex flex-col"
-              >
-                <div className="flex-1">
-                  <div className="flex items-start justify-between gap-2 mb-1">
-                    <h3 className="font-bold text-[#1A202C] leading-tight">{p.name}</h3>
-                    <span className="text-xs font-semibold bg-green-50 text-green-700 px-2 py-0.5 rounded-full shrink-0">
-                      {p.priceDisplay}
-                    </span>
-                  </div>
-                  <p className="text-gray-500 text-sm mb-3 leading-relaxed">{p.description}</p>
-                  <div className="flex items-center gap-1 text-sm text-gray-400 mb-2">
-                    <span className="text-yellow-400">★</span>
-                    <span>{p.rating} ({p.reviewCount.toLocaleString()} reviews)</span>
-                  </div>
-                </div>
-                <div className="mt-auto pt-3 border-t border-gray-100">
-                  <a
-                    href={p.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full text-center bg-[#F04E30] text-white text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
-                  >
-                    Shop on Amazon
-                  </a>
-                </div>
-              </div>
+                            <ProductCard key={p.id} product={p} />
             ))}
           </div>
         </section>

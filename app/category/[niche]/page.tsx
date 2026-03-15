@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import AdSlot from '@/components/AdSlot';
+import ProductCard from '@/components/ProductCard';
 import products from '@/data/products-catalog';
-import type { NicheTag, Product } from '@/data/products-catalog';
+import type { NicheTag } from '@/data/products-catalog';
 
 type Niche = NicheTag;
 
@@ -262,52 +263,7 @@ export async function generateMetadata(
   };
 }
 
-function StarRating({ rating }: { rating: number }) {
-  const full = Math.floor(rating);
-  const half = rating % 1 >= 0.5;
-  return (
-    <span className="star-gold text-sm">
-      {'★'.repeat(full)}
-      {half ? '½' : ''}
-      {'☆'.repeat(5 - full - (half ? 1 : 0))}
-    </span>
-  );
-}
 
-function ProductCard({ product }: { product: Product }) {
-  return (
-    <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-[#E2E8F0] hover:shadow-md transition-shadow flex flex-col">
-      <div className="relative w-full h-48 bg-gray-50">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className="object-contain p-4"
-          unoptimized
-        />
-      </div>
-      <div className="p-4 flex flex-col flex-1">
-        <h3 className="font-bold text-gray-900 text-sm leading-snug mb-1 line-clamp-2">{product.name}</h3>
-        <div className="flex items-center gap-1 mb-2">
-          <StarRating rating={product.rating} />
-          <span className="text-xs text-gray-400">({product.reviewCount.toLocaleString()})</span>
-        </div>
-        <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2 flex-1">{product.description}</p>
-        <div className="flex items-center justify-between mt-auto">
-          <span className="font-extrabold text-lg" style={{ color: '#1A202C' }}>{product.priceDisplay}</span>
-          <a
-            href={product.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="btn-amazon font-bold text-xs px-4 py-2 rounded-full"
-          >
-            Buy Now
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function CategoryPage({ params }: { params: { niche: string } }) {
   const meta = NICHE_META[params.niche as Niche];
@@ -404,10 +360,12 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
           </p>
         )}
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
-          {(filtered.length > 0 ? filtered : products.slice(0, 12)).map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
+            {(filtered.length > 0 ? filtered : products.slice(0, 12)).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
 
         <p className="text-xs text-center text-gray-400 mb-6">

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
+import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
   title: "Gift Ideas for Her — Gifts She'll Actually Love | TheGiftShuffle",
@@ -112,32 +113,9 @@ export default function GiftIdeasForHerPage() {
           <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>
             Top Picks for Her
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {herProducts.map((p) => (
-              <div
-                key={p.id}
-                className="bg-white rounded-2xl p-5 shadow-sm border border-[#E2E8F0] flex flex-col"
-              >
-                <div className="flex-1">
-                  <h3 className="font-bold text-[#1A202C] mb-1 leading-tight">{p.name}</h3>
-                  <p className="text-gray-500 text-sm mb-3 leading-relaxed">{p.description}</p>
-                  <div className="flex items-center gap-1 text-sm text-gray-400 mb-2">
-                    <span className="text-yellow-400">★</span>
-                    <span>{p.rating} ({p.reviewCount.toLocaleString()} reviews)</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
-                  <span className="font-bold text-[#F04E30] text-lg">{p.priceDisplay}</span>
-                  <a
-                    href={p.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="bg-[#F04E30] text-white text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
-                  >
-                    Shop on Amazon
-                  </a>
-                </div>
-              </div>
+                            <ProductCard key={p.id} product={p} />
             ))}
           </div>
         </section>

@@ -156,8 +156,8 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Product cards — seeded from server props immediately
-  const [cards, setCards]         = useState<Product[]>(() => getTrending(initialProducts));
-  const [fading, setFading]       = useState(false);
+  const [cards, setCards]           = useState<Product[]>(() => getTrending(initialProducts));
+  const [animating, setAnimating]   = useState(true);
   const [isTrending, setIsTrending] = useState(true);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
 
@@ -169,12 +169,14 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
 
   // ── Shuffle the 4 product cards ────────────────────────────────────────────
   const handleShuffle = useCallback(() => {
-    setFading(true);
-    setTimeout(() => {
+    // Strip animation class, swap cards, then re-add on next frame
+    // — forces browser to restart @keyframes cleanly
+    setAnimating(false);
+    requestAnimationFrame(() => {
       setCards(pickFour(catalog));
       setIsTrending(false);
-      setFading(false);
-    }, 200);
+      requestAnimationFrame(() => setAnimating(true));
+    });
   }, [catalog]);
 
   // ── Custom Shuffle → navigate ──────────────────────────────────────────────
@@ -196,24 +198,21 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
           {isTrending ? 'Trending Right Now' : 'Gift Ideas'}
         </h2>
 
-        <div
-          className={`grid grid-cols-2 sm:grid-cols-4 gap-3 transition-opacity duration-200 ${
-            fading ? 'opacity-0' : 'opacity-100'
-          }`}
-        >
-          {cards.map((product) => (
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {cards.map((product, i) => (
             <div
               key={product.id}
               onClick={() => setActiveProduct(product)}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-all flex flex-col cursor-pointer"
+              className={`${animating ? 'tile-tumble' : 'opacity-0'} bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
+              style={{ animationDelay: `${i * 65}ms` }}
             >
               {/* Image + save button */}
-              <div className="relative w-full bg-gray-50" style={{ paddingBottom: '75%' }}>
+              <div className="relative w-full h-28 bg-gray-50">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-contain p-3"
+                  className="object-contain p-2"
                   unoptimized
                 />
                 <button
