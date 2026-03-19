@@ -77,6 +77,18 @@ const giftGuides = [
     title: 'Birthday Gift Ideas',
     desc: 'Unique picks that make birthdays unforgettable.',
   },
+  {
+    href: '/gift-ideas-for-kids',
+    emoji: '🧸',
+    title: 'Gifts for Kids and Grandkids',
+    desc: 'Age-appropriate picks from tots to teens that they will actually play with.',
+  },
+  {
+    href: '/gifts-for-camping-and-outdoors',
+    emoji: '⛺',
+    title: 'Gifts for Camping and the Outdoors',
+    desc: 'Gear that actually gets used on every trip, from day hikes to base camp.',
+  },
 ];
 
 export default async function HomePage() {

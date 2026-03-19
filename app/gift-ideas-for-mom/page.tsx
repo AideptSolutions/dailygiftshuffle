@@ -161,6 +161,7 @@ export default function GiftIdeasForMomPage() {
             {[
               { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
               { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
+              { href: '/gift-ideas-for-kids', label: 'Gifts for Kids and Grandkids' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },
               { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
             ].map((link) => (

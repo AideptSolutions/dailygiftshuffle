@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import SearchBar from '@/components/SearchBar';
 import { getWishlistCount } from '@/lib/wishlist';
 
 const CATEGORIES: { slug: string; label: string; emoji: string }[] = [
@@ -21,6 +22,7 @@ const CATEGORIES: { slug: string; label: string; emoji: string }[] = [
   { slug: 'diy-tools',         label: 'DIY & Tools',      emoji: '🔨' },
   { slug: 'finance',           label: 'Finance',          emoji: '💰' },
   { slug: 'car-accessories',   label: 'Car Accessories',  emoji: '🚗' },
+  { slug: 'outdoors',          label: 'Outdoors & Camping', emoji: '⛺' },
 ];
 
 export default function Navbar() {
@@ -62,7 +64,7 @@ export default function Navbar() {
         <Link href="/" className="font-extrabold text-xl" style={{ color: '#F04E30' }}>
           TheGiftShuffle
         </Link>
-        <div className="flex items-center gap-4 text-sm font-medium text-gray-600">
+        <div className="relative flex items-center gap-4 text-sm font-medium text-gray-600">
           <Link href="/shuffle" className="hover:text-[#F04E30] transition-colors hidden sm:block">
             Find a Gift
           </Link>
@@ -132,6 +134,7 @@ export default function Navbar() {
               </span>
             )}
           </Link>
+          <SearchBar />
           <Link
             href="/shuffle"
             className="btn-shuffle font-bold px-4 py-2 rounded-full text-sm"

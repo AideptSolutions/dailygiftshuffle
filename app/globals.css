@@ -45,17 +45,19 @@ body {
 .btn-shuffle {
   background: #E64126;
   color: #FFFFFF;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 15px rgba(230, 65, 38, 0.35);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+  box-shadow: 0 4px 0px rgba(160, 28, 10, 0.8), 0 6px 15px rgba(230, 65, 38, 0.35);
+  transform: translateY(0px);
 }
 
 .btn-shuffle:hover {
   background: linear-gradient(135deg, #E64126 0%, #FF7F50 100%);
-  box-shadow: 0 6px 20px rgba(230, 65, 38, 0.45);
+  box-shadow: 0 4px 0px rgba(160, 28, 10, 0.8), 0 8px 20px rgba(230, 65, 38, 0.45);
 }
 
 .btn-shuffle:active {
-  opacity: 0.9;
+  transform: translateY(4px);
+  box-shadow: 0 0px 0px rgba(160, 28, 10, 0.8), 0 2px 8px rgba(230, 65, 38, 0.25);
 }
 
 /* ── Affiliate / Amazon buttons ─────────────────────────────────────────── */

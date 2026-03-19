@@ -17,6 +17,7 @@ const CATEGORIES = [
   { slug: 'finance', label: 'Finance' },
   { slug: 'kids', label: 'Kids Gifts' },
   { slug: 'car-accessories', label: 'Car Accessories' },
+  { slug: 'outdoors', label: 'Outdoors & Camping' },
 ];
 
 const GIFT_GUIDES = [

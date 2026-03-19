@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readAdminProducts, writeAdminProducts, AdminProduct } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
+import { fixEncoding } from '@/lib/fix-encoding';
 
 function checkAuth(req: NextRequest): boolean {
   return req.cookies.get('admin-auth')?.value === 'true';
@@ -17,8 +18,8 @@ export async function POST(req: NextRequest) {
   const now = new Date().toISOString();
   const product: AdminProduct = {
     id: `admin-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-    name: body.name || 'New Product',
-    description: body.description || '',
+    name: fixEncoding(body.name || 'New Product'),
+    description: fixEncoding(body.description || ''),
     price: body.price ?? 0,
     priceDisplay: body.priceDisplay || `$${body.price ?? 0}`,
     image: isAmazonCdnUrl(body.image ?? '') ? getCategoryImageUrl(body.tags ?? []) : (body.image || ''),

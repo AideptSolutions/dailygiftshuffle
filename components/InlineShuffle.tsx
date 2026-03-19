@@ -1,0 +1,36 @@
+'use client';
+import { useState, useCallback } from 'react';
+import ProductCard from '@/components/ProductCard';
+import { Product } from '@/data/products';
+
+interface Props {
+  products: Product[];
+  heading?: string;
+}
+
+function pickRandom(arr: Product[], n: number): Product[] {
+  const shuffled = [...arr].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, n);
+}
+
+export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: Props) {
+  const [picks, setPicks] = useState<Product[]>(() => pickRandom(products, 4));
+  const shuffle = useCallback(() => setPicks(pickRandom(products, 4)), [products]);
+
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-2xl font-bold" style={{ color: '#1A202C' }}>{heading}</h2>
+        <button
+          onClick={shuffle}
+          className="bg-[#F04E30] text-white font-bold px-5 py-2 rounded-full hover:opacity-90 transition-opacity text-sm"
+        >
+          🔀 Shuffle Again
+        </button>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {picks.map((p) => <ProductCard key={p.id} product={p} />)}
+      </div>
+    </div>
+  );
+}

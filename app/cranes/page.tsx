@@ -29,8 +29,8 @@ export default async function CranesPage() {
           Crane&apos;s List
         </h1>
         <p className="text-gray-500 text-base max-w-md mx-auto">
-          Hey! If you&apos;re here, you&apos;re a friend or family member — thanks for stopping by.
-          Pick anything on this list and grab it on Amazon. Every purchase helps! 🙏
+          A hand-picked selection of products personally curated and recommended by ownership.
+          Browse the list and grab anything that catches your eye on Amazon.
         </p>
       </div>
 

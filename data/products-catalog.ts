@@ -14,12 +14,12 @@ export type Recipient =
 export type NicheTag =
   | 'tech' | 'diy-tools' | 'home' | 'gaming' | 'sports' | 'gardening' | 'finance' | 'fitness'
   | 'parenting' | 'office' | 'luxury' | 'hobby'
-  | 'kitchen' | 'pets' | 'kids' | 'car-accessories';
+  | 'kitchen' | 'pets' | 'kids' | 'car-accessories' | 'outdoors';
 
 export type Occasion =
-  | 'birthday' | 'anniversary' | 'christmas' | 'valentines'
-  | 'mothers-day' | 'fathers-day' | 'graduation' | 'just-because'
-  | 'wedding' | 'housewarming' | 'baby-shower';
+  | 'birthday' | 'anniversary' | 'holiday' | 'valentines'
+  | 'mothers-day' | 'mothersFathers' | 'graduation' | 'just-because'
+  | 'wedding' | 'housewarming' | 'weddingHousewarming';
 
 export interface Product {
   id: string;
@@ -62,7 +62,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'teens', 'dad'],
     budgetTier: '100to150',
     tags: ['tech', 'luxury'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'tech-002',
@@ -78,7 +78,7 @@ export const products: Product[] = [
     recipients: ['her', 'him', 'mom', 'dad', 'friends'],
     budgetTier: '100to150',
     tags: ['tech', 'office'],
-    occasions: ['birthday', 'christmas', 'mothers-day', 'fathers-day'],
+    occasions: ['birthday', 'holiday', 'mothers-day', 'mothersFathers'],
   },
   {
     id: 'tech-003',
@@ -110,7 +110,7 @@ export const products: Product[] = [
     recipients: ['dad', 'mom', 'him', 'her', 'friends'],
     budgetTier: '50to100',
     tags: ['tech', 'office'],
-    occasions: ['birthday', 'fathers-day', 'christmas'],
+    occasions: ['birthday', 'mothersFathers', 'holiday'],
   },
   {
     id: 'tech-005',
@@ -126,7 +126,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'kids'],
     budgetTier: '25to50',
     tags: ['tech', 'diy-tools'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'tech-006',
@@ -142,7 +142,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'friends'],
     budgetTier: '50to100',
     tags: ['tech', 'office', 'finance'],
-    occasions: ['birthday', 'graduation', 'christmas'],
+    occasions: ['birthday', 'graduation', 'holiday'],
   },
   {
     id: 'tech-007',
@@ -158,7 +158,7 @@ export const products: Product[] = [
     recipients: ['mom', 'dad', 'him', 'her', 'friends'],
     budgetTier: '25to50',
     tags: ['tech', 'diy-tools'],
-    occasions: ['birthday', 'christmas', 'housewarming'],
+    occasions: ['birthday', 'holiday', 'housewarming'],
   },
   {
     id: 'tech-008',
@@ -174,7 +174,7 @@ export const products: Product[] = [
     recipients: ['dad', 'mom', 'him', 'her'],
     budgetTier: '50to100',
     tags: ['tech'],
-    occasions: ['birthday', 'fathers-day', 'christmas'],
+    occasions: ['birthday', 'mothersFathers', 'holiday'],
   },
   {
     id: 'tech-009',
@@ -190,7 +190,7 @@ export const products: Product[] = [
     recipients: ['dad', 'mom', 'couples'],
     budgetTier: '25to50',
     tags: ['tech', 'diy-tools'],
-    occasions: ['christmas', 'housewarming'],
+    occasions: ['holiday', 'housewarming'],
   },
   {
     id: 'tech-010',
@@ -206,7 +206,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'friends'],
     budgetTier: '100to150',
     tags: ['tech', 'hobby'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'tech-011',
@@ -222,7 +222,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'her', 'friends'],
     budgetTier: '50to100',
     tags: ['tech', 'hobby'],
-    occasions: ['birthday', 'graduation', 'christmas'],
+    occasions: ['birthday', 'graduation', 'holiday'],
   },
   {
     id: 'tech-012',
@@ -238,7 +238,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'friends'],
     budgetTier: '50to100',
     tags: ['tech', 'hobby'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'tech-013',
@@ -254,7 +254,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'teens', 'dad', 'mom'],
     budgetTier: '100to150',
     tags: ['tech', 'luxury', 'office'],
-    occasions: ['birthday', 'christmas', 'graduation', 'anniversary'],
+    occasions: ['birthday', 'holiday', 'graduation', 'anniversary'],
   },
   {
     id: 'tech-014',
@@ -270,7 +270,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'mom', 'dad', 'teens'],
     budgetTier: '100to150',
     tags: ['tech', 'fitness', 'luxury'],
-    occasions: ['birthday', 'christmas', 'anniversary', 'graduation'],
+    occasions: ['birthday', 'holiday', 'anniversary', 'graduation'],
   },
   {
     id: 'tech-015',
@@ -286,7 +286,7 @@ export const products: Product[] = [
     recipients: ['dad', 'mom', 'him', 'her'],
     budgetTier: '50to100',
     tags: ['tech'],
-    occasions: ['fathers-day', 'mothers-day', 'birthday'],
+    occasions: ['mothersFathers', 'mothers-day', 'birthday'],
   },
 
   // ─────────────────────────────────────────────
@@ -306,7 +306,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'friends'],
     budgetTier: '100to150',
     tags: ['fitness', 'luxury'],
-    occasions: ['birthday', 'fathers-day', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothersFathers', 'mothers-day', 'holiday'],
   },
   {
     id: 'fit-002',
@@ -338,7 +338,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'teens'],
     budgetTier: '25to50',
     tags: ['fitness', 'luxury'],
-    occasions: ['birthday', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothers-day', 'holiday'],
   },
   {
     id: 'fit-004',
@@ -354,7 +354,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad'],
     budgetTier: '100to150',
     tags: ['fitness', 'tech', 'luxury'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'fit-005',
@@ -370,7 +370,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom'],
     budgetTier: '100to150',
     tags: ['fitness'],
-    occasions: ['birthday', 'christmas', 'fathers-day'],
+    occasions: ['birthday', 'holiday', 'mothersFathers'],
   },
   {
     id: 'fit-006',
@@ -386,7 +386,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad'],
     budgetTier: '100to150',
     tags: ['fitness', 'luxury'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'fit-007',
@@ -402,7 +402,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'mom', 'dad', 'friends'],
     budgetTier: '50to100',
     tags: ['fitness'],
-    occasions: ['birthday', 'fathers-day', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothersFathers', 'mothers-day', 'holiday'],
   },
   {
     id: 'fit-008',
@@ -418,7 +418,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad'],
     budgetTier: '100to150',
     tags: ['fitness'],
-    occasions: ['birthday', 'christmas', 'fathers-day'],
+    occasions: ['birthday', 'holiday', 'mothersFathers'],
   },
   {
     id: 'fit-009',
@@ -434,7 +434,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'friends'],
     budgetTier: '100to150',
     tags: ['fitness'],
-    occasions: ['birthday', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothers-day', 'holiday'],
   },
   {
     id: 'fit-010',
@@ -450,7 +450,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'friends'],
     budgetTier: '50to100',
     tags: ['fitness'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'fit-011',
@@ -466,7 +466,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'teens'],
     budgetTier: '100to150',
     tags: ['fitness', 'tech'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'fit-012',
@@ -502,7 +502,7 @@ export const products: Product[] = [
     recipients: ['mom', 'her', 'couples', 'friends', 'dad'],
     budgetTier: '50to100',
     tags: ['kitchen'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'housewarming', 'wedding'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming', 'wedding'],
   },
   {
     id: 'kit-002',
@@ -518,7 +518,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'mom', 'couples', 'friends'],
     budgetTier: '25to50',
     tags: ['kitchen', 'diy-tools'],
-    occasions: ['birthday', 'fathers-day', 'christmas', 'housewarming', 'wedding'],
+    occasions: ['birthday', 'mothersFathers', 'holiday', 'housewarming', 'wedding'],
   },
   {
     id: 'kit-003',
@@ -534,7 +534,7 @@ export const products: Product[] = [
     recipients: ['mom', 'her', 'him', 'couples'],
     budgetTier: '100to150',
     tags: ['kitchen', 'fitness', 'luxury'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'wedding'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'wedding'],
   },
   {
     id: 'kit-004',
@@ -550,7 +550,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'mom', 'her', 'couples'],
     budgetTier: '25to50',
     tags: ['kitchen'],
-    occasions: ['birthday', 'fathers-day', 'christmas', 'housewarming', 'wedding'],
+    occasions: ['birthday', 'mothersFathers', 'holiday', 'housewarming', 'wedding'],
   },
   {
     id: 'kit-005',
@@ -582,7 +582,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'mom', 'dad', 'couples'],
     budgetTier: '100to150',
     tags: ['kitchen', 'luxury'],
-    occasions: ['birthday', 'christmas', 'anniversary', 'wedding'],
+    occasions: ['birthday', 'holiday', 'anniversary', 'wedding'],
   },
   {
     id: 'kit-007',
@@ -598,7 +598,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'kids', 'teens', 'couples'],
     budgetTier: '100to150',
     tags: ['kitchen'],
-    occasions: ['birthday', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothers-day', 'holiday'],
   },
   {
     id: 'kit-008',
@@ -614,7 +614,7 @@ export const products: Product[] = [
     recipients: ['mom', 'her', 'couples'],
     budgetTier: '100to150',
     tags: ['kitchen', 'luxury'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'wedding', 'anniversary'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'wedding', 'anniversary'],
   },
   {
     id: 'kit-009',
@@ -630,7 +630,7 @@ export const products: Product[] = [
     recipients: ['mom', 'dad', 'him', 'her', 'couples'],
     budgetTier: '50to100',
     tags: ['kitchen', 'office'],
-    occasions: ['birthday', 'christmas', 'housewarming', 'wedding'],
+    occasions: ['birthday', 'holiday', 'housewarming', 'wedding'],
   },
   {
     id: 'kit-010',
@@ -646,7 +646,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'couples'],
     budgetTier: '100to150',
     tags: ['kitchen', 'hobby'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'kit-011',
@@ -662,7 +662,7 @@ export const products: Product[] = [
     recipients: ['mom', 'her', 'couples'],
     budgetTier: '100to150',
     tags: ['kitchen', 'luxury'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'wedding'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'wedding'],
   },
   {
     id: 'kit-012',
@@ -698,7 +698,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'friends'],
     budgetTier: '100to150',
     tags: ['diy-tools'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'diy-002',
@@ -714,7 +714,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'friends'],
     budgetTier: '100to150',
     tags: ['diy-tools', 'hobby'],
-    occasions: ['fathers-day', 'birthday', 'christmas', 'graduation'],
+    occasions: ['mothersFathers', 'birthday', 'holiday', 'graduation'],
   },
   {
     id: 'diy-003',
@@ -730,7 +730,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'friends'],
     budgetTier: 'under25',
     tags: ['diy-tools'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'diy-004',
@@ -746,7 +746,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him'],
     budgetTier: '50to100',
     tags: ['diy-tools', 'hobby'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'diy-005',
@@ -762,7 +762,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'friends'],
     budgetTier: '50to100',
     tags: ['diy-tools'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'diy-006',
@@ -778,7 +778,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'mom', 'her'],
     budgetTier: '25to50',
     tags: ['diy-tools'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'diy-007',
@@ -794,7 +794,7 @@ export const products: Product[] = [
     recipients: ['dad', 'mom', 'him', 'her', 'couples'],
     budgetTier: '50to100',
     tags: ['diy-tools', 'tech'],
-    occasions: ['birthday', 'christmas', 'housewarming'],
+    occasions: ['birthday', 'holiday', 'housewarming'],
   },
   {
     id: 'diy-008',
@@ -810,7 +810,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him'],
     budgetTier: 'under25',
     tags: ['diy-tools'],
-    occasions: ['fathers-day', 'birthday'],
+    occasions: ['mothersFathers', 'birthday'],
   },
 
   // ─────────────────────────────────────────────
@@ -830,7 +830,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'friends'],
     budgetTier: '100to150',
     tags: ['office', 'finance'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'off-002',
@@ -862,7 +862,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'friends'],
     budgetTier: '25to50',
     tags: ['office', 'hobby'],
-    occasions: ['birthday', 'graduation', 'just-because', 'christmas'],
+    occasions: ['birthday', 'graduation', 'just-because', 'holiday'],
   },
   {
     id: 'off-004',
@@ -878,7 +878,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom'],
     budgetTier: '100to150',
     tags: ['office', 'fitness'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'off-005',
@@ -894,7 +894,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'teens', 'friends'],
     budgetTier: '100to150',
     tags: ['office', 'tech', 'hobby'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'off-006',
@@ -910,7 +910,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'teens', 'friends'],
     budgetTier: 'under25',
     tags: ['office', 'hobby'],
-    occasions: ['birthday', 'graduation', 'christmas', 'just-because'],
+    occasions: ['birthday', 'graduation', 'holiday', 'just-because'],
   },
   {
     id: 'off-007',
@@ -926,7 +926,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'friends'],
     budgetTier: '100to150',
     tags: ['office', 'tech', 'kitchen'],
-    occasions: ['birthday', 'christmas', 'fathers-day', 'mothers-day', 'graduation'],
+    occasions: ['birthday', 'holiday', 'mothersFathers', 'mothers-day', 'graduation'],
   },
   {
     id: 'off-008',
@@ -942,7 +942,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'friends'],
     budgetTier: '25to50',
     tags: ['office', 'tech'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
 
   // ─────────────────────────────────────────────
@@ -962,7 +962,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom'],
     budgetTier: '100to150',
     tags: ['luxury'],
-    occasions: ['birthday', 'christmas', 'mothers-day', 'anniversary'],
+    occasions: ['birthday', 'holiday', 'mothers-day', 'anniversary'],
   },
   {
     id: 'lux-002',
@@ -978,7 +978,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'couples'],
     budgetTier: '100to150',
     tags: ['luxury', 'hobby'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'lux-003',
@@ -994,7 +994,7 @@ export const products: Product[] = [
     recipients: ['mom', 'her', 'couples'],
     budgetTier: '100to150',
     tags: ['luxury', 'kitchen'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'wedding', 'anniversary'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'wedding', 'anniversary'],
   },
   {
     id: 'lux-004',
@@ -1010,7 +1010,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'teens'],
     budgetTier: '100to150',
     tags: ['luxury', 'fitness', 'hobby'],
-    occasions: ['birthday', 'graduation', 'christmas'],
+    occasions: ['birthday', 'graduation', 'holiday'],
   },
   {
     id: 'lux-005',
@@ -1026,7 +1026,7 @@ export const products: Product[] = [
     recipients: ['him', 'dad'],
     budgetTier: '100to150',
     tags: ['luxury'],
-    occasions: ['birthday', 'fathers-day', 'christmas', 'anniversary', 'graduation'],
+    occasions: ['birthday', 'mothersFathers', 'holiday', 'anniversary', 'graduation'],
   },
   {
     id: 'lux-006',
@@ -1042,7 +1042,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom'],
     budgetTier: '100to150',
     tags: ['luxury', 'tech'],
-    occasions: ['birthday', 'christmas', 'anniversary'],
+    occasions: ['birthday', 'holiday', 'anniversary'],
   },
   {
     id: 'lux-007',
@@ -1058,7 +1058,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'couples'],
     budgetTier: '100to150',
     tags: ['luxury', 'tech'],
-    occasions: ['birthday', 'christmas', 'anniversary', 'housewarming'],
+    occasions: ['birthday', 'holiday', 'anniversary', 'housewarming'],
   },
 
   // ─────────────────────────────────────────────
@@ -1078,7 +1078,7 @@ export const products: Product[] = [
     recipients: ['baby', 'mom', 'couples'],
     budgetTier: '50to100',
     tags: ['parenting', 'tech'],
-    occasions: ['baby-shower', 'birthday', 'christmas'],
+    occasions: ['weddingHousewarming', 'birthday', 'holiday'],
   },
   {
     id: 'par-002',
@@ -1094,7 +1094,7 @@ export const products: Product[] = [
     recipients: ['baby', 'mom', 'couples'],
     budgetTier: '100to150',
     tags: ['parenting', 'tech'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'par-003',
@@ -1110,7 +1110,7 @@ export const products: Product[] = [
     recipients: ['mom', 'couples', 'baby'],
     budgetTier: '100to150',
     tags: ['parenting'],
-    occasions: ['birthday', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothers-day', 'holiday'],
   },
   {
     id: 'par-004',
@@ -1126,7 +1126,7 @@ export const products: Product[] = [
     recipients: ['baby', 'mom', 'couples'],
     budgetTier: '100to150',
     tags: ['parenting', 'luxury'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'par-005',
@@ -1142,7 +1142,7 @@ export const products: Product[] = [
     recipients: ['baby', 'mom', 'couples'],
     budgetTier: '100to150',
     tags: ['parenting', 'luxury', 'tech'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'par-006',
@@ -1158,7 +1158,7 @@ export const products: Product[] = [
     recipients: ['mom', 'couples', 'baby'],
     budgetTier: '100to150',
     tags: ['parenting'],
-    occasions: ['birthday', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothers-day', 'holiday'],
   },
   {
     id: 'par-007',
@@ -1174,7 +1174,7 @@ export const products: Product[] = [
     recipients: ['baby', 'mom', 'couples'],
     budgetTier: '100to150',
     tags: ['parenting'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'par-008',
@@ -1190,7 +1190,7 @@ export const products: Product[] = [
     recipients: ['baby', 'mom', 'couples'],
     budgetTier: '100to150',
     tags: ['parenting'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
 
   // ─────────────────────────────────────────────
@@ -1210,7 +1210,7 @@ export const products: Product[] = [
     recipients: ['pets', 'her', 'him', 'couples'],
     budgetTier: '100to150',
     tags: ['pets', 'tech'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'pet-002',
@@ -1226,7 +1226,7 @@ export const products: Product[] = [
     recipients: ['pets', 'her', 'him'],
     budgetTier: '25to50',
     tags: ['pets'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'pet-003',
@@ -1242,7 +1242,7 @@ export const products: Product[] = [
     recipients: ['pets', 'her', 'him', 'couples'],
     budgetTier: '100to150',
     tags: ['pets', 'tech'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'pet-004',
@@ -1258,7 +1258,7 @@ export const products: Product[] = [
     recipients: ['pets'],
     budgetTier: 'under25',
     tags: ['pets'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'pet-005',
@@ -1290,7 +1290,7 @@ export const products: Product[] = [
     recipients: ['pets'],
     budgetTier: 'under25',
     tags: ['pets'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'pet-007',
@@ -1306,7 +1306,7 @@ export const products: Product[] = [
     recipients: ['pets'],
     budgetTier: 'under25',
     tags: ['pets'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'pet-008',
@@ -1322,7 +1322,7 @@ export const products: Product[] = [
     recipients: ['pets', 'her', 'him'],
     budgetTier: '50to100',
     tags: ['pets', 'fitness'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
 
   // ─────────────────────────────────────────────
@@ -1342,7 +1342,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'teens', 'friends'],
     budgetTier: '100to150',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'mothers-day'],
+    occasions: ['birthday', 'holiday', 'mothers-day'],
   },
   {
     id: 'hob-002',
@@ -1358,7 +1358,7 @@ export const products: Product[] = [
     recipients: ['her', 'teens', 'friends', 'couples'],
     budgetTier: '100to150',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'graduation', 'valentines'],
+    occasions: ['birthday', 'holiday', 'graduation', 'valentines'],
   },
   {
     id: 'hob-003',
@@ -1374,7 +1374,7 @@ export const products: Product[] = [
     recipients: ['him', 'dad', 'teens', 'friends'],
     budgetTier: '100to150',
     tags: ['hobby', 'tech', 'luxury'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'hob-004',
@@ -1390,7 +1390,7 @@ export const products: Product[] = [
     recipients: ['her', 'teens', 'friends', 'kids'],
     budgetTier: '25to50',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'hob-005',
@@ -1406,7 +1406,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him', 'couples'],
     budgetTier: '100to150',
     tags: ['hobby', 'kitchen', 'luxury'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'hob-006',
@@ -1422,7 +1422,7 @@ export const products: Product[] = [
     recipients: ['dad', 'him'],
     budgetTier: '100to150',
     tags: ['hobby', 'fitness'],
-    occasions: ['fathers-day', 'birthday', 'christmas'],
+    occasions: ['mothersFathers', 'birthday', 'holiday'],
   },
   {
     id: 'hob-007',
@@ -1438,7 +1438,7 @@ export const products: Product[] = [
     recipients: ['him', 'dad', 'teens'],
     budgetTier: '100to150',
     tags: ['hobby', 'luxury'],
-    occasions: ['birthday', 'christmas', 'fathers-day'],
+    occasions: ['birthday', 'holiday', 'mothersFathers'],
   },
   {
     id: 'hob-008',
@@ -1454,7 +1454,7 @@ export const products: Product[] = [
     recipients: ['her', 'teens', 'friends', 'kids'],
     budgetTier: '50to100',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'graduation', 'valentines'],
+    occasions: ['birthday', 'holiday', 'graduation', 'valentines'],
   },
 
   // ─────────────────────────────────────────────
@@ -1474,7 +1474,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'mom', 'friends', 'teens'],
     budgetTier: 'under25',
     tags: ['finance', 'office'],
-    occasions: ['birthday', 'graduation', 'christmas', 'just-because'],
+    occasions: ['birthday', 'graduation', 'holiday', 'just-because'],
   },
   {
     id: 'fin-002',
@@ -1490,7 +1490,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'teens', 'friends'],
     budgetTier: '25to50',
     tags: ['finance', 'office', 'tech'],
-    occasions: ['birthday', 'graduation', 'christmas'],
+    occasions: ['birthday', 'graduation', 'holiday'],
   },
   {
     id: 'fin-003',
@@ -1506,7 +1506,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'her', 'friends'],
     budgetTier: 'under25',
     tags: ['finance'],
-    occasions: ['graduation', 'birthday', 'christmas'],
+    occasions: ['graduation', 'birthday', 'holiday'],
   },
   {
     id: 'fin-004',
@@ -1522,7 +1522,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'her', 'friends'],
     budgetTier: 'under25',
     tags: ['finance'],
-    occasions: ['graduation', 'birthday', 'christmas'],
+    occasions: ['graduation', 'birthday', 'holiday'],
   },
   {
     id: 'fin-005',
@@ -1538,7 +1538,7 @@ export const products: Product[] = [
     recipients: ['her', 'him', 'teens', 'friends'],
     budgetTier: '25to50',
     tags: ['finance', 'office', 'hobby'],
-    occasions: ['birthday', 'graduation', 'christmas', 'just-because'],
+    occasions: ['birthday', 'graduation', 'holiday', 'just-because'],
   },
   {
     id: 'fin-006',
@@ -1554,7 +1554,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'dad', 'friends'],
     budgetTier: '25to50',
     tags: ['finance', 'office'],
-    occasions: ['birthday', 'graduation', 'christmas', 'fathers-day'],
+    occasions: ['birthday', 'graduation', 'holiday', 'mothersFathers'],
   },
 
   // ─────────────────────────────────────────────
@@ -1574,7 +1574,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'teens', 'friends'],
     budgetTier: '25to50',
     tags: ['office', 'hobby'],
-    occasions: ['birthday', 'christmas', 'mothers-day', 'just-because'],
+    occasions: ['birthday', 'holiday', 'mothers-day', 'just-because'],
   },
   {
     id: 'her-002',
@@ -1590,7 +1590,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'friends'],
     budgetTier: '100to150',
     tags: ['luxury'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'valentines'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'valentines'],
   },
   {
     id: 'her-003',
@@ -1606,7 +1606,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'friends'],
     budgetTier: '25to50',
     tags: ['luxury'],
-    occasions: ['birthday', 'mothers-day', 'valentines', 'christmas', 'just-because'],
+    occasions: ['birthday', 'mothers-day', 'valentines', 'holiday', 'just-because'],
   },
   {
     id: 'her-004',
@@ -1622,7 +1622,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'friends'],
     budgetTier: 'under25',
     tags: ['kitchen'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'just-because'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'just-because'],
   },
   {
     id: 'her-005',
@@ -1638,7 +1638,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom'],
     budgetTier: '100to150',
     tags: ['luxury', 'fitness'],
-    occasions: ['birthday', 'mothers-day', 'valentines', 'christmas'],
+    occasions: ['birthday', 'mothers-day', 'valentines', 'holiday'],
   },
 
   // ─────────────────────────────────────────────
@@ -1658,7 +1658,7 @@ export const products: Product[] = [
     recipients: ['him', 'dad', 'her', 'mom', 'friends'],
     budgetTier: '25to50',
     tags: ['fitness', 'luxury'],
-    occasions: ['birthday', 'fathers-day', 'christmas', 'just-because'],
+    occasions: ['birthday', 'mothersFathers', 'holiday', 'just-because'],
   },
   {
     id: 'him-002',
@@ -1674,7 +1674,7 @@ export const products: Product[] = [
     recipients: ['him', 'dad', 'teens'],
     budgetTier: 'under25',
     tags: ['hobby'],
-    occasions: ['birthday', 'fathers-day', 'christmas', 'just-because'],
+    occasions: ['birthday', 'mothersFathers', 'holiday', 'just-because'],
   },
   {
     id: 'him-003',
@@ -1690,7 +1690,7 @@ export const products: Product[] = [
     recipients: ['him', 'dad'],
     budgetTier: '100to150',
     tags: ['hobby', 'diy-tools', 'luxury'],
-    occasions: ['birthday', 'fathers-day', 'christmas', 'graduation'],
+    occasions: ['birthday', 'mothersFathers', 'holiday', 'graduation'],
   },
   {
     id: 'him-004',
@@ -1706,7 +1706,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'teens', 'friends'],
     budgetTier: '100to150',
     tags: ['tech', 'luxury', 'hobby'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
 
   // ─────────────────────────────────────────────
@@ -1726,7 +1726,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him', 'her'],
     budgetTier: '50to100',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'graduation', 'just-because'],
+    occasions: ['birthday', 'holiday', 'graduation', 'just-because'],
   },
   {
     id: 'teen-002',
@@ -1742,7 +1742,7 @@ export const products: Product[] = [
     recipients: ['teens', 'him'],
     budgetTier: '25to50',
     tags: ['tech', 'hobby'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'teen-003',
@@ -1758,7 +1758,7 @@ export const products: Product[] = [
     recipients: ['teens', 'her', 'him'],
     budgetTier: 'under25',
     tags: ['tech'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
 
   // ─────────────────────────────────────────────
@@ -1778,7 +1778,7 @@ export const products: Product[] = [
     recipients: ['kids'],
     budgetTier: '50to100',
     tags: ['tech', 'parenting'],
-    occasions: ['birthday', 'christmas', 'graduation'],
+    occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
     id: 'kid-002',
@@ -1794,7 +1794,7 @@ export const products: Product[] = [
     recipients: ['kids', 'baby'],
     budgetTier: '100to150',
     tags: ['parenting', 'hobby'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'kid-003',
@@ -1810,7 +1810,7 @@ export const products: Product[] = [
     recipients: ['kids'],
     budgetTier: '50to100',
     tags: ['parenting', 'hobby'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
   {
     id: 'kid-004',
@@ -1826,7 +1826,7 @@ export const products: Product[] = [
     recipients: ['kids'],
     budgetTier: '100to150',
     tags: ['parenting', 'kitchen'],
-    occasions: ['birthday', 'christmas'],
+    occasions: ['birthday', 'holiday'],
   },
 
   // ─────────────────────────────────────────────
@@ -1862,7 +1862,7 @@ export const products: Product[] = [
     recipients: ['couples'],
     budgetTier: 'under25',
     tags: ['hobby'],
-    occasions: ['anniversary', 'valentines', 'birthday', 'christmas'],
+    occasions: ['anniversary', 'valentines', 'birthday', 'holiday'],
   },
   {
     id: 'cpl-003',
@@ -1894,7 +1894,7 @@ export const products: Product[] = [
     recipients: ['couples', 'friends', 'mom', 'dad'],
     budgetTier: '50to100',
     tags: ['luxury', 'kitchen'],
-    occasions: ['anniversary', 'housewarming', 'birthday', 'christmas', 'valentines'],
+    occasions: ['anniversary', 'housewarming', 'birthday', 'holiday', 'valentines'],
   },
 
   // ─────────────────────────────────────────────
@@ -1914,7 +1914,7 @@ export const products: Product[] = [
     recipients: ['friends', 'dad', 'him', 'couples'],
     budgetTier: '50to100',
     tags: ['luxury', 'hobby'],
-    occasions: ['birthday', 'christmas', 'fathers-day', 'graduation'],
+    occasions: ['birthday', 'holiday', 'mothersFathers', 'graduation'],
   },
   {
     id: 'fri-002',
@@ -1930,7 +1930,7 @@ export const products: Product[] = [
     recipients: ['friends', 'her', 'him', 'teens'],
     budgetTier: '25to50',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'fri-003',
@@ -1946,7 +1946,7 @@ export const products: Product[] = [
     recipients: ['friends', 'teens', 'couples', 'him', 'her'],
     budgetTier: 'under25',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'fri-004',
@@ -1962,7 +1962,7 @@ export const products: Product[] = [
     recipients: ['friends', 'him', 'dad', 'couples'],
     budgetTier: '100to150',
     tags: ['luxury', 'hobby', 'fitness'],
-    occasions: ['birthday', 'christmas', 'fathers-day'],
+    occasions: ['birthday', 'holiday', 'mothersFathers'],
   },
 
   // ─────────────────────────────────────────────
@@ -1982,7 +1982,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'teens', 'friends', 'mom', 'dad'],
     budgetTier: 'under25',
     tags: ['tech', 'office'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
     id: 'stk-002',
@@ -1998,7 +1998,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'mom', 'dad', 'friends'],
     budgetTier: '50to100',
     tags: ['tech'],
-    occasions: ['birthday', 'fathers-day', 'mothers-day', 'christmas'],
+    occasions: ['birthday', 'mothersFathers', 'mothers-day', 'holiday'],
   },
   {
     id: 'stk-003',
@@ -2014,7 +2014,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'friends', 'teens'],
     budgetTier: 'under25',
     tags: ['fitness'],
-    occasions: ['birthday', 'mothers-day', 'christmas', 'valentines', 'just-because'],
+    occasions: ['birthday', 'mothers-day', 'holiday', 'valentines', 'just-because'],
   },
   {
     id: 'stk-004',
@@ -2030,7 +2030,7 @@ export const products: Product[] = [
     recipients: ['him', 'her', 'teens', 'couples', 'friends'],
     budgetTier: 'under25',
     tags: ['hobby'],
-    occasions: ['birthday', 'graduation', 'christmas', 'just-because'],
+    occasions: ['birthday', 'graduation', 'holiday', 'just-because'],
   },
   {
     id: 'stk-005',
@@ -2046,7 +2046,7 @@ export const products: Product[] = [
     recipients: ['friends', 'couples', 'him', 'her', 'teens'],
     budgetTier: 'under25',
     tags: ['hobby'],
-    occasions: ['birthday', 'christmas', 'just-because'],
+    occasions: ['birthday', 'holiday', 'just-because'],
   },
 
   // ---------------------------------------------
@@ -2054,74 +2054,91 @@ export const products: Product[] = [
   // ---------------------------------------------
 
   // More Tech
-  { id: 'tech-016', name: 'Jackery Explorer 300 Portable Power Station', description: 'Compact 293Wh power station for camping, van life, or power outages. Charges phones 25x, laptops 4x, and powers small appliances.', price: 299, priceDisplay: '$299', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Jackery+300', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Jackery+Explorer+300&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby'], occasions: ['birthday', 'christmas', 'fathers-day'] },
-  { id: 'tech-017', name: 'Kindle Unlimited (12-Month Gift Membership)', description: 'Unlimited reading on any device with access to over 4 million titles, thousands of audiobooks, and select magazines.', price: 107, priceDisplay: '$107', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=Kindle+Unlimited', rating: 4.5, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/s?k=Kindle+Unlimited+gift+12+month&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'him', 'mom', 'dad', 'friends'], budgetTier: '100to150', tags: ['office', 'finance', 'hobby'], occasions: ['birthday', 'christmas', 'mothers-day', 'fathers-day'] },
-  { id: 'tech-018', name: 'GoPro HERO12 Black Action Camera', description: '5.3K video, HyperSmooth 6.0 stabilization, and 13-meter waterproofing. The world standard for action cameras.', price: 299, priceDisplay: '$299', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=GoPro+HERO12', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0CHD4LGMR?tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'teens', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby', 'fitness'], occasions: ['birthday', 'graduation', 'christmas'] },
-  { id: 'tech-019', name: 'Belkin 3-in-1 MagSafe Wireless Charging Pad', description: 'Simultaneously charge iPhone, Apple Watch, and AirPods in one elegant device. MagSafe alignment for fastest possible iPhone charging.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Belkin+3in1+Charger', rating: 4.5, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Belkin+3+in+1+MagSafe+charging+pad&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom', 'friends'], budgetTier: '50to100', tags: ['tech', 'office'], occasions: ['birthday', 'christmas', 'graduation'] },
-  { id: 'tech-020', name: 'Whoop Band (6-Month Membership)', description: 'Give the gift of optimized recovery. WHOOP 4.0 subscription includes the wearable free and tracks HRV, sleep, and strain 24/7.', price: 119, priceDisplay: '$119', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=WHOOP+Membership', rating: 4.4, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=WHOOP+4.0+membership&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'fitness'], occasions: ['birthday', 'christmas'] },
+  { id: 'tech-016', name: 'Jackery Explorer 300 Portable Power Station', description: 'Compact 293Wh power station for camping, van life, or power outages. Charges phones 25x, laptops 4x, and powers small appliances.', price: 299, priceDisplay: '$299', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Jackery+300', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Jackery+Explorer+300&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby'], occasions: ['birthday', 'holiday', 'mothersFathers'] },
+  { id: 'tech-017', name: 'Kindle Unlimited (12-Month Gift Membership)', description: 'Unlimited reading on any device with access to over 4 million titles, thousands of audiobooks, and select magazines.', price: 107, priceDisplay: '$107', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=Kindle+Unlimited', rating: 4.5, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/s?k=Kindle+Unlimited+gift+12+month&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'him', 'mom', 'dad', 'friends'], budgetTier: '100to150', tags: ['office', 'finance', 'hobby'], occasions: ['birthday', 'holiday', 'mothers-day', 'mothersFathers'] },
+  { id: 'tech-018', name: 'GoPro HERO12 Black Action Camera', description: '5.3K video, HyperSmooth 6.0 stabilization, and 13-meter waterproofing. The world standard for action cameras.', price: 299, priceDisplay: '$299', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=GoPro+HERO12', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0CHD4LGMR?tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'teens', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby', 'fitness'], occasions: ['birthday', 'graduation', 'holiday'] },
+  { id: 'tech-019', name: 'Belkin 3-in-1 MagSafe Wireless Charging Pad', description: 'Simultaneously charge iPhone, Apple Watch, and AirPods in one elegant device. MagSafe alignment for fastest possible iPhone charging.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Belkin+3in1+Charger', rating: 4.5, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Belkin+3+in+1+MagSafe+charging+pad&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom', 'friends'], budgetTier: '50to100', tags: ['tech', 'office'], occasions: ['birthday', 'holiday', 'graduation'] },
+  { id: 'tech-020', name: 'Whoop Band (6-Month Membership)', description: 'Give the gift of optimized recovery. WHOOP 4.0 subscription includes the wearable free and tracks HRV, sleep, and strain 24/7.', price: 119, priceDisplay: '$119', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=WHOOP+Membership', rating: 4.4, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=WHOOP+4.0+membership&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'fitness'], occasions: ['birthday', 'holiday'] },
 
   // More Fitness
-  { id: 'fit-013', name: 'Trigger Point GRID Foam Roller', description: 'Patented multi-density exterior surface that maps to the three distinctive pressure zones of a therapist\'s hands for superior muscle recovery.', price: 36, priceDisplay: '$36', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=GRID+Foam+Roller', rating: 4.7, reviewCount: 56234, affiliateUrl: 'https://www.amazon.com/s?k=Trigger+Point+GRID+foam+roller&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom', 'friends'], budgetTier: '25to50', tags: ['fitness'], occasions: ['birthday', 'christmas', 'just-because'] },
-  { id: 'fit-014', name: 'Lululemon Surge Shorts 6"', description: 'The go-to training short with a four-way stretch fabric, hidden waistband pocket, and secure zip pocket. Built for high-intensity movement.', price: 68, priceDisplay: '$68', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Lululemon+Shorts', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Lululemon+Surge+shorts+6+inch&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'teens'], budgetTier: '50to100', tags: ['fitness', 'luxury'], occasions: ['birthday', 'christmas', 'fathers-day'] },
-  { id: 'fit-015', name: 'Stanley Quencher H2.0 40oz Tumbler', description: 'The viral tumbler that broke the internet. Advanced FlowState lid, handle, and double-wall vacuum insulation. Fits in car cupholders.', price: 45, priceDisplay: '$45', image: 'https://placehold.co/400x400/e91e63/ffffff?text=Stanley+Quencher+40oz', rating: 4.7, reviewCount: 89234, affiliateUrl: 'https://www.amazon.com/s?k=Stanley+Quencher+H2.0+40oz&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'teens', 'friends'], budgetTier: '25to50', tags: ['fitness'], occasions: ['birthday', 'mothers-day', 'christmas', 'just-because'] },
-  { id: 'fit-016', name: 'NordicTrack T Series Treadmill', description: '10% OneTouch incline, 10 MPH speeds, and a 10" smart HD touchscreen. Includes 30-day iFIT family membership for trainer-led classes.', price: 799, priceDisplay: '$799', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=NordicTrack+Treadmill', rating: 4.3, reviewCount: 14523, affiliateUrl: 'https://www.amazon.com/s?k=NordicTrack+T+Series+treadmill&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom'], budgetTier: '100to150', tags: ['fitness'], occasions: ['birthday', 'christmas'] },
+  { id: 'fit-013', name: 'Trigger Point GRID Foam Roller', description: 'Patented multi-density exterior surface that maps to the three distinctive pressure zones of a therapist\'s hands for superior muscle recovery.', price: 36, priceDisplay: '$36', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=GRID+Foam+Roller', rating: 4.7, reviewCount: 56234, affiliateUrl: 'https://www.amazon.com/s?k=Trigger+Point+GRID+foam+roller&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom', 'friends'], budgetTier: '25to50', tags: ['fitness'], occasions: ['birthday', 'holiday', 'just-because'] },
+  { id: 'fit-014', name: 'Lululemon Surge Shorts 6"', description: 'The go-to training short with a four-way stretch fabric, hidden waistband pocket, and secure zip pocket. Built for high-intensity movement.', price: 68, priceDisplay: '$68', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Lululemon+Shorts', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Lululemon+Surge+shorts+6+inch&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'teens'], budgetTier: '50to100', tags: ['fitness', 'luxury'], occasions: ['birthday', 'holiday', 'mothersFathers'] },
+  { id: 'fit-015', name: 'Stanley Quencher H2.0 40oz Tumbler', description: 'The viral tumbler that broke the internet. Advanced FlowState lid, handle, and double-wall vacuum insulation. Fits in car cupholders.', price: 45, priceDisplay: '$45', image: 'https://placehold.co/400x400/e91e63/ffffff?text=Stanley+Quencher+40oz', rating: 4.7, reviewCount: 89234, affiliateUrl: 'https://www.amazon.com/s?k=Stanley+Quencher+H2.0+40oz&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'teens', 'friends'], budgetTier: '25to50', tags: ['fitness'], occasions: ['birthday', 'mothers-day', 'holiday', 'just-because'] },
+  { id: 'fit-016', name: 'NordicTrack T Series Treadmill', description: '10% OneTouch incline, 10 MPH speeds, and a 10" smart HD touchscreen. Includes 30-day iFIT family membership for trainer-led classes.', price: 799, priceDisplay: '$799', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=NordicTrack+Treadmill', rating: 4.3, reviewCount: 14523, affiliateUrl: 'https://www.amazon.com/s?k=NordicTrack+T+Series+treadmill&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom'], budgetTier: '100to150', tags: ['fitness'], occasions: ['birthday', 'holiday'] },
 
   // More Kitchen
-  { id: 'kit-013', name: 'Cuisinart Air Fryer Toaster Oven (17L)', description: '7-in-1 countertop oven with air fry, convection bake, convection broil, bake, broil, warm, and toast functions. Large enough for a whole chicken.', price: 199, priceDisplay: '$199', image: 'https://placehold.co/400x400/bdc3c7/1a1a1a?text=Cuisinart+Air+Fryer', rating: 4.5, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Cuisinart+17L+air+fryer+toaster+oven&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen'], occasions: ['birthday', 'mothers-day', 'christmas', 'housewarming'] },
-  { id: 'kit-014', name: 'Smeg Retro Style Kettle (1.7L)', description: 'Iconic 50s style kettle in 11 pastel colors. 360� base, keep-warm function, and a removable filter. The most beautiful kettle in any kitchen.', price: 149, priceDisplay: '$149', image: 'https://placehold.co/400x400/85c1e9/1a1a1a?text=Smeg+Retro+Kettle', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Smeg+retro+style+kettle&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['birthday', 'mothers-day', 'christmas', 'housewarming'] },
-  { id: 'kit-015', name: 'All-Clad D3 Stainless 10-Piece Cookware Set', description: 'Professional-grade tri-ply stainless steel cookware with bonded aluminum core for even heating. Oven and dishwasher safe. A kitchen investment that lasts decades.', price: 699, priceDisplay: '$699', image: 'https://placehold.co/400x400/bdc3c7/1a1a1a?text=All-Clad+D3+Set', rating: 4.8, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=All-Clad+D3+stainless+10+piece+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['wedding', 'birthday', 'mothers-day', 'christmas'] },
-  { id: 'kit-016', name: 'Weber Spirit II E-310 Gas Grill', description: 'Three burner gas grill with 529 sq in of cooking space, iGrill 3 compatibility, and porcelain-enameled lid. The gold standard home grill.', price: 569, priceDisplay: '$569', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=Weber+Spirit+E310', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Weber+Spirit+II+E-310+gas+grill&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'hobby'], occasions: ['fathers-day', 'birthday', 'christmas'] },
-  { id: 'kit-017', name: 'Aeropress Go Travel Coffee Maker', description: 'Make specialty coffee anywhere with this ultra-portable press system. Brews smooth, rich coffee in under two minutes with no grit, no bitterness.', price: 35, priceDisplay: '$35', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Aeropress+Go', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Aeropress+Go+travel+coffee+maker&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['birthday', 'fathers-day', 'christmas', 'graduation'] },
+  { id: 'kit-013', name: 'Cuisinart Air Fryer Toaster Oven (17L)', description: '7-in-1 countertop oven with air fry, convection bake, convection broil, bake, broil, warm, and toast functions. Large enough for a whole chicken.', price: 199, priceDisplay: '$199', image: 'https://placehold.co/400x400/bdc3c7/1a1a1a?text=Cuisinart+Air+Fryer', rating: 4.5, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Cuisinart+17L+air+fryer+toaster+oven&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
+  { id: 'kit-014', name: 'Smeg Retro Style Kettle (1.7L)', description: 'Iconic 50s style kettle in 11 pastel colors. 360� base, keep-warm function, and a removable filter. The most beautiful kettle in any kitchen.', price: 149, priceDisplay: '$149', image: 'https://placehold.co/400x400/85c1e9/1a1a1a?text=Smeg+Retro+Kettle', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Smeg+retro+style+kettle&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
+  { id: 'kit-015', name: 'All-Clad D3 Stainless 10-Piece Cookware Set', description: 'Professional-grade tri-ply stainless steel cookware with bonded aluminum core for even heating. Oven and dishwasher safe. A kitchen investment that lasts decades.', price: 699, priceDisplay: '$699', image: 'https://placehold.co/400x400/bdc3c7/1a1a1a?text=All-Clad+D3+Set', rating: 4.8, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=All-Clad+D3+stainless+10+piece+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['wedding', 'birthday', 'mothers-day', 'holiday'] },
+  { id: 'kit-016', name: 'Weber Spirit II E-310 Gas Grill', description: 'Three burner gas grill with 529 sq in of cooking space, iGrill 3 compatibility, and porcelain-enameled lid. The gold standard home grill.', price: 569, priceDisplay: '$569', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=Weber+Spirit+E310', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Weber+Spirit+II+E-310+gas+grill&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'hobby'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
+  { id: 'kit-017', name: 'Aeropress Go Travel Coffee Maker', description: 'Make specialty coffee anywhere with this ultra-portable press system. Brews smooth, rich coffee in under two minutes with no grit, no bitterness.', price: 35, priceDisplay: '$35', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Aeropress+Go', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Aeropress+Go+travel+coffee+maker&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['birthday', 'mothersFathers', 'holiday', 'graduation'] },
 
   // More Home/DIY
-  { id: 'diy-009', name: 'Philips Hue Smart Bulb Starter Kit (4 Pack)', description: 'Transform your home with 16 million colors and adjustable whites. Control with your voice, phone, or switch. Works with Alexa, Google, and HomeKit.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/f1c40f/1a1a1a?text=Philips+Hue+Starter', rating: 4.6, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/s?k=Philips+Hue+smart+bulb+starter+kit+4+pack&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'couples'], budgetTier: '50to100', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'christmas', 'housewarming'] },
-  { id: 'diy-010', name: 'iRobot Roomba i3+ EVO Robot Vacuum', description: 'Self-emptying robot vacuum with intelligent room mapping and automatic dirt disposal. Clean an entire level of your home without ever touching it.', price: 399, priceDisplay: '$399', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Roomba+i3+EVO', rating: 4.5, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=iRobot+Roomba+i3+EVO+self+emptying&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'mothers-day', 'christmas', 'housewarming'] },
-  { id: 'diy-011', name: 'Nest Learning Thermostat (4th Gen)', description: 'Learns your schedule and programs itself to save energy. Works with Alexa, Google, and Siri. ENERGY STAR certified and saves 10-12% on heating bills.', price: 279, priceDisplay: '$279', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Nest+Thermostat', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Nest+Learning+Thermostat+4th+gen&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'mom', 'him', 'her', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech', 'finance'], occasions: ['birthday', 'christmas', 'housewarming'] },
+  { id: 'diy-009', name: 'Philips Hue Smart Bulb Starter Kit (4 Pack)', description: 'Transform your home with 16 million colors and adjustable whites. Control with your voice, phone, or switch. Works with Alexa, Google, and HomeKit.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/f1c40f/1a1a1a?text=Philips+Hue+Starter', rating: 4.6, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/s?k=Philips+Hue+smart+bulb+starter+kit+4+pack&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'couples'], budgetTier: '50to100', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'holiday', 'housewarming'] },
+  { id: 'diy-010', name: 'iRobot Roomba i3+ EVO Robot Vacuum', description: 'Self-emptying robot vacuum with intelligent room mapping and automatic dirt disposal. Clean an entire level of your home without ever touching it.', price: 399, priceDisplay: '$399', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Roomba+i3+EVO', rating: 4.5, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=iRobot+Roomba+i3+EVO+self+emptying&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
+  { id: 'diy-011', name: 'Nest Learning Thermostat (4th Gen)', description: 'Learns your schedule and programs itself to save energy. Works with Alexa, Google, and Siri. ENERGY STAR certified and saves 10-12% on heating bills.', price: 279, priceDisplay: '$279', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Nest+Thermostat', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Nest+Learning+Thermostat+4th+gen&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'mom', 'him', 'her', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech', 'finance'], occasions: ['birthday', 'holiday', 'housewarming'] },
 
   // More Office
-  { id: 'off-009', name: 'Fjallraven Kanken Classic Backpack', description: 'The iconic Swedish backpack with a padded laptop sleeve, ergonomic shoulder straps, and 16L capacity. Built to last a lifetime in 30+ colors.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Kanken+Backpack', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Fjallraven+Kanken+Classic+backpack&tag=AMAZON_TAG', network: 'amazon', recipients: ['teens', 'her', 'him', 'friends'], budgetTier: '50to100', tags: ['office', 'hobby'], occasions: ['birthday', 'graduation', 'christmas'] },
-  { id: 'off-010', name: 'Apple Magic Keyboard with Touch ID', description: 'Wireless keyboard with Touch ID for secure logins and Apple Pay. Compact design with full-size function keys and up to a month of battery life.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/bdc3c7/1a1a1a?text=Magic+Keyboard', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Apple+Magic+Keyboard+Touch+ID&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '50to100', tags: ['office', 'tech'], occasions: ['birthday', 'graduation', 'christmas'] },
-  { id: 'off-011', name: 'Autonomous SmartDesk Pro 72"', description: 'Electric standing desk with memory height presets, a 310-lb lifting capacity, and whisper-quiet dual motors. 5-year warranty.', price: 499, priceDisplay: '$499', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=SmartDesk+Pro', rating: 4.5, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Autonomous+SmartDesk+Pro+standing+desk&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad'], budgetTier: '100to150', tags: ['office', 'finance', 'fitness'], occasions: ['birthday', 'christmas'] },
+  { id: 'off-009', name: 'Fjallraven Kanken Classic Backpack', description: 'The iconic Swedish backpack with a padded laptop sleeve, ergonomic shoulder straps, and 16L capacity. Built to last a lifetime in 30+ colors.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Kanken+Backpack', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Fjallraven+Kanken+Classic+backpack&tag=AMAZON_TAG', network: 'amazon', recipients: ['teens', 'her', 'him', 'friends'], budgetTier: '50to100', tags: ['office', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
+  { id: 'off-010', name: 'Apple Magic Keyboard with Touch ID', description: 'Wireless keyboard with Touch ID for secure logins and Apple Pay. Compact design with full-size function keys and up to a month of battery life.', price: 99, priceDisplay: '$99', image: 'https://placehold.co/400x400/bdc3c7/1a1a1a?text=Magic+Keyboard', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Apple+Magic+Keyboard+Touch+ID&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '50to100', tags: ['office', 'tech'], occasions: ['birthday', 'graduation', 'holiday'] },
+  { id: 'off-011', name: 'Autonomous SmartDesk Pro 72"', description: 'Electric standing desk with memory height presets, a 310-lb lifting capacity, and whisper-quiet dual motors. 5-year warranty.', price: 499, priceDisplay: '$499', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=SmartDesk+Pro', rating: 4.5, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Autonomous+SmartDesk+Pro+standing+desk&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad'], budgetTier: '100to150', tags: ['office', 'finance', 'fitness'], occasions: ['birthday', 'holiday'] },
 
   // More Luxury
-  { id: 'lux-008', name: 'Aesop Resurrection Hand Balm (75ml)', description: 'Cult-favorite hand balm in the iconic amber bottle. Mandarin, rosemary, and cedar wood essential oils leave hands soft without greasiness.', price: 35, priceDisplay: '$35', image: 'https://placehold.co/400x400/d4a96a/1a1a1a?text=Aesop+Hand+Balm', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Aesop+Resurrection+hand+balm&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: '25to50', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'christmas', 'valentines', 'just-because'] },
-  { id: 'lux-009', name: 'Montblanc Meisterst�ck Pen & Notebook Set', description: 'The iconic Meisterst�ck 145 fountain pen paired with a fine grain leather notebook. A timeless gift for executives and writers.', price: 780, priceDisplay: '$780', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Montblanc+Set', rating: 4.8, reviewCount: 3412, affiliateUrl: 'https://www.amazon.com/s?k=Montblanc+Meisterstuck+pen+notebook+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'graduation', 'anniversary', 'fathers-day'] },
-  { id: 'lux-010', name: 'Brooklinen Luxe Core Sheet Set (Queen)', description: 'The bestselling long-staple cotton sheets with a 480 thread count. Hotel-quality softness with a 365-night trial and lifetime warranty.', price: 149, priceDisplay: '$149', image: 'https://placehold.co/400x400/ecf0f1/1a1a1a?text=Brooklinen+Sheets', rating: 4.7, reviewCount: 28941, affiliateUrl: 'https://www.amazon.com/s?k=Brooklinen+Luxe+Core+sheet+set+queen&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'him', 'couples', 'mom'], budgetTier: '100to150', tags: ['luxury', 'diy-tools'], occasions: ['birthday', 'wedding', 'anniversary', 'christmas', 'mothers-day'] },
+  { id: 'lux-008', name: 'Aesop Resurrection Hand Balm (75ml)', description: 'Cult-favorite hand balm in the iconic amber bottle. Mandarin, rosemary, and cedar wood essential oils leave hands soft without greasiness.', price: 35, priceDisplay: '$35', image: 'https://placehold.co/400x400/d4a96a/1a1a1a?text=Aesop+Hand+Balm', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Aesop+Resurrection+hand+balm&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: '25to50', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'valentines', 'just-because'] },
+  { id: 'lux-009', name: 'Montblanc Meisterst�ck Pen & Notebook Set', description: 'The iconic Meisterst�ck 145 fountain pen paired with a fine grain leather notebook. A timeless gift for executives and writers.', price: 780, priceDisplay: '$780', image: 'https://placehold.co/400x400/1a1a2e/ffffff?text=Montblanc+Set', rating: 4.8, reviewCount: 3412, affiliateUrl: 'https://www.amazon.com/s?k=Montblanc+Meisterstuck+pen+notebook+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'graduation', 'anniversary', 'mothersFathers'] },
+  { id: 'lux-010', name: 'Brooklinen Luxe Core Sheet Set (Queen)', description: 'The bestselling long-staple cotton sheets with a 480 thread count. Hotel-quality softness with a 365-night trial and lifetime warranty.', price: 149, priceDisplay: '$149', image: 'https://placehold.co/400x400/ecf0f1/1a1a1a?text=Brooklinen+Sheets', rating: 4.7, reviewCount: 28941, affiliateUrl: 'https://www.amazon.com/s?k=Brooklinen+Luxe+Core+sheet+set+queen&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'him', 'couples', 'mom'], budgetTier: '100to150', tags: ['luxury', 'diy-tools'], occasions: ['birthday', 'wedding', 'anniversary', 'holiday', 'mothers-day'] },
 
   // More For Her
-  { id: 'her-006', name: 'Dyson Airwrap Multi-Styler Complete', description: 'Style hair without extreme heat using Coanda airflow. Curls, waves, volumizes, and dries in one tool. Comes with 6 attachments.', price: 599, priceDisplay: '$599', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Dyson+Airwrap', rating: 4.5, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Dyson+Airwrap+complete+multi-styler&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '100to150', tags: ['luxury', 'tech'], occasions: ['birthday', 'mothers-day', 'christmas', 'anniversary'] },
-  { id: 'her-007', name: 'Mejuri Fine Jewelry � Gold Hoops', description: 'Solid 14k gold small hoop earrings that go with everything. Fine jewelry at direct-to-consumer prices. Comes in a beautiful gift box.', price: 98, priceDisplay: '$98', image: 'https://placehold.co/400x400/f1c40f/1a1a1a?text=Gold+Hoop+Earrings', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=14k+gold+small+hoop+earrings+women&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'christmas', 'anniversary'] },
-  { id: 'her-008', name: 'Cuyana Classic Essential Tote', description: 'Investment-quality leather tote that gets better with age. Made in Italy from smooth vegetable-tanned leather with a magnetic closure.', price: 295, priceDisplay: '$295', image: 'https://placehold.co/400x400/c0a882/1a1a1a?text=Cuyana+Leather+Tote', rating: 4.7, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=leather+tote+bag+women+Italian+vegetable+tanned&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'mothers-day', 'christmas', 'graduation'] },
+  { id: 'her-006', name: 'Dyson Airwrap Multi-Styler Complete', description: 'Style hair without extreme heat using Coanda airflow. Curls, waves, volumizes, and dries in one tool. Comes with 6 attachments.', price: 599, priceDisplay: '$599', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Dyson+Airwrap', rating: 4.5, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/s?k=Dyson+Airwrap+complete+multi-styler&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '100to150', tags: ['luxury', 'tech'], occasions: ['birthday', 'mothers-day', 'holiday', 'anniversary'] },
+  { id: 'her-007', name: 'Mejuri Fine Jewelry � Gold Hoops', description: 'Solid 14k gold small hoop earrings that go with everything. Fine jewelry at direct-to-consumer prices. Comes in a beautiful gift box.', price: 98, priceDisplay: '$98', image: 'https://placehold.co/400x400/f1c40f/1a1a1a?text=Gold+Hoop+Earrings', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=14k+gold+small+hoop+earrings+women&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'holiday', 'anniversary'] },
+  { id: 'her-008', name: 'Cuyana Classic Essential Tote', description: 'Investment-quality leather tote that gets better with age. Made in Italy from smooth vegetable-tanned leather with a magnetic closure.', price: 295, priceDisplay: '$295', image: 'https://placehold.co/400x400/c0a882/1a1a1a?text=Cuyana+Leather+Tote', rating: 4.7, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=leather+tote+bag+women+Italian+vegetable+tanned&tag=AMAZON_TAG', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'mothers-day', 'holiday', 'graduation'] },
 
   // More For Him
-  { id: 'him-005', name: 'Tom Ford Oud Wood Cologne 50ml', description: 'The iconic Private Blend fragrance with rare Oud wood from Thailand, Rosewood, and cardamom. A sophisticated, long-lasting signature scent.', price: 225, priceDisplay: '$225', image: 'https://placehold.co/400x400/c0a882/1a1a1a?text=TF+Oud+Wood', rating: 4.7, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=Tom+Ford+Oud+Wood+cologne+50ml&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad'], budgetTier: '100to150', tags: ['luxury'], occasions: ['birthday', 'fathers-day', 'christmas', 'anniversary'] },
-  { id: 'him-006', name: 'Allen Edmonds Park Avenue Oxford Shoes', description: 'The ultimate American dress shoe, handcrafted in Wisconsin. Full-grain calfskin leather, Goodyear welt construction, and a last that gets better with age.', price: 395, priceDisplay: '$395', image: 'https://placehold.co/400x400/4a2800/ffffff?text=Allen+Edmonds+Oxford', rating: 4.8, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Allen+Edmonds+Park+Avenue+Oxford+dress+shoes&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'graduation', 'fathers-day', 'christmas'] },
+  { id: 'him-005', name: 'Tom Ford Oud Wood Cologne 50ml', description: 'The iconic Private Blend fragrance with rare Oud wood from Thailand, Rosewood, and cardamom. A sophisticated, long-lasting signature scent.', price: 225, priceDisplay: '$225', image: 'https://placehold.co/400x400/c0a882/1a1a1a?text=TF+Oud+Wood', rating: 4.7, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=Tom+Ford+Oud+Wood+cologne+50ml&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad'], budgetTier: '100to150', tags: ['luxury'], occasions: ['birthday', 'mothersFathers', 'holiday', 'anniversary'] },
+  { id: 'him-006', name: 'Allen Edmonds Park Avenue Oxford Shoes', description: 'The ultimate American dress shoe, handcrafted in Wisconsin. Full-grain calfskin leather, Goodyear welt construction, and a last that gets better with age.', price: 395, priceDisplay: '$395', image: 'https://placehold.co/400x400/4a2800/ffffff?text=Allen+Edmonds+Oxford', rating: 4.8, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Allen+Edmonds+Park+Avenue+Oxford+dress+shoes&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'graduation', 'mothersFathers', 'holiday'] },
 
   // More For Dad
-  { id: 'dad-001', name: 'Traeger Beef Rub & BBQ Sauce Bundle', description: 'The ultimate BBQ companion kit from Traeger. Includes Show Bird seasoning, Fin & Feather rub, Beef rub, and signature BBQ sauce.', price: 36, priceDisplay: '$36', image: 'https://placehold.co/400x400/c0392b/ffffff?text=Traeger+BBQ+Bundle', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Traeger+beef+rub+BBQ+sauce+bundle&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['fathers-day', 'birthday', 'christmas'] },
-  { id: 'dad-002', name: 'Craft Beer-of-the-Month Club (3-Month)', description: 'Discover 12 hand-selected craft beers from America\'s best microbreweries delivered every month. Tasting notes and food pairing guides included.', price: 79, priceDisplay: '$79', image: 'https://placehold.co/400x400/c0392b/ffffff?text=Craft+Beer+Club', rating: 4.5, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=craft+beer+of+the+month+club+gift&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'friends', 'couples'], budgetTier: '50to100', tags: ['hobby', 'luxury'], occasions: ['fathers-day', 'birthday', 'christmas'] },
-  { id: 'dad-003', name: 'GreenWorks 40V Cordless Lawn Mower', description: '16" push mower with 40V battery and charger included. No gas, no fumes, and quieter than a vacuum cleaner. 70-minute runtime on a single charge.', price: 299, priceDisplay: '$299', image: 'https://placehold.co/400x400/27ae60/ffffff?text=GreenWorks+Mower', rating: 4.4, reviewCount: 14523, affiliateUrl: 'https://www.amazon.com/s?k=Greenworks+40V+cordless+lawn+mower&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples'], budgetTier: '100to150', tags: ['diy-tools'], occasions: ['fathers-day', 'birthday', 'christmas'] },
+  { id: 'dad-001', name: 'Traeger Beef Rub & BBQ Sauce Bundle', description: 'The ultimate BBQ companion kit from Traeger. Includes Show Bird seasoning, Fin & Feather rub, Beef rub, and signature BBQ sauce.', price: 36, priceDisplay: '$36', image: 'https://placehold.co/400x400/c0392b/ffffff?text=Traeger+BBQ+Bundle', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Traeger+beef+rub+BBQ+sauce+bundle&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
+  { id: 'dad-002', name: 'Craft Beer-of-the-Month Club (3-Month)', description: 'Discover 12 hand-selected craft beers from America\'s best microbreweries delivered every month. Tasting notes and food pairing guides included.', price: 79, priceDisplay: '$79', image: 'https://placehold.co/400x400/c0392b/ffffff?text=Craft+Beer+Club', rating: 4.5, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=craft+beer+of+the+month+club+gift&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'friends', 'couples'], budgetTier: '50to100', tags: ['hobby', 'luxury'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
+  { id: 'dad-003', name: 'GreenWorks 40V Cordless Lawn Mower', description: '16" push mower with 40V battery and charger included. No gas, no fumes, and quieter than a vacuum cleaner. 70-minute runtime on a single charge.', price: 299, priceDisplay: '$299', image: 'https://placehold.co/400x400/27ae60/ffffff?text=GreenWorks+Mower', rating: 4.4, reviewCount: 14523, affiliateUrl: 'https://www.amazon.com/s?k=Greenworks+40V+cordless+lawn+mower&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples'], budgetTier: '100to150', tags: ['diy-tools'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
 
   // More For Mom
-  { id: 'mom-001', name: 'Barefoot Dreams Pajama Set', description: 'Cloud-soft modal pajama set in Barefoot Dreams\' signature CozyChic material. The most luxurious loungewear for sleeping and weekend mornings.', price: 109, priceDisplay: '$109', image: 'https://placehold.co/400x400/f1948a/ffffff?text=BFD+Pajama+Set', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Barefoot+Dreams+pajama+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her'], budgetTier: '100to150', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'christmas', 'valentines'] },
-  { id: 'mom-002', name: 'Milk Makeup Odyssey Lip Oil', description: 'Bestselling moisturizing lip oil that gives glossy, nourishing color in 12 shades. Vegan, clean beauty formula with hyaluronic acid.', price: 24, priceDisplay: '$24', image: 'https://placehold.co/400x400/f1948a/ffffff?text=Milk+Makeup+Lip+Oil', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Milk+Makeup+Odyssey+Lip+Oil&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'teens'], budgetTier: 'under25', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'christmas', 'just-because'] },
-  { id: 'mom-003', name: 'Weighted Blanket (15 lbs, 60"x80")', description: 'Therapeutic weighted blanket that reduces anxiety and improves sleep quality. Glass beads are evenly distributed in 100% cotton for natural warmth.', price: 79, priceDisplay: '$79', image: 'https://placehold.co/400x400/9b59b6/ffffff?text=Weighted+Blanket+15lb', rating: 4.6, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/s?k=weighted+blanket+15+lbs+60x80&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'him', 'teens'], budgetTier: '50to100', tags: ['fitness', 'luxury'], occasions: ['birthday', 'mothers-day', 'christmas', 'valentines'] },
+  { id: 'mom-001', name: 'Barefoot Dreams Pajama Set', description: 'Cloud-soft modal pajama set in Barefoot Dreams\' signature CozyChic material. The most luxurious loungewear for sleeping and weekend mornings.', price: 109, priceDisplay: '$109', image: 'https://placehold.co/400x400/f1948a/ffffff?text=BFD+Pajama+Set', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Barefoot+Dreams+pajama+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her'], budgetTier: '100to150', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'valentines'] },
+  { id: 'mom-002', name: 'Milk Makeup Odyssey Lip Oil', description: 'Bestselling moisturizing lip oil that gives glossy, nourishing color in 12 shades. Vegan, clean beauty formula with hyaluronic acid.', price: 24, priceDisplay: '$24', image: 'https://placehold.co/400x400/f1948a/ffffff?text=Milk+Makeup+Lip+Oil', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/s?k=Milk+Makeup+Odyssey+Lip+Oil&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'teens'], budgetTier: 'under25', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'holiday', 'just-because'] },
+  { id: 'mom-003', name: 'Weighted Blanket (15 lbs, 60"x80")', description: 'Therapeutic weighted blanket that reduces anxiety and improves sleep quality. Glass beads are evenly distributed in 100% cotton for natural warmth.', price: 79, priceDisplay: '$79', image: 'https://placehold.co/400x400/9b59b6/ffffff?text=Weighted+Blanket+15lb', rating: 4.6, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/s?k=weighted+blanket+15+lbs+60x80&tag=AMAZON_TAG', network: 'amazon', recipients: ['mom', 'her', 'him', 'teens'], budgetTier: '50to100', tags: ['fitness', 'luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'valentines'] },
 
   // More For Teens
-  { id: 'teen-004', name: 'Hydro Flask 32oz Wide Mouth � Teen Edition', description: 'The waterproof, insulated water bottle that teens actually want. Keeps drinks cold 24 hours. Available in the trending Limited Edition colors.', price: 44, priceDisplay: '$44', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Hydro+Flask+Teen', rating: 4.8, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Hydro+Flask+32oz+wide+mouth+teen+colors&tag=AMAZON_TAG', network: 'amazon', recipients: ['teens', 'her', 'him'], budgetTier: '25to50', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'christmas'] },
-  { id: 'teen-005', name: 'Nike Air Force 1 07 Sneakers', description: 'The legendary basketball shoe that became a cultural icon. Premium leather upper, pivot circle on outsole, and foam midsole for all-day comfort.', price: 110, priceDisplay: '$110', image: 'https://placehold.co/400x400/ecf0f1/1a1a1a?text=Nike+Air+Force+1', rating: 4.6, reviewCount: 89234, affiliateUrl: 'https://www.amazon.com/s?k=Nike+Air+Force+1+07&tag=AMAZON_TAG', network: 'amazon', recipients: ['teens', 'him', 'her'], budgetTier: '100to150', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'christmas'] },
+  { id: 'teen-004', name: 'Hydro Flask 32oz Wide Mouth � Teen Edition', description: 'The waterproof, insulated water bottle that teens actually want. Keeps drinks cold 24 hours. Available in the trending Limited Edition colors.', price: 44, priceDisplay: '$44', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Hydro+Flask+Teen', rating: 4.8, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/s?k=Hydro+Flask+32oz+wide+mouth+teen+colors&tag=AMAZON_TAG', network: 'amazon', recipients: ['teens', 'her', 'him'], budgetTier: '25to50', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
+  { id: 'teen-005', name: 'Nike Air Force 1 07 Sneakers', description: 'The legendary basketball shoe that became a cultural icon. Premium leather upper, pivot circle on outsole, and foam midsole for all-day comfort.', price: 110, priceDisplay: '$110', image: 'https://placehold.co/400x400/ecf0f1/1a1a1a?text=Nike+Air+Force+1', rating: 4.6, reviewCount: 89234, affiliateUrl: 'https://www.amazon.com/s?k=Nike+Air+Force+1+07&tag=AMAZON_TAG', network: 'amazon', recipients: ['teens', 'him', 'her'], budgetTier: '100to150', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
 
   // More For Kids
-  { id: 'par-021', name: 'i Play. Toddler Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat with a neck flap for full coverage. Stretchy, quick-dry fabric — perfect for beach days and pool time. Fits toddlers 2T-4T.', price: 13.90, priceDisplay: '$13.90', image: 'https://placehold.co/400x400/5dade2/ffffff?text=iPlay+Toddler+Sun+Hat', rating: 4.6, reviewCount: 7400, affiliateUrl: 'https://www.amazon.com/dp/B0057RBPLY?tag=AMAZON_TAG', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'baby-shower'] },
-  { id: 'par-022', name: 'i Play. Baby Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat for babies with adjustable chin strap and full neck flap. Stretchy, quick-dry fabric — a beach and pool essential for infants.', price: 13.99, priceDisplay: '$13.99', image: 'https://placehold.co/400x400/f1948a/ffffff?text=iPlay+Baby+Sun+Hat', rating: 4.6, reviewCount: 9200, affiliateUrl: 'https://www.amazon.com/dp/B004VO3OAO?tag=AMAZON_TAG', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'baby-shower'] },
+  { id: 'par-021', name: 'i Play. Toddler Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat with a neck flap for full coverage. Stretchy, quick-dry fabric — perfect for beach days and pool time. Fits toddlers 2T-4T.', price: 13.90, priceDisplay: '$13.90', image: 'https://placehold.co/400x400/5dade2/ffffff?text=iPlay+Toddler+Sun+Hat', rating: 4.6, reviewCount: 7400, affiliateUrl: 'https://www.amazon.com/dp/B0057RBPLY?tag=AMAZON_TAG', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'weddingHousewarming'] },
+  { id: 'par-022', name: 'i Play. Baby Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat for babies with adjustable chin strap and full neck flap. Stretchy, quick-dry fabric — a beach and pool essential for infants.', price: 13.99, priceDisplay: '$13.99', image: 'https://placehold.co/400x400/f1948a/ffffff?text=iPlay+Baby+Sun+Hat', rating: 4.6, reviewCount: 9200, affiliateUrl: 'https://www.amazon.com/dp/B004VO3OAO?tag=AMAZON_TAG', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'weddingHousewarming'] },
 
-  { id: 'kid-005', name: 'Bluey 11-Piece Wooden Puzzle Set', description: 'Four wooden puzzles featuring Bluey, Bingo, and the whole family. Helps develop fine motor skills and problem-solving in ages 2-5.', price: 24, priceDisplay: '$24', image: 'https://placehold.co/400x400/3498db/ffffff?text=Bluey+Puzzle+Set', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Bluey+wooden+puzzle+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting'], occasions: ['birthday', 'christmas'] },
-  { id: 'kid-006', name: 'Learning Resources Coding Critters', description: 'Code your pet to take a nap! Kids use basic sequencing to guide their Coding Critters through activities. No reading required for ages 4+.', price: 39, priceDisplay: '$39', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Coding+Critters', rating: 4.6, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=Learning+Resources+Coding+Critters&tag=AMAZON_TAG', network: 'amazon', recipients: ['kids'], budgetTier: '25to50', tags: ['parenting', 'tech'], occasions: ['birthday', 'christmas'] },
+  { id: 'kid-005', name: 'Bluey 11-Piece Wooden Puzzle Set', description: 'Four wooden puzzles featuring Bluey, Bingo, and the whole family. Helps develop fine motor skills and problem-solving in ages 2-5.', price: 24, priceDisplay: '$24', image: 'https://placehold.co/400x400/3498db/ffffff?text=Bluey+Puzzle+Set', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/s?k=Bluey+wooden+puzzle+set&tag=AMAZON_TAG', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting'], occasions: ['birthday', 'holiday'] },
+  { id: 'kid-006', name: 'Learning Resources Coding Critters', description: 'Code your pet to take a nap! Kids use basic sequencing to guide their Coding Critters through activities. No reading required for ages 4+.', price: 39, priceDisplay: '$39', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Coding+Critters', rating: 4.6, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/s?k=Learning+Resources+Coding+Critters&tag=AMAZON_TAG', network: 'amazon', recipients: ['kids'], budgetTier: '25to50', tags: ['parenting', 'tech'], occasions: ['birthday', 'holiday'] },
+
+  // ─── OUTDOORS & CAMPING ───────────────────────────────────────────────────────
+  { id: 'out-001', name: 'LifeStraw Personal Water Filter', description: 'Filter up to 1,000 gallons of contaminated water with no chemicals or batteries. A must-have for camping, hiking, and emergency kits. Tested to EPA standards.', price: 19.95, priceDisplay: '$19.95', image: 'https://placehold.co/400x400/27ae60/ffffff?text=LifeStraw+Filter', rating: 4.8, reviewCount: 112430, affiliateUrl: 'https://www.amazon.com/s?k=LifeStraw+personal+water+filter&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'friends', 'her'], budgetTier: 'under25', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday'] },
+  { id: 'out-002', name: 'ENO DoubleNest Camping Hammock', description: 'Lightweight nylon hammock that packs down to fist size. Sets up between any two trees in under two minutes and holds up to 400 lbs. Used by millions of campers.', price: 49.95, priceDisplay: '$49.95', image: 'https://placehold.co/400x400/27ae60/ffffff?text=ENO+Hammock', rating: 4.8, reviewCount: 64230, affiliateUrl: 'https://www.amazon.com/s?k=ENO+DoubleNest+hammock&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'teens', 'friends', 'dad'], budgetTier: '25to50', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday', 'graduation'] },
+  { id: 'out-003', name: 'Black Diamond Spot 400 Headlamp', description: 'The headlamp guides trust on every trail. 400 lumens, IPX8 waterproof, and a 200-hour battery life on the lowest setting. Red night vision mode included.', price: 39.95, priceDisplay: '$39.95', image: 'https://placehold.co/400x400/1a252f/ffffff?text=BD+Spot+Headlamp', rating: 4.7, reviewCount: 38920, affiliateUrl: 'https://www.amazon.com/s?k=Black+Diamond+Spot+400+headlamp&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her', 'friends', 'teens'], budgetTier: '25to50', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday'] },
+  { id: 'out-004', name: 'Klymit Static V Lightweight Sleeping Pad', description: 'V-chamber air design provides insulation and stability at just 18.1 oz. Compact stuff sack fits in any pack. The best value sleeping pad for backpackers.', price: 44.99, priceDisplay: '$44.99', image: 'https://placehold.co/400x400/e67e22/ffffff?text=Klymit+Sleeping+Pad', rating: 4.6, reviewCount: 28430, affiliateUrl: 'https://www.amazon.com/s?k=Klymit+Static+V+sleeping+pad&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her', 'friends', 'teens'], budgetTier: '25to50', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday'] },
+  { id: 'out-005', name: 'Coleman Classic Propane Camp Stove (2-Burner)', description: 'The stove that has cooked more camp meals than any other. Two adjustable burners, windshields on three sides, and easy ignition. Runs on standard propane canisters.', price: 54.99, priceDisplay: '$54.99', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Coleman+Camp+Stove', rating: 4.7, reviewCount: 53210, affiliateUrl: 'https://www.amazon.com/s?k=Coleman+classic+propane+camp+stove+2+burner&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples', 'friends'], budgetTier: '50to100', tags: ['outdoors', 'kitchen'], occasions: ['birthday', 'holiday', 'mothersFathers'] },
+  { id: 'out-006', name: 'Osprey Daylite Plus Daypack 20L', description: 'The pack every hiker buys twice. Lightweight mesh back panel, padded shoulder straps, and a dedicated laptop sleeve. Fits a full day of gear in 20L.', price: 75.00, priceDisplay: '$75.00', image: 'https://placehold.co/400x400/2c3e50/ffffff?text=Osprey+Daylite', rating: 4.7, reviewCount: 29870, affiliateUrl: 'https://www.amazon.com/s?k=Osprey+Daylite+Plus+20L+daypack&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends', 'teens'], budgetTier: '50to100', tags: ['outdoors', 'sports'], occasions: ['birthday', 'graduation', 'holiday'] },
+  { id: 'out-007', name: 'BioLite CampStove 2+ Wood-Burning Camp Stove', description: 'Burns sticks and twigs to cook your meal and charge your phone at the same time. 3W USB output and a high-efficiency fire that produces 90% less smoke than an open fire.', price: 149.95, priceDisplay: '$149.95', image: 'https://placehold.co/400x400/c0392b/ffffff?text=BioLite+CampStove', rating: 4.5, reviewCount: 14230, affiliateUrl: 'https://www.amazon.com/s?k=BioLite+CampStove+2+Plus&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'friends'], budgetTier: '100to150', tags: ['outdoors', 'tech'], occasions: ['birthday', 'holiday', 'mothersFathers'] },
+  { id: 'out-008', name: 'Garmin eTrex 22x Handheld GPS Navigator', description: 'Rugged, reliable GPS with 3-axis compass, 25-hour battery life, and preloaded maps. Works without cell service anywhere on the planet.', price: 169.99, priceDisplay: '$169.99', image: 'https://placehold.co/400x400/27ae60/ffffff?text=Garmin+eTrex+22x', rating: 4.6, reviewCount: 18430, affiliateUrl: 'https://www.amazon.com/s?k=Garmin+eTrex+22x+GPS+navigator&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'friends', 'her'], budgetTier: '150to250', tags: ['outdoors', 'tech'], occasions: ['birthday', 'holiday', 'mothersFathers'] },
+  { id: 'out-009', name: 'YETI Roadie 24 Hard Cooler', description: 'Ice retention that outlasts every other cooler in its class. Rotomolded construction, bear-resistant latches, and a tie-down slot for truck beds. Holds 18 cans.', price: 249.99, priceDisplay: '$249.99', image: 'https://placehold.co/400x400/ecf0f1/1a1a1a?text=YETI+Roadie+24', rating: 4.8, reviewCount: 22890, affiliateUrl: 'https://www.amazon.com/s?k=YETI+Roadie+24+cooler&tag=AMAZON_TAG', network: 'amazon', recipients: ['dad', 'him', 'couples', 'friends'], budgetTier: '150to250', tags: ['outdoors', 'sports', 'luxury'], occasions: ['birthday', 'mothersFathers', 'holiday'] },
+  { id: 'out-010', name: 'Teton Sports Scout 3400 Internal Frame Backpack', description: '55L internal frame pack built for multi-day backpacking. Adjustable torso fit, padded hip belt, and an integrated rain cover. Ready for any trail out of the box.', price: 89.99, priceDisplay: '$89.99', image: 'https://placehold.co/400x400/2ecc71/ffffff?text=Teton+Scout+Backpack', rating: 4.6, reviewCount: 34870, affiliateUrl: 'https://www.amazon.com/s?k=Teton+Sports+Scout+3400+backpack&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'teens', 'friends'], budgetTier: '50to100', tags: ['outdoors', 'sports'], occasions: ['birthday', 'graduation', 'holiday'] },
+  { id: 'out-011', name: 'UCO Stormproof Match Kit with Waterproof Case', description: 'Matches that light in wind, rain, and altitude. 25 matches per tube with extra strikers, all sealed in a waterproof case rated for submersion. A survival essential.', price: 13.99, priceDisplay: '$13.99', image: 'https://placehold.co/400x400/e67e22/ffffff?text=UCO+Stormproof+Matches', rating: 4.7, reviewCount: 41230, affiliateUrl: 'https://www.amazon.com/s?k=UCO+stormproof+match+kit+waterproof+case&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'friends', 'teens'], budgetTier: 'under25', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday', 'just-because'] },
+  { id: 'out-012', name: 'Kelty Cosmic 20 Degree Sleeping Bag', description: 'Down-filled sleeping bag rated to 20 degrees, weighing just 2.5 lbs. Packable to the size of a football with LofTech insulation that stays warm when wet.', price: 129.95, priceDisplay: '$129.95', image: 'https://placehold.co/400x400/2980b9/ffffff?text=Kelty+Cosmic+20', rating: 4.6, reviewCount: 12430, affiliateUrl: 'https://www.amazon.com/s?k=Kelty+Cosmic+20+degree+sleeping+bag&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'her', 'dad', 'teens', 'friends'], budgetTier: '100to150', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday'] },
+  { id: 'out-013', name: 'Goal Zero Venture 35 Rugged Power Bank', description: 'Solar-ready, waterproof power bank rated IP67. Charges phones twice over on a single charge. The only power bank rated for actual outdoor conditions.', price: 79.95, priceDisplay: '$79.95', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Goal+Zero+Venture', rating: 4.5, reviewCount: 11230, affiliateUrl: 'https://www.amazon.com/s?k=Goal+Zero+Venture+35+power+bank&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her', 'teens', 'friends'], budgetTier: '50to100', tags: ['outdoors', 'tech'], occasions: ['birthday', 'holiday', 'graduation'] },
+  { id: 'out-014', name: 'Smartwool Merino 250 Base Layer Bottom', description: 'The best base layer for every season. 100% merino wool regulates temperature, wicks moisture, and resists odor through days of wear. Worn by serious hikers and skiers.', price: 79.95, priceDisplay: '$79.95', image: 'https://placehold.co/400x400/7f8c8d/ffffff?text=Smartwool+Base+Layer', rating: 4.7, reviewCount: 19870, affiliateUrl: 'https://www.amazon.com/s?k=Smartwool+merino+250+base+layer+bottom&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her', 'friends'], budgetTier: '50to100', tags: ['outdoors', 'fitness'], occasions: ['birthday', 'holiday'] },
+  { id: 'out-015', name: 'Anker 24W Solar Panel Charger', description: 'Foldable solar panel that charges two devices simultaneously via USB. High conversion efficiency even in low light. Lightweight at 13 oz with weather-resistant panels.', price: 39.99, priceDisplay: '$39.99', image: 'https://placehold.co/400x400/27ae60/ffffff?text=Anker+Solar+Panel', rating: 4.5, reviewCount: 22340, affiliateUrl: 'https://www.amazon.com/s?k=Anker+24W+solar+panel+charger+portable&tag=AMAZON_TAG', network: 'amazon', recipients: ['him', 'dad', 'her', 'friends', 'teens'], budgetTier: '25to50', tags: ['outdoors', 'tech'], occasions: ['birthday', 'holiday', 'graduation'] },
 
   // More Couples/Friends
-  { id: 'cpl-005', name: 'Ticket to Ride Board Game', description: 'Award-winning strategy board game for 2-5 players. Build train routes across America in 30-90 minutes. The perfect game night staple for couples and families.', price: 44, priceDisplay: '$44', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Ticket+to+Ride', rating: 4.8, reviewCount: 56234, affiliateUrl: 'https://www.amazon.com/s?k=Ticket+to+Ride+board+game&tag=AMAZON_TAG', network: 'amazon', recipients: ['couples', 'friends', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'christmas', 'anniversary', 'housewarming'] },
-  { id: 'fri-005', name: 'Uncommon Goods Personalized Cutting Board', description: 'Custom engraved bamboo cutting board with any name, date, or message. Large enough to actually use, beautiful enough to display.', price: 49, priceDisplay: '$49', image: 'https://placehold.co/400x400/c0a882/1a1a1a?text=Engraved+Cutting+Board', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.uncommongoods.com/product/personalized-cutting-board?utm_source=SHAREASALE_TAG', network: 'uncommongoods', recipients: ['couples', 'friends', 'mom', 'dad'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['wedding', 'housewarming', 'birthday', 'christmas'] },
-  { id: 'fri-006', name: 'Catan Base Board Game', description: 'The most popular strategy game in the world. Build settlements, trade resources, and expand your civilization. For 3-4 players, ages 10+.', price: 44, priceDisplay: '$44', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Catan+Board+Game', rating: 4.8, reviewCount: 78234, affiliateUrl: 'https://www.amazon.com/s?k=Catan+base+board+game&tag=AMAZON_TAG', network: 'amazon', recipients: ['friends', 'couples', 'teens', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'christmas', 'just-because'] },
+  { id: 'cpl-005', name: 'Ticket to Ride Board Game', description: 'Award-winning strategy board game for 2-5 players. Build train routes across America in 30-90 minutes. The perfect game night staple for couples and families.', price: 44, priceDisplay: '$44', image: 'https://placehold.co/400x400/e74c3c/ffffff?text=Ticket+to+Ride', rating: 4.8, reviewCount: 56234, affiliateUrl: 'https://www.amazon.com/s?k=Ticket+to+Ride+board+game&tag=AMAZON_TAG', network: 'amazon', recipients: ['couples', 'friends', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'holiday', 'anniversary', 'housewarming'] },
+  { id: 'fri-005', name: 'Uncommon Goods Personalized Cutting Board', description: 'Custom engraved bamboo cutting board with any name, date, or message. Large enough to actually use, beautiful enough to display.', price: 49, priceDisplay: '$49', image: 'https://placehold.co/400x400/c0a882/1a1a1a?text=Engraved+Cutting+Board', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.uncommongoods.com/product/personalized-cutting-board?utm_source=SHAREASALE_TAG', network: 'uncommongoods', recipients: ['couples', 'friends', 'mom', 'dad'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['wedding', 'housewarming', 'birthday', 'holiday'] },
+  { id: 'fri-006', name: 'Catan Base Board Game', description: 'The most popular strategy game in the world. Build settlements, trade resources, and expand your civilization. For 3-4 players, ages 10+.', price: 44, priceDisplay: '$44', image: 'https://placehold.co/400x400/f39c12/ffffff?text=Catan+Board+Game', rating: 4.8, reviewCount: 78234, affiliateUrl: 'https://www.amazon.com/s?k=Catan+base+board+game&tag=AMAZON_TAG', network: 'amazon', recipients: ['friends', 'couples', 'teens', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'holiday', 'just-because'] },
 
 ];
 

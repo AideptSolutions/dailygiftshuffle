@@ -164,18 +164,27 @@ export default function ShuffleClient() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [catalog]);
 
+  const [count, setCount] = useState(4);
+
   const doShuffle = useCallback(
-    (rec: Recipient, bud: BudgetTier | 'any', occ: Occasion | null, tags?: NicheTag[]) => {
+    (rec: Recipient, bud: BudgetTier | 'any', occ: Occasion | null, tags?: NicheTag[], countOverride?: number) => {
       setIsShuffling(true);
       setTimeout(() => {
-        const picks = shuffleMultiple(4, rec, bud, occ, tags, catalog.length > 0 ? catalog : undefined);
+        const picks = shuffleMultiple(countOverride ?? count, rec, bud, occ, tags, catalog.length > 0 ? catalog : undefined);
         setProducts(picks);
         setGridKey((k) => k + 1);
         setIsShuffling(false);
       }, 600);
     },
-    [catalog]
+    [catalog, count]
   );
+
+  const handleCountChange = useCallback((newCount: number) => {
+    setCount(newCount);
+    if (step === 'result' && recipient && budget) {
+      doShuffle(recipient, budget, occasion, undefined, newCount);
+    }
+  }, [step, recipient, budget, occasion, doShuffle]);
 
   const handleRecipient = (r: Recipient) => { setRecipient(r); setStep('budget'); };
   const handleBudget    = (b: BudgetTier | 'any') => {
@@ -342,14 +351,28 @@ export default function ShuffleClient() {
               </button>
             </div>
 
-            <h2 className="text-lg font-extrabold text-center mb-3" style={{ color: '#1A202C' }}>
-              Here are 4 gift ideas for you
-            </h2>
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-extrabold" style={{ color: '#1A202C' }}>
+                Here are your gift ideas
+              </h2>
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs text-gray-400">Show:</span>
+                <select
+                  value={count}
+                  onChange={e => handleCountChange(Number(e.target.value))}
+                  className="text-xs border border-gray-200 rounded-lg px-2 py-1 bg-white text-gray-600 cursor-pointer focus:outline-none focus:border-[#F04E30]"
+                >
+                  {[4, 8, 16, 20].map(n => (
+                    <option key={n} value={n}>{n} gifts</option>
+                  ))}
+                </select>
+              </div>
+            </div>
 
             <div aria-live="polite" aria-atomic="true">
             {isShuffling ? (
               <div className="bg-white rounded-3xl shadow-lg p-12 text-center">
-                <p className="text-gray-500 font-medium">Finding 4 perfect gifts...</p>
+                <p className="text-gray-500 font-medium">Finding {count} perfect gifts...</p>
               </div>
             ) : products.length > 0 ? (
               <>

@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, changeFrequency: 'monthly', priority: 0.4 },
   ];
 
+  // Only include recipient pages that actually exist in /app
   const recipientLandingPages: MetadataRoute.Sitemap = [
     '/gift-ideas-for-mom',
     '/gift-ideas-for-dad',
@@ -32,12 +33,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Only include occasion/budget pages that actually exist in /app
   const occasionBudgetLandingPages: MetadataRoute.Sitemap = [
-    '/gifts-under-25',
     '/gifts-under-50',
-    '/gifts-under-100',
     '/christmas-gift-ideas',
     '/birthday-gift-ideas',
+    '/gifts-for-camping-and-outdoors',
+    '/gifts-under-25',
+    '/gifts-under-100',
     '/mothers-day-gifts',
     '/fathers-day-gifts',
     '/blog',

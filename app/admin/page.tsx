@@ -4,16 +4,18 @@ import { useState, useEffect, useCallback } from 'react';
 import { AdminProduct } from '@/lib/admin-store';
 import { BudgetTier, NicheTag, Recipient } from '@/data/products';
 
-const ALL_RECIPIENTS: Recipient[] = ['her','him','mom','dad','grandparents','teens','kids','baby','couples','friends','pets','coworker','employees','myself'];
+const ALL_RECIPIENTS: Recipient[] = ['her','him','mom','dad','brother','sister','grandparents','teens','kids','baby','couples','friends','pets','coworker','employees','streamers','myself','myself-her','myself-him'];
 const ALL_BUDGETS: { id: BudgetTier; label: string }[] = [
   { id: 'under25',   label: 'Under $25' },
   { id: '25to50',    label: '$25–$50' },
+  { id: 'under50',   label: 'All under $50' },
   { id: '50to100',   label: '$50–$100' },
   { id: '100to150',  label: '$100–$150' },
+  { id: 'under150',  label: 'All under $150' },
   { id: '150to250',  label: '$150–$250' },
   { id: '250plus',   label: '$250+' },
 ];
-const ALL_TAGS: NicheTag[] = ['tech','diy-tools','home','gaming','sports','gardening','finance','fitness','parenting','office','luxury','hobby','kitchen','pets','kids','car-accessories'];
+const ALL_TAGS: NicheTag[] = ['tech','diy-tools','home','gaming','sports','gardening','finance','fitness','parenting','office','luxury','hobby','kitchen','pets','kids','car-accessories','outdoors'];
 
 export default function AdminPage() {
   const [authed, setAuthed]     = useState(false);

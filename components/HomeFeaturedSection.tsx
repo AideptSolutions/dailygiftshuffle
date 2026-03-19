@@ -17,14 +17,14 @@ function addSeen(ids: string[]) {
   sessionStorage.setItem(SHUFFLE_KEY, JSON.stringify([...getSeen(), ...ids]));
 }
 
-function pickFour(catalog: Product[]): Product[] {
+function pickN(catalog: Product[], n: number): Product[] {
   if (!catalog.length) return [];
   const seen = getSeen();
   let pool = catalog.filter((p) => !seen.includes(p.id));
-  if (pool.length < 4) { sessionStorage.removeItem(SHUFFLE_KEY); pool = catalog; }
+  if (pool.length < n) { sessionStorage.removeItem(SHUFFLE_KEY); pool = catalog; }
   const picked: Product[] = [];
   const available = [...pool];
-  while (picked.length < 4 && available.length > 0) {
+  while (picked.length < n && available.length > 0) {
     const idx = Math.floor(Math.random() * available.length);
     picked.push(available.splice(idx, 1)[0]);
   }
@@ -32,8 +32,8 @@ function pickFour(catalog: Product[]): Product[] {
   return picked;
 }
 
-function getTrending(catalog: Product[]): Product[] {
-  return [...catalog].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0)).slice(0, 4);
+function getTrending(catalog: Product[], n: number = 4): Product[] {
+  return [...catalog].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0)).slice(0, n);
 }
 
 // ─── Star rating ─────────────────────────────────────────────────────────────
@@ -160,6 +160,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [animating, setAnimating]   = useState(true);
   const [isTrending, setIsTrending] = useState(true);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
+  const [count, setCount]           = useState(4);
 
   // Custom shuffle dropdowns
   const [recipient, setRecipient] = useState<Recipient | ''>('');
@@ -167,13 +168,21 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [budget,    setBudget]    = useState<BudgetTier | ''>('');
   const [error,     setError]     = useState('');
 
-  // ── Shuffle the 4 product cards ────────────────────────────────────────────
+  // ── Shuffle the N product cards ────────────────────────────────────────────
   const handleShuffle = useCallback(() => {
-    // Strip animation class, swap cards, then re-add on next frame
-    // — forces browser to restart @keyframes cleanly
     setAnimating(false);
     requestAnimationFrame(() => {
-      setCards(pickFour(catalog));
+      setCards(pickN(catalog, count));
+      setIsTrending(false);
+      requestAnimationFrame(() => setAnimating(true));
+    });
+  }, [catalog, count]);
+
+  const handleCountChange = useCallback((newCount: number) => {
+    setCount(newCount);
+    setAnimating(false);
+    requestAnimationFrame(() => {
+      setCards(pickN(catalog, newCount));
       setIsTrending(false);
       requestAnimationFrame(() => setAnimating(true));
     });
@@ -194,9 +203,23 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
 
       {/* ── Product grid ──────────────────────────────────────────────────── */}
       <div className="mb-5">
-        <h2 className="text-lg font-extrabold text-gray-800 tracking-tight text-center mb-4">
-          {isTrending ? 'Trending Right Now' : 'Gift Ideas'}
-        </h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-extrabold text-gray-800 tracking-tight">
+            {isTrending ? 'Trending Right Now' : 'Gift Ideas'}
+          </h2>
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs text-gray-400">Show:</span>
+            <select
+              value={count}
+              onChange={e => handleCountChange(Number(e.target.value))}
+              className="text-xs border border-gray-200 rounded-lg px-2 py-1 bg-white text-gray-600 cursor-pointer focus:outline-none focus:border-[#F04E30]"
+            >
+              {[4, 8, 16, 20].map(n => (
+                <option key={n} value={n}>{n} gifts</option>
+              ))}
+            </select>
+          </div>
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {cards.map((product, i) => (

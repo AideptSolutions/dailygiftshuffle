@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readAdminProducts, writeAdminProducts, AdminProduct } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
+import { fixEncoding } from '@/lib/fix-encoding';
 
 function checkAuth(req: NextRequest): boolean {
   return req.cookies.get('admin-auth')?.value === 'true';
@@ -15,6 +16,8 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   if (updates.image !== undefined && isAmazonCdnUrl(updates.image)) {
     updates.image = getCategoryImageUrl([...(updates.tags ?? []), ...(all[idx].tags ?? [])]);
   }
+  if (updates.name) updates.name = fixEncoding(updates.name);
+  if (updates.description) updates.description = fixEncoding(updates.description);
   all[idx] = { ...all[idx], ...updates, updatedAt: new Date().toISOString() };
   await writeAdminProducts(all);
   return NextResponse.json(all[idx]);

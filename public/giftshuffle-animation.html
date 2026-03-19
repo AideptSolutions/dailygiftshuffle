@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GiftShuffle — Cup Animation</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #f8f4ff 0%, #fff0f8 100%);
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+  }
+
+  /* ============================================================
+     CUP — rotates around its bottom-center at SVG (175, 220)
+  ============================================================ */
+  #cup {
+    transform-origin: 175px 220px;
+    animation: cupAnim 6s cubic-bezier(.4,0,.6,1) infinite;
+  }
+  @keyframes cupAnim {
+    0%   { transform: rotate(0deg)   translateX(0px);  }
+    4%   { transform: rotate(0deg)   translateX(0px);  }
+    9%   { transform: rotate(-9deg)  translateX(-6px); }
+    14%  { transform: rotate(9deg)   translateX(6px);  }
+    19%  { transform: rotate(-9deg)  translateX(-6px); }
+    24%  { transform: rotate(9deg)   translateX(6px);  }
+    29%  { transform: rotate(-6deg)  translateX(-4px); }
+    34%  { transform: rotate(6deg)   translateX(4px);  }
+    38%  { transform: rotate(-3deg)  translateX(-2px); }
+    44%  { transform: rotate(115deg) translateX(0px);  }
+    47%  { transform: rotate(111deg) translateX(0px);  }
+    49%  { transform: rotate(116deg) translateX(0px);  }
+    75%  { transform: rotate(114deg) translateX(0px);  }
+    85%  { transform: rotate(0deg)   translateX(0px);  }
+    100% { transform: rotate(0deg)   translateX(0px);  }
+  }
+
+  /* ============================================================
+     GROUND SHADOW
+  ============================================================ */
+  #ground-shadow {
+    animation: gShadow 6s ease-in-out infinite;
+  }
+  @keyframes gShadow {
+    0%, 62% { opacity: 0;   }
+    72%      { opacity: 0.5; }
+    82%      { opacity: 0.5; }
+    90%      { opacity: 0;   }
+    100%     { opacity: 0;   }
+  }
+
+  /* ============================================================
+     GIFTS
+     All shapes drawn centered at SVG (0,0).
+     transform-origin: 0 0 means rotation around (0,0) = gift center.
+     transform: translate(X,Y) rotate(R) → center lands at (X,Y), spins R°.
+     Cup tips at ~44%, opening appears near SVG (292, 268).
+  ============================================================ */
+
+  /* — Gift 1: Blue — */
+  #gift1 {
+    transform-origin: 0px 0px;
+    animation: g1 6s ease-out infinite;
+  }
+  @keyframes g1 {
+    0%,41%  { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+    44%     { transform:translate(276px,265px)rotate(12deg);  opacity:1; }
+    51%     { transform:translate(378px,192px)rotate(92deg);  opacity:1; }
+    58%     { transform:translate(458px,308px)rotate(188deg); opacity:1; }
+    62%     { transform:translate(473px,332px)rotate(212deg); opacity:1; }
+    64%     { transform:translate(473px,316px)rotate(218deg); opacity:1; }
+    66%     { transform:translate(473px,332px)rotate(222deg); opacity:1; }
+    82%     { transform:translate(473px,332px)rotate(222deg); opacity:1; }
+    89%     { transform:translate(473px,332px)rotate(222deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+  }
+
+  /* — Gift 2: Orange — */
+  #gift2 {
+    transform-origin: 0px 0px;
+    animation: g2 6s ease-out infinite;
+  }
+  @keyframes g2 {
+    0%,43%  { transform:translate(276px,265px)rotate(0deg);    opacity:0; }
+    46%     { transform:translate(276px,265px)rotate(-14deg);  opacity:1; }
+    53%     { transform:translate(368px,202px)rotate(-88deg);  opacity:1; }
+    60%     { transform:translate(428px,305px)rotate(-182deg); opacity:1; }
+    64%     { transform:translate(443px,326px)rotate(-204deg); opacity:1; }
+    66%     { transform:translate(443px,311px)rotate(-210deg); opacity:1; }
+    68%     { transform:translate(443px,326px)rotate(-215deg); opacity:1; }
+    82%     { transform:translate(443px,326px)rotate(-215deg); opacity:1; }
+    89%     { transform:translate(443px,326px)rotate(-215deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);    opacity:0; }
+  }
+
+  /* — Gift 3: Green — */
+  #gift3 {
+    transform-origin: 0px 0px;
+    animation: g3 6s ease-out infinite;
+  }
+  @keyframes g3 {
+    0%,45%  { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+    48%     { transform:translate(276px,265px)rotate(22deg);  opacity:1; }
+    55%     { transform:translate(352px,182px)rotate(104deg); opacity:1; }
+    62%     { transform:translate(404px,302px)rotate(212deg); opacity:1; }
+    65%     { transform:translate(416px,320px)rotate(236deg); opacity:1; }
+    67%     { transform:translate(416px,305px)rotate(243deg); opacity:1; }
+    69%     { transform:translate(416px,320px)rotate(248deg); opacity:1; }
+    82%     { transform:translate(416px,320px)rotate(248deg); opacity:1; }
+    89%     { transform:translate(416px,320px)rotate(248deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+  }
+
+  /* — Gift 4: Purple — */
+  #gift4 {
+    transform-origin: 0px 0px;
+    animation: g4 6s ease-out infinite;
+  }
+  @keyframes g4 {
+    0%,47%  { transform:translate(276px,265px)rotate(0deg);    opacity:0; }
+    50%     { transform:translate(276px,265px)rotate(-22deg);  opacity:1; }
+    57%     { transform:translate(362px,212px)rotate(-104deg); opacity:1; }
+    64%     { transform:translate(528px,314px)rotate(-218deg); opacity:1; }
+    68%     { transform:translate(543px,337px)rotate(-244deg); opacity:1; }
+    70%     { transform:translate(543px,321px)rotate(-251deg); opacity:1; }
+    72%     { transform:translate(543px,337px)rotate(-256deg); opacity:1; }
+    82%     { transform:translate(543px,337px)rotate(-256deg); opacity:1; }
+    89%     { transform:translate(543px,337px)rotate(-256deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);    opacity:0; }
+  }
+
+  /* — Gift 5: Yellow — */
+  #gift5 {
+    transform-origin: 0px 0px;
+    animation: g5 6s ease-out infinite;
+  }
+  @keyframes g5 {
+    0%,49%  { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+    52%     { transform:translate(276px,265px)rotate(26deg);  opacity:1; }
+    59%     { transform:translate(344px,174px)rotate(112deg); opacity:1; }
+    66%     { transform:translate(392px,298px)rotate(238deg); opacity:1; }
+    69%     { transform:translate(400px,314px)rotate(260deg); opacity:1; }
+    71%     { transform:translate(400px,299px)rotate(267deg); opacity:1; }
+    73%     { transform:translate(400px,314px)rotate(273deg); opacity:1; }
+    82%     { transform:translate(400px,314px)rotate(273deg); opacity:1; }
+    89%     { transform:translate(400px,314px)rotate(273deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+  }
+
+  /* — Gift 6: Coral — */
+  #gift6 {
+    transform-origin: 0px 0px;
+    animation: g6 6s ease-out infinite;
+  }
+  @keyframes g6 {
+    0%,51%  { transform:translate(276px,265px)rotate(0deg);    opacity:0; }
+    54%     { transform:translate(276px,265px)rotate(-11deg);  opacity:1; }
+    61%     { transform:translate(348px,218px)rotate(-76deg);  opacity:1; }
+    68%     { transform:translate(498px,312px)rotate(-188deg); opacity:1; }
+    71%     { transform:translate(513px,334px)rotate(-212deg); opacity:1; }
+    73%     { transform:translate(513px,319px)rotate(-219deg); opacity:1; }
+    75%     { transform:translate(513px,334px)rotate(-224deg); opacity:1; }
+    82%     { transform:translate(513px,334px)rotate(-224deg); opacity:1; }
+    89%     { transform:translate(513px,334px)rotate(-224deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);    opacity:0; }
+  }
+
+  /* — Gift 7: Light Blue — */
+  #gift7 {
+    transform-origin: 0px 0px;
+    animation: g7 6s ease-out infinite;
+  }
+  @keyframes g7 {
+    0%,53%  { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+    56%     { transform:translate(276px,265px)rotate(19deg);  opacity:1; }
+    63%     { transform:translate(338px,192px)rotate(86deg);  opacity:1; }
+    70%     { transform:translate(558px,305px)rotate(197deg); opacity:1; }
+    73%     { transform:translate(573px,327px)rotate(222deg); opacity:1; }
+    75%     { transform:translate(573px,311px)rotate(230deg); opacity:1; }
+    77%     { transform:translate(573px,327px)rotate(236deg); opacity:1; }
+    82%     { transform:translate(573px,327px)rotate(236deg); opacity:1; }
+    89%     { transform:translate(573px,327px)rotate(236deg); opacity:0; }
+    100%    { transform:translate(276px,265px)rotate(0deg);   opacity:0; }
+  }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+<defs>
+
+  <!-- Cup body: strong left highlight, dark right shadow -->
+  <linearGradient id="cupGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff9090"/>
+    <stop offset="12%"  stop-color="#ee4444"/>
+    <stop offset="45%"  stop-color="#d42020"/>
+    <stop offset="78%"  stop-color="#b01010"/>
+    <stop offset="100%" stop-color="#780808"/>
+  </linearGradient>
+
+  <!-- Cup rim outer top face -->
+  <linearGradient id="rimTopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#f08888"/>
+    <stop offset="40%"  stop-color="#e03030"/>
+    <stop offset="100%" stop-color="#901818"/>
+  </linearGradient>
+
+  <!-- Cup rim side band (thick lip) -->
+  <linearGradient id="rimBandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#f47878"/>
+    <stop offset="35%"  stop-color="#c82020"/>
+    <stop offset="100%" stop-color="#6e0808"/>
+  </linearGradient>
+
+  <!-- Cup bottom closed end -->
+  <linearGradient id="btmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#c01a1a"/>
+    <stop offset="100%" stop-color="#780a0a"/>
+  </linearGradient>
+
+  <!-- Ground shadow under gift pile -->
+  <radialGradient id="gndGrad" cx="50%" cy="40%" r="50%">
+    <stop offset="0%"   stop-color="rgba(80,20,100,0.28)"/>
+    <stop offset="100%" stop-color="rgba(80,20,100,0)"/>
+  </radialGradient>
+
+  <!-- Cup gloss streak (white → transparent) -->
+  <linearGradient id="glossGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="rgba(255,255,255,0.38)"/>
+    <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+  </linearGradient>
+
+</defs>
+
+<!-- Ground shadow under gift pile -->
+<ellipse id="ground-shadow" cx="488" cy="348" rx="210" ry="18" fill="url(#gndGrad)"/>
+
+<!-- ============================================================
+     CUP — bottom center at (175, 220)
+     Shorter (110px tall), nearly cylindrical (±36 top, ±30 bottom)
+     Full 3D treatment: thick rim, gloss streak, wall depth
+============================================================ -->
+<g id="cup">
+
+  <!-- DROP SHADOW under cup (soft ellipse) -->
+  <ellipse cx="178" cy="228" rx="32" ry="7" fill="rgba(0,0,0,0.18)"/>
+
+  <!-- ── BODY ── -->
+  <!-- Main body trapezoid -->
+  <path d="M 139,110 L 211,110 L 205,220 L 145,220 Z" fill="url(#cupGrad)"/>
+
+  <!-- Gloss streak: upper-left curved highlight -->
+  <path d="M 139,110 L 154,110 L 150,185 L 145,185 Z" fill="url(#glossGrad)"/>
+
+  <!-- Right-edge deep shadow strip -->
+  <path d="M 197,110 L 211,110 L 205,220 L 200,220 Z" fill="rgba(0,0,0,0.22)"/>
+
+  <!-- ── MIDDLE BAND / RING ── adds tactile texture -->
+  <path d="M 141,158 L 209,158 L 207,167 L 143,167 Z" fill="rgba(0,0,0,0.12)"/>
+  <path d="M 141,156 L 209,156 L 209,159 L 141,159 Z" fill="rgba(255,255,255,0.10)"/>
+
+  <!-- ── RIM / LIP (thick top edge) ── -->
+  <!-- Rim band side face (gives height/thickness to the lip) -->
+  <path d="M 139,110 L 211,110 L 211,119 L 139,119 Z" fill="url(#rimBandGrad)"/>
+  <!-- Top face of rim (ellipse viewed from slight above) -->
+  <ellipse cx="175" cy="110" rx="36" ry="10" fill="url(#rimTopGrad)"/>
+  <!-- Rim top highlight arc -->
+  <ellipse cx="175" cy="109" rx="34" ry="8.5" fill="none"
+           stroke="rgba(255,160,160,0.5)" stroke-width="2"/>
+
+  <!-- ── INTERIOR (dark well visible through opening) ── -->
+  <!-- Inner wall depth — suggests hollow inside -->
+  <ellipse cx="175" cy="113" rx="30" ry="7" fill="#220a0a" opacity="0.82"/>
+  <!-- Tiny inner highlight (catches light inside rim) -->
+  <ellipse cx="166" cy="112" rx="10" ry="3" fill="rgba(255,120,120,0.18)"/>
+
+  <!-- ── CLOSED BOTTOM ELLIPSE ── -->
+  <ellipse cx="175" cy="220" rx="30" ry="8" fill="url(#btmGrad)"/>
+  <!-- Bottom edge highlight -->
+  <ellipse cx="175" cy="220" rx="30" ry="8" fill="none"
+           stroke="rgba(200,80,80,0.4)" stroke-width="1.5"/>
+
+</g>
+
+<!-- ============================================================
+     GIFT BOXES — all centered at SVG (0,0), moved by CSS
+     Box: 28×28, ribbon cross, bow on top
+============================================================ -->
+
+<!-- Gift 1: Blue #5B9BD5, ribbon #3a78b0 -->
+<g id="gift1">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#5B9BD5"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#3a78b0"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#3a78b0"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#3a78b0"/>
+</g>
+
+<!-- Gift 2: Orange #E8A84C, ribbon #c07830 -->
+<g id="gift2">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#E8A84C"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#c07830"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#c07830"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#c07830"/>
+</g>
+
+<!-- Gift 3: Green #6BB536, ribbon #4a8020 -->
+<g id="gift3">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#6BB536"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#4a8020"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#4a8020"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#4a8020"/>
+</g>
+
+<!-- Gift 4: Purple #9B7BBD, ribbon #705090 -->
+<g id="gift4">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#9B7BBD"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#705090"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#705090"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#705090"/>
+</g>
+
+<!-- Gift 5: Yellow #F5D020, ribbon #c8a000 -->
+<g id="gift5">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#F5D020"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#c8a000"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#c8a000"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#c8a000"/>
+</g>
+
+<!-- Gift 6: Coral #F07070, ribbon #c03838 -->
+<g id="gift6">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#F07070"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#c03838"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#c03838"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#c03838"/>
+</g>
+
+<!-- Gift 7: Light Blue #7BC8E0, ribbon #4a9ab8 -->
+<g id="gift7">
+  <rect x="-14" y="-14" width="28" height="28" rx="2.5" fill="#7BC8E0"/>
+  <rect x="-14" y="-5"  width="28" height="10"          fill="rgba(255,255,255,0.72)"/>
+  <rect x="-5"  y="-14" width="10" height="28"          fill="rgba(255,255,255,0.72)"/>
+  <ellipse cx="-6" cy="-14" rx="6" ry="3.5" transform="rotate(-28,-6,-14)" fill="#4a9ab8"/>
+  <ellipse cx="6"  cy="-14" rx="6" ry="3.5" transform="rotate(28,6,-14)"   fill="#4a9ab8"/>
+  <circle  cx="0"  cy="-14" r="3"                                            fill="#4a9ab8"/>
+</g>
+
+</svg>
+</body>
+</html>

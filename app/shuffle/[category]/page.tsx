@@ -27,6 +27,7 @@ const CATEGORY_META: Record<string, { label: string; desc: string }> = {
   'diy-tools':       { label: 'DIY & Tools',       desc: 'Power tools, hand tools, and workshop essentials.' },
   'finance':         { label: 'Finance',           desc: 'Books, courses, and gifts for money-minded people.' },
   'car-accessories': { label: 'Car Accessories',   desc: 'Dash cams, organizers, and must-haves for drivers.' },
+  'outdoors':        { label: 'Outdoors & Camping', desc: 'Camping gear, hiking essentials, and adventure gifts for the outdoors.' },
 };
 
 function StarRating({ rating }: { rating: number }) {
@@ -50,6 +51,7 @@ export default function CategoryShufflePage() {
   const [loading,  setLoading]  = useState(true);
   const [fading,   setFading]   = useState(false);
   const [modal,    setModal]    = useState<Product | null>(null);
+  const [count,    setCount]    = useState(4);
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
   useEffect(() => {
@@ -64,13 +66,18 @@ export default function CategoryShufflePage() {
       .catch(() => setLoading(false));
   }, [tag]);
 
-  const reshuffle = useCallback(() => {
+  const reshuffle = useCallback((countOverride?: number) => {
     setFading(true);
     setTimeout(() => {
-      setCards(shuffleMany(4, { tags: [tag], catalog }));
+      setCards(shuffleMany(countOverride ?? count, { tags: [tag], catalog }));
       setFading(false);
     }, 250);
-  }, [catalog, tag]);
+  }, [catalog, tag, count]);
+
+  const handleCountChange = useCallback((newCount: number) => {
+    setCount(newCount);
+    reshuffle(newCount);
+  }, [reshuffle]);
 
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #fff9e6 100%)' }}>
@@ -85,6 +92,24 @@ export default function CategoryShufflePage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">{meta.label} Gifts</h1>
           <p className="text-gray-500 text-sm max-w-md mx-auto">{meta.desc}</p>
         </div>
+
+        {/* Count selector */}
+        {!loading && cards.length > 0 && (
+          <div className="flex items-center justify-end mb-3">
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs text-gray-400">Show:</span>
+              <select
+                value={count}
+                onChange={e => handleCountChange(Number(e.target.value))}
+                className="text-xs border border-gray-200 rounded-lg px-2 py-1 bg-white text-gray-600 cursor-pointer focus:outline-none focus:border-[#F04E30]"
+              >
+                {[4, 8, 16, 20].map(n => (
+                  <option key={n} value={n}>{n} gifts</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        )}
 
         {/* Cards */}
         {loading ? (
@@ -155,7 +180,7 @@ export default function CategoryShufflePage() {
         {!loading && cards.length > 0 && (
           <div className="text-center mt-8">
             <button
-              onClick={reshuffle}
+              onClick={() => reshuffle()}
               className="btn-shuffle text-white font-extrabold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all"
             >
               Shuffle Again

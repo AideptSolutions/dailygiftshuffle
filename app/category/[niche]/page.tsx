@@ -239,6 +239,20 @@ const NICHE_META: Record<Niche, NicheMeta> = {
       { q: 'What gaming gifts are good for someone who plays mobile games?', a: 'A phone controller grip, gaming phone stand, charging dock, and a portable charger are perfect for mobile gamers.' },
     ],
   },
+  outdoors: {
+    title: 'Best Outdoors and Camping Gifts 2025',
+    heading: 'Best Outdoors and Camping Gifts',
+    description: 'Find the best gifts for campers, hikers, and outdoor adventurers. From ultralight gear to camp kitchen essentials, these are the picks serious outdoor people actually want.',
+    emoji: '⛺',
+    coverImage: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&h=300&fit=crop&auto=format',
+    faqs: [
+      { q: 'What are the best camping gifts under $50?', a: 'A LifeStraw water filter, UCO stormproof matches, a Black Diamond headlamp, or an ENO hammock are all outstanding camping gifts under $50. These are the items experienced campers buy themselves anyway, which makes them genuinely appreciated when received as gifts.' },
+      { q: 'What gifts do hikers and backpackers want most?', a: 'Serious hikers want practical gear upgrades: a quality sleeping pad, a GPS navigator, a solar power bank, or a merino wool base layer. The sweet spot is something they have been eyeing but have not bought for themselves. Premium brands like Osprey, Kelty, and Smartwool consistently rank at the top of wish lists.' },
+      { q: 'What are good camping gifts for someone just getting started?', a: 'New campers benefit most from foundational gear: a reliable headlamp, a two-burner camp stove, a sleeping pad, and a stormproof fire kit. A beginner bundle covering these bases is far more useful than one flashy item. Focus on safety and comfort for first-time campers.' },
+      { q: 'What are unique outdoor gifts that stand out?', a: 'The BioLite CampStove charges your phone while you cook over sticks. The Garmin eTrex GPS works anywhere on earth without cell service. A YETI cooler keeps ice for days. These are gifts that cause a genuine reaction when opened because they solve real problems in clever ways.' },
+      { q: 'What camping gifts are good for families?', a: "Family camping gifts should prioritize setup speed and comfort. A quality two-burner stove, a large hammock, a group sleeping arrangement, and a rugged cooler cover the essentials. Kids love their own headlamp, and parents love a solar charger that keeps everyone's devices alive on longer trips." },
+    ],
+  },
 };
 
 const VALID_NICHES = Object.keys(NICHE_META) as Niche[];
