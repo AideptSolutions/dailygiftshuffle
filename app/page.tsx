@@ -140,7 +140,7 @@ export default async function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4" style={{ background: '#FFF3EE' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12" style={{ color: '#1A202C' }}>
             How It Works
@@ -167,11 +167,11 @@ export default async function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 px-4" style={{ background: '#FFFFFF' }}>
+      <section className="py-16 px-4" style={{ background: '#FFF3EE' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {features.map((f) => (
-              <div key={f.title} className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0] text-center">
+              <div key={f.title} className="rounded-2xl p-6 shadow-sm border border-[#F04E30]/20 text-center" style={{ background: '#FFFFFF' }}>
                 <h3 className="font-bold mb-1" style={{ color: '#1A202C' }}>{f.title}</h3>
                 <p className="text-gray-500 text-sm">{f.desc}</p>
               </div>
