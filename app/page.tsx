@@ -122,10 +122,12 @@ export default async function HomePage() {
           <span style={{ color: '#F04E30' }}>Perfect Gift</span>
           <br />in Seconds
         </h1>
-        <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-10">
+        <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-2">
           Pick a recipient, set a budget, and hit{' '}
-          <strong style={{ color: '#F04E30' }}>SHUFFLE</strong> — we will curate a surprise gift
-          recommendation just for you.
+          <strong style={{ color: '#F04E30' }}>SHUFFLE</strong>
+        </p>
+        <p className="text-base sm:text-lg text-gray-500 max-w-xl mb-10">
+          receive a curated selection of gift recommendations with each click
         </p>
 
         {/* Cup animation */}
