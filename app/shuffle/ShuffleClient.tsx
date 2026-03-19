@@ -71,7 +71,7 @@ function StarRating({ rating }: { rating: number }) {
 function ProductCard({ product }: { product: Product; onSave?: () => void; isSaved?: boolean }) {
   const { toggle: toggleFavorite, isFavorited } = useFavorites();
   return (
-    <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#FEFCF0' }}>
+    <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#FFF8EE' }}>
       {/* Image — fixed compact height */}
       <div className="relative w-full h-28 bg-gray-50">
         <Image
@@ -218,7 +218,7 @@ export default function ShuffleClient() {
   const stepIndex     = ['recipient', 'budget', 'occasion', 'result'].indexOf(step);
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #FFF9E6 100%)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: '#FFFFFF' }}>
       <Navbar />
 
       <main id="main-content" tabIndex={-1} className="flex-1 max-w-3xl mx-auto w-full px-4 py-4">

@@ -115,7 +115,7 @@ export default async function HomePage() {
       {/* Hero */}
       <section
         className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20"
-        style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #FFF9E6 100%)' }}
+        style={{ background: '#FFFFFF' }}
       >
         <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight mb-4 max-w-3xl" style={{ color: '#1A202C' }}>
           Find the{' '}
@@ -154,7 +154,7 @@ export default async function HomePage() {
               <div key={item.step} className="text-center">
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold mx-auto mb-4"
-                  style={{ background: '#FFFAF5', border: '2px solid #F04E30', color: '#F04E30' }}
+                  style={{ background: '#FFF8EE', border: '2px solid #F04E30', color: '#F04E30' }}
                 >
                   {item.step}
                 </div>
@@ -167,7 +167,7 @@ export default async function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-16 px-4" style={{ background: '#FFFAF5' }}>
+      <section className="py-16 px-4" style={{ background: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {features.map((f) => (

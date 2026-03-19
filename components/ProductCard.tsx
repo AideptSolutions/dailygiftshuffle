@@ -30,7 +30,7 @@ export interface CompactProduct {
 
 export default function ProductCard({ product }: { product: CompactProduct }) {
   return (
-    <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#FEFCF0' }}>
+    <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#FFF8EE' }}>
       {/* Image — fixed compact height, matches landing page card size */}
       <div className="relative w-full h-28 bg-gray-50">
         <Image
