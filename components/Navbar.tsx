@@ -59,7 +59,7 @@ export default function Navbar() {
   }, [categoriesOpen]);
 
   return (
-    <nav aria-label="Main navigation" className="bg-white shadow-sm sticky top-0 z-50">
+    <nav aria-label="Main navigation" className="shadow-sm sticky top-0 z-50" style={{ background: '#e6e6e6' }}>
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="font-extrabold text-xl" style={{ color: '#F04E30' }}>
           TheGiftShuffle
