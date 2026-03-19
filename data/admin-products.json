@@ -3684,5 +3684,72 @@
         "cranes":  true,
         "createdAt":  "2026-03-19T17:30:00.000Z",
         "updatedAt":  "2026-03-19T17:30:00.000Z"
+    },
+    {
+        "id":  "admin-20260319-castor-oil",
+        "name":  "Handcraft Blends Organic Castor Oil — 16 fl oz, Pure \u0026 Cold-Pressed",
+        "description":  "100% pure, cold-pressed organic castor oil for eyelashes, eyebrows, hair growth, and skin. Thick, nourishing formula packed with ricinoleic acid. Use as a lash serum, brow booster, scalp treatment, or body moisturizer. Hexane-free, no additives.",
+        "price":  13.99,
+        "priceDisplay":  "$13.99",
+        "image":  "",
+        "rating":  4.6,
+        "reviewCount":  48200,
+        "affiliateUrl":  "https://www.amazon.com/Handcraft-Blends-Organic-Eyelashes-Eyebrows/dp/B0734849YK?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=63869cbfe9f40224fc3bca96b1b9a295\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B0734849YK",
+        "recipients":  [
+                           "her",
+                           "mom",
+                           "myself-her",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+                          "birthday",
+                          "holiday",
+                          "just-because"
+                      ],
+        "tags":  [
+                     "beauty",
+                     "selfcare",
+                     "skincare",
+                     "hair"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-19T17:45:00.000Z",
+        "updatedAt":  "2026-03-19T17:45:00.000Z"
+    },
+    {
+        "id":  "admin-20260319-batana-oil",
+        "name":  "VXHDAG Batana Oil for Hair Growth — 100% Pure, Cold-Pressed",
+        "description":  "Pure cold-pressed batana oil sourced from Central American palm nuts — a centuries-old remedy for hair growth, thickness, and scalp health. Repairs damage, reduces breakage, and adds deep shine. Works on all hair types.",
+        "price":  19.99,
+        "priceDisplay":  "$19.99",
+        "image":  "",
+        "rating":  4.5,
+        "reviewCount":  2800,
+        "affiliateUrl":  "https://www.amazon.com/VXHDAG-Batana-Oil-Hair-Growth/dp/B0CMXF1NK3?tag=dailygiftshuf-20\u0026linkCode=ll2\u0026linkId=6afd97f11cc99dbe6cecef4e7e7a23d9\u0026language=en_US\u0026ref_=as_li_ss_tl",
+        "asin":  "B0CMXF1NK3",
+        "recipients":  [
+                           "her",
+                           "mom",
+                           "myself-her",
+                           "friends"
+                       ],
+        "budgetTier":  "under25",
+        "occasions":  [
+                          "birthday",
+                          "holiday",
+                          "just-because"
+                      ],
+        "tags":  [
+                     "beauty",
+                     "selfcare",
+                     "hair"
+                 ],
+        "status":  "published",
+        "cranes":  true,
+        "createdAt":  "2026-03-19T17:45:00.000Z",
+        "updatedAt":  "2026-03-19T17:45:00.000Z"
     }
 ]
