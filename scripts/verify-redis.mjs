@@ -1,0 +1,10 @@
+const REDIS_URL = 'https://social-slug-73085.upstash.io';
+const REDIS_TOKEN = 'gQAAAAAAAR19AAIncDFjYmM1MjBkYTJhODA0N2E2YTBkZTc4MDJiNzlkYmU1YnAxNzMwODU';
+const res = await fetch(REDIS_URL + '/get/admin:products', { headers: { Authorization: 'Bearer ' + REDIS_TOKEN }});
+const data = await res.json();
+const arr = JSON.parse(data.result);
+console.log('Type:', Array.isArray(arr) ? 'array OK' : 'WRONG - type is ' + typeof arr);
+console.log('Total count:', arr.length);
+const cranes = arr.filter(p => p.cranes && p.status === 'published');
+console.log('Cranes items:', cranes.length);
+console.log('Last 3:', cranes.slice(-3).map(p => p.name));
