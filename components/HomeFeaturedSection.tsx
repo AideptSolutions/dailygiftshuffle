@@ -226,8 +226,8 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
             <div
               key={product.id}
               onClick={() => setActiveProduct(product)}
-              className={`${animating ? 'tile-tumble' : 'opacity-0'} bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
-              style={{ animationDelay: `${i * 65}ms` }}
+              className={`${animating ? 'tile-tumble' : 'opacity-0'} rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
+              style={{ background: '#FEFCF0', animationDelay: `${i * 65}ms` }}
             >
               {/* Image + save button */}
               <div className="relative w-full h-28 bg-gray-50">
@@ -304,7 +304,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
       </div>
 
       {/* ── Custom Shuffle ────────────────────────────────────────────────── */}
-      <div className="bg-white rounded-3xl shadow-sm border border-[#E2E8F0] p-6 sm:p-8">
+      <div className="rounded-3xl shadow-sm border border-[#E2E8F0] p-6 sm:p-8" style={{ background: '#FEFCF0' }}>
         <div className="mb-6">
           <h2 className="text-lg font-extrabold text-gray-800">Custom Shuffle</h2>
           <p className="text-gray-400 text-sm mt-0.5">Tell us what you are looking for</p>
@@ -354,3 +354,4 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     </div>
   );
 }
+
