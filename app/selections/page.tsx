@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -13,9 +13,9 @@ function StarRating({ rating }: { rating: number }) {
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-sm">
-      {'★'.repeat(full)}
-      {half ? '½' : ''}
-      {'☆'.repeat(5 - full - (half ? 1 : 0))}
+      {'â˜…'.repeat(full)}
+      {half ? 'Â½' : ''}
+      {'â˜†'.repeat(5 - full - (half ? 1 : 0))}
     </span>
   );
 }
@@ -39,15 +39,15 @@ export default function SelectionsPage() {
           </h1>
           <p className="text-gray-500">
             {favorites.length > 0
-              ? `${favorites.length} item${favorites.length !== 1 ? 's' : ''} · estimated total $${totalMin.toFixed(2)}`
-              : 'Nothing saved yet — go shuffle some gifts!'}
+              ? `${favorites.length} item${favorites.length !== 1 ? 's' : ''} Â· estimated total $${totalMin.toFixed(2)}`
+              : 'Nothing saved yet â€” go shuffle some gifts!'}
           </p>
         </div>
 
         {favorites.length === 0 ? (
           /* Empty state */
           <div className="text-center py-20 bg-white rounded-3xl shadow-sm">
-            <div className="text-6xl mb-4">☆</div>
+            <div className="text-6xl mb-4">â˜†</div>
             <p className="text-gray-600 font-medium mb-6 text-lg">Your picks list is empty.</p>
             <Link href="/shuffle" className="btn-shuffle text-white font-bold px-10 py-4 rounded-full inline-block">
               Start Shuffling
@@ -78,7 +78,7 @@ export default function SelectionsPage() {
                       title="Remove from picks"
                       className="absolute top-2 right-2 w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-red-500 hover:border-red-300 text-base font-bold transition-colors shadow-sm"
                     >
-                      ×
+                      Ã—
                     </button>
                   </div>
 
@@ -144,7 +144,7 @@ export default function SelectionsPage() {
                     }}
                     className="btn-amazon font-bold py-3 px-8 rounded-xl text-center text-sm"
                   >
-                    Open All on Amazon →
+                    Open All on Amazon â†’
                   </button>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function SelectionsPage() {
             {/* Keep shopping */}
             <div className="text-center mt-8">
               <Link href="/shuffle" className="text-[#F04E30] font-semibold hover:underline text-sm">
-                ← Keep shuffling for more ideas
+                â† Keep shuffling for more ideas
               </Link>
             </div>
           </>
@@ -173,3 +173,4 @@ export default function SelectionsPage() {
     </div>
   );
 }
+

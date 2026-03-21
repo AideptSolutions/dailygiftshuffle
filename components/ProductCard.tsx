@@ -1,5 +1,5 @@
-/**
- * Compact ProductCard — matches the landing page HomeFeaturedSection card style.
+﻿/**
+ * Compact ProductCard â€” matches the landing page HomeFeaturedSection card style.
  * Used on category pages, gift-guide pages, and any other product grid.
  */
 import Image from 'next/image';
@@ -9,9 +9,9 @@ function StarRating({ rating }: { rating: number }) {
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-xs">
-      {Array(full).fill('★').join('')}
-      {half ? '½' : ''}
-      {Array(5 - full - (half ? 1 : 0)).fill('☆').join('')}
+      {Array(full).fill('â˜…').join('')}
+      {half ? 'Â½' : ''}
+      {Array(5 - full - (half ? 1 : 0)).fill('â˜†').join('')}
     </span>
   );
 }
@@ -31,7 +31,7 @@ export interface CompactProduct {
 export default function ProductCard({ product }: { product: CompactProduct }) {
   return (
     <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#F0F4F8' }}>
-      {/* Image — fixed compact height, matches landing page card size */}
+      {/* Image â€” fixed compact height, matches landing page card size */}
       <div className="relative w-full h-28">
         <Image
           src={product.image}
@@ -56,15 +56,16 @@ export default function ProductCard({ product }: { product: CompactProduct }) {
         </p>
       </div>
 
-      {/* Buy button — full-width at bottom */}
+      {/* Buy button â€” full-width at bottom */}
       <a
         href={product.affiliateUrl}
         target="_blank"
         rel="noopener noreferrer sponsored"
         className="btn-amazon block text-center text-xs font-bold py-2 px-3"
       >
-        Shop on Amazon
+        Buy on Amazon
       </a>
     </div>
   );
 }
+

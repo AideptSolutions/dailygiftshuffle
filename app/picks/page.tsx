@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { products } from '@/data/products';
@@ -21,7 +21,7 @@ const allPicks = products.filter(p => STARTER_IDS.includes(p.id));
 const SECTIONS = [
   {
     label: 'Gifts Under $10',
-    desc: 'Practical, fun, and genuinely thoughtful — all under ten bucks.',
+    desc: 'Practical, fun, and genuinely thoughtful â€” all under ten bucks.',
     ids: ['u10-1','u10-2','u10-3','u10-4','u10-5','u10-6','u10-7','u10-8','u10-9','u10-10','u10-11','u10-12','u10-13','u10-14','u10-15','u10-16','u10-17','u10-18','u10-19','u10-20'],
   },
   {
@@ -53,7 +53,7 @@ export default function PicksPage() {
         </p>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">20 Gifts Under $10</h1>
         <p className="text-gray-500 max-w-xl mx-auto text-base">
-          Practical, fun, and genuinely thoughtful picks — all under ten bucks.
+          Practical, fun, and genuinely thoughtful picks â€” all under ten bucks.
           Click any &ldquo;Buy on Amazon&rdquo; button to grab one instantly.
         </p>
       </div>
@@ -90,7 +90,7 @@ export default function PicksPage() {
                         {product.description}
                       </p>
                       <div className="flex items-center gap-1 mb-3">
-                        <span className="star-gold text-xs">{'★'.repeat(Math.round(product.rating))}</span>
+                        <span className="star-gold text-xs">{'â˜…'.repeat(Math.round(product.rating))}</span>
                         <span className="text-gray-400 text-xs">({product.reviewCount.toLocaleString()})</span>
                       </div>
                       <a
@@ -123,3 +123,4 @@ export default function PicksPage() {
     </main>
   );
 }
+

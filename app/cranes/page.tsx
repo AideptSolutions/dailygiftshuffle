@@ -1,8 +1,8 @@
-/**
- * ⚠️  TEMPORARY PAGE — Remove once Amazon Creator API access is approved.
+﻿/**
+ * âš ï¸  TEMPORARY PAGE â€” Remove once Amazon Creator API access is approved.
  * To remove: delete this file + remove the Crane's List button in app/page.tsx.
  *
- * To add items: go to /admin → paste Amazon links → check "Add to Crane's List" → Import.
+ * To add items: go to /admin â†’ paste Amazon links â†’ check "Add to Crane's List" â†’ Import.
  */
 
 import type { Metadata } from 'next';
@@ -10,8 +10,8 @@ import Link from 'next/link';
 import { readAdminProducts } from '@/lib/admin-store';
 
 export const metadata: Metadata = {
-  title: "Crane's List — TheGiftShuffle",
-  description: 'A curated list of items — pick something you love!',
+  title: "Crane's List â€” TheGiftShuffle",
+  description: 'A curated list of items â€” pick something you love!',
   robots: 'noindex',
 };
 
@@ -24,7 +24,7 @@ export default async function CranesPage() {
 
       {/* Header */}
       <div className="max-w-2xl mx-auto px-4 pt-12 pb-6 text-center">
-        <div className="text-5xl mb-4">🎁</div>
+        <div className="text-5xl mb-4">ðŸŽ</div>
         <h1 className="text-3xl font-extrabold mb-2" style={{ color: '#1A202C' }}>
           Crane&apos;s List
         </h1>
@@ -38,7 +38,7 @@ export default async function CranesPage() {
       <div className="max-w-2xl mx-auto px-4 pb-16 space-y-4">
         {items.length === 0 ? (
           <div className="bg-white rounded-2xl border border-[#E2E8F0] p-12 text-center">
-            <p className="text-gray-400 text-sm">No items yet — check back soon!</p>
+            <p className="text-gray-400 text-sm">No items yet â€” check back soon!</p>
           </div>
         ) : items.map(item => (
           <div
@@ -55,7 +55,7 @@ export default async function CranesPage() {
               />
             ) : (
               <div className="w-20 h-20 flex-shrink-0 rounded-xl bg-gray-100 flex items-center justify-center text-3xl">
-                🎁
+                ðŸŽ
               </div>
             )}
 
@@ -90,10 +90,11 @@ export default async function CranesPage() {
       {/* Footer */}
       <div className="text-center pb-10">
         <Link href="/" className="text-sm text-gray-400 hover:text-[#E64126] transition-colors">
-          ← Back to TheGiftShuffle
+          â† Back to TheGiftShuffle
         </Link>
       </div>
 
     </div>
   );
 }
+

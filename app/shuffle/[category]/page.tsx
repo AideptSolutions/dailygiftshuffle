@@ -166,9 +166,9 @@ export default function CategoryShufflePage() {
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                     onClick={e => e.stopPropagation()}
-                    className="mt-2 w-full bg-[#F04E30] hover:bg-orange-500 text-white text-xs font-bold py-1.5 rounded-lg flex items-center justify-center transition-colors"
+                    className="mt-2 w-full btn-amazon text-xs font-bold py-1.5 rounded-lg flex items-center justify-center"
                   >
-                    Shop on Amazon
+                    Buy on Amazon
                   </a>
                 </div>
               </div>

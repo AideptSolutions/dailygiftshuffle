@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import Image from 'next/image';
@@ -104,7 +104,7 @@ export default function ProductModal({ product, onClose }: Props) {
               rel="noopener noreferrer sponsored"
               className="btn-amazon block w-full text-center font-bold py-4 rounded-2xl text-base"
             >
-              Shop on Amazon
+              Buy on Amazon
             </a>
             <button
               onClick={() => toggle(product)}
@@ -119,10 +119,11 @@ export default function ProductModal({ product, onClose }: Props) {
           </div>
 
           <p className="text-xs text-center text-gray-300 mt-4">
-            Affiliate link — we may earn a commission at no cost to you.
+            Affiliate link â€” we may earn a commission at no cost to you.
           </p>
         </div>
       </div>
     </div>
   );
 }
+

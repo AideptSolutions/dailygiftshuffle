@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import { type Product, type Recipient, type BudgetTier, type NicheTag } from '@/
 import { useFavorites } from '@/lib/useFavorites';
 import ProductModal from '@/components/ProductModal';
 
-// ─── Random 4-picker from catalog ────────────────────────────────────────────
+// â”€â”€â”€ Random 4-picker from catalog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const SHUFFLE_KEY = 'dgs_home_shuffle_seen';
 
 function getSeen(): string[] {
@@ -36,7 +36,7 @@ function getTrending(catalog: Product[], n: number = 4): Product[] {
   return [...catalog].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0)).slice(0, n);
 }
 
-// ─── Star rating ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Star rating â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function StarRating({ rating }: { rating: number }) {
   const full = Math.floor(rating);
   const half = rating % 1 >= 0.5;
@@ -49,7 +49,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-// ─── Option lists ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Option lists â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const RECIPIENTS: { value: Recipient; label: string }[] = [
   { value: 'her',          label: 'For Her' },
   { value: 'him',          label: 'For Him' },
@@ -103,7 +103,7 @@ const BUDGETS: { value: BudgetTier | ''; label: string }[] = [
   { value: '250plus',   label: '$250+' },
 ];
 
-// ─── Dropdown ─────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Dropdown â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function Dropdown<T extends string>({
   label, value, options, onChange,
 }: {
@@ -135,12 +135,12 @@ function Dropdown<T extends string>({
   );
 }
 
-// ─── Main component ───────────────────────────────────────────────────────────
+// â”€â”€â”€ Main component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function HomeFeaturedSection({ initialProducts = [] }: { initialProducts?: Product[] }) {
   const router  = useRouter();
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
-  // Catalog seeded from server props — no client fetch needed
+  // Catalog seeded from server props â€” no client fetch needed
   const [catalog, setCatalog] = useState<Product[]>(initialProducts);
 
   useEffect(() => {
@@ -155,7 +155,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
       .catch(() => {});
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Product cards — seeded from server props immediately
+  // Product cards â€” seeded from server props immediately
   const [cards, setCards]           = useState<Product[]>(() => getTrending(initialProducts));
   const [animating, setAnimating]   = useState(true);
   const [isTrending, setIsTrending] = useState(true);
@@ -168,7 +168,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [budget,    setBudget]    = useState<BudgetTier | ''>('');
   const [error,     setError]     = useState('');
 
-  // ── Shuffle the N product cards ────────────────────────────────────────────
+  // â”€â”€ Shuffle the N product cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const handleShuffle = useCallback(() => {
     setAnimating(false);
     requestAnimationFrame(() => {
@@ -188,7 +188,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     });
   }, [catalog]);
 
-  // ── Custom Shuffle → navigate ──────────────────────────────────────────────
+  // â”€â”€ Custom Shuffle â†’ navigate â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const handleCustomShuffle = useCallback(() => {
     setError('');
     const params = new URLSearchParams();
@@ -201,7 +201,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   return (
     <div className="w-full max-w-4xl mx-auto px-4 pb-6">
 
-      {/* ── Product grid ──────────────────────────────────────────────────── */}
+      {/* â”€â”€ Product grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="mb-5">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-extrabold text-gray-800 tracking-tight">
@@ -274,18 +274,18 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
                 onClick={(e) => e.stopPropagation()}
                 className="btn-amazon block text-center text-xs font-bold py-2 px-3"
               >
-                Shop on Amazon
+                Buy on Amazon
               </a>
             </div>
           ))}
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-3">
-          Affiliate links — we may earn a small commission at no extra cost to you.
+          Affiliate links â€” we may earn a small commission at no extra cost to you.
         </p>
       </div>
 
-      {/* ── Shuffle button ────────────────────────────────────────────────── */}
+      {/* â”€â”€ Shuffle button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="text-center mb-8">
         <button
           onClick={handleShuffle}
@@ -296,14 +296,14 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
         <p className="text-xs text-[#4A5568] mt-2">Browse the full catalog one shuffle at a time</p>
       </div>
 
-      {/* ── Divider ──────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Divider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="flex items-center gap-4 mb-8">
         <div className="flex-1 border-t border-gray-200" />
         <span className="text-[#4A5568] text-sm font-medium">or narrow it down</span>
         <div className="flex-1 border-t border-gray-200" />
       </div>
 
-      {/* ── Custom Shuffle ────────────────────────────────────────────────── */}
+      {/* â”€â”€ Custom Shuffle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="rounded-3xl shadow-sm border border-[#E2E8F0] p-6 sm:p-8" style={{ background: '#F0F4F8' }}>
         <div className="mb-6">
           <h2 className="text-lg font-extrabold text-gray-800">Custom Shuffle</h2>
@@ -354,4 +354,5 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     </div>
   );
 }
+
 

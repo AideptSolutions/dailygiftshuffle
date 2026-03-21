@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -34,12 +34,12 @@ const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
 const BUDGETS: { id: BudgetTier | 'any'; label: string; sublabel: string }[] = [
   { id: 'any',       label: 'No Budget',        sublabel: 'Show everything' },
   { id: 'under25',   label: 'Under $25',        sublabel: 'Small & sweet' },
-  { id: '25to50',    label: '$25 – $50',        sublabel: 'Great value' },
-  { id: 'under50',   label: 'All under $50',    sublabel: 'Under $25 & $25–$50' },
-  { id: '50to100',   label: '$50 – $100',       sublabel: 'Thoughtful' },
-  { id: '100to150',  label: '$100 – $150',      sublabel: 'Premium' },
+  { id: '25to50',    label: '$25 â€“ $50',        sublabel: 'Great value' },
+  { id: 'under50',   label: 'All under $50',    sublabel: 'Under $25 & $25â€“$50' },
+  { id: '50to100',   label: '$50 â€“ $100',       sublabel: 'Thoughtful' },
+  { id: '100to150',  label: '$100 â€“ $150',      sublabel: 'Premium' },
   { id: 'under150',  label: 'All under $150',   sublabel: 'Everything up to $150' },
-  { id: '150to250',  label: '$150 – $250',      sublabel: 'Elevated' },
+  { id: '150to250',  label: '$150 â€“ $250',      sublabel: 'Elevated' },
   { id: '250plus',   label: '$250+',            sublabel: 'Luxury' },
 ];
 
@@ -61,9 +61,9 @@ function StarRating({ rating }: { rating: number }) {
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-sm">
-      {'★'.repeat(full)}
-      {half && '½'}
-      {'☆'.repeat(5 - full - (half ? 1 : 0))}
+      {'â˜…'.repeat(full)}
+      {half && 'Â½'}
+      {'â˜†'.repeat(5 - full - (half ? 1 : 0))}
     </span>
   );
 }
@@ -72,7 +72,7 @@ function ProductCard({ product }: { product: Product; onSave?: () => void; isSav
   const { toggle: toggleFavorite, isFavorited } = useFavorites();
   return (
     <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#F0F4F8' }}>
-      {/* Image — fixed compact height */}
+      {/* Image â€” fixed compact height */}
       <div className="relative w-full h-28">
         <Image
           src={product.image}
@@ -95,7 +95,7 @@ function ProductCard({ product }: { product: Product; onSave?: () => void; isSav
           {isFavorited(product.id) ? 'Saved' : 'Save'}
         </button>
       </div>
-      {/* Info — compact, no description */}
+      {/* Info â€” compact, no description */}
       <div className="p-3 flex flex-col flex-1">
         <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2">
           {product.name}
@@ -108,14 +108,14 @@ function ProductCard({ product }: { product: Product; onSave?: () => void; isSav
           {product.priceDisplay}
         </p>
       </div>
-      {/* Buy button — full width */}
+      {/* Buy button â€” full width */}
       <a
         href={product.affiliateUrl}
         target="_blank"
         rel="noopener noreferrer sponsored"
         className="btn-amazon block text-center text-xs font-bold py-2 px-3"
       >
-        Shop on Amazon
+        Buy on Amazon
       </a>
     </div>
   );
@@ -233,7 +233,7 @@ export default function ShuffleClient() {
                 }`}
                 style={i <= stepIndex ? { background: '#F04E30' } : {}}
               >
-                {i < stepIndex ? '✓' : i + 1}
+                {i < stepIndex ? 'âœ“' : i + 1}
               </div>
               <span className={`text-xs hidden sm:block ${i <= stepIndex ? 'font-semibold' : 'text-gray-400'}`}
                 style={i <= stepIndex ? { color: '#F04E30' } : {}}>
@@ -271,8 +271,8 @@ export default function ShuffleClient() {
                   </div>
                   <div className="py-2.5 px-2 font-semibold text-gray-800 text-sm">
                     {r.label}
-                    {r.id === 'myself-her' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">♀ Her</span>}
-                    {r.id === 'myself-him' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">♂ Him</span>}
+                    {r.id === 'myself-her' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">â™€ Her</span>}
+                    {r.id === 'myself-him' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">â™‚ Him</span>}
                   </div>
                 </button>
               ))}
@@ -284,7 +284,7 @@ export default function ShuffleClient() {
         {step === 'budget' && (
           <div>
             <button onClick={() => setStep('recipient')} className="text-sm text-gray-400 hover:text-[#F04E30] mb-6 flex items-center gap-1">
-              ← Back
+              â† Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s your budget?
@@ -313,12 +313,12 @@ export default function ShuffleClient() {
         {step === 'occasion' && (
           <div>
             <button onClick={() => setStep('budget')} className="text-sm text-gray-400 hover:text-[#F04E30] mb-6 flex items-center gap-1">
-              ← Back
+              â† Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s the occasion?
             </h2>
-            <p className="text-center text-gray-500 mb-6">Optional — or skip to shuffle immediately</p>
+            <p className="text-center text-gray-500 mb-6">Optional â€” or skip to shuffle immediately</p>
             <div className="grid grid-cols-2 gap-3 mb-4">
               {OCCASIONS.map((o) => (
                 <button
@@ -334,17 +334,17 @@ export default function ShuffleClient() {
               onClick={() => handleOccasion(null)}
               className="w-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold py-4 rounded-2xl transition-colors"
             >
-              Skip — Just Shuffle
+              Skip â€” Just Shuffle
             </button>
           </div>
         )}
 
-        {/* Step 4: Result — 4 cards */}
+        {/* Step 4: Result â€” 4 cards */}
         {step === 'result' && (
           <div>
             <div className="flex items-center justify-between mb-4">
               <button onClick={() => setStep('occasion')} className="text-sm text-gray-400 hover:text-[#F04E30] flex items-center gap-1">
-                ← Back
+                â† Back
               </button>
               <button onClick={handleReset} className="text-sm text-gray-400 hover:text-[#F04E30]">
                 Start Over
@@ -407,7 +407,7 @@ export default function ShuffleClient() {
                   <AdSlot size="rectangle" />
                 </div>
                 <p className="text-xs text-center text-gray-300 mt-4">
-                  Affiliate links — we may earn a commission at no cost to you.
+                  Affiliate links â€” we may earn a commission at no cost to you.
                 </p>
               </>
             ) : (
@@ -436,5 +436,6 @@ export default function ShuffleClient() {
     </div>
   );
 }
+
 
 

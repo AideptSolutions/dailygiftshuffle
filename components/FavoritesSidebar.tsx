@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ export default function FavoritesSidebar() {
 
   return (
     <>
-      {/* Vertical tab — always visible on the right edge */}
+      {/* Vertical tab â€” always visible on the right edge */}
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label="My Picks"
@@ -147,3 +147,4 @@ export default function FavoritesSidebar() {
     </>
   );
 }
+

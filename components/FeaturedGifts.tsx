@@ -1,12 +1,12 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import { products } from '@/data/products';
 
-// 4 highest-reviewed products — highest demand / trending
+// 4 highest-reviewed products â€” highest demand / trending
 const HOT_PRODUCT_IDS = [
-  'friends-50-1',  // Instant Pot Duo 6-Qt — 112,000 reviews
-  'her-50-2',      // Kindle Paperwhite    —  98,700 reviews
-  'her-100-1',     // KitchenAid Mixer     —  87,400 reviews
-  'him-50-1',      // Smart Watch          —  45,300 reviews
+  'friends-50-1',  // Instant Pot Duo 6-Qt â€” 112,000 reviews
+  'her-50-2',      // Kindle Paperwhite    â€”  98,700 reviews
+  'her-100-1',     // KitchenAid Mixer     â€”  87,400 reviews
+  'him-50-1',      // Smart Watch          â€”  45,300 reviews
 ];
 
 const hotProducts = HOT_PRODUCT_IDS
@@ -18,9 +18,9 @@ function StarRating({ rating }: { rating: number }) {
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-sm">
-      {'★'.repeat(full)}
-      {half ? '½' : ''}
-      {'☆'.repeat(5 - full - (half ? 1 : 0))}
+      {'â˜…'.repeat(full)}
+      {half ? 'Â½' : ''}
+      {'â˜†'.repeat(5 - full - (half ? 1 : 0))}
     </span>
   );
 }
@@ -63,15 +63,16 @@ export default function FeaturedGifts() {
               </p>
             </div>
             <div className="btn-amazon text-center text-xs font-bold py-2 px-3">
-              Shop on Amazon
+              Buy on Amazon
             </div>
           </a>
         ))}
       </div>
 
       <p className="text-center text-xs text-gray-400 mt-3">
-        Affiliate links — we may earn a small commission at no extra cost to you.
+        Affiliate links â€” we may earn a small commission at no extra cost to you.
       </p>
     </div>
   );
 }
+
