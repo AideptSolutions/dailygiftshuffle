@@ -60,10 +60,11 @@ export default function SearchBar() {
     }
   }, [isOpen]);
 
-  // Close on outside click
+  // Close on outside click (skip if product modal is open — modal handles its own clicks)
   useEffect(() => {
     if (!isOpen) return;
     const handler = (e: MouseEvent) => {
+      if (activeProduct) return;
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         close();
       }
@@ -71,7 +72,7 @@ export default function SearchBar() {
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen]);
+  }, [isOpen, activeProduct]);
 
   // Close on Escape
   useEffect(() => {
