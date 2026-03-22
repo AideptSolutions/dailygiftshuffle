@@ -90,6 +90,12 @@ export default function Footer() {
           <p className="text-xs text-gray-600">
             As an Amazon Associate, we earn from qualifying purchases.
           </p>
+          <p className="text-xs text-gray-600">
+            A venture by{' '}
+            <a href="https://www.aideptsolutions.com" className="hover:text-gray-400 underline transition-colors" rel="noopener">
+              AiDept Solutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>
