@@ -80,6 +80,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html lang="en">
+      <head>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore - Impact uses non-standard 'value' attribute */}
+        <meta name="impact-site-verification" value="0b37ca6c-ee3b-41cf-949f-69582e768b5e" />
+      </head>
       <body className={`${inter.className} bg-gray-50 min-h-screen`}>
         {gaId && (
           <>
