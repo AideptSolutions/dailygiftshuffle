@@ -253,6 +253,45 @@ const NICHE_META: Record<Niche, NicheMeta> = {
       { q: 'What camping gifts are good for families?', a: "Family camping gifts should prioritize setup speed and comfort. A quality two-burner stove, a large hammock, a group sleeping arrangement, and a rugged cooler cover the essentials. Kids love their own headlamp, and parents love a solar charger that keeps everyone's devices alive on longer trips." },
     ],
   },
+  travel: {
+    title: 'Best Travel Gifts for Frequent Flyers & Adventurers 2026',
+    heading: 'Best Travel Gifts',
+    description: 'Find the best gifts for travelers, frequent flyers, and adventure seekers — from smart luggage and packing cubes to travel pillows and portable chargers.',
+    emoji: '✈️',
+    coverImage: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&h=300&fit=crop&auto=format',
+    faqs: [
+      { q: 'What are the best travel gifts under $50?', a: 'Packing cubes, a passport holder wallet, a travel neck pillow, a universal travel adapter, and a portable power bank are all outstanding travel gifts under $50. These are items frequent travelers use on every single trip.' },
+      { q: 'What travel gifts do frequent flyers actually want?', a: 'Frequent flyers prioritize comfort and convenience: noise-canceling earbuds, a high-quality travel pillow, a lightweight carry-on, a fast-charging power bank, and a slim passport wallet top most wish lists.' },
+      { q: 'What are good travel gifts for someone who travels for work?', a: 'Business travelers love practical upgrades: a TSA-approved toiletry bag, a laptop-friendly backpack, a portable luggage scale, a universal adapter with USB ports, and a travel-sized steamer for wrinkle-free clothes.' },
+      { q: 'What are unique travel gifts that stand out?', a: 'Unique travel gifts include a scratch-off world map, a personalized luggage tag, a packable travel blanket, a GoPro action camera, and a subscription to a travel magazine or lounge access pass. These go beyond the basics and genuinely delight any traveler.' },
+    ],
+  },
+  beauty: {
+    title: 'Best Beauty & Self-Care Gifts 2026',
+    heading: 'Best Beauty & Self-Care Gifts',
+    description: 'Shop the best beauty and self-care gifts — from professional hair tools and skincare devices to luxurious bath sets and spa-worthy kits.',
+    emoji: '💅',
+    coverImage: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=900&h=300&fit=crop&auto=format',
+    faqs: [
+      { q: 'What are the best beauty gifts under $50?', a: 'A gua sha facial tool set, a silk hair scrunchie set, a bath bomb collection, a premium face mask kit, and a jade roller are all beautiful self-care gifts under $50 that feel far more indulgent than their price tag.' },
+      { q: 'What beauty gifts do women actually want?', a: 'Women consistently love skincare tools (gua sha, LED masks), professional-grade hair tools (Dyson, T3), luxury body care sets, and fragrance. The most appreciated beauty gifts combine quality with something they would not buy themselves.' },
+      { q: 'What self-care gifts are good for stress relief?', a: 'Self-care gifts that target stress include aromatherapy diffusers with essential oils, weighted eye masks, bath soak sets, foam rollers, and calming skincare rituals. These help recipients slow down and recharge.' },
+      { q: 'What are good beauty gifts for a teenager?', a: 'Teens love TikTok-famous skincare (CeraVe, The Ordinary), nail art kits, hair accessories, face masks, and mini perfume sets. Keep it fun, trendy, and skin-safe — avoid anything too harsh for young skin.' },
+    ],
+  },
+  'ai-smart-home': {
+    title: 'Best AI & Smart Home Gifts 2026',
+    heading: 'Best AI & Smart Home Gifts',
+    description: 'Discover the best AI gadgets and smart home gifts — from voice assistants and smart displays to AI wearables and automated home devices for every tech lover.',
+    emoji: '🤖',
+    coverImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&h=300&fit=crop&auto=format',
+    faqs: [
+      { q: 'What are the best smart home gifts under $50?', a: 'Smart plugs, smart bulbs, Echo Dot speakers, and Bluetooth trackers are all excellent smart home gifts under $50. They are easy to set up, work with Alexa and Google Home, and immediately make any home feel more intelligent.' },
+      { q: 'What AI gifts are trending in 2026?', a: 'AI wearables like the Oura Ring and Galaxy Ring, AI-powered cameras, smart home hubs with generative AI features, and AI art tools are among the most sought-after gifts in 2026. These represent the next wave of consumer AI going mainstream.' },
+      { q: 'What smart home gifts work for non-techies?', a: 'Smart speakers (Echo Dot, Google Nest Mini), smart plugs, and video doorbells are the most user-friendly smart home gifts. They require minimal setup, are controlled by voice, and provide genuine daily utility with almost no learning curve.' },
+      { q: 'What are good AI gifts for someone who already has smart home devices?', a: 'For someone already in the smart home ecosystem, consider upgrading their experience: a smart display (Echo Show), a Matter-compatible smart home hub, a whole-home Wi-Fi mesh system, or an AI-powered security camera system.' },
+    ],
+  },
 };
 
 const VALID_NICHES = Object.keys(NICHE_META) as Niche[];

@@ -50,7 +50,7 @@ function matchesBudget(p: Product, budget: BudgetTier): boolean {
  */
 export function shuffleMany(
   count: number,
-  opts: { recipient?: Recipient; budget?: BudgetTier | 'any'; tags?: NicheTag[]; catalog?: Product[] }
+  opts: { recipient?: Recipient; budget?: BudgetTier | 'any'; tags?: NicheTag[]; catalog?: Product[]; excludeIds?: string[] }
 ): Product[] {
   const catalog_ = opts.catalog ?? products;
   if (!catalog_.length) return [];
@@ -60,7 +60,10 @@ export function shuffleMany(
     catch { return [] as string[]; }
   })();
 
+  const excludeSet = new Set(opts.excludeIds ?? []);
+
   const matches = (p: Product) => {
+    if (excludeSet.has(p.id)) return false;
     if (opts.recipient && !p.recipients.includes(opts.recipient)) return false;
     if (opts.budget && opts.budget !== 'any' && !matchesBudget(p, opts.budget)) return false;
     if (opts.tags?.length && !opts.tags.some(t => p.tags?.includes(t))) return false;
@@ -68,7 +71,8 @@ export function shuffleMany(
   };
 
   let pool = catalog_.filter(matches);
-  if (!pool.length && opts.recipient) pool = catalog_.filter(p => p.recipients.includes(opts.recipient!));
+  if (!pool.length && opts.recipient) pool = catalog_.filter(p => p.recipients.includes(opts.recipient!) && !excludeSet.has(p.id));
+  if (!pool.length) pool = catalog_.filter(p => !excludeSet.has(p.id));
   if (!pool.length) pool = catalog_;
 
   const unseen = pool.filter(p => !shown.includes(p.id));
@@ -147,10 +151,12 @@ export function shuffleMultiple(
   budget: BudgetTier | 'any',
   occasion?: Occasion | null,
   tags?: NicheTag[],
-  catalog?: Product[]
+  catalog?: Product[],
+  excludeIds?: string[]
 ): Product[] {
   const catalog_ = catalog ?? products;
   const shown = getShownIds();
+  const excludeSet = new Set(excludeIds ?? []);
 
   const fallbacks = recipient ? recipientFallbacks(recipient) : null;
   const base = (p: Product) =>
@@ -185,8 +191,9 @@ export function shuffleMultiple(
   }
 
   // Prefer unseen products, shuffle, take count
-  const unseen = pool.filter((p) => !shown.includes(p.id));
-  const seen = pool.filter((p) => shown.includes(p.id));
+  const filtered = pool.filter((p) => !excludeSet.has(p.id));
+  const unseen = filtered.filter((p) => !shown.includes(p.id));
+  const seen = filtered.filter((p) => shown.includes(p.id));
   const ordered = [...unseen, ...seen];
   // Fisher-Yates shuffle
   for (let i = ordered.length - 1; i > 0; i--) {
