@@ -174,8 +174,6 @@ export default function ShuffleClient() {
   const [isShuffling, setIsShuffling] = useState(false);
   const [wishlistOpen, setWishlistOpen] = useState(false);
   const [wishlistProduct, setWishlistProduct] = useState<Product | null>(null);
-  const [gridKey, setGridKey]         = useState(0);
-
   const pendingRef = useRef<{ rec: Recipient; bud: BudgetTier | 'any'; tags?: NicheTag[] } | null>(null);
 
   // Keep refs so doShuffle can read latest values without them in deps
