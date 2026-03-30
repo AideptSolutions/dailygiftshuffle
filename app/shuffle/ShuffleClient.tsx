@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -34,12 +34,12 @@ const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
 const BUDGETS: { id: BudgetTier | 'any'; label: string; sublabel: string }[] = [
   { id: 'any',       label: 'No Budget',        sublabel: 'Show everything' },
   { id: 'under25',   label: 'Under $25',        sublabel: 'Small & sweet' },
-  { id: '25to50',    label: '$25 â€“ $50',        sublabel: 'Great value' },
-  { id: 'under50',   label: 'All under $50',    sublabel: 'Under $25 & $25â€“$50' },
-  { id: '50to100',   label: '$50 â€“ $100',       sublabel: 'Thoughtful' },
-  { id: '100to150',  label: '$100 â€“ $150',      sublabel: 'Premium' },
+  { id: '25to50',    label: '$25 \u2013 $50',        sublabel: 'Great value' },
+  { id: 'under50',   label: 'All under $50',    sublabel: 'Under $25 & $25\u2013$50' },
+  { id: '50to100',   label: '$50 \u2013 $100',       sublabel: 'Thoughtful' },
+  { id: '100to150',  label: '$100 \u2013 $150',      sublabel: 'Premium' },
   { id: 'under150',  label: 'All under $150',   sublabel: 'Everything up to $150' },
-  { id: '150to250',  label: '$150 â€“ $250',      sublabel: 'Elevated' },
+  { id: '150to250',  label: '$150 \u2013 $250',      sublabel: 'Elevated' },
   { id: '250plus',   label: '$250+',            sublabel: 'Luxury' },
 ];
 
@@ -56,23 +56,52 @@ const OCCASIONS: { id: Occasion; label: string }[] = [
 
 type Step = 'recipient' | 'budget' | 'occasion' | 'result';
 
+function PinIcon({ pinned }: { pinned: boolean }) {
+  return pinned ? (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="#F04E30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z"/>
+    </svg>
+  ) : (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="#9CA3AF" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146zm0 1.042L5.975 5.607a.5.5 0 0 1-.326.279 4.93 4.93 0 0 0-1.232.315l4.383 4.382a4.93 4.93 0 0 0 .315-1.232.5.5 0 0 1 .279-.325l3.843-3.844-.642-.643-3.767 3.767-.47-.47 3.767-3.767-.643-.642zm-6.74 9.92.548-.548 1.445 1.445-.548.549-1.445-1.446z"/>
+    </svg>
+  );
+}
+
 function StarRating({ rating }: { rating: number }) {
   const full = Math.floor(rating);
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-sm">
-      {'â˜…'.repeat(full)}
-      {half && 'Â½'}
-      {'â˜†'.repeat(5 - full - (half ? 1 : 0))}
+      {'\u2605'.repeat(full)}
+      {half && '\u00bd'}
+      {'\u2606'.repeat(5 - full - (half ? 1 : 0))}
     </span>
   );
 }
 
-function ProductCard({ product }: { product: Product; onSave?: () => void; isSaved?: boolean }) {
+function ProductCard({
+  product,
+  pinned,
+  onTogglePin,
+}: {
+  product: Product;
+  onSave?: () => void;
+  isSaved?: boolean;
+  pinned?: boolean;
+  onTogglePin?: () => void;
+}) {
   const { toggle: toggleFavorite, isFavorited } = useFavorites();
   return (
-    <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#F0F4F8' }}>
-      {/* Image â€” fixed compact height */}
+    <div
+      className="rounded-2xl overflow-hidden shadow-sm border hover:shadow-md transition-shadow flex flex-col"
+      style={{
+        background: pinned ? '#FFF8F6' : '#F0F4F8',
+        borderColor: pinned ? '#F04E30' : '#E2E8F0',
+        outline: pinned ? '2px solid #F04E30' : undefined,
+      }}
+    >
+      {/* Image — fixed compact height */}
       <div className="relative w-full h-28">
         <Image
           src={product.image}
@@ -81,6 +110,19 @@ function ProductCard({ product }: { product: Product; onSave?: () => void; isSav
           className="object-contain p-2"
           unoptimized
         />
+        {/* Pin button — top-left */}
+        <button
+          onClick={(e) => { e.stopPropagation(); onTogglePin?.(); }}
+          aria-label={pinned ? 'Unpin this gift' : 'Pin this gift'}
+          title={pinned ? 'Unpin this gift' : 'Pin this gift'}
+          className="absolute top-1.5 left-1.5 w-6 h-6 flex items-center justify-center rounded-full transition-colors z-10"
+          style={{
+            background: pinned ? 'rgba(240,78,48,0.12)' : 'rgba(255,255,255,0.92)',
+          }}
+        >
+          <PinIcon pinned={!!pinned} />
+        </button>
+        {/* Save button — top-right */}
         <button
           onClick={() => toggleFavorite(product)}
           aria-label={isFavorited(product.id) ? 'Remove from picks' : 'Save to My Picks'}
@@ -95,7 +137,7 @@ function ProductCard({ product }: { product: Product; onSave?: () => void; isSav
           {isFavorited(product.id) ? 'Saved' : 'Save'}
         </button>
       </div>
-      {/* Info â€” compact, no description */}
+      {/* Info — compact, no description */}
       <div className="p-3 flex flex-col flex-1">
         <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2">
           {product.name}
@@ -108,7 +150,7 @@ function ProductCard({ product }: { product: Product; onSave?: () => void; isSav
           {product.priceDisplay}
         </p>
       </div>
-      {/* Buy button â€” full width */}
+      {/* Buy button — full width */}
       <a
         href={product.affiliateUrl}
         target="_blank"
@@ -128,12 +170,19 @@ export default function ShuffleClient() {
   const [budget, setBudget]           = useState<BudgetTier | 'any' | null>(null);
   const [occasion, setOccasion]       = useState<Occasion | null>(null);
   const [products, setProducts]       = useState<Product[]>([]);
+  const [pinnedIds, setPinnedIds]     = useState<Set<string>>(new Set());
   const [isShuffling, setIsShuffling] = useState(false);
   const [wishlistOpen, setWishlistOpen] = useState(false);
   const [wishlistProduct, setWishlistProduct] = useState<Product | null>(null);
   const [gridKey, setGridKey]         = useState(0);
 
   const pendingRef = useRef<{ rec: Recipient; bud: BudgetTier | 'any'; tags?: NicheTag[] } | null>(null);
+
+  // Keep refs so doShuffle can read latest values without them in deps
+  const productsRef  = useRef(products);
+  const pinnedIdsRef = useRef(pinnedIds);
+  useEffect(() => { productsRef.current  = products;  }, [products]);
+  useEffect(() => { pinnedIdsRef.current = pinnedIds; }, [pinnedIds]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -166,12 +215,55 @@ export default function ShuffleClient() {
 
   const [count, setCount] = useState(4);
 
+  const togglePin = useCallback((id: string) => {
+    setPinnedIds(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  }, []);
+
   const doShuffle = useCallback(
     (rec: Recipient, bud: BudgetTier | 'any', occ: Occasion | null, tags?: NicheTag[], countOverride?: number) => {
       setIsShuffling(true);
       setTimeout(() => {
-        const picks = shuffleMultiple(countOverride ?? count, rec, bud, occ, tags, catalog.length > 0 ? catalog : undefined);
-        setProducts(picks);
+        const totalCount = countOverride ?? count;
+        const currentProducts = productsRef.current;
+        const currentPinned   = pinnedIdsRef.current;
+
+        // Collect pinned entries with their positions
+        const pinnedEntries: { idx: number; product: Product }[] = [];
+        currentProducts.forEach((p, idx) => {
+          if (currentPinned.has(p.id) && idx < totalCount) {
+            pinnedEntries.push({ idx, product: p });
+          }
+        });
+
+        const newSlotsCount = totalCount - pinnedEntries.length;
+        const excludeIds    = Array.from(currentPinned);
+
+        let newPicks: Product[] = [];
+        if (newSlotsCount > 0) {
+          newPicks = shuffleMultiple(
+            newSlotsCount, rec, bud, occ, tags,
+            catalog.length > 0 ? catalog : undefined,
+            excludeIds
+          );
+        }
+
+        // Build merged array: pinned products stay at their original indices
+        const merged: (Product | undefined)[] = new Array(totalCount).fill(undefined);
+        pinnedEntries.forEach(({ idx, product }) => { merged[idx] = product; });
+
+        // Fill remaining slots with new picks
+        let pickIdx = 0;
+        for (let i = 0; i < totalCount; i++) {
+          if (!merged[i] && pickIdx < newPicks.length) {
+            merged[i] = newPicks[pickIdx++];
+          }
+        }
+
+        setProducts(merged.filter((p): p is Product => p !== undefined));
         setGridKey((k) => k + 1);
         setIsShuffling(false);
       }, 600);
@@ -181,13 +273,19 @@ export default function ShuffleClient() {
 
   const handleCountChange = useCallback((newCount: number) => {
     setCount(newCount);
+    setPinnedIds(new Set());
     if (step === 'result' && recipient && budget) {
       doShuffle(recipient, budget, occasion, undefined, newCount);
     }
   }, [step, recipient, budget, occasion, doShuffle]);
 
-  const handleRecipient = (r: Recipient) => { setRecipient(r); setStep('budget'); };
-  const handleBudget    = (b: BudgetTier | 'any') => {
+  const handleRecipient = (r: Recipient) => {
+    setRecipient(r);
+    setPinnedIds(new Set());
+    setStep('budget');
+  };
+
+  const handleBudget = (b: BudgetTier | 'any') => {
     setBudget(b);
     if (b === 'any' && recipient) {
       doShuffle(recipient, 'any', null);
@@ -211,6 +309,7 @@ export default function ShuffleClient() {
     setBudget(null);
     setOccasion(null);
     setProducts([]);
+    setPinnedIds(new Set());
     clearShownIds();
   };
 
@@ -233,7 +332,7 @@ export default function ShuffleClient() {
                 }`}
                 style={i <= stepIndex ? { background: '#F04E30' } : {}}
               >
-                {i < stepIndex ? 'âœ“' : i + 1}
+                {i < stepIndex ? '\u2713' : i + 1}
               </div>
               <span className={`text-xs hidden sm:block ${i <= stepIndex ? 'font-semibold' : 'text-gray-400'}`}
                 style={i <= stepIndex ? { color: '#F04E30' } : {}}>
@@ -271,8 +370,8 @@ export default function ShuffleClient() {
                   </div>
                   <div className="py-2.5 px-2 font-semibold text-gray-800 text-sm">
                     {r.label}
-                    {r.id === 'myself-her' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">â™€ Her</span>}
-                    {r.id === 'myself-him' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">â™‚ Him</span>}
+                    {r.id === 'myself-her' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">\u2640 Her</span>}
+                    {r.id === 'myself-him' && <span className="block text-[10px] text-gray-400 font-normal leading-none mt-0.5">\u2642 Him</span>}
                   </div>
                 </button>
               ))}
@@ -284,7 +383,7 @@ export default function ShuffleClient() {
         {step === 'budget' && (
           <div>
             <button onClick={() => setStep('recipient')} className="text-sm text-gray-400 hover:text-[#F04E30] mb-6 flex items-center gap-1">
-              â† Back
+              \u2190 Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s your budget?
@@ -313,12 +412,12 @@ export default function ShuffleClient() {
         {step === 'occasion' && (
           <div>
             <button onClick={() => setStep('budget')} className="text-sm text-gray-400 hover:text-[#F04E30] mb-6 flex items-center gap-1">
-              â† Back
+              \u2190 Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s the occasion?
             </h2>
-            <p className="text-center text-gray-500 mb-6">Optional â€” or skip to shuffle immediately</p>
+            <p className="text-center text-gray-500 mb-6">Optional \u2014 or skip to shuffle immediately</p>
             <div className="grid grid-cols-2 gap-3 mb-4">
               {OCCASIONS.map((o) => (
                 <button
@@ -334,17 +433,17 @@ export default function ShuffleClient() {
               onClick={() => handleOccasion(null)}
               className="w-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold py-4 rounded-2xl transition-colors"
             >
-              Skip â€” Just Shuffle
+              Skip \u2014 Just Shuffle
             </button>
           </div>
         )}
 
-        {/* Step 4: Result â€” 4 cards */}
+        {/* Step 4: Result — 4 cards */}
         {step === 'result' && (
           <div>
             <div className="flex items-center justify-between mb-4">
               <button onClick={() => setStep('occasion')} className="text-sm text-gray-400 hover:text-[#F04E30] flex items-center gap-1">
-                â† Back
+                \u2190 Back
               </button>
               <button onClick={handleReset} className="text-sm text-gray-400 hover:text-[#F04E30]">
                 Start Over
@@ -381,6 +480,8 @@ export default function ShuffleClient() {
                     <ProductCard
                       key={product.id}
                       product={product}
+                      pinned={pinnedIds.has(product.id)}
+                      onTogglePin={() => togglePin(product.id)}
                       isSaved={false}
                       onSave={() => {
                         setWishlistProduct(product);
@@ -407,7 +508,7 @@ export default function ShuffleClient() {
                   <AdSlot size="rectangle" />
                 </div>
                 <p className="text-xs text-center text-gray-300 mt-4">
-                  Affiliate links â€” we may earn a commission at no cost to you.
+                  Affiliate links \u2014 we may earn a commission at no cost to you.
                 </p>
               </>
             ) : (
@@ -436,6 +537,3 @@ export default function ShuffleClient() {
     </div>
   );
 }
-
-
-
