@@ -225,48 +225,48 @@ export default function ShuffleClient() {
 
   const doShuffle = useCallback(
     (rec: Recipient, bud: BudgetTier | 'any', occ: Occasion | null, tags?: NicheTag[], countOverride?: number) => {
+      // Capture current pinned state synchronously before async gap
+      const currentProducts = productsRef.current;
+      const currentPinned   = pinnedIdsRef.current;
+      const totalCount      = countOverride ?? count;
+
+      // Collect pinned entries with their positions
+      const pinnedEntries: { idx: number; product: Product }[] = [];
+      currentProducts.forEach((p, idx) => {
+        if (currentPinned.has(p.id) && idx < totalCount) {
+          pinnedEntries.push({ idx, product: p });
+        }
+      });
+
+      const newSlotsCount = totalCount - pinnedEntries.length;
+      const excludeIds    = Array.from(currentPinned);
+
+      let newPicks: Product[] = [];
+      if (newSlotsCount > 0) {
+        newPicks = shuffleMultiple(
+          newSlotsCount, rec, bud, occ, tags,
+          catalog.length > 0 ? catalog : undefined,
+          excludeIds
+        );
+      }
+
+      // Build merged array: pinned products stay at their original indices
+      const merged: (Product | undefined)[] = new Array(totalCount).fill(undefined);
+      pinnedEntries.forEach(({ idx, product }) => { merged[idx] = product; });
+
+      // Fill remaining slots with new picks
+      let pickIdx = 0;
+      for (let i = 0; i < totalCount; i++) {
+        if (!merged[i] && pickIdx < newPicks.length) {
+          merged[i] = newPicks[pickIdx++];
+        }
+      }
+
       setIsShuffling(true);
       setTimeout(() => {
-        const totalCount = countOverride ?? count;
-        const currentProducts = productsRef.current;
-        const currentPinned   = pinnedIdsRef.current;
-
-        // Collect pinned entries with their positions
-        const pinnedEntries: { idx: number; product: Product }[] = [];
-        currentProducts.forEach((p, idx) => {
-          if (currentPinned.has(p.id) && idx < totalCount) {
-            pinnedEntries.push({ idx, product: p });
-          }
-        });
-
-        const newSlotsCount = totalCount - pinnedEntries.length;
-        const excludeIds    = Array.from(currentPinned);
-
-        let newPicks: Product[] = [];
-        if (newSlotsCount > 0) {
-          newPicks = shuffleMultiple(
-            newSlotsCount, rec, bud, occ, tags,
-            catalog.length > 0 ? catalog : undefined,
-            excludeIds
-          );
-        }
-
-        // Build merged array: pinned products stay at their original indices
-        const merged: (Product | undefined)[] = new Array(totalCount).fill(undefined);
-        pinnedEntries.forEach(({ idx, product }) => { merged[idx] = product; });
-
-        // Fill remaining slots with new picks
-        let pickIdx = 0;
-        for (let i = 0; i < totalCount; i++) {
-          if (!merged[i] && pickIdx < newPicks.length) {
-            merged[i] = newPicks[pickIdx++];
-          }
-        }
-
         setProducts(merged.filter((p): p is Product => p !== undefined));
-        setGridKey((k) => k + 1);
         setIsShuffling(false);
-      }, 600);
+      }, 400);
     },
     [catalog, count]
   );
@@ -475,7 +475,7 @@ export default function ShuffleClient() {
               </div>
             ) : products.length > 0 ? (
               <>
-                <div key={gridKey} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                   {products.map((product) => (
                     <ProductCard
                       key={product.id}
