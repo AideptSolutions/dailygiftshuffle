@@ -472,22 +472,37 @@ export default function ShuffleClient() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
                   {products.map((product) => {
                     const isPinned = pinnedIds.has(product.id);
+                    // Pinned tiles: no wrapper, no animation code at all
+                    if (isPinned) {
+                      return (
+                        <ProductCard
+                          key={product.id}
+                          product={product}
+                          pinned={true}
+                          onTogglePin={() => togglePin(product.id)}
+                          isSaved={false}
+                          onSave={() => { setWishlistProduct(product); setWishlistOpen(true); }}
+                        />
+                      );
+                    }
+                    // Unpinned tiles: fade + scale during shuffle
                     return (
-                    <div
-                      key={product.id}
-                      className={!isPinned && isShuffling ? 'opacity-0 scale-95 transition-all duration-300' : 'opacity-100 scale-100 transition-all duration-300'}
-                    >
-                      <ProductCard
-                        product={product}
-                        pinned={isPinned}
-                        onTogglePin={() => togglePin(product.id)}
-                        isSaved={false}
-                        onSave={() => {
-                          setWishlistProduct(product);
-                          setWishlistOpen(true);
+                      <div
+                        key={product.id}
+                        style={{
+                          opacity: isShuffling ? 0 : 1,
+                          transform: isShuffling ? 'scale(0.95)' : 'scale(1)',
+                          transition: 'opacity 300ms ease, transform 300ms ease',
                         }}
-                      />
-                    </div>
+                      >
+                        <ProductCard
+                          product={product}
+                          pinned={false}
+                          onTogglePin={() => togglePin(product.id)}
+                          isSaved={false}
+                          onSave={() => { setWishlistProduct(product); setWishlistOpen(true); }}
+                        />
+                      </div>
                     );
                   })}
                 </div>
