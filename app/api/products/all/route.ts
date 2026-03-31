@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
-import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
+import { getCategoryImageUrl } from '@/lib/categoryImages';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,9 +13,7 @@ export async function GET() {
     description: p.description,
     price: p.price,
     priceDisplay: p.priceDisplay,
-    image: isAmazonCdnUrl(p.image ?? '')
-      ? getCategoryImageUrl(p.tags ?? [])
-      : (p.image || getCategoryImageUrl(p.tags ?? [])),
+    image: p.image || getCategoryImageUrl(p.tags ?? []),
     rating: p.rating,
     reviewCount: p.reviewCount,
     affiliateUrl: p.affiliateUrl,

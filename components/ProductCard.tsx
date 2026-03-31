@@ -4,6 +4,7 @@
  * Used on category pages, gift-guide pages, and any other product grid.
  */
 import Image from 'next/image';
+import { useState } from 'react';
 
 function PinIcon({ pinned }: { pinned: boolean }) {
   return pinned ? (
@@ -50,16 +51,18 @@ export default function ProductCard({
   pinned?: boolean;
   onTogglePin?: () => void;
 }) {
+  const [imgSrc, setImgSrc] = useState(product.image);
   return (
     <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#F0F4F8' }}>
       {/* Image â€" fixed compact height, matches landing page card size */}
       <div className="relative w-full h-28">
         <Image
-          src={product.image}
+          src={imgSrc}
           alt={product.name}
           fill
           className="object-contain p-2"
           unoptimized
+          onError={() => setImgSrc('/img/categories/gift.svg')}
         />
         {onTogglePin && (
           <button

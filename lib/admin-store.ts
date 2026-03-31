@@ -65,7 +65,7 @@ function loadFromJson(): AdminProduct[] {
   }
 }
 
-async function seedFromJson(): Promise<AdminProduct[]> {
+export async function seedFromJson(): Promise<AdminProduct[]> {
   const products = loadFromJson();
   if (products.length > 0) {
     try {
