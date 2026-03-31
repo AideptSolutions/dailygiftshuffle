@@ -1,34 +1,41 @@
 /**
  * patch-product-images.js
- * Updates products.ts image URLs to point to generated images.
+ * Updates products.ts and products-catalog.ts image URLs to point to generated images.
  * Run after generate-product-images.js completes.
  */
 const fs = require('fs');
 const path = require('path');
 
 const OUTPUT_DIR = path.join(__dirname, '../public/images/products');
-const PRODUCTS_FILE = path.join(__dirname, '../data/products.ts');
+const FILES_TO_PATCH = [
+  path.join(__dirname, '../data/products.ts'),
+  path.join(__dirname, '../data/products-catalog.ts'),
+];
 
-const files = fs.readdirSync(OUTPUT_DIR).filter(f => f.endsWith('.jpg'));
-console.log('Found', files.length, 'generated images');
+const imageFiles = fs.readdirSync(OUTPUT_DIR).filter(f => f.match(/\.(jpg|png)$/));
+console.log('Found', imageFiles.length, 'generated images');
 
-let content = fs.readFileSync(PRODUCTS_FILE, 'utf8');
-let patched = 0;
+for (const filePath of FILES_TO_PATCH) {
+  if (!fs.existsSync(filePath)) { console.log('Skipping (not found):', filePath); continue; }
+  let content = fs.readFileSync(filePath, 'utf8');
+  let patched = 0;
 
-files.forEach(file => {
-  const id = file.replace('.jpg', '');
-  const newUrl = '/images/products/' + file;
-  // Replace the image field for this product ID
-  const regex = new RegExp(
-    '(id:\\s*\'' + id.replace(/-/g, '\\-') + '\'[\\s\\S]*?image:\\s*\')([^\']+)(\')',
-    'g'
-  );
-  const newContent = content.replace(regex, '$1' + newUrl + '$3');
-  if (newContent !== content) {
-    content = newContent;
-    patched++;
+  for (const file of imageFiles) {
+    const id = file.replace(/\.(jpg|png)$/, '');
+    const newUrl = '/images/products/' + file;
+    // Replace img('...') helper calls and direct placehold.co URLs for this product
+    // Strategy: find the product block by id, then replace its image field
+    const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Match: id:'xxx' ... image:'<anything>' (non-greedy, within reasonable distance)
+    const re = new RegExp(`(id:\\s*'${escaped}'[^}]{0,500}?image:\\s*')([^']+)(')`, 'gs');
+    const updated = content.replace(re, (match, pre, oldUrl, post) => {
+      patched++;
+      return pre + newUrl + post;
+    });
+    content = updated;
   }
-});
 
-fs.writeFileSync(PRODUCTS_FILE, content);
-console.log('Patched', patched, 'product image URLs in products.ts');
+  fs.writeFileSync(filePath, content);
+  const filename = path.basename(filePath);
+  console.log(`Patched ${patched} URLs in ${filename}`);
+}
