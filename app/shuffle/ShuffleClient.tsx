@@ -467,33 +467,37 @@ export default function ShuffleClient() {
             </div>
 
             <div aria-live="polite" aria-atomic="true">
-            {isShuffling ? (
-              <div className="bg-white rounded-3xl shadow-lg p-12 text-center">
-                <p className="text-gray-500 font-medium">Finding {count} perfect gifts...</p>
-              </div>
-            ) : products.length > 0 ? (
+            {products.length > 0 ? (
               <>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-                  {products.map((product) => (
-                    <ProductCard
+                  {products.map((product) => {
+                    const isPinned = pinnedIds.has(product.id);
+                    return (
+                    <div
                       key={product.id}
-                      product={product}
-                      pinned={pinnedIds.has(product.id)}
-                      onTogglePin={() => togglePin(product.id)}
-                      isSaved={false}
-                      onSave={() => {
-                        setWishlistProduct(product);
-                        setWishlistOpen(true);
-                      }}
-                    />
-                  ))}
+                      className={!isPinned && isShuffling ? 'opacity-0 scale-95 transition-all duration-300' : 'opacity-100 scale-100 transition-all duration-300'}
+                    >
+                      <ProductCard
+                        product={product}
+                        pinned={isPinned}
+                        onTogglePin={() => togglePin(product.id)}
+                        isSaved={false}
+                        onSave={() => {
+                          setWishlistProduct(product);
+                          setWishlistOpen(true);
+                        }}
+                      />
+                    </div>
+                    );
+                  })}
                 </div>
                 <div className="flex flex-col items-center gap-2 mb-6">
                   <button
                     onClick={handleShuffleAgain}
-                    className="btn-shuffle font-bold py-3 rounded-2xl text-sm w-full"
+                    disabled={isShuffling}
+                    className="btn-shuffle font-bold py-3 rounded-2xl text-sm w-full disabled:opacity-70"
                   >
-                    Shuffle
+                    {isShuffling ? 'Shuffling...' : 'Shuffle'}
                   </button>
                   <button
                     onClick={handleReset}
