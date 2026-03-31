@@ -470,26 +470,15 @@ export default function ShuffleClient() {
             {products.length > 0 ? (
               <>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-                  {products.map((product) => {
+                  {products.map((product, slotIdx) => {
                     const isPinned = pinnedIds.has(product.id);
-                    // Pinned tiles: no wrapper, no animation code at all
-                    if (isPinned) {
-                      return (
-                        <ProductCard
-                          key={product.id}
-                          product={product}
-                          pinned={true}
-                          onTogglePin={() => togglePin(product.id)}
-                          isSaved={false}
-                          onSave={() => { setWishlistProduct(product); setWishlistOpen(true); }}
-                        />
-                      );
-                    }
-                    // Unpinned tiles: fade + scale during shuffle
+                    // Use slot index as key for pinned tiles so React never remounts them
+                    // Use product.id for unpinned tiles so they get fresh mount animations
+                    const tileKey = isPinned ? `slot-${slotIdx}` : product.id;
                     return (
                       <div
-                        key={product.id}
-                        style={{
+                        key={tileKey}
+                        style={isPinned ? {} : {
                           opacity: isShuffling ? 0 : 1,
                           transform: isShuffling ? 'scale(0.95)' : 'scale(1)',
                           transition: 'opacity 300ms ease, transform 300ms ease',
@@ -497,7 +486,7 @@ export default function ShuffleClient() {
                       >
                         <ProductCard
                           product={product}
-                          pinned={false}
+                          pinned={isPinned}
                           onTogglePin={() => togglePin(product.id)}
                           isSaved={false}
                           onSave={() => { setWishlistProduct(product); setWishlistOpen(true); }}
