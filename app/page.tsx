@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import JsonLd from '@/components/JsonLd';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 import GiftCupAnimation from '@/components/GiftCupAnimation';
+import GiftPackageCollections from '@/components/GiftPackageCollections';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
 
@@ -181,6 +182,9 @@ export default async function HomePage() {
           <HomeFeaturedSection initialProducts={products} />
         </div>
       </section>
+
+      {/* Gift Package Collections */}
+      <GiftPackageCollections />
 
       {/* How It Works */}
       <section className="py-16 px-4" style={{ background: '#FFF3EE' }}>
