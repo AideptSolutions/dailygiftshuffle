@@ -33,6 +33,9 @@ export default function AdminPage() {
   const [editDraft, setEditDraft] = useState<Partial<AdminProduct>>({});
   const [saving, setSaving] = useState(false);
   const [statusMsg, setStatusMsg] = useState('');
+  const [generatingImage, setGeneratingImage] = useState(false);
+  const [imagePrompt, setImagePrompt] = useState('');
+  const [showPromptInput, setShowPromptInput] = useState(false);
 
   const loadProducts = useCallback(async () => {
     const r = await fetch('/api/admin/products');
@@ -82,7 +85,29 @@ export default function AdminPage() {
     setEditDraft({ ...p });
   }
 
-  function cancelEdit() { setEditingId(null); setEditDraft({}); }
+  function cancelEdit() { setEditingId(null); setEditDraft({}); setShowPromptInput(false); setImagePrompt(''); }
+
+  async function generateImage() {
+    if (!editingId) return;
+    setGeneratingImage(true);
+    try {
+      const r = await fetch('/api/admin/generate-image', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: imagePrompt, productId: editingId }),
+      });
+      if (r.ok) {
+        const { imageUrl } = await r.json();
+        setEditDraft(prev => ({ ...prev, image: imageUrl }));
+        setShowPromptInput(false);
+        setStatusMsg('Image generated!');
+      } else {
+        setStatusMsg('Image generation failed.');
+      }
+    } finally {
+      setGeneratingImage(false);
+    }
+  }
 
   async function saveEdit() {
     if (!editingId) return;
@@ -350,6 +375,60 @@ export default function AdminPage() {
                       <textarea value={editDraft.description || ''} onChange={e => setEditDraft({...editDraft, description: e.target.value})} rows={3} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
                     </div>
 
+                    {/* Image section */}
+                    <div className="space-y-3">
+                      <label className="block text-xs font-semibold text-gray-500">Image</label>
+                      <div className="flex items-start gap-4">
+                        {editDraft.image ? (
+                          <img src={editDraft.image} alt="preview" className="w-[120px] h-[120px] rounded-lg object-cover border border-gray-200 shrink-0" />
+                        ) : (
+                          <div className="w-[120px] h-[120px] rounded-lg bg-gray-100 flex items-center justify-center border border-gray-200 shrink-0 text-3xl">🎁</div>
+                        )}
+                        <div className="flex-1 space-y-2">
+                          <input
+                            value={editDraft.image || ''}
+                            onChange={e => setEditDraft({ ...editDraft, image: e.target.value })}
+                            placeholder="https://... or /img/products/..."
+                            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400 font-mono"
+                          />
+                          {!showPromptInput ? (
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setImagePrompt(`Product photo of ${editDraft.name || 'product'} on a clean white background, editorial style`);
+                                setShowPromptInput(true);
+                              }}
+                              className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-purple-300 text-purple-600 hover:bg-purple-50 transition-colors"
+                            >
+                              ✨ Generate with AI
+                            </button>
+                          ) : (
+                            <div className="space-y-2">
+                              <textarea
+                                value={imagePrompt}
+                                onChange={e => setImagePrompt(e.target.value)}
+                                rows={2}
+                                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none"
+                              />
+                              <div className="flex items-center gap-2">
+                                <button
+                                  type="button"
+                                  onClick={generateImage}
+                                  disabled={generatingImage}
+                                  className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white transition-colors flex items-center gap-1.5"
+                                >
+                                  {generatingImage ? (
+                                    <><span className="inline-block w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" /> Generating...</>
+                                  ) : 'Generate'}
+                                </button>
+                                <button type="button" onClick={() => setShowPromptInput(false)} className="text-xs text-gray-400 hover:text-gray-600">Cancel</button>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
                     <div>
                       <label className="block text-xs font-semibold text-gray-500 mb-2">Recipients</label>
                       <div className="flex flex-wrap gap-2">
@@ -392,6 +471,12 @@ export default function AdminPage() {
                 ) : (
                   /* ── Row view ── */
                   <div className="flex items-center gap-4 px-5 py-4">
+                    {/* Product image */}
+                    {p.image ? (
+                      <img src={p.image} alt={p.name} className="w-16 h-16 rounded-lg object-cover shrink-0 border border-gray-100" />
+                    ) : (
+                      <div className="w-16 h-16 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200 text-2xl">🎁</div>
+                    )}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
                         <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${p.status === 'published' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
@@ -404,6 +489,13 @@ export default function AdminPage() {
                       <p className="text-xs text-gray-400 truncate">
                         {p.priceDisplay || 'no price'} &bull; {p.recipients.join(', ') || 'no recipients'} &bull; {p.budgetTier}
                       </p>
+                      {p.tags && p.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1 mt-1.5">
+                          {p.tags.map(tag => (
+                            <span key={tag} className="bg-blue-50 text-blue-600 text-xs px-2 py-0.5 rounded-full border border-blue-200">{tag}</span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <button onClick={() => togglePublish(p)} className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-colors ${p.status === 'published' ? 'border-gray-300 text-gray-500 hover:border-red-300 hover:text-red-500' : 'border-green-400 text-green-600 hover:bg-green-50'}`}>
