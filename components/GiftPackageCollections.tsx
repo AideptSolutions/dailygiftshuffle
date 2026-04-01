@@ -69,6 +69,30 @@ const categories = [
     alt: 'Beauty and self-care gift basket with skincare, bath, and wellness items',
     fallbackColor: 'from-fuchsia-400 to-pink-600',
   },
+  {
+    name: 'Baby Shower',
+    tagline: 'For the new arrival',
+    href: '/category/baby-shower',
+    image: '/img/gift-baskets/baby-shower.jpg',
+    alt: 'Baby shower gift basket with swaddle, toys, and accessories',
+    fallbackColor: 'from-yellow-200 to-pink-300',
+  },
+  {
+    name: 'Wedding Gifts',
+    tagline: 'Celebrate their love',
+    href: '/category/wedding',
+    image: '/img/gift-baskets/wedding.jpg',
+    alt: 'Wedding gift basket with champagne flutes and keepsakes',
+    fallbackColor: 'from-rose-200 to-pink-400',
+  },
+  {
+    name: 'Travel',
+    tagline: 'Pack smarter, gift better',
+    href: '/category/travel',
+    image: '/img/gift-baskets/travel.jpg',
+    alt: 'Travel gift basket with packing cubes and travel accessories',
+    fallbackColor: 'from-sky-400 to-blue-600',
+  },
 ];
 
 const itemListSchema = {
@@ -76,7 +100,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Package Collections',
   description:
-    'Curated gift baskets by category — gaming, tech, fitness, kitchen, outdoors, home, pets, and beauty.',
+    'Curated gift baskets by category — gaming, tech, fitness, kitchen, outdoors, home, pets, beauty, baby shower, wedding, and travel.',
   itemListElement: categories.map((cat, i) => ({
     '@type': 'ListItem',
     position: i + 1,

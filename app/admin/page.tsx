@@ -15,7 +15,7 @@ const ALL_BUDGETS: { id: BudgetTier; label: string }[] = [
   { id: '150to250',  label: '$150–$250' },
   { id: '250plus',   label: '$250+' },
 ];
-const ALL_TAGS: NicheTag[] = ['tech','diy-tools','home','gaming','sports','gardening','finance','fitness','parenting','office','luxury','hobby','kitchen','pets','kids','car-accessories','outdoors'];
+const ALL_TAGS: NicheTag[] = ['tech','diy-tools','home','gaming','sports','gardening','finance','fitness','parenting','office','luxury','hobby','kitchen','pets','kids','car-accessories','outdoors','travel','beauty','ai-smart-home','baby-shower','wedding'];
 
 export default function AdminPage() {
   const [authed, setAuthed]     = useState(false);

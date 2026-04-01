@@ -101,6 +101,27 @@ const giftGuides = [
     title: 'Gifts for Camping and the Outdoors',
     desc: 'Gear that actually gets used on every trip, from day hikes to base camp.',
   },
+  {
+    href: '/category/baby-shower',
+    image: '/img/gift-guides/baby-shower.jpg',
+    alt: 'Baby shower gift ideas — swaddle, plush toys, and accessories',
+    title: 'Baby Shower Gifts',
+    desc: 'From practical must-haves to heartfelt keepsakes for the new arrival.',
+  },
+  {
+    href: '/category/wedding',
+    image: '/img/gift-guides/wedding.jpg',
+    alt: 'Wedding gift ideas — champagne, keepsakes, and couples gifts',
+    title: 'Wedding Gifts',
+    desc: 'Thoughtful picks for the happy couple — registry hits and beyond.',
+  },
+  {
+    href: '/category/travel',
+    image: '/img/gift-guides/travel.jpg',
+    alt: 'Travel gift ideas — passport holder, earbuds, and luggage',
+    title: 'Travel Gifts',
+    desc: 'For the frequent flyer or adventure seeker on your list.',
+  },
 ];
 
 export default async function HomePage() {

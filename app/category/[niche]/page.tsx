@@ -279,6 +279,32 @@ const NICHE_META: Record<Niche, NicheMeta> = {
       { q: 'What are good beauty gifts for a teenager?', a: 'Teens love TikTok-famous skincare (CeraVe, The Ordinary), nail art kits, hair accessories, face masks, and mini perfume sets. Keep it fun, trendy, and skin-safe — avoid anything too harsh for young skin.' },
     ],
   },
+  'baby-shower': {
+    title: 'Best Baby Shower Gifts 2026',
+    heading: 'Best Baby Shower Gifts',
+    description: 'Find the perfect baby shower gift — from swaddle sets and baby monitors to postpartum care kits and keepsake boxes.',
+    emoji: '👶',
+    coverImage: '/img/category-heroes/baby-shower.jpg',
+    faqs: [
+      { q: 'What are the best baby shower gifts for new moms?', a: 'New moms appreciate practical gifts they truly need: a white noise machine, premium swaddle blankets, a postpartum recovery kit, and a comfortable baby carrier top the list. The best gifts address real needs in the first weeks home.' },
+      { q: 'What baby shower gifts stand out from the rest?', a: 'Personalized keepsakes like a fingerprint frame, a custom name blanket, or a handprint kit stand out because they are sentimental and unique. Pairing a practical item with a keepsake creates a gift the family will always remember.' },
+      { q: 'What is a good baby shower gift under $50?', a: 'Swaddle blanket sets, milestone card decks, baby bath kits, soft plush toys with matching books, and postpartum essentials kits are all thoughtful baby shower gifts under $50 that new parents genuinely need and use.' },
+      { q: 'Should you buy from the baby registry or give something else?', a: 'Registry items are always a safe bet because parents chose them deliberately. However, off-registry gifts like premium swaddles, a keepsake box, or a self-care kit for mom are also deeply appreciated — especially when the registry is already mostly fulfilled.' },
+    ],
+  },
+  wedding: {
+    title: 'Best Wedding Gifts 2026',
+    heading: 'Best Wedding Gifts',
+    description: 'Find the perfect wedding gift — from personalized keepsakes and registry picks to honeymoon experiences and luxury home items.',
+    emoji: '💍',
+    coverImage: '/img/category-heroes/wedding.jpg',
+    faqs: [
+      { q: 'What are the best wedding gifts for a couple?', a: 'The best wedding gifts are either from the registry (which guarantees they want it) or a meaningful upgrade to something on the registry. Personalized items like an engraved cutting board, a custom star map, or monogrammed towels add a sentimental touch no registry item can match.' },
+      { q: 'How much should you spend on a wedding gift?', a: 'A general guide: $50–$100 for coworkers or distant friends, $100–$150 for close friends or family, and $150–$300+ for very close relationships. The most important factor is thoughtfulness — a well-chosen $75 gift lands better than a generic $200 one.' },
+      { q: 'What are unique wedding gifts that stand out?', a: 'A custom star map of their wedding night sky, a first-dance song portrait print, a personalized recipe book, an engraved champagne set, or a contribution to their honeymoon fund are all wedding gifts that go beyond the registry and create lasting memories.' },
+      { q: 'What wedding gifts do couples actually use?', a: 'Quality kitchen items (especially Le Creuset, KitchenAid, or Vitamix), luxurious bedding sets, personalized barware, and travel accessories for the honeymoon are among the most-used wedding gifts. Practical luxury items that couples would not splurge on themselves are always a win.' },
+    ],
+  },
   'ai-smart-home': {
     title: 'Best AI & Smart Home Gifts 2026',
     heading: 'Best AI & Smart Home Gifts',

@@ -1,7 +1,7 @@
 export type BudgetTier = 'under25' | '25to50' | 'under50' | '50to100' | '100to150' | 'under150' | '150to250' | '250plus';
 export type Recipient = 'her' | 'him' | 'mom' | 'dad' | 'brother' | 'sister' | 'grandparents' | 'teens' | 'kids' | 'baby' | 'couples' | 'friends' | 'pets' | 'coworker' | 'employees' | 'myself' | 'myself-her' | 'myself-him' | 'streamers';
 export type Occasion = 'birthday' | 'anniversary' | 'holiday' | 'valentines' | 'mothersFathers' | 'weddingHousewarming' | 'graduation' | 'justBecause';
-export type NicheTag = 'tech' | 'diy-tools' | 'home' | 'gaming' | 'sports' | 'gardening' | 'finance' | 'fitness' | 'parenting' | 'office' | 'luxury' | 'hobby' | 'kitchen' | 'pets' | 'kids' | 'car-accessories' | 'outdoors' | 'travel' | 'beauty' | 'ai-smart-home';
+export type NicheTag = 'tech' | 'diy-tools' | 'home' | 'gaming' | 'sports' | 'gardening' | 'finance' | 'fitness' | 'parenting' | 'office' | 'luxury' | 'hobby' | 'kitchen' | 'pets' | 'kids' | 'car-accessories' | 'outdoors' | 'travel' | 'beauty' | 'ai-smart-home' | 'baby-shower' | 'wedding';
 
 export interface Product {
   id: string;
