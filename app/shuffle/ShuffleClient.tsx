@@ -34,12 +34,12 @@ const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
 const BUDGETS: { id: BudgetTier | 'any'; label: string; sublabel: string }[] = [
   { id: 'any',       label: 'No Budget',        sublabel: 'Show everything' },
   { id: 'under25',   label: 'Under $25',        sublabel: 'Small & sweet' },
-  { id: '25to50',    label: '$25 \u2013 $50',        sublabel: 'Great value' },
-  { id: 'under50',   label: 'All under $50',    sublabel: 'Under $25 & $25\u2013$50' },
-  { id: '50to100',   label: '$50 \u2013 $100',       sublabel: 'Thoughtful' },
-  { id: '100to150',  label: '$100 \u2013 $150',      sublabel: 'Premium' },
+  { id: '25to50',    label: '$25 – $50',        sublabel: 'Great value' },
+  { id: 'under50',   label: 'All under $50',    sublabel: 'Under $25 & $25–$50' },
+  { id: '50to100',   label: '$50 – $100',       sublabel: 'Thoughtful' },
+  { id: '100to150',  label: '$100 – $150',      sublabel: 'Premium' },
   { id: 'under150',  label: 'All under $150',   sublabel: 'Everything up to $150' },
-  { id: '150to250',  label: '$150 \u2013 $250',      sublabel: 'Elevated' },
+  { id: '150to250',  label: '$150 – $250',      sublabel: 'Elevated' },
   { id: '250plus',   label: '$250+',            sublabel: 'Luxury' },
 ];
 
@@ -381,7 +381,7 @@ export default function ShuffleClient() {
         {step === 'budget' && (
           <div>
             <button onClick={() => setStep('recipient')} className="text-sm text-gray-400 hover:text-[#F04E30] mb-6 flex items-center gap-1">
-              \u2190 Back
+              ← Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s your budget?
@@ -410,12 +410,12 @@ export default function ShuffleClient() {
         {step === 'occasion' && (
           <div>
             <button onClick={() => setStep('budget')} className="text-sm text-gray-400 hover:text-[#F04E30] mb-6 flex items-center gap-1">
-              \u2190 Back
+              ← Back
             </button>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s the occasion?
             </h2>
-            <p className="text-center text-gray-500 mb-6">Optional \u2014 or skip to shuffle immediately</p>
+            <p className="text-center text-gray-500 mb-6">Optional — or skip to shuffle immediately</p>
             <div className="grid grid-cols-2 gap-3 mb-4">
               {OCCASIONS.map((o) => (
                 <button
@@ -431,7 +431,7 @@ export default function ShuffleClient() {
               onClick={() => handleOccasion(null)}
               className="w-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold py-4 rounded-2xl transition-colors"
             >
-              Skip \u2014 Just Shuffle
+              Skip — Just Shuffle
             </button>
           </div>
         )}
@@ -441,7 +441,7 @@ export default function ShuffleClient() {
           <div>
             <div className="flex items-center justify-between mb-4">
               <button onClick={() => setStep('occasion')} className="text-sm text-gray-400 hover:text-[#F04E30] flex items-center gap-1">
-                \u2190 Back
+                ← Back
               </button>
               <button onClick={handleReset} className="text-sm text-gray-400 hover:text-[#F04E30]">
                 Start Over
@@ -514,7 +514,7 @@ export default function ShuffleClient() {
                   <AdSlot size="rectangle" />
                 </div>
                 <p className="text-xs text-center text-gray-300 mt-4">
-                  Affiliate links \u2014 we may earn a commission at no cost to you.
+                  Affiliate links — we may earn a commission at no cost to you.
                 </p>
               </>
             ) : (
