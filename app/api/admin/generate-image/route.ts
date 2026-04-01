@@ -1,10 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { readAdminProducts, writeAdminProducts } from '@/lib/admin-store';
-import fs from 'fs/promises';
-import path from 'path';
 
 function checkAuth(req: NextRequest): boolean {
   return req.cookies.get('admin-auth')?.value === 'true';
+}
+
+// Try models in order — fall back if deprecated
+const MODELS = [
+  'gemini-2.5-flash-preview-05-20',
+  'gemini-2.0-flash-exp',
+  'gemini-2.0-flash-preview-image-generation',
+];
+
+async function generateImage(prompt: string, apiKey: string): Promise<string | null> {
+  for (const model of MODELS) {
+    try {
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },
+          }),
+        }
+      );
+
+      if (!res.ok) continue;
+
+      const data = await res.json();
+      const parts = data?.candidates?.[0]?.content?.parts ?? [];
+      const imgPart = parts.find((p: { inlineData?: { data: string; mimeType: string } }) => p.inlineData?.data);
+      if (imgPart?.inlineData?.data) {
+        const mime = imgPart.inlineData.mimeType || 'image/png';
+        return `data:${mime};base64,${imgPart.inlineData.data}`;
+      }
+    } catch {
+      continue;
+    }
+  }
+  return null;
 }
 
 export async function POST(req: NextRequest) {
@@ -18,47 +54,18 @@ export async function POST(req: NextRequest) {
   const apiKey = process.env.GOOGLE_AI_API_KEY;
   if (!apiKey) return NextResponse.json({ error: 'GOOGLE_AI_API_KEY not set' }, { status: 500 });
 
-  const geminiRes = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-preview-image-generation:generateContent?key=${apiKey}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { responseModalities: ['TEXT', 'IMAGE'] },
-      }),
-    }
-  );
-
-  if (!geminiRes.ok) {
-    const errText = await geminiRes.text();
-    return NextResponse.json({ error: 'Gemini API error', details: errText }, { status: 502 });
+  const dataUrl = await generateImage(prompt, apiKey);
+  if (!dataUrl) {
+    return NextResponse.json({ error: 'No image returned — all Gemini models failed or returned no image' }, { status: 502 });
   }
 
-  const geminiData = await geminiRes.json();
-  const parts = geminiData?.candidates?.[0]?.content?.parts ?? [];
-  const imagePart = parts.find((p: { inlineData?: { data: string; mimeType: string } }) => p.inlineData?.data);
-  if (!imagePart) {
-    return NextResponse.json({ error: 'No image returned by Gemini' }, { status: 502 });
-  }
-
-  const base64Data = imagePart.inlineData.data;
-  const imageBuffer = Buffer.from(base64Data, 'base64');
-
-  const productsDir = path.join(process.cwd(), 'public', 'img', 'products');
-  await fs.mkdir(productsDir, { recursive: true });
-  const filename = `${productId}.jpg`;
-  await fs.writeFile(path.join(productsDir, filename), imageBuffer);
-
-  const imageUrl = `/img/products/${filename}`;
-
-  // Update product image in store
+  // Save the data URL as the product image in Redis so it persists
   const all = await readAdminProducts();
   const idx = all.findIndex(p => p.id === productId);
   if (idx !== -1) {
-    all[idx] = { ...all[idx], image: imageUrl, updatedAt: new Date().toISOString() };
+    all[idx] = { ...all[idx], image: dataUrl, updatedAt: new Date().toISOString() };
     await writeAdminProducts(all);
   }
 
-  return NextResponse.json({ imageUrl });
+  return NextResponse.json({ imageUrl: dataUrl });
 }
