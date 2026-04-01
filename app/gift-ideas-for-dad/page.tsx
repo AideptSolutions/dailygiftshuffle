@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://thegiftshuffle.com/gift-ideas-for-dad',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Dad%20%E2%80%94%2025%20Unique%20Picks%20He'll%20Actually%20Use%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Dad%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },

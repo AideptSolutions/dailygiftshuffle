@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://thegiftshuffle.com/fathers-day-gifts',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Father's%20Day%20Gifts%20%E2%80%94%20Best%20Picks%20for%20Dad%20in%202025%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Father%27s%20Day%20Gifts%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },

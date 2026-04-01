@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     url: 'https://thegiftshuffle.com/gifts-for-camping-and-outdoors',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20for%20Camping%20and%20the%20Outdoors%20%E2%80%94%20Top%20Picks%20for%20Every%20Adventurer%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20for%20Camping%20and%20Outdoors%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },

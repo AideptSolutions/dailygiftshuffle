@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://thegiftshuffle.com/gift-ideas-for-grandparents',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Grandparents%20%E2%80%94%20Thoughtful%20Gifts%20They'll%20Love%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Grandparents%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },

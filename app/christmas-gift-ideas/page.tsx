@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://thegiftshuffle.com/christmas-gift-ideas',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Christmas%20Gift%20Ideas%202025%20%E2%80%94%20Top%20Picks%20for%20Everyone%20on%20Your%20List%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Christmas%20Gift%20Ideas%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },

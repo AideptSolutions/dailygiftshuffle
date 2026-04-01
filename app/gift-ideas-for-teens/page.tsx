@@ -25,11 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-teens',
     images: [
-      {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Teens%20%E2%80%94%20Trending%20Gifts%20They'll%20Actually%20Want%20%7C%20TheGiftShuffle',
-        width: 1200,
-        height: 630,
-      },
+      { url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Teens%20%7C%20TheGiftShuffle', width: 1200, height: 630 },
     ],
   },
   alternates: {

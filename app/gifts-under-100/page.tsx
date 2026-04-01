@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://thegiftshuffle.com/gifts-under-100',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%24100%20%E2%80%94%20Premium%20Picks%20Without%20the%20Premium%20Price%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%24100%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },
