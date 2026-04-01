@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       'Browse 25+ hand-picked gift ideas for Mom for every budget — from spa sets to personalized keepsakes.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-mom',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Mom%20%E2%80%94%2025%20Thoughtful%20Picks%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gift-ideas-for-mom',

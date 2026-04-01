@@ -24,6 +24,13 @@ export const metadata: Metadata = {
       'Browse hand-picked gift ideas for teens — trending tech, gaming gear, skincare, and more.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-teens',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Teens%20%E2%80%94%20Trending%20Gifts%20They'll%20Actually%20Want%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gift-ideas-for-teens',

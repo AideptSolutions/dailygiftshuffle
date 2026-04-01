@@ -26,6 +26,13 @@ export const metadata: Metadata = {
       'Top-rated camping and outdoor gift ideas at every budget. Hand-picked picks for hikers, campers, and everyone who prefers trees over Wi-Fi.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-for-camping-and-outdoors',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20for%20Camping%20and%20the%20Outdoors%20%E2%80%94%20Top%20Picks%20for%20Every%20Adventurer%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gifts-for-camping-and-outdoors',

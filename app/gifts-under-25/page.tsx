@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       'Browse the best gifts under $25 — affordable but thoughtful picks with tens of thousands of verified reviews.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-under-25',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%2425%20%E2%80%94%20Thoughtful%20Budget%20Picks%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gifts-under-25',

@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       "Browse 30+ curated birthday gift ideas for everyone on your list — sorted by recipient and budget.",
     type: 'website',
     url: 'https://thegiftshuffle.com/birthday-gift-ideas',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Birthday%20Gift%20Ideas%20%E2%80%94%20Unique%20Picks%20for%20Every%20Person%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/birthday-gift-ideas',

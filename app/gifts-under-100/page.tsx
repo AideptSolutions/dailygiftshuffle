@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       'Discover premium-feeling gifts under $100 — the sweet spot for thoughtful, high-impact gifting without the splurge.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-under-100',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%24100%20%E2%80%94%20Premium%20Picks%20Without%20the%20Premium%20Price%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gifts-under-100',

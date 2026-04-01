@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       "Browse 30+ curated gift ideas under $50 — thoughtful picks that prove you don't need a big budget.",
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-under-50',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%2450%20%E2%80%94%2030%20Great%20Ideas%20for%20Any%20Occasion%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gifts-under-50',

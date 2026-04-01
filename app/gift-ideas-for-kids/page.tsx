@@ -25,6 +25,13 @@ export const metadata: Metadata = {
       'Top-rated gift ideas for kids and grandkids at every age and budget. Hand-picked toys, games, and gear kids will love.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-kids',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Kids%20and%20Grandkids%20%E2%80%94%20Top%20Picks%20by%20Age%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gift-ideas-for-kids',

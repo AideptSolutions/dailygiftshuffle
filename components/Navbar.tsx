@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import { getWishlistCount } from '@/lib/wishlist';
+import SeasonalBanner from '@/components/SeasonalBanner';
 
 const CATEGORIES: { slug: string; label: string; emoji: string }[] = [
   { slug: 'tech',              label: 'Tech & Gadgets',   emoji: '💻' },
@@ -59,6 +60,7 @@ export default function Navbar() {
   }, [categoriesOpen]);
 
   return (
+    <>
     <nav aria-label="Main navigation" className="shadow-sm sticky top-0 z-50" style={{ background: '#e6e6e6' }}>
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="font-extrabold text-xl" style={{ color: '#F04E30' }}>
@@ -144,5 +146,7 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    <SeasonalBanner />
+    </>
   );
 }

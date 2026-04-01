@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       "Browse 25+ thoughtful gift ideas for her — wife, girlfriend, sister, or best friend.",
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-her',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Her%20%E2%80%94%20Gifts%20She'll%20Actually%20Love%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/gift-ideas-for-her',

@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       "Browse the best Mother's Day gifts for 2025 — personalized jewelry, spa sets, kitchen upgrades, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/mothers-day-gifts',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Mother's%20Day%20Gifts%20%E2%80%94%20The%20Best%20Picks%20for%202025%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/mothers-day-gifts',

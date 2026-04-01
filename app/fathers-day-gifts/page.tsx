@@ -23,6 +23,13 @@ export const metadata: Metadata = {
       "Browse the best Father's Day gift ideas for 2025 — tools, tech, grilling gear, and picks dad will actually use.",
     type: 'website',
     url: 'https://thegiftshuffle.com/fathers-day-gifts',
+    images: [
+      {
+        url: 'https://www.thegiftshuffle.com/api/og?title=Father's%20Day%20Gifts%20%E2%80%94%20Best%20Picks%20for%20Dad%20in%202025%20%7C%20TheGiftShuffle',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   alternates: {
     canonical: 'https://thegiftshuffle.com/fathers-day-gifts',
