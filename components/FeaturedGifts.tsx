@@ -1,4 +1,4 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 import { products } from '@/data/products';
 
 // 4 highest-reviewed products â€” highest demand / trending
@@ -18,9 +18,9 @@ function StarRating({ rating }: { rating: number }) {
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-sm">
-      {'â˜…'.repeat(full)}
-      {half ? 'Â½' : ''}
-      {'â˜†'.repeat(5 - full - (half ? 1 : 0))}
+      {'★'.repeat(full)}
+      {half ? '½' : ''}
+      {'★'.repeat(5 - full - (half ? 1 : 0))}
     </span>
   );
 }

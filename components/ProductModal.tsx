@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect } from 'react';
 import Image from 'next/image';
@@ -11,9 +11,9 @@ function StarRating({ rating }: { rating: number }) {
   const empty = 5 - full - (half ? 1 : 0);
   return (
     <span className="star-gold text-base">
-      {Array(full).fill('\u2605').join('')}
+      {Array(full).fill('★').join('')}
       {half ? '\u00BD' : ''}
-      {Array(empty).fill('\u2606').join('')}
+      {Array(empty).fill('☆').join('')}
     </span>
   );
 }

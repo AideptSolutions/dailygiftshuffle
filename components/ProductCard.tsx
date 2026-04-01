@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 /**
  * Compact ProductCard â€" matches the landing page HomeFeaturedSection card style.
  * Used on category pages, gift-guide pages, and any other product grid.
@@ -23,9 +23,9 @@ function StarRating({ rating }: { rating: number }) {
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-xs">
-      {Array(full).fill('â˜…').join('')}
-      {half ? 'Â½' : ''}
-      {Array(5 - full - (half ? 1 : 0)).fill('â˜†').join('')}
+      {Array(full).fill('★').join('')}
+      {half ? '½' : ''}
+      {Array(5 - full - (half ? 1 : 0)).fill('★').join('')}
     </span>
   );
 }
