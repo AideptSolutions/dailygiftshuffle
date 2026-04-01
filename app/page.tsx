@@ -1,6 +1,7 @@
 export const revalidate = 300; // Cache page for 5 min, regenerate in background
 
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import JsonLd from '@/components/JsonLd';
@@ -39,55 +40,64 @@ const features = [
 const giftGuides = [
   {
     href: '/gift-ideas-for-mom',
-    emoji: '🌸',
+    image: '/img/gift-guides/mom.jpg',
+    alt: 'Gift ideas for mom — flowers, candle, and jewelry',
     title: 'Gifts for Mom',
     desc: 'Thoughtful picks she\'ll actually love — spa sets, jewelry, and more.',
   },
   {
     href: '/gift-ideas-for-dad',
-    emoji: '🔧',
+    image: '/img/gift-guides/dad.jpg',
+    alt: 'Gift ideas for dad — wallet, tools, and whiskey',
     title: 'Gifts for Dad',
     desc: 'Skip the boring tie. Gadgets, grilling gear, and experiences he\'ll use.',
   },
   {
     href: '/gift-ideas-for-him',
-    emoji: '🎯',
+    image: '/img/gift-guides/him.jpg',
+    alt: 'Gift ideas for him — smartwatch, earbuds, and accessories',
     title: 'Gifts for Him',
     desc: 'Practical picks for husbands, boyfriends, and best friends.',
   },
   {
     href: '/gift-ideas-for-her',
-    emoji: '✨',
+    image: '/img/gift-guides/her.jpg',
+    alt: 'Gift ideas for her — perfume, jewelry, and skincare',
     title: 'Gifts for Her',
     desc: 'From self-care to personal style — gifts she\'ll adore.',
   },
   {
     href: '/gifts-under-50',
-    emoji: '💰',
+    image: '/img/gift-guides/under-50.jpg',
+    alt: 'Gifts under $50 — candle, book, mug, and plant',
     title: 'Gifts Under $50',
     desc: 'Great gifts that prove you don\'t need a big budget.',
   },
   {
     href: '/christmas-gift-ideas',
-    emoji: '🎄',
+    image: '/img/gift-guides/christmas.jpg',
+    alt: 'Christmas gift ideas — wrapped presents and holiday decor',
     title: 'Christmas Gift Ideas',
     desc: 'Top holiday picks for everyone on your list.',
   },
   {
     href: '/birthday-gift-ideas',
-    emoji: '🎂',
+    image: '/img/gift-guides/birthday.jpg',
+    alt: 'Birthday gift ideas — wrapped present, balloons, and confetti',
     title: 'Birthday Gift Ideas',
     desc: 'Unique picks that make birthdays unforgettable.',
   },
   {
     href: '/gift-ideas-for-kids',
-    emoji: '🧸',
+    image: '/img/gift-guides/kids.jpg',
+    alt: 'Gifts for kids — LEGO, building blocks, and toys',
     title: 'Gifts for Kids and Grandkids',
     desc: 'Age-appropriate picks from tots to teens that they will actually play with.',
   },
   {
     href: '/gifts-for-camping-and-outdoors',
-    emoji: '⛺',
+    image: '/img/gift-guides/outdoors.jpg',
+    alt: 'Gifts for camping and outdoors — headlamp, knife, and gear',
     title: 'Gifts for Camping and the Outdoors',
     desc: 'Gear that actually gets used on every trip, from day hikes to base camp.',
   },
@@ -241,13 +251,23 @@ export default async function HomePage() {
               <Link
                 key={guide.href}
                 href={guide.href}
-                className="group bg-white border border-[#E2E8F0] rounded-2xl p-5 shadow-sm hover:border-[#F04E30] hover:shadow-md transition-all flex flex-col gap-2"
+                className="group bg-white border border-[#E2E8F0] rounded-2xl overflow-hidden shadow-sm hover:border-[#F04E30] hover:shadow-md transition-all flex flex-col"
               >
-                <span className="text-3xl">{guide.emoji}</span>
-                <h3 className="font-bold text-sm text-[#1A202C] group-hover:text-[#F04E30] transition-colors leading-tight">
-                  {guide.title}
-                </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{guide.desc}</p>
+                <div className="relative w-full overflow-hidden" style={{ height: '120px' }}>
+                  <Image
+                    src={guide.image}
+                    alt={guide.alt}
+                    fill
+                    unoptimized
+                    className="object-cover transition-transform duration-200 group-hover:scale-[1.1]"
+                  />
+                </div>
+                <div className="p-4 flex flex-col gap-1">
+                  <h3 className="font-bold text-sm text-[#1A202C] group-hover:text-[#F04E30] transition-colors leading-tight">
+                    {guide.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">{guide.desc}</p>
+                </div>
               </Link>
             ))}
           </div>
