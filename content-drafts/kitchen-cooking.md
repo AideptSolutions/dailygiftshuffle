@@ -50,7 +50,7 @@ The Joule Turbo circulates water at **2,500 liters per hour** to maintain precis
 **Global G-2 8-Inch Chef's Knife**
 The Global G-2 uses **CROMOVA 18 stainless steel at 56-58 HRC hardness**. Its hollow handle fills with sand for perfect balance at the bolster. **Key Spec: 15-degree edge bevel vs. 20-degree Western standard for sharper slicing.**
 
-- Pros: Lightweight at 212g, seamless one-piece construction prevents bacteria traps, dishwasher safe
+- Pros: Lightweight at 212g, solid one-piece construction prevents bacteria traps, dishwasher safe
 - Cons: Slippery handle when wet, needs sharpening more often than German knives
 - Price: ~$130 [VERIFY]
 

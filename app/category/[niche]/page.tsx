@@ -347,6 +347,25 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.thegiftshuffle.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: meta.heading,
+        item: `https://www.thegiftshuffle.com/category/${params.niche}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -359,6 +378,10 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Leaderboard Ad */}

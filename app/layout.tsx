@@ -48,32 +48,27 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://thegiftshuffle.com/#organization',
-      name: 'TheGiftShuffle',
-      url: 'https://thegiftshuffle.com',
-      logo: 'https://thegiftshuffle.com/og-image.png',
-      description:
-        'AI-curated gift recommendations for every recipient, budget, and occasion.',
-      sameAs: [],
-    },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://thegiftshuffle.com/#website',
-      url: 'https://thegiftshuffle.com',
-      name: 'TheGiftShuffle',
-      description:
-        'Find the perfect gift in seconds. Pick a recipient, set a budget, hit Shuffle.',
-      publisher: { '@id': 'https://thegiftshuffle.com/#organization' },
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://thegiftshuffle.com/shuffle?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
-      },
-    },
-  ],
+  '@type': 'Organization',
+  name: 'TheGiftShuffle',
+  url: 'https://www.thegiftshuffle.com',
+  description:
+    'AI-curated gift discovery platform. Find unique, personalized gift ideas for anyone — filtered by recipient, occasion, and budget.',
+  sameAs: [],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://thegiftshuffle.com/#website',
+  url: 'https://thegiftshuffle.com',
+  name: 'TheGiftShuffle',
+  description:
+    'Find the perfect gift in seconds. Pick a recipient, set a budget, hit Shuffle.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://thegiftshuffle.com/shuffle?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -108,6 +103,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </body>
     </html>

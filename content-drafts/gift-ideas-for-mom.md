@@ -14,7 +14,7 @@ Mom's time is finite. Good gifts save her steps, reduce cleanup, or make a daily
 **Le Creuset 5.5-Quart Round Dutch Oven**
 Le Creuset's signature **enameled cast iron retains heat for 4+ hours after leaving the burner**. The oven-safe lid seals moisture for braising and soups. **Key Spec: Compatible with all cooktops including induction, oven-safe to 500°F.**
 
-- Pros: Lifetime warranty, chip-resistant enamel, vibrant color options
+- Pros: Lifetime warranty, chip-resistant enamel, bold color options
 - Cons: Heavy at 5.5kg, premium price requires care to justify
 - Price: ~$420 [VERIFY]
 

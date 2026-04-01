@@ -3,6 +3,7 @@ export const revalidate = 300; // Cache page for 5 min, regenerate in background
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
+import JsonLd from '@/components/JsonLd';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 import GiftCupAnimation from '@/components/GiftCupAnimation';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
@@ -108,8 +109,48 @@ export default async function HomePage() {
     occasions: p.occasions,
     tags: p.tags,
   }));
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is TheGiftShuffle?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'TheGiftShuffle is an AI-curated gift discovery platform that helps you find unique, personalized gift ideas filtered by recipient, occasion, and budget.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does the gift shuffle work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Enter who you are shopping for and your budget, and TheGiftShuffle instantly surfaces a curated set of gift ideas. Shuffle again to see new options, or save favorites to your list.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are the gifts on TheGiftShuffle available on Amazon?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most gifts link to Amazon, Target, REI, and other major retailers via affiliate links. Prices and availability are subject to change.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the best gift under $50?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'TheGiftShuffle curates hundreds of gifts under $50 across categories including tech gadgets, home goods, experiences, and more — all hand-reviewed for quality and uniqueness.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd data={faqSchema} id="homepage-faq-schema" />
       <Navbar />
 
       {/* Hero */}

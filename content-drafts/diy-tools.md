@@ -55,7 +55,7 @@ The Dremel 4300 runs at **5,000–35,000 RPM with universal 3-jaw chuck** accept
 - Price: ~$99 [VERIFY]
 
 **Klein Tools 80141 Electrician's Starter Tool Kit**
-This 14-piece kit covers the most common electrical tasks with **1000V-rated insulated handles on every cutting and gripping tool**. Klein's lineman pliers use high-leverage design for **40% more cutting force per grip**. **Key Spec: ANSI/ASTM F1505 certification on all insulated tools.**
+This 14-piece kit covers the most common electrical tasks with **1000V-rated insulated handles on every cutting and gripping tool**. Klein's lineman pliers use a force-multiplying design for **40% more cutting force per grip**. **Key Spec: ANSI/ASTM F1505 certification on all insulated tools.**
 
 - Pros: Professional electrician standard, ergonomic handles, full replacement warranty
 - Cons: Specialized for electrical work only, heavy 14-piece set
