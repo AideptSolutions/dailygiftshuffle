@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const categories = [
   {
@@ -91,20 +91,20 @@ function CategoryCard({ cat }: { cat: (typeof categories)[number] }) {
   return (
     <Link
       href={cat.href}
-      className="group flex-none w-40 rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200"
-      style={{ height: '200px' }}
+      className="group flex-none rounded-2xl bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-200"
+      style={{ width: '176px', height: '220px' }}
     >
       {/* Image area — top 60% */}
-      <div className="relative w-full" style={{ height: '120px' }}>
+      <div className="relative w-full overflow-hidden" style={{ height: '132px' }}>
         {imgError ? (
-          <div className={`w-full h-full bg-gradient-to-br ${cat.fallbackColor}`} />
+          <div className={`w-full h-full bg-gradient-to-br ${cat.fallbackColor} transition-transform duration-200 group-hover:scale-[1.35]`} />
         ) : (
           <Image
             src={cat.image}
             alt={cat.alt}
             fill
             unoptimized
-            className="object-cover"
+            className="object-cover transition-transform duration-200 group-hover:scale-[1.35]"
             onError={() => setImgError(true)}
           />
         )}
@@ -122,6 +122,13 @@ function CategoryCard({ cat }: { cat: (typeof categories)[number] }) {
 }
 
 export default function GiftPackageCollections() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: 'left' | 'right') => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir === 'right' ? 400 : -400, behavior: 'smooth' });
+  };
+
   return (
     <section className="py-14 px-4 bg-white">
       <script
@@ -132,27 +139,53 @@ export default function GiftPackageCollections() {
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2" style={{ color: '#1A202C' }}>
-          Shop by Gift Package
+          Curated &amp; Customizable Gift Packages
         </h2>
         <p className="text-center text-gray-500 text-sm mb-8">
           Curated collections for every type of person
         </p>
 
-        {/* Scrollable row */}
-        <div
-          className="flex gap-4 overflow-x-auto pb-3
-            [scrollbar-width:none] sm:[scrollbar-width:auto]
-            [-ms-overflow-style:none] sm:[-ms-overflow-style:auto]
-            [&::-webkit-scrollbar]:hidden sm:[&::-webkit-scrollbar]:block
-            sm:[&::-webkit-scrollbar]:h-1.5
-            sm:[&::-webkit-scrollbar-track]:rounded-full
-            sm:[&::-webkit-scrollbar-track]:bg-gray-100
-            sm:[&::-webkit-scrollbar-thumb]:rounded-full
-            sm:[&::-webkit-scrollbar-thumb]:bg-[#F04E30]/40"
-        >
-          {categories.map((cat) => (
-            <CategoryCard key={cat.href} cat={cat} />
-          ))}
+        {/* Scroll container with arrows */}
+        <div className="relative">
+          {/* Left arrow */}
+          <button
+            onClick={() => scroll('left')}
+            aria-label="Scroll left"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-md hover:bg-gray-50 hover:shadow-lg transition-all duration-150"
+          >
+            <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Scrollable row */}
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto pb-3 px-1
+              [scrollbar-width:none] sm:[scrollbar-width:auto]
+              [-ms-overflow-style:none] sm:[-ms-overflow-style:auto]
+              [&::-webkit-scrollbar]:hidden sm:[&::-webkit-scrollbar]:block
+              sm:[&::-webkit-scrollbar]:h-1.5
+              sm:[&::-webkit-scrollbar-track]:rounded-full
+              sm:[&::-webkit-scrollbar-track]:bg-gray-100
+              sm:[&::-webkit-scrollbar-thumb]:rounded-full
+              sm:[&::-webkit-scrollbar-thumb]:bg-[#F04E30]/40"
+          >
+            {categories.map((cat) => (
+              <CategoryCard key={cat.href} cat={cat} />
+            ))}
+          </div>
+
+          {/* Right arrow */}
+          <button
+            onClick={() => scroll('right')}
+            aria-label="Scroll right"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-md hover:bg-gray-50 hover:shadow-lg transition-all duration-150"
+          >
+            <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
