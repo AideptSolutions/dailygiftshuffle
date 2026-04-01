@@ -7,9 +7,9 @@ function checkAuth(req: NextRequest): boolean {
 
 // Try models in order — fall back if deprecated
 const MODELS = [
-  'gemini-2.5-flash-preview-05-20',
-  'gemini-2.0-flash-exp',
-  'gemini-2.0-flash-preview-image-generation',
+  'gemini-3-pro-image-preview',
+  'gemini-3.1-flash-image-preview',
+  'gemini-2.5-flash-image',
 ];
 
 async function generateImage(prompt: string, apiKey: string): Promise<string | null> {
