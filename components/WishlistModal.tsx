@@ -8,17 +8,17 @@ interface Props {
   product: Product;
   onClose: () => void;
   onSaved: () => void;
+  onSkip: () => void;
 }
 
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/;
 
-export default function WishlistModal({ product, onClose, onSaved }: Props) {
+export default function WishlistModal({ product, onClose, onSaved, onSkip }: Props) {
   const [email, setEmail]   = useState('');
   const [saving, setSaving] = useState(false);
   const [error, setError]   = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Focus the email input on mount
   useEffect(() => { inputRef.current?.focus(); }, []);
 
   const handleSave = async () => {
@@ -31,13 +31,15 @@ export default function WishlistModal({ product, onClose, onSaved }: Props) {
     setSaving(true);
     setError('');
 
+    // Persist email for future saves
+    localStorage.setItem('gs_email', trimmed);
     addToWishlist(trimmed, product);
 
     try {
-      await fetch('/api/save-email', {
+      await fetch('/api/wishlist/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed, productId: product.id, timestamp: new Date().toISOString() }),
+        body: JSON.stringify({ email: trimmed, picks: [product.id] }),
       });
     } catch {
       // Non-blocking — localStorage save already succeeded
@@ -63,12 +65,12 @@ export default function WishlistModal({ product, onClose, onSaved }: Props) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="text-center mb-6">
-          <div aria-hidden="true" className="text-5xl mb-3">♥</div>
+          <div aria-hidden="true" className="text-5xl mb-3">✉️</div>
           <h2 id="wishlist-modal-title" className="text-xl font-extrabold text-gray-900 mb-1">
-            Save to Wishlist
+            Want your picks emailed to you?
           </h2>
           <p id="wishlist-modal-desc" className="text-gray-500 text-sm">
-            Enter your email to save <strong>{product.name}</strong> to your wishlist.
+            Enter your email to save your wishlist and get your picks sent straight to your inbox.
           </p>
         </div>
 
@@ -96,25 +98,26 @@ export default function WishlistModal({ product, onClose, onSaved }: Props) {
           )}
         </div>
 
-        <div className="flex gap-3">
+        <button
+          onClick={handleSave}
+          disabled={saving}
+          aria-busy={saving}
+          className="w-full btn-shuffle text-white font-bold py-3 rounded-xl disabled:opacity-60 mb-3"
+        >
+          {saving ? 'Saving…' : 'Send my picks ✉️'}
+        </button>
+
+        <div className="text-center">
           <button
-            onClick={onClose}
-            className="flex-1 border-2 border-gray-200 text-gray-600 font-semibold py-3 rounded-xl hover:bg-gray-50 transition-colors"
+            onClick={onSkip}
+            className="text-sm text-gray-400 hover:text-gray-600 underline transition-colors"
           >
-            Cancel
-          </button>
-          <button
-            onClick={handleSave}
-            disabled={saving}
-            aria-busy={saving}
-            className="flex-1 btn-shuffle text-white font-bold py-3 rounded-xl disabled:opacity-60"
-          >
-            {saving ? 'Saving…' : 'Save ♥'}
+            Skip — just save to my device
           </button>
         </div>
 
         <p className="text-xs text-center text-gray-300 mt-4">
-          Your email is only used to identify your wishlist. We don&apos;t spam.
+          Your email is only used to send your wishlist. We don&apos;t spam.
         </p>
       </div>
     </div>

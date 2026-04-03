@@ -62,12 +62,13 @@ body {
 
 /* ── Affiliate / Amazon buttons ─────────────────────────────────────────── */
 .btn-amazon {
-  background: #828277;
+  background: #F97316;
   color: #FFFFFF;
   font-weight: 700;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-amazon:hover {
-  background: #6e6e64;
+  background: #EA6B08;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
 }

@@ -84,6 +84,7 @@ function ProductCard({
   product,
   pinned,
   onTogglePin,
+  onSave,
 }: {
   product: Product;
   onSave?: () => void;
@@ -124,7 +125,18 @@ function ProductCard({
         </button>
         {/* Save button — top-right */}
         <button
-          onClick={() => toggleFavorite(product)}
+          onClick={() => {
+            if (isFavorited(product.id)) {
+              toggleFavorite(product);
+              return;
+            }
+            const gs = typeof window !== 'undefined' ? localStorage.getItem('gs_email') : null;
+            if (gs) {
+              toggleFavorite(product);
+            } else {
+              onSave?.();
+            }
+          }}
           aria-label={isFavorited(product.id) ? 'Remove from picks' : 'Save to My Picks'}
           title={isFavorited(product.id) ? 'Remove from picks' : 'Save to My Picks'}
           className="absolute top-1.5 right-1.5 h-6 px-2 rounded-full text-[10px] font-bold transition-all"
@@ -146,6 +158,11 @@ function ProductCard({
           <StarRating rating={product.rating} />
           <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
         </div>
+        {product.why && (
+          <p className="text-[10px] italic text-gray-500 mt-1.5 pl-2 border-l-2 border-[#F04E30]/30 leading-snug line-clamp-2">
+            ✦ Why we picked this: {product.why}
+          </p>
+        )}
         <p className="text-sm font-extrabold mt-auto pt-2" style={{ color: '#1A202C' }}>
           {product.priceDisplay}
         </p>
@@ -164,6 +181,7 @@ function ProductCard({
 }
 
 export default function ShuffleClient() {
+  const { toggle: toggleFav } = useFavorites();
   const [catalog, setCatalog]         = useState<Product[]>([]);
   const [step, setStep]               = useState<Step>('recipient');
   const [recipient, setRecipient]     = useState<Recipient | null>(null);
@@ -536,7 +554,12 @@ export default function ShuffleClient() {
           onClose={() => setWishlistOpen(false)}
           onSaved={() => {
             setWishlistOpen(false);
+            toggleFav(wishlistProduct);
             window.dispatchEvent(new Event('wishlist-updated'));
+          }}
+          onSkip={() => {
+            setWishlistOpen(false);
+            toggleFav(wishlistProduct);
           }}
         />
       )}
