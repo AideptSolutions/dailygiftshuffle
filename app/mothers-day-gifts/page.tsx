@@ -120,10 +120,10 @@ export default function MothersDayGiftsPage() {
             Mother&apos;s Day Gifts
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            Mother&apos;s Day is the #2 gifting holiday in the US — and 2026 trends are clearer than ever. Personalized jewelry and keepsakes are the #1 search category this year, driven by the desire for gifts that feel permanent and meaningful. Right behind that: spa and self-care sets (because moms genuinely need a moment to recharge), experience gifts like cooking classes and wine tastings, premium kitchen gadgets that upgrade her everyday routine, and subscriptions that keep giving past the day itself. Reviews signal gift intent — the products with the most five-star mentions of &quot;got this for my mom&quot; are the ones that consistently deliver.
+            Mother&apos;s Day is May 11 — and this year, the gifts that matter most aren&apos;t the flashiest ones. They&apos;re the ones that give her something she&apos;d never carve out for herself: time to slow down, a bathroom that feels like a spa, skin that finally gets the care it deserves, and the kind of cozy comfort that doesn&apos;t require an occasion.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            One of the most important insights in Mother&apos;s Day gifting: buying early unlocks the best selection. Popular items — especially personalized jewelry, custom keepsakes, and curated spa sets — sell out or face shipping delays as the holiday approaches. The picks below are available now and hand-curated to match what moms actually want in 2026, not just what looks good in an ad.
+            Every pick below is hand-curated for 2026 — shower steamers she&apos;ll actually use, skincare from brands worth the investment, pajamas soft enough to change how her mornings feel, and spa sets that turn an ordinary Tuesday night into something she looks forward to.
           </p>
         </section>
 
@@ -146,49 +146,62 @@ export default function MothersDayGiftsPage() {
 
         {/* Editorial Content */}
         <section className="max-w-3xl mx-auto px-4 py-10">
+
+          {/* Hero image */}
+          <div className="rounded-2xl overflow-hidden mb-8 shadow-sm">
+            <img
+              src="/img/mothers-day-hero-2026.jpg"
+              alt="Mother's Day self-care gifts including skincare, shower steamers, satin pajamas, and face masks"
+              className="w-full h-auto object-cover"
+              style={{ maxHeight: '420px', objectPosition: 'center' }}
+            />
+          </div>
+
           <h2 className="text-2xl font-bold mb-5" style={{ color: '#1A202C' }}>
-            What Mom Really Wants This Mother&apos;s Day (And It&apos;s Not a Card)
+            What Mom Actually Wants This Mother&apos;s Day
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Mother&apos;s Day 2026 is a moment to give Mom something she would never buy for herself: uninterrupted time to feel taken care of. The most meaningful gifts this year aren&apos;t things she&apos;ll put on a shelf — they&apos;re experiences, rituals, and products that signal one clear message: your time matters, your comfort matters, and you deserve to feel restored.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-8">
-            This year&apos;s gift trends reflect a broader cultural shift. Moms are increasingly vocal about the importance of self-care — not as a luxury, but as a necessity. The gifts that land best in 2026 are the ones that make her actual life better: her morning routine, her bedtime ritual, her &ldquo;me time&rdquo; she almost never takes.
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Here&apos;s what nobody says out loud but everyone knows: Mom spends most of the year taking care of other people. She&apos;s the one who notices when you&apos;re running low on things. She&apos;s the one who reorganizes the fridge and remembers the dentist appointment and stays up worrying when she should be sleeping. The best Mother&apos;s Day gift in 2026 isn&apos;t a nice thing to own. It&apos;s a signal — that you see her, and that you want her to finally have a moment that&apos;s entirely her own.
           </p>
 
-          <h3 className="text-xl font-bold mb-3" style={{ color: '#1A202C' }}>
-            The Shower as Sanctuary — Shower Steamers and Aromatherapy
-          </h3>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            The shower steamer has become the self-care product of the decade. Unlike bath bombs, shower steamers work for the woman who has five minutes and a hot shower. As they dissolve, they release essential oil vapors — eucalyptus for clarity, lavender for calm, citrus for energy — turning an everyday necessity into something that actually feels luxurious. The best sets offer enough variety to let her experiment with what she needs on any given morning.
+          <p className="text-gray-700 leading-relaxed mb-8">
+            This year, the gifts that are landing — the ones moms are actually talking about — are the ones built around her daily rituals. Not flowers that wilt in a week. Not another candle to sit on a shelf. Things she&apos;ll reach for at 6 AM before anyone else wakes up. Things that make her bathroom feel like a spa and her Sunday morning feel like a slow exhale.
           </p>
 
-          <h3 className="text-xl font-bold mb-3" style={{ color: '#1A202C' }}>
-            Beauty That Restores — Skincare as Self-Care
+          <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
+            🚿 The Shower Steamer Moment
           </h3>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            The skincare gifts that win Mother&apos;s Day aren&apos;t about vanity — they&apos;re about restoration. When you give Mom a well-chosen serum, an under-eye treatment, or a complete skincare routine, you&apos;re giving her a ritual. Something that&apos;s hers, in her bathroom, that exists just for her. La Roche-Posay, The Ordinary, Sunday Riley, Shiseido — these aren&apos;t just brands, they&apos;re daily acts of self-investment. A gift that makes her feel good every single morning keeps giving long after the day itself.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            If you haven&apos;t heard a mom rave about shower steamers yet, you will. They&apos;re the self-care product that finally makes sense for the woman who doesn&apos;t have time to draw a bath. Drop one on the shower floor and it dissolves into a cloud of essential oils — eucalyptus to clear her head in the morning, lavender when she needs to come down from the day, citrus when she needs to feel like a person again. The best sets come with eight to ten varieties so she can match the scent to the mood. No tub required. No forty-minute ritual required. Just five minutes and hot water.
           </p>
 
-          <h3 className="text-xl font-bold mb-3" style={{ color: '#1A202C' }}>
-            Face Masks and Under-Eye Patches — Her Permission Slip to Stop
+          <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
+            ✨ Skincare That Says &ldquo;You Deserve This&rdquo;
           </h3>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            There&apos;s something about a face mask that says: I am not available right now. Sheet masks and under-eye patches are the physical embodiment of a self-care ritual — they require you to sit still, to stop scrolling, to just be. Korean beauty innovated this category for a reason: collagen patches, gold eye treatments, and hydrating sheet masks all deliver visible results while giving Mom twenty minutes of structured rest. Give her a supply. Give her a reason to stop.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            There&apos;s a version of skincare gifting that misses the point — a generic lotion set, a drugstore face wash. And then there&apos;s the version that actually lands: a Sunday Riley vitamin C serum she&apos;d never spend that much on herself, an Estée Lauder night repair that she&apos;s heard about for years, a La Roche-Posay retinol she keeps putting back at the store because it feels like too much. These aren&apos;t gifts about vanity. They&apos;re about restoration. They&apos;re about giving her skin care that actually works, paired with a ritual that&apos;s quietly, entirely hers.
           </p>
 
-          <h3 className="text-xl font-bold mb-3" style={{ color: '#1A202C' }}>
-            Comfort as Care — Loungewear, Pajamas, and Cozy Staples
+          <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
+            😴 Face Masks: Her Official Permission Slip to Unplug
           </h3>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            What does Mom actually wear when nobody&apos;s watching? If the answer is anything less than genuinely comfortable, that&apos;s your gift. Satin pajama sets that feel like a spa, sherpa-lined slipper socks she&apos;ll never take off, plush loungewear that makes Sunday mornings feel like an event — these are the gifts that improve her quality of life every single day. The best loungewear gifts aren&apos;t flashy. They&apos;re soft, they fit, and they make her feel like herself.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Korean beauty figured something out that the rest of us are only just catching up to: sometimes you need a physical reason to stop. A face mask or a set of gold under-eye patches does exactly that. The moment it goes on, the phone goes down. She has twenty minutes where the answer to every ask is &ldquo;I&apos;m doing my mask.&rdquo; Collagen patches for the under-eye circles she&apos;s been hiding. Hydrating sheet masks for the skin that&apos;s been running on stress and not enough sleep. Give her a full month&apos;s supply. Give her something to look forward to every Sunday night.
           </p>
 
-          <h3 className="text-xl font-bold mb-3" style={{ color: '#1A202C' }}>
-            The Art of the Gift Set — Everything She Needs to Recharge
+          <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
+            🩷 The Pajama Upgrade She Won&apos;t Buy Herself
           </h3>
-          <p className="text-gray-600 leading-relaxed mb-2">
-            A curated gift set does something a single product can&apos;t: it creates a complete experience. The bath and body sets that top our 2026 picks come with everything she needs for a dedicated self-care evening — bath salts, bath bombs, body oil, face mask, sleep mask, and a candle to set the mood. Beautifully packaged (no gift wrapping required) and offering enough variety to experiment. This is the difference between giving her one good night and giving her a ritual she&apos;ll return to again and again.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Ask most moms what they&apos;re wearing to bed and the answer is some combination of old, worn-out, and &ldquo;it still works.&rdquo; A satin pajama set that actually fits and feels like something — soft against the skin, pretty enough that she feels good putting it on — is one of those gifts that changes her daily life in a small, quiet way. Same goes for sherpa slipper socks she won&apos;t take off all winter, or a plush loungewear set that makes Saturday morning feel like something she earned. Comfort is care. Especially when it&apos;s for someone who&apos;s never the first one to ask for it.
+          </p>
+
+          <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
+            🛁 The Spa Night In a Box
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-2">
+            There&apos;s something about a beautifully packaged spa gift set that does something no individual product can — it gives her a full evening. A bath bomb for the tub, a face mask for after, a silk sleep mask for when she finally gets into bed. The best sets in 2026 are gift-ready out of the box (no wrapping required), filled with enough variety that she can mix and match depending on how much time and energy she has, and good enough that she&apos;ll actually use everything in it. You&apos;re not just giving her products. You&apos;re giving her a night to herself.
           </p>
         </section>
 
