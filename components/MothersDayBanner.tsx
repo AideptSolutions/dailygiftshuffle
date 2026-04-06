@@ -17,28 +17,30 @@ export default function MothersDayBanner() {
 
   if (!visible) return null;
 
-  function dismiss() {
+  function dismiss(e: React.MouseEvent) {
+    e.preventDefault();
     localStorage.setItem(DISMISS_KEY, '1');
     setVisible(false);
   }
 
   return (
-    <div className="bg-gradient-to-r from-pink-100 to-rose-100 border border-rose-200 px-4 py-3">
-      <div className="max-w-5xl mx-auto flex items-center justify-between gap-3">
-        <Link
-          href="/mothers-day-gifts"
-          className="text-sm sm:text-base font-medium text-rose-700 hover:text-rose-900 transition-colors flex-1"
-        >
-          💐 Mother&apos;s Day is May 11 — Shop the Best Gifts for Mom →
-        </Link>
-        <button
-          onClick={dismiss}
-          aria-label="Dismiss Mother's Day banner"
-          className="text-rose-400 hover:text-rose-700 transition-colors text-lg leading-none flex-shrink-0"
-        >
-          ✕
-        </button>
-      </div>
+    <div
+      className="w-full py-2.5 px-4 text-center relative"
+      style={{ background: 'linear-gradient(90deg, #f06292 0%, #e91e8c 100%)' }}
+    >
+      <Link
+        href="/mothers-day-gifts"
+        className="text-white text-sm font-semibold tracking-wide hover:underline underline-offset-2"
+      >
+        💐 Mother&apos;s Day is May 11 — Shop the Best Gifts for Mom →
+      </Link>
+      <button
+        onClick={dismiss}
+        aria-label="Dismiss Mother's Day banner"
+        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors text-base leading-none"
+      >
+        ✕
+      </button>
     </div>
   );
 }

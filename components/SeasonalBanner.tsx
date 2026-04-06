@@ -17,17 +17,14 @@ function getBannerConfig(month: number): BannerConfig | null {
         gradient: 'linear-gradient(90deg, #e91e8c 0%, #f44336 100%)',
       };
     case 3:
-    case 4:
       return {
         text: 'Spring gifting season is here 🌸',
         gradient: 'linear-gradient(90deg, #66bb6a 0%, #a5d6a7 100%)',
       };
+    case 4:
     case 5:
-      return {
-        text: "Mother's Day is almost here 💐",
-        gradient: 'linear-gradient(90deg, #f06292 0%, #f48fb1 100%)',
-        href: '/gift-ideas-for-mom',
-      };
+      // Mother's Day banner handles April + May — no duplicate
+      return null;
     case 6:
       return {
         text: "Father's Day is coming up 🔧",
