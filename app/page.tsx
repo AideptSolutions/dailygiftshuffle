@@ -40,11 +40,11 @@ const features = [
 
 const giftGuides = [
   {
-    href: '/gift-ideas-for-mom',
-    image: '/img/gift-guides/mom.jpg',
-    alt: 'Gift ideas for mom — flowers, candle, and jewelry',
+    href: '/mothers-day-gifts',
+    image: '/img/mothers-day-hero-2026.jpg',
+    alt: "Mother's Day gifts including skincare, shower steamers, pajamas, and spa sets",
     title: 'Gifts for Mom',
-    desc: 'Thoughtful picks she\'ll actually love — spa sets, jewelry, and more.',
+    desc: 'Shower steamers, skincare, cozy pajamas, and spa sets she will actually use.',
   },
   {
     href: '/gift-ideas-for-dad',
