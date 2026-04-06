@@ -61,9 +61,11 @@ export default function Navbar() {
 
   return (
     <>
-    <nav aria-label="Main navigation" className="shadow-sm sticky top-0 z-50" style={{ background: '#e6e6e6' }}>
+    <nav aria-label="Main navigation" className="sticky top-0 z-50" style={{ background: '#e6e6e6', borderBottom: '2px solid #d0d0d0', boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }}>
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-extrabold text-xl" style={{ color: '#F04E30' }}>
+        <Link href="/" className="flex items-center gap-2 font-extrabold text-xl" style={{ color: '#F04E30' }}>
+          {/* Gift box icon matching Shuffle button color */}
+          <span aria-hidden="true" style={{ fontSize: '1.5rem', lineHeight: 1 }}>🎁</span>
           TheGiftShuffle
         </Link>
         <div className="relative flex items-center gap-4 text-sm font-medium text-gray-600">

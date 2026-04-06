@@ -189,7 +189,7 @@ export default async function HomePage() {
 
       {/* Hero */}
       <section
-        className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20"
+        className="flex-1 flex flex-col items-center justify-center text-center px-4 py-8"
         style={{ background: '#FFFFFF' }}
       >
         <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight mb-4 max-w-3xl" style={{ color: '#1A202C' }}>
