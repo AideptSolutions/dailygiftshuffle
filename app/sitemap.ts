@@ -42,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/gifts-under-25',
     '/gifts-under-100',
     '/mothers-day-gifts',
+    '/mothers-day-gifts-under-50',
+    '/mothers-day-gifts-under-25',
     '/fathers-day-gifts',
     '/blog',
   ].map((path) => ({

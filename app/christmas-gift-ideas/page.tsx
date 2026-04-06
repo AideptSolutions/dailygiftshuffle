@@ -6,7 +6,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gift Ideas 2025 — Top Picks for Everyone on Your List | TheGiftShuffle',
+  title: 'Christmas Gift Ideas 2026 — Top Picks for Everyone on Your List | TheGiftShuffle',
   description:
     "Find the perfect Christmas gift for everyone on your list. Browse 30+ curated holiday gift ideas sorted by recipient and budget — no more gift stress.",
   keywords: [

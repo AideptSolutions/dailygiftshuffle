@@ -5,6 +5,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import JsonLd from '@/components/JsonLd';
+import MothersDayBanner from '@/components/MothersDayBanner';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 import GiftCupAnimation from '@/components/GiftCupAnimation';
 import GiftPackageCollections from '@/components/GiftPackageCollections';
@@ -184,6 +185,7 @@ export default async function HomePage() {
     <div className="min-h-screen flex flex-col">
       <JsonLd data={faqSchema} id="homepage-faq-schema" />
       <Navbar />
+      <MothersDayBanner />
 
       {/* Hero */}
       <section
