@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -118,11 +119,13 @@ export default function MothersDayGiftsPage() {
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6">
           {/* Hero image - full width at top */}
           <div className="rounded-2xl overflow-hidden mb-8 shadow-sm">
-            <img
+            <Image
               src="/img/mothers-day-hero-2026.jpg"
               alt="Mother's Day self-care gifts including skincare, shower steamers, satin pajamas, and fresh flowers"
               className="w-full object-cover"
               style={{ maxHeight: '420px', objectPosition: 'center' }}
+              width={1536}
+              height={1024}
             />
           </div>
           <div className="text-center">

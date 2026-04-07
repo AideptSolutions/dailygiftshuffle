@@ -1,14 +1,13 @@
 'use client';
 import { useState, useCallback } from 'react';
-import ProductCard from '@/components/ProductCard';
-import { Product } from '@/data/products';
+import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 
 interface Props {
-  products: Product[];
+  products: CompactProduct[];
   heading?: string;
 }
 
-function pickRandom(arr: Product[], n: number, excludeIds: string[] = []): Product[] {
+function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = []): CompactProduct[] {
   const excludeSet = new Set(excludeIds);
   const available = [...arr].filter(p => !excludeSet.has(p.id));
   const pool = available.length >= n ? available : [...arr];
@@ -17,7 +16,7 @@ function pickRandom(arr: Product[], n: number, excludeIds: string[] = []): Produ
 }
 
 export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: Props) {
-  const [picks, setPicks] = useState<Product[]>(() => pickRandom(products, 4));
+  const [picks, setPicks] = useState<CompactProduct[]>(() => pickRandom(products, 4));
   const [pinnedIds, setPinnedIds] = useState<Set<string>>(new Set());
 
   const togglePin = useCallback((id: string) => {

@@ -123,6 +123,13 @@ const giftGuides = [
     title: 'Travel Gifts',
     desc: 'For the frequent flyer or adventure seeker on your list.',
   },
+  {
+    href: '/graduation-gifts',
+    image: '/img/gift-guides/birthday.jpg',
+    alt: 'Graduation gift ideas — diploma, laptop, and luggage',
+    title: 'Graduation Gifts',
+    desc: 'Practical picks for grads heading to college, work, or their first apartment.',
+  },
 ];
 
 export default async function HomePage() {

@@ -14,6 +14,21 @@ const nextConfig = {
     ],
   },
 
+  async redirects() {
+    return [
+      {
+        source: '/category/tech-gadgets',
+        destination: '/category/tech',
+        permanent: true,
+      },
+      {
+        source: '/category/streamers-gamers',
+        destination: '/category/gaming',
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

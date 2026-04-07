@@ -6,7 +6,7 @@ const BASE_URL = 'https://thegiftshuffle.com';
 const NICHES = [
   'tech', 'diy-tools', 'home', 'gaming', 'sports', 'gardening', 'finance', 'fitness', 'parenting',
   'office', 'luxury', 'hobby', 'kitchen', 'pets',
-  'kids', 'car-accessories',
+  'kids', 'car-accessories', 'outdoors', 'travel', 'beauty', 'ai-smart-home', 'baby-shower', 'wedding',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/mothers-day-gifts-under-50',
     '/mothers-day-gifts-under-25',
     '/fathers-day-gifts',
+    '/graduation-gifts',
     '/blog',
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
