@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Footer from '@/components/Footer';
 import InlineShuffle from '@/components/InlineShuffle';
+import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products-catalog';
 
 export const metadata: Metadata = {
@@ -22,11 +24,19 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: 'https://thegiftshuffle.com/graduation-gifts',
+  },
 };
 
 const gradProducts = products.filter(
   (p) => p.occasions && p.occasions.includes('graduation')
 );
+
+// Price tier splits
+const under50 = gradProducts.filter((p) => p.price < 50);
+const between50and100 = gradProducts.filter((p) => p.price >= 50 && p.price <= 100);
+const over100 = gradProducts.filter((p) => p.price > 100);
 
 const faqs = [
   {
@@ -57,6 +67,31 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: 'Graduation Gifts', item: 'https://thegiftshuffle.com/graduation-gifts' },
+  ],
+};
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Best Graduation Gifts 2026',
+  description: 'Hand-picked graduation gift ideas for the class of 2026, curated by TheGiftShuffle',
+  url: 'https://thegiftshuffle.com/graduation-gifts',
+  numberOfItems: gradProducts.length,
+  itemListElement: gradProducts.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    description: p.description,
+    url: p.affiliateUrl,
+  })),
+};
+
 export default function GraduationGiftsPage() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -66,6 +101,16 @@ export default function GraduationGiftsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <Breadcrumbs items={[{ label: 'Graduation Gifts', href: '/graduation-gifts' }]} />
 
       {/* Hero */}
       <section
@@ -76,8 +121,11 @@ export default function GraduationGiftsPage() {
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4 max-w-3xl mx-auto">
           The Best Graduation Gifts for 2026
         </h1>
-        <p className="text-gray-600 text-lg max-w-xl mx-auto mb-6">
-          Practical picks for the next chapter. Whether they are heading to college, entering the workforce, or moving into their first apartment, there is something here for every grad.
+        <p className="text-gray-600 text-lg max-w-xl mx-auto mb-2">
+          Congratulations to the Class of 2026. Whether they are heading to college, entering the workforce, or moving into their first apartment, there is something here for every grad and every budget.
+        </p>
+        <p className="text-gray-500 text-base max-w-xl mx-auto mb-6">
+          Practical picks that help them launch — not just another gift card.
         </p>
         <Link
           href="/shuffle"
@@ -96,6 +144,57 @@ export default function GraduationGiftsPage() {
             heading="Shuffle Graduation Gift Picks"
           />
         </section>
+
+        {/* Price Tier: Under $50 */}
+        {under50.length > 0 && (
+          <section className="max-w-5xl mx-auto px-4 py-8 border-t border-gray-100">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">
+              Graduation Gifts Under $50
+            </h2>
+            <p className="text-gray-500 text-sm mb-5">
+              Thoughtful picks that won&apos;t break the bank. Great for friends or group contributions.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {under50.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Price Tier: $50–$100 */}
+        {between50and100.length > 0 && (
+          <section className="max-w-5xl mx-auto px-4 py-8 border-t border-gray-100">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">
+              Graduation Gifts $50–$100
+            </h2>
+            <p className="text-gray-500 text-sm mb-5">
+              The sweet spot for close family and friends. Practical upgrades for the next chapter.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {between50and100.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Price Tier: $100+ */}
+        {over100.length > 0 && (
+          <section className="max-w-5xl mx-auto px-4 py-8 border-t border-gray-100">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">
+              Graduation Gifts $100+
+            </h2>
+            <p className="text-gray-500 text-sm mb-5">
+              For the grad who deserves something genuinely memorable. Perfect for parents or group gifts.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {over100.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Editorial */}
         <section className="max-w-3xl mx-auto px-4 py-8 border-t border-gray-100">
@@ -138,7 +237,9 @@ export default function GraduationGiftsPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">More Gift Guides</h2>
           <div className="flex flex-wrap gap-2 justify-center">
             {[
+              { href: '/', label: 'Home' },
               { href: '/birthday-gift-ideas', label: 'Birthday Gifts' },
+              { href: '/gift-ideas-for-teachers', label: 'Teacher Appreciation Gifts' },
               { href: '/category/tech', label: 'Tech Gifts' },
               { href: '/category/office', label: 'Office Gifts' },
               { href: '/category/finance', label: 'Finance Gifts' },
