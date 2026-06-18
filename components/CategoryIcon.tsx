@@ -58,6 +58,20 @@ const PATHS: Record<string, JSX.Element> = {
   shuffle: <><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4" /><path d="M18 4l3 3-3 3M18 14l3 3-3 3" /></>,
   // graduation cap
   graduation: <><path d="M12 5L2.5 9.5 12 14l9.5-4.5L12 5Z" /><path d="M6.5 11.5V16c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5v-4.5M21.5 9.5v5" /></>,
+  // coffee cup + steam
+  coffee: <><path d="M5 9h11v4.5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9Z" /><path d="M16 10.5h2.2a1.8 1.8 0 0 1 0 3.6H16" /><path d="M8 4c-.5 1 .5 1.6 0 2.6M11.5 4c-.5 1 .5 1.6 0 2.6" /></>,
+  // leaf
+  leaf: <><path d="M5.5 18.5c-.5-7 4.5-12 13-12 .5 8.5-4.5 13-11 13-1.3 0-2-.4-2-1Z" /><path d="M5.5 18.5c3-4 6.5-6.5 10.5-7.5" /></>,
+  // notebook / book
+  book: <><path d="M6 4.5h11a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6.5A1.5 1.5 0 0 1 5 18V6a1.5 1.5 0 0 1 1.5-1.5Z" /><path d="M5 16.5A1.5 1.5 0 0 1 6.5 15H18M9 4.5v11" /></>,
+  // droplet (spa / bath / shower)
+  droplet: <><path d="M12 4c3.2 4.2 5 6.8 5 9.3a5 5 0 0 1-10 0C7 10.8 8.8 8.2 12 4Z" /><path d="M10 14.5a2.2 2.2 0 0 0 2 1.5" /></>,
+  // sparkle
+  sparkle: <><path d="M12 4l1.7 4.6L18 10l-4.3 1.4L12 16l-1.7-4.6L6 10l4.3-1.4L12 4Z" /><path d="M18.5 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8Z" /></>,
+  // moon (sleep / rest)
+  moon: <><path d="M19.5 14A7.5 7.5 0 1 1 10 4.5 6 6 0 0 0 19.5 14Z" /></>,
+  // heart
+  heart: <><path d="M12 19.5C8 16.5 5.5 13.8 5.5 10.7A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 6.5 2.2c0 3.1-2.5 5.8-6.5 8.8Z" /></>,
 };
 
 export default function CategoryIcon({ slug, ...props }: IconProps) {

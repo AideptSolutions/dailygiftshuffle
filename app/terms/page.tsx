@@ -18,7 +18,7 @@ export default function TermsPage() {
         {/* FTC-required affiliate disclosure — prominent placement */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8">
           <p className="text-sm font-semibold text-amber-800">
-            📢 Affiliate Disclosure
+            Affiliate Disclosure
           </p>
           <p className="text-sm text-amber-700 mt-1">
             TheGiftShuffle participates in the Amazon Services LLC Associates Program and other

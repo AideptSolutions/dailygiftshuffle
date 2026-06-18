@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import CategoryIcon from '@/components/CategoryIcon';
 
 export const metadata: Metadata = {
   title: 'Best Teacher Appreciation Gift Ideas 2026 | TheGiftShuffle',
@@ -175,7 +176,7 @@ export default function GiftIdeasForTeachersPage() {
           </h2>
           <ul className="space-y-4">
             <li className="flex gap-3">
-              <span className="text-xl">☕</span>
+              <CategoryIcon slug="coffee" className="w-6 h-6 text-coral shrink-0" aria-hidden="true" />
               <p className="text-gray-700 leading-relaxed">
                 <strong>Teachers run on coffee and tea.</strong> A premium tea set or an insulated tumbler that keeps
                 drinks hot through three parent emails and a staff meeting is genuinely used every day. The Ember
@@ -183,7 +184,7 @@ export default function GiftIdeasForTeachersPage() {
               </p>
             </li>
             <li className="flex gap-3">
-              <span className="text-xl">🌿</span>
+              <CategoryIcon slug="leaf" className="w-6 h-6 text-coral shrink-0" aria-hidden="true" />
               <p className="text-gray-700 leading-relaxed">
                 <strong>A plant or candle brightens the classroom.</strong> Desktop succulents are low-maintenance
                 enough to survive summer break and pretty enough to make a desk worth coming back to in September.
@@ -191,7 +192,7 @@ export default function GiftIdeasForTeachersPage() {
               </p>
             </li>
             <li className="flex gap-3">
-              <span className="text-xl">📓</span>
+              <CategoryIcon slug="book" className="w-6 h-6 text-coral shrink-0" aria-hidden="true" />
               <p className="text-gray-700 leading-relaxed">
                 <strong>Teachers love to write things down.</strong> A beautiful journal or a quality leather
                 notebook respects the fact that lesson planning, note-taking, and reflection are a real part
@@ -199,7 +200,7 @@ export default function GiftIdeasForTeachersPage() {
               </p>
             </li>
             <li className="flex gap-3">
-              <span className="text-xl">🛁</span>
+              <CategoryIcon slug="droplet" className="w-6 h-6 text-coral shrink-0" aria-hidden="true" />
               <p className="text-gray-700 leading-relaxed">
                 <strong>Self-care gifts land especially hard for teachers.</strong> The job is relentless from
                 September to June. A spa set, a silk sleep mask, or a jade face roller is giving them permission

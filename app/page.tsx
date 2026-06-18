@@ -398,7 +398,7 @@ export default async function HomePage() {
             href="/cranes"
             className="text-white/70 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
           >
-            Crane&apos;s List 🎁
+            Crane&apos;s List
           </Link>
         </div>
         {/* ── END TEMP ── */}

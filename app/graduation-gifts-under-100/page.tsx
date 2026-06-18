@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import CategoryIcon from '@/components/CategoryIcon';
 
 export const metadata: Metadata = {
   title: "Graduation Gifts Under $100 (Class of 2026) | TheGiftShuffle",
@@ -104,7 +105,7 @@ export default function GraduationGiftsUnder100Page() {
         </section>
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
-          <div className="text-4xl mb-3">🎓</div>
+          <div className="mb-3 flex justify-center"><CategoryIcon slug="graduation" className="w-12 h-12 text-coral" aria-hidden="true" /></div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Graduation Gifts Under $100 — Class of 2026
           </h1>

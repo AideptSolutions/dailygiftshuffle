@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import CategoryIcon from '@/components/CategoryIcon';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
@@ -174,35 +175,35 @@ export default function MothersDayGiftsPage() {
           </p>
 
           <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
-            🚿 The Shower Steamer Moment
+            <CategoryIcon slug="droplet" className="inline-block w-5 h-5 mr-2 align-text-bottom text-coral" aria-hidden="true" />The Shower Steamer Moment
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6">
             If you haven&apos;t heard a mom rave about shower steamers yet, you will. They&apos;re the self-care product that finally makes sense for the woman who doesn&apos;t have time to draw a bath. Drop one on the shower floor and it dissolves into a cloud of essential oils: eucalyptus to clear her head in the morning, lavender when she needs to come down from the day, citrus when she needs to feel like a person again. The best sets come with eight to ten varieties so she can match the scent to the mood. No tub required. No forty-minute ritual. Just five minutes and hot water.
           </p>
 
           <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
-            ✨ Skincare That Says &ldquo;You Deserve This&rdquo;
+            <CategoryIcon slug="sparkle" className="inline-block w-5 h-5 mr-2 align-text-bottom text-coral" aria-hidden="true" />Skincare That Says &ldquo;You Deserve This&rdquo;
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6">
             There&apos;s a version of skincare gifting that misses the point: a generic lotion set, a drugstore face wash. And then there&apos;s the version that actually lands. A Sunday Riley vitamin C serum she&apos;d never spend that much on herself. An Estée Lauder night repair she&apos;s heard about for years. A La Roche-Posay retinol she keeps putting back at the store because it feels like too much. These aren&apos;t gifts about vanity. They&apos;re about restoration. They give her skin care that actually works, paired with a ritual that&apos;s quietly, entirely hers.
           </p>
 
           <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
-            😴 Face Masks: Her Official Permission Slip to Unplug
+            <CategoryIcon slug="moon" className="inline-block w-5 h-5 mr-2 align-text-bottom text-coral" aria-hidden="true" />Face Masks: Her Official Permission Slip to Unplug
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6">
             Korean beauty figured something out that the rest of us are only catching up to: sometimes you need a physical reason to stop. A face mask or a set of gold under-eye patches does exactly that. The moment it goes on, the phone goes down. She has twenty minutes where the answer to every ask is &ldquo;I&apos;m doing my mask.&rdquo; Collagen patches for the under-eye circles she&apos;s been hiding. Hydrating sheet masks for the skin that&apos;s been running on stress and not enough sleep. Give her a full month&apos;s supply. Give her something to look forward to every Sunday night.
           </p>
 
           <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
-            🩷 The Pajama Upgrade She Won&apos;t Buy Herself
+            <CategoryIcon slug="heart" className="inline-block w-5 h-5 mr-2 align-text-bottom text-coral" aria-hidden="true" />The Pajama Upgrade She Won&apos;t Buy Herself
           </h3>
           <p className="text-gray-700 leading-relaxed mb-6">
             Ask most moms what they&apos;re wearing to bed and the answer is some combination of old, worn-out, and &ldquo;it still works.&rdquo; A satin pajama set that actually fits and feels like something is one of those gifts that changes her daily life in a small, quiet way. Soft against the skin, pretty enough that she feels good putting it on. Same goes for sherpa slipper socks she won&apos;t take off all winter, or a plush loungewear set that makes Saturday morning feel like something she earned. Comfort is care. Especially when it&apos;s for someone who&apos;s never the first one to ask for it.
           </p>
 
           <h3 className="text-xl font-semibold mb-3" style={{ color: '#1A202C' }}>
-            🛁 The Spa Night In a Box
+            <CategoryIcon slug="droplet" className="inline-block w-5 h-5 mr-2 align-text-bottom text-coral" aria-hidden="true" />The Spa Night In a Box
           </h3>
           <p className="text-gray-700 leading-relaxed mb-2">
             There&apos;s something about a beautifully packaged spa gift set that does something no individual product can: it gives her a full evening. A bath bomb for the tub, a face mask for after, a silk sleep mask for when she finally gets into bed. The best sets in 2026 are gift-ready out of the box, filled with enough variety that she can mix and match depending on how much time and energy she has. You&apos;re not just giving her products. You&apos;re giving her a night to herself.

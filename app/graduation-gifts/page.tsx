@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import InlineShuffle from '@/components/InlineShuffle';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products-catalog';
+import CategoryIcon from '@/components/CategoryIcon';
 
 export const metadata: Metadata = {
   title: 'Best Graduation Gifts 2026 — Thoughtful Picks for Grads | TheGiftShuffle',
@@ -132,7 +133,7 @@ export default function GraduationGiftsPage() {
         className="text-center py-14 px-4"
         style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #fff9e6 100%)' }}
       >
-        <div className="text-5xl mb-4">🎓</div>
+        <div className="mb-4 flex justify-center"><CategoryIcon slug="graduation" className="w-14 h-14 text-coral" aria-hidden="true" /></div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4 max-w-3xl mx-auto">
           The Best Graduation Gifts for 2026
         </h1>
@@ -146,7 +147,7 @@ export default function GraduationGiftsPage() {
           href="/shuffle"
           className="btn-shuffle text-white font-bold px-8 py-3 rounded-full inline-block text-sm"
         >
-          Find a Gift by Shuffle 🎲
+          Find a Gift by Shuffle
         </Link>
       </section>
 

@@ -8,6 +8,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { readAdminProducts } from '@/lib/admin-store';
+import CategoryIcon from '@/components/CategoryIcon';
 
 export const metadata: Metadata = {
   title: "Crane's List - TheGiftShuffle",
@@ -24,7 +25,7 @@ export default async function CranesPage() {
 
       {/* Header */}
       <div className="max-w-2xl mx-auto px-4 pt-12 pb-6 text-center">
-        <div className="text-5xl mb-4">🎁</div>
+        <div className="mb-4 flex justify-center"><CategoryIcon slug="gift" className="w-14 h-14 text-coral" aria-hidden="true" /></div>
         <h1 className="text-3xl font-extrabold mb-2" style={{ color: '#1A202C' }}>
           Crane&apos;s List
         </h1>
@@ -55,7 +56,7 @@ export default async function CranesPage() {
               />
             ) : (
               <div className="w-20 h-20 flex-shrink-0 rounded-xl bg-gray-100 flex items-center justify-center text-3xl">
-                🎁
+                <CategoryIcon slug="gift" className="w-8 h-8 text-gray-400" aria-hidden="true" />
               </div>
             )}
 

@@ -245,7 +245,7 @@ export default function TechGadgetsPage() {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <span className="font-bold text-[#F04E30]">{p.priceDisplay}</span>
-                  <span className="text-xs text-gray-400">⭐ {p.rating}</span>
+                  <span className="text-xs text-gray-400">★ {p.rating}</span>
                 </div>
               </a>
             ))}
