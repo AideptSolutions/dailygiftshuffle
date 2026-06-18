@@ -5,25 +5,26 @@ import { useEffect, useRef, useState } from 'react';
 import SearchBar from '@/components/SearchBar';
 import { getWishlistCount } from '@/lib/wishlist';
 import SeasonalBanner from '@/components/SeasonalBanner';
+import CategoryIcon from '@/components/CategoryIcon';
 
-const CATEGORIES: { slug: string; label: string; emoji: string }[] = [
-  { slug: 'tech',              label: 'Tech & Gadgets',   emoji: '💻' },
-  { slug: 'gaming',            label: 'Gaming',           emoji: '🎮' },
-  { slug: 'fitness',           label: 'Fitness',          emoji: '💪' },
-  { slug: 'home',              label: 'Home & Decor',     emoji: '🏠' },
-  { slug: 'kitchen',           label: 'Kitchen',          emoji: '🍳' },
-  { slug: 'sports',            label: 'Sports',           emoji: '⚽' },
-  { slug: 'pets',              label: 'Pets',             emoji: '🐾' },
-  { slug: 'kids',              label: 'Kids',             emoji: '🧸' },
-  { slug: 'hobby',             label: 'Hobbies',          emoji: '🎨' },
-  { slug: 'luxury',            label: 'Luxury',           emoji: '✨' },
-  { slug: 'office',            label: 'Office',           emoji: '🖥️' },
-  { slug: 'gardening',         label: 'Gardening',        emoji: '🌱' },
-  { slug: 'parenting',         label: 'Parenting',        emoji: '👶' },
-  { slug: 'diy-tools',         label: 'DIY & Tools',      emoji: '🔨' },
-  { slug: 'finance',           label: 'Finance',          emoji: '💰' },
-  { slug: 'car-accessories',   label: 'Car Accessories',  emoji: '🚗' },
-  { slug: 'outdoors',          label: 'Outdoors & Camping', emoji: '⛺' },
+const CATEGORIES: { slug: string; label: string }[] = [
+  { slug: 'tech',              label: 'Tech & Gadgets' },
+  { slug: 'gaming',            label: 'Gaming' },
+  { slug: 'fitness',           label: 'Fitness' },
+  { slug: 'home',              label: 'Home & Decor' },
+  { slug: 'kitchen',           label: 'Kitchen' },
+  { slug: 'sports',            label: 'Sports' },
+  { slug: 'pets',              label: 'Pets' },
+  { slug: 'kids',              label: 'Kids' },
+  { slug: 'hobby',             label: 'Hobbies' },
+  { slug: 'luxury',            label: 'Luxury' },
+  { slug: 'office',            label: 'Office' },
+  { slug: 'gardening',         label: 'Gardening' },
+  { slug: 'parenting',         label: 'Parenting' },
+  { slug: 'diy-tools',         label: 'DIY & Tools' },
+  { slug: 'finance',           label: 'Finance' },
+  { slug: 'car-accessories',   label: 'Car Accessories' },
+  { slug: 'outdoors',          label: 'Outdoors & Camping' },
 ];
 
 export default function Navbar() {
@@ -65,7 +66,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-extrabold text-xl" style={{ color: '#F04E30' }}>
           {/* Gift box icon matching Shuffle button color */}
-          <span aria-hidden="true" style={{ fontSize: '1.5rem', lineHeight: 1 }}>🎁</span>
+          <CategoryIcon slug="gift" className="w-6 h-6" aria-hidden="true" />
           TheGiftShuffle
         </Link>
         <div className="relative flex items-center gap-4 text-sm font-medium text-gray-600">
@@ -114,7 +115,7 @@ export default function Navbar() {
                       onClick={() => setCategoriesOpen(false)}
                       className="flex items-center gap-2 px-2 py-1.5 rounded-xl hover:bg-[#FFFAF5] hover:text-[#F04E30] transition-colors text-sm text-gray-700"
                     >
-                      <span aria-hidden="true" className="text-base">{cat.emoji}</span>
+                      <CategoryIcon slug={cat.slug} className="w-4 h-4 shrink-0" />
                       <span className="font-medium">{cat.label}</span>
                     </Link>
                   ))}

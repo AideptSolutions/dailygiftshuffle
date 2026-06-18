@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CategoryIcon from '@/components/CategoryIcon';
 
 const CATEGORIES = [
   { slug: 'tech', label: 'Tech & Gadgets' },
@@ -37,7 +38,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <p className="text-white font-extrabold text-lg mb-2">🎁 TheGiftShuffle</p>
+            <p className="text-white font-extrabold text-lg mb-2 inline-flex items-center gap-1.5"><CategoryIcon slug="gift" className="w-5 h-5" aria-hidden="true" /> TheGiftShuffle</p>
             <p className="text-gray-500 text-xs leading-relaxed">
               Your daily gift discovery engine. Find the perfect gift for anyone in seconds.
             </p>

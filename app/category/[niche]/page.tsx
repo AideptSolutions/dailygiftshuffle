@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
+import CategoryIcon from '@/components/CategoryIcon';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
@@ -15,7 +16,6 @@ interface NicheMeta {
   title: string;
   heading: string;
   description: string;
-  emoji: string;
   coverImage: string;
   faqs: { q: string; a: string }[];
 }
@@ -25,7 +25,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Tech Gifts & Gadgets 2026',
     heading: 'Best Tech Gifts & Gadgets',
     description: 'From wireless earbuds to smart home devices, find the best tech gifts for every gadget lover on your list.',
-    emoji: '💻',
     coverImage: '/img/category-heroes/tech.jpg',
     faqs: [
       { q: 'What are the best tech gifts under $50?', a: 'Wireless earbuds, Bluetooth speakers, and smart plugs make excellent tech gifts under $50 that anyone will appreciate.' },
@@ -39,7 +38,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best DIY & Tools Gifts 2026',
     heading: 'Best DIY & Tools Gifts',
     description: 'Discover top-rated home and DIY gifts — from tool sets to smart home gadgets — perfect for the handy person in your life.',
-    emoji: '🔨',
     coverImage: '/img/category-heroes/diy-tools.jpg',
     faqs: [
       { q: 'What are good home gifts for a housewarming?', a: 'Popular housewarming gifts include essential oil diffusers, high-quality candles, personalized door mats, and smart home devices.' },
@@ -52,7 +50,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Finance & Money Gifts 2026',
     heading: 'Best Finance & Money-Savvy Gifts',
     description: 'Help the financial-minded people in your life level up with books, tools, and experiences focused on wealth and smart money habits.',
-    emoji: '💰',
     coverImage: '/img/category-heroes/finance.jpg',
     faqs: [
       { q: 'What are good gifts for someone interested in finance?', a: 'Books on personal finance, budgeting planners, investing courses, and premium financial apps make great gifts for money-minded people.' },
@@ -65,7 +62,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Fitness & Wellness Gifts 2026',
     heading: 'Best Fitness & Wellness Gifts',
     description: 'Shop the best fitness gifts — from resistance bands to massage guns — for the health-conscious person on your list.',
-    emoji: '💪',
     coverImage: '/img/category-heroes/fitness.jpg',
     faqs: [
       { q: 'What are the best fitness gifts under $50?', a: 'Resistance bands, foam rollers, a quality water bottle, and workout journals are fantastic fitness gifts under $50.' },
@@ -79,7 +75,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Parenting & Baby Gifts 2026',
     heading: 'Best Parenting & Baby Gifts',
     description: 'Find the best gifts for new parents and babies — from white noise machines to development toys — that actually make parenting easier.',
-    emoji: '👶',
     coverImage: '/img/category-heroes/parenting.jpg',
     faqs: [
       { q: 'What are the best gifts for new parents?', a: 'New parents love practical gifts like a white noise machine, swaddle blankets, baby monitor, and a meal delivery subscription.' },
@@ -93,7 +88,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Office & Desk Gifts 2026',
     heading: 'Best Office & Desk Gifts',
     description: "Level up anyone's workspace with the best office gifts — from ergonomic accessories to motivational desk decor.",
-    emoji: '🖥️',
     coverImage: '/img/category-heroes/office.jpg',
     faqs: [
       { q: 'What are good office gifts for coworkers?', a: 'Desk organizers, quality notebooks, insulated mugs, and small succulents are universally loved office gifts for coworkers.' },
@@ -106,7 +100,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Luxury Gifts 2026',
     heading: 'Best Luxury Gifts',
     description: 'Indulge someone special with our curated selection of luxury gifts — premium experiences and elevated everyday items.',
-    emoji: '✨',
     coverImage: '/img/category-heroes/luxury.jpg',
     faqs: [
       { q: 'What are good luxury gifts under $100?', a: 'Silk pillowcases, premium skincare sets, cashmere scarves, high-end candles, and fine wine accessories make luxurious gifts under $100.' },
@@ -120,7 +113,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Hobby & Craft Gifts 2026',
     heading: 'Best Hobby & Craft Gifts',
     description: 'Find the perfect gift for the hobbyist in your life — whether they love art, games, puzzles, or outdoor adventures.',
-    emoji: '🎨',
     coverImage: '/img/category-heroes/hobby.jpg',
     faqs: [
       { q: 'What are good gifts for someone who loves crafts?', a: 'High-quality sketchbooks, premium watercolor sets, embroidery kits, and resin art starter kits are perfect for craft lovers.' },
@@ -133,7 +125,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Kitchen & Cooking Gifts 2026',
     heading: 'Best Kitchen & Cooking Gifts',
     description: 'Shop the best kitchen gifts for home cooks and foodies — from chef-grade tools to fun novelty items for the kitchen.',
-    emoji: '🍳',
     coverImage: '/img/category-heroes/kitchen.jpg',
     faqs: [
       { q: 'What are good kitchen gifts for someone who loves to cook?', a: "A quality chef's knife, cast iron skillet, instant-read thermometer, or a premium spice collection are gifts any cook will treasure." },
@@ -147,7 +138,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Pet Lover Gifts 2026',
     heading: 'Best Gifts for Pet Lovers',
     description: 'Find the perfect gift for pet owners and their beloved animals — from cozy pet beds to fun interactive toys.',
-    emoji: '🐾',
     coverImage: '/img/category-heroes/pets.jpg',
     faqs: [
       { q: 'What are good gifts for dog owners?', a: 'Dog owners love personalized pet portraits, GPS trackers, premium treat boxes, interactive puzzle toys, and cozy dog beds.' },
@@ -160,7 +150,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Gifts for Kids 2026',
     heading: 'Best Gifts for Kids',
     description: 'Discover the best gifts for kids of all ages — from creative art sets and STEM kits to outdoor toys that spark imagination and keep them moving.',
-    emoji: '🧸',
     coverImage: '/img/category-heroes/kids.jpg',
     faqs: [
       { q: 'What are the best gifts for kids aged 5-8?', a: 'LEGO sets, art kits, kinetic sand, and snap circuit kits are huge hits for kids aged 5-8 because they combine fun with hands-on learning.' },
@@ -174,7 +163,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Car Accessories & Gifts 2026',
     heading: 'Best Car Accessories & Gifts',
     description: 'Upgrade any ride with the best car accessories — from must-have dash cams and jump starters to clever organizers and phone mounts for the road.',
-    emoji: '🚗',
     coverImage: '/img/category-heroes/car-accessories.jpg',
     faqs: [
       { q: 'What are the best car accessories under $25?', a: 'A magnetic phone mount, seat gap filler organizer, and a hanging car trash can are practical car accessories that any driver will appreciate under $25.' },
@@ -188,7 +176,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Home Gifts & Decor 2026',
     heading: 'Best Home Gifts & Decor',
     description: 'Find the best home gifts — from cozy throw blankets and scented candles to elegant decor pieces that make any space feel special.',
-    emoji: '🏠',
     coverImage: '/img/category-heroes/home.jpg',
     faqs: [
       { q: 'What are good home gifts for a housewarming?', a: 'Personalized doormats, high-quality candles, a beautiful serving board, cozy throw blankets, and stylish planters are all crowd-pleasing housewarming gifts.' },
@@ -202,7 +189,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Gardening Gifts 2026',
     heading: 'Best Gardening Gifts',
     description: 'Find the best gardening gifts for every green thumb — from premium tool sets and raised bed kits to beautiful planters and seed subscription boxes.',
-    emoji: '🌱',
     coverImage: '/img/category-heroes/gardening.jpg',
     faqs: [
       { q: 'What are the best gardening gifts under $50?', a: 'A quality hand tool set, a set of ceramic herb planters, a seed subscription sampler, a kneeling pad, or a personalized garden marker set are all excellent gardening gifts under $50.' },
@@ -216,7 +202,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Sports Gifts & Gear 2026',
     heading: 'Best Sports Gifts & Gear',
     description: 'Find the best sports gifts for every athlete and fan — from training equipment and apparel to stadium gear and recovery tools.',
-    emoji: '🏆',
     coverImage: '/img/category-heroes/sports.jpg',
     faqs: [
       { q: 'What are the best sports gifts under $50?', a: 'A quality water bottle, resistance bands, a foam roller, personalized jersey number keychain, or team-branded gear are great sports gifts under $50.' },
@@ -230,7 +215,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Gaming Gifts 2026',
     heading: 'Best Gaming Gifts',
     description: "Level up any gamer's setup with the best gaming gifts — from wireless controllers and headsets to gaming chairs and accessories for every console.",
-    emoji: '🎮',
     coverImage: '/img/category-heroes/gaming.jpg',
     faqs: [
       { q: 'What are the best gaming gifts under $50?', a: 'A gaming headset, controller stand, LED strip lights, a gaming mouse pad, or a gift card to their favorite platform are great gaming gifts under $50.' },
@@ -244,7 +228,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Outdoors and Camping Gifts 2026',
     heading: 'Best Outdoors and Camping Gifts',
     description: 'Find the best gifts for campers, hikers, and outdoor adventurers. From ultralight gear to camp kitchen essentials, these are the picks serious outdoor people actually want.',
-    emoji: '⛺',
     coverImage: '/img/category-heroes/outdoors.jpg',
     faqs: [
       { q: 'What are the best camping gifts under $50?', a: 'A LifeStraw water filter, UCO stormproof matches, a Black Diamond headlamp, or an ENO hammock are all outstanding camping gifts under $50. These are the items experienced campers buy themselves anyway, which makes them genuinely appreciated when received as gifts.' },
@@ -258,7 +241,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Travel Gifts for Frequent Flyers & Adventurers 2026',
     heading: 'Best Travel Gifts',
     description: 'Find the best gifts for travelers, frequent flyers, and adventure seekers — from smart luggage and packing cubes to travel pillows and portable chargers.',
-    emoji: '✈️',
     coverImage: '/img/category-heroes/travel.jpg',
     faqs: [
       { q: 'What are the best travel gifts under $50?', a: 'Packing cubes, a passport holder wallet, a travel neck pillow, a universal travel adapter, and a portable power bank are all outstanding travel gifts under $50. These are items frequent travelers use on every single trip.' },
@@ -271,7 +253,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Beauty & Self-Care Gifts 2026',
     heading: 'Best Beauty & Self-Care Gifts',
     description: 'Shop the best beauty and self-care gifts — from professional hair tools and skincare devices to luxurious bath sets and spa-worthy kits.',
-    emoji: '💅',
     coverImage: '/img/category-heroes/beauty.jpg',
     faqs: [
       { q: 'What are the best beauty gifts under $50?', a: 'A gua sha facial tool set, a silk hair scrunchie set, a bath bomb collection, a premium face mask kit, and a jade roller are all beautiful self-care gifts under $50 that feel far more indulgent than their price tag.' },
@@ -284,7 +265,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Baby Shower Gifts 2026',
     heading: 'Best Baby Shower Gifts',
     description: 'Find the perfect baby shower gift — from swaddle sets and baby monitors to postpartum care kits and keepsake boxes.',
-    emoji: '👶',
     coverImage: '/img/category-heroes/baby-shower.jpg',
     faqs: [
       { q: 'What are the best baby shower gifts for new moms?', a: 'New moms appreciate practical gifts they truly need: a white noise machine, premium swaddle blankets, a postpartum recovery kit, and a comfortable baby carrier top the list. The best gifts address real needs in the first weeks home.' },
@@ -297,7 +277,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best Wedding Gifts 2026',
     heading: 'Best Wedding Gifts',
     description: 'Find the perfect wedding gift — from personalized keepsakes and registry picks to honeymoon experiences and luxury home items.',
-    emoji: '💍',
     coverImage: '/img/category-heroes/wedding.jpg',
     faqs: [
       { q: 'What are the best wedding gifts for a couple?', a: 'The best wedding gifts are either from the registry (which guarantees they want it) or a meaningful upgrade to something on the registry. Personalized items like an engraved cutting board, a custom star map, or monogrammed towels add a sentimental touch no registry item can match.' },
@@ -310,7 +289,6 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     title: 'Best AI & Smart Home Gifts 2026',
     heading: 'Best AI & Smart Home Gifts',
     description: 'Discover the best AI gadgets and smart home gifts — from voice assistants and smart displays to AI wearables and automated home devices for every tech lover.',
-    emoji: '🤖',
     coverImage: '/img/category-heroes/ai-smart-home.jpg',
     faqs: [
       { q: 'What are the best smart home gifts under $50?', a: 'Smart plugs, smart bulbs, Echo Dot speakers, and Bluetooth trackers are all excellent smart home gifts under $50. They are easy to set up, work with Alexa and Google Home, and immediately make any home feel more intelligent.' },
@@ -567,7 +545,7 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-6">
             <div className="max-w-4xl mx-auto flex items-end gap-3">
-              <span className="text-4xl leading-none">{meta.emoji}</span>
+              <CategoryIcon slug={params.niche} className="w-9 h-9 text-white shrink-0" aria-hidden="true" />
               <h1 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
                 {meta.heading}
               </h1>

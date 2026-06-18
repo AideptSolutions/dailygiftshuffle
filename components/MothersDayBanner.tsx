@@ -40,7 +40,7 @@ export default function MothersDayBanner() {
         </Link>
       ) : (
         <span className="text-white text-sm font-semibold tracking-wide">
-          💐 Mother&apos;s Day is May 11 —{' '}
+          Mother&apos;s Day is May 10 —{' '}
           <Link href="/mothers-day-gifts" className="underline underline-offset-2 hover:opacity-90">
             Shop the Best Gifts for Mom
           </Link>

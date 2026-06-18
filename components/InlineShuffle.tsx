@@ -1,6 +1,7 @@
 'use client';
 import { useState, useCallback } from 'react';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
+import CategoryIcon from '@/components/CategoryIcon';
 
 interface Props {
   products: CompactProduct[];
@@ -41,9 +42,9 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
         <h2 className="text-2xl font-bold" style={{ color: '#1A202C' }}>{heading}</h2>
         <button
           onClick={shuffle}
-          className="bg-[#F04E30] text-white font-bold px-5 py-2 rounded-full hover:opacity-90 transition-opacity text-sm"
+          className="bg-[#F04E30] text-white font-bold px-5 py-2 rounded-full hover:opacity-90 transition-opacity text-sm inline-flex items-center gap-1.5"
         >
-          🔀 Shuffle Again
+          <CategoryIcon slug="shuffle" className="w-4 h-4" aria-hidden="true" /> Shuffle Again
         </button>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
