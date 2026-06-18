@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { AdminProduct } from '@/lib/admin-store';
 import { BudgetTier, NicheTag, Recipient } from '@/data/products';
+import CategoryIcon from '@/components/CategoryIcon';
 
 const ALL_RECIPIENTS: Recipient[] = ['her','him','mom','dad','brother','sister','grandparents','teens','kids','baby','couples','friends','pets','coworker','employees','streamers','myself','myself-her','myself-him'];
 const ALL_BUDGETS: { id: BudgetTier; label: string }[] = [
@@ -310,7 +311,7 @@ export default function AdminPage() {
               onChange={e => setImportCranes(e.target.checked)}
               className="w-4 h-4 accent-orange-500"
             />
-            <span className="text-sm font-semibold text-gray-700">🎁 Add to Crane&apos;s List</span>
+            <span className="text-sm font-semibold text-gray-700"><CategoryIcon slug="gift" className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Add to Crane&apos;s List</span>
             <span className="text-xs text-gray-400">(shows on /cranes — temp, remove after creator API approval)</span>
           </label>
 
@@ -382,7 +383,7 @@ export default function AdminPage() {
                         {editDraft.image ? (
                           <img src={editDraft.image} alt="preview" className="w-[120px] h-[120px] rounded-lg object-cover border border-gray-200 shrink-0" />
                         ) : (
-                          <div className="w-[120px] h-[120px] rounded-lg bg-gray-100 flex items-center justify-center border border-gray-200 shrink-0 text-3xl">🎁</div>
+                          <div className="w-[120px] h-[120px] rounded-lg bg-gray-100 flex items-center justify-center border border-gray-200 shrink-0 text-3xl"><CategoryIcon slug="gift" className="w-9 h-9 text-gray-400" aria-hidden="true" /></div>
                         )}
                         <div className="flex-1 space-y-2">
                           <input
@@ -400,7 +401,7 @@ export default function AdminPage() {
                               }}
                               className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-purple-300 text-purple-600 hover:bg-purple-50 transition-colors"
                             >
-                              ✨ Generate with AI
+                              <CategoryIcon slug="sparkle" className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Generate with AI
                             </button>
                           ) : (
                             <div className="space-y-2">
@@ -458,7 +459,7 @@ export default function AdminPage() {
                         onChange={e => setEditDraft({ ...editDraft, cranes: e.target.checked })}
                         className="w-4 h-4 accent-orange-500"
                       />
-                      <span className="text-sm font-semibold text-gray-700">🎁 Add to Crane&apos;s List</span>
+                      <span className="text-sm font-semibold text-gray-700"><CategoryIcon slug="gift" className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Add to Crane&apos;s List</span>
                     </label>
 
                     <div className="flex items-center gap-3 pt-2 border-t border-gray-100">
@@ -475,14 +476,14 @@ export default function AdminPage() {
                     {p.image ? (
                       <img src={p.image} alt={p.name} className="w-16 h-16 rounded-lg object-cover shrink-0 border border-gray-100" />
                     ) : (
-                      <div className="w-16 h-16 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200 text-2xl">🎁</div>
+                      <div className="w-16 h-16 rounded-lg bg-gray-100 flex items-center justify-center shrink-0 border border-gray-200 text-2xl"><CategoryIcon slug="gift" className="w-8 h-8 text-gray-400" aria-hidden="true" /></div>
                     )}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
                         <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${p.status === 'published' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
                           {p.status}
                         </span>
-                        {p.cranes && <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-orange-100 text-orange-600">🎁 Crane&apos;s</span>}
+                        {p.cranes && <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-orange-100 text-orange-600"><CategoryIcon slug="gift" className="inline-block w-3 h-3 mr-0.5 align-text-bottom" aria-hidden="true" />Crane&apos;s</span>}
                         <span className="text-xs text-gray-400 font-mono">{p.asin || 'no asin'}</span>
                       </div>
                       <p className="font-semibold text-gray-900 text-sm truncate">{p.name}</p>

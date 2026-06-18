@@ -277,7 +277,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
           href="/shuffle"
           className="btn-shuffle text-white font-bold px-8 py-3 rounded-full inline-block text-sm"
         >
-          Shuffle a Surprise Gift 🎲
+          Shuffle a Surprise Gift
         </Link>
       </section>
 
@@ -327,7 +327,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
             className="bg-white font-bold px-10 py-3 rounded-full inline-block transition-all hover:scale-105 text-sm"
             style={{ color: '#F04E30' }}
           >
-            Start Shuffling 🎲
+            Start Shuffling
           </Link>
         </section>
       </main>

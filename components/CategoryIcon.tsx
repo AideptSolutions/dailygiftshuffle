@@ -72,6 +72,8 @@ const PATHS: Record<string, JSX.Element> = {
   moon: <><path d="M19.5 14A7.5 7.5 0 1 1 10 4.5 6 6 0 0 0 19.5 14Z" /></>,
   // heart
   heart: <><path d="M12 19.5C8 16.5 5.5 13.8 5.5 10.7A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 6.5 2.2c0 3.1-2.5 5.8-6.5 8.8Z" /></>,
+  // envelope / mail
+  mail: <><rect x="3.5" y="6" width="17" height="12" rx="1.5" /><path d="M4 7.5l8 5.5 8-5.5" /></>,
 };
 
 export default function CategoryIcon({ slug, ...props }: IconProps) {

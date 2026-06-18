@@ -5,34 +5,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/data/products';
 import ProductModal from '@/components/ProductModal';
+import CategoryIcon from '@/components/CategoryIcon';
 
 const CATEGORIES = [
-  { slug: 'tech',            label: 'Tech & Gadgets',  emoji: '💻', desc: 'Gadgets, smart home, wearables, and all things tech.' },
-  { slug: 'gaming',          label: 'Gaming',           emoji: '🎮', desc: 'Controllers, headsets, accessories for every gamer.' },
-  { slug: 'fitness',         label: 'Fitness',          emoji: '💪', desc: 'Equipment, wearables, and gear for active people.' },
-  { slug: 'home',            label: 'Home & Decor',     emoji: '🏠', desc: 'Cozy decor, candles, and thoughtful pieces for any home.' },
-  { slug: 'kitchen',         label: 'Kitchen',          emoji: '🍳', desc: 'Appliances, tools, and gadgets for food lovers.' },
-  { slug: 'sports',          label: 'Sports',           emoji: '⚽', desc: 'Gear, apparel, and fan gifts for every sport.' },
-  { slug: 'pets',            label: 'Pets',             emoji: '🐾', desc: 'Toys, treats, and accessories for beloved pets.' },
-  { slug: 'kids',            label: 'Kids',             emoji: '🧸', desc: 'Fun, educational, and creative gifts for children.' },
-  { slug: 'hobby',           label: 'Hobbies',          emoji: '🎨', desc: 'Gifts for makers, collectors, and passionate hobbyists.' },
-  { slug: 'luxury',          label: 'Luxury',           emoji: '✨', desc: 'Premium and elevated gifts worth splurging on.' },
-  { slug: 'office',          label: 'Office',           emoji: '🖥️', desc: 'Desk upgrades, productivity tools, and work-from-home essentials.' },
-  { slug: 'gardening',       label: 'Gardening',        emoji: '🌱', desc: 'Tools, planters, and gifts for green thumbs.' },
-  { slug: 'parenting',       label: 'Parenting',        emoji: '👶', desc: 'Practical and thoughtful gifts for parents and caregivers.' },
-  { slug: 'diy-tools',       label: 'DIY & Tools',      emoji: '🔨', desc: 'Power tools, hand tools, and workshop essentials.' },
-  { slug: 'finance',         label: 'Finance',          emoji: '💰', desc: 'Books, courses, and gifts for money-minded people.' },
-  { slug: 'car-accessories', label: 'Car Accessories',  emoji: '🚗', desc: 'Dash cams, organizers, and must-haves for drivers.' },
+  { slug: 'tech',            label: 'Tech & Gadgets', desc: 'Gadgets, smart home, wearables, and all things tech.' },
+  { slug: 'gaming',          label: 'Gaming', desc: 'Controllers, headsets, accessories for every gamer.' },
+  { slug: 'fitness',         label: 'Fitness', desc: 'Equipment, wearables, and gear for active people.' },
+  { slug: 'home',            label: 'Home & Decor', desc: 'Cozy decor, candles, and thoughtful pieces for any home.' },
+  { slug: 'kitchen',         label: 'Kitchen', desc: 'Appliances, tools, and gadgets for food lovers.' },
+  { slug: 'sports',          label: 'Sports', desc: 'Gear, apparel, and fan gifts for every sport.' },
+  { slug: 'pets',            label: 'Pets', desc: 'Toys, treats, and accessories for beloved pets.' },
+  { slug: 'kids',            label: 'Kids', desc: 'Fun, educational, and creative gifts for children.' },
+  { slug: 'hobby',           label: 'Hobbies', desc: 'Gifts for makers, collectors, and passionate hobbyists.' },
+  { slug: 'luxury',          label: 'Luxury', desc: 'Premium and elevated gifts worth splurging on.' },
+  { slug: 'office',          label: 'Office', desc: 'Desk upgrades, productivity tools, and work-from-home essentials.' },
+  { slug: 'gardening',       label: 'Gardening', desc: 'Tools, planters, and gifts for green thumbs.' },
+  { slug: 'parenting',       label: 'Parenting', desc: 'Practical and thoughtful gifts for parents and caregivers.' },
+  { slug: 'diy-tools',       label: 'DIY & Tools', desc: 'Power tools, hand tools, and workshop essentials.' },
+  { slug: 'finance',         label: 'Finance', desc: 'Books, courses, and gifts for money-minded people.' },
+  { slug: 'car-accessories', label: 'Car Accessories', desc: 'Dash cams, organizers, and must-haves for drivers.' },
 ];
 
 const PAGES = [
-  { label: 'Birthday Gift Ideas',  url: '/birthday-gift-ideas',  emoji: '🎂' },
-  { label: 'Christmas Gift Ideas', url: '/christmas-gift-ideas', emoji: '🎄' },
-  { label: 'Gifts for Her',        url: '/gift-ideas-for-her',   emoji: '👩' },
-  { label: 'Gifts for Him',        url: '/gift-ideas-for-him',   emoji: '👨' },
-  { label: 'Gifts for Mom',        url: '/gift-ideas-for-mom',   emoji: '❤️' },
-  { label: 'Gifts for Dad',        url: '/gift-ideas-for-dad',   emoji: '🎩' },
-  { label: 'Gifts Under $50',      url: '/gifts-under-50',       emoji: '💵' },
+  { label: 'Birthday Gift Ideas',  url: '/birthday-gift-ideas' },
+  { label: 'Christmas Gift Ideas', url: '/christmas-gift-ideas' },
+  { label: 'Gifts for Her',        url: '/gift-ideas-for-her' },
+  { label: 'Gifts for Him',        url: '/gift-ideas-for-him' },
+  { label: 'Gifts for Mom',        url: '/gift-ideas-for-mom' },
+  { label: 'Gifts for Dad',        url: '/gift-ideas-for-dad' },
+  { label: 'Gifts Under $50',      url: '/gifts-under-50' },
 ];
 
 export default function SearchBar() {
@@ -213,7 +214,7 @@ export default function SearchBar() {
                             onClick={close}
                             className="flex items-center gap-3 px-3 py-2 hover:bg-[#FFFAF5] transition-colors group"
                           >
-                            <span className="text-lg w-7 text-center flex-shrink-0">{c.emoji}</span>
+                            <CategoryIcon slug={c.slug} className="w-5 h-5 text-coral shrink-0" aria-hidden="true" />
                             <div className="flex-1 min-w-0">
                               <p className="text-sm font-semibold text-gray-800 group-hover:text-[#F04E30] transition-colors">
                                 {c.label}
@@ -238,7 +239,7 @@ export default function SearchBar() {
                             onClick={close}
                             className="flex items-center gap-3 px-3 py-2 hover:bg-[#FFFAF5] transition-colors group"
                           >
-                            <span className="text-lg w-7 text-center flex-shrink-0">{p.emoji}</span>
+                            
                             <p className="text-sm font-semibold text-gray-800 group-hover:text-[#F04E30] transition-colors">
                               {p.label}
                             </p>

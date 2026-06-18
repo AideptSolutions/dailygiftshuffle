@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Product } from '@/data/products';
 import { addToWishlist } from '@/lib/wishlist';
+import CategoryIcon from '@/components/CategoryIcon';
 
 interface Props {
   product: Product;
@@ -65,7 +66,7 @@ export default function WishlistModal({ product, onClose, onSaved, onSkip }: Pro
         onClick={(e) => e.stopPropagation()}
       >
         <div className="text-center mb-6">
-          <div aria-hidden="true" className="text-5xl mb-3">✉️</div>
+          <div className="flex justify-center mb-3"><CategoryIcon slug="mail" className="w-12 h-12 text-coral" aria-hidden="true" /></div>
           <h2 id="wishlist-modal-title" className="text-xl font-extrabold text-gray-900 mb-1">
             Want your picks emailed to you?
           </h2>
@@ -104,7 +105,7 @@ export default function WishlistModal({ product, onClose, onSaved, onSkip }: Pro
           aria-busy={saving}
           className="w-full btn-shuffle text-white font-bold py-3 rounded-xl disabled:opacity-60 mb-3"
         >
-          {saving ? 'Saving…' : 'Send my picks ✉️'}
+          {saving ? 'Saving…' : 'Send my picks'}
         </button>
 
         <div className="text-center">
