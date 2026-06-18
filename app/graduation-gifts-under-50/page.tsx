@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
@@ -89,6 +90,19 @@ export default function GraduationGiftsUnder50Page() {
       />
 
       <main id="main-content" className="flex-1">
+        {/* Hero image */}
+        <section className="max-w-5xl mx-auto px-4 pt-8">
+          <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
+            <Image
+              src="/images/heroes/graduation-gifts-under-50.jpg"
+              alt="An affordable graduation gift under $50"
+              fill
+              className="object-cover"
+              priority
+              unoptimized
+            />
+          </div>
+        </section>
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <div className="text-4xl mb-3">🎓</div>

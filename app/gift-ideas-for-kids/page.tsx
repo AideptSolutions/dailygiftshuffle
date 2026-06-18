@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
@@ -104,6 +105,19 @@ export default function GiftIdeasForKidsPage() {
       <Breadcrumbs items={[{ label: 'Gift Ideas for Kids and Grandkids', href: '/gift-ideas-for-kids' }]} />
 
       <main id="main-content" className="flex-1">
+        {/* Hero image */}
+        <section className="max-w-5xl mx-auto px-4 pt-8">
+          <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
+            <Image
+              src="/images/heroes/gift-ideas-for-kids.jpg"
+              alt="Children excitedly opening presents"
+              fill
+              className="object-cover"
+              priority
+              unoptimized
+            />
+          </div>
+        </section>
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
@@ -167,6 +168,19 @@ export default function Gifts24HoursPage() {
       <Breadcrumbs items={[{ label: 'Top 10 Gifts That Arrive in 24 Hours', href: '/top-10-gifts-that-arrive-in-24-hours' }]} />
 
       <main id="main-content" className="flex-1">
+        {/* Hero image */}
+        <section className="max-w-5xl mx-auto px-4 pt-8">
+          <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
+            <Image
+              src="/images/heroes/top-10-gifts-that-arrive-in-24-hours.jpg"
+              alt="A fast-delivery gift package at the front door"
+              fill
+              className="object-cover"
+              priority
+              unoptimized
+            />
+          </div>
+        </section>
         {/* SEO Blurb */}
         <section className="max-w-3xl mx-auto px-4 pt-10 pb-2 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>

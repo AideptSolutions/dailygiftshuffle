@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Footer from '@/components/Footer';
@@ -111,6 +112,20 @@ export default function GraduationGiftsPage() {
       />
 
       <Breadcrumbs items={[{ label: 'Graduation Gifts', href: '/graduation-gifts' }]} />
+
+      {/* Hero image */}
+      <section className="max-w-5xl mx-auto px-4 pt-8">
+        <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
+          <Image
+            src="/images/heroes/graduation-gifts.jpg"
+            alt="A graduation gift with cap and diploma"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+        </div>
+      </section>
 
       {/* Hero */}
       <section
