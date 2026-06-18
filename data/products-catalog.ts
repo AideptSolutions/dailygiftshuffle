@@ -1349,7 +1349,7 @@ export const products: Product[] = [
   {
     id: 'pet-010',
     name: 'Furbo 360 Dog Camera with Treat Toss',
-    description: 'Check in on your dog from anywhere. This smart camera streams 1080p HD video and lets you toss treats remotely — plus bark alerts go straight to your phone.',
+    description: 'Check in on your dog from anywhere. This smart camera streams 1080p HD video and lets you toss treats remotely, plus bark alerts go straight to your phone.',
     price: 169,
     priceDisplay: '$169',
     image: '/images/products/pet-010.jpg',
@@ -1381,7 +1381,7 @@ export const products: Product[] = [
   {
     id: 'pet-012',
     name: 'ChomChom Pet Hair Roller',
-    description: 'No batteries, no refills — just roll back and forth to lift pet hair from any surface. Works on couches, car seats, and clothes. Pet owners who try it never go back.',
+    description: 'No batteries, no refills, just roll back and forth to lift pet hair from any surface. Works on couches, car seats, and clothes. Pet owners who try it never go back.',
     price: 30,
     priceDisplay: '$30',
     image: '/images/products/pet-012.jpg',
@@ -1397,7 +1397,7 @@ export const products: Product[] = [
   {
     id: 'pet-013',
     name: 'ARCA PET First Aid Kit',
-    description: 'A compact emergency kit built specifically for pets. Includes bandages, gauze, tweezers, tick remover, and an emergency guide — everything you need before you can get to a vet.',
+    description: 'A compact emergency kit built specifically for pets. Includes bandages, gauze, tweezers, tick remover, and an emergency guide, everything you need before you can get to a vet.',
     price: 29,
     priceDisplay: '$25–35',
     image: '/images/products/pet-013.jpg',
@@ -1461,7 +1461,7 @@ export const products: Product[] = [
   {
     id: 'pet-017',
     name: 'Embark Dog DNA Breed Identification Test',
-    description: 'Swab your dog\'s cheek and mail it in. Embark tests for 350+ breeds and screens for 210+ genetic health conditions — results arrive in 2 to 4 weeks. The gift that answers the question every rescue dog owner has.',
+    description: 'Swab your dog\'s cheek and mail it in. Embark tests for 350+ breeds and screens for 210+ genetic health conditions. Results arrive in 2 to 4 weeks. The gift that answers the question every rescue dog owner has.',
     price: 99,
     priceDisplay: '$99',
     image: '/images/products/pet-017.jpg',

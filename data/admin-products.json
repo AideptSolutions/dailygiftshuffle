@@ -3440,7 +3440,7 @@
   },
   {
     "id": "admin-20260319-jojoba-oil",
-    "name": "BodyJ4You Organic Jojoba Oil — USDA Organic, 100% Pure, 1 fl oz",
+    "name": "BodyJ4You Organic Jojoba Oil, USDA Organic, 100% Pure, 1 fl oz",
     "description": "USDA certified organic jojoba oil, cold-pressed and unrefined. Use as a face moisturizer, hair serum, cuticle oil, Gua Sha carrier, dermaplaning primer, or scalp massage oil. Hexane-free, non-comedogenic, fragrance-free. One bottle does it all.",
     "price": 7.99,
     "priceDisplay": "$7.99",
@@ -3473,7 +3473,7 @@
   },
   {
     "id": "admin-20260319-castor-oil",
-    "name": "Handcraft Blends Organic Castor Oil — 16 fl oz, Pure & Cold-Pressed",
+    "name": "Handcraft Blends Organic Castor Oil, 16 fl oz, Pure & Cold-Pressed",
     "description": "100% pure, cold-pressed organic castor oil for eyelashes, eyebrows, hair growth, and skin. Thick, nourishing formula packed with ricinoleic acid. Use as a lash serum, brow booster, scalp treatment, or body moisturizer. Hexane-free, no additives.",
     "price": 9.99,
     "priceDisplay": "$9.99",
@@ -3507,8 +3507,8 @@
   },
   {
     "id": "admin-20260319-batana-oil",
-    "name": "VXHDAG Batana Oil for Hair Growth — 100% Pure, Cold-Pressed",
-    "description": "Pure cold-pressed batana oil sourced from Central American palm nuts — a centuries-old remedy for hair growth, thickness, and scalp health. Repairs damage, reduces breakage, and adds deep shine. Works on all hair types.",
+    "name": "VXHDAG Batana Oil for Hair Growth, 100% Pure, Cold-Pressed",
+    "description": "Pure cold-pressed batana oil sourced from Central American palm nuts, a centuries-old remedy for hair growth, thickness, and scalp health. Repairs damage, reduces breakage, and adds deep shine. Works on all hair types.",
     "price": 7.99,
     "priceDisplay": "$7.99",
     "image": "/images/products/admin-20260319-batana-oil.jpg",
@@ -3541,7 +3541,7 @@
   {
     "id": "admin-20260320-joyconcrane",
     "name": "Nintendo Joy-Con (L/R) - Neon Purple/Neon Orange",
-    "description": "The official Nintendo Joy-Con wireless controllers in bold Neon Purple and Neon Orange. Compatible with all Nintendo Switch systems. Play anywhere, anytime — solo or multiplayer right out of the box. Perfect for gamers, streamers, and Switch fans of all ages.",
+    "description": "The official Nintendo Joy-Con wireless controllers in bold Neon Purple and Neon Orange. Compatible with all Nintendo Switch systems. Play anywhere, anytime, solo or multiplayer right out of the box. Perfect for gamers, streamers, and Switch fans of all ages.",
     "price": 79.99,
     "priceDisplay": "$79.99",
     "image": "/images/products/admin-20260320-joyconcrane.jpg",
