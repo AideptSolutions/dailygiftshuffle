@@ -5,7 +5,9 @@ import { getCategoryImageUrl } from '@/lib/categoryImages';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  const adminProducts = await getPublishedAdminProducts();
+  // Exclude Crane's List items (personal shopping list, not gift-catalog
+  // products) from the public shuffle. They remain on the /cranes page.
+  const adminProducts = (await getPublishedAdminProducts()).filter(p => !p.cranes);
 
   const normalized = adminProducts.map(p => ({
     id: p.id,
