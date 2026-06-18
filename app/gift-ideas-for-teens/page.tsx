@@ -9,7 +9,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: "Gift Ideas for Teens — Trending Gifts They'll Actually Want | TheGiftShuffle",
   description:
-    'Discover the best gift ideas for teens in 2025 — from wireless earbuds and LED gaming lights to skincare gift sets and streetwear. Find trending teen gifts they actually want.',
+    'Discover the best gift ideas for teens in 2026 — from wireless earbuds and LED gaming lights to skincare gift sets and streetwear. Find trending teen gifts they actually want.',
   keywords: [
     'gift ideas for teens',
     'gifts for teenagers',
@@ -38,7 +38,7 @@ const teenProducts = products.filter((p) => p.recipients.includes('teens')).slic
 const faqs = [
   {
     q: 'What are the best gifts for teen boys?',
-    a: "The best gifts for teen boys in 2025 include gaming peripherals (mechanical keyboards, controllers), wireless earbuds, LED gaming lights, portable Bluetooth speakers, and tech accessories. Look for products with 4.5+ stars and strong social proof — teens do their research. PopSockets, JBL earbuds, and gaming gear consistently top the lists.",
+    a: "The best gifts for teen boys in 2026 include gaming peripherals (mechanical keyboards, controllers), wireless earbuds, LED gaming lights, portable Bluetooth speakers, and tech accessories. Look for products with 4.5+ stars and strong social proof — teens do their research. PopSockets, JBL earbuds, and gaming gear consistently top the lists.",
   },
   {
     q: 'What do teenage girls want as gifts?',
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: 'What are trending gifts for teens right now?',
-    a: "Trending teen gifts in 2025 include: true wireless earbuds (AirPods, JBL), LED room lighting kits, ring lights for content creators, gaming accessories, mini Polaroid cameras, skincare starter sets (CeraVe, The Ordinary), and aesthetic journaling kits. Social media virality is the #1 purchase signal — if it trends on TikTok, teens want it.",
+    a: "Trending teen gifts in 2026 include: true wireless earbuds (AirPods, JBL), LED room lighting kits, ring lights for content creators, gaming accessories, mini Polaroid cameras, skincare starter sets (CeraVe, The Ordinary), and aesthetic journaling kits. Social media virality is the #1 purchase signal — if it trends on TikTok, teens want it.",
   },
   {
     q: 'What are good gifts for teens under $50?',
@@ -103,7 +103,7 @@ export default function GiftIdeasForTeensPage() {
             Gift Ideas for Teens
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            Shopping for teens in 2025 means keeping up with what&apos;s actually trending — not just what looks good in a store. The top gift categories right now are tech accessories (wireless earbuds, LED gaming lights, ring lights for aspiring content creators), fashion and streetwear, gaming peripherals, skincare and self-care sets for teen girls, and fitness gear. Reviews and social media virality are the #1 purchase signal for teens — they already know what they want, and it usually has 10k+ five-star reviews to back it up.
+            Shopping for teens in 2026 means keeping up with what&apos;s actually trending — not just what looks good in a store. The top gift categories right now are tech accessories (wireless earbuds, LED gaming lights, ring lights for aspiring content creators), fashion and streetwear, gaming peripherals, skincare and self-care sets for teen girls, and fitness gear. Reviews and social media virality are the #1 purchase signal for teens — they already know what they want, and it usually has 10k+ five-star reviews to back it up.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best-performing teen gifts are the ones teens would brag about receiving. Products like PopSockets, JBL earbuds, skincare gift sets from CeraVe or The Ordinary, and aesthetic room LED kits consistently dominate the category with 4.5+ stars and tens of thousands of reviews. Whether you&apos;re shopping for a birthday, the holidays, or graduation, these picks are hand-curated to match what teens are actually asking for right now.

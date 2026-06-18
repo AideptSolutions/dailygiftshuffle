@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     "Find the perfect Christmas gift for everyone on your list. Browse 30+ curated holiday gift ideas sorted by recipient and budget — no more gift stress.",
   keywords: [
     'christmas gift ideas',
-    'christmas gifts 2025',
+    'christmas gifts 2026',
     'holiday gift ideas',
     'christmas gift ideas for family',
     'unique christmas gifts',
-    'best christmas gifts 2025',
+    'best christmas gifts 2026',
   ],
   openGraph: {
-    title: 'Christmas Gift Ideas 2025 — Top Picks for Everyone on Your List | TheGiftShuffle',
+    title: 'Christmas Gift Ideas 2026 — Top Picks for Everyone on Your List | TheGiftShuffle',
     description:
       "Browse 30+ curated Christmas gift ideas for everyone on your list — sorted by recipient and budget.",
     type: 'website',
@@ -47,8 +47,8 @@ const displayProducts = christmasProducts.length >= 12
 
 const faqs = [
   {
-    q: 'What are good Christmas gifts for 2025?',
-    a: "The best Christmas gifts for 2025 include smart home gadgets (smart plugs, smart bulbs, smart thermostat), premium self-care sets, insulated tumblers and mugs, subscription boxes, gaming accessories, and experience gifts. For 2025, personalized and tech-integrated gifts are trending heavily — things like smart watches, Kindle e-readers, and wireless audio gear.",
+    q: 'What are good Christmas gifts for 2026?',
+    a: "The best Christmas gifts for 2026 include smart home gadgets (smart plugs, smart bulbs, smart thermostat), premium self-care sets, insulated tumblers and mugs, subscription boxes, gaming accessories, and experience gifts. For 2026, personalized and tech-integrated gifts are trending heavily — things like smart watches, Kindle e-readers, and wireless audio gear.",
   },
   {
     q: "What's a unique Christmas gift idea?",
@@ -75,8 +75,8 @@ const faqs = [
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Christmas Gift Ideas 2025',
-  description: 'Curated Christmas gift ideas for 2025 by TheGiftShuffle',
+  name: 'Christmas Gift Ideas 2026',
+  description: 'Curated Christmas gift ideas for 2026 by TheGiftShuffle',
   url: 'https://thegiftshuffle.com/christmas-gift-ideas',
   numberOfItems: displayProducts.length,
   itemListElement: displayProducts.map((p, i) => ({

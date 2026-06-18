@@ -9,7 +9,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: 'Gift Ideas for Friends — Fun & Thoughtful Picks They\'ll Love | TheGiftShuffle',
   description:
-    'Find the best gift ideas for friends in 2025 — fun card games, self-care sets, cocktail kits, and viral TikTok picks. Thoughtful gifts for every best friend and budget.',
+    'Find the best gift ideas for friends in 2026 — fun card games, self-care sets, cocktail kits, and viral TikTok picks. Thoughtful gifts for every best friend and budget.',
   keywords: [
     'gift ideas for friends',
     'gifts for best friend',
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: 'What gifts are trending for friends right now?',
-    a: "The top trending friend gifts in 2025 are: viral TikTok-featured self-care sets, spicy card games (like Hot Ones Hot Sauce sets), cocktail kits, aesthetic journaling sets, cozy snack boxes, and personalized jewelry. The biggest shift is toward &quot;experience-adjacent&quot; gifts — items that create a shared moment or ongoing ritual between friends.",
+    a: "The top trending friend gifts in 2026 are: viral TikTok-featured self-care sets, spicy card games (like Hot Ones Hot Sauce sets), cocktail kits, aesthetic journaling sets, cozy snack boxes, and personalized jewelry. The biggest shift is toward &quot;experience-adjacent&quot; gifts — items that create a shared moment or ongoing ritual between friends.",
   },
 ];
 
@@ -106,7 +106,7 @@ export default function GiftIdeasForFriendsPage() {
             Gift Ideas for Friends
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            The biggest trend in friend gifting for 2025 is &quot;experience-adjacent&quot; gifts — items that create shared moments rather than just sit on a shelf. Card games (We Are Not Really Strangers, What Do You Meme), cocktail kits, snack boards, and board games are leading the category. These gifts work because they become an event: you give the cocktail kit, and suddenly you have plans for Friday night. Personalized consumables are also surging — flavored gummy bear sets, custom protein shakes, beauty essentials — things that feel curated but get used up and reordered.
+            The biggest trend in friend gifting for 2026 is &quot;experience-adjacent&quot; gifts — items that create shared moments rather than just sit on a shelf. Card games (We Are Not Really Strangers, What Do You Meme), cocktail kits, snack boards, and board games are leading the category. These gifts work because they become an event: you give the cocktail kit, and suddenly you have plans for Friday night. Personalized consumables are also surging — flavored gummy bear sets, custom protein shakes, beauty essentials — things that feel curated but get used up and reordered.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Friend gifts skew heavily toward fun, shareable, and self-care items — and gifts under $30 dominate this segment. The best approach: look for products with high social media presence and strong Amazon reviews. Viral TikTok items with 50k+ reviews are a reliable signal that the gift will land well. Whether it&apos;s a birthday, Galentine&apos;s Day, or just because, these picks are the ones friends actually want — not just what looks good wrapped.
