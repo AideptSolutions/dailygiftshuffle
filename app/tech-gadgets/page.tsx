@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import InlineShuffle from '@/components/InlineShuffle';
+import { products } from '@/data/products';
 
 export const metadata: Metadata = {
   title: 'Best Tech Gifts & Gadgets 2026 — Top Picks for Every Budget | TheGiftShuffle',
@@ -126,6 +128,8 @@ const techProducts = [
   },
 ];
 
+const techShufflePool = products.filter((p) => p.tags?.includes('tech'));
+
 const faqs = [
   {
     q: 'What are the best tech gifts for 2026?',
@@ -211,6 +215,11 @@ export default function TechGadgetsPage() {
             These six picks cover wireless audio, remote work, portable power, and everything in between — curated for
             people who already have a phone charger and need something better.
           </p>
+        </section>
+
+        {/* Inline Shuffle */}
+        <section className="max-w-5xl mx-auto px-4 py-6">
+          <InlineShuffle products={techShufflePool} heading="Shuffle Tech Picks" />
         </section>
 
         {/* Product Grid */}
