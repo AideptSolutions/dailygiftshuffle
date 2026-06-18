@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts — Best Picks for Dad in 2026 | TheGiftShuffle",
+  title: "Father's Day Gifts: Best Picks for Dad in 2026 | TheGiftShuffle",
   description:
-    "Find the best Father's Day gifts for 2026 — tools, tech gadgets, grilling accessories, fitness gear, and picks for every kind of dad. Gifts he'll actually use.",
+    "Find the best Father's Day gifts for 2026: tools, tech gadgets, grilling accessories, fitness gear, and picks for every kind of dad. Gifts he'll actually use.",
   keywords: [
     "fathers day gifts",
     "fathers day gift ideas",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     "fathers day gifts for dad",
   ],
   openGraph: {
-    title: "Father's Day Gifts — Best Picks for Dad in 2026 | TheGiftShuffle",
+    title: "Father's Day Gifts: Best Picks for Dad in 2026 | TheGiftShuffle",
     description:
-      "Browse the best Father's Day gift ideas for 2026 — tools, tech, grilling gear, and picks dad will actually use.",
+      "Browse the best Father's Day gift ideas for 2026: tools, tech, grilling gear, and picks dad will actually use.",
     type: 'website',
     url: 'https://thegiftshuffle.com/fathers-day-gifts',
     images: [
@@ -44,15 +44,15 @@ const fathersDayProducts = products.filter(
 const faqs = [
   {
     q: "What are the best Father's Day gifts in 2026?",
-    a: "The best Father's Day gifts in 2026 are: cordless power tools (drill sets, multi-tools), premium grilling accessories (digital meat thermometers, BBQ spice rub sets), tech gadgets (portable Bluetooth speakers, smartwatches), fitness gear (resistance bands, walking pads), and premium everyday carry items (leather wallets, insulated tumblers). Gifts with high repurchase rates — like grilling spice sets and golf accessories — signal proven, repeated value.",
+    a: "The best Father's Day gifts in 2026 are: cordless power tools (drill sets, multi-tools), premium grilling accessories (digital meat thermometers, BBQ spice rub sets), tech gadgets (portable Bluetooth speakers, smartwatches), fitness gear (resistance bands, walking pads), and premium everyday carry items (leather wallets, insulated tumblers). Gifts with high repurchase rates, like grilling spice sets and golf accessories, signal proven, repeated value.",
   },
   {
     q: "What do dads actually want for Father's Day?",
-    a: "When surveyed, dads most often say they want something practical that upgrades their daily life or a hobby — not another generic mug. Top categories: a tool or gadget for the garage or workshop, an upgrade to their grilling setup, fitness or outdoor gear, or tech that makes life easier. The best gifts are ones he has mentioned wanting but hasn't bought himself.",
+    a: "When surveyed, dads most often say they want something practical that upgrades their daily life or a hobby, not another generic mug. Top categories: a tool or gadget for the garage or workshop, an upgrade to their grilling setup, fitness or outdoor gear, or tech that makes life easier. The best gifts are ones he has mentioned wanting but hasn't bought himself.",
   },
   {
     q: "What are unique Father's Day gift ideas?",
-    a: "Unique Father's Day gifts include: a custom engraved multi-tool, a whiskey aging kit (make his own bourbon), a star map of a significant date, a personalized leather dopp kit with his initials, a DNA ancestry kit for the curious dad, or a premium outdoor cooking class. These feel genuinely considered — not grabbed off an endcap at the last minute.",
+    a: "Unique Father's Day gifts include: a custom engraved multi-tool, a whiskey aging kit (make his own bourbon), a star map of a significant date, a personalized leather dopp kit with his initials, a DNA ancestry kit for the curious dad, or a premium outdoor cooking class. These feel genuinely considered, not grabbed off an endcap at the last minute.",
   },
   {
     q: "What are good Father's Day gifts under $50?",
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     q: "What's a good Father's Day gift for a new dad?",
-    a: "New dads need practical support — the best gifts acknowledge what his life looks like now. Top picks: a diaper bag backpack (there are excellent men-forward options), a hands-free phone holder for baby monitoring, a premium coffee setup for sleep-deprived mornings, a funny &quot;new dad survival kit&quot; bundle, or a gift card for a meal delivery service. These signal that you see him — not just the baby.",
+    a: "New dads need practical support. The best gifts acknowledge what his life looks like now. Top picks: a diaper bag backpack (there are excellent men-forward options), a hands-free phone holder for baby monitoring, a premium coffee setup for sleep-deprived mornings, a funny &quot;new dad survival kit&quot; bundle, or a gift card for a meal delivery service. These signal that you see him, not just the baby.",
   },
 ];
 
@@ -122,10 +122,10 @@ export default function FathersDayGiftsPage() {
             Father&apos;s Day Gifts
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            Father&apos;s Day is the 3rd biggest gifting event of the year — and 2026 trends make it easier to nail than ever. Outdoor and garage tools remain the #1 gift category, with cordless power tools, magnetic tool wristbands, and workshop accessories leading searches. Tech gadgets are close behind: portable speakers, smartwatches, and compact projectors are the fastest-growing segments. Grilling accessories (digital meat thermometers, premium spice sets, BBQ tool kits) are perennial winners with exceptional review counts and high repurchase rates. Sports gear and health and fitness items round out the top five.
+            Father&apos;s Day is the 3rd biggest gifting event of the year, and 2026 trends make it easier to nail than ever. Outdoor and garage tools remain the #1 gift category, with cordless power tools, magnetic tool wristbands, and workshop accessories leading searches. Tech gadgets are close behind: portable speakers, smartwatches, and compact projectors are the fastest-growing segments. Grilling accessories (digital meat thermometers, premium spice sets, BBQ tool kits) are perennial winners with exceptional review counts and high repurchase rates. Sports gear and health and fitness items round out the top five.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            The fastest-growing sub-categories this year are cordless tools, smart tech, and premium everyday carry items — the kind of upgrade Dad has been putting off buying for himself. Products with high repurchase rates like golf balls, grilling spice sets, and insulated tumblers are proven gift performers precisely because they run out, wear out, and get used constantly. These picks are curated for every kind of dad — the builder, the grill master, the tech guy, and the one who says he doesn&apos;t need anything.
+            The fastest-growing sub-categories this year are cordless tools, smart tech, and premium everyday carry items, the kind of upgrade Dad has been putting off buying for himself. Products with high repurchase rates like golf balls, grilling spice sets, and insulated tumblers are proven gift performers precisely because they run out, wear out, and get used constantly. These picks are curated for every kind of dad: the builder, the grill master, the tech guy, and the one who says he doesn&apos;t need anything.
           </p>
         </section>
 
@@ -153,7 +153,7 @@ export default function FathersDayGiftsPage() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Not finding the right fit? Use TheGiftShuffle — pick Dad, set your budget, and get
+              Not finding the right fit? Use TheGiftShuffle. Pick Dad, set your budget, and get
               a personalized Father&apos;s Day gift recommendation in seconds.
             </p>
             <Link

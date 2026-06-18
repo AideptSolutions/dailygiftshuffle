@@ -13,7 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const raw = await redis.get(wishlistKey(params.id));
-  if (!raw) return { title: 'Wishlist Not Found — TheGiftShuffle' };
+  if (!raw) return { title: 'Wishlist Not Found: TheGiftShuffle' };
 
   const wishlist: ShareableWishlist =
     typeof raw === 'string' ? JSON.parse(raw) : (raw as ShareableWishlist);
@@ -21,11 +21,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const firstImage = wishlist.items[0]?.image;
 
   return {
-    title: `${wishlist.title} — TheGiftShuffle`,
-    description: `Browse ${wishlist.title} — a curated gift wishlist on TheGiftShuffle.`,
+    title: `${wishlist.title}: TheGiftShuffle`,
+    description: `Browse ${wishlist.title}, a curated gift wishlist on TheGiftShuffle.`,
     openGraph: {
       title: wishlist.title,
-      description: `Browse ${wishlist.title} — a curated gift wishlist on TheGiftShuffle.`,
+      description: `Browse ${wishlist.title}, a curated gift wishlist on TheGiftShuffle.`,
       images: firstImage ? [{ url: firstImage }] : [],
       url: `https://thegiftshuffle.com/wishlist/${params.id}`,
     },
@@ -113,7 +113,7 @@ export default async function PublicWishlistPage({ params }: Props) {
 
         {wishlist.items.length > 0 && (
           <p className="text-xs text-center text-gray-400 mt-6">
-            Affiliate links — we may earn a commission at no extra cost to you.
+            Affiliate links. We may earn a commission at no extra cost to you.
           </p>
         )}
       </main>

@@ -40,7 +40,7 @@ export default function SelectionsPage() {
           <p className="text-gray-500">
             {favorites.length > 0
               ? `${favorites.length} item${favorites.length !== 1 ? 's' : ''} Â· estimated total $${totalMin.toFixed(2)}`
-              : 'Nothing saved yet â€” go shuffle some gifts!'}
+              : 'Nothing saved yet. Go shuffle some gifts!'}
           </p>
         </div>
 

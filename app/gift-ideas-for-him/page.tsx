@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Him — Gifts He'll Actually Use | TheGiftShuffle",
+  title: "Gift Ideas for Him: Gifts He'll Actually Use | TheGiftShuffle",
   description:
-    "Browse 25+ curated gift ideas for him — husband, boyfriend, brother, or best friend. Practical picks, unique finds, and crowd-pleasers for every budget.",
+    "Browse 25+ curated gift ideas for him: husband, boyfriend, brother, or best friend. Practical picks, unique finds, and crowd-pleasers for every budget.",
   keywords: [
     'gift ideas for him',
     'gifts for him',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'practical gifts for men',
   ],
   openGraph: {
-    title: "Gift Ideas for Him — Gifts He'll Actually Use | TheGiftShuffle",
+    title: "Gift Ideas for Him: Gifts He'll Actually Use | TheGiftShuffle",
     description:
-      "Browse 25+ curated gift ideas for him — husband, boyfriend, brother, or best friend.",
+      "Browse 25+ curated gift ideas for him: husband, boyfriend, brother, or best friend.",
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-him',
     images: [
@@ -124,7 +124,7 @@ export default function GiftIdeasForHimPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             If you&apos;re looking for gift ideas for him, the best gifts are ones he&apos;ll actually
-            use — smart gadgets, quality everyday carry items, grilling accessories, and experiences
+            use: smart gadgets, quality everyday carry items, grilling accessories, and experiences
             he wouldn&apos;t plan for himself. Whether you need a gift for a husband, boyfriend, or
             best friend, these picks are proven crowd-pleasers.
           </p>

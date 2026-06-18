@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gift Ideas 2026 — Top Picks for Everyone on Your List | TheGiftShuffle',
+  title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List | TheGiftShuffle',
   description:
-    "Find the perfect Christmas gift for everyone on your list. Browse 30+ curated holiday gift ideas sorted by recipient and budget — no more gift stress.",
+    "Find the perfect Christmas gift for everyone on your list. Browse 30+ curated holiday gift ideas sorted by recipient and budget, with no more gift stress.",
   keywords: [
     'christmas gift ideas',
     'christmas gifts 2026',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'best christmas gifts 2026',
   ],
   openGraph: {
-    title: 'Christmas Gift Ideas 2026 — Top Picks for Everyone on Your List | TheGiftShuffle',
+    title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List | TheGiftShuffle',
     description:
-      "Browse 30+ curated Christmas gift ideas for everyone on your list — sorted by recipient and budget.",
+      "Browse 30+ curated Christmas gift ideas for everyone on your list, sorted by recipient and budget.",
     type: 'website',
     url: 'https://thegiftshuffle.com/christmas-gift-ideas',
     images: [
@@ -50,7 +50,7 @@ const displayProducts = christmasProducts.length >= 12
 const faqs = [
   {
     q: 'What are good Christmas gifts for 2026?',
-    a: "The best Christmas gifts for 2026 include smart home gadgets (smart plugs, smart bulbs, smart thermostat), premium self-care sets, insulated tumblers and mugs, subscription boxes, gaming accessories, and experience gifts. For 2026, personalized and tech-integrated gifts are trending heavily — things like smart watches, Kindle e-readers, and wireless audio gear.",
+    a: "The best Christmas gifts for 2026 include smart home gadgets (smart plugs, smart bulbs, smart thermostat), premium self-care sets, insulated tumblers and mugs, subscription boxes, gaming accessories, and experience gifts. For 2026, personalized and tech-integrated gifts are trending heavily, with things like smart watches, Kindle e-readers, and wireless audio gear.",
   },
   {
     q: "What's a unique Christmas gift idea?",
@@ -130,7 +130,7 @@ export default function ChristmasGiftIdeasPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best Christmas gift ideas include cozy subscription boxes, personalized keepsakes,
             smart home gadgets, experience gifts, and family game nights. TheGiftShuffle curates
-            picks for every person on your list and every budget — so you can shop with confidence
+            picks for every person on your list and every budget, so you can shop with confidence
             this holiday season.
           </p>
         </section>

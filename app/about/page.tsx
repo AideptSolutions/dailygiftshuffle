@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'About TheGiftShuffle — Our Editorial Policy & Mission',
+  title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
   description:
     'Learn how TheGiftShuffle curates gift recommendations. Every product is hand-picked based on Amazon ratings, review count, and real recipient fit. No pay-to-play.',
   openGraph: {
-    title: 'About TheGiftShuffle — Our Editorial Policy & Mission',
+    title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
     description:
       'TheGiftShuffle curates gift recommendations based on Amazon ratings 4.3+, 1,000+ reviews, and genuine value-for-money. Learn about our editorial standards.',
     type: 'website',
@@ -42,7 +42,7 @@ export default function AboutPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2">Our Mission</h2>
               <p>
                 <strong>TheGiftShuffle</strong> exists to solve one of life&apos;s most common
-                problems: finding the right gift for someone you care about — in under 60 seconds.
+                problems: finding the right gift for someone you care about, in under 60 seconds.
                 Whether it&apos;s a birthday, anniversary, holiday, or just because, we help you
                 go from &ldquo;no idea&rdquo; to &ldquo;perfect pick&rdquo; instantly.
               </p>
@@ -52,15 +52,15 @@ export default function AboutPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2">Editorial Policy</h2>
               <p>
                 Every product in our catalog is hand-picked by our editorial team. We do not accept
-                paid placements — every recommendation earns its spot on merit alone. Our selection
+                paid placements. Every recommendation earns its spot on merit alone. Our selection
                 criteria:
               </p>
               <ul className="list-disc list-inside mt-3 space-y-1 text-gray-600">
-                <li><strong>Amazon rating of 4.3 or higher</strong> — only genuinely well-loved products</li>
-                <li><strong>Minimum 1,000 customer reviews</strong> — enough signal to trust the rating</li>
-                <li><strong>Strong value for money</strong> — great products at fair prices</li>
-                <li><strong>Genuine recipient fit</strong> — would a real person actually want this?</li>
-                <li><strong>No pay-to-play</strong> — brands cannot buy their way into our catalog</li>
+                <li><strong>Amazon rating of 4.3 or higher</strong>, only genuinely well-loved products</li>
+                <li><strong>Minimum 1,000 customer reviews</strong>, enough signal to trust the rating</li>
+                <li><strong>Strong value for money</strong>, great products at fair prices</li>
+                <li><strong>Genuine recipient fit</strong>, would a real person actually want this?</li>
+                <li><strong>No pay-to-play</strong>, brands cannot buy their way into our catalog</li>
               </ul>
             </section>
 
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 gift from our curated catalog based on three signals: who the gift is for
                 (recipient type), your budget, and the occasion. We track which products
                 you&apos;ve already seen in your current session so you never get the same
-                recommendation twice in a row — every shuffle reveals something new.
+                recommendation twice in a row. Every shuffle reveals something new.
               </p>
               <ol className="list-decimal list-inside mt-3 space-y-1 text-gray-600">
                 <li>Pick who the gift is for (Mom, Dad, Teens, Pets, and more)</li>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 TheGiftShuffle participates in the Amazon Associates Program, an affiliate
                 advertising program designed to provide a means for sites to earn advertising fees
                 by advertising and linking to Amazon.com. When you click a product link and make a
-                purchase, we earn a small commission — at no extra cost to you. This affiliate
+                purchase, we earn a small commission, at no extra cost to you. This affiliate
                 income helps us keep the site free, maintain our catalog, and keep the
                 recommendations flowing. Our editorial recommendations are never influenced by
                 affiliate relationships.

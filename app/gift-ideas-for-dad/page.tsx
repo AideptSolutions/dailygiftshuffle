@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Dad — 25 Unique Picks He'll Actually Use | TheGiftShuffle",
+  title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use | TheGiftShuffle",
   description:
-    "Skip the boring tie. Browse 25+ hand-picked gift ideas for Dad — from tech gadgets to experiences he'll actually talk about. Perfect for Father's Day, birthdays, and more.",
+    "Skip the boring tie. Browse 25+ hand-picked gift ideas for Dad, from tech gadgets to experiences he'll actually talk about. Perfect for Father's Day, birthdays, and more.",
   keywords: [
     'gift ideas for dad',
     'gifts for dad',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'gifts dad will actually use',
   ],
   openGraph: {
-    title: "Gift Ideas for Dad — 25 Unique Picks He'll Actually Use | TheGiftShuffle",
+    title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use | TheGiftShuffle",
     description:
-      "Browse 25+ hand-picked gift ideas for Dad — gadgets, grilling gear, and experiences he'll actually use.",
+      "Browse 25+ hand-picked gift ideas for Dad: gadgets, grilling gear, and experiences he'll actually use.",
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-dad',
     images: [
@@ -45,7 +45,7 @@ const dadProducts = products.filter(
 const faqs = [
   {
     q: 'What do dads actually want as gifts?',
-    a: "Most dads want gifts they'll genuinely use — not decorations that collect dust. Top picks include smart gadgets, quality tools, grilling accessories, insulated tumblers, and experience gifts like a whiskey tasting or golf lesson. When in doubt, upgrade something he already uses to a premium version.",
+    a: "Most dads want gifts they'll genuinely use, not decorations that collect dust. Top picks include smart gadgets, quality tools, grilling accessories, insulated tumblers, and experience gifts like a whiskey tasting or golf lesson. When in doubt, upgrade something he already uses to a premium version.",
   },
   {
     q: "What's a good gift for a dad who has everything?",
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: 'What gifts do dads love most?',
-    a: "Dads consistently love gifts that make their hobbies or daily routines better. Top categories: grilling and BBQ accessories, tech gadgets and smart home devices, quality tools and EDC items, fitness trackers, and anything related to his specific hobby — whether that's fishing, golf, woodworking, or gaming.",
+    a: "Dads consistently love gifts that make their hobbies or daily routines better. Top categories: grilling and BBQ accessories, tech gadgets and smart home devices, quality tools and EDC items, fitness trackers, and anything related to his specific hobby, whether that's fishing, golf, woodworking, or gaming.",
   },
   {
     q: "What's the best Father's Day gift?",
@@ -125,7 +125,7 @@ export default function GiftIdeasForDadPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             If you&apos;re looking for gift ideas for dad, the best options include smart gadgets,
             grilling accessories, personalized keepsakes, and experiences like golf lessons or a
-            whiskey tasting. These picks are chosen because dads actually use them — no forgotten
+            whiskey tasting. These picks are chosen because dads actually use them, with no forgotten
             gift drawer.
           </p>
         </section>
@@ -155,7 +155,7 @@ export default function GiftIdeasForDadPage() {
             </h2>
             <p className="text-gray-600 mb-6">
               Not finding exactly what you need? Use TheGiftShuffle to get a personalized
-              recommendation in seconds — just pick Dad, set your budget, and hit Shuffle.
+              recommendation in seconds. Just pick Dad, set your budget, and hit Shuffle.
             </p>
             <Link
               href="/shuffle"

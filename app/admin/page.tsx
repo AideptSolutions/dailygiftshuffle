@@ -229,7 +229,7 @@ export default function AdminPage() {
             <h2 className="font-bold text-gray-900 mb-1">Import Amazon Links</h2>
             <p className="text-sm text-gray-500">
               Paste one Amazon affiliate URL per line (from your SiteStripe toolbar).
-              Tag everything below before hitting Import — you can always edit per-item after.
+              Tag everything below before hitting Import. You can always edit per-item after.
             </p>
           </div>
 
@@ -312,7 +312,7 @@ export default function AdminPage() {
               className="w-4 h-4 accent-orange-500"
             />
             <span className="text-sm font-semibold text-gray-700"><CategoryIcon slug="gift" className="inline-block w-4 h-4 mr-1 align-text-bottom" aria-hidden="true" />Add to Crane&apos;s List</span>
-            <span className="text-xs text-gray-400">(shows on /cranes — temp, remove after creator API approval)</span>
+            <span className="text-xs text-gray-400">(shows on /cranes, temp, remove after creator API approval)</span>
           </label>
 
           {importError && <p className="text-red-500 text-xs">{importError}</p>}

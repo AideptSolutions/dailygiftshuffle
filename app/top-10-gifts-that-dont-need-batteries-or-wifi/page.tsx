@@ -199,7 +199,7 @@ export default function GiftsNoBatteriesPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
             <Image
               src="/images/hero-gifts-no-batteries.png"
-              alt="Gifts that don't need batteries — leather journal, fountain pen, wool blanket, and playing cards on a wooden desk"
+              alt="Gifts that don't need batteries, leather journal, fountain pen, wool blanket, and playing cards on a wooden desk"
               fill
               className="object-cover"
               priority

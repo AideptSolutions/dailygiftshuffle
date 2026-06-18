@@ -36,11 +36,11 @@ export default function MothersDayBanner() {
           href="/last-minute-mothers-day-gifts"
           className="text-white text-sm font-semibold tracking-wide hover:underline underline-offset-2"
         >
-          ⏰ Last chance — Mother&apos;s Day is May 11! Order today for guaranteed delivery →
+          Last chance. Mother&apos;s Day is May 10! Order today for guaranteed delivery →
         </Link>
       ) : (
         <span className="text-white text-sm font-semibold tracking-wide">
-          Mother&apos;s Day is May 10 —{' '}
+          Mother&apos;s Day is May 10:{' '}
           <Link href="/mothers-day-gifts" className="underline underline-offset-2 hover:opacity-90">
             Shop the Best Gifts for Mom
           </Link>

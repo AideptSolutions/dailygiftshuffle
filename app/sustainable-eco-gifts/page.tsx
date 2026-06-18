@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Sustainable Eco-Friendly Gifts — Green Picks They Will Actually Use | TheGiftShuffle',
+  title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use | TheGiftShuffle',
   description:
-    'Eco gifts that do not feel like a punishment. Browse the best sustainable and eco-friendly gift ideas — reusable, organic, plastic-free, and genuinely useful for any budget.',
+    'Eco gifts that do not feel like a punishment. Browse the best sustainable and eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful for any budget.',
   keywords: [
     'sustainable gifts',
     'eco friendly gifts',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     'zero waste gifts',
   ],
   openGraph: {
-    title: 'Sustainable Eco-Friendly Gifts — Green Picks They Will Actually Use | TheGiftShuffle',
+    title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use | TheGiftShuffle',
     description:
-      'Browse the best sustainable and eco-friendly gift ideas — reusable, organic, plastic-free, and genuinely useful for any budget.',
+      'Browse the best sustainable and eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful for any budget.',
     type: 'website',
     url: 'https://thegiftshuffle.com/sustainable-eco-gifts',
     images: [
@@ -47,7 +47,7 @@ const ecoProducts = products
 const faqs = [
   {
     q: 'What are good sustainable gifts?',
-    a: "Good sustainable gifts are ones the recipient will actually use — not just feel good about receiving. The best eco-friendly gifts include a Hydro Flask stainless steel water bottle, a beeswax wrap set (replaces plastic wrap), a bamboo cutting board, organic cotton throw blanket, a reusable tote set, a high-quality stainless steel travel mug, or a seed-paper notebook. Practicality makes sustainability last.",
+    a: "Good sustainable gifts are ones the recipient will actually use, not just feel good about receiving. The best eco-friendly gifts include a Hydro Flask stainless steel water bottle, a beeswax wrap set (replaces plastic wrap), a bamboo cutting board, organic cotton throw blanket, a reusable tote set, a high-quality stainless steel travel mug, or a seed-paper notebook. Practicality makes sustainability last.",
   },
   {
     q: 'What are eco-friendly gifts that people actually want?',
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'What are sustainable gifts under $50?',
-    a: "Great sustainable gifts under $50 include a beeswax wrap starter set, a bamboo cheese board, an organic cotton tote bag set, a soy wax candle, a reusable coffee cup, a bamboo phone stand, or a natural essential oil diffuser kit. Under $50 is the sweet spot for eco gifts — most practical sustainable swaps live in this price range.",
+    a: "Great sustainable gifts under $50 include a beeswax wrap starter set, a bamboo cheese board, an organic cotton tote bag set, a soy wax candle, a reusable coffee cup, a bamboo phone stand, or a natural essential oil diffuser kit. Under $50 is the sweet spot for eco gifts. Most practical sustainable swaps live in this price range.",
   },
   {
     q: 'What are eco-friendly gifts for someone who loves the outdoors?',
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'Are eco-friendly gifts more expensive?',
-    a: "Not always. Many sustainable gifts cost the same or less than conventional equivalents — beeswax wraps cost $12 to $20, reusable tote sets cost $10 to $18, soy candles cost $15 to $25, bamboo utensil kits cost $14 to $22. Where sustainable gifts cost more, they usually last significantly longer, making the per-use cost lower.",
+    a: "Not always. Many sustainable gifts cost the same or less than conventional equivalents, beeswax wraps cost $12 to $20, reusable tote sets cost $10 to $18, soy candles cost $15 to $25, bamboo utensil kits cost $14 to $22. Where sustainable gifts cost more, they usually last significantly longer, making the per-use cost lower.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function SustainableEcoGiftsPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Eco gifts that do not feel like a punishment. Browse the best sustainable and
-            eco-friendly gift ideas — reusable, organic, plastic-free, and genuinely useful
+            eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful
             for any budget and any person on your list.
           </p>
         </section>
@@ -155,7 +155,7 @@ export default function SustainableEcoGiftsPage() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Need a sustainable gift idea right now? Use TheGiftShuffle — pick who it&apos;s for,
+              Need a sustainable gift idea right now? Use TheGiftShuffle, pick who it&apos;s for,
               set your budget, and get an instant personalized recommendation.
             </p>
             <Link

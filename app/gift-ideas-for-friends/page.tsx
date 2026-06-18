@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas for Friends — Fun & Thoughtful Picks They\'ll Love | TheGiftShuffle',
+  title: 'Gift Ideas for Friends: Fun & Thoughtful Picks They\'ll Love | TheGiftShuffle',
   description:
-    'Find the best gift ideas for friends in 2026 — fun card games, self-care sets, cocktail kits, and viral TikTok picks. Thoughtful gifts for every best friend and budget.',
+    'Find the best gift ideas for friends in 2026: fun card games, self-care sets, cocktail kits, and viral TikTok picks. Thoughtful gifts for every best friend and budget.',
   keywords: [
     'gift ideas for friends',
     'gifts for best friend',
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     'unique gifts for friends',
   ],
   openGraph: {
-    title: "Gift Ideas for Friends — Fun & Thoughtful Picks They'll Love | TheGiftShuffle",
+    title: "Gift Ideas for Friends: Fun & Thoughtful Picks They'll Love | TheGiftShuffle",
     description:
-      'Browse fun and thoughtful gift ideas for friends — viral picks, self-care sets, card games, and more under $30.',
+      'Browse fun and thoughtful gift ideas for friends: viral picks, self-care sets, card games, and more under $30.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-friends',
     images: [
@@ -42,11 +42,11 @@ const friendProducts = products.filter((p) => p.recipients.includes('friends')).
 const faqs = [
   {
     q: "What's a good birthday gift for a best friend?",
-    a: "The best birthday gifts for a best friend are personal and fun — think a custom friendship card game, a cocktail kit for a night in, a personalized jewelry piece, a cozy self-care set, or a funny engraved wine glass. The goal is to make it feel picked out for them specifically, not grabbed off a shelf. Under $40 you have a ton of great options.",
+    a: "The best birthday gifts for a best friend are personal and fun. Think a custom friendship card game, a cocktail kit for a night in, a personalized jewelry piece, a cozy self-care set, or a funny engraved wine glass. The goal is to make it feel picked out for them specifically, not grabbed off a shelf. Under $40 you have a ton of great options.",
   },
   {
     q: 'What are fun gifts for a group of friends?',
-    a: "For group gifting, experience-adjacent gifts win every time: a party card game (What Do You Meme, We Are Not Really Strangers), a cocktail kit, a charcuterie board set, a fondue pot, or a group cooking class gift card. These create shared memories rather than individual possessions — and friends tend to remember the experience far more than any single item.",
+    a: "For group gifting, experience-adjacent gifts win every time: a party card game (What Do You Meme, We Are Not Really Strangers), a cocktail kit, a charcuterie board set, a fondue pot, or a group cooking class gift card. These create shared memories rather than individual possessions, and friends tend to remember the experience far more than any single item.",
   },
   {
     q: 'What are unique gift ideas for a female best friend?',
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: 'What are gifts for friends under $25?',
-    a: "Great gifts for friends under $25 include: a funny quote wine glass, a bath bomb set, a scented candle, a card game, a mini succulent planter, or a self-care face mask set. The under-$25 category is dominated by consumables and shareable experiences — items that feel generous without a big price tag.",
+    a: "Great gifts for friends under $25 include: a funny quote wine glass, a bath bomb set, a scented candle, a card game, a mini succulent planter, or a self-care face mask set. The under-$25 category is dominated by consumables and shareable experiences, items that feel generous without a big price tag.",
   },
   {
     q: "What's a last-minute gift for a friend?",
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: 'What gifts are trending for friends right now?',
-    a: "The top trending friend gifts in 2026 are: viral TikTok-featured self-care sets, spicy card games (like Hot Ones Hot Sauce sets), cocktail kits, aesthetic journaling sets, cozy snack boxes, and personalized jewelry. The biggest shift is toward &quot;experience-adjacent&quot; gifts — items that create a shared moment or ongoing ritual between friends.",
+    a: "The top trending friend gifts in 2026 are: viral TikTok-featured self-care sets, spicy card games (like Hot Ones Hot Sauce sets), cocktail kits, aesthetic journaling sets, cozy snack boxes, and personalized jewelry. The biggest shift is toward &quot;experience-adjacent&quot; gifts, items that create a shared moment or ongoing ritual between friends.",
   },
 ];
 
@@ -120,10 +120,10 @@ export default function GiftIdeasForFriendsPage() {
             Gift Ideas for Friends
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            The biggest trend in friend gifting for 2026 is &quot;experience-adjacent&quot; gifts — items that create shared moments rather than just sit on a shelf. Card games (We Are Not Really Strangers, What Do You Meme), cocktail kits, snack boards, and board games are leading the category. These gifts work because they become an event: you give the cocktail kit, and suddenly you have plans for Friday night. Personalized consumables are also surging — flavored gummy bear sets, custom protein shakes, beauty essentials — things that feel curated but get used up and reordered.
+            The biggest trend in friend gifting for 2026 is &quot;experience-adjacent&quot; gifts, items that create shared moments rather than just sit on a shelf. Card games (We Are Not Really Strangers, What Do You Meme), cocktail kits, snack boards, and board games are leading the category. These gifts work because they become an event: you give the cocktail kit, and suddenly you have plans for Friday night. Personalized consumables are also surging, with flavored gummy bear sets, custom protein shakes, and beauty essentials, things that feel curated but get used up and reordered.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Friend gifts skew heavily toward fun, shareable, and self-care items — and gifts under $30 dominate this segment. The best approach: look for products with high social media presence and strong Amazon reviews. Viral TikTok items with 50k+ reviews are a reliable signal that the gift will land well. Whether it&apos;s a birthday, Galentine&apos;s Day, or just because, these picks are the ones friends actually want — not just what looks good wrapped.
+            Friend gifts skew heavily toward fun, shareable, and self-care items, and gifts under $30 dominate this segment. The best approach: look for products with high social media presence and strong Amazon reviews. Viral TikTok items with 50k+ reviews are a reliable signal that the gift will land well. Whether it&apos;s a birthday, Galentine&apos;s Day, or just because, these picks are the ones friends actually want, not just what looks good wrapped.
           </p>
         </section>
 
@@ -152,7 +152,7 @@ export default function GiftIdeasForFriendsPage() {
             </h2>
             <p className="text-gray-600 mb-6">
               Not finding exactly what you need? Use TheGiftShuffle to get a personalized
-              recommendation in seconds — just pick Friends, set your budget, and hit Shuffle.
+              recommendation in seconds. Just pick Friends, set your budget, and hit Shuffle.
             </p>
             <Link
               href="/shuffle"

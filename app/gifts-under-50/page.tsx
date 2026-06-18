@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Gifts Under $50 — 30 Great Ideas for Any Occasion | TheGiftShuffle',
+  title: 'Gifts Under $50: 30 Great Ideas for Any Occasion | TheGiftShuffle',
   description:
-    "You don't need to spend a lot to give a great gift. Browse 30+ curated gift ideas under $50 — thoughtful picks for birthdays, holidays, and just because.",
+    "You don't need to spend a lot to give a great gift. Browse 30+ curated gift ideas under $50: thoughtful picks for birthdays, holidays, and just because.",
   keywords: [
     'gifts under $50',
     'gifts under 50 dollars',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'good gifts under 50',
   ],
   openGraph: {
-    title: 'Gifts Under $50 — 30 Great Ideas for Any Occasion | TheGiftShuffle',
+    title: 'Gifts Under $50: 30 Great Ideas for Any Occasion | TheGiftShuffle',
     description:
-      "Browse 30+ curated gift ideas under $50 — thoughtful picks that prove you don't need a big budget.",
+      "Browse 30+ curated gift ideas under $50: thoughtful picks that prove you don't need a big budget.",
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-under-50',
     images: [
@@ -125,7 +125,7 @@ export default function GiftsUnder50Page() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best gifts under $50 include cozy self-care sets, personalized keepsakes,
             bestselling tech accessories, quality kitchen tools, and fun experiences. Whether
-            you need a birthday gift, a holiday pick, or something just because — these picks
+            you need a birthday gift, a holiday pick, or something just because, these picks
             prove you don&apos;t need a big budget to make a big impression.
           </p>
         </section>
@@ -154,7 +154,7 @@ export default function GiftsUnder50Page() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Want a budget-matched recommendation in seconds? Use TheGiftShuffle — pick
+              Want a budget-matched recommendation in seconds? Use TheGiftShuffle. Pick
               your recipient, select your budget tier, and hit Shuffle.
             </p>
             <Link

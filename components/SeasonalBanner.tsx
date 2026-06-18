@@ -13,7 +13,7 @@ function getBannerConfig(month: number): BannerConfig | null {
     case 1:
     case 2:
       return {
-        text: "Valentine's Day is coming — find the perfect gift",
+        text: "Valentine's Day is coming, find the perfect gift",
         gradient: 'linear-gradient(90deg, #e91e8c 0%, #f44336 100%)',
       };
     case 3:

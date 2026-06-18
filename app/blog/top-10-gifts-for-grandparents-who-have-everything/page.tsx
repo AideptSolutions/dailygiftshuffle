@@ -134,7 +134,7 @@ const gifts = [
     number: 6,
     name: 'A Membership to a Local Botanical Garden or Aquarium',
     pitch:
-      'Annual passes to a nearby attraction get used. Stuff often does not. The Huntington outside Pasadena, the Atlanta Botanical Garden, the Shedd in Chicago — all run senior membership tiers around $50 to $100 with member-only morning hours and parking included.',
+      'Annual passes to a nearby attraction get used. Stuff often does not. The Huntington outside Pasadena, the Atlanta Botanical Garden, the Shedd in Chicago. All run senior membership tiers around $50 to $100 with member-only morning hours and parking included.',
     whoItFits: 'Still-mobile grandparents who like a Tuesday morning outing.',
     price: '$50 to $150',
   },
@@ -311,7 +311,7 @@ export default function GrandparentsGiftsPage() {
               How We Picked This List
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              We started with the gifting problem itself — older adults who already own everything —
+              We started with the gifting problem itself, older adults who already own everything,
               then looked for items that either remove a hassle, deliver someone&apos;s voice or
               face, or schedule a future moment to look forward to. Price bands were spot-checked on
               the date in the frontmatter. We avoided anything that requires the recipient to install
@@ -348,19 +348,19 @@ export default function GrandparentsGiftsPage() {
             </h2>
             <ul className="text-sm text-gray-600 space-y-1 list-disc list-inside">
               <li>
-                <a href="https://www.storyworth.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">StoryWorth</a> — memoir subscription service
+                <a href="https://www.storyworth.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">StoryWorth</a>: memoir subscription service
               </li>
               <li>
-                <a href="https://www.skylight.is" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">Skylight Frame</a> — smart photo frame
+                <a href="https://www.skylight.is" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">Skylight Frame</a>: smart photo frame
               </li>
               <li>
-                <a href="https://www.auraframes.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">Aura Frames</a> — smart photo frame
+                <a href="https://www.auraframes.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">Aura Frames</a>: smart photo frame
               </li>
               <li>
-                <a href="https://www.operationgratitude.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">Operation Gratitude</a> — letters project
+                <a href="https://www.operationgratitude.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">Operation Gratitude</a>: letters project
               </li>
               <li>
-                <a href="https://moreloveletters.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">More Love Letters</a> — letters project
+                <a href="https://moreloveletters.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#F04E30]">More Love Letters</a>: letters project
               </li>
             </ul>
           </section>

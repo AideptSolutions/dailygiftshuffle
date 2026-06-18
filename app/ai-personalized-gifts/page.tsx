@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Personalized Gifts — Smart Picks for Everyone | TheGiftShuffle',
+  title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone | TheGiftShuffle',
   description:
-    'The new wave of gifting uses AI to make it personal. Browse the best AI-powered and personalized gift ideas — from smart photo frames to custom portraits to DNA kits — for any budget.',
+    'The new wave of gifting uses AI to make it personal. Browse the best AI-powered and personalized gift ideas, from smart photo frames to custom portraits to DNA kits, for any budget.',
   keywords: [
     'ai personalized gifts',
     'personalized gift ideas',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     'unique personalized gifts',
   ],
   openGraph: {
-    title: 'AI-Powered Personalized Gifts — Smart Picks for Everyone | TheGiftShuffle',
+    title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone | TheGiftShuffle',
     description:
-      'Browse the best AI-powered and personalized gift ideas — from smart photo frames to custom portraits to DNA kits — for any budget.',
+      'Browse the best AI-powered and personalized gift ideas, from smart photo frames to custom portraits to DNA kits, for any budget.',
     type: 'website',
     url: 'https://thegiftshuffle.com/ai-personalized-gifts',
     images: [
@@ -46,7 +46,7 @@ const aiProducts = products
 const faqs = [
   {
     q: 'What are AI-powered personalized gifts?',
-    a: "AI-powered personalized gifts use artificial intelligence to create something tailored to the recipient — custom portrait art generated from their photo, a smart frame that learns their favorite memories, a DNA ancestry kit that maps their heritage, or a book written just for them. They combine the thoughtfulness of a personalized gift with technology that makes the experience feel genuinely unique rather than just monogrammed.",
+    a: "AI-powered personalized gifts use artificial intelligence to create something tailored to the recipient, custom portrait art generated from their photo, a smart frame that learns their favorite memories, a DNA ancestry kit that maps their heritage, or a book written just for them. They combine the thoughtfulness of a personalized gift with technology that makes the experience feel genuinely unique rather than just monogrammed.",
   },
   {
     q: 'What is the best AI gift to give someone?',
@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: 'Are personalized gifts worth it?',
-    a: "Yes — personalized gifts are consistently rated higher by recipients than generic ones. Studies show people value effort and thought over price tag. An AI-generated custom portrait or a smart frame loaded with family photos signals that you paid attention. That signal matters far more than how much you spent.",
+    a: "Yes. Personalized gifts are consistently rated higher by recipients than generic ones. Studies show people value effort and thought over price tag. An AI-generated custom portrait or a smart frame loaded with family photos signals that you paid attention. That signal matters far more than how much you spent.",
   },
   {
     q: 'What are unique personalized gift ideas under $50?',
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: 'What AI gifts are good for someone who loves technology?',
-    a: "For tech enthusiasts, top AI gifts include: an Amazon Echo Show (smart display), a Govee smart LED light system, a smart home hub starter kit, an AI-powered security camera, or a robot vacuum. For something more personal, a custom AI portrait or a DNA heritage kit pairs tech with sentimentality — a combination most tech people do not expect.",
+    a: "For tech enthusiasts, top AI gifts include: an Amazon Echo Show (smart display), a Govee smart LED light system, a smart home hub starter kit, an AI-powered security camera, or a robot vacuum. For something more personal, a custom AI portrait or a DNA heritage kit pairs tech with sentimentality, a combination most tech people do not expect.",
   },
   {
     q: 'What is a good personalized gift for a couple?',
@@ -125,7 +125,7 @@ export default function AiPersonalizedGiftsPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The new wave of gifting uses AI to make it personal. Browse the best AI-powered and
-            personalized gift ideas — from smart photo frames to custom portraits to DNA kits —
+            personalized gift ideas, from smart photo frames to custom portraits to DNA kits,
             for any budget and any person on your list.
           </p>
         </section>
@@ -154,7 +154,7 @@ export default function AiPersonalizedGiftsPage() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Not sure which personalized gift to choose? Use TheGiftShuffle — pick who it&apos;s
+              Not sure which personalized gift to choose? Use TheGiftShuffle. Pick who it&apos;s
               for, set your budget, and get an instant smart recommendation.
             </p>
             <Link

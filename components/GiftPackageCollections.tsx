@@ -100,7 +100,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Package Collections',
   description:
-    'Curated gift baskets by category — gaming, tech, fitness, kitchen, outdoors, home, pets, beauty, baby shower, wedding, and travel.',
+    'Curated gift baskets by category: gaming, tech, fitness, kitchen, outdoors, home, pets, beauty, baby shower, wedding, and travel.',
   itemListElement: categories.map((cat, i) => ({
     '@type': 'ListItem',
     position: i + 1,

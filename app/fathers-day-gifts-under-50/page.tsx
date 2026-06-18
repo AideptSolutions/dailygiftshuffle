@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $50 (2026) — Top Picks for Dad | TheGiftShuffle",
+  title: "Father's Day Gifts Under $50 (2026): Top Picks for Dad | TheGiftShuffle",
   description:
-    "The best Father's Day gifts under $50 in 2026. Digital meat thermometers, insulated tumblers, Bluetooth speakers, leather dopp kits, and more — all under $50.",
+    "The best Father's Day gifts under $50 in 2026. Digital meat thermometers, insulated tumblers, Bluetooth speakers, leather dopp kits, and more, all under $50.",
   keywords: [
     "fathers day gifts under 50",
     "fathers day gifts under $50",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Father's Day Gifts Under $50 (2026) | TheGiftShuffle",
     description:
-      "Great Father's Day gifts for under $50 — digital thermometers, insulated tumblers, Bluetooth speakers, and more.",
+      "Great Father's Day gifts for under $50, including digital thermometers, insulated tumblers, Bluetooth speakers, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/fathers-day-gifts-under-50',
   },
@@ -41,15 +41,15 @@ const fathersDayUnder50 = products
 const faqs = [
   {
     q: "What are the best Father's Day gifts under $50?",
-    a: "The best Father's Day gifts under $50 are: an instant-read digital meat thermometer (the #1 most-gifted item at this price — 78,000+ five-star reviews), an insulated 30oz tumbler, a portable Bluetooth speaker, a leather dopp kit for his grooming essentials, and a drill bit set for the DIY dad. These hit the sweet spot of genuinely useful, practical, and priced to not overthink.",
+    a: "The best Father's Day gifts under $50 are: an instant-read digital meat thermometer (the #1 most-gifted item at this price, with 78,000+ five-star reviews), an insulated 30oz tumbler, a portable Bluetooth speaker, a leather dopp kit for his grooming essentials, and a drill bit set for the DIY dad. These hit the sweet spot of genuinely useful, practical, and priced to not overthink.",
   },
   {
     q: "What does Dad actually want for Father's Day that's under $50?",
-    a: "When you ask dads what they want, the consistent answer is something practical that improves their daily life or a hobby. Under $50, the top categories are kitchen/grill gadgets (digital thermometer, BBQ rub set), drinks (insulated tumbler, flask), and everyday carry upgrades (leather card holder, dopp kit). The key is choosing something specific to what he actually does — not a generic gift.",
+    a: "When you ask dads what they want, the consistent answer is something practical that improves their daily life or a hobby. Under $50, the top categories are kitchen/grill gadgets (digital thermometer, BBQ rub set), drinks (insulated tumbler, flask), and everyday carry upgrades (leather card holder, dopp kit). The key is choosing something specific to what he actually does, not a generic gift.",
   },
   {
     q: "Is $50 enough for a good Father's Day gift?",
-    a: "Absolutely. The $25-$50 range is the single best value zone for Father's Day gifting. At $30, the digital meat thermometer with 78,000 reviews is one of the highest-satisfaction gifts in this price band. At $45, a 30oz insulated tumbler he'll use every day for years. The gift doesn't need to be expensive to be right — it needs to be used.",
+    a: "Absolutely. The $25-$50 range is the single best value zone for Father's Day gifting. At $30, the digital meat thermometer with 78,000 reviews is one of the highest-satisfaction gifts in this price band. At $45, a 30oz insulated tumbler he'll use every day for years. The gift doesn't need to be expensive to be right. It needs to be used.",
   },
 ];
 
@@ -113,7 +113,7 @@ export default function FathersDayGiftsUnder50Page() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The $25-$50 range is the sweet spot of Father&apos;s Day gifting. Enough budget for something genuinely
-            useful — a digital meat thermometer he&apos;ll reach for every barbecue, an insulated tumbler he&apos;ll
+            useful, a digital meat thermometer he&apos;ll reach for every barbecue, an insulated tumbler he&apos;ll
             carry daily, a Bluetooth speaker for the garage or patio. These are the gifts dads actually remember.
           </p>
         </section>
@@ -143,7 +143,7 @@ export default function FathersDayGiftsUnder50Page() {
               Want a Personalized Pick?
             </h2>
             <p className="text-gray-600 mb-6">
-              Use TheGiftShuffle — pick Dad, set your budget, and get an instant Father&apos;s Day recommendation.
+              Use TheGiftShuffle. Pick Dad, set your budget, and get an instant Father&apos;s Day recommendation.
             </p>
             <Link
               href="/shuffle"

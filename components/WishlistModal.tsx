@@ -113,7 +113,7 @@ export default function WishlistModal({ product, onClose, onSaved, onSkip }: Pro
             onClick={onSkip}
             className="text-sm text-gray-400 hover:text-gray-600 underline transition-colors"
           >
-            Skip — just save to my device
+            Skip, just save to my device
           </button>
         </div>
 

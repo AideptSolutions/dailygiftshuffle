@@ -11,7 +11,7 @@ import CategoryIcon from '@/components/CategoryIcon';
 export const metadata: Metadata = {
   title: "Graduation Gifts Under $50 (Class of 2026) | TheGiftShuffle",
   description:
-    "The best graduation gifts under $50 for the Class of 2026. Portable Bluetooth speakers, wireless earbuds, insulated tumblers, journals, and more — thoughtful picks that don't break the bank.",
+    "The best graduation gifts under $50 for the Class of 2026. Portable Bluetooth speakers, wireless earbuds, insulated tumblers, journals, and more, thoughtful picks that don't break the bank.",
   keywords: [
     "graduation gifts under 50",
     "graduation gifts under $50",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Graduation Gifts Under $50 (Class of 2026) | TheGiftShuffle",
     description:
-      "Top graduation gifts under $50 — Bluetooth speakers, earbuds, tumblers, journals, and practical picks for every grad.",
+      "Top graduation gifts under $50: Bluetooth speakers, earbuds, tumblers, journals, and practical picks for every grad.",
     type: 'website',
     url: 'https://thegiftshuffle.com/graduation-gifts-under-50',
   },
@@ -39,7 +39,7 @@ const gradUnder50 = products
 const faqs = [
   {
     q: "What are the best graduation gifts under $50?",
-    a: "The best graduation gifts under $50 are practical picks that help them launch: a portable Bluetooth speaker ($45) for their first dorm or apartment, wireless earbuds for commuting and studying, an insulated 30oz tumbler they'll use every day, a journaling starter kit for reflection and planning, and a goal-setting journal to start the next chapter intentionally. These are gifts with daily-use cases — not decorative pieces that sit on a shelf.",
+    a: "The best graduation gifts under $50 are practical picks that help them launch: a portable Bluetooth speaker ($45) for their first dorm or apartment, wireless earbuds for commuting and studying, an insulated 30oz tumbler they'll use every day, a journaling starter kit for reflection and planning, and a goal-setting journal to start the next chapter intentionally. These are gifts with daily-use cases, not decorative pieces that sit on a shelf.",
   },
   {
     q: "What makes a good graduation gift under $50?",
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "What are good group graduation gifts under $50 per person?",
-    a: "With multiple people contributing under $50 each, you can pool resources for a more meaningful gift: a quality Bluetooth speaker, a Polaroid mini instant camera with extra film, a premium tech accessory bundle (power bank + USB hub + cable organizer), or a gift card to Amazon or Target that they can spend on exactly what they need. The best group graduation gift is the one that enables something — not just fills space.",
+    a: "With multiple people contributing under $50 each, you can pool resources for a more meaningful gift: a quality Bluetooth speaker, a Polaroid mini instant camera with extra film, a premium tech accessory bundle (power bank + USB hub + cable organizer), or a gift card to Amazon or Target that they can spend on exactly what they need. The best group graduation gift is the one that enables something, not just fills space.",
   },
 ];
 
@@ -64,7 +64,7 @@ const faqSchema = {
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Graduation Gifts Under $50 — Class of 2026',
+  name: 'Graduation Gifts Under $50: Class of 2026',
   description: 'Hand-picked graduation gifts under $50 for the Class of 2026, curated by TheGiftShuffle',
   url: 'https://thegiftshuffle.com/graduation-gifts-under-50',
   numberOfItems: gradUnder50.length,
@@ -108,12 +108,12 @@ export default function GraduationGiftsUnder50Page() {
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <div className="mb-3 flex justify-center"><CategoryIcon slug="graduation" className="w-12 h-12 text-coral" aria-hidden="true" /></div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            Graduation Gifts Under $50 — Class of 2026
+            Graduation Gifts Under $50: Class of 2026
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Under $50 is the standard graduation gift range for friends, and it covers a lot of ground. A portable
             Bluetooth speaker for their first apartment. Wireless earbuds for studying and commuting. An insulated
-            tumbler they&apos;ll use every single day. These are the gifts grads actually need — not just another
+            tumbler they&apos;ll use every single day. These are the gifts grads actually need, not just another
             piece of decor.
           </p>
         </section>
@@ -143,7 +143,7 @@ export default function GraduationGiftsUnder50Page() {
               Find a Graduation Gift in Seconds
             </h2>
             <p className="text-gray-600 mb-6">
-              Use TheGiftShuffle to get a personalized graduation gift recommendation — set your budget and get
+              Use TheGiftShuffle to get a personalized graduation gift recommendation, set your budget and get
               an instant curated pick.
             </p>
             <Link

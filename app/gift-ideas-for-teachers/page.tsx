@@ -11,7 +11,7 @@ import CategoryIcon from '@/components/CategoryIcon';
 export const metadata: Metadata = {
   title: 'Best Teacher Appreciation Gift Ideas 2026 | TheGiftShuffle',
   description:
-    'The best teacher appreciation gift ideas for 2026. Thoughtful picks for Teacher Appreciation Week in May and end-of-year gifts — coffee, spa sets, stationery, and more.',
+    'The best teacher appreciation gift ideas for 2026. Thoughtful picks for Teacher Appreciation Week in May and end-of-year gifts, including coffee, spa sets, stationery, and more.',
   keywords: [
     'teacher appreciation gifts',
     'gift ideas for teachers',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Teacher Appreciation Gift Ideas 2026 | TheGiftShuffle',
     description:
-      'Browse the best teacher appreciation gift ideas for 2026 — coffee, spa sets, stationery, plants, and more.',
+      'Browse the best teacher appreciation gift ideas for 2026: coffee, spa sets, stationery, plants, and more.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-teachers',
   },

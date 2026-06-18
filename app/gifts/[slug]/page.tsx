@@ -213,7 +213,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
     },
     {
       q: `Are these gifts affordable?`,
-      a: `Yes! Our gift picks cover a wide range of budgets — from under $25 to premium $100+ options — so you can find something for any budget.`,
+      a: `Yes! Our gift picks cover a wide range of budgets, from under $25 to premium $100+ options, so you can find something for any budget.`,
     },
     {
       q: `Can I save these gift ideas for later?`,
@@ -271,7 +271,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
           <p className="text-gray-500 text-base mb-4 capitalize">{subtitleParts.join(' · ')}</p>
         )}
         <p className="text-gray-600 mb-6">
-          {filtered.length} curated gift ideas — click any product to buy instantly.
+          {filtered.length} curated gift ideas. Click any product to buy instantly.
         </p>
         <Link
           href="/shuffle"
@@ -290,7 +290,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
         </div>
 
         <p className="text-xs text-center text-gray-400 mb-6">
-          Affiliate links — we may earn a commission at no extra cost to you.
+          Affiliate links, we may earn a commission at no extra cost to you.
         </p>
 
         {/* Rectangle Ad */}
@@ -320,7 +320,7 @@ export default function GiftSlugPage({ params }: { params: { slug: string } }) {
             Want a personalized recommendation?
           </h2>
           <p className="text-white/80 mb-6 text-sm">
-            Try our shuffle tool — pick a recipient, set a budget, get a surprise gift idea.
+            Try our shuffle tool. Pick a recipient, set a budget, get a surprise gift idea.
           </p>
           <Link
             href="/shuffle"

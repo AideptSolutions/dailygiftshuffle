@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: "Best Mother's Day Gifts for Wife 2026 | TheGiftShuffle",
   description:
-    "Find the best Mother's Day gifts for your wife in 2026. Thoughtful picks she will actually love — spa sets, jewelry, skincare, cozy upgrades, and more for every budget.",
+    "Find the best Mother's Day gifts for your wife in 2026. Thoughtful picks she will actually love: spa sets, jewelry, skincare, cozy upgrades, and more for every budget.",
   keywords: [
     "mothers day gifts for wife",
     "mothers day gift ideas for wife",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Mother's Day Gifts for Wife 2026 | TheGiftShuffle",
     description:
-      "Browse the best Mother's Day gifts for your wife in 2026 — spa sets, jewelry, skincare, and more.",
+      "Browse the best Mother's Day gifts for your wife in 2026: spa sets, jewelry, skincare, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/mothers-day-gifts-for-wife',
   },

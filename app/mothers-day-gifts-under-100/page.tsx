@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: "Mother's Day Gifts Under $100 | TheGiftShuffle",
   description:
-    "The best Mother's Day gifts under $100 for 2026. Thoughtful picks including spa sets, jewelry, skincare, kitchen upgrades, and cozy gifts — all under a hundred dollars.",
+    "The best Mother's Day gifts under $100 for 2026. Thoughtful picks including spa sets, jewelry, skincare, kitchen upgrades, and cozy gifts, all under a hundred dollars.",
   keywords: [
     "mothers day gifts under 100",
     "mothers day gifts under $100",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mother's Day Gifts Under $100 | TheGiftShuffle",
     description:
-      "Browse the best Mother's Day gifts under $100 — spa sets, jewelry, skincare, kitchen tools, and more.",
+      "Browse the best Mother's Day gifts under $100: spa sets, jewelry, skincare, kitchen tools, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/mothers-day-gifts-under-100',
   },

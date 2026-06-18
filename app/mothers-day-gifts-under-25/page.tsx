@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: "Best Mother's Day Gifts Under $25 (2026) | TheGiftShuffle",
   description:
-    "The best budget-friendly Mother's Day gifts under $25 — shower steamers, eye masks, slipper socks, brightening serums, and more. Great gifts don't require a big budget.",
+    "The best budget-friendly Mother's Day gifts under $25: shower steamers, eye masks, slipper socks, brightening serums, and more. Great gifts don't require a big budget.",
   keywords: [
     "mothers day gifts under 25",
     "mothers day gifts under $25",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Mother's Day Gifts Under $25 (2026) | TheGiftShuffle",
     description:
-      "Browse the best Mother's Day gifts under $25 — shower steamers, eye patches, slipper socks, serums, and more.",
+      "Browse the best Mother's Day gifts under $25: shower steamers, eye patches, slipper socks, serums, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/mothers-day-gifts-under-25',
   },
@@ -44,11 +44,11 @@ const under25Products =
 const faqs = [
   {
     q: "What are the best Mother's Day gifts under $25?",
-    a: "The best Mother's Day gifts under $25 include aromatherapy shower steamers, collagen under-eye patches, fuzzy slipper socks, brightening serums from The Ordinary, and Korean sheet mask sets. These are small luxuries that feel genuinely indulgent but won't break the bank — exactly the kind of thing Mom would never buy herself.",
+    a: "The best Mother's Day gifts under $25 include aromatherapy shower steamers, collagen under-eye patches, fuzzy slipper socks, brightening serums from The Ordinary, and Korean sheet mask sets. These are small luxuries that feel genuinely indulgent but won't break the bank, exactly the kind of thing Mom would never buy herself.",
   },
   {
     q: "Is $25 enough to get Mom a good gift?",
-    a: "Yes — a $25 gift that fits her daily routine will beat a $100 gift she never uses. Shower steamers she reaches for every morning, a pack of eye patches she uses twice a week, or a set of plush slipper socks she wears all winter — these are $25 gifts that earn a permanent place in her life.",
+    a: "Yes. A $25 gift that fits her daily routine will beat a $100 gift she never uses. Shower steamers she reaches for every morning, a pack of eye patches she uses twice a week, or a set of plush slipper socks she wears all winter. These are $25 gifts that earn a permanent place in her life.",
   },
   {
     q: "What self-care gifts for Mom are under $25?",
@@ -119,7 +119,7 @@ export default function MothersDayGiftsUnder25Page() {
             The Best Mother&apos;s Day Gifts Under $25 in 2026
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Great gifts don&apos;t require a big budget — they require knowing what Mom will actually use. Under $25, you can find shower steamers that turn her morning commute prep into a spa moment, under-eye patches she reaches for every night, and slipper socks so soft she&apos;ll never want to take them off. The price isn&apos;t the point. The thought — and the daily ritual it creates — is.
+            Great gifts don&apos;t require a big budget. They require knowing what Mom will actually use. Under $25, you can find shower steamers that turn her morning commute prep into a spa moment, under-eye patches she reaches for every night, and slipper socks so soft she&apos;ll never want to take them off. The price isn&apos;t the point. The thought, and the daily ritual it creates, is.
           </p>
         </section>
 
@@ -147,7 +147,7 @@ export default function MothersDayGiftsUnder25Page() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Want more ideas at any budget? Use TheGiftShuffle — pick Mom, set your budget, and get
+              Want more ideas at any budget? Use TheGiftShuffle to pick Mom, set your budget, and get
               a personalized recommendation in seconds.
             </p>
             <Link

@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: 'Gifts Under $100 — Premium Picks Without the Premium Price | TheGiftShuffle',
+  title: 'Gifts Under $100: Premium Picks Without the Premium Price | TheGiftShuffle',
   description:
-    'Browse the best gifts under $100 — smart home tech, fitness gear, premium grooming kits, and kitchen upgrades that feel expensive without breaking the bank.',
+    'Browse the best gifts under $100: smart home tech, fitness gear, premium grooming kits, and kitchen upgrades that feel expensive without breaking the bank.',
   keywords: [
     'gifts under $100',
     'gifts under 100 dollars',
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     'what to get someone under $100',
   ],
   openGraph: {
-    title: 'Gifts Under $100 — Premium Picks Without the Premium Price | TheGiftShuffle',
+    title: 'Gifts Under $100: Premium Picks Without the Premium Price | TheGiftShuffle',
     description:
-      'Discover premium-feeling gifts under $100 — the sweet spot for thoughtful, high-impact gifting without the splurge.',
+      'Discover premium-feeling gifts under $100, the sweet spot for thoughtful, high-impact gifting without the splurge.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-under-100',
     images: [
@@ -44,19 +44,19 @@ const under100Products = products.filter(
 const faqs = [
   {
     q: 'What are the best gifts under $100?',
-    a: "The best gifts under $100 hit the premium threshold without financial stress. Top picks include: a smart alarm clock with sunrise simulation, a high-quality insulated tumbler set, a premium grooming kit, a walking pad for under-desk use, a cast iron skillet, or a smart home starter bundle. Look for products in the $75–$100 range with 4.5+ stars — reviewers in this segment specifically call out &quot;great gift&quot; in their reviews.",
+    a: "The best gifts under $100 hit the premium threshold without financial stress. Top picks include: a smart alarm clock with sunrise simulation, a high-quality insulated tumbler set, a premium grooming kit, a walking pad for under-desk use, a cast iron skillet, or a smart home starter bundle. Look for products in the $75–$100 range with 4.5+ stars. Reviewers in this segment specifically call out &quot;great gift&quot; in their reviews.",
   },
   {
     q: "What's a good gift under $100 for a man?",
-    a: "For a man under $100, the top-performing categories are: cordless power tools (a compact drill or multitool), premium grooming kits (beard trimmer set, shaving kit), a tactical backpack, a portable projector, high-quality wireless earbuds, or a smart home device. These feel like a real upgrade — something he might not splurge on himself but genuinely appreciates.",
+    a: "For a man under $100, the top-performing categories are: cordless power tools (a compact drill or multitool), premium grooming kits (beard trimmer set, shaving kit), a tactical backpack, a portable projector, high-quality wireless earbuds, or a smart home device. These feel like a real upgrade, something he might not splurge on himself but genuinely appreciates.",
   },
   {
     q: "What's a thoughtful gift under $100 for a woman?",
-    a: "Thoughtful gifts under $100 for women include: a silk pillowcase set, a premium aromatherapy diffuser kit, a personalized bracelet stack, a subscription box (beauty, wine, books), a quality weighted blanket, or a stylish insulated tumbler in her favorite color. Focus on daily-use luxuries — items that upgrade her routine in a small but meaningful way.",
+    a: "Thoughtful gifts under $100 for women include: a silk pillowcase set, a premium aromatherapy diffuser kit, a personalized bracelet stack, a subscription box (beauty, wine, books), a quality weighted blanket, or a stylish insulated tumbler in her favorite color. Focus on daily-use luxuries, items that upgrade her routine in a small but meaningful way.",
   },
   {
     q: 'What are premium-feeling gifts under $100?',
-    a: "Gifts that feel expensive under $100: a real leather wallet or card case, a crystal wine decanter set, a cashmere-blend throw blanket, a Turkish cotton robe, a smart coffee maker, or a gold-plated jewelry organizer. The key is materials and presentation — gifts that look and feel high-end but come in at a fraction of the price.",
+    a: "Gifts that feel expensive under $100: a real leather wallet or card case, a crystal wine decanter set, a cashmere-blend throw blanket, a Turkish cotton robe, a smart coffee maker, or a gold-plated jewelry organizer. The key is materials and presentation: gifts that look and feel high-end but come in at a fraction of the price.",
   },
   {
     q: 'What tech gifts are under $100?',
@@ -122,10 +122,10 @@ export default function GiftsUnder100Page() {
             Gifts Under $100
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            The $50–$100 range is the fastest-growing gift budget segment — and for good reason. It hits the threshold of &quot;feels premium&quot; without the financial stress of going higher. The trending categories in this range are smart home tech (video doorbells, smart alarm clocks, mini projectors), fitness equipment (walking pads, weighted vests, compact resistance systems), premium grooming kits, and kitchen upgrades that feel like a real improvement. These are the gifts people actually use every day — not the ones that collect dust on a shelf.
+            The $50–$100 range is the fastest-growing gift budget segment, and for good reason. It hits the threshold of &quot;feels premium&quot; without the financial stress of going higher. The trending categories in this range are smart home tech (video doorbells, smart alarm clocks, mini projectors), fitness equipment (walking pads, weighted vests, compact resistance systems), premium grooming kits, and kitchen upgrades that feel like a real improvement. These are the gifts people actually use every day, not the ones that collect dust on a shelf.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Products in the $75–$100 range consistently show the best review-to-price ratio on Amazon. Reviewers in this segment explicitly mention gift-worthiness — &quot;bought this as a gift and they loved it&quot; is the most common phrase in top reviews. Whether you&apos;re shopping for a birthday, anniversary, holiday, or any occasion, this budget delivers impact without overthinking it.
+            Products in the $75–$100 range consistently show the best review-to-price ratio on Amazon. Reviewers in this segment explicitly mention gift-worthiness. &quot;Bought this as a gift and they loved it&quot; is the most common phrase in top reviews. Whether you&apos;re shopping for a birthday, anniversary, holiday, or any occasion, this budget delivers impact without overthinking it.
           </p>
         </section>
 
@@ -153,7 +153,7 @@ export default function GiftsUnder100Page() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Want a smarter way to find the perfect gift? Use TheGiftShuffle — set your budget,
+              Want a smarter way to find the perfect gift? Use TheGiftShuffle. Set your budget,
               pick who it&apos;s for, and get a personalized recommendation instantly.
             </p>
             <Link

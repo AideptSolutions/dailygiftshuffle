@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             <h3 className="font-semibold text-gray-800 mb-1">Information you provide</h3>
             <ul className="list-disc pl-5 space-y-1 mb-3">
               <li>
-                <strong>Email address</strong> — collected only if you choose to save a product to your
+                <strong>Email address</strong>, collected only if you choose to save a product to your
                 Wishlist. Used solely to identify your wishlist across sessions. We do not send marketing
                 emails or share your email with third parties.
               </li>
@@ -39,12 +39,12 @@ export default function PrivacyPage() {
             <h3 className="font-semibold text-gray-800 mb-1">Information stored in your browser</h3>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                <strong>localStorage</strong> — stores your wishlist items and saved gift picks
+                <strong>localStorage</strong>, stores your wishlist items and saved gift picks
                 (&ldquo;My Picks&rdquo;) locally on your device. This data never leaves your browser
                 unless you explicitly save a wishlist item with your email.
               </li>
               <li>
-                <strong>sessionStorage</strong> — stores a temporary list of recently shown product IDs
+                <strong>sessionStorage</strong>, stores a temporary list of recently shown product IDs
                 to prevent showing you the same gifts repeatedly in a single session. Cleared when you
                 close your browser tab.
               </li>

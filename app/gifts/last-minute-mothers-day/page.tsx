@@ -7,9 +7,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Last-Minute Mother's Day Gifts 2026 — Order by May 9 | TheGiftShuffle",
+  title: "Last-Minute Mother's Day Gifts 2026: Order by May 9 | TheGiftShuffle",
   description:
-    "Running out of time? These last-minute Mother's Day gifts ship fast with Amazon Prime. Top-rated spa sets, skincare, jewelry, and thoughtful picks — all deliverable before May 11.",
+    "Running out of time? These last-minute Mother's Day gifts ship fast with Amazon Prime. Top-rated spa sets, skincare, jewelry, and thoughtful picks, all deliverable before May 11.",
   keywords: [
     "last minute mothers day gifts",
     "last minute mothers day gift ideas 2026",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "same day mothers day gifts",
   ],
   openGraph: {
-    title: "Last-Minute Mother's Day Gifts 2026 — Order by May 9 | TheGiftShuffle",
+    title: "Last-Minute Mother's Day Gifts 2026: Order by May 9 | TheGiftShuffle",
     description:
       "Top-rated Mother's Day gifts with Amazon Prime shipping. Order now and still make it in time.",
     type: 'website',
@@ -44,19 +44,19 @@ const lastMinuteProducts = products
 const faqs = [
   {
     q: "What are good last-minute Mother's Day gifts that ship fast?",
-    a: "The best last-minute Mother's Day gifts are Amazon Prime-eligible products that arrive in 1-2 days: aromatherapy shower steamers, luxury spa gift sets, silk sleep masks, personalized name necklaces, jade face rollers, and skincare gift sets. These ship fast and feel genuinely thoughtful — not like a last-minute panic buy. Order by May 9 for standard Prime delivery by May 11.",
+    a: "The best last-minute Mother's Day gifts are Amazon Prime-eligible products that arrive in 1-2 days: aromatherapy shower steamers, luxury spa gift sets, silk sleep masks, personalized name necklaces, jade face rollers, and skincare gift sets. These ship fast and feel genuinely thoughtful, not like a last-minute panic buy. Order by May 9 for standard Prime delivery by May 11.",
   },
   {
     q: "Can I still get a Mother's Day gift delivered on time?",
-    a: "Yes — if you order today with Amazon Prime, most items will arrive by May 11. Check the estimated delivery window at checkout before placing your order. Same-day delivery is available in many metro areas for eligible products. Digital gift cards (spa experiences, restaurant credit, streaming subscriptions) are also an excellent option because they're instant.",
+    a: "Yes. If you order today with Amazon Prime, most items will arrive by May 11. Check the estimated delivery window at checkout before placing your order. Same-day delivery is available in many metro areas for eligible products. Digital gift cards (spa experiences, restaurant credit, streaming subscriptions) are also an excellent option because they're instant.",
   },
   {
     q: "What last-minute Mother's Day gifts feel intentional and not rushed?",
-    a: "The gifts that don't feel rushed are the ones that reflect her actual preferences: if she loves self-care, a premium shower steamer set or luxury spa box feels deliberate. If she's a skincare enthusiast, a La Roche-Posay or Sunday Riley gift set lands well. A personalized name necklace always feels chosen, not grabbed. Avoid generic bath sets from unknown brands — stick to recognizable quality.",
+    a: "The gifts that don't feel rushed are the ones that reflect her actual preferences: if she loves self-care, a premium shower steamer set or luxury spa box feels deliberate. If she's a skincare enthusiast, a La Roche-Posay or Sunday Riley gift set lands well. A personalized name necklace always feels chosen, not grabbed. Avoid generic bath sets from unknown brands. Stick to recognizable quality.",
   },
   {
     q: "What are the best same-day or next-day Mother's Day gift ideas?",
-    a: "For same-day delivery (check availability in your area): spa gift sets, candles, silk eye masks, and insulated tumblers are all frequently available. For next-day: shower steamer sets, personalized jewelry, skincare bundles, and silk pajamas. A digital gift card to a local spa, restaurant, or experience is delivered instantly and can be printed or texted. Don't overlook the Kindle gift card — it's genuinely useful and immediate.",
+    a: "For same-day delivery (check availability in your area): spa gift sets, candles, silk eye masks, and insulated tumblers are all frequently available. For next-day: shower steamer sets, personalized jewelry, skincare bundles, and silk pajamas. A digital gift card to a local spa, restaurant, or experience is delivered instantly and can be printed or texted. Don't overlook the Kindle gift card. It's genuinely useful and immediate.",
   },
   {
     q: "What's the latest I can order and still get a Mother's Day gift in time?",
@@ -120,7 +120,7 @@ export default function GiftsLastMinuteMothersDayPage() {
           {/* Urgency badge */}
           <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 rounded-full px-4 py-1.5 mb-5">
             <span className="text-red-600 font-bold text-sm">Mother&apos;s Day is May 11</span>
-            <span className="text-red-400 text-sm">— Order by May 9 for guaranteed delivery</span>
+            <span className="text-red-400 text-sm">Order by May 9 for guaranteed delivery</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Last-Minute Mother&apos;s Day Gifts 2026
@@ -169,7 +169,7 @@ export default function GiftsLastMinuteMothersDayPage() {
           <p className="text-gray-700 leading-relaxed mb-4">
             Here is the thing about last-minute gifting: it does not have to mean low-effort. A curated spa gift
             set with a bath bomb, face mask, and eye patches arrives in the same two-day window as a forgettable
-            candle — the difference is that one of them looks like you thought about it. A 30-pack of aromatherapy
+            candle. The difference is that one of them looks like you thought about it. A 30-pack of aromatherapy
             shower steamers with a handwritten note beats a generic gift basket every time.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -179,7 +179,7 @@ export default function GiftsLastMinuteMothersDayPage() {
           </p>
           <p className="text-gray-700 leading-relaxed">
             If you&apos;re ordering after May 9: go digital. A gift card to a local spa, a restaurant she loves,
-            or a streaming service she&apos;d actually use — delivered instantly, printed out with a real note,
+            or a streaming service she&apos;d actually use, delivered instantly, printed out with a real note,
             tucked into an envelope. Sometimes the most personal gift is the one that says &ldquo;I want you to
             spend a whole afternoon doing exactly what you want.&rdquo;
           </p>
@@ -193,7 +193,7 @@ export default function GiftsLastMinuteMothersDayPage() {
             </h2>
             <p className="text-gray-600 mb-6">
               Answer two questions in TheGiftShuffle and get a personalized pick in seconds. No scrolling,
-              no indecision — just order.
+              no indecision, just order.
             </p>
             <Link
               href="/shuffle"

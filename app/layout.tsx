@@ -9,7 +9,7 @@ import FavoritesSidebar from '@/components/FavoritesSidebar';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
+  title: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
   description:
     'Find the perfect gift for anyone in seconds. Pick a recipient, set a budget, and hit Shuffle for instant curated gift recommendations. Free to use, no sign-up required.',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'unique gifts',
   ],
   openGraph: {
-    title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
+    title: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
     description:
       'Pick a recipient, set a budget, hit SHUFFLE. Get a curated gift recommendation with a direct buy link.',
     type: 'website',
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: 'https://thegiftshuffle.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
+        alt: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TheGiftShuffle — Find the Perfect Gift',
+    title: 'TheGiftShuffle: Find the Perfect Gift',
     description: 'Pick a recipient, set a budget, hit SHUFFLE!',
     site: '@thegiftshuffle',
   },
@@ -53,7 +53,7 @@ const organizationSchema = {
   name: 'TheGiftShuffle',
   url: 'https://www.thegiftshuffle.com',
   description:
-    'AI-curated gift discovery platform. Find unique, personalized gift ideas for anyone — filtered by recipient, occasion, and budget.',
+    'AI-curated gift discovery platform. Find unique, personalized gift ideas for anyone, filtered by recipient, occasion, and budget.',
   sameAs: [],
 };
 

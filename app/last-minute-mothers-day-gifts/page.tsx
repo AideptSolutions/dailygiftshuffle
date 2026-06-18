@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: "Last-Minute Mother's Day Gifts 2026 (Ships Fast) | TheGiftShuffle",
   description:
-    "Last-minute Mother's Day gift ideas for 2026 that still arrive on time. Top-rated picks with Amazon Prime shipping — spa sets, skincare, jewelry, and more.",
+    "Last-minute Mother's Day gift ideas for 2026 that still arrive on time. Top-rated picks with Amazon Prime shipping: spa sets, skincare, jewelry, and more.",
   keywords: [
     "last minute mothers day gifts",
     "last minute mothers day gift ideas",

@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Gifts for Camping and the Outdoors — Top Picks for Every Adventurer | TheGiftShuffle',
+  title: 'Gifts for Camping and the Outdoors: Top Picks for Every Adventurer | TheGiftShuffle',
   description:
-    'Find the best gifts for campers, hikers, and outdoor lovers. Hand-picked gear from trusted brands at every budget — from starter kits to serious upgrades.',
+    'Find the best gifts for campers, hikers, and outdoor lovers. Hand-picked gear from trusted brands at every budget, from starter kits to serious upgrades.',
   keywords: [
     'gifts for camping',
     'outdoor gift ideas',

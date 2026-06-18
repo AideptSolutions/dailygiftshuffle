@@ -3,11 +3,11 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas Blog — Guides, Trends & Tips | TheGiftShuffle',
+  title: 'Gift Ideas Blog: Guides, Trends & Tips | TheGiftShuffle',
   description:
-    'The TheGiftShuffle blog — gift guides, trending products, and tips for finding the perfect gift for anyone.',
+    'The TheGiftShuffle blog: gift guides, trending products, and tips for finding the perfect gift for anyone.',
   openGraph: {
-    title: 'Gift Ideas Blog — Guides, Trends & Tips | TheGiftShuffle',
+    title: 'Gift Ideas Blog: Guides, Trends & Tips | TheGiftShuffle',
     description:
       'Gift guides, trending products, and tips for finding the perfect gift for anyone.',
     type: 'website',
@@ -40,12 +40,12 @@ const upcomingPosts = [
   {
     title: 'How to Pick the Perfect Gift for Anyone (Without Overthinking It)',
     teaser:
-      'A simple framework for choosing a gift that actually lands — no matter the person, budget, or occasion.',
+      'A simple framework for choosing a gift that actually lands, no matter the person, budget, or occasion.',
   },
   {
     title: "50 Gifts Under $25 That Look Way More Expensive",
     teaser:
-      'Proof that budget doesn&apos;t mean cheap — these are the highest-rated sub-$25 gifts with the best perceived value.',
+      'Proof that budget doesn&apos;t mean cheap. These are the highest-rated sub-$25 gifts with the best perceived value.',
   },
 ];
 
@@ -61,7 +61,7 @@ export default function BlogPage() {
             The Gift Ideas Blog
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Gift guides, trending picks, and practical tips for finding the perfect gift — for anyone,
+            Gift guides, trending picks, and practical tips for finding the perfect gift, for anyone,
             any occasion, any budget.
           </p>
         </section>
@@ -145,7 +145,7 @@ export default function BlogPage() {
             </h2>
             <p className="text-gray-600 mb-6">
               Skip the scroll. Use TheGiftShuffle to get a personalized gift recommendation
-              in seconds — just pick who it&apos;s for, set your budget, and hit Shuffle.
+              in seconds. Just pick who it&apos;s for, set your budget, and hit Shuffle.
             </p>
             <Link
               href="/shuffle"

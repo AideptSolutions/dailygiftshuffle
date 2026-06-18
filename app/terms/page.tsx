@@ -15,7 +15,7 @@ export default function TermsPage() {
         <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Terms of Service</h1>
         <p className="text-sm text-gray-400 mb-10">Last updated: March 6, 2026</p>
 
-        {/* FTC-required affiliate disclosure — prominent placement */}
+        {/* FTC-required affiliate disclosure, prominent placement */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8">
           <p className="text-sm font-semibold text-amber-800">
             Affiliate Disclosure

@@ -8,7 +8,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas for Kids and Grandkids — Top Picks by Age | TheGiftShuffle',
+  title: 'Gift Ideas for Kids and Grandkids: Top Picks by Age | TheGiftShuffle',
   description:
     'Find the best gift ideas for kids and grandkids at every age and budget. From toddler toys to STEM kits to outdoor gear, these are the picks kids actually want.',
   keywords: [

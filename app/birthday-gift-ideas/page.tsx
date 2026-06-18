@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Birthday Gift Ideas — Unique Picks for Every Person | TheGiftShuffle',
+  title: 'Birthday Gift Ideas: Unique Picks for Every Person | TheGiftShuffle',
   description:
-    "The birthday is tomorrow and you have no idea what to get. Browse 30+ curated birthday gift ideas for everyone on your list — sorted by recipient and budget.",
+    "The birthday is tomorrow and you have no idea what to get. Browse 30+ curated birthday gift ideas for everyone on your list, sorted by recipient and budget.",
   keywords: [
     'birthday gift ideas',
     'birthday gifts',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'last minute birthday gifts',
   ],
   openGraph: {
-    title: 'Birthday Gift Ideas — Unique Picks for Every Person | TheGiftShuffle',
+    title: 'Birthday Gift Ideas: Unique Picks for Every Person | TheGiftShuffle',
     description:
-      "Browse 30+ curated birthday gift ideas for everyone on your list — sorted by recipient and budget.",
+      "Browse 30+ curated birthday gift ideas for everyone on your list, sorted by recipient and budget.",
     type: 'website',
     url: 'https://thegiftshuffle.com/birthday-gift-ideas',
     images: [
@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: 'What birthday gifts do adults actually want?',
-    a: "Adults consistently prefer practical luxury — gifts they'd want but wouldn't buy for themselves. Top picks: a percussion massage gun, a smart watch, a Kindle Paperwhite, an Ember temperature mug, premium noise-canceling headphones, a cozy weighted blanket, or a high-end skincare gift set. Adults also love experience gifts (cooking class, wine tasting, spa day) over physical items.",
+    a: "Adults consistently prefer practical luxury, gifts they'd want but wouldn't buy for themselves. Top picks: a percussion massage gun, a smart watch, a Kindle Paperwhite, an Ember temperature mug, premium noise-canceling headphones, a cozy weighted blanket, or a high-end skincare gift set. Adults also love experience gifts (cooking class, wine tasting, spa day) over physical items.",
   },
   {
     q: "What's a good birthday gift for a friend?",
@@ -126,7 +126,7 @@ export default function BirthdayGiftIdeasPage() {
             The best birthday gift ideas include personalized items, experience gifts, curated
             gift boxes, and practical favorites they&apos;d never buy themselves. Whether you
             need a last-minute pick or a carefully planned surprise, these birthday gifts are
-            chosen to make people smile — for any age, budget, and personality.
+            chosen to make people smile, for any age, budget, and personality.
           </p>
         </section>
 
@@ -154,7 +154,7 @@ export default function BirthdayGiftIdeasPage() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Need a birthday gift idea right now? Use TheGiftShuffle — pick who it&apos;s for,
+              Need a birthday gift idea right now? Use TheGiftShuffle. Pick who it&apos;s for,
               set your budget, and get an instant personalized recommendation.
             </p>
             <Link

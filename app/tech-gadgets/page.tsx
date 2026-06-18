@@ -7,7 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'Best Tech Gifts & Gadgets 2026 — Top Picks for Every Budget | TheGiftShuffle',
+  title: 'Best Tech Gifts & Gadgets 2026: Top Picks for Every Budget | TheGiftShuffle',
   description:
     'The best tech gifts of 2026: wireless earbuds with 40+ hour battery, 4K webcams for remote work, and portable power stations. Curated picks with real specs.',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Tech Gifts & Gadgets 2026 | TheGiftShuffle',
     description:
-      'Curated tech gift picks with real specs — wireless earbuds, 4K webcams, ultrawide monitors, and portable power.',
+      'Curated tech gift picks with real specs, wireless earbuds, 4K webcams, ultrawide monitors, and portable power.',
     type: 'website',
     url: 'https://thegiftshuffle.com/tech-gadgets',
     images: [
@@ -153,7 +153,7 @@ const faqs = [
   },
   {
     q: 'Are wireless earbuds a good gift?',
-    a: 'Yes, wireless earbuds are consistently the most-wanted tech gift across all age groups. The best ones in 2026 — Sony WF-1000XM6 and Bose QuietComfort Ultra — offer 24-30 hours of battery, class-leading noise cancellation, and USB-C charging. They work for commuters, gym-goers, remote workers, and travelers equally well.',
+    a: 'Yes, wireless earbuds are consistently the most-wanted tech gift across all age groups. The best ones in 2026, Sony WF-1000XM6 and Bose QuietComfort Ultra, offer 24-30 hours of battery, class-leading noise cancellation, and USB-C charging. They work for commuters, gym-goers, remote workers, and travelers equally well.',
   },
 ];
 
@@ -212,7 +212,7 @@ export default function TechGadgetsPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best tech gifts in 2026 run on USB-C, solve a real problem, and have specs worth noticing on day one.
-            These six picks cover wireless audio, remote work, portable power, and everything in between — curated for
+            These six picks cover wireless audio, remote work, portable power, and everything in between, curated for
             people who already have a phone charger and need something better.
           </p>
         </section>
@@ -278,7 +278,7 @@ export default function TechGadgetsPage() {
             It connects via USB-C 3.2 and works with Teams, Zoom, Google Meet, and Nintendo Switch 2.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            The LG 34U650A-B pairs with any laptop via a single USB-C cable — 96W Power Delivery means your
+            The LG 34U650A-B pairs with any laptop via a single USB-C cable. 96W Power Delivery means your
             MacBook charges while you work. The 3440x1440 curved IPS panel runs at 100Hz with HDR10 support.
             It replaces a hub, monitor, and power adapter in one connection.
           </p>
@@ -287,14 +287,14 @@ export default function TechGadgetsPage() {
             Best Portable Power: Anker & Jackery
           </h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            The Anker PowerCore 26K outputs 65W via USB-C — enough to charge a MacBook Air at full speed
+            The Anker PowerCore 26K outputs 65W via USB-C, enough to charge a MacBook Air at full speed
             alongside a phone. At 26,800mAh it stays under the 100Wh airline carry-on limit.
             The practical pick for anyone who travels with a laptop.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
             The Jackery Explorer 500 v2 steps up to home and camping use. The 512Wh LiFePO4 battery handles
             a mini fridge, CPAP machine, or small power tools. LiFePO4 chemistry is rated for 4,000 cycles
-            versus 500 in standard lithium — built to last a decade of use.
+            versus 500 in standard lithium, built to last a decade of use.
           </p>
         </section>
 

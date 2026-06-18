@@ -8,9 +8,9 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Her — Gifts She'll Actually Love | TheGiftShuffle",
+  title: "Gift Ideas for Her: Gifts She'll Actually Love | TheGiftShuffle",
   description:
-    "Browse 25+ thoughtful gift ideas for her — wife, girlfriend, sister, or best friend. From self-care to personal style, these picks make an impression.",
+    "Browse 25+ thoughtful gift ideas for her: wife, girlfriend, sister, or best friend. From self-care to personal style, these picks make an impression.",
   keywords: [
     'gift ideas for her',
     'gifts for her',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'thoughtful gifts for women',
   ],
   openGraph: {
-    title: "Gift Ideas for Her — Gifts She'll Actually Love | TheGiftShuffle",
+    title: "Gift Ideas for Her: Gifts She'll Actually Love | TheGiftShuffle",
     description:
-      "Browse 25+ thoughtful gift ideas for her — wife, girlfriend, sister, or best friend.",
+      "Browse 25+ thoughtful gift ideas for her: wife, girlfriend, sister, or best friend.",
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-her',
     images: [
@@ -45,7 +45,7 @@ const herProducts = products.filter(
 const faqs = [
   {
     q: "What's a good gift for a woman who has everything?",
-    a: "For the woman who has everything, the best gifts are personalized or experiential — a custom name necklace, a spa day gift card, a luxury skincare set she'd never splurge on herself, or an experience like a cooking class or wine tasting. These feel thoughtful precisely because they require knowing her.",
+    a: "For the woman who has everything, the best gifts are personalized or experiential, a custom name necklace, a spa day gift card, a luxury skincare set she'd never splurge on herself, or an experience like a cooking class or wine tasting. These feel thoughtful precisely because they require knowing her.",
   },
   {
     q: 'What gifts do women actually love?',
@@ -124,7 +124,7 @@ export default function GiftIdeasForHerPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             If you&apos;re looking for gift ideas for her, the best gifts are ones that feel personal
-            and indulgent — luxury self-care sets, personalized jewelry, cozy loungewear, and
+            and indulgent: luxury self-care sets, personalized jewelry, cozy loungewear, and
             experiences she&apos;d never plan for herself. Whether you need a gift for a wife,
             girlfriend, or best friend, these picks consistently land.
           </p>

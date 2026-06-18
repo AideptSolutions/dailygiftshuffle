@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $100 (2026) — Best Picks for Dad | TheGiftShuffle",
+  title: "Father's Day Gifts Under $100 (2026): Best Picks for Dad | TheGiftShuffle",
   description:
-    "The best Father's Day gifts under $100 in 2026. Smartwatches, massage guns, whiskey decanter sets, cast iron skillets, power tools, and more — all under $100.",
+    "The best Father's Day gifts under $100 in 2026. Smartwatches, massage guns, whiskey decanter sets, cast iron skillets, power tools, and more, all under $100.",
   keywords: [
     "fathers day gifts under 100",
     "fathers day gifts under $100",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Father's Day Gifts Under $100 (2026) | TheGiftShuffle",
     description:
-      "The best Father's Day gifts under $100 — smartwatches, massage guns, cast iron skillets, whiskey sets, and more.",
+      "The best Father's Day gifts under $100, including smartwatches, massage guns, cast iron skillets, whiskey sets, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/fathers-day-gifts-under-100',
   },
@@ -45,11 +45,11 @@ const faqs = [
   },
   {
     q: "What Father's Day gifts under $100 does Dad actually use?",
-    a: "The gifts in the $50-$100 range with the highest daily-use rates: an insulated smart mug or quality tumbler, a percussion massage gun for post-workout recovery or desk-job soreness, a cast iron skillet he'll cook on for 20 years, and a compact Bluetooth speaker for the garage or patio. These aren't one-time-use novelties — they integrate into his actual life.",
+    a: "The gifts in the $50-$100 range with the highest daily-use rates: an insulated smart mug or quality tumbler, a percussion massage gun for post-workout recovery or desk-job soreness, a cast iron skillet he'll cook on for 20 years, and a compact Bluetooth speaker for the garage or patio. These aren't one-time-use novelties. They integrate into his actual life.",
   },
   {
     q: "What is the best splurge Father's Day gift under $100?",
-    a: "The best 'splurge' Father's Day gift under $100 is the percussion massage gun at around $80. It's the gift Dad would never justify buying himself, but will use after every workout, workday, or yardwork session. A whiskey decanter set in the $65 range also hits high on perceived value — hand-blown glass in a gift box always looks more expensive than it is.",
+    a: "The best 'splurge' Father's Day gift under $100 is the percussion massage gun at around $80. It's the gift Dad would never justify buying himself, but will use after every workout, workday, or yardwork session. A whiskey decanter set in the $65 range also hits high on perceived value. Hand-blown glass in a gift box always looks more expensive than it is.",
   },
 ];
 
@@ -144,7 +144,7 @@ export default function FathersDayGiftsUnder100Page() {
               Need a Recommendation Fast?
             </h2>
             <p className="text-gray-600 mb-6">
-              Use TheGiftShuffle — pick Dad, set your budget, and get a personalized Father&apos;s Day pick in seconds.
+              Use TheGiftShuffle. Pick Dad, set your budget, and get a personalized Father&apos;s Day pick in seconds.
             </p>
             <Link
               href="/shuffle"

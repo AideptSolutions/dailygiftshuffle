@@ -102,7 +102,7 @@ function ProductCard({
         outline: pinned ? '2px solid #F04E30' : undefined,
       }}
     >
-      {/* Image — fixed compact height */}
+      {/* Image, fixed compact height */}
       <div className="relative w-full h-28">
         <Image
           src={product.image}
@@ -111,7 +111,7 @@ function ProductCard({
           className="object-contain p-2"
           unoptimized
         />
-        {/* Pin button — top-left */}
+        {/* Pin button, top-left */}
         <button
           onClick={(e) => { e.stopPropagation(); onTogglePin?.(); }}
           aria-label={pinned ? 'Unpin this gift' : 'Pin this gift'}
@@ -123,7 +123,7 @@ function ProductCard({
         >
           <PinIcon pinned={!!pinned} />
         </button>
-        {/* Save button — top-right */}
+        {/* Save button, top-right */}
         <button
           onClick={() => {
             if (isFavorited(product.id)) {
@@ -149,7 +149,7 @@ function ProductCard({
           {isFavorited(product.id) ? 'Saved' : 'Save'}
         </button>
       </div>
-      {/* Info — compact, no description */}
+      {/* Info, compact, no description */}
       <div className="p-3 flex flex-col flex-1">
         <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2">
           {product.name}
@@ -167,7 +167,7 @@ function ProductCard({
           {product.priceDisplay}
         </p>
       </div>
-      {/* Buy button — full width */}
+      {/* Buy button, full width */}
       <a
         href={product.affiliateUrl}
         target="_blank"
@@ -433,7 +433,7 @@ export default function ShuffleClient() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-2" style={{ color: '#1A202C' }}>
               What&apos;s the occasion?
             </h2>
-            <p className="text-center text-gray-500 mb-6">Optional — or skip to shuffle immediately</p>
+            <p className="text-center text-gray-500 mb-6">Optional, or skip to shuffle immediately</p>
             <div className="grid grid-cols-2 gap-3 mb-4">
               {OCCASIONS.map((o) => (
                 <button
@@ -449,12 +449,12 @@ export default function ShuffleClient() {
               onClick={() => handleOccasion(null)}
               className="w-full bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold py-4 rounded-2xl transition-colors"
             >
-              Skip — Just Shuffle
+              Skip, Just Shuffle
             </button>
           </div>
         )}
 
-        {/* Step 4: Result — 4 cards */}
+        {/* Step 4: Result, 4 cards */}
         {step === 'result' && (
           <div>
             <div className="flex items-center justify-between mb-4">
@@ -532,7 +532,7 @@ export default function ShuffleClient() {
                   <AdSlot size="rectangle" />
                 </div>
                 <p className="text-xs text-center text-gray-300 mt-4">
-                  Affiliate links — we may earn a commission at no cost to you.
+                  Affiliate links. We may earn a commission at no cost to you.
                 </p>
               </>
             ) : (

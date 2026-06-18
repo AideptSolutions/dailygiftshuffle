@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: 'Gifts for Boss — Best Boss Gift Ideas 2026 | TheGiftShuffle',
+  title: 'Gifts for Boss: Best Boss Gift Ideas 2026 | TheGiftShuffle',
   description:
-    'Find the best gifts for your boss in 2026. Premium desk accessories, insulated mugs, luxury gift sets, and professional picks that hit the right professional note — not too personal, not too cheap.',
+    'Find the best gifts for your boss in 2026. Premium desk accessories, insulated mugs, luxury gift sets, and professional picks that hit the right professional note, not too personal, not too cheap.',
   keywords: [
     'gifts for boss',
     'boss gift ideas 2026',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'boss appreciation gifts',
   ],
   openGraph: {
-    title: 'Gifts for Boss — Best Boss Gift Ideas 2026 | TheGiftShuffle',
+    title: 'Gifts for Boss: Best Boss Gift Ideas 2026 | TheGiftShuffle',
     description:
-      'The best boss gifts for 2026 — premium desk accessories, insulated mugs, luxury sets, and professional picks.',
+      'The best boss gifts for 2026: premium desk accessories, insulated mugs, luxury sets, and professional picks.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gifts-for-boss',
   },
@@ -61,7 +61,7 @@ const displayProducts =
 const faqs = [
   {
     q: 'What is a good gift for your boss?',
-    a: "A good gift for your boss is professional, practical, and not too personal. The best boss gifts are: a temperature-control mug (Ember, around $150 or a quality alternative at $50), a premium desk organizer, an insulated tumbler with a clean design, a quality notebook and pen set for meetings, or a gourmet snack gift box. The goal is something they will actually use at work — not something that creates an awkward personal dynamic.",
+    a: "A good gift for your boss is professional, practical, and not too personal. The best boss gifts are: a temperature-control mug (Ember, around $150 or a quality alternative at $50), a premium desk organizer, an insulated tumbler with a clean design, a quality notebook and pen set for meetings, or a gourmet snack gift box. The goal is something they will actually use at work, not something that creates an awkward personal dynamic.",
   },
   {
     q: 'How much should you spend on a gift for your boss?',
@@ -136,7 +136,7 @@ export default function GiftsForBossPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             <strong>The best boss gifts are professional, practical, and appropriately priced.</strong>{' '}
-            A quality insulated tumbler, a premium desk organizer, a gourmet snack gift set — these say &ldquo;I appreciate
+            A quality insulated tumbler, a premium desk organizer, a gourmet snack gift set. These say &ldquo;I appreciate
             your leadership&rdquo; without overstepping. The sweet spot is $35-$75, whether you&apos;re giving alone or
             contributing to a team gift.
           </p>
@@ -152,7 +152,7 @@ export default function GiftsForBossPage() {
           <h2 className="text-2xl font-bold mb-2" style={{ color: '#1A202C' }}>
             Best Boss Gift Ideas 2026
           </h2>
-          <p className="text-sm text-gray-500 mb-6">Sorted by customer rating — professional picks at every budget.</p>
+          <p className="text-sm text-gray-500 mb-6">Sorted by customer rating. Professional picks at every budget.</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {displayProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
@@ -173,7 +173,7 @@ export default function GiftsForBossPage() {
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
               The professional relationship changes the calculus on gifting. Unlike a coworker or friend, there&apos;s
-              an inherent power dynamic with a boss — which means the goal of the gift is different. You&apos;re not
+              an inherent power dynamic with a boss, which means the goal of the gift is different. You&apos;re not
               trying to be memorable or impressive. You&apos;re trying to be thoughtful and appropriate.
             </p>
             <p>
@@ -184,7 +184,7 @@ export default function GiftsForBossPage() {
             </p>
             <p>
               For a departing boss or a formal recognition moment, a personalized award plaque or engraved
-              item is genuinely appreciated — these are the gifts bosses actually display. A team gift card
+              item is genuinely appreciated. These are the gifts bosses actually display. A team gift card
               from the whole group to a restaurant or spa experience is another strong option because it
               removes the individual dynamic entirely and lets them enjoy something they want.
             </p>
@@ -198,7 +198,7 @@ export default function GiftsForBossPage() {
               Get a Personalized Gift Recommendation
             </h2>
             <p className="text-gray-600 mb-6">
-              Use TheGiftShuffle — pick the recipient type, set your budget, and get an instant curated
+              Use TheGiftShuffle. Pick the recipient type, set your budget, and get an instant curated
               gift recommendation in seconds.
             </p>
             <Link

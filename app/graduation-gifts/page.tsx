@@ -10,13 +10,13 @@ import { products } from '@/data/products-catalog';
 import CategoryIcon from '@/components/CategoryIcon';
 
 export const metadata: Metadata = {
-  title: 'Best Graduation Gifts 2026 — Thoughtful Picks for Grads | TheGiftShuffle',
+  title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads | TheGiftShuffle',
   description:
-    'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings — every budget covered.',
+    'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings, every budget covered.',
   openGraph: {
-    title: 'Best Graduation Gifts 2026 — Thoughtful Picks for Grads | TheGiftShuffle',
+    title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads | TheGiftShuffle',
     description:
-      'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings — every budget covered.',
+      'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings, every budget covered.',
     url: 'https://thegiftshuffle.com/graduation-gifts',
     images: [
       {
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: 'What is the right amount to spend on a graduation gift?',
-    a: 'For a close family member: $50-$150 is a reasonable range. For a friend: $25-$75 is common. Group gifts from multiple people can pool at any amount. The most appreciated gifts are not always the most expensive — a thoughtful $40 gift that solves a specific problem the grad has is worth more than a generic $100 gift card.',
+    a: 'For a close family member: $50-$150 is a reasonable range. For a friend: $25-$75 is common. Group gifts from multiple people can pool at any amount. The most appreciated gifts are not always the most expensive. A thoughtful $40 gift that solves a specific problem the grad has is worth more than a generic $100 gift card.',
   },
   {
     q: 'What are good graduation gift ideas that are not cash?',
@@ -141,7 +141,7 @@ export default function GraduationGiftsPage() {
           Congratulations to the Class of 2026. Whether they are heading to college, entering the workforce, or moving into their first apartment, there is something here for every grad and every budget.
         </p>
         <p className="text-gray-500 text-base max-w-xl mx-auto mb-6">
-          Practical picks that help them launch — not just another gift card.
+          Practical picks that help them launch, not just another gift card.
         </p>
         <Link
           href="/shuffle"

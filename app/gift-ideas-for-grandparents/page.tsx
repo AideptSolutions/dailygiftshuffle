@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Grandparents — Thoughtful Gifts They'll Love | TheGiftShuffle",
+  title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love | TheGiftShuffle",
   description:
-    'Find the perfect gift for grandma or grandpa — from garden tools and cozy home items to easy-to-use tech and wellness gifts. Hand-picked thoughtful gifts for grandparents.',
+    'Find the perfect gift for grandma or grandpa, from garden tools and cozy home items to easy-to-use tech and wellness gifts. Hand-picked thoughtful gifts for grandparents.',
   keywords: [
     'gift ideas for grandparents',
     'gifts for grandma',
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     'practical gifts for grandparents',
   ],
   openGraph: {
-    title: "Gift Ideas for Grandparents — Thoughtful Gifts They'll Love | TheGiftShuffle",
+    title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love | TheGiftShuffle",
     description:
-      'Browse thoughtful gift ideas for grandparents — garden tools, cozy home picks, wellness items, and easy tech they will actually use.',
+      'Browse thoughtful gift ideas for grandparents: garden tools, cozy home picks, wellness items, and easy tech they will actually use.',
     type: 'website',
     url: 'https://thegiftshuffle.com/gift-ideas-for-grandparents',
     images: [
@@ -42,15 +42,15 @@ const grandparentProducts = products.filter((p) => p.recipients.includes('grandp
 const faqs = [
   {
     q: "What's a good gift for grandma who has everything?",
-    a: "For a grandma who seems to have everything, the best gifts are thoughtful and experiential: a digital photo frame preloaded with family photos, a personalized recipe book with family favorites, a subscription to an audiobook service, or a luxurious weighted blanket. Focus on items that create connection or help her relax — things she might not buy herself.",
+    a: "For a grandma who seems to have everything, the best gifts are thoughtful and experiential: a digital photo frame preloaded with family photos, a personalized recipe book with family favorites, a subscription to an audiobook service, or a luxurious weighted blanket. Focus on items that create connection or help her relax, things she might not buy herself.",
   },
   {
     q: 'What do grandpas like as gifts?',
-    a: "Grandpas tend to appreciate practical gifts tied to their hobbies. Top picks include garden tool accessories (kneeling pads, seed starter kits), workshop and DIY tools, a premium insulated travel mug, crossword puzzle books, or a digital photo frame. Tech gifts work best when they are intuitive — smart speakers like Echo Dot are especially popular.",
+    a: "Grandpas tend to appreciate practical gifts tied to their hobbies. Top picks include garden tool accessories (kneeling pads, seed starter kits), workshop and DIY tools, a premium insulated travel mug, crossword puzzle books, or a digital photo frame. Tech gifts work best when they are intuitive. Smart speakers like Echo Dot are especially popular.",
   },
   {
     q: 'What are practical gifts for elderly grandparents?',
-    a: "Practical gifts for elderly grandparents include: a hands-free LED book light, a large-button TV remote, a non-slip bath mat, a jar opener set, a heated throw blanket, or a pill organizer with day labels. These are the gifts that get used every single day — and they always appreciate the thoughtfulness behind choosing something functional.",
+    a: "Practical gifts for elderly grandparents include: a hands-free LED book light, a large-button TV remote, a non-slip bath mat, a jar opener set, a heated throw blanket, or a pill organizer with day labels. These are the gifts that get used every single day, and they always appreciate the thoughtfulness behind choosing something functional.",
   },
   {
     q: 'What are good gifts for grandparents under $50?',
@@ -58,11 +58,11 @@ const faqs = [
   },
   {
     q: 'What gifts help grandparents stay active?',
-    a: "Gifts that encourage activity for grandparents include: a lightweight gardening kneeling pad with handles, resistance bands for gentle exercise, a step counter smartwatch with a simple display, walking poles for stability, or a set of yard games. Gardening tools are the fastest-growing gift category for the 65+ demographic — they combine activity with purpose.",
+    a: "Gifts that encourage activity for grandparents include: a lightweight gardening kneeling pad with handles, resistance bands for gentle exercise, a step counter smartwatch with a simple display, walking poles for stability, or a set of yard games. Gardening tools are the fastest-growing gift category for the 65+ demographic. They combine activity with purpose.",
   },
   {
     q: "What's a unique gift for grandparents?",
-    a: "Unique grandparent gifts include a custom star map of their wedding date, a DNA ancestry kit, a handwriting keepsake necklace, a digital cloud photo frame that family can update remotely, or a personalized family tree print. These feel genuinely special — not just practical — and create lasting memories.",
+    a: "Unique grandparent gifts include a custom star map of their wedding date, a DNA ancestry kit, a handwriting keepsake necklace, a digital cloud photo frame that family can update remotely, or a personalized family tree print. These feel genuinely special, not just practical, and create lasting memories.",
   },
 ];
 
@@ -120,10 +120,10 @@ export default function GiftIdeasForGrandparentsPage() {
             Gift Ideas for Grandparents
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            The best gifts for grandparents combine thoughtfulness with practicality — and 2026 trends make that easier than ever. Garden tools and accessories are the fastest-growing gift category for the 65+ demographic, with seed starter kits, kneeling pads, and long-reach planters leading the charts. Health and wellness items are close behind: smart health monitors, joint support supplements, heated throws, and cozy weighted blankets are consistently top-rated in this segment. The key is choosing trusted brands with strong reviews — grandparents specifically appreciate the reassurance of a well-reviewed, well-known product.
+            The best gifts for grandparents combine thoughtfulness with practicality, and 2026 trends make that easier than ever. Garden tools and accessories are the fastest-growing gift category for the 65+ demographic, with seed starter kits, kneeling pads, and long-reach planters leading the charts. Health and wellness items are close behind: smart health monitors, joint support supplements, heated throws, and cozy weighted blankets are consistently top-rated in this segment. The key is choosing trusted brands with strong reviews. Grandparents specifically appreciate the reassurance of a well-reviewed, well-known product.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            For grandparents who love reading, LED book lights and large-print puzzle books are perennial favorites with exceptional review counts. For the tech-curious, simple devices like digital photo frames (which family members can update remotely) and voice-activated smart speakers have seen a huge spike in the 65+ gifting category. Items like seed packets, kneeling pads, and cozy home accessories top the &quot;most re-purchased&quot; lists — a clear signal they deliver real, daily value.
+            For grandparents who love reading, LED book lights and large-print puzzle books are perennial favorites with exceptional review counts. For the tech-curious, simple devices like digital photo frames (which family members can update remotely) and voice-activated smart speakers have seen a huge spike in the 65+ gifting category. Items like seed packets, kneeling pads, and cozy home accessories top the &quot;most re-purchased&quot; lists, a clear signal they deliver real, daily value.
           </p>
         </section>
 
@@ -152,7 +152,7 @@ export default function GiftIdeasForGrandparentsPage() {
             </h2>
             <p className="text-gray-600 mb-6">
               Not finding exactly what you need? Use TheGiftShuffle to get a personalized
-              recommendation in seconds — just pick Grandparents, set your budget, and hit Shuffle.
+              recommendation in seconds. Just pick Grandparents, set your budget, and hit Shuffle.
             </p>
             <Link
               href="/shuffle"

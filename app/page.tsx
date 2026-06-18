@@ -14,7 +14,7 @@ import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
 import { products as allProducts } from '@/data/products';
 
 export const metadata: Metadata = {
-  title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
+  title: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
   description:
     'Find the perfect gift for anyone in seconds. Pick a recipient, set a budget, and hit Shuffle for instant curated gift recommendations. Free to use, no sign-up required.',
   keywords: [
@@ -57,83 +57,83 @@ const giftGuides = [
   {
     href: '/gift-ideas-for-him',
     image: '/img/gift-guides/him.jpg',
-    alt: 'Gift ideas for him — smartwatch, earbuds, and accessories',
+    alt: 'Gift ideas for him, smartwatch, earbuds, and accessories',
     title: 'Gifts for Him',
     desc: 'Practical picks for husbands, boyfriends, and best friends.',
   },
   {
     href: '/gift-ideas-for-her',
     image: '/img/gift-guides/her.jpg',
-    alt: 'Gift ideas for her — perfume, jewelry, and skincare',
+    alt: 'Gift ideas for her, perfume, jewelry, and skincare',
     title: 'Gifts for Her',
-    desc: 'From self-care to personal style — gifts she\'ll adore.',
+    desc: 'From self-care to personal style, gifts she\'ll adore.',
   },
   {
     href: '/gifts-under-50',
     image: '/img/gift-guides/under-50.jpg',
-    alt: 'Gifts under $50 — candle, book, mug, and plant',
+    alt: 'Gifts under $50, candle, book, mug, and plant',
     title: 'Gifts Under $50',
     desc: 'Great gifts that prove you don\'t need a big budget.',
   },
   {
     href: '/christmas-gift-ideas',
     image: '/img/gift-guides/christmas.jpg',
-    alt: 'Christmas gift ideas — wrapped presents and holiday decor',
+    alt: 'Christmas gift ideas, wrapped presents and holiday decor',
     title: 'Christmas Gift Ideas',
     desc: 'Top holiday picks for everyone on your list.',
   },
   {
     href: '/birthday-gift-ideas',
     image: '/img/gift-guides/birthday.jpg',
-    alt: 'Birthday gift ideas — wrapped present, balloons, and confetti',
+    alt: 'Birthday gift ideas, wrapped present, balloons, and confetti',
     title: 'Birthday Gift Ideas',
     desc: 'Unique picks that make birthdays unforgettable.',
   },
   {
     href: '/gift-ideas-for-kids',
     image: '/img/gift-guides/kids.jpg',
-    alt: 'Gifts for kids — LEGO, building blocks, and toys',
+    alt: 'Gifts for kids, LEGO, building blocks, and toys',
     title: 'Gifts for Kids and Grandkids',
     desc: 'Age-appropriate picks from tots to teens that they will actually play with.',
   },
   {
     href: '/gifts-for-camping-and-outdoors',
     image: '/img/gift-guides/outdoors.jpg',
-    alt: 'Gifts for camping and outdoors — headlamp, knife, and gear',
+    alt: 'Gifts for camping and outdoors, headlamp, knife, and gear',
     title: 'Gifts for Camping and the Outdoors',
     desc: 'Gear that actually gets used on every trip, from day hikes to base camp.',
   },
   {
     href: '/category/baby-shower',
     image: '/img/gift-guides/baby-shower.jpg',
-    alt: 'Baby shower gift ideas — swaddle, plush toys, and accessories',
+    alt: 'Baby shower gift ideas, swaddle, plush toys, and accessories',
     title: 'Baby Shower Gifts',
     desc: 'From practical must-haves to heartfelt keepsakes for the new arrival.',
   },
   {
     href: '/category/wedding',
     image: '/img/gift-guides/wedding.jpg',
-    alt: 'Wedding gift ideas — champagne, keepsakes, and couples gifts',
+    alt: 'Wedding gift ideas, champagne, keepsakes, and couples gifts',
     title: 'Wedding Gifts',
-    desc: 'Thoughtful picks for the happy couple — registry hits and beyond.',
+    desc: 'Thoughtful picks for the happy couple, registry hits and beyond.',
   },
   {
     href: '/category/travel',
     image: '/img/gift-guides/travel.jpg',
-    alt: 'Travel gift ideas — passport holder, earbuds, and luggage',
+    alt: 'Travel gift ideas, passport holder, earbuds, and luggage',
     title: 'Travel Gifts',
     desc: 'For the frequent flyer or adventure seeker on your list.',
   },
   {
     href: '/graduation-gifts',
     image: '/img/gift-guides/birthday.jpg',
-    alt: 'Graduation gift ideas — diploma, laptop, and luggage',
+    alt: 'Graduation gift ideas, diploma, laptop, and luggage',
     title: 'Graduation Gifts',
     desc: 'Practical picks for grads heading to college, work, or their first apartment.',
   },
 ];
 
-// Top 10 Father's Day gifts — pulled from shared product data
+// Top 10 Father's Day gifts, pulled from shared product data
 const TOP_10_DADS_IDS = ['dad-fd-1','dad-fd-2','dad-fd-3','dad-fd-4','dad-fd-5','dad-fd-6','dad-fd-7','dad-fd-8','dad-fd-9','dad-fd-10'];
 const productMap = Object.fromEntries(allProducts.map((p) => [p.id, p]));
 const top10Dads = TOP_10_DADS_IDS.map((id) => productMap[id]).filter(Boolean);
@@ -188,7 +188,7 @@ export default async function HomePage() {
         name: 'What is the best gift under $50?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'TheGiftShuffle curates hundreds of gifts under $50 across categories including tech gadgets, home goods, experiences, and more — all hand-reviewed for quality and uniqueness.',
+          text: 'TheGiftShuffle curates hundreds of gifts under $50 across categories including tech gadgets, home goods, experiences, and more, all hand-reviewed for quality and uniqueness.',
         },
       },
     ],
@@ -237,7 +237,7 @@ export default async function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#F04E30' }}>Father&apos;s Day — June 21</span>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#F04E30' }}>Father&apos;s Day, June 21</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold mt-1" style={{ color: '#1A202C' }}>
                 Top 10 Gifts for Dad in 2026
               </h2>
@@ -345,7 +345,7 @@ export default async function HomePage() {
             Popular Gift Guides
           </h2>
           <p className="text-center text-gray-500 mb-10 text-sm">
-            Browse our hand-curated gift guides — filtered by recipient, budget, and occasion.
+            Browse our hand-curated gift guides, filtered by recipient, budget, and occasion.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {giftGuides.map((guide) => (
@@ -392,7 +392,7 @@ export default async function HomePage() {
           Start Shuffling
         </Link>
 
-        {/* ── TEMP: Crane's wishlist page — remove once creator API access is approved ── */}
+        {/* ── TEMP: Crane's wishlist page, remove once creator API access is approved ── */}
         <div className="mt-4">
           <Link
             href="/cranes"

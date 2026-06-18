@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Graduation Gifts Under $100 (Class of 2026) | TheGiftShuffle",
     description:
-      "Top graduation gifts under $100 — Kindle, smartwatch, massage gun, silk pajamas, and more for every grad.",
+      "Top graduation gifts under $100: Kindle, smartwatch, massage gun, silk pajamas, and more for every grad.",
     type: 'website',
     url: 'https://thegiftshuffle.com/graduation-gifts-under-100',
   },
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "What graduation gifts under $100 actually get used?",
-    a: "The highest daily-use graduation gifts under $100: a Kindle Paperwhite (used on every commute), a smartwatch (worn every day), an insulated tumbler (carried to every morning class or job), wireless earbuds (used for every study session or commute), and a quality backpack or tote. These are all gifts with a natural place in the grad's daily routine — not items that end up in a closet.",
+    a: "The highest daily-use graduation gifts under $100: a Kindle Paperwhite (used on every commute), a smartwatch (worn every day), an insulated tumbler (carried to every morning class or job), wireless earbuds (used for every study session or commute), and a quality backpack or tote. These are all gifts with a natural place in the grad's daily routine, not items that end up in a closet.",
   },
 ];
 
@@ -63,7 +63,7 @@ const faqSchema = {
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Graduation Gifts Under $100 — Class of 2026',
+  name: 'Graduation Gifts Under $100: Class of 2026',
   description: 'Hand-picked graduation gifts under $100 for the Class of 2026, curated by TheGiftShuffle',
   url: 'https://thegiftshuffle.com/graduation-gifts-under-100',
   numberOfItems: gradUnder100.length,
@@ -107,11 +107,11 @@ export default function GraduationGiftsUnder100Page() {
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <div className="mb-3 flex justify-center"><CategoryIcon slug="graduation" className="w-12 h-12 text-coral" aria-hidden="true" /></div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            Graduation Gifts Under $100 — Class of 2026
+            Graduation Gifts Under $100: Class of 2026
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Under $100 is the sweet spot for close-family graduation gifting. You&apos;re in Kindle territory.
-            Smartwatch territory. Quality massage gun territory — the kind of gift they&apos;ve been wanting but
+            Smartwatch territory. Quality massage gun territory, the kind of gift they&apos;ve been wanting but
             haven&apos;t justified spending on themselves yet. These picks match where the grad actually is headed:
             college, the workforce, or their first real space.
           </p>
@@ -142,7 +142,7 @@ export default function GraduationGiftsUnder100Page() {
               Find a Graduation Gift in Seconds
             </h2>
             <p className="text-gray-600 mb-6">
-              Use TheGiftShuffle to get a personalized graduation gift recommendation — set your budget and get
+              Use TheGiftShuffle to get a personalized graduation gift recommendation, set your budget and get
               an instant curated pick.
             </p>
             <Link

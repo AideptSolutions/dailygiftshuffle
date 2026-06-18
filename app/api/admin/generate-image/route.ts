@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
 
   const dataUrl = await generateImage(prompt, apiKey);
   if (!dataUrl) {
-    return NextResponse.json({ error: 'No image returned — all Gemini models failed or returned no image' }, { status: 502 });
+    return NextResponse.json({ error: 'No image returned. All Gemini models failed or returned no image' }, { status: 502 });
   }
 
   // Save the data URL as the product image in Redis so it persists

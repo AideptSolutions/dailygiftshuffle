@@ -9,9 +9,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Mother's Day Gifts — The Best Picks for 2026 | TheGiftShuffle",
+  title: "Mother's Day Gifts: The Best Picks for 2026 | TheGiftShuffle",
   description:
-    "Find the best Mother's Day gifts for 2026 — personalized jewelry, spa sets, premium kitchen gadgets, and thoughtful picks for every budget. Don't wait until the last minute.",
+    "Find the best Mother's Day gifts for 2026: personalized jewelry, spa sets, premium kitchen gadgets, and thoughtful picks for every budget. Don't wait until the last minute.",
   keywords: [
     "mothers day gifts",
     "mothers day gift ideas",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     "mothers day gifts for mom",
   ],
   openGraph: {
-    title: "Mother's Day Gifts — The Best Picks for 2026 | TheGiftShuffle",
+    title: "Mother's Day Gifts: The Best Picks for 2026 | TheGiftShuffle",
     description:
-      "Browse the best Mother's Day gifts for 2026 — personalized jewelry, spa sets, kitchen upgrades, and more.",
+      "Browse the best Mother's Day gifts for 2026: personalized jewelry, spa sets, kitchen upgrades, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/mothers-day-gifts',
     images: [
@@ -49,11 +49,11 @@ const mothersDayProducts = products.filter(
 const faqs = [
   {
     q: "What are the best Mother's Day gifts in 2026?",
-    a: "The best Mother's Day gifts in 2026 are personalized jewelry (name necklaces, birthstone rings), premium spa and self-care sets, experience gifts (cooking classes, afternoon tea, wine tasting), smart kitchen gadgets she wouldn't buy herself, and subscription boxes tailored to her interests. These are the categories with the highest gifting satisfaction scores — she actually uses and remembers them.",
+    a: "The best Mother's Day gifts in 2026 are personalized jewelry (name necklaces, birthstone rings), premium spa and self-care sets, experience gifts (cooking classes, afternoon tea, wine tasting), smart kitchen gadgets she wouldn't buy herself, and subscription boxes tailored to her interests. These are the categories with the highest gifting satisfaction scores. She actually uses and remembers them.",
   },
   {
     q: "What does every mom want for Mother's Day?",
-    a: "Most moms say they want to feel seen and appreciated — not just gifted. The gifts that land best are ones that reflect her specific personality: a spa set for the mom who never makes time for herself, a premium kitchen tool for the mom who loves to cook, a personalized keepsake for the sentimental mom. Avoid generic; lean specific.",
+    a: "Most moms say they want to feel seen and appreciated, not just gifted. The gifts that land best are ones that reflect her specific personality: a spa set for the mom who never makes time for herself, a premium kitchen tool for the mom who loves to cook, a personalized keepsake for the sentimental mom. Avoid generic; lean specific.",
   },
   {
     q: "What are unique Mother's Day gift ideas?",
@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: "What do moms want instead of flowers?",
-    a: "While flowers are always appreciated, the gifts that outlast them are: a quality spa or self-care set, a kitchen upgrade she has been eyeing, personalized jewelry, a subscription box she will receive every month, or an experience (cooking class, local food tour). These create memories and daily use — flowers fade in a week.",
+    a: "While flowers are always appreciated, the gifts that outlast them are: a quality spa or self-care set, a kitchen upgrade she has been eyeing, personalized jewelry, a subscription box she will receive every month, or an experience (cooking class, local food tour). These create memories and daily use. Flowers fade in a week.",
   },
   {
     q: "What are last-minute Mother's Day gift ideas?",
@@ -217,7 +217,7 @@ export default function MothersDayGiftsPage() {
               How TheGiftShuffle Works
             </h2>
             <p className="text-gray-600 mb-6">
-              Not finding the right fit? Use TheGiftShuffle — pick Mom, set your budget, and get
+              Not finding the right fit? Use TheGiftShuffle to pick Mom, set your budget, and get
               a personalized Mother&apos;s Day gift recommendation in seconds.
             </p>
             <Link

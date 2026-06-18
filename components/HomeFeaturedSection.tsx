@@ -320,7 +320,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-3">
-          Affiliate links — we may earn a small commission at no extra cost to you.
+          Affiliate links. We may earn a small commission at no extra cost to you.
         </p>
       </div>
 

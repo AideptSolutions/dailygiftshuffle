@@ -189,7 +189,7 @@ export default function CategoryShufflePage() {
               Showing {cards.length} of {catalog.filter(p => p.tags?.includes(tag)).length} {meta.label} gifts
             </p>
             <p className="text-xs text-gray-300 mt-2">
-              Affiliate links — we may earn a commission at no extra cost to you.
+              Affiliate links. We may earn a commission at no extra cost to you.
             </p>
           </div>
         )}

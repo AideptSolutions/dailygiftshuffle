@@ -8,9 +8,9 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $25 (2026) — Best Affordable Picks | TheGiftShuffle",
+  title: "Father's Day Gifts Under $25 (2026): Best Affordable Picks | TheGiftShuffle",
   description:
-    "The best Father's Day gifts under $25 in 2026. Pocket multi-tools, leather card holders, BBQ rub sets, and more — thoughtful picks for Dad at every budget.",
+    "The best Father's Day gifts under $25 in 2026. Pocket multi-tools, leather card holders, BBQ rub sets, and more, thoughtful picks for Dad at every budget.",
   keywords: [
     "fathers day gifts under 25",
     "fathers day gifts under $25",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Father's Day Gifts Under $25 (2026) | TheGiftShuffle",
     description:
-      "Great Father's Day gifts for under $25 — pocket multi-tools, leather wallets, BBQ rubs, and more.",
+      "Great Father's Day gifts for under $25, including pocket multi-tools, leather wallets, BBQ rubs, and more.",
     type: 'website',
     url: 'https://thegiftshuffle.com/fathers-day-gifts-under-25',
   },
@@ -41,7 +41,7 @@ const fathersDayUnder25 = products
 const faqs = [
   {
     q: "What are the best Father's Day gifts under $25?",
-    a: "The best Father's Day gifts under $25 are: a pocket multi-tool (14-in-1 stainless steel fits any lifestyle), a slim leather card holder, an artisan BBQ spice rub trio, a stainless steel hip flask, and a beard grooming kit. These are all everyday-use gifts that feel considered — not filler.",
+    a: "The best Father's Day gifts under $25 are: a pocket multi-tool (14-in-1 stainless steel fits any lifestyle), a slim leather card holder, an artisan BBQ spice rub trio, a stainless steel hip flask, and a beard grooming kit. These are all everyday-use gifts that feel considered, not filler.",
   },
   {
     q: "Can you get a good Father's Day gift for under $25?",
@@ -114,7 +114,7 @@ export default function FathersDayGiftsUnder25Page() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             You don&apos;t need a big budget to get Dad something he actually uses. Under $25 covers a genuine
             leather card holder, a pocket multi-tool he&apos;ll carry for years, or an artisan BBQ spice rub set
-            for the grill master. These are everyday gifts — chosen, not grabbed off a shelf.
+            for the grill master. These are everyday gifts, chosen, not grabbed off a shelf.
           </p>
         </section>
 
@@ -143,7 +143,7 @@ export default function FathersDayGiftsUnder25Page() {
               Want a Personalized Pick?
             </h2>
             <p className="text-gray-600 mb-6">
-              Use TheGiftShuffle — pick Dad, set your budget to under $25, and get an instant recommendation.
+              Use TheGiftShuffle. Pick Dad, set your budget to under $25, and get an instant recommendation.
             </p>
             <Link
               href="/shuffle"

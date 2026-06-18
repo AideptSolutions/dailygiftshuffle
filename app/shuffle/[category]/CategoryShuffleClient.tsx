@@ -150,7 +150,7 @@ export default function CategoryShuffleClient({ niche, label, emoji }: Props) {
         <h1 className="text-2xl sm:text-3xl font-extrabold mb-2" style={{ color: '#1A202C' }}>
           {label} Gift Shuffle
         </h1>
-        <p className="text-gray-500 text-sm">Get 4 curated gift ideas — shuffle as many times as you like</p>
+        <p className="text-gray-500 text-sm">Get 4 curated gift ideas. Shuffle as many times as you like</p>
       </div>
 
       {/* Step 1: Budget */}
@@ -211,7 +211,7 @@ export default function CategoryShuffleClient({ niche, label, emoji }: Props) {
                 <AdSlot size="rectangle" />
               </div>
               <p className="text-xs text-center text-gray-300 mt-4">
-                Affiliate links — we may earn a commission at no cost to you.
+                Affiliate links. We may earn a commission at no cost to you.
               </p>
             </>
           ) : (

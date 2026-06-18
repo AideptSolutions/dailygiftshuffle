@@ -34,7 +34,7 @@ const CATEGORIES = [
   {
     slug: 'luxury',
     title: 'Luxury & Premium',
-    desc: 'Premium gifts worth the splurge — cashmere, leather, spa experiences, and more.',
+    desc: 'Premium gifts worth the splurge, cashmere, leather, spa experiences, and more.',
     photo: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=400&fit=crop&q=80',
     alt: 'Luxury shopping bags and gifts',
   },
@@ -137,7 +137,7 @@ export default function CategoriesPage() {
             Gift Categories
           </h1>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Browse by interest, hobby, or lifestyle — find the right gift in the right category.
+            Browse by interest, hobby, or lifestyle to find the right gift in the right category.
           </p>
         </div>
 
