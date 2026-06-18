@@ -11,6 +11,7 @@ import GiftCupAnimation from '@/components/GiftCupAnimation';
 import GiftPackageCollections from '@/components/GiftPackageCollections';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
+import { products as allProducts } from '@/data/products';
 
 export const metadata: Metadata = {
   title: 'TheGiftShuffle — Find the Perfect Gift in Seconds',
@@ -40,18 +41,18 @@ const features = [
 
 const giftGuides = [
   {
+    href: '/top-10-fathers-day-gifts-2026',
+    image: '/img/gift-guides/dad.jpg',
+    alt: "Top 10 Father's Day gifts 2026 - gadgets, grilling gear, and experiences",
+    title: "Father's Day Top 10",
+    desc: 'The 10 best gifts for dad in 2026, ranked. June 21 is coming fast.',
+  },
+  {
     href: '/mothers-day-gifts',
     image: '/img/mothers-day-hero-2026.jpg',
     alt: "Mother's Day gifts including skincare, shower steamers, pajamas, and spa sets",
     title: 'Gifts for Mom',
     desc: 'Shower steamers, skincare, cozy pajamas, and spa sets she will actually use.',
-  },
-  {
-    href: '/gift-ideas-for-dad',
-    image: '/img/gift-guides/dad.jpg',
-    alt: 'Gift ideas for dad — wallet, tools, and whiskey',
-    title: 'Gifts for Dad',
-    desc: 'Skip the boring tie. Gadgets, grilling gear, and experiences he\'ll use.',
   },
   {
     href: '/gift-ideas-for-him',
@@ -131,6 +132,11 @@ const giftGuides = [
     desc: 'Practical picks for grads heading to college, work, or their first apartment.',
   },
 ];
+
+// Top 10 Father's Day gifts — pulled from shared product data
+const TOP_10_DADS_IDS = ['dad-fd-1','dad-fd-2','dad-fd-3','dad-fd-4','dad-fd-5','dad-fd-6','dad-fd-7','dad-fd-8','dad-fd-9','dad-fd-10'];
+const productMap = Object.fromEntries(allProducts.map((p) => [p.id, p]));
+const top10Dads = TOP_10_DADS_IDS.map((id) => productMap[id]).filter(Boolean);
 
 export default async function HomePage() {
   const adminProducts = await getPublishedAdminProducts();
@@ -225,6 +231,71 @@ export default async function HomePage() {
 
       {/* Gift Package Collections */}
       <GiftPackageCollections />
+
+      {/* Father's Day Top 10 */}
+      <section className="py-14 px-4" style={{ background: '#FFF8F0' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#F04E30' }}>Father&apos;s Day — June 21</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-1" style={{ color: '#1A202C' }}>
+                Top 10 Gifts for Dad in 2026
+              </h2>
+            </div>
+            <Link
+              href="/top-10-fathers-day-gifts-2026"
+              className="text-sm font-semibold px-4 py-2 rounded-full border-2 transition-all hover:bg-[#F04E30] hover:text-white"
+              style={{ borderColor: '#F04E30', color: '#F04E30' }}
+            >
+              See Full Guide &rarr;
+            </Link>
+          </div>
+          <p className="text-sm text-gray-500 mb-6">Ranked by what dads actually use, not what gets recycled every year.</p>
+
+          {/* Horizontal scroll on mobile, 5-col grid on desktop */}
+          <div className="flex gap-3 overflow-x-auto pb-2 sm:grid sm:grid-cols-5 sm:overflow-visible scrollbar-hide">
+            {top10Dads.map((p, i) => (
+              <a
+                key={p.id}
+                href={p.affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="group flex-shrink-0 w-40 sm:w-auto bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#F04E30] hover:shadow-md transition-all flex flex-col overflow-hidden"
+              >
+                <div className="relative w-full" style={{ height: '120px' }}>
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    unoptimized
+                    className="object-cover"
+                  />
+                  <span
+                    className="absolute top-2 left-2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-extrabold text-white shadow"
+                    style={{ background: '#F04E30' }}
+                  >
+                    {i + 1}
+                  </span>
+                </div>
+                <div className="p-3 flex flex-col gap-1 flex-1">
+                  <p className="text-xs font-bold leading-tight text-[#1A202C] group-hover:text-[#F04E30] transition-colors line-clamp-2">{p.name}</p>
+                  <p className="text-xs font-semibold mt-auto" style={{ color: '#F04E30' }}>{p.priceDisplay}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center mt-6">
+            <Link
+              href="/top-10-fathers-day-gifts-2026"
+              className="inline-block text-sm font-bold px-8 py-3 rounded-full text-white transition-all hover:opacity-90"
+              style={{ background: '#F04E30' }}
+            >
+              View Full Top 10 List &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* How It Works */}
       <section className="py-16 px-4" style={{ background: '#FFF3EE' }}>

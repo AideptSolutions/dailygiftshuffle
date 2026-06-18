@@ -18,6 +18,19 @@ export const metadata: Metadata = {
   },
 };
 
+const publishedPosts = [
+  {
+    title: 'Top 10 Gifts for Grandparents Who Already Have Everything',
+    href: '/blog/top-10-gifts-for-grandparents-who-have-everything',
+    description:
+      'Stuck on a gift for grandparents who already own everything? Ten ideas that skip clutter and land emotionally.',
+    image: '/img/blog/top-10-gifts-for-grandparents-who-have-everything.jpg',
+    imageAlt: "Older couple's hands unwrapping a gift at a sunlit kitchen table",
+    category: 'Gift Guides',
+    date: 'May 12, 2026',
+  },
+];
+
 const upcomingPosts = [
   {
     title: "Best Gifts for 2025: What's Trending Right Now",
@@ -49,12 +62,57 @@ export default function BlogPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Gift guides, trending picks, and practical tips for finding the perfect gift — for anyone,
-            any occasion, any budget. New posts coming soon.
+            any occasion, any budget.
           </p>
         </section>
 
-        {/* Upcoming Posts */}
-        <section className="max-w-5xl mx-auto px-4 py-10">
+        {/* Published Posts */}
+        <section className="max-w-5xl mx-auto px-4 py-8">
+          <h2 className="text-xl font-bold mb-6" style={{ color: '#1A202C' }}>
+            Latest Articles
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {publishedPosts.map((post) => (
+              <Link
+                key={post.href}
+                href={post.href}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] flex flex-col hover:shadow-md transition-shadow"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-5 flex flex-col gap-3 flex-1">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="inline-block text-xs font-bold px-3 py-1 rounded-full text-white"
+                      style={{ background: '#F04E30' }}
+                    >
+                      {post.category}
+                    </span>
+                    <span className="text-xs text-gray-400">{post.date}</span>
+                  </div>
+                  <h3 className="text-base font-bold leading-snug group-hover:text-[#F04E30] transition-colors" style={{ color: '#1A202C' }}>
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed flex-1">{post.description}</p>
+                  <span className="text-sm font-semibold mt-1" style={{ color: '#F04E30' }}>
+                    Read article →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Coming Soon */}
+        <section className="max-w-5xl mx-auto px-4 py-8">
+          <h2 className="text-xl font-bold mb-6" style={{ color: '#1A202C' }}>
+            Coming Soon
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {upcomingPosts.map((post) => (
               <div
@@ -63,13 +121,13 @@ export default function BlogPage() {
               >
                 <span
                   className="inline-block self-start text-xs font-bold px-3 py-1 rounded-full text-white"
-                  style={{ background: '#F04E30' }}
+                  style={{ background: '#94a3b8' }}
                 >
                   Coming Soon
                 </span>
-                <h2 className="text-lg font-bold leading-snug" style={{ color: '#1A202C' }}>
+                <h3 className="text-lg font-bold leading-snug" style={{ color: '#1A202C' }}>
                   {post.title}
-                </h2>
+                </h3>
                 <p
                   className="text-sm text-gray-500 leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: post.teaser }}

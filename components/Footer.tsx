@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>&copy; 2025 TheGiftShuffle. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AiDept Solutions, LLC. All rights reserved.</p>
           <p className="text-xs text-gray-600">
             As an Amazon Associate, we earn from qualifying purchases.
           </p>
