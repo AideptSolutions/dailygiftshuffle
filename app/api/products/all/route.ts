@@ -6,8 +6,11 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   // Exclude Crane's List items (personal shopping list, not gift-catalog
-  // products) from the public shuffle. They remain on the /cranes page.
-  const adminProducts = (await getPublishedAdminProducts()).filter(p => !p.cranes);
+  // products) from the public shuffle. Catches both the `cranes` flag and the
+  // `crane-` id prefix (older entries that predate the flag). They remain on
+  // the /cranes page.
+  const adminProducts = (await getPublishedAdminProducts())
+    .filter(p => !p.cranes && !/^crane-/i.test(p.id));
 
   const normalized = adminProducts.map(p => ({
     id: p.id,
