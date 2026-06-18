@@ -80,11 +80,41 @@ const itemListSchema = {
   })),
 };
 
+const faqs = [
+  {
+    q: 'What are the best teacher appreciation gifts for 2026?',
+    a: 'The best teacher gifts in 2026 are practical upgrades teachers use daily: a temperature-control mug, a premium tea or coffee set, a quality leather journal, a desktop plant, or a spa set for the summer break. Skip the generic apple mug and pick something tied to how they actually work and unwind.',
+  },
+  {
+    q: 'What do teachers actually want as gifts?',
+    a: 'Surveyed teachers consistently say they appreciate gift cards, classroom supplies, and small personal items over novelty trinkets. A handwritten note from the student paired with one nice useful item lands best. Coffee, books, and self-care gifts are perennial favorites.',
+  },
+  {
+    q: 'How much should you spend on a teacher gift?',
+    a: 'There is no set rule, but $15 to $40 is a comfortable and common range for an individual gift. If parents pool together for a class gift, $50 to $150 buys something more substantial like a premium e-reader or a spa bundle. Thoughtfulness matters more than the amount.',
+  },
+  {
+    q: 'When is Teacher Appreciation Week 2026?',
+    a: 'Teacher Appreciation Week 2026 is May 4 to 8, with Teacher Appreciation Day on Tuesday, May 5. Many families also give end-of-year gifts in the final week of school in June.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function GiftIdeasForTeachersPage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFAF5' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -180,6 +210,21 @@ export default function GiftIdeasForTeachersPage() {
             >
               Try the Gift Shuffle →
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-3xl mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold mb-8" style={{ color: '#1A202C' }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+                <h3 className="font-bold text-[#1A202C] mb-2">{faq.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </section>
 

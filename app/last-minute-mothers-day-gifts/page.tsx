@@ -65,11 +65,41 @@ const itemListSchema = {
   })),
 };
 
+const faqs = [
+  {
+    q: "What are the best last-minute Mother's Day gifts?",
+    a: "The best last-minute Mother's Day gifts are top-rated items with fast Prime shipping: a spa and bath set, a silk pillowcase, a personalized necklace, a premium candle, or a skincare set. Sort by rating, confirm the delivery window, and order. Quality picks still ship in two days.",
+  },
+  {
+    q: "Can I still get a Mother's Day gift delivered in time?",
+    a: "Usually yes. Most picks here are Prime-eligible with two-day delivery, so an order placed by the Thursday before Mother's Day typically arrives on time. Always check the estimated arrival date at checkout before you buy.",
+  },
+  {
+    q: "What is a good last-minute gift that does not look last-minute?",
+    a: "Skip the gift card and pick something specific: a custom star map that delivers digitally, an engraved piece of jewelry, or a curated spa set in nice packaging. Add a short handwritten note and it reads thoughtful, not rushed.",
+  },
+  {
+    q: "When is Mother's Day 2026?",
+    a: "Mother's Day 2026 is Sunday, May 10. To be safe with shipping, order physical gifts by May 7 with expedited delivery, or choose a same-day or digital option closer to the date.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function LastMinuteMothersDayPage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFAF5' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -90,7 +120,7 @@ export default function LastMinuteMothersDayPage() {
             so you can order fast and still give something she will actually love.
           </p>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
-            Tip: Check your Prime delivery window at checkout to confirm arrival by May 11.
+            Tip: Check your Prime delivery window at checkout to confirm arrival by May 9.
           </p>
         </section>
 
@@ -129,6 +159,21 @@ export default function LastMinuteMothersDayPage() {
             >
               Try the Gift Shuffle →
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-3xl mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold mb-8" style={{ color: '#1A202C' }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+                <h3 className="font-bold text-[#1A202C] mb-2">{faq.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </section>
 

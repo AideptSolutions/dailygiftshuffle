@@ -62,11 +62,41 @@ const itemListSchema = {
   })),
 };
 
+const faqs = [
+  {
+    q: "What are the best Mother's Day gifts under $100?",
+    a: "The best Mother's Day gifts under $100 include silk pajama sets, personalized birthstone jewelry, a luxury skincare set, a premium kitchen tool like a Dutch oven, or a plush spa robe. Each feels indulgent without needing a group contribution.",
+  },
+  {
+    q: "What can you get Mom for under $100?",
+    a: "Under $100 covers a lot: a name-engraved necklace, a high-end candle and bath set, a quality cookware upgrade, a cozy weighted blanket, or a curated coffee or tea sampler. The trick is picking one nice thing instead of several cheap ones.",
+  },
+  {
+    q: "Are Mother's Day gifts under $100 still thoughtful?",
+    a: "Yes. Thoughtfulness comes from the match, not the price. A $40 gift tied to a hobby she loves beats a generic $200 splurge. Personalization, her favorite scent, or an upgrade to something she uses daily all read as genuinely considered.",
+  },
+  {
+    q: "When is Mother's Day 2026?",
+    a: "Mother's Day 2026 is Sunday, May 10. It always falls on the second Sunday of May. Order physical gifts by May 4 with standard shipping, or May 7 with expedited shipping, to be safe.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function MothersDayGiftsUnder100Page() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFAF5' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -121,6 +151,21 @@ export default function MothersDayGiftsUnder100Page() {
             >
               Try the Gift Shuffle →
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-3xl mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold mb-8" style={{ color: '#1A202C' }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+                <h3 className="font-bold text-[#1A202C] mb-2">{faq.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </section>
 

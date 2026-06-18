@@ -61,11 +61,41 @@ const itemListSchema = {
   })),
 };
 
+const faqs = [
+  {
+    q: "What are the best Mother's Day gifts for your wife?",
+    a: "The best Mother's Day gifts for a wife give her time, rest, or a small luxury she would not buy herself. Think a spa robe and bath set, personalized jewelry, a silk pajama set, or a premium skincare ritual. Tie it to how she actually likes to unwind.",
+  },
+  {
+    q: "What should I get my wife for Mother's Day if she says she wants nothing?",
+    a: "When she says nothing, she usually means do not make a fuss, not skip it. Go practical and personal: a cozy weighted blanket, her favorite candle scent, a coffee or tea upgrade, or a handwritten note paired with one small nice thing. Effort reads louder than price.",
+  },
+  {
+    q: "What is a romantic Mother's Day gift for a wife?",
+    a: "Romantic picks lean personal: a custom star map of a meaningful date, engraved birthstone jewelry, a couples spa set, or a framed photo book of the year. The romance is in the specificity, not the dollar amount.",
+  },
+  {
+    q: "When is Mother's Day 2026?",
+    a: "Mother's Day 2026 is Sunday, May 10. It always falls on the second Sunday of May. Order physical gifts by May 4 with standard shipping, or May 7 with expedited shipping, to be safe.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 export default function MothersDayGiftsForWifePage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFAF5' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <Breadcrumbs
         items={[
@@ -120,6 +150,21 @@ export default function MothersDayGiftsForWifePage() {
             >
               Try the Gift Shuffle →
             </Link>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="max-w-3xl mx-auto px-4 py-12">
+          <h2 className="text-2xl font-bold mb-8" style={{ color: '#1A202C' }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+                <h3 className="font-bold text-[#1A202C] mb-2">{faq.q}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </section>
 
