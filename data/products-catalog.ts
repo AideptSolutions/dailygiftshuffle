@@ -4359,6 +4359,25 @@ export const products: Product[] = [
     occasions: ['wedding', 'weddingHousewarming', 'anniversary', 'just-because'],
   },
 
+  // FINANCE - featured author title (added 2026-06)
+  {
+    id: 'finance-great-now-what',
+    name: 'Great! Now What: A Grounded Guide to Sudden Wealth',
+    description: 'A finance book that does not read like one. John Crane walks through the first year after a sudden windfall in the order the decisions actually arrive: stabilize, plan, handle debt, invest, give, and maintain. Twenty-one plain-language chapters, no jargon without a translation.',
+    why: 'It meets the person who never saw themselves as a finance type and suddenly has more money than they have ever managed. Instead of a loud sales pitch, it is a calm, grounded plan for not blowing it.',
+    price: 9.99,
+    priceDisplay: '$9.99',
+    image: '/images/products/finance-great-now-what.jpg',
+    rating: 0,
+    reviewCount: 0,
+    affiliateUrl: amz('B0H5NX2SKJ'),
+    network: 'amazon',
+    recipients: ['him', 'her', 'friends', 'coworker', 'dad', 'mom', 'grandparents'],
+    budgetTier: 'under25',
+    tags: ['finance', 'office'],
+    occasions: ['birthday', 'graduation', 'just-because', 'holiday'],
+  },
+
 ];
 
 export default products;
