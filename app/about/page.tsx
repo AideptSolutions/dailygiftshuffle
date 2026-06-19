@@ -119,10 +119,10 @@ export default function AboutPage() {
               <p className="mt-1">
                 Email:{' '}
                 <a
-                  href="mailto:hello@thegiftshuffle.com"
+                  href="mailto:aj@aideptsolutions.com"
                   className="text-[#F04E30] hover:underline"
                 >
-                  hello@thegiftshuffle.com
+                  aj@aideptsolutions.com
                 </a>
               </p>
             </section>
