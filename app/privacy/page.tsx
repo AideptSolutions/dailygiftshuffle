@@ -98,8 +98,8 @@ export default function PrivacyPage() {
               Depending on your location, you may have the right to request access to, correction of, or
               deletion of any personal data we hold about you (limited to your email address if you
               submitted one). To exercise these rights, contact us at{' '}
-              <a href="mailto:privacy@thegiftshuffle.com" className="text-[#F04E30] underline">
-                privacy@thegiftshuffle.com
+              <a href="mailto:aj@aideptsolutions.com" className="text-[#F04E30] underline">
+                aj@aideptsolutions.com
               </a>.
             </p>
           </section>
@@ -126,8 +126,8 @@ export default function PrivacyPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-2">10. Contact</h2>
             <p>
               Questions about this Privacy Policy? Email us at{' '}
-              <a href="mailto:privacy@thegiftshuffle.com" className="text-[#F04E30] underline">
-                privacy@thegiftshuffle.com
+              <a href="mailto:aj@aideptsolutions.com" className="text-[#F04E30] underline">
+                aj@aideptsolutions.com
               </a>.
             </p>
           </section>

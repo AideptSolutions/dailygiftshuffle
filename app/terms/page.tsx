@@ -135,8 +135,8 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-gray-900 mb-2">11. Contact</h2>
             <p>
               Questions about these Terms? Contact us at{' '}
-              <a href="mailto:legal@thegiftshuffle.com" className="text-[#F04E30] underline">
-                legal@thegiftshuffle.com
+              <a href="mailto:aj@aideptsolutions.com" className="text-[#F04E30] underline">
+                aj@aideptsolutions.com
               </a>.
             </p>
           </section>
