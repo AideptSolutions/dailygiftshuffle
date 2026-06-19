@@ -44,3 +44,7 @@ next-env.d.ts
 image-review.html
 
 new-products-preview.html
+
+# enrichment scratch files
+scripts/_new-products.json
+scripts/_enriched.json
