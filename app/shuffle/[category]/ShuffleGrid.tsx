@@ -1,0 +1,174 @@
+'use client';
+
+import { useEffect, useState, useCallback } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import ProductModal from '@/components/ProductModal';
+import { useFavorites } from '@/lib/useFavorites';
+import { shuffleMany } from '@/lib/shuffle';
+import { type Product, type NicheTag } from '@/data/products';
+
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <span className="star-gold text-xs">
+      {'★'.repeat(Math.floor(rating))}
+      {rating % 1 >= 0.5 ? '½' : ''}
+      {'☆'.repeat(5 - Math.ceil(rating))}
+    </span>
+  );
+}
+
+export default function ShuffleGrid({ category, label }: { category: string; label: string }) {
+  const tag = category as NicheTag;
+
+  const [catalog, setCatalog] = useState<Product[]>([]);
+  const [cards, setCards] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [fading, setFading] = useState(false);
+  const [modal, setModal] = useState<Product | null>(null);
+  const [count, setCount] = useState(8);
+  const { toggle: toggleFav, isFavorited } = useFavorites();
+
+  useEffect(() => {
+    fetch('/api/products/all')
+      .then((r) => (r.ok ? r.json() : []))
+      .then((data: Product[]) => {
+        setCatalog(data);
+        setCards(shuffleMany(8, { tags: [tag], catalog: data }));
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [tag]);
+
+  const reshuffle = useCallback(
+    (countOverride?: number) => {
+      setFading(true);
+      setTimeout(() => {
+        setCards(shuffleMany(countOverride ?? count, { tags: [tag], catalog }));
+        setFading(false);
+      }, 220);
+    },
+    [catalog, tag, count],
+  );
+
+  const handleCountChange = useCallback(
+    (newCount: number) => {
+      setCount(newCount);
+      reshuffle(newCount);
+    },
+    [reshuffle],
+  );
+
+  const totalInCategory = catalog.filter((p) => p.tags?.includes(tag)).length;
+
+  return (
+    <>
+      {/* Count selector */}
+      {!loading && cards.length > 0 && (
+        <div className="flex items-center justify-end mb-3">
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs text-gray-400">Show:</span>
+            <select
+              value={count}
+              onChange={(e) => handleCountChange(Number(e.target.value))}
+              className="text-xs border border-gray-200 rounded-lg px-2 py-1 bg-white text-gray-600 cursor-pointer focus:outline-none focus:border-[#F04E30]"
+            >
+              {[4, 8, 12, 16, 24].map((n) => (
+                <option key={n} value={n}>
+                  {n} gifts
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      )}
+
+      {/* Cards */}
+      {loading ? (
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
+            <div key={i} className="bg-white rounded-2xl h-52 animate-pulse border border-[#E2E8F0]" />
+          ))}
+        </div>
+      ) : cards.length === 0 ? (
+        <div className="text-center py-20">
+          <p className="text-gray-400 mb-4">No gifts in this category yet.</p>
+          <Link href="/shuffle" className="btn-shuffle text-white font-bold px-6 py-3 rounded-full text-sm inline-block">
+            Try the main shuffle
+          </Link>
+        </div>
+      ) : (
+        <div
+          className={`grid grid-cols-2 sm:grid-cols-4 gap-3 transition-opacity duration-200 ${
+            fading ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
+          {cards.map((p) => (
+            <div
+              key={p.id}
+              className="bg-white rounded-2xl shadow-sm border border-[#E2E8F0] overflow-hidden hover:shadow-md hover:border-[#F04E30]/30 transition-all cursor-pointer flex flex-col"
+              onClick={() => setModal(p)}
+            >
+              <div className="relative w-full h-32 bg-[#F0F4F8]">
+                <Image src={p.image} alt={p.name} fill className="object-contain p-2" unoptimized />
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFav(p);
+                  }}
+                  aria-label={isFavorited(p.id) ? 'Remove from picks' : 'Save to My Picks'}
+                  className={`absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow transition-colors z-10 ${
+                    isFavorited(p.id) ? 'bg-[#F04E30] text-white' : 'bg-white text-gray-400 hover:text-[#F04E30]'
+                  }`}
+                >
+                  <span aria-hidden="true">{isFavorited(p.id) ? '★' : '☆'}</span>
+                </button>
+              </div>
+              <div className="p-3 flex flex-col flex-1">
+                <p className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2 mb-1">{p.name}</p>
+                {p.rating > 0 && (
+                  <div className="flex items-center gap-1 mb-1">
+                    <StarRating rating={p.rating} />
+                    {p.reviewCount > 0 && (
+                      <span className="text-xs text-gray-400">({p.reviewCount.toLocaleString()})</span>
+                    )}
+                  </div>
+                )}
+                <span className="text-[#F04E30] font-extrabold text-sm mt-auto">{p.priceDisplay}</span>
+                <a
+                  href={p.affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  onClick={(e) => e.stopPropagation()}
+                  className="mt-2 w-full btn-amazon text-xs font-bold py-1.5 rounded-lg flex items-center justify-center"
+                >
+                  Buy on Amazon
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Shuffle again */}
+      {!loading && cards.length > 0 && (
+        <div className="text-center mt-8">
+          <button
+            onClick={() => reshuffle()}
+            className="btn-shuffle text-white font-extrabold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all"
+          >
+            Shuffle Again
+          </button>
+          <p className="text-xs text-gray-400 mt-3">
+            Showing {cards.length} of {totalInCategory} {label} gifts
+          </p>
+          <p className="text-xs text-gray-300 mt-2">
+            Affiliate links. We may earn a commission at no extra cost to you.
+          </p>
+        </div>
+      )}
+
+      {modal && <ProductModal product={modal} onClose={() => setModal(null)} />}
+    </>
+  );
+}

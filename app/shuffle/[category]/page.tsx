@@ -1,217 +1,130 @@
-'use client';
-
-import { useEffect, useState, useCallback } from 'react';
-import { useParams } from 'next/navigation';
-import Image from 'next/image';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import ProductModal from '@/components/ProductModal';
-import { useFavorites } from '@/lib/useFavorites';
-import { shuffleMany } from '@/lib/shuffle';
-import { type Product, type NicheTag } from '@/data/products';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ShuffleGrid from './ShuffleGrid';
+import { CATEGORY_META } from './categoryMeta';
 
-const CATEGORY_META: Record<string, { label: string; desc: string }> = {
-  'tech':            { label: 'Tech & Gadgets',   desc: 'Gadgets, smart home, wearables, and all things tech.' },
-  'gaming':          { label: 'Gaming',            desc: 'Controllers, headsets, accessories for every gamer.' },
-  'fitness':         { label: 'Fitness',           desc: 'Equipment, wearables, and gear for active people.' },
-  'home':            { label: 'Home & Decor',      desc: 'Cozy decor, candles, and thoughtful pieces for any home.' },
-  'kitchen':         { label: 'Kitchen',           desc: 'Appliances, tools, and gadgets for food lovers.' },
-  'sports':          { label: 'Sports',            desc: 'Gear, apparel, and fan gifts for every sport.' },
-  'pets':            { label: 'Pets',              desc: 'Toys, treats, and accessories for beloved pets.' },
-  'kids':            { label: 'Kids',              desc: 'Fun, educational, and creative gifts for children.' },
-  'hobby':           { label: 'Hobbies',           desc: 'Gifts for makers, collectors, and passionate hobbyists.' },
-  'luxury':          { label: 'Luxury',            desc: 'Premium and elevated gifts worth splurging on.' },
-  'office':          { label: 'Office',            desc: 'Desk upgrades, productivity tools, and work-from-home essentials.' },
-  'gardening':       { label: 'Gardening',         desc: 'Tools, planters, and gifts for green thumbs.' },
-  'parenting':       { label: 'Parenting',         desc: 'Practical and thoughtful gifts for parents and caregivers.' },
-  'diy-tools':       { label: 'DIY & Tools',       desc: 'Power tools, hand tools, and workshop essentials.' },
-  'finance':         { label: 'Finance',           desc: 'Books, courses, and gifts for money-minded people.' },
-  'car-accessories': { label: 'Car Accessories',   desc: 'Dash cams, organizers, and must-haves for drivers.' },
-  'outdoors':        { label: 'Outdoors & Camping', desc: 'Camping gear, hiking essentials, and adventure gifts for the outdoors.' },
-};
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="star-gold text-sm">
-      {'★'.repeat(Math.floor(rating))}
-      {rating % 1 >= 0.5 ? '½' : ''}
-      {'☆'.repeat(5 - Math.ceil(rating))}
-    </span>
-  );
+export function generateStaticParams() {
+  return Object.keys(CATEGORY_META).map((category) => ({ category }));
 }
 
-export default function CategoryShufflePage() {
-  const params   = useParams();
-  const category = (params?.category as string) ?? '';
-  const meta     = CATEGORY_META[category] ?? { label: category, desc: '' };
-  const tag      = category as NicheTag;
+export function generateMetadata({ params }: { params: { category: string } }): Metadata {
+  const meta = CATEGORY_META[params.category];
+  const label = meta?.label ?? 'Gift';
+  const title = `${label} Gift Shuffle: Discover Top-Rated Picks | TheGiftShuffle`;
+  const description = meta?.intro ?? `Shuffle through top-rated ${label.toLowerCase()} gift ideas at every budget.`;
+  const url = `https://thegiftshuffle.com/shuffle/${params.category}`;
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url,
+      images: [
+        {
+          url: `https://www.thegiftshuffle.com/api/og?title=${encodeURIComponent(label + ' Gift Shuffle')}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    alternates: { canonical: url },
+  };
+}
 
-  const [catalog,  setCatalog]  = useState<Product[]>([]);
-  const [cards,    setCards]    = useState<Product[]>([]);
-  const [loading,  setLoading]  = useState(true);
-  const [fading,   setFading]   = useState(false);
-  const [modal,    setModal]    = useState<Product | null>(null);
-  const [count,    setCount]    = useState(4);
-  const { toggle: toggleFav, isFavorited } = useFavorites();
+const FALLBACK = {
+  label: 'Gift',
+  desc: 'Shuffle through top-rated gift ideas.',
+  intro: 'Hit shuffle for a fresh, top-rated gift idea every click.',
+  related: [{ href: '/shuffle', label: 'All Shuffles' }],
+};
 
-  useEffect(() => {
-    fetch('/api/products/all')
-      .then(r => r.ok ? r.json() : [])
-      .then((data: Product[]) => {
-        setCatalog(data);
-        const initial = shuffleMany(4, { tags: [tag], catalog: data });
-        setCards(initial);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, [tag]);
-
-  const reshuffle = useCallback((countOverride?: number) => {
-    setFading(true);
-    setTimeout(() => {
-      setCards(shuffleMany(countOverride ?? count, { tags: [tag], catalog }));
-      setFading(false);
-    }, 250);
-  }, [catalog, tag, count]);
-
-  const handleCountChange = useCallback((newCount: number) => {
-    setCount(newCount);
-    reshuffle(newCount);
-  }, [reshuffle]);
+export default function CategoryShufflePage({ params }: { params: { category: string } }) {
+  const category = params.category;
+  const meta = CATEGORY_META[category] ?? FALLBACK;
+  const hero = CATEGORY_META[category]
+    ? `/images/heroes/shuffle-${category}.jpg`
+    : '/images/heroes/gifts-under-50.jpg';
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #fff9e6 100%)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #fff9e6 100%)' }}>
       <Navbar />
+      <Breadcrumbs
+        items={[
+          { label: 'Shuffle', href: '/shuffle' },
+          { label: `${meta.label} Gifts`, href: `/shuffle/${category}` },
+        ]}
+      />
 
-      <main id="main-content" tabIndex={-1} className="max-w-4xl mx-auto px-4 py-10">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <Link href="/shuffle" className="text-xs text-gray-400 hover:text-[#F04E30] mb-3 inline-block transition-colors">
-            All Shuffles
-          </Link>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">{meta.label} Gifts</h1>
-          <p className="text-gray-500 text-sm max-w-md mx-auto">{meta.desc}</p>
-        </div>
-
-        {/* Count selector */}
-        {!loading && cards.length > 0 && (
-          <div className="flex items-center justify-end mb-3">
-            <div className="flex items-center gap-1.5">
-              <span className="text-xs text-gray-400">Show:</span>
-              <select
-                value={count}
-                onChange={e => handleCountChange(Number(e.target.value))}
-                className="text-xs border border-gray-200 rounded-lg px-2 py-1 bg-white text-gray-600 cursor-pointer focus:outline-none focus:border-[#F04E30]"
+      <main id="main-content" tabIndex={-1} className="flex-1 max-w-5xl mx-auto px-4 py-8 w-full">
+        {/* Hero image */}
+        <section className="mb-8">
+          <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '16/6', maxHeight: '300px' }}>
+            <Image
+              src={hero}
+              alt={`${meta.label} gift ideas to shuffle through`}
+              fill
+              className="object-cover"
+              priority
+              unoptimized
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
+              <Link
+                href="/shuffle"
+                className="text-xs font-semibold text-white/80 hover:text-white mb-1 inline-block transition-colors"
               >
-                {[4, 8, 16, 20].map(n => (
-                  <option key={n} value={n}>{n} gifts</option>
-                ))}
-              </select>
+                All Shuffles
+              </Link>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white drop-shadow-sm">{meta.label} Gifts</h1>
             </div>
           </div>
-        )}
+          <p className="text-gray-600 text-base leading-relaxed max-w-2xl mt-4">{meta.intro}</p>
+        </section>
 
-        {/* Cards */}
-        {loading ? (
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[0,1,2,3].map(i => (
-              <div key={i} className="bg-white rounded-2xl h-48 animate-pulse border border-[#E2E8F0]" />
-            ))}
-          </div>
-        ) : cards.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-gray-400 mb-4">No gifts in this category yet.</p>
-            <Link href="/shuffle" className="btn-shuffle text-white font-bold px-6 py-3 rounded-full text-sm inline-block">
-              Try the main shuffle
-            </Link>
-          </div>
-        ) : (
-          <div className={`grid grid-cols-2 sm:grid-cols-4 gap-3 transition-opacity duration-200 ${fading ? 'opacity-0' : 'opacity-100'}`}>
-            {cards.map(p => (
-              <div
-                key={p.id}
-                className="bg-white rounded-2xl shadow-sm border border-[#E2E8F0] overflow-hidden hover:shadow-md transition-shadow cursor-pointer group"
-                onClick={() => setModal(p)}
-              >
-                <div className="relative w-full h-28 bg-gray-50">
-                  <Image
-                    src={p.image}
-                    alt={p.name}
-                    fill
-                    className="object-contain p-2"
-                    unoptimized
-                  />
-                  {/* Save button */}
-                  <button
-                    onClick={e => { e.stopPropagation(); toggleFav(p); }}
-                    aria-label={isFavorited(p.id) ? 'Remove from picks' : 'Save to My Picks'}
-                    className={`absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow transition-colors z-10 ${
-                      isFavorited(p.id) ? 'bg-[#F04E30] text-white' : 'bg-white text-gray-400 hover:text-[#F04E30]'
-                    }`}
-                  >
-                    <span aria-hidden="true">{isFavorited(p.id) ? '★' : '☆'}</span>
-                  </button>
-                </div>
-                <div className="p-3">
-                  <p className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2 mb-1">{p.name}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#F04E30] font-bold text-sm">{p.priceDisplay}</span>
-                    <div className="flex items-center gap-1">
-                      <StarRating rating={p.rating ?? 4.5} />
-                      <span className="text-xs text-gray-400">({(p.reviewCount ?? 0).toLocaleString()})</span>
-                    </div>
-                  </div>
-                  <a
-                    href={p.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    onClick={e => e.stopPropagation()}
-                    className="mt-2 w-full btn-amazon text-xs font-bold py-1.5 rounded-lg flex items-center justify-center"
-                  >
-                    Buy on Amazon
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        {/* Interactive shuffle */}
+        <ShuffleGrid category={category} label={meta.label} />
 
-        {/* Shuffle again */}
-        {!loading && cards.length > 0 && (
-          <div className="text-center mt-8">
-            <button
-              onClick={() => reshuffle()}
-              className="btn-shuffle text-white font-extrabold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              Shuffle Again
-            </button>
-            <p className="text-xs text-gray-400 mt-3">
-              Showing {cards.length} of {catalog.filter(p => p.tags?.includes(tag)).length} {meta.label} gifts
-            </p>
-            <p className="text-xs text-gray-300 mt-2">
-              Affiliate links. We may earn a commission at no extra cost to you.
-            </p>
-          </div>
-        )}
-
-        {/* Browse other categories */}
-        <div className="mt-12 border-t border-gray-100 pt-8">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide text-center mb-4">Browse other categories</p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {Object.entries(CATEGORY_META).filter(([slug]) => slug !== category).map(([slug, m]) => (
+        {/* Related rich guides */}
+        <section className="mt-12 border-t border-gray-100 pt-8">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">
+            Explore {meta.label} gifts in more detail
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {meta.related.map((link) => (
               <Link
-                key={slug}
-                href={`/shuffle/${slug}`}
-                className="px-3 py-1.5 rounded-full text-xs font-semibold border border-gray-200 text-gray-600 hover:border-[#F04E30] hover:text-[#F04E30] transition-colors bg-white"
+                key={link.href}
+                href={link.href}
+                className="border border-[#F04E30] text-[#F04E30] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#F04E30] hover:text-white transition-colors"
               >
-                {m.label}
+                {link.label}
               </Link>
             ))}
           </div>
-        </div>
-      </main>
+        </section>
 
-      {modal && <ProductModal product={modal} onClose={() => setModal(null)} />}
+        {/* Browse other shuffle categories */}
+        <section className="mt-10 border-t border-gray-100 pt-8">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">Browse other categories</p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(CATEGORY_META)
+              .filter(([slug]) => slug !== category)
+              .map(([slug, m]) => (
+                <Link
+                  key={slug}
+                  href={`/shuffle/${slug}`}
+                  className="px-3 py-1.5 rounded-full text-xs font-semibold border border-gray-200 text-gray-600 hover:border-[#F04E30] hover:text-[#F04E30] transition-colors bg-white"
+                >
+                  {m.label}
+                </Link>
+              ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

@@ -327,5 +327,124 @@
     "photographer": "www.kaboompics.com",
     "photographerUrl": "https://www.pexels.com/@karola-g",
     "src": "https://www.pexels.com/photo/present-beside-a-card-5632347/"
+  },
+  "shuffle-gaming": {
+    "alt": "A gaming gift setup with RGB keyboard and headset",
+    "query": "gaming setup rgb keyboard headset desk",
+    "photographer": "Matheus Bertelli",
+    "photographerUrl": "https://www.pexels.com/@bertellifotografia",
+    "src": "https://www.pexels.com/photo/modern-gaming-setup-with-headset-and-mouse-28993064/"
+  },
+  "shuffle-fitness": {
+    "alt": "Fitness gift ideas including gym equipment and gear",
+    "query": "fitness gym equipment dumbbells gear",
+    "photographer": "Mikhail Nilov",
+    "photographerUrl": "https://www.pexels.com/@mikhail-nilov",
+    "src": "https://www.pexels.com/photo/gym-tools-6740821/"
+  },
+  "shuffle-home": {
+    "alt": "Cozy home decor gift ideas in a living room",
+    "query": "cozy home decor living room candles",
+    "photographer": "Helena Jankovičová Kováčová",
+    "photographerUrl": "https://www.pexels.com/@helen1",
+    "src": "https://www.pexels.com/photo/vegetables-vase-and-plant-on-table-19005933/"
+  },
+  "shuffle-kitchen": {
+    "alt": "Kitchen gift ideas with modern cooking tools",
+    "query": "modern kitchen cooking utensils gadgets",
+    "photographer": "Castorly Stock",
+    "photographerUrl": "https://www.pexels.com/@castorlystock",
+    "src": "https://www.pexels.com/photo/silicone-spatula-on-a-kitchen-drawer-3722564/"
+  },
+  "shuffle-sports": {
+    "alt": "Sports gift ideas including gear and equipment",
+    "query": "sports equipment gear balls flat lay",
+    "photographer": "www.kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/set-of-sports-equipment-and-bra-for-training-placed-on-marble-table-4397836/"
+  },
+  "shuffle-pets": {
+    "alt": "Pet gift ideas with a happy dog and cat",
+    "query": "happy dog cat with pet toys",
+    "photographer": "Barnabas Davoti",
+    "photographerUrl": "https://www.pexels.com/@barnabas-davoti-31615494",
+    "src": "https://www.pexels.com/photo/retriver-dogs-playing-with-plush-monkey-14084426/"
+  },
+  "shuffle-kids": {
+    "alt": "Colorful kids gift ideas and toys",
+    "query": "colorful kids toys play flat lay",
+    "photographer": "Towfiqu barbhuiya",
+    "photographerUrl": "https://www.pexels.com/@towfiqu-barbhuiya-3440682",
+    "src": "https://www.pexels.com/photo/a-close-up-shot-of-colorful-educational-toys-12670795/"
+  },
+  "shuffle-hobby": {
+    "alt": "Hobby and craft gift ideas on a workspace",
+    "query": "hobby crafts creative supplies desk",
+    "photographer": "www.kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/flat-lay-shot-of-art-materials-5208690/"
+  },
+  "shuffle-luxury": {
+    "alt": "Luxury gift ideas presented elegantly",
+    "query": "luxury gift elegant gold ribbon",
+    "photographer": "Grzegorz  Lewandowski",
+    "photographerUrl": "https://www.pexels.com/@grzegorz-lewandowski-380083092",
+    "src": "https://www.pexels.com/photo/elegant-gift-box-with-green-and-gold-ribbons-31496295/"
+  },
+  "shuffle-office": {
+    "alt": "Office gift ideas on a modern desk",
+    "query": "modern office desk workspace accessories",
+    "photographer": "Cup of  Couple",
+    "photographerUrl": "https://www.pexels.com/@cup-of-couple",
+    "src": "https://www.pexels.com/photo/crop-person-browsing-computer-in-workplace-6177596/"
+  },
+  "shuffle-gardening": {
+    "alt": "Gardening gift ideas with tools and plants",
+    "query": "gardening tools plants pots flat lay",
+    "photographer": "Thirdman",
+    "photographerUrl": "https://www.pexels.com/@thirdman",
+    "src": "https://www.pexels.com/photo/a-person-hand-on-brown-textile-beside-white-gloves-7655610/"
+  },
+  "shuffle-parenting": {
+    "alt": "Parenting gift ideas for new parents",
+    "query": "parent baby family home lifestyle",
+    "photographer": "Vanessa Loring",
+    "photographerUrl": "https://www.pexels.com/@vanessa-loring",
+    "src": "https://www.pexels.com/photo/a-man-looking-at-his-wife-carrying-their-baby-5082213/"
+  },
+  "shuffle-diy-tools": {
+    "alt": "DIY and tool gift ideas in a workshop",
+    "query": "power tools workshop diy bench",
+    "photographer": "Thijs van der Weide",
+    "photographerUrl": "https://www.pexels.com/@thijsvdw",
+    "src": "https://www.pexels.com/photo/photography-of-black-power-tool-1094770/"
+  },
+  "shuffle-finance": {
+    "alt": "Finance gift ideas with a planner on a desk",
+    "query": "finance money planner desk minimal",
+    "photographer": "www.kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/woman-writing-in-a-notepad-at-the-desk-5900029/"
+  },
+  "shuffle-car-accessories": {
+    "alt": "Car accessory gift ideas for the interior",
+    "query": "car interior accessories dashboard clean",
+    "photographer": "www.kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/cleaning-of-car-window-4870706/"
+  },
+  "shuffle-outdoors": {
+    "alt": "Outdoor and camping gift ideas with gear",
+    "query": "camping outdoors gear tent landscape",
+    "photographer": "Mac DeStroir",
+    "photographerUrl": "https://www.pexels.com/@destroir",
+    "src": "https://www.pexels.com/photo/pile-of-firewood-2662831/"
+  },
+  "shuffle-tech": {
+    "alt": "Tech and gadget gift ideas arranged on a desk",
+    "query": "tech gadgets desk modern flat lay",
+    "photographer": "www.kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/laptop-smart-phone-and-charge-on-table-5208870/"
   }
 }
