@@ -8,21 +8,23 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 
 export const metadata: Metadata = {
-  title: 'Birthday Gift Ideas: Unique Picks for Every Person | TheGiftShuffle',
+  title: 'Birthday Gift Ideas for 2026: Picks for Every Person | TheGiftShuffle',
   description:
-    "The birthday is tomorrow and you have no idea what to get. Browse 30+ curated birthday gift ideas for everyone on your list, sorted by recipient and budget.",
+    "The birthday is tomorrow and you have no idea what to get. Browse 30+ curated birthday gift ideas for 2026 for everyone on your list, sorted by recipient and budget.",
   keywords: [
     'birthday gift ideas',
+    'birthday gift ideas 2026',
     'birthday gifts',
     'unique birthday gifts',
+    'best birthday gifts',
     'birthday gifts for adults',
     'birthday gifts under $50',
     'last minute birthday gifts',
   ],
   openGraph: {
-    title: 'Birthday Gift Ideas: Unique Picks for Every Person | TheGiftShuffle',
+    title: 'Birthday Gift Ideas for 2026: Picks for Every Person | TheGiftShuffle',
     description:
-      "Browse 30+ curated birthday gift ideas for everyone on your list, sorted by recipient and budget.",
+      "Browse 30+ curated birthday gift ideas for 2026 for everyone on your list, sorted by recipient and budget.",
     type: 'website',
     url: 'https://thegiftshuffle.com/birthday-gift-ideas',
     images: [
@@ -120,13 +122,19 @@ export default function BirthdayGiftIdeasPage() {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            Birthday Gift Ideas
+            Birthday Gift Ideas for 2026
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            The best birthday gift ideas include personalized items, experience gifts, curated
-            gift boxes, and practical favorites they&apos;d never buy themselves. Whether you
-            need a last-minute pick or a carefully planned surprise, these birthday gifts are
+            The best birthday gift ideas for 2026 include personalized items, experience gifts,
+            curated gift boxes, and practical favorites they&apos;d never buy themselves. Whether
+            you need a last-minute pick or a carefully planned surprise, these birthday gifts are
             chosen to make people smile, for any age, budget, and personality.
+          </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed mt-3">
+            Looking for something more specific? Jump to the{' '}
+            <Link href="/best-birthday-gifts-2026" className="text-[#F04E30] font-semibold hover:underline">best birthday gifts for 2026</Link>,{' '}
+            <Link href="/unique-birthday-gifts" className="text-[#F04E30] font-semibold hover:underline">unique birthday gifts</Link>, or{' '}
+            <Link href="/birthday-gifts-for-gamers" className="text-[#F04E30] font-semibold hover:underline">birthday gifts for gamers</Link>.
           </p>
         </section>
 
@@ -186,8 +194,9 @@ export default function BirthdayGiftIdeasPage() {
           <h2 className="text-xl font-bold mb-4" style={{ color: '#1A202C' }}>Related Gift Guides</h2>
           <div className="flex flex-wrap gap-3">
             {[
-              { href: '/gift-ideas-for-mom', label: 'Gift Ideas for Mom' },
-              { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
+              { href: '/best-birthday-gifts-2026', label: 'Best Birthday Gifts 2026' },
+              { href: '/unique-birthday-gifts', label: 'Unique Birthday Gifts' },
+              { href: '/birthday-gifts-for-gamers', label: 'Birthday Gifts for Gamers' },
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
               { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },

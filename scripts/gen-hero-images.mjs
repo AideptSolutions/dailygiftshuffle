@@ -28,6 +28,9 @@ const MANIFEST = path.join(ROOT, 'data', 'hero-manifest.json');
 const HEROES = {
   'ai-personalized-gifts':            { q: 'personalized custom gift wrapped present', alt: 'Personalized custom gifts wrapped and arranged on a table' },
   'birthday-gift-ideas':              { q: 'birthday gifts balloons celebration', alt: 'Wrapped birthday gifts with balloons and confetti' },
+  'best-birthday-gifts-2026':         { q: 'birthday present gift box ribbon celebration', alt: 'The best birthday gifts for 2026 wrapped with ribbon and confetti' },
+  'unique-birthday-gifts':            { q: 'unique thoughtful gift wrapped craft', alt: 'Unique and creative birthday gifts wrapped on a table' },
+  'birthday-gifts-for-gamers':        { q: 'gaming setup headset controller rgb', alt: 'A gamer birthday gift setup with headset, controller and RGB lighting' },
   'christmas-gift-ideas':             { q: 'christmas gifts under decorated tree', alt: 'Christmas presents wrapped under a decorated tree' },
   'fathers-day-gifts':                { q: 'father and child fathers day gift', alt: "A father opening a Father's Day gift with his family" },
   'fathers-day-gifts-under-100':      { q: 'fathers day gift box card', alt: "A Father's Day gift box beside a handwritten card" },
