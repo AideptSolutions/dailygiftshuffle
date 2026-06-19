@@ -12,9 +12,12 @@ export function parseAmazonUrl(url: string): { asin: string | null; tag: string 
   const asin = asinMatch ? asinMatch[1].toUpperCase() : null;
   const tag = tagMatch ? tagMatch[1] : null;
 
-  // Build a clean dp URL if we have an ASIN
+  // Build a clean dp URL if we have an ASIN. Always attach THIS site's affiliate
+  // tag (not whatever tag was in the pasted URL) so every imported product link
+  // earns commission. This is the main revenue driver, so never leave it to chance.
+  const SITE_AFFILIATE_TAG = 'dailygiftshuf-20';
   const cleanUrl = asin
-    ? `https://www.amazon.com/dp/${asin}${tag ? `?tag=${tag}` : ''}`
+    ? `https://www.amazon.com/dp/${asin}?tag=${SITE_AFFILIATE_TAG}`
     : url;
 
   return { asin, tag, cleanUrl };

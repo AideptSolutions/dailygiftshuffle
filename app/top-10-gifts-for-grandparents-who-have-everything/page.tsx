@@ -92,7 +92,7 @@ const gifts = [
     why: 'An Amazon Echo Show or Google Nest Hub, pre-configured by you before wrapping, with their three favorite radio stations and a few named routines saved already.',
     bestFor: 'Grandparents who used to listen to a specific AM station that no longer exists locally.',
     price: '$80 to $130 for the device plus a 20-minute setup from you',
-    link: 'https://www.amazon.com/dp/B09B2SBHQK',
+    link: 'https://www.amazon.com/dp/B09B2SBHQK?tag=dailygiftshuf-20',
   },
   {
     rank: 9,
