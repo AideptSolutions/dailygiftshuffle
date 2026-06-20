@@ -41,6 +41,7 @@ const HEROES = {
   'best-anniversary-gifts-2026':      { q: 'anniversary gift couple roses present', alt: 'The best anniversary gifts for 2026 with roses and a wrapped present' },
   '30th-birthday-gifts':              { q: 'birthday celebration gold balloons 30', alt: '30th birthday gifts with celebration balloons and confetti' },
   'best-beauty-gifts-2026':           { q: 'beauty skincare gift set cosmetics', alt: 'The best beauty gifts for 2026 including a skincare and cosmetics set' },
+  'best-baby-shower-gifts-2026':      { q: 'newborn baby clothes soft neutral beige folded flat lay', alt: 'The best baby shower gifts for 2026 with neutral baby clothes and wrapped presents' },
   // Shuffle-category hero band images (app/shuffle/[category])
   'shuffle-tech':            { q: 'tech gadgets desk modern flat lay', alt: 'Tech and gadget gift ideas arranged on a desk' },
   'shuffle-gaming':          { q: 'gaming setup rgb keyboard headset desk', alt: 'A gaming gift setup with RGB keyboard and headset' },

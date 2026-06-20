@@ -12,6 +12,18 @@ import type { NicheTag } from '@/data/products-catalog';
 
 type Niche = NicheTag;
 
+// Niches that have a dedicated "best [X] gifts" gold-standard guide. Surfaced as
+// a featured cross-link so the rich category page funnels into the guide (and
+// vice versa via the guide's related links).
+const GUIDE_FOR: Partial<Record<Niche, { href: string; label: string }>> = {
+  'baby-shower': { href: '/best-baby-shower-gifts-2026', label: 'See the 48 Best Baby Shower Gifts for 2026' },
+  outdoors: { href: '/best-camping-gifts', label: 'See the Best Camping Gifts for 2026' },
+  beauty: { href: '/best-beauty-gifts-2026', label: 'See the Best Beauty Gifts for 2026' },
+  gaming: { href: '/best-gaming-gifts-2026', label: 'See the Best Gaming Gifts for 2026' },
+  fitness: { href: '/best-fitness-gifts-2026', label: 'See the Best Fitness Gifts for 2026' },
+  luxury: { href: '/best-luxury-gifts-2026', label: 'See the Best Luxury Gifts for 2026' },
+};
+
 interface NicheMeta {
   title: string;
   heading: string;
@@ -607,6 +619,18 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
             ))}
           </div>
         </section>
+
+        {/* Featured guide cross-link */}
+        {GUIDE_FOR[params.niche as Niche] && (
+          <section className="max-w-5xl mx-auto px-4 py-8 border-t border-gray-100 text-center">
+            <Link
+              href={GUIDE_FOR[params.niche as Niche]!.href}
+              className="inline-block bg-[#F04E30] text-white font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+            >
+              {GUIDE_FOR[params.niche as Niche]!.label} →
+            </Link>
+          </section>
+        )}
 
         {/* Category Navigation */}
         <section className="max-w-5xl mx-auto px-4 py-10 border-t border-gray-100 text-center">
