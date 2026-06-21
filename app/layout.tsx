@@ -5,6 +5,7 @@ import Script from 'next/script';
 import './globals.css';
 import Footer from '@/components/Footer';
 import FavoritesSidebar from '@/components/FavoritesSidebar';
+import ClickTracker from '@/components/ClickTracker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -100,6 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <FavoritesSidebar />
+        <ClickTracker />
         <Analytics />
         <Script
           id="organization-schema"

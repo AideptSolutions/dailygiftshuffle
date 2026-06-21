@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useFavorites } from '@/lib/useFavorites';
+import { trackAffiliateClick } from '@/lib/clickTracking';
 
 export default function FavoritesSidebar() {
   const { favorites, remove } = useFavorites();
@@ -114,6 +115,7 @@ export default function FavoritesSidebar() {
               <button
                 onClick={() => {
                   favorites.forEach((p, i) => {
+                    trackAffiliateClick({ url: p.affiliateUrl, name: p.name });
                     setTimeout(() => {
                       window.open(p.affiliateUrl, '_blank', 'noopener,noreferrer');
                     }, i * 300);
