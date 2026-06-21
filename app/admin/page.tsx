@@ -211,7 +211,10 @@ export default function AdminPage() {
           <h1 className="text-lg font-bold text-gray-900">TheGiftShuffle Admin</h1>
           <p className="text-xs text-gray-400">{published} published &bull; {drafts} drafts</p>
         </div>
-        <button onClick={logout} className="text-xs text-gray-400 hover:text-gray-600">Sign out</button>
+        <div className="flex items-center gap-4">
+          <a href="/admin/clicks" className="text-xs font-semibold text-orange-500 hover:text-orange-600">Click Analytics →</a>
+          <button onClick={logout} className="text-xs text-gray-400 hover:text-gray-600">Sign out</button>
+        </div>
       </div>
 
       {statusMsg && (
