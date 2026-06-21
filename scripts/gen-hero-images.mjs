@@ -60,6 +60,10 @@ const HEROES = {
   'shuffle-finance':         { q: 'finance money planner desk minimal', alt: 'Finance gift ideas with a planner on a desk' },
   'shuffle-car-accessories': { q: 'car interior accessories dashboard clean', alt: 'Car accessory gift ideas for the interior' },
   'shuffle-outdoors':        { q: 'camping outdoors gear tent landscape', alt: 'Outdoor and camping gift ideas with gear' },
+  // Seasonal / themed page heroes
+  'patriotic-gifts':         { q: 'fourth of july fireworks american flag celebration', alt: 'Fourth of July fireworks over an American flag celebration' },
+  'patriotic-gifts-evergreen': { q: 'american flag waving blue sky patriotic', alt: 'An American flag waving against a blue sky' },
+  'world-cup-gifts':         { q: 'soccer ball stadium fans celebration', alt: 'A soccer ball on the pitch with cheering fans in a stadium' },
   'christmas-gift-ideas':             { q: 'christmas gifts under decorated tree', alt: 'Christmas presents wrapped under a decorated tree' },
   'fathers-day-gifts':                { q: 'father and child fathers day gift', alt: "A father opening a Father's Day gift with his family" },
   'fathers-day-gifts-under-100':      { q: 'fathers day gift box card', alt: "A Father's Day gift box beside a handwritten card" },

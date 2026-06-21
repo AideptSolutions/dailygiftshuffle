@@ -51,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/best-fitness-gifts-2026',
     '/best-anniversary-gifts-2026',
     '/best-beauty-gifts-2026',
+    '/patriotic-gifts',
+    '/world-cup-gifts',
     '/best-baby-shower-gifts-2026',
     '/gifts-for-camping-and-outdoors',
     '/gifts-under-25',

@@ -453,5 +453,26 @@
     "photographer": "Ron Lach",
     "photographerUrl": "https://www.pexels.com/@ron-lach",
     "src": "https://www.pexels.com/photo/fashion-clothing-paper-box-9594426/"
+  },
+  "patriotic-gifts": {
+    "alt": "Fourth of July fireworks over an American flag celebration",
+    "query": "fourth of july fireworks american flag celebration",
+    "photographer": "cottonbro studio",
+    "photographerUrl": "https://www.pexels.com/@cottonbro",
+    "src": "https://www.pexels.com/photo/smiling-woman-holding-sparklers-4667370/"
+  },
+  "patriotic-gifts-evergreen": {
+    "alt": "An American flag waving against a blue sky",
+    "query": "american flag waving blue sky patriotic",
+    "photographer": "Connor Scott McManus",
+    "photographerUrl": "https://www.pexels.com/@connorscottmcmanus",
+    "src": "https://www.pexels.com/photo/photo-of-an-american-flag-under-the-sky-15084216/"
+  },
+  "world-cup-gifts": {
+    "alt": "A soccer ball on the pitch with cheering fans in a stadium",
+    "query": "soccer ball stadium fans celebration",
+    "photographer": "Stephen Leonardi",
+    "photographerUrl": "https://www.pexels.com/@stephen-leonardi-587681991",
+    "src": "https://www.pexels.com/photo/soccer-ball-on-sideline-during-night-match-37580254/"
   }
 }
