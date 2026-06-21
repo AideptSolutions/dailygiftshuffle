@@ -2,10 +2,16 @@
 
 import Link from 'next/link';
 
+interface BannerLink {
+  label: string;
+  href: string;
+}
+
 interface BannerConfig {
   text: string;
   gradient: string;
   href?: string;
+  links?: BannerLink[];
 }
 
 function getBannerConfig(month: number): BannerConfig | null {
@@ -26,10 +32,15 @@ function getBannerConfig(month: number): BannerConfig | null {
       // Mother's Day banner handles April + May — no duplicate
       return null;
     case 6:
+    case 7:
+      // Summer 2026: the World Cup is being co-hosted in the US, plus July 4th
       return {
-        text: "Father's Day is coming up",
-        gradient: 'linear-gradient(90deg, #1565c0 0%, #42a5f5 100%)',
-        href: '/gift-ideas-for-dad',
+        text: 'The 2026 World Cup is here:',
+        gradient: 'linear-gradient(90deg, #1565c0 0%, #d32f2f 100%)',
+        links: [
+          { label: 'Soccer Fan Gifts', href: '/world-cup-gifts' },
+          { label: 'Patriotic Gifts', href: '/patriotic-gifts' },
+        ],
       };
     case 11:
       return {
@@ -53,24 +64,26 @@ export default function SeasonalBanner() {
 
   if (!config) return null;
 
-  const inner = (
-    <span className="text-white text-sm font-semibold tracking-wide">
-      {config.text}
-    </span>
-  );
-
   return (
-    <div
-      style={{ background: config.gradient }}
-      className="w-full py-2.5 px-4 text-center"
-    >
-      {config.href ? (
-        <Link href={config.href} className="hover:underline underline-offset-2">
-          {inner}
-        </Link>
-      ) : (
-        inner
-      )}
+    <div style={{ background: config.gradient }} className="w-full py-2.5 px-4 text-center">
+      <span className="text-white text-sm font-semibold tracking-wide">
+        {config.href ? (
+          <Link href={config.href} className="hover:underline underline-offset-2">
+            {config.text}
+          </Link>
+        ) : (
+          config.text
+        )}
+        {config.links?.map((l, i) => (
+          <span key={l.href}>
+            {' '}
+            <Link href={l.href} className="underline underline-offset-2 hover:opacity-90">
+              {l.label}
+            </Link>
+            {i < (config.links?.length ?? 0) - 1 ? ' ·' : ''}
+          </span>
+        ))}
+      </span>
     </div>
   );
 }

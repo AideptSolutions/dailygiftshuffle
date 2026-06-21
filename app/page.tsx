@@ -232,6 +232,45 @@ export default async function HomePage() {
       {/* Gift Package Collections */}
       <GiftPackageCollections />
 
+      {/* In-season timely guides */}
+      <section className="py-14 px-4" style={{ background: '#FFFFFF' }}>
+        <div className="max-w-5xl mx-auto">
+          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#F04E30' }}>In Season Now</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mt-1 mb-6" style={{ color: '#1A202C' }}>
+            Timely Gift Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: '/world-cup-gifts', img: '/images/heroes/world-cup-gifts.jpg', kicker: 'World Cup 2026', title: 'Soccer Fan Gifts', alt: 'World Cup 2026 soccer fan gifts' },
+              { href: '/patriotic-gifts', img: '/images/heroes/patriotic-gifts.jpg', kicker: 'July 4th', title: '4th of July & Patriotic Gifts', alt: 'Patriotic and 4th of July gifts' },
+            ].map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="group relative block rounded-2xl overflow-hidden"
+                style={{ aspectRatio: '16 / 9' }}
+              >
+                <Image
+                  src={c.img}
+                  alt={c.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-white/85">{c.kicker}</span>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-white mt-0.5">{c.title}</h3>
+                  <span className="inline-block mt-2 text-sm font-semibold text-white underline underline-offset-2">
+                    Shop the guide &rarr;
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Father's Day Top 10 */}
       <section className="py-14 px-4" style={{ background: '#FFF8F0' }}>
         <div className="max-w-5xl mx-auto">
