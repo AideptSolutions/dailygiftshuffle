@@ -502,8 +502,14 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
     itemListElement: filtered.slice(0, 20).map((p, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: p.name,
-      url: p.affiliateUrl,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
+        ...(p.description ? { description: p.description } : {}),
+        offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+        ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      },
     })),
   };
 
