@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ShuffleGrid from './ShuffleGrid';
 import { CATEGORY_META } from './categoryMeta';
+import { ALL } from '@/lib/giftSelect';
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_META).map((category) => ({ category }));
@@ -50,8 +51,49 @@ export default function CategoryShufflePage({ params }: { params: { category: st
     ? `/images/heroes/shuffle-${category}.jpg`
     : '/images/heroes/gifts-under-50.jpg';
 
+  // Representative ItemList from the static catalog so crawlers/answer engines
+  // see structured product data (the client grid shuffles a random subset).
+  const BASE = 'https://www.thegiftshuffle.com';
+  const absImg = (img: string) => (img?.startsWith('http') ? img : `${BASE}${img}`);
+  const schemaProducts = ALL.filter((p) => p.tags?.includes(category) && p.rating >= 4.3)
+    .sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0))
+    .slice(0, 12);
+  const itemListSchema =
+    schemaProducts.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: `${meta.label} Gifts`,
+          url: `${BASE}/shuffle/${category}`,
+          numberOfItems: schemaProducts.length,
+          itemListElement: schemaProducts.map((p, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            item: {
+              '@type': 'Product',
+              name: p.name,
+              image: absImg(p.image),
+              ...(p.description ? { description: p.description } : {}),
+              offers: {
+                '@type': 'Offer',
+                price: p.price,
+                priceCurrency: 'USD',
+                availability: 'https://schema.org/InStock',
+                url: p.affiliateUrl,
+              },
+              ...(p.rating > 0 && (p.reviewCount ?? 0) > 0
+                ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } }
+                : {}),
+            },
+          })),
+        }
+      : null;
+
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #FFFAF5 0%, #fff9e6 100%)' }}>
+      {itemListSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      )}
       <Navbar />
       <Breadcrumbs
         items={[

@@ -44,6 +44,8 @@ export interface GiftGuideTemplateProps {
  * FAQ, and related-guide internal links. Emits ItemList + FAQPage JSON-LD.
  */
 export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
+  const BASE = 'https://www.thegiftshuffle.com';
+  const absImg = (img: string) => (img?.startsWith('http') ? img : `${BASE}${img}`);
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -54,9 +56,28 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
     itemListElement: props.gridProducts.map((p, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: p.name,
-      description: p.description,
-      url: p.affiliateUrl,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        image: absImg(p.image),
+        ...(p.description ? { description: p.description } : {}),
+        offers: {
+          '@type': 'Offer',
+          price: p.price,
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: p.affiliateUrl,
+        },
+        ...(p.rating > 0 && p.reviewCount > 0
+          ? {
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: p.rating,
+                reviewCount: p.reviewCount,
+              },
+            }
+          : {}),
+      },
     })),
   };
 
