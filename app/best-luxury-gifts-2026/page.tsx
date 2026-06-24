@@ -73,12 +73,12 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
+        { href: '/luxury-gifts-under-200', label: 'Luxury Gifts Under $200' },
         { href: '/category/luxury', label: 'All Luxury Gifts' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/best-anniversary-gifts-2026', label: 'Best Anniversary Gifts 2026' },
         { href: '/best-beauty-gifts-2026', label: 'Best Beauty Gifts 2026' },
-        { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
-        { href: '/gifts-under-100', label: 'Gifts Under $100' },
       ]}
     />
   );

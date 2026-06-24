@@ -48,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/best-camping-gifts',
     '/best-gaming-gifts-2026',
     '/best-luxury-gifts-2026',
+    '/luxury-gifts-for-her',
+    '/luxury-gifts-under-200',
     '/best-fitness-gifts-2026',
     '/best-anniversary-gifts-2026',
     '/best-beauty-gifts-2026',
