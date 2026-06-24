@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: wishlist.title,
       description: `Browse ${wishlist.title}, a curated gift wishlist on TheGiftShuffle.`,
       images: firstImage ? [{ url: firstImage }] : [],
-      url: `https://thegiftshuffle.com/wishlist/${params.id}`,
+      url: `https://www.thegiftshuffle.com/wishlist/${params.id}`,
     },
     twitter: {
       card: 'summary_large_image',

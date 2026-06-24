@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool } from '@/lib/giftSelect';
 
-const URL = 'https://thegiftshuffle.com/gifts-for-girlfriend';
+const URL = 'https://www.thegiftshuffle.com/gifts-for-girlfriend';
 
 export const metadata: Metadata = {
   title: 'Gifts for Your Girlfriend: 30 Ideas She Will Actually Love (2026) | TheGiftShuffle',

@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     description:
       "Top graduation gifts under $50: Bluetooth speakers, earbuds, tumblers, journals, and practical picks for every grad.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/graduation-gifts-under-50',
+    url: 'https://www.thegiftshuffle.com/graduation-gifts-under-50',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/graduation-gifts-under-50',
+    canonical: 'https://www.thegiftshuffle.com/graduation-gifts-under-50',
   },
 };
 
@@ -66,7 +66,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Graduation Gifts Under $50: Class of 2026',
   description: 'Hand-picked graduation gifts under $50 for the Class of 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/graduation-gifts-under-50',
+  url: 'https://www.thegiftshuffle.com/graduation-gifts-under-50',
   numberOfItems: gradUnder50.length,
   itemListElement: gradUnder50.map((p, i) => ({
     '@type': 'ListItem',

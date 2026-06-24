@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     description:
       'Gift guides, trending products, and tips for finding the perfect gift for anyone.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/blog',
+    url: 'https://www.thegiftshuffle.com/blog',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/blog',
+    canonical: 'https://www.thegiftshuffle.com/blog',
   },
 };
 

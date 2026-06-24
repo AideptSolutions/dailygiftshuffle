@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Browse the best Mother's Day gifts under $25: shower steamers, eye patches, slipper socks, serums, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/mothers-day-gifts-under-25',
+    url: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-25',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/mothers-day-gifts-under-25',
+    canonical: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-25',
   },
 };
 
@@ -75,7 +75,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Mother's Day Gifts Under $25",
   description: "Hand-picked Mother's Day gifts under $25 curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/mothers-day-gifts-under-25',
+  url: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-25',
   numberOfItems: under25Products.length,
   itemListElement: under25Products.map((p, i) => ({
     '@type': 'ListItem',

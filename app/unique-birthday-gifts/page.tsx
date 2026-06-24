@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       '30 unique, cool and creative birthday gifts that beat the gift card, hand-picked because nobody else will think of them.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/unique-birthday-gifts',
+    url: 'https://www.thegiftshuffle.com/unique-birthday-gifts',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Unique%20Birthday%20Gifts%20%7C%20TheGiftShuffle',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/unique-birthday-gifts',
+    canonical: 'https://www.thegiftshuffle.com/unique-birthday-gifts',
   },
 };
 
@@ -94,7 +94,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Unique Birthday Gifts',
   description: 'Unique, cool and creative birthday gift ideas curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/unique-birthday-gifts',
+  url: 'https://www.thegiftshuffle.com/unique-birthday-gifts',
   numberOfItems: uniqueBirthday.length,
   itemListElement: uniqueBirthday.map((p, i) => ({
     '@type': 'ListItem',

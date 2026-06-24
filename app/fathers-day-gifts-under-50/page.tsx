@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Great Father's Day gifts for under $50, including digital thermometers, insulated tumblers, Bluetooth speakers, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/fathers-day-gifts-under-50',
+    url: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-50',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/fathers-day-gifts-under-50',
+    canonical: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-50',
   },
 };
 
@@ -68,7 +68,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Father's Day Gifts Under $50",
   description: "Hand-picked Father's Day gifts under $50, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/fathers-day-gifts-under-50',
+  url: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-50',
   numberOfItems: fathersDayUnder50.length,
   itemListElement: fathersDayUnder50.map((p, i) => ({
     '@type': 'ListItem',

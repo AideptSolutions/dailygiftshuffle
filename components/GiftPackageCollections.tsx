@@ -105,7 +105,7 @@ const itemListSchema = {
     '@type': 'ListItem',
     position: i + 1,
     name: cat.name,
-    url: `https://thegiftshuffle.com${cat.href}`,
+    url: `https://www.thegiftshuffle.com${cat.href}`,
   })),
 };
 

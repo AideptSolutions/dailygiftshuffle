@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Top-rated Mother's Day gifts that still ship in time. Prime-eligible spa sets, skincare, jewelry, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/last-minute-mothers-day-gifts',
+    url: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/last-minute-mothers-day-gifts',
+    canonical: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts',
   },
 };
 
@@ -44,9 +44,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
-    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://thegiftshuffle.com/mothers-day-gifts' },
-    { '@type': 'ListItem', position: 3, name: 'Last-Minute Gifts', item: 'https://thegiftshuffle.com/last-minute-mothers-day-gifts' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://www.thegiftshuffle.com/mothers-day-gifts' },
+    { '@type': 'ListItem', position: 3, name: 'Last-Minute Gifts', item: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts' },
   ],
 };
 
@@ -55,7 +55,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Last-Minute Mother's Day Gifts 2026",
   description: "Top-rated Mother's Day gifts available with fast Amazon Prime shipping, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/last-minute-mothers-day-gifts',
+  url: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts',
   numberOfItems: lastMinuteProducts.length,
   itemListElement: lastMinuteProducts.map((p, i) => ({
     '@type': 'ListItem',

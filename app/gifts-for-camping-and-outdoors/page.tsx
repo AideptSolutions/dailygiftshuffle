@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       'Top-rated camping and outdoor gift ideas at every budget. Hand-picked picks for hikers, campers, and everyone who prefers trees over Wi-Fi.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts-for-camping-and-outdoors',
+    url: 'https://www.thegiftshuffle.com/gifts-for-camping-and-outdoors',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20for%20Camping%20and%20Outdoors%20%7C%20TheGiftShuffle',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts-for-camping-and-outdoors',
+    canonical: 'https://www.thegiftshuffle.com/gifts-for-camping-and-outdoors',
   },
 };
 
@@ -77,7 +77,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gifts for Camping and the Outdoors',
   description: 'Hand-picked camping and outdoor gift ideas curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gifts-for-camping-and-outdoors',
+  url: 'https://www.thegiftshuffle.com/gifts-for-camping-and-outdoors',
   numberOfItems: outdoorsProducts.length,
   itemListElement: outdoorsProducts.map((p, i) => ({
     '@type': 'ListItem',

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       'Browse the best sustainable and eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful for any budget.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/sustainable-eco-gifts',
+    url: 'https://www.thegiftshuffle.com/sustainable-eco-gifts',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Sustainable%20Eco-Friendly%20Gifts%20%7C%20TheGiftShuffle',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/sustainable-eco-gifts',
+    canonical: 'https://www.thegiftshuffle.com/sustainable-eco-gifts',
   },
 };
 
@@ -76,7 +76,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Sustainable Eco-Friendly Gifts',
   description: 'Curated sustainable and eco-friendly gift ideas for every person by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/sustainable-eco-gifts',
+  url: 'https://www.thegiftshuffle.com/sustainable-eco-gifts',
   numberOfItems: ecoProducts.length,
   itemListElement: ecoProducts.map((p, i) => ({
     '@type': 'ListItem',

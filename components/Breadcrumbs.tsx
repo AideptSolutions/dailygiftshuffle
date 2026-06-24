@@ -19,7 +19,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      item: `https://thegiftshuffle.com${item.href}`,
+      item: `https://www.thegiftshuffle.com${item.href}`,
     })),
   };
 

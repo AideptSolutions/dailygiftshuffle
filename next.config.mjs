@@ -17,6 +17,15 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Canonical host: 301 the bare apex (thegiftshuffle.com) to the www host
+        // so Google consolidates ranking signals onto one hostname. The www host
+        // does not match this `has` condition, so there is no redirect loop.
+        source: '/:path*',
+        has: [{ type: 'host', value: 'thegiftshuffle.com' }],
+        destination: 'https://www.thegiftshuffle.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/category/tech-gadgets',
         destination: '/category/tech',
         permanent: true,

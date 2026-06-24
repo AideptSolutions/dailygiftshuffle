@@ -28,7 +28,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: 'https://thegiftshuffle.com',
+    url: 'https://www.thegiftshuffle.com',
+  },
+  alternates: {
+    canonical: 'https://www.thegiftshuffle.com',
   },
 };
 

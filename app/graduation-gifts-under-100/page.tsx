@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     description:
       "Top graduation gifts under $100: Kindle, smartwatch, massage gun, silk pajamas, and more for every grad.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/graduation-gifts-under-100',
+    url: 'https://www.thegiftshuffle.com/graduation-gifts-under-100',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/graduation-gifts-under-100',
+    canonical: 'https://www.thegiftshuffle.com/graduation-gifts-under-100',
   },
 };
 
@@ -65,7 +65,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Graduation Gifts Under $100: Class of 2026',
   description: 'Hand-picked graduation gifts under $100 for the Class of 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/graduation-gifts-under-100',
+  url: 'https://www.thegiftshuffle.com/graduation-gifts-under-100',
   numberOfItems: gradUnder100.length,
   itemListElement: gradUnder100.map((p, i) => ({
     '@type': 'ListItem',

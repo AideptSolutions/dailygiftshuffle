@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Top-rated Mother's Day gifts with Amazon Prime shipping. Order now and still make it in time.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts/last-minute-mothers-day',
+    url: 'https://www.thegiftshuffle.com/gifts/last-minute-mothers-day',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts/last-minute-mothers-day',
+    canonical: 'https://www.thegiftshuffle.com/gifts/last-minute-mothers-day',
   },
 };
 
@@ -79,7 +79,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Last-Minute Mother's Day Gifts 2026",
   description: "Top-rated Mother's Day gifts available with Amazon Prime fast shipping, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/gifts/last-minute-mothers-day',
+  url: 'https://www.thegiftshuffle.com/gifts/last-minute-mothers-day',
   numberOfItems: lastMinuteProducts.length,
   itemListElement: lastMinuteProducts.map((p, i) => ({
     '@type': 'ListItem',
@@ -99,9 +99,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
-    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://thegiftshuffle.com/mothers-day-gifts' },
-    { '@type': 'ListItem', position: 3, name: 'Last-Minute Gifts', item: 'https://thegiftshuffle.com/gifts/last-minute-mothers-day' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://www.thegiftshuffle.com/mothers-day-gifts' },
+    { '@type': 'ListItem', position: 3, name: 'Last-Minute Gifts', item: 'https://www.thegiftshuffle.com/gifts/last-minute-mothers-day' },
   ],
 };
 

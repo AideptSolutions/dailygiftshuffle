@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Discover premium-feeling gifts under $100, the sweet spot for thoughtful, high-impact gifting without the splurge.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts-under-100',
+    url: 'https://www.thegiftshuffle.com/gifts-under-100',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%24100%20%7C%20TheGiftShuffle',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts-under-100',
+    canonical: 'https://www.thegiftshuffle.com/gifts-under-100',
   },
 };
 
@@ -73,7 +73,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gifts Under $100',
   description: 'Hand-picked gift ideas under $100 curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gifts-under-100',
+  url: 'https://www.thegiftshuffle.com/gifts-under-100',
   numberOfItems: under100Products.length,
   itemListElement: under100Products.map((p, i) => ({
     '@type': 'ListItem',

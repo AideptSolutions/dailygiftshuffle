@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool } from '@/lib/giftSelect';
 
-const URL = 'https://thegiftshuffle.com/best-fitness-gifts-2026';
+const URL = 'https://www.thegiftshuffle.com/best-fitness-gifts-2026';
 
 export const metadata: Metadata = {
   title: 'Best Fitness Gifts for 2026: 30 Top Picks for People Who Work Out | TheGiftShuffle',

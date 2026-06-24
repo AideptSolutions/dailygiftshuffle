@@ -129,7 +129,7 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url: `https://thegiftshuffle.com/gifts/${params.slug}`,
+      url: `https://www.thegiftshuffle.com/gifts/${params.slug}`,
     },
   };
 }

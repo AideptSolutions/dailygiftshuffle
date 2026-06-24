@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     description:
       "You forgot. It happens. Ten options that reliably land at the recipient's door (or inbox) within 24 hours.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/top-10-gifts-that-arrive-in-24-hours',
+    url: 'https://www.thegiftshuffle.com/top-10-gifts-that-arrive-in-24-hours',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/top-10-gifts-that-arrive-in-24-hours',
+    canonical: 'https://www.thegiftshuffle.com/top-10-gifts-that-arrive-in-24-hours',
   },
 };
 
@@ -139,7 +139,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: "Top 10 Gifts That Arrive in 24 Hours or Less",
-  url: 'https://thegiftshuffle.com/top-10-gifts-that-arrive-in-24-hours',
+  url: 'https://www.thegiftshuffle.com/top-10-gifts-that-arrive-in-24-hours',
   numberOfItems: 10,
   itemListElement: gifts.map((g, i) => ({
     '@type': 'ListItem',

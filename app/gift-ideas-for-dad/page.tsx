@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Browse 25+ hand-picked gift ideas for Dad: gadgets, grilling gear, and experiences he'll actually use.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-dad',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-dad',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Dad%20%7C%20TheGiftShuffle',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-dad',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-dad',
   },
 };
 
@@ -74,7 +74,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Ideas for Dad',
   description: 'Hand-picked gift ideas for Dad curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-dad',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-dad',
   numberOfItems: dadProducts.length,
   itemListElement: dadProducts.map((p, i) => ({
     '@type': 'ListItem',

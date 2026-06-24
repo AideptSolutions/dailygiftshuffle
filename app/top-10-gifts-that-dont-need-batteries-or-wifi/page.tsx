@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     description:
       "No power button, no app, no firmware update. Ten gifts that work the moment they come out of the box and keep working for years.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/top-10-gifts-that-dont-need-batteries-or-wifi',
-    images: [{ url: 'https://thegiftshuffle.com/images/hero-gifts-no-batteries.png', width: 1792, height: 1024, alt: "Gifts that don't need batteries - journal, fountain pen, wool blanket, playing cards" }],
+    url: 'https://www.thegiftshuffle.com/top-10-gifts-that-dont-need-batteries-or-wifi',
+    images: [{ url: 'https://www.thegiftshuffle.com/images/hero-gifts-no-batteries.png', width: 1792, height: 1024, alt: "Gifts that don't need batteries - journal, fountain pen, wool blanket, playing cards" }],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/top-10-gifts-that-dont-need-batteries-or-wifi',
+    canonical: 'https://www.thegiftshuffle.com/top-10-gifts-that-dont-need-batteries-or-wifi',
   },
 };
 
@@ -158,7 +158,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: "Top 10 Gifts That Don't Need Batteries or Wi-Fi",
-  url: 'https://thegiftshuffle.com/top-10-gifts-that-dont-need-batteries-or-wifi',
+  url: 'https://www.thegiftshuffle.com/top-10-gifts-that-dont-need-batteries-or-wifi',
   numberOfItems: 10,
   itemListElement: gifts.map((g, i) => ({
     '@type': 'ListItem',

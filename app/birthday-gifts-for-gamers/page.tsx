@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       'Top-rated birthday gifts for gamers in 2026: headsets, mechanical keyboards, controllers, RGB gear and more for every budget.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/birthday-gifts-for-gamers',
+    url: 'https://www.thegiftshuffle.com/birthday-gifts-for-gamers',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Birthday%20Gifts%20for%20Gamers%20%7C%20TheGiftShuffle',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/birthday-gifts-for-gamers',
+    canonical: 'https://www.thegiftshuffle.com/birthday-gifts-for-gamers',
   },
 };
 
@@ -82,7 +82,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Birthday Gifts for Gamers',
   description: 'The best birthday gifts for gamers in 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/birthday-gifts-for-gamers',
+  url: 'https://www.thegiftshuffle.com/birthday-gifts-for-gamers',
   numberOfItems: gamerGifts.length,
   itemListElement: gamerGifts.map((p, i) => ({
     '@type': 'ListItem',

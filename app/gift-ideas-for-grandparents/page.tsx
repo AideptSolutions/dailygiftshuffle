@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Browse thoughtful gift ideas for grandparents: garden tools, cozy home picks, wellness items, and easy tech they will actually use.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-grandparents',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-grandparents',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Grandparents%20%7C%20TheGiftShuffle',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-grandparents',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-grandparents',
   },
 };
 
@@ -71,7 +71,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Ideas for Grandparents',
   description: 'Hand-picked gift ideas for grandparents curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-grandparents',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-grandparents',
   numberOfItems: grandparentProducts.length,
   itemListElement: grandparentProducts.map((p, i) => ({
     '@type': 'ListItem',

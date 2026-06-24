@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
-const URL = 'https://thegiftshuffle.com/best-camping-gifts';
+const URL = 'https://www.thegiftshuffle.com/best-camping-gifts';
 
 export const metadata: Metadata = {
   title: 'Best Camping Gifts for 2026: 30 Top Picks for Campers & Hikers | TheGiftShuffle',

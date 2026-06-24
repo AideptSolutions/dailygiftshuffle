@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { category: string } }): 
   const label = meta?.label ?? 'Gift';
   const title = `${label} Gift Shuffle: Discover Top-Rated Picks | TheGiftShuffle`;
   const description = meta?.intro ?? `Shuffle through top-rated ${label.toLowerCase()} gift ideas at every budget.`;
-  const url = `https://thegiftshuffle.com/shuffle/${params.category}`;
+  const url = `https://www.thegiftshuffle.com/shuffle/${params.category}`;
   return {
     title,
     description,

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool, ALL, type AnyProduct } from '@/lib/giftSelect';
 
-const URL = 'https://thegiftshuffle.com/best-baby-shower-gifts-2026';
+const URL = 'https://www.thegiftshuffle.com/best-baby-shower-gifts-2026';
 
 export const metadata: Metadata = {
   title: 'Best Baby Shower Gifts for 2026: 48 Top-Rated Picks New Parents Love | TheGiftShuffle',

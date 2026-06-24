@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Browse 30+ curated gift ideas under $50: thoughtful picks that prove you don't need a big budget.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts-under-50',
+    url: 'https://www.thegiftshuffle.com/gifts-under-50',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%2450%20%7C%20TheGiftShuffle',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts-under-50',
+    canonical: 'https://www.thegiftshuffle.com/gifts-under-50',
   },
 };
 
@@ -74,7 +74,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gifts Under $50',
   description: 'Curated gifts under $50 for any occasion by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gifts-under-50',
+  url: 'https://www.thegiftshuffle.com/gifts-under-50',
   numberOfItems: under50Products.length,
   itemListElement: under50Products.map((p, i) => ({
     '@type': 'ListItem',

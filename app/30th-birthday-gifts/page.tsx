@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool } from '@/lib/giftSelect';
 
-const URL = 'https://thegiftshuffle.com/30th-birthday-gifts';
+const URL = 'https://www.thegiftshuffle.com/30th-birthday-gifts';
 
 export const metadata: Metadata = {
   title: '30th Birthday Gifts: 30 Ideas to Mark the Milestone (2026) | TheGiftShuffle',

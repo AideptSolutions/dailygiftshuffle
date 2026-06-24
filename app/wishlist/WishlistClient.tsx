@@ -79,7 +79,7 @@ export default function WishlistClient() {
   }, []);
 
   const shareUrl =
-    shareId ? `https://thegiftshuffle.com/wishlist/${shareId}` : null;
+    shareId ? `https://www.thegiftshuffle.com/wishlist/${shareId}` : null;
 
   const syncToBackend = useCallback(
     async (
@@ -129,7 +129,7 @@ export default function WishlistClient() {
         await syncToBackend(meta, items, hints, title);
       }
 
-      const url = `https://thegiftshuffle.com/wishlist/${meta.id}`;
+      const url = `https://www.thegiftshuffle.com/wishlist/${meta.id}`;
 
       if (navigator.share) {
         await navigator.share({ title: 'My Gift Wishlist', url });

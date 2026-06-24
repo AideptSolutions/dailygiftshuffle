@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Browse the best Mother's Day gifts for 2026: personalized jewelry, spa sets, kitchen upgrades, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/mothers-day-gifts',
+    url: 'https://www.thegiftshuffle.com/mothers-day-gifts',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Mother%27s%20Day%20Gifts%20%7C%20TheGiftShuffle',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/mothers-day-gifts',
+    canonical: 'https://www.thegiftshuffle.com/mothers-day-gifts',
   },
 };
 
@@ -86,7 +86,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Mother's Day Gifts",
   description: "Hand-picked Mother's Day gift ideas curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/mothers-day-gifts',
+  url: 'https://www.thegiftshuffle.com/mothers-day-gifts',
   numberOfItems: mothersDayProducts.length,
   itemListElement: mothersDayProducts.map((p, i) => ({
     '@type': 'ListItem',

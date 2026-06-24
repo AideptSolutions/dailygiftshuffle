@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool } from '@/lib/giftSelect';
 
-const URL = 'https://thegiftshuffle.com/best-anniversary-gifts-2026';
+const URL = 'https://www.thegiftshuffle.com/best-anniversary-gifts-2026';
 
 export const metadata: Metadata = {
   title: 'Best Anniversary Gifts for 2026: 30 Romantic Picks for Couples | TheGiftShuffle',

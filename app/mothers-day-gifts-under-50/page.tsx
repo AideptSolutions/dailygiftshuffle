@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Browse the best Mother's Day gifts under $50: spa sets, skincare, cozy socks, shower steamers, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/mothers-day-gifts-under-50',
+    url: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-50',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/mothers-day-gifts-under-50',
+    canonical: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-50',
   },
 };
 
@@ -75,7 +75,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Mother's Day Gifts Under $50",
   description: "Hand-picked Mother's Day gifts under $50 curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/mothers-day-gifts-under-50',
+  url: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-50',
   numberOfItems: under50Products.length,
   itemListElement: under50Products.map((p, i) => ({
     '@type': 'ListItem',

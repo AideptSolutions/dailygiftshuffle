@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     description:
       "Ten gifts for new dads that actually get used. No novelty mugs. No matching outfits. Just useful things for a sleep-deprived first year.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/top-10-gifts-for-new-dads-under-50',
+    url: 'https://www.thegiftshuffle.com/top-10-gifts-for-new-dads-under-50',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/top-10-gifts-for-new-dads-under-50',
+    canonical: 'https://www.thegiftshuffle.com/top-10-gifts-for-new-dads-under-50',
   },
 };
 
@@ -141,7 +141,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: "Top 10 Gifts for New Dads Under $50",
-  url: 'https://thegiftshuffle.com/top-10-gifts-for-new-dads-under-50',
+  url: 'https://www.thegiftshuffle.com/top-10-gifts-for-new-dads-under-50',
   numberOfItems: 10,
   itemListElement: gifts.map((g, i) => ({
     '@type': 'ListItem',

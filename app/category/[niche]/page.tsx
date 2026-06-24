@@ -464,7 +464,7 @@ export async function generateMetadata(
     openGraph: {
       title: `${meta.title} | TheGiftShuffle`,
       description: meta.description,
-      url: `https://thegiftshuffle.com/category/${params.niche}`,
+      url: `https://www.thegiftshuffle.com/category/${params.niche}`,
       images: [
         {
           url: `https://www.thegiftshuffle.com/api/og?title=${encodeURIComponent(meta.title)}`,

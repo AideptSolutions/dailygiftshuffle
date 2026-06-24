@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       'Browse the best AI-powered and personalized gift ideas, from smart photo frames to custom portraits to DNA kits, for any budget.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/ai-personalized-gifts',
+    url: 'https://www.thegiftshuffle.com/ai-personalized-gifts',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=AI-Powered%20Personalized%20Gifts%20%7C%20TheGiftShuffle',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/ai-personalized-gifts',
+    canonical: 'https://www.thegiftshuffle.com/ai-personalized-gifts',
   },
 };
 
@@ -75,7 +75,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'AI-Powered Personalized Gifts',
   description: 'Curated AI-powered and personalized gift ideas for every person by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/ai-personalized-gifts',
+  url: 'https://www.thegiftshuffle.com/ai-personalized-gifts',
   numberOfItems: aiProducts.length,
   itemListElement: aiProducts.map((p, i) => ({
     '@type': 'ListItem',

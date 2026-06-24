@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       "Browse 30+ curated birthday gift ideas for 2026 for everyone on your list, sorted by recipient and budget.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/birthday-gift-ideas',
+    url: 'https://www.thegiftshuffle.com/birthday-gift-ideas',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Birthday%20Gift%20Ideas%20%7C%20TheGiftShuffle',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/birthday-gift-ideas',
+    canonical: 'https://www.thegiftshuffle.com/birthday-gift-ideas',
   },
 };
 
@@ -76,7 +76,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Birthday Gift Ideas',
   description: 'Curated birthday gift ideas for every person by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/birthday-gift-ideas',
+  url: 'https://www.thegiftshuffle.com/birthday-gift-ideas',
   numberOfItems: birthdayProducts.length,
   itemListElement: birthdayProducts.map((p, i) => ({
     '@type': 'ListItem',

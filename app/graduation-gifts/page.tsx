@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads | TheGiftShuffle',
     description:
       'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings, every budget covered.',
-    url: 'https://thegiftshuffle.com/graduation-gifts',
+    url: 'https://www.thegiftshuffle.com/graduation-gifts',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Best+Graduation+Gifts+2026',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/graduation-gifts',
+    canonical: 'https://www.thegiftshuffle.com/graduation-gifts',
   },
 };
 
@@ -73,8 +73,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
-    { '@type': 'ListItem', position: 2, name: 'Graduation Gifts', item: 'https://thegiftshuffle.com/graduation-gifts' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: 'Graduation Gifts', item: 'https://www.thegiftshuffle.com/graduation-gifts' },
   ],
 };
 
@@ -83,7 +83,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Best Graduation Gifts 2026',
   description: 'Hand-picked graduation gift ideas for the class of 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/graduation-gifts',
+  url: 'https://www.thegiftshuffle.com/graduation-gifts',
   numberOfItems: gradProducts.length,
   itemListElement: gradProducts.map((p, i) => ({
     '@type': 'ListItem',

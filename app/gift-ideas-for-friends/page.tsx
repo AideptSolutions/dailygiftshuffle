@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Browse fun and thoughtful gift ideas for friends: viral picks, self-care sets, card games, and more under $30.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-friends',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-friends',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Friends%20%7C%20TheGiftShuffle',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-friends',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-friends',
   },
 };
 
@@ -71,7 +71,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Ideas for Friends',
   description: 'Hand-picked gift ideas for friends curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-friends',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-friends',
   numberOfItems: friendProducts.length,
   itemListElement: friendProducts.map((p, i) => ({
     '@type': 'ListItem',

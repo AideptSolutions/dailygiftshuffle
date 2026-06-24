@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       'The 30 best birthday gifts for 2026, ranked by what people actually love. For him, her, friends and family, every budget.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/best-birthday-gifts-2026',
+    url: 'https://www.thegiftshuffle.com/best-birthday-gifts-2026',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Best%20Birthday%20Gifts%202026%20%7C%20TheGiftShuffle',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/best-birthday-gifts-2026',
+    canonical: 'https://www.thegiftshuffle.com/best-birthday-gifts-2026',
   },
 };
 
@@ -105,7 +105,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Best Birthday Gifts for 2026',
   description: 'The 30 best, top-rated birthday gifts for 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/best-birthday-gifts-2026',
+  url: 'https://www.thegiftshuffle.com/best-birthday-gifts-2026',
   numberOfItems: bestBirthday.length,
   itemListElement: bestBirthday.map((p, i) => ({
     '@type': 'ListItem',

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       'Curated tech gift picks with real specs, wireless earbuds, 4K webcams, ultrawide monitors, and portable power.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/tech-gadgets',
+    url: 'https://www.thegiftshuffle.com/tech-gadgets',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Best%20Tech%20Gifts%20%26%20Gadgets%202026%20%7C%20TheGiftShuffle',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/tech-gadgets',
+    canonical: 'https://www.thegiftshuffle.com/tech-gadgets',
   },
 };
 
@@ -162,7 +162,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Best Tech Gifts & Gadgets 2026',
   description: 'Curated tech gift picks for 2026 by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/tech-gadgets',
+  url: 'https://www.thegiftshuffle.com/tech-gadgets',
   numberOfItems: techProducts.length,
   itemListElement: techProducts.map((p, i) => ({
     '@type': 'ListItem',

@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     description:
       'The best boss gifts for 2026: premium desk accessories, insulated mugs, luxury sets, and professional picks.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts-for-boss',
+    url: 'https://www.thegiftshuffle.com/gifts-for-boss',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts-for-boss',
+    canonical: 'https://www.thegiftshuffle.com/gifts-for-boss',
   },
 };
 
@@ -96,7 +96,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Best Gifts for Boss 2026',
   description: 'Hand-picked boss gift ideas for 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gifts-for-boss',
+  url: 'https://www.thegiftshuffle.com/gifts-for-boss',
   numberOfItems: displayProducts.length,
   itemListElement: displayProducts.map((p, i) => ({
     '@type': 'ListItem',

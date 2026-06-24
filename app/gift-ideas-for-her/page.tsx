@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Browse 25+ thoughtful gift ideas for her: wife, girlfriend, sister, or best friend.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-her',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-her',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Her%20%7C%20TheGiftShuffle',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-her',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-her',
   },
 };
 
@@ -74,7 +74,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Ideas for Her',
   description: 'Hand-picked gift ideas for her curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-her',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-her',
   numberOfItems: herProducts.length,
   itemListElement: herProducts.map((p, i) => ({
     '@type': 'ListItem',

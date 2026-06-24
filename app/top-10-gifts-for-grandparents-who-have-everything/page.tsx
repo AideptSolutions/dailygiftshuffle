@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     description:
       "Ten gift ideas that skip clutter and land emotionally. For the grandparent who has everything except your time, story, or voice.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/top-10-gifts-for-grandparents-who-have-everything',
+    url: 'https://www.thegiftshuffle.com/top-10-gifts-for-grandparents-who-have-everything',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/top-10-gifts-for-grandparents-who-have-everything',
+    canonical: 'https://www.thegiftshuffle.com/top-10-gifts-for-grandparents-who-have-everything',
   },
 };
 
@@ -144,7 +144,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: "Top 10 Gifts for Grandparents Who Already Have Everything",
-  url: 'https://thegiftshuffle.com/top-10-gifts-for-grandparents-who-have-everything',
+  url: 'https://www.thegiftshuffle.com/top-10-gifts-for-grandparents-who-have-everything',
   numberOfItems: 10,
   itemListElement: gifts.map((g, i) => ({
     '@type': 'ListItem',

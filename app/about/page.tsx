@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       'TheGiftShuffle curates gift recommendations based on Amazon ratings 4.3+, 1,000+ reviews, and genuine value-for-money. Learn about our editorial standards.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/about',
+    url: 'https://www.thegiftshuffle.com/about',
   },
 };
 

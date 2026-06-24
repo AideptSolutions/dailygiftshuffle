@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Browse 25+ curated gift ideas for him: husband, boyfriend, brother, or best friend.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-him',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-him',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Him%20%7C%20TheGiftShuffle',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-him',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-him',
   },
 };
 
@@ -74,7 +74,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Ideas for Him',
   description: 'Hand-picked gift ideas for him curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-him',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-him',
   numberOfItems: himProducts.length,
   itemListElement: himProducts.map((p, i) => ({
     '@type': 'ListItem',

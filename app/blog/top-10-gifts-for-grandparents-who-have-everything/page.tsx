@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     description:
       'Stuck on a gift for grandparents who already own everything? Ten ideas that skip clutter and land emotionally, with prices and who each one fits.',
     type: 'article',
-    url: 'https://thegiftshuffle.com/blog/top-10-gifts-for-grandparents-who-have-everything',
+    url: 'https://www.thegiftshuffle.com/blog/top-10-gifts-for-grandparents-who-have-everything',
     images: [
       {
-        url: 'https://thegiftshuffle.com/img/blog/top-10-gifts-for-grandparents-who-have-everything.jpg',
+        url: 'https://www.thegiftshuffle.com/img/blog/top-10-gifts-for-grandparents-who-have-everything.jpg',
         width: 1200,
         height: 675,
         alt: 'Older couple unwrapping a gift at a sunlit kitchen table',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      'https://thegiftshuffle.com/blog/top-10-gifts-for-grandparents-who-have-everything',
+      'https://www.thegiftshuffle.com/blog/top-10-gifts-for-grandparents-who-have-everything',
   },
 };
 
@@ -36,15 +36,15 @@ const articleSchema = {
   description:
     'Stuck on a gift for grandparents who already own everything? Ten ideas that skip clutter and land emotionally, with prices and who each one fits.',
   image:
-    'https://thegiftshuffle.com/img/blog/top-10-gifts-for-grandparents-who-have-everything.jpg',
+    'https://www.thegiftshuffle.com/img/blog/top-10-gifts-for-grandparents-who-have-everything.jpg',
   datePublished: '2026-05-12T08:00:00Z',
   author: { '@type': 'Organization', name: 'TheGiftShuffle' },
   publisher: {
     '@type': 'Organization',
     name: 'TheGiftShuffle',
-    logo: { '@type': 'ImageObject', url: 'https://thegiftshuffle.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: 'https://www.thegiftshuffle.com/logo.png' },
   },
-  url: 'https://thegiftshuffle.com/blog/top-10-gifts-for-grandparents-who-have-everything',
+  url: 'https://www.thegiftshuffle.com/blog/top-10-gifts-for-grandparents-who-have-everything',
 };
 
 const faqSchema = {

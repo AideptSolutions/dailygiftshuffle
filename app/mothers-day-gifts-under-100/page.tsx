@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Browse the best Mother's Day gifts under $100: spa sets, jewelry, skincare, kitchen tools, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/mothers-day-gifts-under-100',
+    url: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-100',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/mothers-day-gifts-under-100',
+    canonical: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-100',
   },
 };
 
@@ -41,9 +41,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
-    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://thegiftshuffle.com/mothers-day-gifts' },
-    { '@type': 'ListItem', position: 3, name: "Under $100", item: 'https://thegiftshuffle.com/mothers-day-gifts-under-100' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://www.thegiftshuffle.com/mothers-day-gifts' },
+    { '@type': 'ListItem', position: 3, name: "Under $100", item: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-100' },
   ],
 };
 
@@ -52,7 +52,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Mother's Day Gifts Under $100",
   description: "Hand-picked Mother's Day gifts under $100 curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/mothers-day-gifts-under-100',
+  url: 'https://www.thegiftshuffle.com/mothers-day-gifts-under-100',
   numberOfItems: under100Products.length,
   itemListElement: under100Products.map((p, i) => ({
     '@type': 'ListItem',

@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "The best Father's Day gifts under $100, including smartwatches, massage guns, cast iron skillets, whiskey sets, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/fathers-day-gifts-under-100',
+    url: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-100',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/fathers-day-gifts-under-100',
+    canonical: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-100',
   },
 };
 
@@ -68,7 +68,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Father's Day Gifts Under $100",
   description: "Hand-picked Father's Day gifts under $100, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/fathers-day-gifts-under-100',
+  url: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-100',
   numberOfItems: fathersDayUnder100.length,
   itemListElement: fathersDayUnder100.map((p, i) => ({
     '@type': 'ListItem',

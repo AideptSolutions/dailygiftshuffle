@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Browse the best Mother's Day gifts for your wife in 2026: spa sets, jewelry, skincare, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/mothers-day-gifts-for-wife',
+    url: 'https://www.thegiftshuffle.com/mothers-day-gifts-for-wife',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/mothers-day-gifts-for-wife',
+    canonical: 'https://www.thegiftshuffle.com/mothers-day-gifts-for-wife',
   },
 };
 
@@ -40,9 +40,9 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
-    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://thegiftshuffle.com/mothers-day-gifts' },
-    { '@type': 'ListItem', position: 3, name: "Mother's Day Gifts for Wife", item: 'https://thegiftshuffle.com/mothers-day-gifts-for-wife' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: "Mother's Day Gifts", item: 'https://www.thegiftshuffle.com/mothers-day-gifts' },
+    { '@type': 'ListItem', position: 3, name: "Mother's Day Gifts for Wife", item: 'https://www.thegiftshuffle.com/mothers-day-gifts-for-wife' },
   ],
 };
 
@@ -51,7 +51,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Mother's Day Gifts for Wife",
   description: "Hand-picked Mother's Day gift ideas for wives and partners, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/mothers-day-gifts-for-wife',
+  url: 'https://www.thegiftshuffle.com/mothers-day-gifts-for-wife',
   numberOfItems: wifeProducts.length,
   itemListElement: wifeProducts.map((p, i) => ({
     '@type': 'ListItem',

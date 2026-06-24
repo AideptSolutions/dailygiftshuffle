@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
       'Top-rated gift ideas for kids and grandkids at every age and budget. Hand-picked toys, games, and gear kids will love.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-kids',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-kids',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gift%20Ideas%20for%20Kids%20%7C%20TheGiftShuffle',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-kids',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-kids',
   },
 };
 
@@ -76,7 +76,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gift Ideas for Kids and Grandkids',
   description: 'Hand-picked gift ideas for kids and grandkids curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-kids',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-kids',
   numberOfItems: kidsProducts.length,
   itemListElement: kidsProducts.map((p, i) => ({
     '@type': 'ListItem',

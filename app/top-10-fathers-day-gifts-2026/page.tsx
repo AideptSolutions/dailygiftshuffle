@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       "Fathers Day is June 21, 2026. These are the 10 best gifts for dads right now, ranked by what is trending, not what has been recycled since 2019.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/top-10-fathers-day-gifts-2026',
+    url: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts-2026',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Top%2010%20Father%27s%20Day%20Gifts%202026%20%7C%20TheGiftShuffle',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/top-10-fathers-day-gifts-2026',
+    canonical: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts-2026',
   },
 };
 
@@ -93,7 +93,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Top 10 Father's Day Gifts for 2026",
   description: "The best Father's Day gifts for 2026, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/top-10-fathers-day-gifts-2026',
+  url: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts-2026',
   numberOfItems: top10.length,
   itemListElement: top10.map((p, i) => ({
     '@type': 'ListItem',

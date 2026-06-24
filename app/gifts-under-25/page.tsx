@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Browse the best gifts under $25: affordable but thoughtful picks with tens of thousands of verified reviews.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts-under-25',
+    url: 'https://www.thegiftshuffle.com/gifts-under-25',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20Under%20%2425%20%7C%20TheGiftShuffle',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts-under-25',
+    canonical: 'https://www.thegiftshuffle.com/gifts-under-25',
   },
 };
 
@@ -71,7 +71,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Gifts Under $25',
   description: 'Hand-picked gift ideas under $25 curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gifts-under-25',
+  url: 'https://www.thegiftshuffle.com/gifts-under-25',
   numberOfItems: under25Products.length,
   itemListElement: under25Products.map((p, i) => ({
     '@type': 'ListItem',

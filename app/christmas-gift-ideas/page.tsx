@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Browse 30+ curated Christmas gift ideas for everyone on your list, sorted by recipient and budget.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/christmas-gift-ideas',
+    url: 'https://www.thegiftshuffle.com/christmas-gift-ideas',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Christmas%20Gift%20Ideas%20%7C%20TheGiftShuffle',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/christmas-gift-ideas',
+    canonical: 'https://www.thegiftshuffle.com/christmas-gift-ideas',
   },
 };
 
@@ -79,7 +79,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Christmas Gift Ideas 2026',
   description: 'Curated Christmas gift ideas for 2026 by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/christmas-gift-ideas',
+  url: 'https://www.thegiftshuffle.com/christmas-gift-ideas',
   numberOfItems: displayProducts.length,
   itemListElement: displayProducts.map((p, i) => ({
     '@type': 'ListItem',

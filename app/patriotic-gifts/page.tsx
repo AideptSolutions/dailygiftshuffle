@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { byTheme } from '@/data/seasonal-products';
 
-const URL = 'https://thegiftshuffle.com/patriotic-gifts';
+const URL = 'https://www.thegiftshuffle.com/patriotic-gifts';
 const products = byTheme('patriotic');
 
 export const metadata: Metadata = {

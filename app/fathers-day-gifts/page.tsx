@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Browse the best Father's Day gift ideas for 2026: tools, tech, grilling gear, and picks dad will actually use.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/fathers-day-gifts',
+    url: 'https://www.thegiftshuffle.com/fathers-day-gifts',
     images: [
       {
         url: 'https://www.thegiftshuffle.com/api/og?title=Father%27s%20Day%20Gifts%20%7C%20TheGiftShuffle',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/fathers-day-gifts',
+    canonical: 'https://www.thegiftshuffle.com/fathers-day-gifts',
   },
 };
 
@@ -73,7 +73,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Father's Day Gifts",
   description: "Hand-picked Father's Day gift ideas curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/fathers-day-gifts',
+  url: 'https://www.thegiftshuffle.com/fathers-day-gifts',
   numberOfItems: fathersDayProducts.length,
   itemListElement: fathersDayProducts.map((p, i) => ({
     '@type': 'ListItem',

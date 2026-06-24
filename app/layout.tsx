@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     description:
       'Pick a recipient, set a budget, hit SHUFFLE. Get a curated gift recommendation with a direct buy link.',
     type: 'website',
-    url: 'https://thegiftshuffle.com',
+    url: 'https://www.thegiftshuffle.com',
     siteName: 'TheGiftShuffle',
     images: [
       {
-        url: 'https://thegiftshuffle.com/og-image.png',
+        url: 'https://www.thegiftshuffle.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: 'Pick a recipient, set a budget, hit SHUFFLE!',
     site: '@thegiftshuffle',
   },
-  metadataBase: new URL('https://thegiftshuffle.com'),
+  metadataBase: new URL('https://www.thegiftshuffle.com'),
 };
 
 const organizationSchema = {
@@ -61,14 +61,14 @@ const organizationSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': 'https://thegiftshuffle.com/#website',
-  url: 'https://thegiftshuffle.com',
+  '@id': 'https://www.thegiftshuffle.com/#website',
+  url: 'https://www.thegiftshuffle.com',
   name: 'TheGiftShuffle',
   description:
     'Find the perfect gift in seconds. Pick a recipient, set a budget, hit Shuffle.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://thegiftshuffle.com/shuffle?q={search_term_string}',
+    target: 'https://www.thegiftshuffle.com/shuffle?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 };

@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     description:
       "Great Father's Day gifts for under $25, including pocket multi-tools, leather wallets, BBQ rubs, and more.",
     type: 'website',
-    url: 'https://thegiftshuffle.com/fathers-day-gifts-under-25',
+    url: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-25',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/fathers-day-gifts-under-25',
+    canonical: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-25',
   },
 };
 
@@ -68,7 +68,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: "Father's Day Gifts Under $25",
   description: "Hand-picked Father's Day gifts under $25, curated by TheGiftShuffle",
-  url: 'https://thegiftshuffle.com/fathers-day-gifts-under-25',
+  url: 'https://www.thegiftshuffle.com/fathers-day-gifts-under-25',
   numberOfItems: fathersDayUnder25.length,
   itemListElement: fathersDayUnder25.map((p, i) => ({
     '@type': 'ListItem',

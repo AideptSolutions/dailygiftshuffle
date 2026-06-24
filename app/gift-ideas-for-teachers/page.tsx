@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     description:
       'Browse the best teacher appreciation gift ideas for 2026: coffee, spa sets, stationery, plants, and more.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gift-ideas-for-teachers',
+    url: 'https://www.thegiftshuffle.com/gift-ideas-for-teachers',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gift-ideas-for-teachers',
+    canonical: 'https://www.thegiftshuffle.com/gift-ideas-for-teachers',
   },
 };
 
@@ -61,8 +61,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thegiftshuffle.com' },
-    { '@type': 'ListItem', position: 2, name: 'Gift Ideas for Teachers', item: 'https://thegiftshuffle.com/gift-ideas-for-teachers' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.thegiftshuffle.com' },
+    { '@type': 'ListItem', position: 2, name: 'Gift Ideas for Teachers', item: 'https://www.thegiftshuffle.com/gift-ideas-for-teachers' },
   ],
 };
 
@@ -71,7 +71,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Teacher Appreciation Gift Ideas 2026',
   description: 'Hand-picked teacher appreciation gift ideas curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gift-ideas-for-teachers',
+  url: 'https://www.thegiftshuffle.com/gift-ideas-for-teachers',
   numberOfItems: teacherProducts.length,
   itemListElement: teacherProducts.map((p, i) => ({
     '@type': 'ListItem',

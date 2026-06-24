@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     description:
       'Best coworker gifts for 2026: funny mugs, desk gadgets, snack boxes, and thoughtful picks that work for any office dynamic.',
     type: 'website',
-    url: 'https://thegiftshuffle.com/gifts-for-coworkers',
+    url: 'https://www.thegiftshuffle.com/gifts-for-coworkers',
   },
   alternates: {
-    canonical: 'https://thegiftshuffle.com/gifts-for-coworkers',
+    canonical: 'https://www.thegiftshuffle.com/gifts-for-coworkers',
   },
 };
 
@@ -89,7 +89,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Best Gifts for Coworkers 2026',
   description: 'Hand-picked coworker gift ideas for 2026, curated by TheGiftShuffle',
-  url: 'https://thegiftshuffle.com/gifts-for-coworkers',
+  url: 'https://www.thegiftshuffle.com/gifts-for-coworkers',
   numberOfItems: displayProducts.length,
   itemListElement: displayProducts.map((p, i) => ({
     '@type': 'ListItem',

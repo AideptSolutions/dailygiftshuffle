@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { byTheme } from '@/data/seasonal-products';
 
-const URL = 'https://thegiftshuffle.com/world-cup-gifts';
+const URL = 'https://www.thegiftshuffle.com/world-cup-gifts';
 const products = byTheme('worldcup');
 
 export const metadata: Metadata = {
