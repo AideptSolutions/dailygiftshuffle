@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool } from '@/lib/giftSelect';
+import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/luxury-gifts-under-200';
 
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 // Luxury, capped at $200 (price lives on the product, so filter in the predicate).
 const match = (p: { tags?: string[]; price?: number }) =>
   !!p.tags?.includes('luxury') && (p.price ?? 0) <= 200;
-const grid = curate({ match, minRating: 4.4, sort: 'social', recipientCap: 30, limit: 30 });
-const shuffle = shufflePool(match);
+const grid = curate({ match, minRating: 4.4, sort: 'social', recipientCap: 30, limit: 30, pool: ALL });
+const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
   return (

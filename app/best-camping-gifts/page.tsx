@@ -73,6 +73,8 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/camping-gifts-for-women', label: 'Camping Gifts for Women' },
+        { href: '/camping-gifts-for-men', label: 'Camping Gifts for Men' },
         { href: '/gifts-for-camping-and-outdoors', label: 'Camping & Outdoors Gifts' },
         { href: '/category/outdoors', label: 'All Outdoor Gifts' },
         { href: '/best-fitness-gifts-2026', label: 'Best Fitness Gifts 2026' },

@@ -75,6 +75,7 @@ export default function Page() {
       relatedLinks={[
         { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
         { href: '/luxury-gifts-under-200', label: 'Luxury Gifts Under $200' },
+        { href: '/luxury-gifts-under-50', label: 'Luxury Gifts Under $50' },
         { href: '/category/luxury', label: 'All Luxury Gifts' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/best-anniversary-gifts-2026', label: 'Best Anniversary Gifts 2026' },

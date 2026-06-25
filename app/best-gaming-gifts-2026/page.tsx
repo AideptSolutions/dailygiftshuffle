@@ -73,6 +73,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/retro-gaming-gifts', label: 'Retro Gaming Gifts' },
         { href: '/category/gaming', label: 'All Gaming Gifts' },
         { href: '/birthday-gifts-for-gamers', label: 'Birthday Gifts for Gamers' },
         { href: '/gift-ideas-for-teens', label: 'Gift Ideas for Teens' },
