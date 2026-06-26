@@ -74,6 +74,10 @@ export default function Navbar() {
             Find a Gift
           </Link>
 
+          <Link href="/help-me-pick-a-gift" className="hover:text-[#F04E30] transition-colors hidden sm:block">
+            Help Me Pick
+          </Link>
+
           {/* Categories dropdown */}
           <div ref={dropdownRef} className="relative hidden sm:block">
             <button
