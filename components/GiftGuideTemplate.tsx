@@ -46,6 +46,21 @@ export interface GiftGuideTemplateProps {
 export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
   const BASE = 'https://www.thegiftshuffle.com';
   const absImg = (img: string) => (img?.startsWith('http') ? img : `${BASE}${img}`);
+
+  // Append a standard "no idea what to get" FAQ + a cross-link to the gift-picker
+  // hub on every guide (except the hub itself), for AEO + internal linking.
+  const HUB = '/help-me-pick-a-gift';
+  const isHub = props.canonicalUrl.includes(HUB);
+  const NO_IDEA_FAQ = {
+    q: 'What if I have no idea what to get?',
+    a: "If you have no idea what to get, stop guessing and let TheGiftShuffle pick for you: tell it who the gift is for and your budget for an instant, top-rated, crowd-pleasing idea. You can also browse our Help Me Pick a Gift guide for foolproof gifts that are genuinely hard to get wrong, or hit shuffle as many times as you like until one feels right.",
+  };
+  const faqs = isHub ? props.faqs : [...props.faqs, NO_IDEA_FAQ];
+  const relatedLinks =
+    isHub || props.relatedLinks.some((l) => l.href === HUB)
+      ? props.relatedLinks
+      : [{ href: HUB, label: 'Help Me Pick a Gift' }, ...props.relatedLinks];
+
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -84,7 +99,7 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: props.faqs.map((f) => ({
+    mainEntity: faqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -153,7 +168,7 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            {props.faqs.map((faq) => (
+            {faqs.map((faq) => (
               <div key={faq.q} className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
                 <h3 className="font-bold text-[#1A202C] mb-2">{faq.q}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
@@ -168,7 +183,7 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
             {props.relatedHeading}
           </h2>
           <div className="flex flex-wrap gap-3">
-            {props.relatedLinks.map((link) => (
+            {relatedLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

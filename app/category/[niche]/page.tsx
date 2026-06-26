@@ -484,10 +484,20 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
   const trendingPicks = filtered.slice(0, 12);
   const editorialParas = EDITORIAL[params.niche as Niche] ?? [];
 
+  // Standard "no idea what to get" FAQ appended to every category, for AEO +
+  // a cross-link toward the gift-picker hub.
+  const catFaqs = [
+    ...meta.faqs,
+    {
+      q: 'What if I have no idea what to get?',
+      a: "If you have no idea what to get, stop guessing and let TheGiftShuffle pick for you: tell it who the gift is for and your budget for an instant, top-rated, crowd-pleasing idea. You can also browse our Help Me Pick a Gift guide for foolproof gifts that are genuinely hard to get wrong.",
+    },
+  ];
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: meta.faqs.map(({ q, a }) => ({
+    mainEntity: catFaqs.map(({ q, a }) => ({
       '@type': 'Question',
       name: q,
       acceptedAnswer: { '@type': 'Answer', text: a },
@@ -617,13 +627,23 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            {meta.faqs.map(({ q, a }) => (
+            {catFaqs.map(({ q, a }) => (
               <div key={q} className="bg-white rounded-2xl p-6 shadow-sm">
                 <h3 className="font-bold text-gray-900 mb-2">{q}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Help Me Pick hub cross-link (all categories) */}
+        <section className="max-w-5xl mx-auto px-4 pt-2 text-center">
+          <p className="text-sm text-gray-600">
+            Not sure what to choose?{' '}
+            <Link href="/help-me-pick-a-gift" className="font-semibold text-[#F04E30] hover:underline">
+              Let us help you pick a gift →
+            </Link>
+          </p>
         </section>
 
         {/* Featured guide cross-link */}
