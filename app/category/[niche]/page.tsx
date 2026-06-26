@@ -34,7 +34,7 @@ interface NicheMeta {
 
 const NICHE_META: Record<Niche, NicheMeta> = {
   tech: {
-    title: 'Best Tech Gifts & Gadgets 2026',
+    title: '70+ Best Tech Gifts & Gadgets for 2026',
     heading: 'Best Tech Gifts & Gadgets',
     description: 'From wireless earbuds to smart home devices, find the best tech gifts for every gadget lover on your list.',
     coverImage: '/img/category-heroes/tech.jpg',
@@ -47,7 +47,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   'diy-tools': {
-    title: 'Best DIY & Tools Gifts 2026',
+    title: 'Best DIY & Tool Gifts for 2026',
     heading: 'Best DIY & Tools Gifts',
     description: 'Discover top-rated home and DIY gifts, from tool sets to smart home gadgets, perfect for the handy person in your life.',
     coverImage: '/img/category-heroes/diy-tools.jpg',
@@ -59,7 +59,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   finance: {
-    title: 'Best Finance & Money Gifts 2026',
+    title: 'Best Finance & Money Gifts for 2026',
     heading: 'Best Finance & Money-Savvy Gifts',
     description: 'Help the financial-minded people in your life level up with books, tools, and experiences focused on wealth and smart money habits.',
     coverImage: '/img/category-heroes/finance.jpg',
@@ -71,9 +71,9 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   fitness: {
-    title: 'Best Fitness & Wellness Gifts 2026',
+    title: '30+ Best Fitness Gifts for 2026',
     heading: 'Best Fitness & Wellness Gifts',
-    description: 'Shop the best fitness gifts, from resistance bands to massage guns, for the health-conscious person on your list.',
+    description: 'The best fitness gifts for 2026, ranked by real reviews: massage guns, resistance bands, recovery tools and smart trackers for runners, lifters and yoga lovers. Find the perfect pick in seconds.',
     coverImage: '/img/category-heroes/fitness.jpg',
     faqs: [
       { q: 'What are the best fitness gifts under $50?', a: 'Resistance bands, foam rollers, a quality water bottle, and workout journals are fantastic fitness gifts under $50.' },
@@ -84,7 +84,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   parenting: {
-    title: 'Best Parenting & Baby Gifts 2026',
+    title: '40+ Best Parenting & Baby Gifts for 2026',
     heading: 'Best Parenting & Baby Gifts',
     description: 'Find the best gifts for new parents and babies, from white noise machines to development toys, that actually make parenting easier.',
     coverImage: '/img/category-heroes/parenting.jpg',
@@ -97,7 +97,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   office: {
-    title: 'Best Office & Desk Gifts 2026',
+    title: '30+ Best Office & Desk Gifts for 2026',
     heading: 'Best Office & Desk Gifts',
     description: "Level up anyone's workspace with the best office gifts, from ergonomic accessories to motivational desk decor.",
     coverImage: '/img/category-heroes/office.jpg',
@@ -109,9 +109,9 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   luxury: {
-    title: 'Best Luxury Gifts 2026',
+    title: '50+ Best Luxury Gifts for 2026',
     heading: 'Best Luxury Gifts',
-    description: 'Indulge someone special with our curated selection of luxury gifts, premium experiences and elevated everyday items.',
+    description: 'The best luxury gifts for 2026: premium, top-rated picks that feel genuinely special, from designer fragrances and fine leather to luxe skincare and jewelry for him and her. Find the perfect splurge in seconds.',
     coverImage: '/img/category-heroes/luxury.jpg',
     faqs: [
       { q: 'What are good luxury gifts under $100?', a: 'Silk pillowcases, premium skincare sets, cashmere scarves, high-end candles, and fine wine accessories make luxurious gifts under $100.' },
@@ -122,7 +122,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   hobby: {
-    title: 'Best Hobby & Craft Gifts 2026',
+    title: '40+ Best Hobby & Craft Gifts for 2026',
     heading: 'Best Hobby & Craft Gifts',
     description: 'Find the perfect gift for the hobbyist in your life, whether they love art, games, puzzles, or outdoor adventures.',
     coverImage: '/img/category-heroes/hobby.jpg',
@@ -134,7 +134,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   kitchen: {
-    title: 'Best Kitchen & Cooking Gifts 2026',
+    title: '25+ Best Kitchen & Cooking Gifts for 2026',
     heading: 'Best Kitchen & Cooking Gifts',
     description: 'Shop the best kitchen gifts for home cooks and foodies, from chef-grade tools to fun novelty items for the kitchen.',
     coverImage: '/img/category-heroes/kitchen.jpg',
@@ -147,7 +147,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   pets: {
-    title: 'Best Pet Lover Gifts 2026',
+    title: 'Best Pet Lover Gifts for 2026',
     heading: 'Best Gifts for Pet Lovers',
     description: 'Find the perfect gift for pet owners and their beloved animals, from cozy pet beds to fun interactive toys.',
     coverImage: '/img/category-heroes/pets.jpg',
@@ -159,7 +159,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   kids: {
-    title: 'Best Gifts for Kids 2026',
+    title: 'Best Gifts for Kids in 2026',
     heading: 'Best Gifts for Kids',
     description: 'Discover the best gifts for kids of all ages, from creative art sets and STEM kits to outdoor toys that spark imagination and keep them moving.',
     coverImage: '/img/category-heroes/kids.jpg',
@@ -172,7 +172,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   'car-accessories': {
-    title: 'Best Car Accessories & Gifts 2026',
+    title: 'Best Car Accessories & Gifts for 2026',
     heading: 'Best Car Accessories & Gifts',
     description: 'Upgrade any ride with the best car accessories, from must-have dash cams and jump starters to clever organizers and phone mounts for the road.',
     coverImage: '/img/category-heroes/car-accessories.jpg',
@@ -185,7 +185,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   home: {
-    title: 'Best Home Gifts & Decor 2026',
+    title: '30+ Best Home Gifts & Decor for 2026',
     heading: 'Best Home Gifts & Decor',
     description: 'Find the best home gifts, from cozy throw blankets and scented candles to elegant decor pieces that make any space feel special.',
     coverImage: '/img/category-heroes/home.jpg',
@@ -198,7 +198,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   gardening: {
-    title: 'Best Gardening Gifts 2026',
+    title: '20+ Best Gardening Gifts for 2026',
     heading: 'Best Gardening Gifts',
     description: 'Find the best gardening gifts for every green thumb, from premium tool sets and raised bed kits to beautiful planters and seed subscription boxes.',
     coverImage: '/img/category-heroes/gardening.jpg',
@@ -211,7 +211,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   sports: {
-    title: 'Best Sports Gifts & Gear 2026',
+    title: 'Best Sports Gifts & Gear for 2026',
     heading: 'Best Sports Gifts & Gear',
     description: 'Find the best sports gifts for every athlete and fan, from training equipment and apparel to stadium gear and recovery tools.',
     coverImage: '/img/category-heroes/sports.jpg',
@@ -224,9 +224,9 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   gaming: {
-    title: 'Best Gaming Gifts 2026',
+    title: '30+ Best Gaming Gifts for 2026',
     heading: 'Best Gaming Gifts',
-    description: "Level up any gamer's setup with the best gaming gifts, from wireless controllers and headsets to gaming chairs and accessories for every console.",
+    description: "The best gaming gifts for 2026, ranked by real reviews: wireless controllers, headsets, gaming chairs, RGB gear and console accessories for PC, PlayStation and Xbox players. Find the perfect pick in seconds.",
     coverImage: '/img/category-heroes/gaming.jpg',
     faqs: [
       { q: 'What are the best gaming gifts under $50?', a: 'A gaming headset, controller stand, LED strip lights, a gaming mouse pad, or a gift card to their favorite platform are great gaming gifts under $50.' },
@@ -237,7 +237,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   outdoors: {
-    title: 'Best Outdoors and Camping Gifts 2026',
+    title: 'Best Outdoors & Camping Gifts for 2026',
     heading: 'Best Outdoors and Camping Gifts',
     description: 'Find the best gifts for campers, hikers, and outdoor adventurers. From ultralight gear to camp kitchen essentials, these are the picks serious outdoor people actually want.',
     coverImage: '/img/category-heroes/outdoors.jpg',
@@ -250,7 +250,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   travel: {
-    title: 'Best Travel Gifts for Frequent Flyers & Adventurers 2026',
+    title: 'Best Travel Gifts for 2026',
     heading: 'Best Travel Gifts',
     description: 'Find the best gifts for travelers, frequent flyers, and adventure seekers, from smart luggage and packing cubes to travel pillows and portable chargers.',
     coverImage: '/img/category-heroes/travel.jpg',
@@ -262,7 +262,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   beauty: {
-    title: 'Best Beauty & Self-Care Gifts 2026',
+    title: '20+ Best Beauty & Self-Care Gifts for 2026',
     heading: 'Best Beauty & Self-Care Gifts',
     description: 'Shop the best beauty and self-care gifts, from professional hair tools and skincare devices to luxurious bath sets and spa-worthy kits.',
     coverImage: '/img/category-heroes/beauty.jpg',
@@ -274,7 +274,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   'baby-shower': {
-    title: 'Best Baby Shower Gifts 2026',
+    title: '30+ Best Baby Shower Gifts for 2026',
     heading: 'Best Baby Shower Gifts',
     description: 'Find the perfect baby shower gift, from swaddle sets and baby monitors to postpartum care kits and keepsake boxes.',
     coverImage: '/img/category-heroes/baby-shower.jpg',
@@ -286,7 +286,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   wedding: {
-    title: 'Best Wedding Gifts 2026',
+    title: 'Best Wedding Gifts for 2026',
     heading: 'Best Wedding Gifts',
     description: 'Find the perfect wedding gift, from personalized keepsakes and registry picks to honeymoon experiences and luxury home items.',
     coverImage: '/img/category-heroes/wedding.jpg',
@@ -298,7 +298,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
     ],
   },
   'ai-smart-home': {
-    title: 'Best AI & Smart Home Gifts 2026',
+    title: 'Best AI & Smart Home Gifts for 2026',
     heading: 'Best AI & Smart Home Gifts',
     description: 'Discover the best AI gadgets and smart home gifts, from voice assistants and smart displays to AI wearables and automated home devices for every tech lover.',
     coverImage: '/img/category-heroes/ai-smart-home.jpg',
