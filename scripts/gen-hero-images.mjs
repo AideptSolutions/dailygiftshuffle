@@ -26,6 +26,7 @@ const MANIFEST = path.join(ROOT, 'data', 'hero-manifest.json');
 // slug -> { q: Pexels search query, alt: SEO/AEO alt text }
 // alt = accurate description that naturally includes the page's recipient/occasion keywords.
 const HEROES = {
+  'gifts-for-college-students':       { q: 'cozy decorated college dorm room desk laptop string lights', alt: 'A decorated college dorm room with a laptop, desk and string lights' },
   'help-me-pick-a-gift':              { q: 'many assorted wrapped gift boxes colorful flat lay', alt: 'A spread of assorted wrapped gifts to choose from' },
   'ai-personalized-gifts':            { q: 'personalized custom gift wrapped present', alt: 'Personalized custom gifts wrapped and arranged on a table' },
   'birthday-gift-ideas':              { q: 'birthday gifts balloons celebration', alt: 'Wrapped birthday gifts with balloons and confetti' },

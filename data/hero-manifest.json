@@ -481,5 +481,12 @@
     "photographer": "Tamanna Rumee",
     "photographerUrl": "https://www.pexels.com/@tamanna-rumee-52377920",
     "src": "https://www.pexels.com/photo/red-and-black-wrapped-gift-boxes-on-wooden-surface-7985007/"
+  },
+  "gifts-for-college-students": {
+    "alt": "A decorated college dorm room with a laptop, desk and string lights",
+    "query": "cozy decorated college dorm room desk laptop string lights",
+    "photographer": "Tima Miroshnichenko",
+    "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
+    "src": "https://www.pexels.com/photo/girl-lying-on-the-bed-while-writing-6670780/"
   }
 }
