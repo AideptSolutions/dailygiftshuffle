@@ -33,9 +33,30 @@ export const metadata: Metadata = {
 // Curated college-student set (id-prefixed), drawn from the combined catalog so
 // the dorm/tech/essentials picks surface together. recipientCap is high so all
 // of them show rather than getting capped per primary recipient.
-const match = (p: { id?: string }) => !!p.id?.startsWith('college-');
-const grid = curate({ match, minRating: 4.3, sort: 'social', recipientCap: 30, limit: 30, pool: ALL });
-const shuffle = shufflePool(match, ALL);
+// Relaxed quality bar for this page (4.0): dorm commodities like mini fridges,
+// fans and storage sit a bit lower than gift-grade items, and selection breadth
+// matters more here than a high star floor. To widen the list beyond the curated
+// college- items, also pull in genuinely college-relevant products already in the
+// catalog (dorm/tech/study gear, student recipients, dorm-budget price) gated by a
+// keyword list so nothing off-theme sneaks in.
+const COLLEGE_KW =
+  /earbud|airpod|headphone|speaker|charger|power ?bank|backpack|blanket|throw|string light|led strip|lamp|organizer|storage|caddy|hamper|laundry|tapestry|poster|planner|water bottle|tumbler|mug|kettle|\bfan\b|desk|monitor|keyboard|mouse|notebook|journal|pillow|robe|slipper|shower|coffee|hoodie|backrest/i;
+const STUDENT = ['teens', 'him', 'her', 'friends'];
+const isCollege = (p: { id?: string }) => !!p.id?.startsWith('college-');
+const isCollegeRelevant = (p: { name?: string; price?: number; tags?: string[]; recipients?: string[] }) =>
+  (p.price ?? 999) <= 120 &&
+  !!p.recipients?.some((r) => STUDENT.includes(r)) &&
+  !!p.tags?.some((t) => ['tech', 'home', 'office', 'kitchen', 'fitness'].includes(t)) &&
+  !!p.name && COLLEGE_KW.test(p.name);
+
+// The 14 hand-picked dorm/tech items lead (so the dorm character is not buried by
+// high-review catalog tech), then fill the grid with broader college-relevant
+// picks from the existing catalog. Relaxed 4.0 star floor for this page.
+const collegeItems = curate({ match: isCollege, minRating: 4.0, sort: 'social', recipientCap: 30, limit: 30, pool: ALL });
+const broadItems = curate({ match: isCollegeRelevant, minRating: 4.0, sort: 'social', recipientCap: 6, limit: 40, pool: ALL });
+const seen = new Set(collegeItems.map((p) => p.id));
+const grid = [...collegeItems, ...broadItems.filter((p) => !seen.has(p.id))].slice(0, 40);
+const shuffle = shufflePool((p) => isCollege(p) || isCollegeRelevant(p), ALL);
 
 export default function Page() {
   return (
