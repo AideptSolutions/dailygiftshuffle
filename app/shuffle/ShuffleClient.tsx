@@ -230,6 +230,8 @@ export default function ShuffleClient() {
   }, [catalog]);
 
   const [count, setCount] = useState(4);
+  // Stack of previous result-sets so users can step back to a set they shuffled past.
+  const [history, setHistory] = useState<Product[][]>([]);
 
   const togglePin = useCallback((id: string) => {
     setPinnedIds(prev => {
@@ -278,6 +280,7 @@ export default function ShuffleClient() {
         }
       }
 
+      if (currentProducts.length) setHistory((prev) => [...prev, currentProducts].slice(-25));
       setIsShuffling(true);
       setTimeout(() => {
         setProducts(merged.filter((p): p is Product => p !== undefined));
@@ -286,6 +289,19 @@ export default function ShuffleClient() {
     },
     [catalog, count]
   );
+
+  const reverseShuffle = useCallback(() => {
+    setHistory((prev) => {
+      if (prev.length === 0) return prev;
+      const last = prev[prev.length - 1];
+      setIsShuffling(true);
+      setTimeout(() => {
+        setProducts(last);
+        setIsShuffling(false);
+      }, 400);
+      return prev.slice(0, -1);
+    });
+  }, []);
 
   const handleCountChange = useCallback((newCount: number) => {
     setCount(newCount);
@@ -326,6 +342,7 @@ export default function ShuffleClient() {
     setOccasion(null);
     setProducts([]);
     setPinnedIds(new Set());
+    setHistory([]);
     clearShownIds();
   };
 
@@ -514,6 +531,16 @@ export default function ShuffleClient() {
                   })}
                 </div>
                 <div className="flex flex-col items-center gap-2 mb-6">
+                  {history.length > 0 && (
+                    <button
+                      onClick={reverseShuffle}
+                      disabled={isShuffling}
+                      aria-label="Go back to the previous shuffle"
+                      className="border-2 border-[#F04E30] text-[#F04E30] font-bold py-3 rounded-2xl text-sm w-full hover:bg-[#F04E30] hover:text-white transition-colors disabled:opacity-70 inline-flex items-center justify-center gap-1.5"
+                    >
+                      <span aria-hidden="true">&larr;</span> Back to Previous
+                    </button>
+                  )}
                   <button
                     onClick={handleShuffleAgain}
                     disabled={isShuffling}

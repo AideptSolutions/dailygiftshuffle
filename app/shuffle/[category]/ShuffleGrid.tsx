@@ -27,6 +27,8 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
   const [fading, setFading] = useState(false);
   const [modal, setModal] = useState<Product | null>(null);
   const [count, setCount] = useState(8);
+  // Stack of previous card-sets so users can step back to a set they shuffled past.
+  const [history, setHistory] = useState<Product[][]>([]);
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
   useEffect(() => {
@@ -43,6 +45,10 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
   const reshuffle = useCallback(
     (countOverride?: number) => {
       setFading(true);
+      setCards((cur) => {
+        if (cur.length) setHistory((prev) => [...prev, cur].slice(-25));
+        return cur;
+      });
       setTimeout(() => {
         setCards(shuffleMany(countOverride ?? count, { tags: [tag], catalog }));
         setFading(false);
@@ -50,6 +56,19 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
     },
     [catalog, tag, count],
   );
+
+  const reverse = useCallback(() => {
+    setHistory((prev) => {
+      if (prev.length === 0) return prev;
+      setFading(true);
+      const last = prev[prev.length - 1];
+      setTimeout(() => {
+        setCards(last);
+        setFading(false);
+      }, 220);
+      return prev.slice(0, -1);
+    });
+  }, []);
 
   const handleCountChange = useCallback(
     (newCount: number) => {
@@ -153,12 +172,23 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
       {/* Shuffle again */}
       {!loading && cards.length > 0 && (
         <div className="text-center mt-8">
-          <button
-            onClick={() => reshuffle()}
-            className="btn-shuffle text-white font-extrabold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all"
-          >
-            Shuffle Again
-          </button>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            {history.length > 0 && (
+              <button
+                onClick={reverse}
+                aria-label="Go back to the previous shuffle"
+                className="border-2 border-[#F04E30] text-[#F04E30] font-bold px-6 py-4 rounded-full text-lg hover:bg-[#F04E30] hover:text-white transition-colors inline-flex items-center gap-1.5"
+              >
+                <span aria-hidden="true">&larr;</span> Back
+              </button>
+            )}
+            <button
+              onClick={() => reshuffle()}
+              className="btn-shuffle text-white font-extrabold px-10 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transition-all"
+            >
+              Shuffle Again
+            </button>
+          </div>
           <p className="text-xs text-gray-400 mt-3">
             Showing {cards.length} of {totalInCategory} {label} gifts
           </p>
