@@ -207,13 +207,15 @@ export default async function HomePage() {
           <span style={{ color: '#F04E30' }}>Perfect Gift</span>
           <br />in Seconds
         </h1>
-        <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-2">
-          Pick a recipient, set a budget, and hit{' '}
-          <strong style={{ color: '#F04E30' }}>SHUFFLE</strong>
+        <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-6">
+          Skip the endless lists. One click serves up a top-rated gift matched to your person and budget.
         </p>
-        <p className="text-base sm:text-lg text-gray-500 max-w-xl mb-10">
-          receive a curated selection of gift recommendations with each click
-        </p>
+        <Link
+          href="/shuffle"
+          className="inline-flex items-center gap-2 bg-[#F04E30] text-white font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-lg mb-8"
+        >
+          Shuffle a Gift <span aria-hidden="true">&rarr;</span>
+        </Link>
 
         {/* Cup animation */}
         <div className="-mt-8 -mb-3">
