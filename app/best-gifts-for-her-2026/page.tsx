@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-gifts-for-her-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Gifts for Her in 2026: 48 Top-Rated Picks She Will Love | TheGiftShuffle',
+  title: 'Best Gifts for Her in 2026: 60 Top-Rated Picks She Will Love | TheGiftShuffle',
   description:
-    'The best gifts for her in 2026, ranked by what women actually love. 48 top-rated gift ideas for your wife, girlfriend, mom or best friend, spanning every budget.',
+    'The best gifts for her in 2026, ranked by what women actually love. 60 top-rated gift ideas for your wife, girlfriend, mom or best friend, spanning every budget.',
   keywords: [
     'best gifts for her',
     'best gifts for her 2026',
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     'gift ideas for her',
   ],
   openGraph: {
-    title: 'Best Gifts for Her in 2026: 48 Top-Rated Picks She Will Love | TheGiftShuffle',
-    description: 'The 48 best gifts for her in 2026, ranked by what women actually love. Every budget covered.',
+    title: 'Best Gifts for Her in 2026: 60 Top-Rated Picks She Will Love | TheGiftShuffle',
+    description: 'The 60 best gifts for her in 2026, ranked by what women actually love. Every budget covered.',
     type: 'website',
     url: URL,
     images: [{ url: 'https://www.thegiftshuffle.com/api/og?title=Best%20Gifts%20for%20Her%202026%20%7C%20TheGiftShuffle', width: 1200, height: 630 }],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 // beauty/luxury/home her-tagged picks all surface, with high caps and a larger
 // limit to give a wide selection to shuffle through.
 const match = (p: { recipients?: string[] }) => !!p.recipients?.includes('her');
-const grid = curate({ match, minPrice: 15, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 48, pool: ALL });
+const grid = curate({ match, minPrice: 15, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 60, pool: ALL });
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
@@ -40,7 +40,7 @@ export default function Page() {
     <GiftGuideTemplate
       canonicalUrl={URL}
       schemaName="Best Gifts for Her in 2026"
-      schemaDescription="The 48 best, top-rated gifts for her in 2026, curated by TheGiftShuffle"
+      schemaDescription="The 60 best, top-rated gifts for her in 2026, curated by TheGiftShuffle"
       breadcrumbLabel="Best Gifts for Her 2026"
       breadcrumbHref="/best-gifts-for-her-2026"
       heroSrc="/images/heroes/best-gifts-for-her-2026.jpg"
@@ -49,7 +49,7 @@ export default function Page() {
       intro={
         <>
           <p>
-            These are the <strong>48 best gifts for her in 2026</strong>, ranked by what women
+            These are the <strong>60 best gifts for her in 2026</strong>, ranked by what women
             actually love rather than what shows up in every recycled gift guide. Whether you are
             shopping for your wife, girlfriend, mom or best friend, every pick here is top-rated,
             in stock now, and chosen to feel thoughtful instead of last-minute.
@@ -63,7 +63,7 @@ export default function Page() {
       }
       shuffleHeading="Shuffle Gifts for Her"
       shuffleProducts={shuffle}
-      gridHeading="48 Best Gifts for Her, Ranked"
+      gridHeading="60 Best Gifts for Her, Ranked"
       gridProducts={grid}
       ctaHeading="Still Not Sure What She Would Love?"
       ctaText="Tell TheGiftShuffle who she is and your budget, and get an instant, personalized gift idea in one click."
