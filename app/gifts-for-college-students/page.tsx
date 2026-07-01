@@ -49,13 +49,13 @@ const isCollegeRelevant = (p: { name?: string; price?: number; tags?: string[]; 
   !!p.tags?.some((t) => ['tech', 'home', 'office', 'kitchen', 'fitness'].includes(t)) &&
   !!p.name && COLLEGE_KW.test(p.name);
 
-// The 14 hand-picked dorm/tech items lead (so the dorm character is not buried by
+// The hand-picked dorm/tech items lead (so the dorm character is not buried by
 // high-review catalog tech), then fill the grid with broader college-relevant
 // picks from the existing catalog. Relaxed 4.0 star floor for this page.
 const collegeItems = curate({ match: isCollege, minRating: 4.0, sort: 'social', recipientCap: 30, limit: 30, pool: ALL });
 const broadItems = curate({ match: isCollegeRelevant, minRating: 4.0, sort: 'social', recipientCap: 6, limit: 40, pool: ALL });
 const seen = new Set(collegeItems.map((p) => p.id));
-const grid = [...collegeItems, ...broadItems.filter((p) => !seen.has(p.id))].slice(0, 40);
+const grid = [...collegeItems, ...broadItems.filter((p) => !seen.has(p.id))].slice(0, 48);
 const shuffle = shufflePool((p) => isCollege(p) || isCollegeRelevant(p), ALL);
 
 export default function Page() {
