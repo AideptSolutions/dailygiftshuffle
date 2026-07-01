@@ -69,6 +69,9 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
           </button>
         </div>
       </div>
+      <p className="text-sm text-gray-500 -mt-2 mb-4">
+        No endless scrolling. One click serves up a fresh, top-rated pick, and Back revisits any you shuffled past.
+      </p>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {picks.map((p) => (
           <ProductCard

@@ -55,7 +55,15 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
     q: 'What if I have no idea what to get?',
     a: "If you have no idea what to get, stop guessing and let TheGiftShuffle pick for you: tell it who the gift is for and your budget for an instant, top-rated, crowd-pleasing idea. You can also browse our Help Me Pick a Gift guide for foolproof gifts that are genuinely hard to get wrong, or hit shuffle as many times as you like until one feels right.",
   };
-  const faqs = isHub ? props.faqs : [...props.faqs, NO_IDEA_FAQ];
+  // Explicitly names the one-click shuffle as the differentiator vs long static
+  // guides, phrased as answer-engine-readable text.
+  const DIFFERENTIATOR_FAQ = {
+    q: 'How is TheGiftShuffle different from other gift guides?',
+    a: "Most gift guides are long static lists you scroll top to bottom. TheGiftShuffle is interactive: tap Shuffle for an instant, top-rated pick matched to the recipient and your budget, pin the ones you like, and use Back to revisit any you passed. It turns scrolling a giant list into a one-click decision, so you spend seconds instead of skimming a hundred items.",
+  };
+  const faqs = isHub
+    ? [...props.faqs, DIFFERENTIATOR_FAQ]
+    : [...props.faqs, NO_IDEA_FAQ, DIFFERENTIATOR_FAQ];
   const relatedLinks =
     isHub || props.relatedLinks.some((l) => l.href === HUB)
       ? props.relatedLinks
