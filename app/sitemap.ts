@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { giftSlugs } from '@/data/gift-slugs';
 
 const BASE_URL = 'https://www.thegiftshuffle.com';
 
@@ -95,17 +94,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const giftRoutes: MetadataRoute.Sitemap = giftSlugs.map((slug) => ({
-    url: `${BASE_URL}/gifts/${slug}`,
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
+  // The programmatic /gifts/[slug] combos (600+) are intentionally NOT submitted:
+  // they are thin/near-duplicate and were flooding crawl budget (GSC showed ~600
+  // "Discovered - currently not indexed"). The pages stay live and crawlable via
+  // internal links; we just stop actively submitting them so crawl budget focuses
+  // on the real guide, category and landing pages.
   return [
     ...staticRoutes,
     ...recipientLandingPages,
     ...occasionBudgetLandingPages,
     ...categoryRoutes,
-    ...giftRoutes,
   ];
 }
