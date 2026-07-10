@@ -4,13 +4,13 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 export const metadata: Metadata = {
-  title: 'Birthday Gift Ideas for 2026: Picks for Every Person | TheGiftShuffle',
+  title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
   description:
-    "The birthday is tomorrow and you have no idea what to get. Browse 30+ curated birthday gift ideas for 2026 for everyone on your list, sorted by recipient and budget.",
+    'The best birthday gift ideas for 2026, sorted by recipient and budget. Top-rated, ranked picks for her, him, teens, friends and parents, plus an instant gift-picker tool.',
   keywords: [
     'birthday gift ideas',
     'birthday gift ideas 2026',
@@ -18,13 +18,15 @@ export const metadata: Metadata = {
     'unique birthday gifts',
     'best birthday gifts',
     'birthday gifts for adults',
+    'birthday gift ideas for her',
+    'birthday gift ideas for him',
     'birthday gifts under $50',
     'last minute birthday gifts',
   ],
   openGraph: {
-    title: 'Birthday Gift Ideas for 2026: Picks for Every Person | TheGiftShuffle',
+    title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
     description:
-      "Browse 30+ curated birthday gift ideas for 2026 for everyone on your list, sorted by recipient and budget.",
+      'The best birthday gift ideas for 2026, sorted by recipient and budget, plus an instant gift-picker tool.',
     type: 'website',
     url: 'https://www.thegiftshuffle.com/birthday-gift-ideas',
     images: [
@@ -40,34 +42,75 @@ export const metadata: Metadata = {
   },
 };
 
-const birthdayProducts = products
-  .filter((p) => p.occasions?.includes('birthday'))
-  .slice(0, 30);
+// Ranked, quality birthday picks from the full combined catalog.
+const isBirthday = (p: { occasions?: string[] }) => !!p.occasions?.includes('birthday');
+const birthdayProducts = curate({ match: isBirthday, minRating: 4.5, sort: 'social', recipientCap: 8, limit: 40, pool: ALL });
+const shuffle = shufflePool(isBirthday, ALL);
+
+// Scannable "by recipient" reference (AEO-friendly + internal links to the pages
+// that already rank).
+const byRecipient = [
+  { label: 'For Her', gifts: 'A silk pillowcase, a designer fragrance, a personalized necklace, or a plush spa robe.', href: '/best-gifts-for-her-2026', link: 'Best birthday gifts for her' },
+  { label: 'For Him', gifts: 'Noise-canceling headphones, a whiskey decanter set, a leather dopp kit, or a smart watch.', href: '/gift-ideas-for-him', link: 'Birthday gift ideas for him' },
+  { label: 'For Teens', gifts: 'Wireless earbuds, LED strip lights, an instant camera, or a portable speaker.', href: '/gift-ideas-for-teens', link: 'Gift ideas for teens' },
+  { label: 'For a Best Friend', gifts: 'A luxury candle, a funny mug, a wine-tasting set, or a cozy blanket.', href: '/gift-ideas-for-friends', link: 'Gift ideas for friends' },
+  { label: 'For Mom', gifts: 'An Ember mug, a weighted blanket, a jewelry box, or a birth-flower necklace.', href: '/gift-ideas-for-mom', link: 'Gift ideas for mom' },
+  { label: 'For Dad', gifts: 'A grilling tool set, a nice bourbon glass set, headphones, or a leather wallet.', href: '/gift-ideas-for-dad', link: 'Gift ideas for dad' },
+  { label: 'For a Coworker', gifts: 'A premium candle, a desk organizer, gourmet coffee, or a nice tumbler.', href: '/gifts-for-coworkers', link: 'Gifts for coworkers' },
+  { label: 'For a Gamer', gifts: 'A wireless headset, RGB LED strips, a mechanical keyboard, or a stream deck.', href: '/birthday-gifts-for-gamers', link: 'Birthday gifts for gamers' },
+];
+
+const byBudget = [
+  { label: 'Under $25', gifts: 'A scented candle, cozy socks, a bestselling book, an enamel mug, or a fun card game.', href: '/gifts-under-25', link: 'Gifts under $25' },
+  { label: 'Under $50', gifts: 'A personalized necklace, wireless earbuds, a Bluetooth speaker, or an instant camera.', href: '/gifts-under-50', link: 'Gifts under $50' },
+  { label: 'Under $100', gifts: 'A percussion massage gun, an Ember mug, a weighted blanket, or a smart-home device.', href: '/gifts-under-100', link: 'Gifts under $100' },
+  { label: 'A Real Splurge', gifts: 'Premium noise-canceling headphones, a smart watch, fine jewelry, or an experience.', href: '/best-luxury-gifts-2026', link: 'Luxury gift ideas' },
+];
 
 const faqs = [
   {
+    q: 'What are the best birthday gift ideas for 2026?',
+    a: "The best birthday gift ideas for 2026 are things people want but rarely buy for themselves: a percussion massage gun, an Ember temperature-control mug, a Kindle Paperwhite, noise-canceling headphones, a cozy weighted blanket, or a personalized name necklace. The gift that never misses is one matched to a single thing you know about them, a hobby, a daily annoyance, or a small luxury they would not splurge on.",
+  },
+  {
+    q: 'What are good birthday gift ideas for her?',
+    a: 'Good birthday gifts for her blend a little luxury with everyday use: a silk pillowcase, a designer fragrance like Viktor & Rolf Flowerbomb, a personalized birth-flower necklace, a plush spa robe, or a premium candle. Tie it to something she already loves and it always feels considered.',
+  },
+  {
+    q: 'What are good birthday gift ideas for him?',
+    a: 'Men consistently like practical upgrades: noise-canceling headphones, a whiskey decanter or bourbon glass set, a leather dopp kit or wallet, a smart watch, or a grilling tool set. Skip novelty and upgrade something he already uses.',
+  },
+  {
     q: "What's a good birthday gift for someone who has everything?",
-    a: "For someone who has everything, the best birthday gifts are experiences (cooking class, whiskey tasting, escape room, concert tickets), premium upgrades to daily items (Ember temperature mug, smart watch, Dyson hair styler), or sentimental personalized pieces (custom star map, monogrammed leather journal, birthstone bracelet). These feel fresh because they're either unique to them or experiential.",
+    a: "For someone who has everything, go experiential or hyper-personal: a cooking or whiskey-tasting class, concert tickets, a custom star map of their birth date, a monogrammed leather piece, or a premium upgrade to a daily ritual like an Ember mug. These feel fresh because they are unique to them or a memory rather than another object.",
   },
   {
     q: 'What are unique birthday gift ideas?',
-    a: "Truly unique birthday gifts that people remember: an Oura Ring sleep tracker, a hot air balloon ride certificate, a red light therapy wand, a custom night sky map of their birth date, a couples cooking class, an infrared sauna blanket, or a premium whiskey decanter set. These stand out precisely because most people default to Amazon gift cards.",
+    a: "Unique birthday gifts people remember: an Oura Ring sleep tracker, a custom night-sky map of their birth date, a red-light therapy wand, an instant camera, an indoor hydroponic herb garden, or a premium whiskey decanter set. They stand out precisely because most people default to a gift card.",
   },
   {
     q: 'What are good birthday gifts under $50?',
-    a: "Great birthday gifts under $50 include a personalized name necklace, a portable Bluetooth speaker, wireless earbuds, an aromatherapy diffuser, a cozy sherpa blanket, a Polaroid mini instant camera, a premium yoga mat, or a journaling starter kit. Choose something tied to what they love and it will always feel special.",
+    a: 'Great birthday gifts under $50 include a personalized name necklace, wireless earbuds, a portable Bluetooth speaker, an aromatherapy diffuser, a cozy sherpa blanket, an instant camera, or a premium candle set. Choose something tied to what they love and it will feel intentional.',
   },
   {
-    q: "What's a last-minute birthday gift?",
-    a: "For a last-minute birthday gift that arrives on time, focus on Amazon same-day or next-day options: an insulated tumbler, a cozy sherpa blanket, a beard grooming kit, a scented candle set, or a Kindle Paperwhite. Alternatively, a digital gift card for Amazon, an experience, or a streaming subscription delivers instantly and feels intentional.",
+    q: "What's a cheap but thoughtful birthday gift?",
+    a: 'Cheap-but-thoughtful means personal, not generic: a candle in a scent they love, their favorite specialty coffee or tea, a bestselling book in a genre they read, cozy socks, or a framed photo. Under $25, thoughtfulness comes from specificity, not price.',
   },
   {
-    q: 'What birthday gifts do adults actually want?',
-    a: "Adults consistently prefer practical luxury, gifts they'd want but wouldn't buy for themselves. Top picks: a percussion massage gun, a smart watch, a Kindle Paperwhite, an Ember temperature mug, premium noise-canceling headphones, a cozy weighted blanket, or a high-end skincare gift set. Adults also love experience gifts (cooking class, wine tasting, spa day) over physical items.",
+    q: 'What do you get someone for their birthday when you barely know them?',
+    a: 'For someone you barely know, stay on safe, universal ground: a nice candle, gourmet chocolate or coffee, a quality insulated tumbler, or a bestselling book. Avoid anything that assumes strong personal taste, like clothing, strong fragrances, or very specific decor.',
   },
   {
-    q: "What's a good birthday gift for a friend?",
-    a: "Good birthday gifts for friends are personal without being too intimate: a funny quote wine glass, a himalayan salt lamp, a portable Bluetooth speaker, a wine tasting gift set, a luxury candle gift set, a cozy sherpa blanket, or a chess set if they're into games. The best friend gifts reflect their specific personality and interests.",
+    q: 'What are good milestone birthday gifts (30th, 40th, 50th)?',
+    a: 'For a milestone birthday, upgrade the centerpiece of a hobby or daily life, or make it sentimental: a flagship watch or piece of jewelry, a custom star map of their birth year, an experience like a getaway or tasting, or a high-end version of something they use every day.',
+  },
+  {
+    q: "What's a good last-minute birthday gift?",
+    a: 'For a last-minute birthday gift that still lands, go for fast-shipping crowd-pleasers (an insulated tumbler, a candle set, a cozy blanket) or something digital that arrives instantly: an experience gift card, a streaming subscription, or an Amazon gift card paired with a handwritten note.',
+  },
+  {
+    q: 'How is TheGiftShuffle different from other birthday gift guides?',
+    a: 'Most birthday gift guides are long static lists you scroll top to bottom. TheGiftShuffle is interactive: tap Shuffle for an instant, top-rated pick matched to the recipient and your budget, pin the ones you like, and use Back to revisit any you passed. It turns scrolling a giant list into a one-click decision.',
   },
 ];
 
@@ -75,7 +118,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Birthday Gift Ideas',
-  description: 'Curated birthday gift ideas for every person by TheGiftShuffle',
+  description: 'Curated, ranked birthday gift ideas for every person and budget by TheGiftShuffle',
   url: 'https://www.thegiftshuffle.com/birthday-gift-ideas',
   numberOfItems: birthdayProducts.length,
   itemListElement: birthdayProducts.map((p, i) => ({
@@ -124,38 +167,71 @@ export default function BirthdayGiftIdeasPage() {
             />
           </div>
         </section>
-        {/* Hero */}
-        <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
+
+        {/* Hero + lift-able answer block */}
+        <section className="max-w-3xl mx-auto px-4 pt-8 pb-2 text-center">
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Birthday Gift Ideas for 2026
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            The best birthday gift ideas for 2026 include personalized items, experience gifts,
-            curated gift boxes, and practical favorites they&apos;d never buy themselves. Whether
-            you need a last-minute pick or a carefully planned surprise, these birthday gifts are
-            chosen to make people smile, for any age, budget, and personality.
+          <p className="text-lg text-gray-700 leading-relaxed mb-3">
+            The <strong>best birthday gift ideas for 2026</strong> are things people genuinely want
+            but rarely buy for themselves: a percussion massage gun, an Ember temperature-control
+            mug, a Kindle Paperwhite, noise-canceling headphones, a cozy weighted blanket, or a
+            personalized name necklace. The gift that never misses is one matched to a single thing
+            you know about them, a hobby, a daily annoyance, or a small luxury they would not splurge on.
           </p>
-          <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed mt-3">
-            Looking for something more specific? Jump to the{' '}
-            <Link href="/best-birthday-gifts-2026" className="text-[#F04E30] font-semibold hover:underline">best birthday gifts for 2026</Link>,{' '}
-            <Link href="/unique-birthday-gifts" className="text-[#F04E30] font-semibold hover:underline">unique birthday gifts</Link>, or{' '}
-            <Link href="/birthday-gifts-for-gamers" className="text-[#F04E30] font-semibold hover:underline">birthday gifts for gamers</Link>.
+          <p className="text-base text-gray-600 leading-relaxed">
+            Not sure where to start? Tell TheGiftShuffle who it is for and your budget for an instant,
+            top-rated pick in one click, or browse the ideas <strong>by recipient</strong> and{' '}
+            <strong>by budget</strong> below.
           </p>
+        </section>
+
+        {/* By recipient */}
+        <section className="max-w-5xl mx-auto px-4 py-8">
+          <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>Birthday Gift Ideas by Recipient</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {byRecipient.map((r) => (
+              <div key={r.label} className="bg-white rounded-2xl p-5 shadow-sm border border-[#E2E8F0]">
+                <h3 className="font-bold text-[#1A202C] mb-1">{r.label}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-2">{r.gifts}</p>
+                <Link href={r.href} className="text-[#F04E30] text-sm font-semibold hover:underline">
+                  {r.link} &rarr;
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* By budget */}
+        <section className="max-w-5xl mx-auto px-4 py-8">
+          <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>Birthday Gift Ideas by Budget</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {byBudget.map((b) => (
+              <div key={b.label} className="bg-white rounded-2xl p-5 shadow-sm border border-[#E2E8F0]">
+                <h3 className="font-bold text-[#1A202C] mb-1">{b.label}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-2">{b.gifts}</p>
+                <Link href={b.href} className="text-[#F04E30] text-sm font-semibold hover:underline">
+                  {b.link} &rarr;
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Inline Shuffle */}
+        <section className="max-w-5xl mx-auto px-4 py-6">
+          <InlineShuffle products={shuffle} heading="Shuffle Birthday Gift Picks" />
         </section>
 
         {/* Product Grid */}
-        {/* Inline Shuffle */}
-        <section className="max-w-5xl mx-auto px-4 py-6">
-          <InlineShuffle products={birthdayProducts} heading="Shuffle Birthday Picks" />
-        </section>
-
         <section className="max-w-5xl mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>
-            Top Birthday Gift Picks
+            {birthdayProducts.length} Top-Rated Birthday Gifts, Ranked
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {birthdayProducts.map((p) => (
-                            <ProductCard key={p.id} product={p} />
+              <ProductCard key={p.id} product={p} />
             ))}
           </div>
         </section>
@@ -164,17 +240,17 @@ export default function BirthdayGiftIdeasPage() {
         <section className="bg-white py-12 px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4" style={{ color: '#1A202C' }}>
-              How TheGiftShuffle Works
+              Still Stuck? Let TheGiftShuffle Pick
             </h2>
             <p className="text-gray-600 mb-6">
-              Need a birthday gift idea right now? Use TheGiftShuffle. Pick who it&apos;s for,
-              set your budget, and get an instant personalized recommendation.
+              No endless scrolling. Tell us who the birthday is for and your budget, and get an
+              instant, top-rated birthday gift idea in one click. Shuffle again until one feels right.
             </p>
             <Link
               href="/shuffle"
               className="inline-block bg-[#F04E30] text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition-opacity text-lg"
             >
-              Try the Gift Shuffle →
+              Try the Gift Shuffle &rarr;
             </Link>
           </div>
         </section>
@@ -202,9 +278,9 @@ export default function BirthdayGiftIdeasPage() {
               { href: '/best-birthday-gifts-2026', label: 'Best Birthday Gifts 2026' },
               { href: '/unique-birthday-gifts', label: 'Unique Birthday Gifts' },
               { href: '/birthday-gifts-for-gamers', label: 'Birthday Gifts for Gamers' },
+              { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her' },
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
-              { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
-              { href: '/gifts-under-50', label: 'Gifts Under $50' },
+              { href: '/help-me-pick-a-gift', label: 'Help Me Pick a Gift' },
             ].map((link) => (
               <Link
                 key={link.href}
