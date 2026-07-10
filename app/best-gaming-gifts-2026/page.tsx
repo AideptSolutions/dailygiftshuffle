@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-gaming-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Gaming Gifts for 2026: Top Picks for Gamers | TheGiftShuffle',
+  title: 'Best Gaming Gifts for 2026: 38 Top-Rated Picks for Gamers | TheGiftShuffle',
   description:
     'The best gaming gifts for 2026: top-rated headsets, mechanical keyboards, controllers, stream decks and RGB gear for PC, PlayStation and Xbox gamers, every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for gamers under 50',
   ],
   openGraph: {
-    title: 'Best Gaming Gifts for 2026: Top Picks for Gamers | TheGiftShuffle',
+    title: 'Best Gaming Gifts for 2026: 38 Top-Rated Picks for Gamers | TheGiftShuffle',
     description: 'The best gaming gifts for 2026 for PC, PlayStation and Xbox gamers. Every budget covered.',
     type: 'website',
     url: URL,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 const match = (p: { tags?: string[] }) => !!p.tags?.includes('gaming');
-const grid = curate({ match, minRating: 4.3, sort: 'social', recipientCap: 50, limit: 24, pool: ALL });
+const grid = curate({ match, minRating: 4.3, sort: 'social', recipientCap: 50, limit: 40, pool: ALL });
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
@@ -60,7 +60,7 @@ export default function Page() {
       }
       shuffleHeading="Shuffle Gaming Gift Picks"
       shuffleProducts={shuffle}
-      gridHeading="The Best Gaming Gifts, Ranked"
+      gridHeading="38 Best Gaming Gifts, Ranked"
       gridProducts={grid}
       ctaHeading="Not Sure Which Upgrade to Pick?"
       ctaText="Tell TheGiftShuffle who it is for and your budget, and get an instant gaming gift idea in one click."
