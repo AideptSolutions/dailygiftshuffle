@@ -488,5 +488,12 @@
     "photographer": "Tima Miroshnichenko",
     "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
     "src": "https://www.pexels.com/photo/girl-lying-on-the-bed-while-writing-6670780/"
+  },
+  "self-care-gifts": {
+    "alt": "A calming self-care spread with a candle, towels and spa items",
+    "query": "spa self care candle bath towels relaxation calm flat lay",
+    "photographer": "Tara Winstead",
+    "photographerUrl": "https://www.pexels.com/@tara-winstead",
+    "src": "https://www.pexels.com/photo/wood-relaxation-texture-brush-6690159/"
   }
 }
