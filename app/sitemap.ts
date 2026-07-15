@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/best-gaming-gifts-2026',
     '/help-me-pick-a-gift',
     '/self-care-gifts',
+    '/self-care-gifts-for-her',
     '/gifts-for-college-students',
     '/best-luxury-gifts-2026',
     '/luxury-gifts-for-her',

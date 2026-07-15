@@ -103,12 +103,12 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/self-care-gifts-for-her', label: 'Self-Care Gifts for Her' },
         { href: '/best-beauty-gifts-2026', label: 'Best Beauty Gifts 2026' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/best-fitness-gifts-2026', label: 'Best Fitness Gifts 2026' },
         { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
         { href: '/help-me-pick-a-gift', label: 'Help Me Pick a Gift' },
-        { href: '/category/beauty', label: 'All Beauty Gifts' },
       ]}
     />
   );
