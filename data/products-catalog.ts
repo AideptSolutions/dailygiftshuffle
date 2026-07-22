@@ -1283,22 +1283,6 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'just-because'],
   },
   {
-    id: 'pet-005',
-    name: 'Chewy Pharmacy Prescription Delivery',
-    description: 'Never run out of your pet\'s medications with Chewy\'s pharmacy. Vet-approved prescriptions delivered to your door with auto-ship discounts.',
-    price: 35,
-    priceDisplay: '$35',
-    image: '/images/products/pet-005.jpg',
-    rating: 4.6,
-    reviewCount: 14523,
-    affiliateUrl: 'https://www.chewy.com/b/pharmacy-372?utm_source=IMPACT_TAG',
-    network: 'chewy',
-    recipients: ['pets', 'her', 'him'],
-    budgetTier: '25to50',
-    tags: ['pets'],
-    occasions: ['just-because', 'birthday'],
-  },
-  {
     id: 'pet-006',
     name: 'Outward Hound Nina Ottosson Dog Puzzle',
     description: 'Level 3 challenge puzzle toy that keeps smart dogs mentally stimulated. Slide, spin, and lift pieces to find hidden treats.',
@@ -2020,18 +2004,18 @@ export const products: Product[] = [
   // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
   {
     id: 'cpl-001',
-    name: 'Uncommon Goods Personalized Star Map',
-    description: 'Custom art print showing the exact night sky from any place and date that matters to you â€" first date, wedding night, baby\'s birth.',
-    price: 69,
-    priceDisplay: '$69',
-    image: '/images/products/cpl-001.jpg',
-    rating: 4.7,
-    reviewCount: 23412,
-    affiliateUrl: 'https://www.uncommongoods.com/product/personalized-star-map?utm_source=SHAREASALE_TAG',
-    network: 'uncommongoods',
+    name: 'Personalized Star Map Custom Night Sky Print',
+    description: 'A custom print of the exact night sky from a date and place that matters, a first date, a wedding night, or a birth. A deeply personal keepsake gift.',
+    price: 30,
+    priceDisplay: '$30',
+    image: '/images/products/repl-starmap.jpg',
+    rating: 4.9,
+    reviewCount: 920,
+    affiliateUrl: 'https://www.amazon.com/dp/B0863G9D2Q?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl',
+    network: 'amazon',
     recipients: ['couples', 'her', 'him'],
-    budgetTier: '50to100',
-    tags: ['luxury', 'hobby'],
+    budgetTier: '25to50',
+    tags: ['home', 'hobby'],
     occasions: ['anniversary', 'valentines', 'wedding', 'birthday'],
   },
   {
@@ -2323,7 +2307,7 @@ export const products: Product[] = [
 
   // More Couples/Friends
   { id: 'cpl-005', name: 'Ticket to Ride Board Game', description: 'Award-winning strategy board game for 2-5 players. Build train routes across America in 30-90 minutes. The perfect game night staple for couples and families.', price: 44, priceDisplay: '$44', image: '/images/products/cpl-005.jpg', rating: 4.8, reviewCount: 56234, affiliateUrl: 'https://www.amazon.com/s?k=Ticket+to+Ride+board+game&tag=dailygiftshuf-20', network: 'amazon', recipients: ['couples', 'friends', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'holiday', 'anniversary', 'housewarming'] },
-  { id: 'fri-005', name: 'Uncommon Goods Personalized Cutting Board', description: 'Custom engraved bamboo cutting board with any name, date, or message. Large enough to actually use, beautiful enough to display.', price: 49, priceDisplay: '$49', image: '/images/products/fri-005.jpg', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.uncommongoods.com/product/personalized-cutting-board?utm_source=SHAREASALE_TAG', network: 'uncommongoods', recipients: ['couples', 'friends', 'mom', 'dad'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['wedding', 'housewarming', 'birthday', 'holiday'] },
+  { id: 'fri-005', name: 'Personalized Engraved Bamboo Cutting Board', description: 'Custom engraved bamboo cutting board with any name, date, or message. Useful enough to cook on and pretty enough to display.', price: 30, priceDisplay: '$30', image: '/images/products/repl-cuttingboard.jpg', rating: 4.9, reviewCount: 241, affiliateUrl: 'https://www.amazon.com/dp/B0BPGHJ7YX?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['couples', 'friends', 'mom', 'dad'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['wedding', 'housewarming', 'birthday', 'holiday'] },
   { id: 'fri-006', name: 'Catan Base Board Game', description: 'The most popular strategy game in the world. Build settlements, trade resources, and expand your civilization. For 3-4 players, ages 10+.', price: 44, priceDisplay: '$44', image: '/images/products/fri-006.jpg', rating: 4.8, reviewCount: 78234, affiliateUrl: 'https://www.amazon.com/s?k=Catan+base+board+game&tag=dailygiftshuf-20', network: 'amazon', recipients: ['friends', 'couples', 'teens', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'holiday', 'just-because'] },
 
   // â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â" BEAUTY & WELLNESS â"â"â"
