@@ -7,7 +7,7 @@ const URL = 'https://www.thegiftshuffle.com/romantic-gifts-for-her';
 export const metadata: Metadata = {
   title: 'Romantic Gifts for Her: 30 Sweet, Thoughtful Ideas for 2026 | TheGiftShuffle',
   description:
-    'Romantic gift ideas for her that feel personal, not predictable. 30 sweet and thoughtful romantic gifts for your wife or girlfriend, from cozy to luxe, every budget.',
+    'Romantic gifts for her, for your girlfriend, or for your wife that feel personal, not predictable. 30 sweet, thoughtful and unique romantic gift ideas from cozy to luxe, every budget.',
   keywords: [
     'romantic gift ideas for her',
     'romantic gifts for her',
@@ -60,6 +60,20 @@ export default function Page() {
           </p>
         </>
       }
+      answer={{
+        heading: 'What Are the Best Romantic Gifts for Her?',
+        body: (
+          <p>
+            The best romantic gifts for her are personal, not predictable: an{' '}
+            <strong>engraved necklace or bracelet</strong>, a <strong>custom star map</strong> of a
+            date that matters, a <strong>memory or love-letter book</strong>, a{' '}
+            <strong>couples experience or date-night box</strong>, or a{' '}
+            <strong>luxe candle</strong> in a scent she loves. The romance lives in the thought and
+            specificity, not the price, so tie it to your story and it always lands. Not sure which
+            fits? Hit shuffle below for an instant romantic pick in your budget.
+          </p>
+        ),
+      }}
       shuffleHeading="Shuffle Romantic Picks"
       shuffleProducts={shuffle}
       gridHeading="30 Romantic Gift Ideas for Her"
@@ -69,6 +83,9 @@ export default function Page() {
       faqs={[
         { q: 'What are romantic gift ideas for her?', a: 'Romantic gifts for her work best when they are personal: an engraved necklace or bracelet, a custom star map of a date that matters, a love-letter or memory book, a couples experience, or a luxe candle in a scent she loves. The romance is in the thought, not the price tag.' },
         { q: 'What is a sweet gift for your girlfriend or wife?', a: 'Sweet, romantic gifts include a personalized keepsake, a curated date-night box, a cozy matching set, a piece of jewelry with meaning, or a framed photo of a shared memory. Anything that references your relationship specifically lands harder than a generic luxury item.' },
+        { q: 'What are romantic gifts for your girlfriend?', a: 'For a girlfriend, romantic gifts that land are personal but not too heavy: a dainty piece of jewelry, a custom star map or photo book of your time together, a date-night experience box, a cozy matching set, or her favorite scent. Early in a relationship, thoughtful and specific beats expensive, so reference an inside joke or a shared memory and it feels just right.' },
+        { q: 'What are unique romantic gifts for her?', a: 'Unique romantic gifts skip the flowers-and-chocolate default: a custom star map of your first date, a soundwave print of a saved voice message, a personalized book of reasons you love her, a scent-memory candle, or a surprise recreation of an early date. They feel romantic precisely because they are one of a kind and clearly took thought.' },
+        { q: 'What are romantic Christmas gifts for her?', a: 'Romantic Christmas gifts for her blend the season with something personal: an engraved piece of jewelry, a cozy cashmere wrap, a couples experience for the new year, a custom ornament marking the year, or a luxe candle and bath set for winter nights. Wrap it well and pair it with a handwritten note to make the romance land.' },
         { q: 'What is a romantic gift on a budget?', a: 'Under $50, romantic gifts that feel anything but cheap include a custom star map, an engraved keychain or bracelet, a love-notes jar, a scented candle and bath set, or a memory photo book. Personalization is what makes a small gift feel romantic.' },
         { q: 'What is a good just-because gift for her?', a: 'Just-because gifts are romantic precisely because nothing prompted them. A surprise bouquet paired with her favorite treat, a thoughtful book, a cozy throw, or a small piece of jewelry delivered for no reason at all carries more weight than the same gift on a scheduled holiday.' },
         { q: 'What is the most romantic gift you can give?', a: 'The most romantic gifts are experiential or deeply personal: a planned getaway, a recreated first-date night, a custom piece tied to your story, or a heartfelt keepsake. Effort and specificity read as far more romantic than expense.' },
