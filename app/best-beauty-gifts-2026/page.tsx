@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool } from '@/lib/giftSelect';
+import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/best-beauty-gifts-2026';
 
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
 };
 
 const match = (p: { tags?: string[] }) => !!p.tags?.includes('beauty');
-const grid = curate({ match, minRating: 4.3, sort: 'social', recipientCap: 50 });
-const shuffle = shufflePool(match);
+const grid = curate({ match, minRating: 4.3, sort: 'social', recipientCap: 50, limit: 40, pool: ALL });
+const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
   return (

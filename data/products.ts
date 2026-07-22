@@ -25,7 +25,7 @@ function img(name: string) {
   return `https://placehold.co/400x400/FF6B6B/FFFFFF?text=${encodeURIComponent(name)}`;
 }
 function amz(name: string) {
-  return `https://amazon.com/s?k=${encodeURIComponent(name)}`;
+  return `https://www.amazon.com/s?k=${encodeURIComponent(name)}&tag=dailygiftshuf-20`;
 }
 
 export const products: Product[] = [
