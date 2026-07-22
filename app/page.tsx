@@ -240,8 +240,8 @@ export default async function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { href: '/world-cup-gifts', img: '/images/heroes/world-cup-gifts.jpg', kicker: 'World Cup 2026', title: 'Soccer Fan Gifts', alt: 'World Cup 2026 soccer fan gifts' },
-              { href: '/patriotic-gifts', img: '/images/heroes/patriotic-gifts.jpg', kicker: 'July 4th', title: '4th of July & Patriotic Gifts', alt: 'Patriotic and 4th of July gifts' },
+              { href: '/gifts-for-college-students', img: '/images/heroes/gifts-for-college-students.jpg', kicker: 'Back to School', title: 'Dorm & College Gifts', alt: 'Back-to-school dorm and college gift ideas' },
+              { href: '/self-care-gifts', img: '/images/heroes/self-care-gifts.jpg', kicker: 'Trending Now', title: 'Self-Care & Wellness Gifts', alt: 'Self-care and wellness gift ideas' },
             ].map((c) => (
               <Link
                 key={c.href}
