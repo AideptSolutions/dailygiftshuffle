@@ -32,14 +32,24 @@ function getBannerConfig(month: number): BannerConfig | null {
       // Mother's Day banner handles April + May — no duplicate
       return null;
     case 6:
-    case 7:
-      // Summer 2026: the World Cup is being co-hosted in the US, plus July 4th
+      // Summer 2026: World Cup co-hosted in the US (one-time event; revisit in 2027)
       return {
         text: 'The 2026 World Cup is here:',
         gradient: 'linear-gradient(90deg, #1565c0 0%, #d32f2f 100%)',
         links: [
           { label: 'Soccer Fan Gifts', href: '/world-cup-gifts' },
           { label: 'Patriotic Gifts', href: '/patriotic-gifts' },
+        ],
+      };
+    case 7:
+    case 8:
+      // Late-summer back-to-school / dorm shopping season
+      return {
+        text: 'Back-to-school season is here:',
+        gradient: 'linear-gradient(90deg, #f04e30 0%, #f9a825 100%)',
+        links: [
+          { label: 'Dorm & College Gifts', href: '/gifts-for-college-students' },
+          { label: 'Gifts Under $50', href: '/gifts-under-50' },
         ],
       };
     case 11:
