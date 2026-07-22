@@ -80,6 +80,7 @@ export default function Page() {
         { href: '/gifts-for-girlfriend', label: 'Gifts for Your Girlfriend' },
         { href: '/best-beauty-gifts-2026', label: 'Best Beauty Gifts 2026' },
         { href: '/best-luxury-gifts-2026', label: 'Best Luxury Gifts 2026' },
+        { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
         { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
         { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
         { href: '/gifts-under-50', label: 'Gifts Under $50' },

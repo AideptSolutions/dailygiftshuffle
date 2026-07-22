@@ -27,6 +27,12 @@ export interface GiftGuideTemplateProps {
   h1: string;
   /** Lead paragraphs under the H1. */
   intro: ReactNode;
+  /**
+   * Optional lift-able answer block (question heading + concise, snippet-shaped
+   * answer) rendered between the hero and the shuffle. Use for AEO on the head
+   * term. Omit to render nothing.
+   */
+  answer?: { heading: string; body: ReactNode };
   shuffleHeading: string;
   shuffleProducts: CompactProduct[];
   gridHeading: string;
@@ -136,6 +142,18 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
           </h1>
           <div className="text-base sm:text-lg text-gray-700 leading-relaxed space-y-3">{props.intro}</div>
         </section>
+
+        {/* Optional lift-able answer block (AEO) */}
+        {props.answer && (
+          <section className="max-w-3xl mx-auto px-4 py-6">
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+              <h2 className="text-2xl font-bold mb-3" style={{ color: '#1A202C' }}>
+                {props.answer.heading}
+              </h2>
+              <div className="text-gray-700 leading-relaxed">{props.answer.body}</div>
+            </div>
+          </section>
+        )}
 
         {/* Inline Shuffle */}
         <section className="max-w-5xl mx-auto px-4 py-6">
