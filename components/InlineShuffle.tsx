@@ -1,5 +1,5 @@
 'use client';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import CategoryIcon from '@/components/CategoryIcon';
 
@@ -17,10 +17,18 @@ function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = [])
 }
 
 export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: Props) {
-  const [picks, setPicks] = useState<CompactProduct[]>(() => pickRandom(products, 4));
+  // Deterministic first render: SSR and client hydration must agree, so seed with a
+  // fixed slice (never Math.random) and only randomize after mount in the effect below.
+  const [picks, setPicks] = useState<CompactProduct[]>(() => products.slice(0, 4));
   const [pinnedIds, setPinnedIds] = useState<Set<string>>(new Set());
   // Stack of previous pick-sets so users can step back to a set they shuffled past.
   const [history, setHistory] = useState<CompactProduct[][]>([]);
+
+  // Randomize once, client-only, after hydration completes — avoids a server/client mismatch.
+  useEffect(() => {
+    setPicks(pickRandom(products, 4));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const togglePin = useCallback((id: string) => {
     setPinnedIds(prev => {
