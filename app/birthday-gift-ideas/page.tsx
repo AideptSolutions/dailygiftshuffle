@@ -10,7 +10,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 export const metadata: Metadata = {
   title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
   description:
-    'The best birthday gift ideas for 2026, sorted by recipient and budget. Top-rated, ranked picks for her, him, teens, friends and parents, plus an instant gift-picker tool.',
+    'Birthday gift ideas for every person and budget: what to get someone for their birthday, sorted by recipient, with top-rated ranked picks for her, him, teens, friends and parents, plus an instant gift-picker tool.',
   keywords: [
     'birthday gift ideas',
     'birthday gift ideas 2026',
@@ -71,6 +71,18 @@ const faqs = [
   {
     q: 'What are the best birthday gift ideas for 2026?',
     a: "The best birthday gift ideas for 2026 are things people want but rarely buy for themselves: a percussion massage gun, an Ember temperature-control mug, a Kindle Paperwhite, noise-canceling headphones, a cozy weighted blanket, or a personalized name necklace. The gift that never misses is one matched to a single thing you know about them, a hobby, a daily annoyance, or a small luxury they would not splurge on.",
+  },
+  {
+    q: 'What should I get someone for their birthday?',
+    a: 'Start from one specific thing about them and upgrade it: a hobby, a daily frustration, or a treat they would not buy themselves. If you are genuinely stuck, safe crowd-pleasers work well: a premium candle, wireless earbuds, an insulated tumbler, a cozy blanket, or a bestselling book. Matching the gift to the person beats matching it to the occasion every time.',
+  },
+  {
+    q: 'What are good birthday gift ideas for adults?',
+    a: 'Adults appreciate practical upgrades and small luxuries over novelty: noise-canceling headphones, an Ember temperature-control mug, a percussion massage gun, a nice fragrance or candle, a weighted blanket, or a quality leather accessory. Pick the category they already care about and give them a better version than they would buy themselves.',
+  },
+  {
+    q: 'What are good birthday gifts to get yourself?',
+    a: 'A birthday is the perfect excuse for the small upgrade you keep skipping: wireless earbuds, a percussion massage gun, a silk pillowcase, an Ember mug, a nice fragrance, or a hobby tool you have been eyeing. Pick the thing you would love but keep talking yourself out of buying.',
   },
   {
     q: 'What are good birthday gift ideas for her?',
@@ -185,6 +197,24 @@ export default function BirthdayGiftIdeasPage() {
             top-rated pick in one click, or browse the ideas <strong>by recipient</strong> and{' '}
             <strong>by budget</strong> below.
           </p>
+        </section>
+
+        {/* Lift-able AEO answer block */}
+        <section className="max-w-3xl mx-auto px-4 py-6">
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+            <h2 className="text-2xl font-bold mb-3" style={{ color: '#1A202C' }}>
+              What Should I Get Someone for Their Birthday?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Start with one thing you know about them, a hobby, a daily annoyance, or a small
+              luxury they would not buy themselves, and upgrade it. If you are truly stuck, safe and
+              near-universal wins are a <strong>premium candle</strong>, an{' '}
+              <strong>insulated tumbler</strong>, <strong>wireless earbuds</strong>, a{' '}
+              <strong>cozy blanket</strong>, or a <strong>bestselling book</strong>. Match the gift
+              to the person rather than the occasion and it always lands. Use the shuffle below to
+              get an instant, top-rated pick for exactly who you are shopping for.
+            </p>
+          </div>
         </section>
 
         {/* By recipient */}
