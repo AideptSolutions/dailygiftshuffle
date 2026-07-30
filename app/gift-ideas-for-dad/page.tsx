@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 export const metadata: Metadata = {
   title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use | TheGiftShuffle",
   description:
-    "Skip the boring tie. Browse 25+ hand-picked gift ideas for Dad, from tech gadgets to experiences he'll actually talk about. Perfect for Father's Day, birthdays, and more.",
+    "The best gift ideas for dad and useful gifts he'll actually use: tech gadgets, grilling gear, tools, and experiences. Hand-picked presents for dad for birthdays, Father's Day, and just because.",
   keywords: [
     'gift ideas for dad',
     'gifts for dad',
@@ -46,6 +46,18 @@ const faqs = [
   {
     q: 'What do dads actually want as gifts?',
     a: "Most dads want gifts they'll genuinely use, not decorations that collect dust. Top picks include smart gadgets, quality tools, grilling accessories, insulated tumblers, and experience gifts like a whiskey tasting or golf lesson. When in doubt, upgrade something he already uses to a premium version.",
+  },
+  {
+    q: 'What are the best gifts for dad?',
+    a: 'The best gifts for dad are useful upgrades to something he already does: grilling and BBQ accessories, a quality multi-tool or power tool, a smart-home gadget, noise-canceling headphones, an insulated tumbler, or a nice leather wallet or watch. Match the gift to a hobby or daily habit and it beats anything generic.',
+  },
+  {
+    q: 'What are useful gifts for dad?',
+    a: 'Useful gifts dads actually reach for include a digital meat thermometer, a magnetic wristband tool holder, a durable multi-tool, an insulated 30 oz tumbler, a quality dopp kit, and a headlamp or tire inflator for the garage. Practical and well-made always wins with dad.',
+  },
+  {
+    q: 'What are cool gift ideas for dad?',
+    a: 'For a cooler, less predictable dad gift, think a pellet smoker or pizza oven, a record player with a favorite vinyl, a smart watch, a cocktail or whiskey-tasting set, or an experience like a driving day or brewery tour. Cool dad gifts pair a bit of novelty with something he genuinely enjoys.',
   },
   {
     q: "What's a good gift for a dad who has everything?",
@@ -135,7 +147,24 @@ export default function GiftIdeasForDadPage() {
           </p>
         </section>
 
-        {/* Product Grid */}
+        {/* Lift-able AEO answer block */}
+        <section className="max-w-3xl mx-auto px-4 py-6">
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#E2E8F0]">
+            <h2 className="text-2xl font-bold mb-3" style={{ color: '#1A202C' }}>
+              What Should I Get My Dad?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Start with what he already does and upgrade it: a better <strong>multi-tool</strong> or
+              power tool, <strong>grilling and BBQ gear</strong>, a <strong>smart gadget</strong>, an{' '}
+              <strong>insulated tumbler</strong>, or a quality everyday-carry item like a leather
+              wallet or watch. The dad gifts that land are <strong>useful, not decorative</strong>, so
+              match it to a hobby or daily routine, his coffee, the grill, a round of golf, and skip
+              anything that ends up in a drawer. Not sure? Hit shuffle below for an instant, top-rated
+              pick in your budget.
+            </p>
+          </div>
+        </section>
+
         {/* Inline Shuffle */}
         <section className="max-w-5xl mx-auto px-4 py-6">
           <InlineShuffle products={dadProducts} heading="Shuffle Dad Picks" />
