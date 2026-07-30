@@ -40,8 +40,8 @@ const isCraftRelevant = (p: { name?: string; tags?: string[] }) =>
   !!p.tags?.includes('hobby') && !!p.name && CRAFT_KW.test(p.name);
 
 // Craft products naturally run lower on review counts, so the lead set uses a 4.0 bar.
-const craftItems = curate({ match: isCraft, minRating: 4.0, sort: 'social', recipientCap: 30, limit: 18, pool: ALL });
-const broadItems = curate({ match: isCraftRelevant, minRating: 4.4, sort: 'social', recipientCap: 8, limit: 40, pool: ALL });
+const craftItems = curate({ match: isCraft, minRating: 4.0, sort: 'social', recipientCap: 30, limit: 26, pool: ALL });
+const broadItems = curate({ match: isCraftRelevant, minRating: 4.2, sort: 'social', recipientCap: 8, limit: 40, pool: ALL });
 const seen = new Set(craftItems.map((p) => p.id));
 const grid = [...craftItems, ...broadItems.filter((p) => !seen.has(p.id))].slice(0, 36);
 const shuffle = shufflePool((p) => isCraft(p) || isCraftRelevant(p), ALL);
