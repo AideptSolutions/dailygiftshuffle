@@ -28,6 +28,8 @@ const MANIFEST = path.join(ROOT, 'data', 'hero-manifest.json');
 const HEROES = {
   'self-care-gifts':                  { q: 'spa self care candle bath towels relaxation calm flat lay', alt: 'A calming self-care spread with a candle, towels and spa items' },
   'gifts-for-crafters':               { q: 'craft supplies art table paint brushes yarn creative flat lay', alt: 'A creative craft table with art supplies, paint brushes and yarn' },
+  'gifts-for-wife':                   { q: 'romantic gift wife roses present ribbon elegant', alt: 'A romantic gift for a wife with roses and an elegant wrapped present' },
+  'gifts-for-a-crush':                { q: 'small cute wrapped gift box pastel ribbon cheerful flat lay', alt: 'A small cute wrapped gift with a ribbon' },
   'gifts-for-college-students':       { q: 'cozy decorated college dorm room desk laptop string lights', alt: 'A decorated college dorm room with a laptop, desk and string lights' },
   'help-me-pick-a-gift':              { q: 'many assorted wrapped gift boxes colorful flat lay', alt: 'A spread of assorted wrapped gifts to choose from' },
   'ai-personalized-gifts':            { q: 'personalized custom gift wrapped present', alt: 'Personalized custom gifts wrapped and arranged on a table' },

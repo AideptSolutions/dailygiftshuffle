@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool } from '@/lib/giftSelect';
+import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/gifts-for-girlfriend';
 
@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     'cute gift ideas for wife',
     'what should i get my girlfriend',
     'gift for my girlfriend ideas',
+    'gift ideas for my girlfriend',
+    'gift ideas for my girlfriend 2026',
+    'gifts for girlfriend 2026',
   ],
   openGraph: {
     title: 'Gifts for Your Girlfriend: 30 Ideas She Will Actually Love (2026) | TheGiftShuffle',
@@ -34,8 +37,8 @@ const match = (p: { recipients?: string[]; occasions?: string[] }) =>
     !!p.occasions?.includes('anniversary') ||
     !!p.occasions?.includes('justBecause') ||
     !!p.occasions?.includes('birthday'));
-const grid = curate({ match, minPrice: 20, sort: 'social' });
-const shuffle = shufflePool(match);
+const grid = curate({ match, minPrice: 20, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 40, pool: ALL });
+const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
   return (
@@ -63,6 +66,20 @@ export default function Page() {
           </p>
         </>
       }
+      answer={{
+        heading: 'What Should I Get My Girlfriend?',
+        body: (
+          <p>
+            The best gift ideas for your girlfriend feel <strong>personal, not generic</strong>: a
+            piece of <strong>jewelry she would actually wear</strong>, a <strong>cozy set in her
+            favorite color</strong>, a <strong>designer fragrance or luxe beauty item</strong>, a{' '}
+            <strong>hobby upgrade</strong>, or an <strong>experience for the two of you</strong>. Anchor
+            it to something she already loves, a scent, a show she is obsessed with, a daily ritual, and
+            add a handwritten note. Specific and thoughtful beats generically expensive every time. Not
+            sure? Hit shuffle below for an instant, top-rated pick in your budget.
+          </p>
+        ),
+      }}
       shuffleHeading="Shuffle Girlfriend Gift Picks"
       shuffleProducts={shuffle}
       gridHeading="30 Gift Ideas for Your Girlfriend"

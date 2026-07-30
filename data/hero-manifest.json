@@ -502,5 +502,19 @@
     "photographer": "https://kaboompics.com/",
     "photographerUrl": "https://www.pexels.com/@karola-g",
     "src": "https://www.pexels.com/photo/flat-lay-shot-of-coloring-materials-5208684/"
+  },
+  "gifts-for-wife": {
+    "alt": "A romantic gift for a wife with roses and an elegant wrapped present",
+    "query": "romantic gift wife roses present ribbon elegant",
+    "photographer": "Boris Hamer",
+    "photographerUrl": "https://www.pexels.com/@borishamer",
+    "src": "https://www.pexels.com/photo/red-rose-on-white-and-red-gift-boxes-13977744/"
+  },
+  "gifts-for-a-crush": {
+    "alt": "A small cute wrapped gift with a ribbon",
+    "query": "small cute wrapped gift box pastel ribbon cheerful flat lay",
+    "photographer": "https://kaboompics.com/",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/glittery-boxes-on-a-white-background-5485119/"
   }
 }

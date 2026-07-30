@@ -44,6 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/best-gifts-for-her-2026',
     '/romantic-gifts-for-her',
     '/gifts-for-girlfriend',
+    '/gifts-for-wife',
+    '/gifts-for-a-crush',
     '/best-camping-gifts',
     '/best-gaming-gifts-2026',
     '/help-me-pick-a-gift',
