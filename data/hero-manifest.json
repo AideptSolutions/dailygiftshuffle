@@ -495,5 +495,12 @@
     "photographer": "Tara Winstead",
     "photographerUrl": "https://www.pexels.com/@tara-winstead",
     "src": "https://www.pexels.com/photo/wood-relaxation-texture-brush-6690159/"
+  },
+  "gifts-for-crafters": {
+    "alt": "A creative craft table with art supplies, paint brushes and yarn",
+    "query": "craft supplies art table paint brushes yarn creative flat lay",
+    "photographer": "https://kaboompics.com/",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/flat-lay-shot-of-coloring-materials-5208684/"
   }
 }
