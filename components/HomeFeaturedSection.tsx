@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import { type Product, type Recipient, type BudgetTier, type NicheTag } from '@/
 import { useFavorites } from '@/lib/useFavorites';
 import ProductModal from '@/components/ProductModal';
 
-// â"€â"€â"€ Random 4-picker from catalog â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// --- Random 4-picker from catalog ---
 const SHUFFLE_KEY = 'dgs_home_shuffle_seen';
 
 function getSeen(): string[] {
@@ -49,24 +49,29 @@ function PinIcon({ pinned }: { pinned: boolean }) {
   );
 }
 
+// Lead the "examples" grid with genuinely gift-worthy items (skip sub-$25 checkout
+// consumables like lip balm), ranked by social proof. Falls back to the full pool
+// if the gifty set is too small.
 function getTrending(catalog: Product[], n: number = 4): Product[] {
-  return [...catalog].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0)).slice(0, n);
+  const gifty = catalog.filter((p) => (p.price ?? 0) >= 25 && (p.rating ?? 0) >= 4.5);
+  const pool = gifty.length >= n ? gifty : catalog;
+  return [...pool].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0)).slice(0, n);
 }
 
-// â"€â"€â"€ Star rating â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// --- Star rating ---
 function StarRating({ rating }: { rating: number }) {
   const full = Math.floor(rating);
   const half = rating % 1 >= 0.5;
   return (
     <span className="star-gold text-sm">
-      {Array(full).fill('\u2605').join('')}
-      {half ? '\u00BD' : ''}
-      {Array(5 - full - (half ? 1 : 0)).fill('\u2606').join('')}
+      {Array(full).fill('★').join('')}
+      {half ? '½' : ''}
+      {Array(5 - full - (half ? 1 : 0)).fill('☆').join('')}
     </span>
   );
 }
 
-// â"€â"€â"€ Option lists â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// --- Option lists ---
 const RECIPIENTS: { value: Recipient; label: string }[] = [
   { value: 'her',          label: 'For Her' },
   { value: 'him',          label: 'For Him' },
@@ -120,7 +125,7 @@ const BUDGETS: { value: BudgetTier | ''; label: string }[] = [
   { value: '250plus',   label: '$250+' },
 ];
 
-// â"€â"€â"€ Dropdown â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// --- Dropdown ---
 function Dropdown<T extends string>({
   label, value, options, onChange,
 }: {
@@ -138,7 +143,7 @@ function Dropdown<T extends string>({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value as T | '')}
-          className="w-full appearance-none bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 pr-9 text-sm font-medium text-gray-800 focus:outline-none focus:border-[#F04E30] focus:ring-1 focus:ring-[#F04E30] transition-colors cursor-pointer"
+          className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 pr-9 text-sm font-medium text-gray-800 focus:outline-none focus:border-[#F04E30] focus:ring-1 focus:ring-[#F04E30] transition-colors cursor-pointer"
         >
           {options.map((o) => (
             <option key={String(o.value)} value={o.value}>{o.label}</option>
@@ -152,7 +157,7 @@ function Dropdown<T extends string>({
   );
 }
 
-// â"€â"€â"€ Main component â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// --- Main component ---
 export default function HomeFeaturedSection({ initialProducts = [] }: { initialProducts?: Product[] }) {
   const router  = useRouter();
   const { toggle: toggleFav, isFavorited } = useFavorites();
@@ -194,7 +199,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [budget,    setBudget]    = useState<BudgetTier | ''>('');
   const [error,     setError]     = useState('');
 
-  // â"€â"€ Shuffle the N product cards â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // Shuffle the N product cards
   const handleShuffle = useCallback(() => {
     setAnimating(false);
     requestAnimationFrame(() => {
@@ -220,7 +225,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     });
   }, [catalog]);
 
-  // â"€â"€ Custom Shuffle â†' navigate â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // Custom Shuffle -> navigate
   const handleCustomShuffle = useCallback(() => {
     setError('');
     const params = new URLSearchParams();
@@ -233,11 +238,61 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   return (
     <div className="w-full max-w-4xl mx-auto px-4 pb-6">
 
-      {/* â"€â"€ Product grid â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
-      <div className="mb-5">
-        <div className="flex items-center justify-between mb-4">
+      {/* Primary discovery path: the recipient + budget selector leads the section */}
+      <div className="rounded-3xl shadow-sm border border-[#E2E8F0] p-6 sm:p-8 text-left" style={{ background: '#F0F4F8' }}>
+        <div className="mb-6">
+          <h2 className="text-xl font-extrabold text-gray-800">Who are you shopping for?</h2>
+          <p className="text-gray-500 text-sm mt-0.5">
+            Tell us the person and your budget, and we will match a top-rated gift they will actually love, in seconds.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+          <Dropdown
+            label="Who is it for?"
+            value={recipient}
+            options={[{ value: '', label: 'Anyone' }, ...RECIPIENTS]}
+            onChange={(v) => { setRecipient(v as Recipient | ''); setError(''); }}
+          />
+          <Dropdown
+            label="Category"
+            value={category}
+            options={CATEGORIES}
+            onChange={(v) => setCategory(v as NicheTag | '')}
+          />
+          <Dropdown
+            label="Budget"
+            value={budget}
+            options={BUDGETS}
+            onChange={(v) => { setBudget(v as BudgetTier | ''); setError(''); }}
+          />
+        </div>
+
+        {error && <p className="text-red-500 text-xs mb-3 text-center">{error}</p>}
+
+        <button
+          onClick={handleCustomShuffle}
+          className="btn-shuffle w-full text-white font-bold py-4 rounded-2xl text-base"
+        >
+          Find Their Gift <span aria-hidden="true">&rarr;</span>
+        </button>
+        <p className="text-center text-xs text-gray-400 mt-3">
+          Free, no sign-up. We surface the best match for your criteria instantly.
+        </p>
+      </div>
+
+      {/* Divider */}
+      <div className="flex items-center gap-4 my-8">
+        <div className="flex-1 border-t border-gray-200" />
+        <span className="text-[#4A5568] text-sm font-medium">or see popular gift ideas</span>
+        <div className="flex-1 border-t border-gray-200" />
+      </div>
+
+      {/* Example product grid — shows the kind of thing a shuffle serves up */}
+      <div className="mb-5 text-left">
+        <div className="flex items-center justify-between mb-1">
           <h2 className="text-lg font-extrabold text-gray-800 tracking-tight">
-            {isTrending ? 'Trending Right Now' : 'Gift Ideas'}
+            {isTrending ? 'Popular Gift Ideas' : 'Gift Ideas'}
           </h2>
           <div className="flex items-center gap-1.5">
             <span className="text-xs text-gray-400">Show:</span>
@@ -252,6 +307,9 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
             </select>
           </div>
         </div>
+        <p className="text-xs text-gray-400 mb-4">
+          A few top-rated crowd-pleasers. Hit shuffle for a fresh set, or narrow it down above.
+        </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {cards.map((product, i) => (
@@ -324,8 +382,8 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
         </p>
       </div>
 
-      {/* â"€â"€ Shuffle button â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
-      <div className="text-center mb-8">
+      {/* Shuffle button */}
+      <div className="text-center mb-2">
         <button
           onClick={handleShuffle}
           className="btn-shuffle text-white font-bold px-10 py-4 rounded-full text-base"
@@ -333,54 +391,6 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
           Shuffle Gift Ideas
         </button>
         <p className="text-xs text-[#4A5568] mt-2">Browse the full catalog one shuffle at a time</p>
-      </div>
-
-      {/* â"€â"€ Divider â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
-      <div className="flex items-center gap-4 mb-8">
-        <div className="flex-1 border-t border-gray-200" />
-        <span className="text-[#4A5568] text-sm font-medium">or narrow it down</span>
-        <div className="flex-1 border-t border-gray-200" />
-      </div>
-
-      {/* â"€â"€ Custom Shuffle â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€ */}
-      <div className="rounded-3xl shadow-sm border border-[#E2E8F0] p-6 sm:p-8" style={{ background: '#F0F4F8' }}>
-        <div className="mb-6">
-          <h2 className="text-lg font-extrabold text-gray-800">Custom Shuffle</h2>
-          <p className="text-gray-400 text-sm mt-0.5">Tell us what you are looking for</p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-          <Dropdown
-            label="Who is it for?"
-            value={recipient}
-            options={[{ value: '', label: 'Anyone' }, ...RECIPIENTS]}
-            onChange={(v) => { setRecipient(v as Recipient | ''); setError(''); }}
-          />
-          <Dropdown
-            label="Category"
-            value={category}
-            options={CATEGORIES}
-            onChange={(v) => setCategory(v as NicheTag | '')}
-          />
-          <Dropdown
-            label="Budget"
-            value={budget}
-            options={BUDGETS}
-            onChange={(v) => { setBudget(v as BudgetTier | ''); setError(''); }}
-          />
-        </div>
-
-        {error && <p className="text-red-500 text-xs mb-3 text-center">{error}</p>}
-
-        <button
-          onClick={handleCustomShuffle}
-          className="btn-shuffle w-full text-white font-bold py-4 rounded-2xl text-base"
-        >
-          Custom Shuffle
-        </button>
-        <p className="text-center text-xs text-gray-400 mt-3">
-          We will find the best match for your criteria instantly
-        </p>
       </div>
 
       {/* Product detail modal */}
@@ -393,5 +403,3 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     </div>
   );
 }
-
-

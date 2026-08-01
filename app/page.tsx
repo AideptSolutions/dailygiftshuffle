@@ -208,17 +208,29 @@ export default async function HomePage() {
           <br />in Seconds
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-6">
-          Skip the endless lists. One click serves up a top-rated gift matched to your person and budget.
+          Stuck on what to get them? Tell us the person and your budget, and we&apos;ll match a
+          top-rated gift they&apos;ll actually love, in seconds.
         </p>
         <Link
           href="/shuffle"
-          className="inline-flex items-center gap-2 bg-[#F04E30] text-white font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-lg mb-8"
+          className="inline-flex items-center gap-2 bg-[#F04E30] text-white font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-lg mb-4"
         >
           Shuffle a Gift <span aria-hidden="true">&rarr;</span>
         </Link>
 
+        {/* Trust strip: surface the editorial rigor that otherwise only lives on /about */}
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500 mb-2">
+          <span><span className="star-gold">&#9733;</span> 4.3+ rating</span>
+          <span className="text-gray-300" aria-hidden="true">&bull;</span>
+          <span>1,000+ reviews</span>
+          <span className="text-gray-300" aria-hidden="true">&bull;</span>
+          <span>Hand-selected</span>
+          <span className="text-gray-300" aria-hidden="true">&bull;</span>
+          <Link href="/about" className="hover:text-[#F04E30] underline underline-offset-2">No paid placements</Link>
+        </div>
+
         {/* Cup animation */}
-        <div className="-mt-8 -mb-3">
+        <div className="-mt-2 -mb-3">
           <GiftCupAnimation />
         </div>
 
