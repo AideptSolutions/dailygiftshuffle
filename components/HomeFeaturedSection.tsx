@@ -411,6 +411,11 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
                   <StarRating rating={product.rating} />
                   <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
                 </div>
+                {product.description && (
+                  <p className="text-[10px] italic text-gray-500 mt-1.5 pl-2 border-l-2 border-[#F04E30]/30 leading-snug line-clamp-2">
+                    {product.description}
+                  </p>
+                )}
                 <p className="text-sm font-extrabold mt-1.5" style={{ color: '#1A202C' }}>
                   {product.priceDisplay}
                 </p>
