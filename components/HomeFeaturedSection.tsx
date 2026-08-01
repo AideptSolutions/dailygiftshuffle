@@ -125,6 +125,19 @@ const BUDGETS: { value: BudgetTier | ''; label: string }[] = [
   { value: '250plus',   label: '$250+' },
 ];
 
+// Visual recipient tiles for the highest-intent recipients (the long tail stays in
+// the "someone else" dropdown). Images are generated, on-brand gift flat-lays.
+const RECIPIENT_TILES: { value: Recipient; label: string; img: string }[] = [
+  { value: 'her',     label: 'For Her',   img: '/images/recipients/her.jpg' },
+  { value: 'him',     label: 'For Him',   img: '/images/recipients/him.jpg' },
+  { value: 'mom',     label: 'For Mom',   img: '/images/recipients/mom.jpg' },
+  { value: 'dad',     label: 'For Dad',   img: '/images/recipients/dad.jpg' },
+  { value: 'kids',    label: 'For Kids',  img: '/images/recipients/kids.jpg' },
+  { value: 'teens',   label: 'For Teens', img: '/images/recipients/teens.jpg' },
+  { value: 'couples', label: 'Couples',   img: '/images/recipients/couples.jpg' },
+  { value: 'friends', label: 'Friends',   img: '/images/recipients/friends.jpg' },
+];
+
 // --- Dropdown ---
 function Dropdown<T extends string>({
   label, value, options, onChange,
@@ -247,13 +260,53 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-          <Dropdown
-            label="Who is it for?"
-            value={recipient}
-            options={[{ value: '', label: 'Anyone' }, ...RECIPIENTS]}
-            onChange={(v) => { setRecipient(v as Recipient | ''); setError(''); }}
-          />
+        {/* Recipient tiles */}
+        <div className="mb-5">
+          <label className="block text-xs font-semibold text-gray-500 mb-2 uppercase tracking-wide">
+            Who is it for?
+          </label>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            {RECIPIENT_TILES.map((t) => {
+              const active = recipient === t.value;
+              return (
+                <button
+                  key={t.value}
+                  type="button"
+                  onClick={() => { setRecipient(t.value); setError(''); }}
+                  aria-pressed={active}
+                  className={`relative rounded-xl overflow-hidden border-2 bg-white transition-all ${
+                    active ? 'border-[#F04E30] ring-2 ring-[#F04E30]/25' : 'border-transparent hover:border-[#F04E30]/40'
+                  }`}
+                >
+                  <div className="relative w-full" style={{ aspectRatio: '4 / 3' }}>
+                    <Image src={t.img} alt={t.label} fill sizes="(max-width: 640px) 45vw, 180px" className="object-cover" unoptimized loading="eager" />
+                    {active && (
+                      <span className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-[#F04E30] text-white flex items-center justify-center text-[11px] font-bold shadow">
+                        &#10003;
+                      </span>
+                    )}
+                  </div>
+                  <span className={`block text-center text-xs font-bold py-1.5 ${active ? 'text-[#F04E30]' : 'text-gray-700'}`}>
+                    {t.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Long-tail recipients + Anyone */}
+          <div className="mt-3 sm:max-w-xs">
+            <Dropdown
+              label="Or someone else"
+              value={recipient}
+              options={[{ value: '', label: 'Anyone / Surprise me' }, ...RECIPIENTS]}
+              onChange={(v) => { setRecipient(v as Recipient | ''); setError(''); }}
+            />
+          </div>
+        </div>
+
+        {/* Category + budget */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
           <Dropdown
             label="Category"
             value={category}
