@@ -151,7 +151,11 @@ export default async function HomePage() {
     budgetTier: p.budgetTier,
     occasions: p.occasions,
     tags: p.tags,
-  }));
+  }))
+  // Keep the homepage grid/shuffle clean: drop any product that resolved to a
+  // category-icon placeholder (e.g. a blocked Amazon-CDN image) so we never show
+  // a generic icon instead of a real product photo.
+  .filter((p) => !p.image.includes('/img/categories/'));
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
