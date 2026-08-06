@@ -140,6 +140,31 @@ export default function ChristmasGiftIdeasPage() {
           </p>
         </section>
 
+        {/* Christmas cluster: route each list type to its dedicated guide */}
+        <section className="max-w-5xl mx-auto px-4 py-6">
+          <h2 className="text-2xl font-bold mb-5 text-center" style={{ color: '#1A202C' }}>
+            Shop Christmas by List
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {[
+              { href: '/christmas-gifts-for-her', label: 'For Her', desc: 'Wife, girlfriend, mom' },
+              { href: '/christmas-gifts-for-him', label: 'For Him', desc: 'Husband, boyfriend, dad' },
+              { href: '/stocking-stuffers', label: 'Stocking Stuffers', desc: 'Small gifts under $25' },
+              { href: '/white-elephant-gifts', label: 'White Elephant', desc: 'Gag gifts and steals' },
+              { href: '/secret-santa-gifts', label: 'Secret Santa', desc: 'Office and friend swaps' },
+            ].map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="group bg-white border border-[#E2E8F0] rounded-2xl p-4 text-center shadow-sm hover:border-[#F04E30] hover:shadow-md transition-all"
+              >
+                <span className="block font-bold text-sm text-[#1A202C] group-hover:text-[#F04E30] transition-colors">{c.label}</span>
+                <span className="block text-xs text-gray-500 mt-1">{c.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Product Grid */}
         {/* Inline Shuffle */}
         <section className="max-w-5xl mx-auto px-4 py-6">
@@ -196,10 +221,14 @@ export default function ChristmasGiftIdeasPage() {
           <h2 className="text-xl font-bold mb-4" style={{ color: '#1A202C' }}>Related Gift Guides</h2>
           <div className="flex flex-wrap gap-3">
             {[
+              { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
+              { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
+              { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
+              { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
+              { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
               { href: '/gift-ideas-for-mom', label: 'Gift Ideas for Mom' },
               { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },
-              { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
             ].map((link) => (
               <Link
                 key={link.href}

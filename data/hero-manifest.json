@@ -516,5 +516,103 @@
     "photographer": "https://kaboompics.com/",
     "photographerUrl": "https://www.pexels.com/@karola-g",
     "src": "https://www.pexels.com/photo/glittery-boxes-on-a-white-background-5485119/"
+  },
+  "stocking-stuffers": {
+    "alt": "Christmas stockings filled with small wrapped gifts",
+    "query": "christmas stockings fireplace small gifts holiday",
+    "photographer": "Thirdman",
+    "photographerUrl": "https://www.pexels.com/@thirdman",
+    "src": "https://www.pexels.com/photo/a-woman-holding-christmas-socks-6533914/"
+  },
+  "white-elephant-gifts": {
+    "alt": "A wrapped gift exchange present with a playful bow",
+    "query": "funny wrapped gift party colorful bow present",
+    "photographer": "MARIANNE RIXHON",
+    "photographerUrl": "https://www.pexels.com/@marianne-rixhon-10955129",
+    "src": "https://www.pexels.com/photo/close-up-of-shiny-present-6166574/"
+  },
+  "secret-santa-gifts": {
+    "alt": "A neatly wrapped secret santa gift with a name tag",
+    "query": "wrapped christmas gift name tag festive",
+    "photographer": "Leeloo The First",
+    "photographerUrl": "https://www.pexels.com/@leeloothefirst",
+    "src": "https://www.pexels.com/photo/high-angle-shot-of-gifts-5802139/"
+  },
+  "christmas-gifts-for-her": {
+    "alt": "Christmas gifts for her wrapped in festive paper with ribbon",
+    "query": "christmas gift woman elegant wrapping ribbon festive",
+    "photographer": "https://kaboompics.com/",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "src": "https://www.pexels.com/photo/woman-wrapping-gift-near-christmas-tree-5469249/"
+  },
+  "christmas-gifts-for-him": {
+    "alt": "Christmas gifts for him wrapped in kraft paper with festive trim",
+    "query": "christmas gift man kraft paper wrapping festive",
+    "photographer": "Ylanite Koppens",
+    "photographerUrl": "https://www.pexels.com/@nietjuhart",
+    "src": "https://www.pexels.com/photo/photo-of-two-brown-wrapped-gifts-on-wooden-table-1693650/"
+  },
+  "retirement-gifts": {
+    "alt": "A relaxing retirement scene with a lounge chair and travel gear",
+    "query": "relaxing retirement hammock beach chair vacation",
+    "photographer": "Abhishek  Navlakha",
+    "photographerUrl": "https://www.pexels.com/@navlakha",
+    "src": "https://www.pexels.com/photo/relaxed-senior-couple-enjoying-miami-beach-35113473/"
+  },
+  "gifts-for-people-who-have-everything": {
+    "alt": "An unusual, beautifully wrapped gift that stands out from the pile",
+    "query": "unique special gift box elegant surprise",
+    "photographer": "Boris Hamer",
+    "photographerUrl": "https://www.pexels.com/@borishamer",
+    "src": "https://www.pexels.com/photo/two-gift-boxes-13975271/"
+  },
+  "housewarming-gifts": {
+    "alt": "A cozy housewarming gift with a candle, plant and throw blanket",
+    "query": "housewarming new home candle plant cozy gift",
+    "photographer": "Ron Lach",
+    "photographerUrl": "https://www.pexels.com/@ron-lach",
+    "src": "https://www.pexels.com/photo/close-up-of-a-candle-on-stone-container-8272685/"
+  },
+  "gift-ideas-for-sister": {
+    "alt": "A cheerful gift for a sister wrapped with a bright ribbon",
+    "query": "cheerful gift bright ribbon present colorful",
+    "photographer": "MARIANNE RIXHON",
+    "photographerUrl": "https://www.pexels.com/@marianne-rixhon-10955129",
+    "src": "https://www.pexels.com/photo/close-up-of-shiny-present-6166572/"
+  },
+  "gift-ideas-for-brother": {
+    "alt": "A gift for a brother wrapped in kraft paper",
+    "query": "gift kraft paper wrapped present simple",
+    "photographer": "Ylanite Koppens",
+    "photographerUrl": "https://www.pexels.com/@nietjuhart",
+    "src": "https://www.pexels.com/photo/photo-of-two-brown-wrapped-gifts-on-wooden-table-1693650/"
+  },
+  "40th-birthday-gifts": {
+    "alt": "40th birthday gifts with celebration balloons and confetti",
+    "query": "birthday celebration balloons confetti party 40",
+    "photographer": "Matej Bizjak",
+    "photographerUrl": "https://www.pexels.com/@matej-bizjak-2148520448",
+    "src": "https://www.pexels.com/photo/elegant-40th-birthday-celebration-venue-decor-30142374/"
+  },
+  "50th-birthday-gifts": {
+    "alt": "50th birthday gifts with gold balloons and celebration decor",
+    "query": "birthday celebration gold balloons elegant party",
+    "photographer": "Inga Seliverstova",
+    "photographerUrl": "https://www.pexels.com/@inga-sv",
+    "src": "https://www.pexels.com/photo/yellow-white-and-pink-balloons-3394219/"
+  },
+  "gifts-for-teenage-girls": {
+    "alt": "Trendy gifts for teenage girls with skincare and cozy accessories",
+    "query": "teen girl bedroom cozy aesthetic accessories",
+    "photographer": "cottonbro studio",
+    "photographerUrl": "https://www.pexels.com/@cottonbro",
+    "src": "https://www.pexels.com/photo/a-female-teenager-using-her-laptop-6473102/"
+  },
+  "gifts-for-teenage-boys": {
+    "alt": "Gifts for teenage boys with gaming gear and tech accessories",
+    "query": "gaming setup teen desk headset rgb",
+    "photographer": "Matheus Bertelli",
+    "photographerUrl": "https://www.pexels.com/@bertellifotografia",
+    "src": "https://www.pexels.com/photo/modern-gaming-setup-with-headset-and-mouse-28993064/"
   }
 }
