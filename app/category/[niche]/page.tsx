@@ -7,8 +7,8 @@ import CategoryIcon from '@/components/CategoryIcon';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
-import products from '@/data/products-catalog';
 import type { NicheTag } from '@/data/products-catalog';
+import { ALL } from '@/lib/giftSelect';
 
 type Niche = NicheTag;
 
@@ -480,8 +480,12 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
   const meta = NICHE_META[params.niche as Niche];
   if (!meta) notFound();
 
-  const filtered = products.filter((p) => p.tags.includes(params.niche as Niche));
-  const trendingPicks = filtered.slice(0, 12);
+  // Draw from BOTH catalogs (deduped) and lead with social proof, so category
+  // pages show the full depth of the niche rather than 12 arbitrary items.
+  const filtered = ALL
+    .filter((p) => p.tags?.includes(params.niche as Niche))
+    .sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0));
+  const trendingPicks = filtered.slice(0, 24);
   const editorialParas = EDITORIAL[params.niche as Niche] ?? [];
 
   // Standard "no idea what to get" FAQ appended to every category, for AEO +
@@ -591,7 +595,7 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
         {/* Shuffle section */}
         <section className="max-w-5xl mx-auto px-4 py-10">
           <InlineShuffle
-            products={filtered.length > 0 ? filtered : products.slice(0, 20)}
+            products={filtered.length > 0 ? filtered : ALL.slice(0, 20)}
             heading={`Shuffle ${meta.heading}`}
           />
         </section>
