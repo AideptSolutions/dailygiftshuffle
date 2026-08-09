@@ -70,8 +70,10 @@ export default function Page() {
             <strong>silk pillowcase or robe</strong>, a <strong>quality leather accessory</strong>, a{' '}
             <strong>luxe skincare or beauty set</strong>, or a high-end beauty tool. Luxury comes from
             materials, craftsmanship and presentation as much as price, so a beautifully presented
-            mid-range piece often feels more special than a carelessly given expensive one. Match it
-            to something she already loves and it always feels considered.
+            mid-range piece often feels more special than a carelessly given expensive one. The 30
+            picks on this page average <strong>4.7 stars across more than 1.1 million verified
+            Amazon reviews</strong> combined. Match it to something she already loves and it always
+            feels considered.
           </p>
         ),
       }}

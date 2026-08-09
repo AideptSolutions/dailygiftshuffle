@@ -211,7 +211,9 @@ export default function BirthdayGiftIdeasPage() {
               near-universal wins are a <strong>premium candle</strong>, an{' '}
               <strong>insulated tumbler</strong>, <strong>wireless earbuds</strong>, a{' '}
               <strong>cozy blanket</strong>, or a <strong>bestselling book</strong>. Match the gift
-              to the person rather than the occasion and it always lands. Use the shuffle below to
+              to the person rather than the occasion and it always lands. The 40 picks on this page
+              hold a <strong>4.7-star average across more than 3.4 million verified Amazon
+              reviews</strong> combined, so every option is crowd-tested. Use the shuffle below to
               get an instant, top-rated pick for exactly who you are shopping for.
             </p>
           </div>

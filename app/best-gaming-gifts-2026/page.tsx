@@ -68,8 +68,9 @@ export default function Page() {
             streamers, <strong>RGB lighting</strong>, or a <strong>comfortable gaming chair</strong>.
             The safest picks work across PC, PlayStation and Xbox, so if you are not a gamer
             yourself, stick to cross-platform gear and confirm their console before buying anything
-            controller-specific. Not sure which to pick? Hit shuffle below for an instant idea in
-            your budget.
+            controller-specific. The picks on this page carry <strong>more than 575,000 verified
+            Amazon reviews</strong> combined, averaging 4.6 stars. Not sure which to pick? Hit
+            shuffle below for an instant idea in your budget.
           </p>
         ),
       }}

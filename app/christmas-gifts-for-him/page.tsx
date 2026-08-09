@@ -68,7 +68,9 @@ export default function Page() {
             and BBQ gear, a great multi-tool, gear for his hobby, gaming, golf, the gym, the garage,
             or a premium version of a daily item like his tumbler or dopp kit. Skip novelty and
             upgrade something real. Match it to one hobby or habit you know he has and it beats any
-            generic gift. Not sure? Hit shuffle below for an instant idea in your budget.
+            generic gift: the 45 picks on this page average <strong>4.7 stars across more than 3.1
+            million verified Amazon reviews</strong> combined. Not sure? Hit shuffle below for an
+            instant idea in your budget.
           </p>
         ),
       }}

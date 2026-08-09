@@ -83,6 +83,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="impact-site-verification" value="0b37ca6c-ee3b-41cf-949f-69582e768b5e" />
       </head>
       <body className={`${inter.className} bg-gray-50 min-h-screen`}>
+        {/* Site-level entity schema: who we are (Organization) and what this site
+            is (WebSite), for search/AI knowledge-graph understanding. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://www.thegiftshuffle.com/#organization',
+                  name: 'TheGiftShuffle',
+                  url: 'https://www.thegiftshuffle.com',
+                  logo: 'https://www.thegiftshuffle.com/favicon.png',
+                  description:
+                    'TheGiftShuffle is an interactive gift discovery engine: pick a recipient and budget, hit Shuffle, and get an instant, hand-curated, top-rated gift recommendation. Every pick is independently selected (4.3+ stars, 1,000+ reviews) with no paid placements.',
+                  parentOrganization: { '@type': 'Organization', name: 'AiDept Solutions, LLC' },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://www.thegiftshuffle.com/#website',
+                  name: 'TheGiftShuffle',
+                  url: 'https://www.thegiftshuffle.com',
+                  publisher: { '@id': 'https://www.thegiftshuffle.com/#organization' },
+                },
+              ],
+            }),
+          }}
+        />
         {gaId && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />

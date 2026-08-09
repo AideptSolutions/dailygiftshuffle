@@ -159,8 +159,9 @@ export default function GiftIdeasForDadPage() {
               <strong>insulated tumbler</strong>, or a quality everyday-carry item like a leather
               wallet or watch. The dad gifts that land are <strong>useful, not decorative</strong>, so
               match it to a hobby or daily routine, his coffee, the grill, a round of golf, and skip
-              anything that ends up in a drawer. Not sure? Hit shuffle below for an instant, top-rated
-              pick in your budget.
+              anything that ends up in a drawer. The picks on this page average <strong>4.7 stars
+              across more than 1.9 million verified Amazon reviews</strong> combined. Not sure? Hit
+              shuffle below for an instant, top-rated pick in your budget.
             </p>
           </div>
         </section>

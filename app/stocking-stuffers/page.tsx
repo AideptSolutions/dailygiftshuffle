@@ -75,7 +75,9 @@ export default function Page() {
             <strong>lip balm or hand cream</strong>, a <strong>keychain flashlight</strong>, or their
             favorite <strong>candy or hot sauce</strong>. Aim for $5 to $25 per item and mix one
             practical pick, one cozy pick and one silly pick per stocking, and every stocking feels
-            thoughtfully packed. Not sure? Hit shuffle below for instant small-gift ideas.
+            thoughtfully packed. Every under-$25 pick on this page is rated <strong>4.6 stars or
+            higher</strong>, with more than 2 million verified Amazon reviews combined. Not sure?
+            Hit shuffle below for instant small-gift ideas.
           </p>
         ),
       }}
