@@ -30,8 +30,12 @@ export const metadata: Metadata = {
 
 // Broadly likeable picks in the classic secret santa budget window. Leans on
 // coworker/friends-suitable items with high social proof.
-const match = (p: { price?: number; rating?: number }) =>
-  (p.price ?? 999) <= 50 && (p.price ?? 0) >= 10;
+// Office-exchange lane: $20-50 and suited to a coworker or friend. Keeps this
+// distinct from /white-elephant-gifts, which owns the cheaper gag-gift band.
+const match = (p: { price?: number; recipients?: string[] }) =>
+  (p.price ?? 999) <= 50 &&
+  (p.price ?? 0) >= 20 &&
+  !!p.recipients?.some((r) => ['coworker', 'friends', 'employees', 'him', 'her'].includes(r));
 const grid = curate({ match, minRating: 4.6, sort: 'social', recipientCap: 8, limit: 35, pool: ALL });
 const shuffle = shufflePool(match, ALL);
 

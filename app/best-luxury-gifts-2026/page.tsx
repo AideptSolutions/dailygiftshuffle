@@ -29,7 +29,9 @@ export const metadata: Metadata = {
 };
 
 const match = (p: { tags?: string[] }) => !!p.tags?.includes('luxury');
-const grid = curate({ match, minPrice: 25, sort: 'social', limit: 40, pool: ALL });
+// True splurge tier ($100+). Keeps this page distinct from /luxury-gifts-under-200
+// (budget luxury), /luxury-gifts-for-her (recipient-specific) and /category/luxury.
+const grid = curate({ match, minPrice: 100, sort: 'social', limit: 40, pool: ALL });
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
