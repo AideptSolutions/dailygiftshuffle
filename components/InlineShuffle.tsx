@@ -1,11 +1,26 @@
 'use client';
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import CategoryIcon from '@/components/CategoryIcon';
 
 interface Props {
   products: CompactProduct[];
   heading?: string;
+}
+
+// How long the cards gather before the new set is revealed. Kept short so the
+// interaction still feels instant; must match riffleGather's duration in CSS.
+const RIFFLE_MS = 170;
+
+// Cards gather toward the middle of the row. Index 0 drifts right, the last
+// drifts left, so a 4-up row collapses like a deck being squared up.
+function riffleVars(i: number, total: number): React.CSSProperties {
+  const mid = (total - 1) / 2;
+  const offset = mid === 0 ? 0 : (mid - i) / mid; // +1 (left card) .. -1 (right card)
+  return {
+    '--riffle-x': `${offset * 42}px`,
+    '--riffle-r': `${-offset * 8}deg`,
+  } as React.CSSProperties;
 }
 
 function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = []): CompactProduct[] {
@@ -24,10 +39,21 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
   // Stack of previous pick-sets so users can step back to a set they shuffled past.
   const [history, setHistory] = useState<CompactProduct[][]>([]);
 
+  // 'riffle' = cards are gathering; 'idle' = settled. Drives the shuffle beat.
+  const [phase, setPhase] = useState<'idle' | 'riffle'>('idle');
+  const prefersReduced = useRef(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   // Randomize once, client-only, after hydration completes — avoids a server/client mismatch.
   useEffect(() => {
     setPicks(pickRandom(products, 4));
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Respect the OS reduced-motion setting; skip the animation entirely if set.
+  useEffect(() => {
+    prefersReduced.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return () => { if (timer.current) clearTimeout(timer.current); };
   }, []);
 
   const togglePin = useCallback((id: string) => {
@@ -38,7 +64,8 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
     });
   }, []);
 
-  const shuffle = useCallback(() => {
+  // Swap in the next set. Pinned cards are kept exactly where they are.
+  const commitShuffle = useCallback(() => {
     const pinnedArr = Array.from(pinnedIds);
     const numNew = picks.filter(p => !pinnedIds.has(p.id)).length;
     const newPicks = numNew > 0 ? pickRandom(products, numNew, pinnedArr) : [];
@@ -46,6 +73,17 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
     setHistory(prev => [...prev, picks].slice(-25));
     setPicks(picks.map(p => pinnedIds.has(p.id) ? p : (newPicks[newPickIdx++] ?? p)));
   }, [products, picks, pinnedIds]);
+
+  const shuffle = useCallback(() => {
+    if (phase === 'riffle') return; // ignore repeat clicks mid-animation
+    if (prefersReduced.current) { commitShuffle(); return; }
+    // Gather the cards, then reveal the new set.
+    setPhase('riffle');
+    timer.current = setTimeout(() => {
+      commitShuffle();
+      setPhase('idle');
+    }, RIFFLE_MS);
+  }, [phase, commitShuffle]);
 
   const reverse = useCallback(() => {
     setHistory(prev => {
@@ -73,7 +111,12 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
             onClick={shuffle}
             className="bg-[#F04E30] text-white font-bold px-5 py-2 rounded-full hover:opacity-90 transition-opacity text-sm inline-flex items-center gap-1.5"
           >
-            <CategoryIcon slug="shuffle" className="w-4 h-4" aria-hidden="true" /> Shuffle Again
+            <CategoryIcon
+              slug="shuffle"
+              className={`w-4 h-4${phase === 'riffle' ? ' shuffle-spin' : ''}`}
+              aria-hidden="true"
+            />{' '}
+            Shuffle Again
           </button>
         </div>
       </div>
@@ -81,14 +124,25 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
         No endless scrolling. One click serves up a fresh, top-rated pick, and Back revisits any you shuffled past.
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {picks.map((p) => (
-          <ProductCard
-            key={p.id}
-            product={p}
-            pinned={pinnedIds.has(p.id)}
-            onTogglePin={() => togglePin(p.id)}
-          />
-        ))}
+        {picks.map((p, i) => {
+          const isPinned = pinnedIds.has(p.id);
+          // Pinned cards stay put while the rest gather, which makes the pin
+          // mechanic legible: locked picks visibly survive the shuffle.
+          const riffling = phase === 'riffle' && !isPinned;
+          return (
+            <div
+              key={p.id}
+              className={riffling ? 'tile-riffle' : 'tile-tumble'}
+              style={riffling ? riffleVars(i, picks.length) : { animationDelay: `${i * 65}ms` }}
+            >
+              <ProductCard
+                product={p}
+                pinned={isPinned}
+                onTogglePin={() => togglePin(p.id)}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
