@@ -94,7 +94,11 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
   }, []);
 
   return (
-    <div>
+    <div className="shuffle-panel">
+      <span className="shuffle-eyebrow mb-2">
+        <CategoryIcon slug="shuffle" className="w-3.5 h-3.5" aria-hidden="true" />
+        Interactive gift finder
+      </span>
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-bold" style={{ color: '#1A202C' }}>{heading}</h2>
         <div className="flex items-center gap-2">

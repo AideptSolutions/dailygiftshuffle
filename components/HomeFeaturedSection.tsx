@@ -205,7 +205,6 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
 
   // Product cards — seeded from server props immediately
   const [cards, setCards]           = useState<Product[]>(() => getTrending(initialProducts));
-  const [animating, setAnimating]   = useState(true);
   const [isTrending, setIsTrending] = useState(true);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
   const [count, setCount]           = useState(4);
@@ -243,12 +242,10 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
       const newPicks = numNew > 0 ? pickN(catalog, numNew, pinnedArr) : [];
       let newPickIdx = 0;
       const newCards = cards.map(c => pinnedIds.has(c.id) ? c : (newPicks[newPickIdx++] ?? c));
-      setAnimating(false);
-      requestAnimationFrame(() => {
-        setCards(newCards);
-        setIsTrending(false);
-        requestAnimationFrame(() => setAnimating(true));
-      });
+      // Swap directly. Cards are keyed by product id, so replaced cards remount
+      // and replay tumbleIn on their own; no requestAnimationFrame needed.
+      setCards(newCards);
+      setIsTrending(false);
     };
     if (prefersReduced.current) { commit(); return; }
     setRiffling(true);
@@ -258,12 +255,8 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const handleCountChange = useCallback((newCount: number) => {
     setCount(newCount);
     setPinnedIds(new Set());
-    setAnimating(false);
-    requestAnimationFrame(() => {
-      setCards(pickN(catalog, newCount));
-      setIsTrending(false);
-      requestAnimationFrame(() => setAnimating(true));
-    });
+    setCards(pickN(catalog, newCount));
+    setIsTrending(false);
   }, [catalog]);
 
   // Custom Shuffle -> navigate
@@ -370,7 +363,8 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
       </div>
 
       {/* Example product grid — shows the kind of thing a shuffle serves up */}
-      <div className="mb-5 text-left">
+      <div className="shuffle-panel text-left">
+        <span className="shuffle-eyebrow mb-2">Interactive gift finder</span>
         <div className="flex items-center justify-between mb-1">
           <h2 className="text-lg font-extrabold text-gray-800 tracking-tight">
             {isTrending ? 'Popular Gift Ideas' : 'Gift Ideas'}
@@ -401,7 +395,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
             <div
               key={product.id}
               onClick={() => setActiveProduct(product)}
-              className={`${isRiffling ? 'tile-riffle' : animating ? 'tile-tumble' : 'opacity-0'} rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
+              className={`${isRiffling ? 'tile-riffle' : 'tile-tumble'} rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
               style={isRiffling
                 ? { background: '#F0F4F8', ...riffleVars(i, cards.length) }
                 : { background: '#F0F4F8', animationDelay: `${i * 85}ms` }}
@@ -470,20 +464,20 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
           })}
         </div>
 
-        <p className="text-center text-xs text-gray-400 mt-3">
+        {/* Shuffle button, inside the panel so the widget reads as one tool */}
+        <div className="text-center mt-5">
+          <button
+            onClick={handleShuffle}
+            className="btn-shuffle text-white font-bold px-10 py-4 rounded-full text-base"
+          >
+            Shuffle Gift Ideas
+          </button>
+          <p className="text-xs text-[#4A5568] mt-2">Browse the full catalog one shuffle at a time</p>
+        </div>
+
+        <p className="text-center text-xs text-gray-400 mt-4">
           Affiliate links. We may earn a small commission at no extra cost to you.
         </p>
-      </div>
-
-      {/* Shuffle button */}
-      <div className="text-center mb-2">
-        <button
-          onClick={handleShuffle}
-          className="btn-shuffle text-white font-bold px-10 py-4 rounded-full text-base"
-        >
-          Shuffle Gift Ideas
-        </button>
-        <p className="text-xs text-[#4A5568] mt-2">Browse the full catalog one shuffle at a time</p>
       </div>
 
       {/* Product detail modal */}
