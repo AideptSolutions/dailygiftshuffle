@@ -34,18 +34,23 @@ const match = (p: { recipients?: string[] }) =>
   !!(p.recipients?.includes('her') || p.recipients?.includes('mom') || p.recipients?.includes('couples'));
 // Same buyer as /best-gifts-for-her-2026 (a husband), so the same category
 // affinity applies: gift-shaped categories first, utility categories behind.
+const STANDOUT = /kindle|airpods|apple watch|sonos|bose|beats|instax|polaroid|nespresso|espresso machine|dyson/i;
+const isStandout = (p: { name?: string }) => !!p.name && STANDOUT.test(p.name);
+const DEPRIORITIZE = ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'];
+
 const grid = curate({
   match,
   minPrice: 20,
   minRating: 4.5,
   sort: 'social',
   preferTags: ['beauty', 'luxury', 'home', 'fitness'],
-  deprioritizeTags: ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'],
+  deprioritizeTags: DEPRIORITIZE,
+  preferMatch: isStandout,
   recipientCap: 30,
   limit: 48,
   pool: ALL,
 });
-const shuffle = shufflePool(match, ALL);
+const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE, keepMatch: isStandout });
 
 export default function Page() {
   return (

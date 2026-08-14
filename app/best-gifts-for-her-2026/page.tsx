@@ -44,6 +44,12 @@ const DEPRIORITIZE = [
   'outdoors', 'gaming', 'office', 'finance', 'sports',
 ];
 
+// Standout cross-category gifts that stay welcome here. Named explicitly
+// because review count cannot separate a great gift (a Kindle) from a popular
+// utility item (a webcam, a water filter) — both sit at ~100k reviews.
+const STANDOUT = /kindle|airpods|apple watch|sonos|bose|beats|instax|polaroid|nespresso|espresso machine|dyson/i;
+const isStandout = (p: { name?: string }) => !!p.name && STANDOUT.test(p.name);
+
 const grid = curate({
   match,
   minPrice: 15,
@@ -51,11 +57,14 @@ const grid = curate({
   sort: 'social',
   preferTags: PREFER,
   deprioritizeTags: DEPRIORITIZE,
+  preferMatch: isStandout,
   recipientCap: 30,
   limit: 72,
   pool: ALL,
 });
-const shuffle = shufflePool(match, ALL);
+// Keep the shuffle on-theme with the grid; a random draw over the unfiltered
+// pool would still deal webcams and water filters.
+const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE, keepMatch: isStandout });
 
 export default function Page() {
   return (

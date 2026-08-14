@@ -31,8 +31,22 @@ export const metadata: Metadata = {
 const match = (p: { recipients?: string[]; tags?: string[] }) =>
   !!p.recipients?.includes('teens') ||
   !!(p.recipients?.includes('him') && p.tags?.some((t) => ['gaming', 'tech', 'sports'].includes(t)));
-const grid = curate({ match, minPrice: 10, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 35, pool: ALL });
-const shuffle = shufflePool(match, ALL);
+// Keep women's beauty out of a teen-boy guide; lead with the gear he uses.
+const PREFER = ['gaming', 'tech', 'sports', 'hobby'];
+const DEPRIORITIZE = ['beauty', 'parenting', 'finance'];
+
+const grid = curate({
+  match,
+  minPrice: 10,
+  minRating: 4.5,
+  sort: 'social',
+  preferTags: PREFER,
+  deprioritizeTags: DEPRIORITIZE,
+  recipientCap: 30,
+  limit: 35,
+  pool: ALL,
+});
+const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE });
 
 export default function Page() {
   return (

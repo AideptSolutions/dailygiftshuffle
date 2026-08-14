@@ -73,6 +73,13 @@ export interface CurateOpts {
   preferTags?: string[];
   /** Tags to push down (still eligible, just ranked behind everything else). */
   deprioritizeTags?: string[];
+  /**
+   * Editorial override: items matching this are treated as on-theme even when
+   * their tags are deprioritized. Review count cannot tell a great cross-category
+   * gift (a Kindle) from a popular utility item (a webcam, a water filter), so
+   * the standouts have to be named rather than inferred.
+   */
+  preferMatch?: (p: AnyProduct) => boolean;
 }
 
 const AFFINITY_BOOST = 1.6;
@@ -80,9 +87,17 @@ const AFFINITY_PENALTY = 0.45;
 
 const baseScore = (p: AnyProduct) => p.rating * Math.log10(p.reviewCount + 10);
 
-const score = (p: AnyProduct, prefer?: Set<string>, demote?: Set<string>) => {
+const score = (
+  p: AnyProduct,
+  prefer?: Set<string>,
+  demote?: Set<string>,
+  preferMatch?: (p: AnyProduct) => boolean,
+) => {
   const s = baseScore(p);
-  if (!prefer?.size && !demote?.size) return s;
+  if (!prefer?.size && !demote?.size && !preferMatch) return s;
+  // Named standouts win outright, so a great cross-category gift survives a
+  // category demotion.
+  if (preferMatch?.(p)) return s * AFFINITY_BOOST;
   const tags = p.tags ?? [];
   // Demote wins over prefer: many products carry several tags (a Le Creuset is
   // both 'kitchen' and 'luxury'), and an explicit "not on this page" signal
@@ -100,6 +115,9 @@ const FILLER = new Set([
   'the', 'a', 'an', 'with', 'and', 'set', 'pack', 'count', 'piece', 'pc', 'pcs', 'kit',
   'signature', 'classic', 'pro', 'plus', 'premium', 'deluxe', 'original', 'new', 'edition',
   'round', 'oz', 'qt', 'quart', 'inch', 'in', 'ct', 'gen', 'series', 'size', 'large', 'small',
+  // Leading/trailing qualifiers that describe a variant rather than a different
+  // product ("Large Print Kindle Paperwhite" is the same gift as "Kindle Paperwhite").
+  'print', 'complete', 'long', 'multi', 'hd', 'wireless', 'smart', 'portable', 'max', 'ultra',
 ]);
 const variantKey = (name: string) => {
   const tokens = name
@@ -123,6 +141,7 @@ export function curate(opts: CurateOpts): CompactProduct[] {
     pool = RECIPIENT,
     preferTags,
     deprioritizeTags,
+    preferMatch,
   } = opts;
 
   const exR = new Set(excludeRecipients);
@@ -142,7 +161,7 @@ export function curate(opts: CurateOpts): CompactProduct[] {
     .sort((a, b) =>
       sort === 'rating'
         ? b.rating - a.rating || b.reviewCount - a.reviewCount
-        : score(b, prefer, demote) - score(a, prefer, demote),
+        : score(b, prefer, demote, preferMatch) - score(a, prefer, demote, preferMatch),
     );
 
   const perRecipient: Record<string, number> = {};
@@ -161,7 +180,25 @@ export function curate(opts: CurateOpts): CompactProduct[] {
   return out;
 }
 
-/** Wider pool for the shuffle widget: same match, looser caps, more items. */
-export function shufflePool(match: (p: AnyProduct) => boolean, pool: AnyProduct[] = RECIPIENT): CompactProduct[] {
-  return pool.filter((p) => p.rating >= 4.3 && match(p)) as CompactProduct[];
+/**
+ * Wider pool for the shuffle widget: same match, looser caps, more items.
+ *
+ * `opts.excludeTags` keeps the shuffle on-theme with the grid above it. The
+ * shuffle deals at random, so a category that merely ranks low in the grid
+ * would still surface here at full frequency: on a for-her page that meant
+ * shuffling up webcams and water filters. Filtering, not weighting, is the
+ * right tool for a random draw.
+ */
+export function shufflePool(
+  match: (p: AnyProduct) => boolean,
+  pool: AnyProduct[] = RECIPIENT,
+  opts?: { excludeTags?: string[]; keepMatch?: (p: AnyProduct) => boolean },
+): CompactProduct[] {
+  const ex = opts?.excludeTags ? new Set(opts.excludeTags) : undefined;
+  return pool.filter((p) => {
+    if (p.rating < 4.3 || !match(p)) return false;
+    if (!ex?.size) return true;
+    if (opts?.keepMatch?.(p)) return true; // named standouts survive the filter
+    return !(p.tags ?? []).some((t) => ex.has(t));
+  }) as CompactProduct[];
 }

@@ -32,8 +32,23 @@ export const metadata: Metadata = {
 // Evergreen mom gifting (any occasion). /mothers-day-gifts covers the seasonal
 // Mother's Day angle; this page owns the year-round "gifts for mom" intent.
 const match = (p: { recipients?: string[] }) => !!p.recipients?.includes('mom');
-const grid = curate({ match, minPrice: 15, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 45, pool: ALL });
-const shuffle = shufflePool(match, ALL);
+// Mom's buyer is usually a son, daughter or husband. Favour gift-shaped
+// categories and keep garage/auto/tool items out of a gift guide for mom.
+const PREFER = ['beauty', 'luxury', 'home', 'fitness', 'kitchen'];
+const DEPRIORITIZE = ['car-accessories', 'diy-tools', 'gaming', 'finance', 'outdoors'];
+
+const grid = curate({
+  match,
+  minPrice: 15,
+  minRating: 4.5,
+  sort: 'social',
+  preferTags: PREFER,
+  deprioritizeTags: DEPRIORITIZE,
+  recipientCap: 30,
+  limit: 45,
+  pool: ALL,
+});
+const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE });
 
 export default function Page() {
   return (

@@ -33,18 +33,23 @@ const match = (p: { recipients?: string[]; occasions?: string[] }) =>
   !!(p.occasions?.includes('holiday') || p.occasions?.includes('christmas'));
 // Same buyer profile as the other for-her guides: favour gift-shaped categories
 // over the mass-review electronics and appliances raw social sort surfaces.
+const STANDOUT = /kindle|airpods|apple watch|sonos|bose|beats|instax|polaroid|nespresso|espresso machine|dyson/i;
+const isStandout = (p: { name?: string }) => !!p.name && STANDOUT.test(p.name);
+const DEPRIORITIZE = ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'];
+
 const grid = curate({
   match,
   minPrice: 15,
   minRating: 4.5,
   sort: 'social',
   preferTags: ['beauty', 'luxury', 'home', 'fitness'],
-  deprioritizeTags: ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'],
+  deprioritizeTags: DEPRIORITIZE,
+  preferMatch: isStandout,
   recipientCap: 30,
   limit: 45,
   pool: ALL,
 });
-const shuffle = shufflePool(match, ALL);
+const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE, keepMatch: isStandout });
 
 export default function Page() {
   return (
