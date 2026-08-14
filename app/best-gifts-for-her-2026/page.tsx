@@ -32,7 +32,29 @@ export const metadata: Metadata = {
 // beauty/luxury/home her-tagged picks all surface, with high caps and a larger
 // limit to give a wide selection to shuffle through.
 const match = (p: { recipients?: string[] }) => !!p.recipients?.includes('her');
-const grid = curate({ match, minPrice: 15, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 72, pool: ALL });
+
+// This page's buyer is overwhelmingly a husband, boyfriend or son. Ranking by
+// raw review count filled the grid with Echo Dots, webcams, Instant Pots and
+// chef's knives, technically "for her" but nobody's idea of a gift. Favour the
+// categories that read as gifts (beauty, jewelry/luxury, decor, wellness) and
+// push utility categories behind them without excluding a standout like a Kindle.
+const PREFER = ['beauty', 'luxury', 'home', 'fitness'];
+const DEPRIORITIZE = [
+  'kitchen', 'tech', 'diy-tools', 'car-accessories',
+  'outdoors', 'gaming', 'office', 'finance', 'sports',
+];
+
+const grid = curate({
+  match,
+  minPrice: 15,
+  minRating: 4.5,
+  sort: 'social',
+  preferTags: PREFER,
+  deprioritizeTags: DEPRIORITIZE,
+  recipientCap: 30,
+  limit: 72,
+  pool: ALL,
+});
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {

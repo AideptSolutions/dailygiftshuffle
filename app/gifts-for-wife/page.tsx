@@ -32,7 +32,19 @@ export const metadata: Metadata = {
 // Broad, quality set of her-suited gifts, framed for a wife (romantic + everyday luxe).
 const match = (p: { recipients?: string[] }) =>
   !!(p.recipients?.includes('her') || p.recipients?.includes('mom') || p.recipients?.includes('couples'));
-const grid = curate({ match, minPrice: 20, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 48, pool: ALL });
+// Same buyer as /best-gifts-for-her-2026 (a husband), so the same category
+// affinity applies: gift-shaped categories first, utility categories behind.
+const grid = curate({
+  match,
+  minPrice: 20,
+  minRating: 4.5,
+  sort: 'social',
+  preferTags: ['beauty', 'luxury', 'home', 'fitness'],
+  deprioritizeTags: ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'],
+  recipientCap: 30,
+  limit: 48,
+  pool: ALL,
+});
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {

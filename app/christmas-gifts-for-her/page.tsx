@@ -31,7 +31,19 @@ export const metadata: Metadata = {
 const match = (p: { recipients?: string[]; occasions?: string[] }) =>
   !!(p.recipients?.includes('her') || p.recipients?.includes('mom')) &&
   !!(p.occasions?.includes('holiday') || p.occasions?.includes('christmas'));
-const grid = curate({ match, minPrice: 15, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 45, pool: ALL });
+// Same buyer profile as the other for-her guides: favour gift-shaped categories
+// over the mass-review electronics and appliances raw social sort surfaces.
+const grid = curate({
+  match,
+  minPrice: 15,
+  minRating: 4.5,
+  sort: 'social',
+  preferTags: ['beauty', 'luxury', 'home', 'fitness'],
+  deprioritizeTags: ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'],
+  recipientCap: 30,
+  limit: 45,
+  pool: ALL,
+});
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {

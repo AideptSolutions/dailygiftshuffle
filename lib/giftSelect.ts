@@ -64,9 +64,33 @@ export interface CurateOpts {
   limit?: number;
   /** Pool to draw from. Defaults to the combined ALL pool. */
   pool?: AnyProduct[];
+  /**
+   * Tags to favour on this page. Raw review count rewards mass-market
+   * electronics and appliances, which are poor answers to "a gift for her".
+   * Boosting the on-theme categories keeps the grid gift-shaped without
+   * hard-excluding a genuinely great pick from another category.
+   */
+  preferTags?: string[];
+  /** Tags to push down (still eligible, just ranked behind everything else). */
+  deprioritizeTags?: string[];
 }
 
-const score = (p: AnyProduct) => p.rating * Math.log10(p.reviewCount + 10);
+const AFFINITY_BOOST = 1.6;
+const AFFINITY_PENALTY = 0.45;
+
+const baseScore = (p: AnyProduct) => p.rating * Math.log10(p.reviewCount + 10);
+
+const score = (p: AnyProduct, prefer?: Set<string>, demote?: Set<string>) => {
+  const s = baseScore(p);
+  if (!prefer?.size && !demote?.size) return s;
+  const tags = p.tags ?? [];
+  // Demote wins over prefer: many products carry several tags (a Le Creuset is
+  // both 'kitchen' and 'luxury'), and an explicit "not on this page" signal
+  // should not be overridden by an incidental on-theme tag.
+  if (demote?.size && tags.some((t) => demote.has(t))) return s * AFFINITY_PENALTY;
+  if (prefer?.size && tags.some((t) => prefer.has(t))) return s * AFFINITY_BOOST;
+  return s;
+};
 
 // Collapse near-duplicate variants of the same product (e.g. two Le Creuset
 // dutch ovens, or a tumbler in two sizes) so a single guide never shows the same
@@ -97,10 +121,14 @@ export function curate(opts: CurateOpts): CompactProduct[] {
     recipientCap = 6,
     limit = 30,
     pool = RECIPIENT,
+    preferTags,
+    deprioritizeTags,
   } = opts;
 
   const exR = new Set(excludeRecipients);
   const exT = new Set(excludeTags);
+  const prefer = preferTags ? new Set(preferTags) : undefined;
+  const demote = deprioritizeTags ? new Set(deprioritizeTags) : undefined;
 
   const ranked = pool
     .filter(
@@ -112,7 +140,9 @@ export function curate(opts: CurateOpts): CompactProduct[] {
         match(p),
     )
     .sort((a, b) =>
-      sort === 'rating' ? b.rating - a.rating || b.reviewCount - a.reviewCount : score(b) - score(a),
+      sort === 'rating'
+        ? b.rating - a.rating || b.reviewCount - a.reviewCount
+        : score(b, prefer, demote) - score(a, prefer, demote),
     );
 
   const perRecipient: Record<string, number> = {};
