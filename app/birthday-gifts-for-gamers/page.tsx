@@ -206,6 +206,7 @@ export default function BirthdayGiftsForGamersPage() {
           <div className="flex flex-wrap gap-3">
             {[
               { href: '/category/gaming', label: 'All Gaming Gifts' },
+              { href: '/retro-gaming-gifts', label: 'Retro Gaming Gifts' },
               { href: '/best-birthday-gifts-2026', label: 'Best Birthday Gifts 2026' },
               { href: '/unique-birthday-gifts', label: 'Unique Birthday Gifts' },
               { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },

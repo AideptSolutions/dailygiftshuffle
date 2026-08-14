@@ -82,6 +82,8 @@ export default function Page() {
         { href: '/best-luxury-gifts-2026', label: 'Best Luxury Gifts 2026' },
         { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
         { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
+        { href: '/self-care-gifts-for-her', label: 'Self-Care Gifts for Her' },
+        { href: '/gifts-for-wife', label: 'Gifts for Your Wife' },
         { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
         { href: '/gifts-under-50', label: 'Gifts Under $50' },
       ]}

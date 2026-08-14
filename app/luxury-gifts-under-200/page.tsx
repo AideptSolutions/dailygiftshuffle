@@ -75,6 +75,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/luxury-gifts-under-50', label: 'Luxury Gifts Under $50' },
         { href: '/best-luxury-gifts-2026', label: 'Best Luxury Gifts 2026' },
         { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
         { href: '/gifts-under-100', label: 'Gifts Under $100' },

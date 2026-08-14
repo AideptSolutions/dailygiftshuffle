@@ -195,6 +195,7 @@ export default function GiftIdeasForKidsPage() {
             {[
               { href: '/gift-ideas-for-mom', label: 'Gift Ideas for Mom' },
               { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
+              { href: '/best-baby-shower-gifts-2026', label: 'Best Baby Shower Gifts 2026' },
               { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },
               { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },

@@ -72,6 +72,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides for Her"
       relatedLinks={[
+        { href: '/self-care-gifts-for-her', label: 'Self-Care Gifts for Her' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/best-luxury-gifts-2026', label: 'Best Luxury Gifts 2026' },
         { href: '/romantic-gifts-for-her', label: 'Romantic Gifts for Her' },

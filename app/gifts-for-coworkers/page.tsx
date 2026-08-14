@@ -233,6 +233,8 @@ export default function GiftsForCoworkersPage() {
           <div className="flex flex-wrap gap-3">
             {[
               { href: '/gifts-for-boss', label: 'Gifts for Boss' },
+              { href: '/gift-ideas-for-teachers', label: 'Gift Ideas for Teachers' },
+              { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
               { href: '/gifts-under-25', label: 'Gifts Under $25' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },

@@ -107,6 +107,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  // The interactive per-category shuffle pages are real, indexable pages, so
+  // submit them alongside the category browse pages.
+  const shuffleRoutes: MetadataRoute.Sitemap = NICHES.map((niche) => ({
+    url: `${BASE_URL}/shuffle/${niche}`,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
   const categoryRoutes: MetadataRoute.Sitemap = NICHES.map((niche) => ({
     url: `${BASE_URL}/category/${niche}`,
     changeFrequency: 'weekly' as const,
@@ -123,5 +131,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...recipientLandingPages,
     ...occasionBudgetLandingPages,
     ...categoryRoutes,
+    ...shuffleRoutes,
   ];
 }
