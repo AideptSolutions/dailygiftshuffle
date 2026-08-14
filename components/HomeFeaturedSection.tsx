@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { type Product, type Recipient, type BudgetTier, type NicheTag } from '@/data/products';
@@ -47,6 +47,19 @@ function PinIcon({ pinned }: { pinned: boolean }) {
       <path d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146zm0 1.042L5.975 5.607a.5.5 0 0 1-.326.279 4.93 4.93 0 0 0-1.232.315l4.383 4.382a4.93 4.93 0 0 0 .315-1.232.5.5 0 0 1 .279-.325l3.843-3.844-.642-.643-3.767 3.767-.47-.47 3.767-3.767-.643-.642zm-6.74 9.92.548-.548 1.445 1.445-.548.549-1.445-1.446z"/>
     </svg>
   );
+}
+
+// Duration of the shuffle "gather" beat; must match riffleGather in globals.css.
+const RIFFLE_MS = 260;
+
+// Cards gather toward the middle of the row, like a deck being squared up.
+function riffleVars(i: number, total: number): React.CSSProperties {
+  const mid = (total - 1) / 2;
+  const offset = mid === 0 ? 0 : (mid - i) / mid;
+  return {
+    '--riffle-x': `${offset * 90}px`,
+    '--riffle-r': `${-offset * 16}deg`,
+  } as React.CSSProperties;
 }
 
 // Lead the "examples" grid with genuinely gift-worthy items (skip sub-$25 checkout
@@ -197,6 +210,14 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
   const [count, setCount]           = useState(4);
   const [pinnedIds, setPinnedIds]   = useState<Set<string>>(new Set());
+  const [riffling, setRiffling]     = useState(false);
+  const prefersReduced = useRef(false);
+  const riffleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    prefersReduced.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return () => { if (riffleTimer.current) clearTimeout(riffleTimer.current); };
+  }, []);
 
   const togglePin = useCallback((id: string) => {
     setPinnedIds(prev => {
@@ -212,20 +233,27 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [budget,    setBudget]    = useState<BudgetTier | ''>('');
   const [error,     setError]     = useState('');
 
-  // Shuffle the N product cards
+  // Shuffle the N product cards, with the same "deck gathers, then deals" beat
+  // used on the guide pages (see InlineShuffle / riffleGather in globals.css).
   const handleShuffle = useCallback(() => {
-    setAnimating(false);
-    requestAnimationFrame(() => {
+    if (riffling) return; // ignore repeat clicks mid-animation
+    const commit = () => {
       const pinnedArr = Array.from(pinnedIds);
       const numNew = cards.filter(c => !pinnedIds.has(c.id)).length;
       const newPicks = numNew > 0 ? pickN(catalog, numNew, pinnedArr) : [];
       let newPickIdx = 0;
       const newCards = cards.map(c => pinnedIds.has(c.id) ? c : (newPicks[newPickIdx++] ?? c));
-      setCards(newCards);
-      setIsTrending(false);
-      requestAnimationFrame(() => setAnimating(true));
-    });
-  }, [catalog, cards, pinnedIds]);
+      setAnimating(false);
+      requestAnimationFrame(() => {
+        setCards(newCards);
+        setIsTrending(false);
+        requestAnimationFrame(() => setAnimating(true));
+      });
+    };
+    if (prefersReduced.current) { commit(); return; }
+    setRiffling(true);
+    riffleTimer.current = setTimeout(() => { setRiffling(false); commit(); }, RIFFLE_MS);
+  }, [catalog, cards, pinnedIds, riffling]);
 
   const handleCountChange = useCallback((newCount: number) => {
     setCount(newCount);
@@ -365,12 +393,18 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {cards.map((product, i) => (
+          {cards.map((product, i) => {
+            // Pinned cards hold their place while the rest gather, so the pin
+            // mechanic is visible during the shuffle.
+            const isRiffling = riffling && !pinnedIds.has(product.id);
+            return (
             <div
               key={product.id}
               onClick={() => setActiveProduct(product)}
-              className={`${animating ? 'tile-tumble' : 'opacity-0'} rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
-              style={{ background: '#F0F4F8', animationDelay: `${i * 65}ms` }}
+              className={`${isRiffling ? 'tile-riffle' : animating ? 'tile-tumble' : 'opacity-0'} rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col cursor-pointer`}
+              style={isRiffling
+                ? { background: '#F0F4F8', ...riffleVars(i, cards.length) }
+                : { background: '#F0F4F8', animationDelay: `${i * 85}ms` }}
             >
               {/* Image + save/pin buttons */}
               <div className="relative w-full h-28">
@@ -432,7 +466,8 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
                 Buy on Amazon
               </a>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-3">

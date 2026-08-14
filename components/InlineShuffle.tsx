@@ -10,7 +10,7 @@ interface Props {
 
 // How long the cards gather before the new set is revealed. Kept short so the
 // interaction still feels instant; must match riffleGather's duration in CSS.
-const RIFFLE_MS = 170;
+const RIFFLE_MS = 260;
 
 // Cards gather toward the middle of the row. Index 0 drifts right, the last
 // drifts left, so a 4-up row collapses like a deck being squared up.
@@ -18,8 +18,8 @@ function riffleVars(i: number, total: number): React.CSSProperties {
   const mid = (total - 1) / 2;
   const offset = mid === 0 ? 0 : (mid - i) / mid; // +1 (left card) .. -1 (right card)
   return {
-    '--riffle-x': `${offset * 42}px`,
-    '--riffle-r': `${-offset * 8}deg`,
+    '--riffle-x': `${offset * 90}px`,
+    '--riffle-r': `${-offset * 16}deg`,
   } as React.CSSProperties;
 }
 
@@ -133,7 +133,7 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
             <div
               key={p.id}
               className={riffling ? 'tile-riffle' : 'tile-tumble'}
-              style={riffling ? riffleVars(i, picks.length) : { animationDelay: `${i * 65}ms` }}
+              style={riffling ? riffleVars(i, picks.length) : { animationDelay: `${i * 85}ms` }}
             >
               <ProductCard
                 product={p}

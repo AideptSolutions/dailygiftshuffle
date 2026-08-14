@@ -43,11 +43,12 @@ body {
    would trigger uncached image loads and cause flashes).                    */
 @keyframes riffleGather {
   0%   { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
-  100% { transform: translate(var(--riffle-x, 0px), -12px) rotate(var(--riffle-r, 0deg)) scale(0.86); opacity: 0.12; }
+  45%  { transform: translate(calc(var(--riffle-x, 0px) * 0.55), -26px) rotate(calc(var(--riffle-r, 0deg) * 0.7)) scale(0.82); opacity: 0.85; }
+  100% { transform: translate(var(--riffle-x, 0px), -8px) rotate(var(--riffle-r, 0deg)) scale(0.55); opacity: 0; }
 }
 
 .tile-riffle {
-  animation: riffleGather 0.17s cubic-bezier(0.4, 0, 1, 1) both;
+  animation: riffleGather 0.26s cubic-bezier(0.55, 0, 0.65, 1) both;
   will-change: transform, opacity;
 }
 
