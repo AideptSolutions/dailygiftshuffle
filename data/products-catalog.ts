@@ -1351,22 +1351,6 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'just-because', 'mothers-day'],
   },
   {
-    id: 'pet-010',
-    name: 'Furbo 360 Dog Camera with Treat Toss',
-    description: 'Check in on your dog from anywhere. This smart camera streams 1080p HD video and lets you toss treats remotely, plus bark alerts go straight to your phone.',
-    price: 169,
-    priceDisplay: '$169',
-    image: '/images/products/pet-010.jpg',
-    rating: 4.4,
-    reviewCount: 18432,
-    affiliateUrl: 'https://www.amazon.com/Furbo-Subscription-Designed-Detection-Emergency/dp/B0BWN22T25?linkCode=ll2&tag=dailygiftshuf-20&linkId=ad660ae2639a99f68a7454b6bdb64940&language=en_US&ref_=as_li_ss_tl',
-    network: 'amazon',
-    recipients: ['pets', 'her', 'him', 'couples'],
-    budgetTier: '100to150',
-    tags: ['pets', 'tech'],
-    occasions: ['birthday', 'holiday', 'just-because'],
-  },
-  {
     id: 'pet-011',
     name: 'GoTags Personalized Stainless Steel Pet ID Tag',
     description: 'Laser-engraved stainless steel ID tag with your pet\'s name and your phone number. Silent, rust-proof, and comes in a dozen shapes. A simple gift with real everyday value.',
@@ -2240,7 +2224,6 @@ export const products: Product[] = [
   { id: 'kit-013', name: 'Cuisinart Air Fryer Toaster Oven (17L)', description: '7-in-1 countertop oven with air fry, convection bake, convection broil, bake, broil, warm, and toast functions. Large enough for a whole chicken.', price: 199, priceDisplay: '$199', image: '/images/products/kit-013.jpg', rating: 4.5, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/dp/B09HSWBTN4?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
   { id: 'kit-014', name: 'Smeg Retro Style Kettle (1.7L)', description: 'Iconic 50s style kettle in 11 pastel colors. 360ï¿1⁄2 base, keep-warm function, and a removable filter. The most beautiful kettle in any kitchen.', price: 149, priceDisplay: '$149', image: '/images/products/kit-014.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B0GFH1QM7T?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
   { id: 'kit-015', name: 'All-Clad D3 Stainless 10-Piece Cookware Set', description: 'Professional-grade tri-ply stainless steel cookware with bonded aluminum core for even heating. Oven and dishwasher safe. A kitchen investment that lasts decades.', price: 699, priceDisplay: '$699', image: '/images/products/kit-015.jpg', rating: 4.8, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B005H8KD3E?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['wedding', 'birthday', 'mothers-day', 'holiday'] },
-  { id: 'kit-016', name: 'Weber Spirit II E-310 Gas Grill', description: 'Three burner gas grill with 529 sq in of cooking space, iGrill 3 compatibility, and porcelain-enameled lid. The gold standard home grill.', price: 569, priceDisplay: '$569', image: '/images/products/kit-016.jpg', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/dp/B0DPH6NNTB?tag=dailygiftshuf-20', network: 'amazon', recipients: ['dad', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'hobby'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
   { id: 'kit-017', name: 'Aeropress Go Travel Coffee Maker', description: 'Make specialty coffee anywhere with this ultra-portable press system. Brews smooth, rich coffee in under two minutes with no grit, no bitterness.', price: 35, priceDisplay: '$35', image: '/images/products/kit-017.jpg', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/dp/B07YVL8SF3?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['birthday', 'mothersFathers', 'holiday', 'graduation'] },
 
   // More Home/DIY
@@ -2259,7 +2242,6 @@ export const products: Product[] = [
   { id: 'lux-010', name: 'Brooklinen Luxe Core Sheet Set (Queen)', description: 'The bestselling long-staple cotton sheets with a 480 thread count. Hotel-quality softness with a 365-night trial and lifetime warranty.', price: 149, priceDisplay: '$149', image: '/images/products/lux-010.jpg', rating: 4.7, reviewCount: 28941, affiliateUrl: 'https://www.amazon.com/dp/B0DDVKYYRC?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'him', 'couples', 'mom'], budgetTier: '100to150', tags: ['luxury', 'diy-tools'], occasions: ['birthday', 'wedding', 'anniversary', 'holiday', 'mothers-day'] },
 
   // More For Her
-  { id: 'her-006', name: 'Dyson Airwrap Multi-Styler Complete', description: 'Style hair without extreme heat using Coanda airflow. Curls, waves, volumizes, and dries in one tool. Comes with 6 attachments.', price: 599, priceDisplay: '$599', image: '/images/products/her-006.jpg', rating: 4.5, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/dp/B0B61XH5YT?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '100to150', tags: ['luxury', 'tech'], occasions: ['birthday', 'mothers-day', 'holiday', 'anniversary'] },
   { id: 'her-007', name: 'Mejuri Fine Jewelry ï¿1⁄2 Gold Hoops', description: 'Solid 14k gold small hoop earrings that go with everything. Fine jewelry at direct-to-consumer prices. Comes in a beautiful gift box.', price: 98, priceDisplay: '$98', image: '/images/products/her-007.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B0GTWMVDRB?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'holiday', 'anniversary'] },
   { id: 'her-008', name: 'Cuyana Classic Essential Tote', description: 'Investment-quality leather tote that gets better with age. Made in Italy from smooth vegetable-tanned leather with a magnetic closure.', price: 295, priceDisplay: '$295', image: '/images/products/her-008.jpg', rating: 4.7, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/dp/B01ANDTERS?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'mothers-day', 'holiday', 'graduation'] },
 
@@ -2278,7 +2260,6 @@ export const products: Product[] = [
   { id: 'mom-003', name: 'Weighted Blanket (15 lbs, 60"x80")', description: 'Therapeutic weighted blanket that reduces anxiety and improves sleep quality. Glass beads are evenly distributed in 100% cotton for natural warmth.', price: 79, priceDisplay: '$79', image: '/images/products/mom-003.jpg', rating: 4.6, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/dp/B0FMFDCWWS?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'him', 'teens'], budgetTier: '50to100', tags: ['fitness', 'luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'valentines'] },
 
   // More For Teens
-  { id: 'teen-004', name: 'Hydro Flask 32oz Wide Mouth ï¿1⁄2 Teen Edition', description: 'The waterproof, insulated water bottle that teens actually want. Keeps drinks cold 24 hours. Available in the trending Limited Edition colors.', price: 44, priceDisplay: '$44', image: '/images/products/teen-004.jpg', rating: 4.8, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/dp/B07YXM6XTF?tag=dailygiftshuf-20', network: 'amazon', recipients: ['teens', 'her', 'him'], budgetTier: '25to50', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
   { id: 'teen-005', name: 'Nike Air Force 1 07 Sneakers', description: 'The legendary basketball shoe that became a cultural icon. Premium leather upper, pivot circle on outsole, and foam midsole for all-day comfort.', price: 110, priceDisplay: '$110', image: '/images/products/teen-005.jpg', rating: 4.6, reviewCount: 89234, affiliateUrl: 'https://www.amazon.com/dp/B08QBCX7DP?tag=dailygiftshuf-20', network: 'amazon', recipients: ['teens', 'him', 'her'], budgetTier: '100to150', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
 
   // More For Kids
@@ -2527,22 +2508,6 @@ export const products: Product[] = [
     tags: ['beauty', 'fitness'],
     occasions: ['birthday', 'holiday', 'just-because'],
   },
-  {
-    id: 'bty-007',
-    name: 'Dyson Airwrap Multi-Styler Complete Long',
-    description: 'The iconic Dyson Airwrap uses a patented Coanda airflow to curl, wave, smooth, and dry hair simultaneously â€" no extreme heat damage. The ultimate beauty gift for any hair type.',
-    price: 599,
-    priceDisplay: '$599',
-    image: '/images/products/bty-007.jpg',
-    rating: 4.7,
-    reviewCount: 44600,
-    affiliateUrl: amz('B09F9JFBFY'),
-    network: 'amazon',
-    recipients: ['her', 'mom', 'friends', 'teens'],
-    budgetTier: '250plus',
-    tags: ['beauty', 'luxury'],
-    occasions: ['birthday', 'holiday', 'anniversary', 'graduation', 'mothers-day'],
-  },
 
 
   // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
@@ -2679,22 +2644,6 @@ export const products: Product[] = [
     budgetTier: '50to100',
     tags: ['wedding', 'kitchen', 'luxury'],
     occasions: ['wedding', 'anniversary'],
-  },
-  {
-    id: 'wedding-003',
-    name: 'Le Creuset Signature Cast Iron Dutch Oven (5.5 qt)',
-    description: 'The iconic heirloom-quality Dutch oven that couples dream of registering for. Available in stunning colors, it\'s a kitchen centerpiece they\'ll pass down for generations.',
-    price: 380,
-    priceDisplay: '$380',
-    image: '/images/products/wedding-003.jpg',
-    rating: 4.9,
-    reviewCount: 44800,
-    affiliateUrl: 'https://www.amazon.com/dp/B00VWMFLQI?tag=dailygiftshuf-20',
-    network: 'amazon',
-    recipients: ['couples', 'her', 'him'],
-    budgetTier: '250plus',
-    tags: ['wedding', 'kitchen', 'luxury', 'home'],
-    occasions: ['wedding', 'anniversary', 'housewarming'],
   },
   {
     id: 'wedding-004',
@@ -7265,13 +7214,11 @@ export const products: Product[] = [
   { id: 'her3-ugg-tasman', name: 'UGG Tasman Slipper', description: 'The everywhere slipper of the moment, cozy suede with a signature braided trim.', price: 129.99, priceDisplay: '$129.99', image: '/images/products/her3-ugg-tasman.jpg', rating: 4.7, reviewCount: 1000, affiliateUrl: 'https://www.amazon.com/dp/B0C1HTHG9S?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'teens'], budgetTier: '100to150', tags: ['home'], occasions: ['birthday', 'holiday'] },
   { id: 'her3-blissy-pillowcase', name: 'Blissy Mulberry Silk Pillowcase', description: 'Pure mulberry silk pillowcase that is gentler on skin and hair, a small everyday luxury.', price: 109.95, priceDisplay: '$109.95', image: '/images/products/her3-blissy-pillowcase.jpg', rating: 4.8, reviewCount: 1200, affiliateUrl: 'https://www.amazon.com/dp/B0BBSSRNHM?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '100to150', tags: ['home', 'luxury', 'beauty'], occasions: ['birthday', 'holiday'] },
   { id: 'her3-charlotte-pillowtalk', name: 'Charlotte Tilbury Pillow Talk Lip Kit', description: 'The iconic Pillow Talk lip kit pairing the universally flattering nude-pink lipstick with its matching liner, a beauty cult favorite.', price: 37, priceDisplay: '$37.00', image: '/images/products/her3-charlotte-pillowtalk.jpg', rating: 4.6, reviewCount: 14000, affiliateUrl: 'https://www.amazon.com/dp/B0848Y5D4B?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her'], budgetTier: '25to50', tags: ['beauty', 'luxury'], occasions: ['birthday', 'holiday', 'valentines'] },
-  { id: 'her3-pandora-bracelet', name: 'Pandora Moments Snake Chain Bracelet', description: 'The collectible charm bracelet she can build on for years, a gift that keeps giving.', price: 80, priceDisplay: '$80.00', image: '/images/products/her3-pandora-bracelet.jpg', rating: 4.3, reviewCount: 506, affiliateUrl: 'https://www.amazon.com/dp/B0BM4XYG8B?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'teens'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'holiday', 'valentines'] },
   { id: 'lux3-ysl-libre', name: 'Yves Saint Laurent Libre Eau de Parfum', description: 'A bold lavender-and-orange-blossom designer fragrance and one of the most gifted scents in beauty.', price: 110, priceDisplay: '$110.00', image: '/images/products/lux3-ysl-libre.jpg', rating: 4.7, reviewCount: 74000, affiliateUrl: 'https://www.amazon.com/dp/B07X1YGWSX?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her'], budgetTier: '100to150', tags: ['beauty', 'luxury'], occasions: ['birthday', 'holiday', 'valentines'] },
   { id: 'lux3-tory-burch-wallet', name: 'Tory Burch Robinson Leather Wallet', description: 'Sleek saffiano leather wallet with the signature double-T, luxe without being flashy.', price: 100, priceDisplay: '$100.00', image: '/images/products/lux3-tory-burch-wallet.jpg', rating: 4.8, reviewCount: 18, affiliateUrl: 'https://www.amazon.com/dp/B099K4B5P8?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'holiday'] },
   { id: 'lux3-kendra-scott', name: 'Kendra Scott Elisa Pendant Necklace', description: 'The signature dainty stone pendant that goes with everything, a reliable fine-jewelry win.', price: 95, priceDisplay: '$95.00', image: '/images/products/lux3-kendra-scott.jpg', rating: 4.2, reviewCount: 715, affiliateUrl: 'https://www.amazon.com/dp/B00O7FNWGS?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'holiday', 'valentines'] },
   { id: 'lux3-slip-silk-pillowcase', name: 'Slip Pure Silk Queen Pillowcase', description: 'The original luxury silk pillowcase, gentle on skin and hair and a genuine bedroom upgrade.', price: 74.97, priceDisplay: '$74.97', image: '/images/products/lux3-slip-silk-pillowcase.jpg', rating: 4.7, reviewCount: 4400, affiliateUrl: 'https://www.amazon.com/dp/B078P5F988?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '50to100', tags: ['home', 'luxury', 'beauty'], occasions: ['birthday', 'holiday'] },
   { id: 'lux3-longchamp-tote', name: 'Longchamp Le Pliage Tote Bag', description: 'The iconic foldable French tote, elegant and practical for work, travel and everyday.', price: 180, priceDisplay: '$180.00', image: '/images/products/lux3-longchamp-tote.jpg', rating: 4.8, reviewCount: 1100, affiliateUrl: 'https://www.amazon.com/dp/B01MZ0J5MN?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her'], budgetTier: '150to250', tags: ['luxury', 'travel'], occasions: ['birthday', 'holiday'] },
-  { id: 'lux3-ray-ban-aviator', name: 'Ray-Ban Aviator Classic Sunglasses', description: 'Timeless aviators that never go out of style, a luxury staple for anyone.', price: 244, priceDisplay: '$244.00', image: '/images/products/lux3-ray-ban-aviator.jpg', rating: 4.7, reviewCount: 29000, affiliateUrl: 'https://www.amazon.com/dp/B07TRQHQ6L?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'him'], budgetTier: '150to250', tags: ['luxury'], occasions: ['birthday', 'holiday'] },
   { id: 'lux3-mvmt-watch', name: 'MVMT Nova Women\'s Minimalist Watch', description: 'A clean minimalist watch with a premium look and a mid-range price, easy to gift.', price: 178, priceDisplay: '$178.00', image: '/images/products/lux3-mvmt-watch.jpg', rating: 4.5, reviewCount: 562, affiliateUrl: 'https://www.amazon.com/dp/B0H2MM4H43?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her'], budgetTier: '150to250', tags: ['luxury'], occasions: ['birthday', 'holiday'] },
   { id: 'lux3-swarovski-necklace', name: 'Swarovski Angelic Crystal Necklace', description: 'A sparkling crystal pendant with real luxury-brand cachet at an approachable price.', price: 159, priceDisplay: '$159.00', image: '/images/products/lux3-swarovski-necklace.jpg', rating: 4.7, reviewCount: 35, affiliateUrl: 'https://www.amazon.com/dp/B0D8R6248L?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her'], budgetTier: '150to250', tags: ['luxury'], occasions: ['birthday', 'holiday', 'valentines'] },
   { id: 'lux3-diptyque-baies', name: 'Diptyque Baies Scented Candle', description: 'The famous blackcurrant-and-rose candle, the gold standard of luxury home fragrance.', price: 90, priceDisplay: '$90.00', image: '/images/products/lux3-diptyque-baies.jpg', rating: 4.7, reviewCount: 377, affiliateUrl: 'https://www.amazon.com/dp/B00429KMH6?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '50to100', tags: ['luxury', 'home'], occasions: ['birthday', 'holiday'] },
