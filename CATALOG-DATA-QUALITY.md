@@ -98,6 +98,57 @@ review count, and prices stay untouched.
 
 ---
 
+## Dead links (delisted products)
+
+`scripts/check-dead-links.mjs`. A delisted ASIN still renders a normal product
+card, still gets clicked, and earns nothing.
+
+**Do not "simplify" this into a fetch loop.** Amazon serves its bot-check to
+scripted requests as a **200 with no not-found marker**, so the obvious
+implementation reports "all alive" forever. Measured 2026-08-14:
+
+| Request | Dead ASIN | Live ASIN |
+|---|---|---|
+| `GET /dp/{asin}` | 200, 3781 bytes, bot-check | identical |
+| `HEAD /dp/{asin}` | 200, empty | identical |
+| `HEAD /gp/aw/d/{asin}` | 405 | 405 |
+
+Only two signals work: the **Creators API** (an ASIN it does not return is
+delisted) and **same-origin fetch from a real signed-in tab**.
+
+Every run self-validates against canary ASINs of known state and **aborts**
+rather than report anything if they classify wrong, because a false "dead"
+verdict would replace a good link. Ambiguous responses are `unknown` and re-run,
+never reported dead. Exit 1 on broken detection, 0 on a healthy run.
+
+    node scripts/check-dead-links.mjs --via-api        # preferred, once eligible
+    node scripts/check-dead-links.mjs --emit           # browser snippet
+    node scripts/check-dead-links.mjs --ingest <file>  # report
+
+### Suggested cadence
+
+Measured against this catalog, the three fields decay very differently:
+
+- **Review counts barely matter.** Ranking is `rating x log10(reviews)`, so even
+  +25% growth (a year-plus) shifts scores at most 4.7% and keeps 35/40 of a
+  page's top 40. 533 entries have 10k+ reviews and are effectively frozen.
+  Refreshing these on a schedule is close to pure waste.
+- **Ratings are a cliff, not a slope.** `minRating: 4.5` means a -0.1 drift
+  silently removes a product from every guide. **149 entries sit in 4.5-4.6.**
+- **Dead links cost the most** and are the cheapest thing to watch.
+
+| Check | Cadence | Scope |
+|---|---|---|
+| Dead links | monthly | all ASINs |
+| Rating-cliff watch | 6-8 weeks | ~204 (the 4.5-4.6 band + sub-500-review entries) |
+| Full data refresh | wait for the API | - |
+| New products | at intake, always | - |
+
+Prefer prioritising by the `clicks:ranking` Redis sorted set once there is click
+history: the products that actually earn deserve accuracy, the long tail does not.
+
+---
+
 ## Verifying an ASIN is the right product
 
 Always read the **actual Amazon page title**. Word-overlap scoring is not
