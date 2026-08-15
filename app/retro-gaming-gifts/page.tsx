@@ -28,7 +28,12 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
 };
 
-const RETRO = /retro|arcade|\bnes\b|snes|8-?bit|16-?bit|pixel|tetris|pac-?man|cartridge|game ?boy|atari/i;
+// Deliberately narrow, and matched against the product NAME. Widening it to
+// character names is what breaks it: adding 'mario' pulls in Mario Badescu
+// facial spray, and 'sonic' pulls in a Dyson Supersonic hair dryer. Only
+// console and hardware terms are safe here, and each was checked against the
+// full catalog for false positives before being added.
+const RETRO = /retro|arcade|\bnes\b|snes|8-?bit|16-?bit|pixel|tetris|pac-?man|cartridge|game ?boy|atari|sega|famicom|neo ?geo|nintendo entertainment system/i;
 const match = (p: { tags?: string[]; name?: string }) =>
   !!p.tags?.includes('gaming') && RETRO.test(p.name ?? '');
 const grid = curate({ match, minRating: 4.3, sort: 'social', recipientCap: 30, limit: 30, pool: ALL });

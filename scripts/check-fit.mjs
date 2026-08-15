@@ -15,7 +15,10 @@ const PAGES = [
   ['/gifts-for-teenage-girls',   /jump start|drill|tool kit|whiskey|wine|bourbon|decanter|beard|retirement|denture/i],
   ['/gifts-for-teenage-boys',    /lip mask|blush|mascara|eau de parfum|whiskey|wine|bourbon|decanter|retirement|scrunchie/i],
   ['/gift-ideas-for-kids',       /whiskey|wine|bourbon|decanter|beard|razor|perfume|knife|retirement|jump start/i],
-  ['/best-gaming-gifts-2026',    /lip mask|blush|perfume|skincare|candle|blanket|teddy|whiskey|garden|cookware/i],
+  // 'blanket' catches a generic cozy throw wandering onto a gaming page, but a
+  // gamer-branded one belongs here, so anything explicitly gaming-themed is
+  // exempted first.
+  ['/best-gaming-gifts-2026',    /^(?!.*(gamer|gaming|arcade|pixel|retro|controller|console))(?=.*(lip mask|blush|p[ae]rfum|skincare|candle|blanket|teddy|whiskey|garden|cookware))/i],
   ['/best-beauty-gifts-2026',    /controller|headset|drill|knife|jump start|hammock|dog|cat toy|webcam|speaker/i],
   ['/self-care-gifts',           /controller|gaming|drill|jump start|knife|webcam|jerky|hot sauce/i],
   ['/gifts-for-crafters',        /controller|gaming headset|jump start|whiskey|jerky|perfume|blush/i],
