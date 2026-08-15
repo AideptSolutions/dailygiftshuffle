@@ -28,3 +28,28 @@ for (const [k, v] of dupes.slice(0, 25)) {
   console.log(`[${k}]  x${v.length}`);
   v.forEach((p) => console.log(`    ${p.id.padEnd(28)} ${p.name.slice(0, 52)}`));
 }
+
+// Second, stronger pass: two entries pointing at the SAME Amazon ASIN are the
+// same product by definition, whatever their names say. Name matching misses
+// these because the copy was written separately for each entry.
+const asinOf = (block) =>
+  (block.match(/\/dp\/([A-Z0-9]{10})/) || block.match(/amz\(\s*'([A-Z0-9]{10})'/) || [, null])[1];
+
+const byAsin = {};
+for (const f of ['data/products.ts', 'data/products-catalog.ts']) {
+  const t = readFileSync(f, 'utf8');
+  const idMatches = [...t.matchAll(/id:\s*'((?:[^'\\]|\\.)*)'/g)];
+  for (let i = 0; i < idMatches.length; i++) {
+    const block = t.slice(idMatches[i].index, i + 1 < idMatches.length ? idMatches[i + 1].index : t.length);
+    const a = asinOf(block);
+    if (!a) continue;
+    const nm = (block.match(/name:\s*'((?:[^'\\]|\\.)*)'/) || [, ''])[1];
+    (byAsin[a] = byAsin[a] || []).push({ id: idMatches[i][1], name: nm });
+  }
+}
+const asinDupes = Object.entries(byAsin).filter(([, v]) => v.length > 1);
+console.log(`\n\nsame-ASIN duplicate groups (definitive): ${asinDupes.length}`);
+for (const [a, v] of asinDupes) {
+  console.log(`[${a}]  x${v.length}`);
+  v.forEach((p) => console.log(`    ${p.id.padEnd(30)} ${p.name.slice(0, 50)}`));
+}

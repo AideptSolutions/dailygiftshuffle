@@ -3,6 +3,20 @@
 // image (Serper images, self-hosted). Outputs enriched JSON for review before
 // the Product objects are assembled into data/products.ts.
 //
+// !! WARNING: rating / reviewCount / price from this script are NOT Amazon data.
+//
+// Amazon does not feed Google Shopping, so the `shopping` endpoint below never
+// returns an Amazon listing. The `amazonRes` lookup nearly always misses and the
+// code falls through to `rated || list[0]`, i.e. Walmart, Target or whoever else
+// sells the item. That silently put merchant numbers on 205 catalog entries: the
+// Mario Badescu mist set was stored as 5 reviews when Amazon shows 19,626, and
+// because guides rank by rating x log10(reviewCount), those picks were buried.
+//
+// The ASIN and image from this script are fine. For rating/reviewCount/price,
+// use scripts/amazon-live-data.mjs (reads the real product page) and apply with
+// scripts/apply-review-fix.mjs. The durable fix is the Amazon Product
+// Advertising API once the Associates account qualifies.
+//
 // Input:  scripts/_new-products.json  = [{ id, name }, ...]
 // Output: scripts/_enriched.json + downloaded images at public/images/products/{id}.jpg
 // Usage:  node scripts/enrich-products.mjs
