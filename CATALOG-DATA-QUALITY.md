@@ -65,11 +65,36 @@ Apply with: `node scripts/apply-review-fix.mjs --write`.
 `apply-review-fix.mjs` only rewrites entries whose stored reviewCount is under
 1000 (the merchant-feed tell), so re-running it is a no-op.
 
-**Prices are still unsolved.** The same page scrape returns per-unit and
+**Prices are still unsolved by scraping.** The page scrape returns per-unit and
 promotional figures (it read $0.31 for a Dr Teal's gift set and $2.22 for a
-CeraVe duo). Do not bulk-update prices from search or scrape data. The durable
-fix for prices *and* ratings is the **Amazon Product Advertising API**, which
-needs the Associates account to have 3 qualifying sales in 180 days.
+CeraVe duo). Do not bulk-update prices from search or scrape data.
+
+---
+
+## Amazon Creators API (the durable fix, built and waiting)
+
+The Creators API replaces PA-API 5 (deprecated) and is the authoritative source
+for price, rating, review count and images.
+
+    scripts/lib/creators-api.mjs       auth + GetItems, batches of 10
+    scripts/refresh-catalog-data.mjs   diff/apply across both catalogs
+    node scripts/refresh-catalog-data.mjs --check    readiness probe
+
+Credentials live in `.env.all` (gitignored): `AMAZON_CREATORS_CLIENT_ID`,
+`AMAZON_CREATORS_CLIENT_SECRET`, `AMAZON_CREATORS_VERSION`,
+`AMAZON_PARTNER_TAG`. The version selects the Login with Amazon token host
+(3.1 NA `api.amazon.com`, 3.2 EU `api.amazon.co.uk`, 3.3 FE `api.amazon.co.jp`);
+the API host `https://creatorsapi.amazon` is the same everywhere.
+
+**Status 2026-08-14: authenticating, but not yet returning data.** `GetItems`
+responds `403 AssociateNotEligible`. Amazon requires **at least 10 qualifying
+sales in the past 30 days** before it serves product data. This is stricter than
+the old PA-API 5 rule of 3 sales in 180 days - do not rely on the older figure.
+The credential is valid and nothing needs changing; re-run `--check` once sales
+qualify, then `refresh-catalog-data.mjs --write`.
+
+Until then the browser procedure above remains the working source for rating and
+review count, and prices stay untouched.
 
 ---
 
@@ -127,7 +152,8 @@ and one more), and **4 ASINs that now 404** on Amazon (dead product links).
 - [ ] Re-source the 13 entries still on search links
 - [ ] Review the 21 entries with under 150 real reviews (thin social proof for a
       "top-rated" guide) and the 7 rated below 4.0
-- [ ] Amazon Product Advertising API for trustworthy prices + scheduled refresh
+- [ ] Creators API: blocked on eligibility (10 qualifying sales / 30 days). Client
+      is built; run `refresh-catalog-data.mjs --check` to retest, then `--write`
 - [ ] 52 enriched sweep candidates (wedding/baby-shower/travel/kids/pets/sports/
       gardening) are on hold pending trustworthy numbers; images already
       downloaded to `public/images/products/`

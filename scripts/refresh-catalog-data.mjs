@@ -51,14 +51,35 @@ for (const f of FILES) {
 console.log(`catalog entries with an ASIN: ${entries.length}`);
 
 if (CHECK) {
+  // Auth and data access are separate gates: the credential can be valid while
+  // the Associates account is not yet eligible to read product data, so probe
+  // both rather than reporting success on a token alone.
   try {
     await getAccessToken();
-    console.log('credentials OK - access token obtained');
+    console.log('auth:  OK - access token obtained');
   } catch (e) {
-    console.error(`credential check FAILED: ${e.message}`);
-    process.exit(1);
+    console.error(`auth:  FAILED - ${e.message}`);
+    process.exitCode = 1;
   }
-  process.exit(0);
+  try {
+    const { getItems } = await import('./lib/creators-api.mjs');
+    const probe = await getItems(['B00FLYWNYQ']);
+    console.log(`data:  OK - returned ${probe.items.length} item(s)`);
+  } catch (e) {
+    const msg = String(e.message || e);
+    if (/AssociateNotEligible/.test(msg)) {
+      console.error('data:  NOT ELIGIBLE YET - Amazon requires at least 10 qualifying');
+      console.error('       sales in the past 30 days before the API returns product data.');
+      console.error('       The credential itself is fine; re-run this once sales qualify.');
+    } else {
+      console.error(`data:  FAILED - ${msg.slice(0, 200)}`);
+    }
+    process.exitCode = 1;
+  }
+  // Let stdio flush before exiting; exiting immediately trips a libuv assertion
+  // on Windows while handles are still closing.
+  await new Promise((r) => setTimeout(r, 50));
+  process.exit(process.exitCode ?? 0);
 }
 
 // --- fetch ------------------------------------------------------------------
