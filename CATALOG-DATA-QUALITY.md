@@ -136,22 +136,53 @@ Two detectors, both in `scripts/find-duplicate-products.mjs`:
    positives that must be kept: Echo Dot vs Show 5 vs Show 8, Bose headphones vs
    earbuds, Switch OLED vs Lite, Instant Pot 6qt vs 8qt.
 2. **Same ASIN** — definitive; two entries on one ASIN are one product whatever
-   the copy says. Finds 28 groups name matching missed (4x Elgato Stream Deck,
-   3x Instant Pot, 3x Star Map). **Not yet cleaned up.**
+   the copy says. Found 28 groups name matching missed (4x Elgato Stream Deck,
+   3x Instant Pot, 3x Star Map, 3x Logitech G502). Cleaned up 2026-08-14:
+   **37 entries removed, catalog 940 -> 903.**
 
-Also outstanding: **4 ids reused** by different products across the two catalog
-files (`college-mini-fridge`, `college-string-lights`, `college-electric-kettle`,
-and one more), and **4 ASINs that now 404** on Amazon (dead product links).
+When collapsing a group, **merge before you delete**. Duplicates rarely carry the
+same metadata (the two Laneige entries disagreed on `mom` / `mothersFathers`), so
+deleting the loser outright silently drops the product from pages only the loser
+reached. Each keeper absorbs the union of the removed entries' recipients, tags
+and occasions first — 21 keepers gained coverage that way.
+
+The two files do **not** share a vocabulary, so merged values must be mapped:
+
+| products.ts | products-catalog.ts |
+|---|---|
+| `justBecause` | `just-because` |
+| `mothersFathers` | `mothers-day` (and `mothersFathers`) |
+| `weddingHousewarming` | `wedding`, `housewarming` |
+| `brother`, `sister`, `streamers`, `myself-her/him` | *(no equivalent — dropped)* |
+| *(no equivalent)* | `baby-shower` |
+
+Duplicates also disagreed on their numbers (one Star Map claimed 14,300 reviews,
+another 858; Amazon says 858), so keepers were set from live pages. That exposed
+bad data **above** the 1000-review line that `apply-review-fix.mjs` deliberately
+skips: the Stream Deck's real count is 774 (stored 28,700) and the Anker 737's is
+259 (stored 41,203). **Entries with fake-high counts are still uncorrected.**
+
+Also resolved: 4 reused ids (two overlapping `college-*` import batches) and
+5 dead links — 4 re-pointed to verified ASINs, plus a Ring doorbell pair that was
+both duplicated *and* 404, folded into the live `smart-ring-doorbell` entry.
 
 ---
 
 ## Open items
 
-- [ ] Clean up the 28 same-ASIN duplicate groups
-- [ ] Resolve the 4 duplicate ids and 4 dead (404) ASINs
+- [x] Clean up the same-ASIN duplicate groups (37 removed, 2026-08-14)
+- [x] Resolve the duplicate ids and dead (404) ASINs (2026-08-14)
 - [ ] Re-source the 13 entries still on search links
 - [ ] Review the 21 entries with under 150 real reviews (thin social proof for a
       "top-rated" guide) and the 7 rated below 4.0
+- [ ] Verify rating/reviewCount for the ~735 entries **above** 1000 reviews.
+      apply-review-fix.mjs skips them by design, but spot checks found several
+      badly wrong (Stream Deck 28,700 -> 774). The Creators API refresh covers
+      this in one pass once eligible; until then it needs the browser procedure.
+- [ ] Re-source `college-owala-bottle`: its ASIN is a single colorway rated
+      3.9, so the product now drops below the 4.5 guide threshold. The main
+      Owala FreeSip listing rates far higher. Same for the Brooklinen sheets
+      (real 3.8).
 - [ ] Creators API: blocked on eligibility (10 qualifying sales / 30 days). Client
       is built; run `refresh-catalog-data.mjs --check` to retest, then `--write`
 - [ ] 52 enriched sweep candidates (wedding/baby-shower/travel/kids/pets/sports/
