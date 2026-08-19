@@ -6,7 +6,8 @@
     "dev": "next dev -p 3334",
     "build": "next build",
     "start": "next start -p 3334",
-    "lint": "next lint"
+    "lint": "next lint",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.36.4",

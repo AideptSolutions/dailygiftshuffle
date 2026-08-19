@@ -61,3 +61,21 @@ Product/hero images come from a provider-agnostic SERP pipeline, NOT the Amazon
 PA-API. See `scripts/lib/image-search.mjs`, `scripts/fetch-real-images.mjs`, and
 `scripts/build-review-sheet.mjs`. Ranking excludes Amazon-hosted images
 (Associates ToS) and prefers clean retailer/brand shots. Keys live in `.env.all`.
+
+## After a content deploy: ping IndexNow
+
+    npm run indexnow                    # all sitemap URLs
+    npm run indexnow -- /retro-gaming-gifts   # just what changed
+
+IndexNow pushes to Bing, Yandex, Seznam and Naver immediately instead of waiting
+to be recrawled. This matters more than it looks: **ChatGPT search grounds on
+Bing's index**, so a stale Bing copy means answer engines read an old version of
+pages whose whole advantage is their structured data.
+
+The key file must stay live at `/075328b6e1bfb8beae94027dab866fe3.txt`
+(`public/` in this repo) or submissions are rejected. Google does not use
+IndexNow; it still needs the sitemap and Search Console.
+
+This was manual-only from March to August 2026 and was never run, so every
+catalog fix in that window went unannounced. Run it whenever products or pages
+change.
