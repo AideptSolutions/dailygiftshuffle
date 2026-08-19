@@ -53,9 +53,12 @@ for (const f of ['data/products.ts', 'data/products-catalog.ts']) {
     const curC = Number((block.match(/reviewCount:\s*(\d+)/) || [, 0])[1]);
     checked++;
 
-    // Only correct entries that actually look merchant-sourced. Leave the
-    // hand-entered Amazon figures (already in the tens of thousands) alone.
-    if (curC >= 1000) { unchanged++; continue; }
+    // Originally this skipped entries at or above 1000 reviews, on the theory
+    // that a high count meant a real Amazon figure. That turned out to be
+    // wrong: the Stream Deck stored 28,700 against a real 774, and the Anker
+    // 41,203 against 259. Anything present in amazon-live.csv has been read off
+    // the live product page, so it now wins outright whatever the stored value.
+    if (String(d.r) === String(curR) && Number(d.c) === curC) { unchanged++; continue; }
 
     const newR = Number(d.r), newC = Number(d.c);
     if (!Number.isFinite(newR) || !Number.isFinite(newC) || newC <= 0) { skippedNoData++; continue; }
