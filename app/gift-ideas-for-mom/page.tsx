@@ -35,7 +35,7 @@ const match = (p: { recipients?: string[] }) => !!p.recipients?.includes('mom');
 // Mom's buyer is usually a son, daughter or husband. Favour gift-shaped
 // categories and keep garage/auto/tool items out of a gift guide for mom.
 const PREFER = ['beauty', 'luxury', 'home', 'fitness', 'kitchen'];
-const DEPRIORITIZE = ['car-accessories', 'diy-tools', 'gaming', 'finance', 'outdoors'];
+const DEPRIORITIZE = ['car-accessories', 'ai-smart-home', 'diy-tools', 'gaming', 'finance', 'outdoors'];
 
 const grid = curate({
   match,

@@ -36,7 +36,7 @@ const match = (p: { recipients?: string[] }) =>
 // affinity applies: gift-shaped categories first, utility categories behind.
 const STANDOUT = /kindle|airpods|apple watch|sonos|bose|beats|instax|polaroid|nespresso|espresso machine|dyson/i;
 const isStandout = (p: { name?: string }) => !!p.name && STANDOUT.test(p.name);
-const DEPRIORITIZE = ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'];
+const DEPRIORITIZE = ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'ai-smart-home', 'outdoors', 'gaming', 'office', 'finance', 'sports'];
 
 const grid = curate({
   match,
