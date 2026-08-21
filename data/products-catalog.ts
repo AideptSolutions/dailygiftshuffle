@@ -1,5 +1,5 @@
-﻿// ============================================================
-// DailyGiftShuffle â€" Master Product Catalog (300 products)
+// ============================================================
+// DailyGiftShuffle - Master Product Catalog (300 products)
 // Affiliate URLs: swap AMAZON_TAG with your Associates tag
 // e.g. "giftshuffle-20"
 // Non-Amazon links: swap IMPACT_TAG, SHAREASALE_TAG, etc.
@@ -67,9 +67,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'graduation', 'just-because', 'holiday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // TECH & GADGETS (30)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'tech-001',
     name: 'Apple AirPods Pro (2nd Gen)',
@@ -147,7 +147,7 @@ export const products: Product[] = [
     network: 'amazon',
     recipients: ['him', 'her', 'dad', 'friends'],
     budgetTier: '50to100',
-    tags: ['tech', 'office', 'finance'],
+    tags: ['tech', 'office'],
     occasions: ['birthday', 'graduation', 'holiday'],
   },
     {
@@ -263,9 +263,9 @@ export const products: Product[] = [
     occasions: ['mothersFathers', 'mothers-day', 'birthday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FITNESS & BIOHACKING (25)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
     {
     id: 'fit-002',
     name: 'Hydro Flask 32oz Wide Mouth Bottle',
@@ -443,13 +443,13 @@ export const products: Product[] = [
     occasions: ['birthday', 'graduation', 'just-because'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // KITCHEN & COOKING (25)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
     {
     id: 'kit-002',
     name: 'Lodge 12" Cast Iron Skillet',
-    description: 'Pre-seasoned cast iron that gets better with every cook. Works on any heat source â€" stovetop, oven, grill, campfire. Lasts a lifetime.',
+    description: 'Pre-seasoned cast iron that gets better with every cook. Works on any heat source - stovetop, oven, grill, campfire. Lasts a lifetime.',
     price: 34,
     priceDisplay: '$34',
     image: '/images/products/kit-002.jpg',
@@ -513,7 +513,7 @@ export const products: Product[] = [
   {
     id: 'kit-006',
     name: 'Breville Barista Express Espresso Machine',
-    description: 'Grind-to-cup espresso at home with a built-in conical burr grinder. Precise espresso extraction and microfoam milk texturing for cafÃ©-quality drinks.',
+    description: 'Grind-to-cup espresso at home with a built-in conical burr grinder. Precise espresso extraction and microfoam milk texturing for café-quality drinks.',
     price: 699,
     priceDisplay: '$699',
     image: '/images/products/kit-006.jpg',
@@ -529,7 +529,7 @@ export const products: Product[] = [
     {
     id: 'kit-008',
     name: 'Staub 5.5 Qt Cast Iron Cocotte',
-    description: 'Handcrafted in France, this enameled cast iron dutch oven distributes heat evenly for perfect braising and slow cooking. Oven safe to 900Â°F.',
+    description: 'Handcrafted in France, this enameled cast iron dutch oven distributes heat evenly for perfect braising and slow cooking. Oven safe to 900°F.',
     price: 349,
     priceDisplay: '$349',
     image: '/images/products/kit-008.jpg',
@@ -607,9 +607,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'mothers-day', 'housewarming', 'just-because'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // HOME IMPROVEMENT & DIY (20)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'diy-001',
     name: 'DEWALT 20V MAX Cordless Drill Driver Set',
@@ -723,9 +723,9 @@ export const products: Product[] = [
     occasions: ['mothersFathers', 'birthday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // OFFICE & PROFESSIONAL (20)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'off-001',
     name: 'Ergonomic Mesh Office Chair',
@@ -739,7 +739,7 @@ export const products: Product[] = [
     network: 'amazon',
     recipients: ['him', 'her', 'dad', 'mom', 'friends'],
     budgetTier: '100to150',
-    tags: ['office', 'finance'],
+    tags: ['office'],
     occasions: ['birthday', 'holiday', 'graduation'],
   },
   {
@@ -855,9 +855,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'graduation'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // LUXURY & PREMIUM (20)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'lux-001',
     name: 'Cashmere V-Neck Sweater',
@@ -939,9 +939,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'anniversary', 'housewarming'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // PARENTING & BABY (20)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
     {
     id: 'par-002',
     name: 'Nanit Pro Baby Monitor',
@@ -1055,13 +1055,13 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // PETS (20)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'pet-001',
-    name: 'Furbo 360Â° Dog Camera with Treat Toss',
-    description: 'Check on your dog from anywhere with 360Â° HD video and night vision. Toss treats remotely and get bark alerts on your phone.',
+    name: 'Furbo 360° Dog Camera with Treat Toss',
+    description: 'Check on your dog from anywhere with 360° HD video and night vision. Toss treats remotely and get bark alerts on your phone.',
     price: 169,
     priceDisplay: '$169',
     image: '/images/products/pet-001.jpg',
@@ -1141,7 +1141,7 @@ export const products: Product[] = [
   {
     id: 'pet-007',
     name: 'West Paw Zogoflex Tux Stuffable Dog Toy',
-    description: 'Award-winning stuffable toy made in the USA from non-toxic materials. Dishwasher safe and guaranteed tough â€" they\'ll replace it if destroyed.',
+    description: 'Award-winning stuffable toy made in the USA from non-toxic materials. Dishwasher safe and guaranteed tough - they\'ll replace it if destroyed.',
     price: 19,
     priceDisplay: '$19',
     image: '/images/products/pet-007.jpg',
@@ -1171,15 +1171,15 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'just-because'],
   },
 
-  // ─────────────────────────────────────────────
-  // PETS — additional (pet-009 to pet-018)
-  // ─────────────────────────────────────────────
+  // ------------------------------------------------------------
+  // PETS - additional (pet-009 to pet-018)
+  // ------------------------------------------------------------
   {
     id: 'pet-009',
     name: 'Custom Pet Portrait Canvas Print',
     description: 'Turn your pet into a work of art. Upload a photo and receive a hand-style painted canvas portrait that fits any home decor. A personalized keepsake pet owners actually display.',
     price: 45,
-    priceDisplay: '$35–75',
+    priceDisplay: '$35-75',
     image: '/images/products/pet-009.jpg',
     rating: 4.7,
     reviewCount: 3241,
@@ -1195,7 +1195,7 @@ export const products: Product[] = [
     name: 'GoTags Personalized Stainless Steel Pet ID Tag',
     description: 'Laser-engraved stainless steel ID tag with your pet\'s name and your phone number. Silent, rust-proof, and comes in a dozen shapes. A simple gift with real everyday value.',
     price: 12,
-    priceDisplay: '$10–15',
+    priceDisplay: '$10-15',
     image: '/images/products/pet-011.jpg',
     rating: 4.7,
     reviewCount: 22841,
@@ -1227,7 +1227,7 @@ export const products: Product[] = [
     name: 'ARCA PET First Aid Kit',
     description: 'A compact emergency kit built specifically for pets. Includes bandages, gauze, tweezers, tick remover, and an emergency guide, everything you need before you can get to a vet.',
     price: 29,
-    priceDisplay: '$25–35',
+    priceDisplay: '$25-35',
     image: '/images/products/pet-013.jpg',
     rating: 4.4,
     reviewCount: 8731,
@@ -1243,7 +1243,7 @@ export const products: Product[] = [
     name: 'Elevated Adjustable Pet Bowl Stand',
     description: 'A height-adjustable stand with stainless steel bowls that puts food and water at a comfortable level for medium to large dogs. Reduces neck strain and is easier to clean than floor bowls.',
     price: 49,
-    priceDisplay: '$40–60',
+    priceDisplay: '$40-60',
     image: '/images/products/pet-014.jpg',
     rating: 4.5,
     reviewCount: 6123,
@@ -1259,7 +1259,7 @@ export const products: Product[] = [
     name: 'LickiMat Slomo Slow Feeder Mat',
     description: 'Spread peanut butter, yogurt, or wet food into the textured surface and watch your pet go. Slows eating, reduces anxiety, and keeps pets occupied. Dishwasher safe.',
     price: 17,
-    priceDisplay: '$15–20',
+    priceDisplay: '$15-20',
     image: '/images/products/pet-015.jpg',
     rating: 4.5,
     reviewCount: 37047,
@@ -1275,7 +1275,7 @@ export const products: Product[] = [
     name: 'Agroon Reversible Personalized Pet Bandana',
     description: 'A double-sided bandana you can customize with your pet\'s name. Soft fabric, easy triangle fold, fits most dog and cat neck sizes. Charming, affordable, and always appreciated.',
     price: 18,
-    priceDisplay: '$15–25',
+    priceDisplay: '$15-25',
     image: '/images/products/pet-016.jpg',
     rating: 4.5,
     reviewCount: 2341,
@@ -1307,7 +1307,7 @@ export const products: Product[] = [
     name: 'Sherpa Machine-Washable Pet Blanket',
     description: 'An ultra-soft sherpa blanket sized for pets and their people. Machine washable, pill-resistant, and warm enough for any breed. The kind of gift that ends up on every couch in the house.',
     price: 26,
-    priceDisplay: '$20–35',
+    priceDisplay: '$20-35',
     image: '/images/products/pet-018.jpg',
     rating: 4.6,
     reviewCount: 14231,
@@ -1319,13 +1319,13 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'just-because'],
   },
 
-  // ─────────────────────────────────────────────
+  // ------------------------------------------------------------
   // HOBBY ENTHUSIASTS (20)
-  // ─────────────────────────────────────────────
+  // ------------------------------------------------------------
   {
     id: 'hob-001',
     name: 'Cricut Maker 3 Smart Cutting Machine',
-    description: 'Cuts 300+ materials from paper to leather. Create custom shirts, home dÃ©cor, cards, and gifts. Includes free access to thousands of design files.',
+    description: 'Cuts 300+ materials from paper to leather. Create custom shirts, home décor, cards, and gifts. Includes free access to thousands of design files.',
     price: 399,
     priceDisplay: '$399',
     image: '/images/products/hob-001.jpg',
@@ -1451,9 +1451,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'graduation', 'valentines'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FINANCE & PRODUCTIVITY (15)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'fin-001',
     name: '"The Psychology of Money" by Morgan Housel',
@@ -1486,23 +1486,7 @@ export const products: Product[] = [
     tags: ['finance', 'office', 'tech'],
     occasions: ['birthday', 'graduation', 'holiday'],
   },
-  {
-    id: 'fin-003',
-    name: '"Rich Dad Poor Dad" 25th Anniversary Edition',
-    description: 'The #1 personal finance book of all time. Robert Kiyosaki\'s story about what the rich teach their kids about money that the poor and middle class do not.',
-    price: 17,
-    priceDisplay: '$17',
-    image: '/images/products/fin-003.jpg',
-    rating: 4.7,
-    reviewCount: 167234,
-    affiliateUrl: amz('1612681131'),
-    network: 'amazon',
-    recipients: ['teens', 'him', 'her', 'friends'],
-    budgetTier: 'under25',
-    tags: ['finance'],
-    occasions: ['graduation', 'birthday', 'holiday'],
-  },
-  {
+    {
     id: 'fin-004',
     name: 'I Will Teach You To Be Rich (2nd Edition)',
     description: 'Ramit Sethi\'s no-guilt, no-excuses guide to growing rich and spending money guilt-free. Personal finance for millennials who want results fast.',
@@ -1551,9 +1535,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'graduation', 'holiday', 'mothersFathers'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
-  // FOR HER (additional â€" not niche-tagged)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
+  // FOR HER (additional - not niche-tagged)
+  // ------------------------------------------------------------
       {
     id: 'her-003',
     name: 'Voluspa Japonica Collection Candle Set',
@@ -1603,9 +1587,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'mothers-day', 'valentines', 'holiday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FOR HIM (additional)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'him-001',
     name: 'YETI Rambler 30 oz Tumbler with Handle',
@@ -1625,7 +1609,7 @@ export const products: Product[] = [
   {
     id: 'him-002',
     name: 'Carhartt Acrylic Watch Hat Beanie',
-    description: 'The original Carhartt watch hat â€" a true American classic. Firm hand acrylic knit construction that repels water while keeping you warm.',
+    description: 'The original Carhartt watch hat - a true American classic. Firm hand acrylic knit construction that repels water while keeping you warm.',
     price: 24,
     priceDisplay: '$24',
     image: '/images/products/him-002.jpg',
@@ -1671,9 +1655,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'graduation'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FOR TEENS (additional)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'teen-001',
     name: 'Vans Old Skool Sneakers',
@@ -1723,9 +1707,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'just-because'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FOR KIDS (additional)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'kid-001',
     name: 'Osmo Genius Starter Kit for iPad',
@@ -1791,9 +1775,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FOR COUPLES (additional)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'cpl-001',
     name: 'Personalized Star Map Custom Night Sky Print',
@@ -1828,7 +1812,7 @@ export const products: Product[] = [
   },
   {
     id: 'cpl-003',
-    name: 'Homesick Scented Candle â€" New Home',
+    name: 'Homesick Scented Candle - New Home',
     description: 'The bestselling "New Home" scent blends pine, cedar, and eucalyptus. A thoughtful gift for any new homeowner or couple starting a new chapter.',
     price: 34,
     priceDisplay: '$34',
@@ -1859,9 +1843,9 @@ export const products: Product[] = [
     occasions: ['anniversary', 'housewarming', 'birthday', 'holiday', 'valentines'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // FOR FRIENDS (additional)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'fri-001',
     name: 'Engraved Whiskey Decanter Set',
@@ -1880,7 +1864,7 @@ export const products: Product[] = [
   },
   {
     id: 'fri-002',
-    name: 'The Uncommon Box â€" Mystery Gift Subscription',
+    name: 'The Uncommon Box - Mystery Gift Subscription',
     description: 'Monthly mystery box filled with 5-7 unique, handpicked products you won\'t find on Amazon. Past boxes have included handcrafted goods, artisan snacks, and novelties.',
     price: 49,
     priceDisplay: '$49/mo',
@@ -1927,9 +1911,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'mothersFathers'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // UNDER $25 STOCKING STUFFERS (fill gaps)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'stk-001',
     name: 'Anker USB-C to Lightning Cable (6ft)',
@@ -1997,7 +1981,7 @@ export const products: Product[] = [
   {
     id: 'stk-005',
     name: 'Card Against Humanity: Family Edition',
-    description: 'A game for terrible people â€" now safe for ages 8+. 600+ cards of horrible questions and answers that adults actually enjoy playing with kids.',
+    description: 'A game for terrible people - now safe for ages 8+. 600+ cards of horrible questions and answers that adults actually enjoy playing with kids.',
     price: 25,
     priceDisplay: '$25',
     image: '/images/products/stk-005.jpg',
@@ -2012,13 +1996,12 @@ export const products: Product[] = [
   },
 
   // ---------------------------------------------
-  // BATCH 2 ï¿1⁄2 Additional products to reach 200+
+  // BATCH 2 - Additional products to reach 200+
   // ---------------------------------------------
 
   // More Tech
   { id: 'tech-016', name: 'Jackery Explorer 300 Portable Power Station', description: 'Compact 293Wh power station for camping, van life, or power outages. Charges phones 25x, laptops 4x, and powers small appliances.', price: 299, priceDisplay: '$299', image: '/images/products/tech-016.jpg', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/dp/B082TMBYR6?tag=dailygiftshuf-20', network: 'amazon', recipients: ['dad', 'him', 'couples', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby'], occasions: ['birthday', 'holiday', 'mothersFathers'] },
-  { id: 'tech-017', name: 'Kindle Unlimited (12-Month Gift Membership)', description: 'Unlimited reading on any device with access to over 4 million titles, thousands of audiobooks, and select magazines.', price: 107, priceDisplay: '$107', image: '/images/products/tech-017.jpg', rating: 4.5, reviewCount: 45234, affiliateUrl: amzSearch('Kindle Unlimited 12 month gift membership subscription'), network: 'amazon', recipients: ['her', 'him', 'mom', 'dad', 'friends'], budgetTier: '100to150', tags: ['office', 'finance', 'hobby'], occasions: ['birthday', 'holiday', 'mothers-day', 'mothersFathers'] },
-  { id: 'tech-018', name: 'GoPro HERO12 Black Action Camera', description: '5.3K video, HyperSmooth 6.0 stabilization, and 13-meter waterproofing. The world standard for action cameras.', price: 299, priceDisplay: '$299', image: '/images/products/tech-018.jpg', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0CZMG5L6X?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'teens', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby', 'fitness'], occasions: ['birthday', 'graduation', 'holiday'] },
+    { id: 'tech-018', name: 'GoPro HERO12 Black Action Camera', description: '5.3K video, HyperSmooth 6.0 stabilization, and 13-meter waterproofing. The world standard for action cameras.', price: 299, priceDisplay: '$299', image: '/images/products/tech-018.jpg', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0CZMG5L6X?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'teens', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'hobby', 'fitness'], occasions: ['birthday', 'graduation', 'holiday'] },
   { id: 'tech-019', name: 'Belkin 3-in-1 MagSafe Wireless Charging Pad', description: 'Simultaneously charge iPhone, Apple Watch, and AirPods in one elegant device. MagSafe alignment for fastest possible iPhone charging.', price: 99, priceDisplay: '$99', image: '/images/products/tech-019.jpg', rating: 4.5, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B09WD9DMQK?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'her', 'dad', 'mom', 'friends'], budgetTier: '50to100', tags: ['tech', 'office'], occasions: ['birthday', 'holiday', 'graduation'] },
   { id: 'tech-020', name: 'Whoop Band (6-Month Membership)', description: 'Give the gift of optimized recovery. WHOOP 4.0 subscription includes the wearable free and tracks HRV, sleep, and strain 24/7.', price: 119, priceDisplay: '$119', image: '/images/products/tech-020.jpg', rating: 4.4, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/dp/B0DY2PB7RB?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '100to150', tags: ['tech', 'fitness'], occasions: ['birthday', 'holiday'] },
 
@@ -2030,25 +2013,23 @@ export const products: Product[] = [
 
   // More Kitchen
   { id: 'kit-013', name: 'Cuisinart Air Fryer Toaster Oven (17L)', description: '7-in-1 countertop oven with air fry, convection bake, convection broil, bake, broil, warm, and toast functions. Large enough for a whole chicken.', price: 199, priceDisplay: '$199', image: '/images/products/kit-013.jpg', rating: 4.5, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/dp/B09HSWBTN4?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['kitchen'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
-  { id: 'kit-014', name: 'Smeg Retro Style Kettle (1.7L)', description: 'Iconic 50s style kettle in 11 pastel colors. 360ï¿1⁄2 base, keep-warm function, and a removable filter. The most beautiful kettle in any kitchen.', price: 149, priceDisplay: '$149', image: '/images/products/kit-014.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B0GFH1QM7T?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
+  { id: 'kit-014', name: 'Smeg Retro Style Kettle (1.7L)', description: 'Iconic 50s style kettle in 11 pastel colors. 360° base, keep-warm function, and a removable filter. The most beautiful kettle in any kitchen.', price: 149, priceDisplay: '$149', image: '/images/products/kit-014.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B0GFH1QM7T?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
   { id: 'kit-015', name: 'All-Clad D3 Stainless 10-Piece Cookware Set', description: 'Professional-grade tri-ply stainless steel cookware with bonded aluminum core for even heating. Oven and dishwasher safe. A kitchen investment that lasts decades.', price: 699, priceDisplay: '$699', image: '/images/products/kit-015.jpg', rating: 4.8, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B005H8KD3E?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'couples'], budgetTier: '100to150', tags: ['kitchen', 'luxury'], occasions: ['wedding', 'birthday', 'mothers-day', 'holiday'] },
   { id: 'kit-017', name: 'Aeropress Go Travel Coffee Maker', description: 'Make specialty coffee anywhere with this ultra-portable press system. Brews smooth, rich coffee in under two minutes with no grit, no bitterness.', price: 35, priceDisplay: '$35', image: '/images/products/kit-017.jpg', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/dp/B07YVL8SF3?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['birthday', 'mothersFathers', 'holiday', 'graduation'] },
 
   // More Home/DIY
   { id: 'diy-009', name: 'Philips Hue Smart Bulb Starter Kit (4 Pack)', description: 'Transform your home with 16 million colors and adjustable whites. Control with your voice, phone, or switch. Works with Alexa, Google, and HomeKit.', price: 99, priceDisplay: '$99', image: '/images/products/diy-009.jpg', rating: 4.6, reviewCount: 45234, affiliateUrl: 'https://www.amazon.com/dp/B07GLPM8G9?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'her', 'dad', 'couples'], budgetTier: '50to100', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'holiday', 'housewarming'] },
   { id: 'diy-010', name: 'iRobot Roomba i3+ EVO Robot Vacuum', description: 'Self-emptying robot vacuum with intelligent room mapping and automatic dirt disposal. Clean an entire level of your home without ever touching it.', price: 399, priceDisplay: '$399', image: '/images/products/diy-010.jpg', rating: 4.5, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/dp/B08C4LC7TG?tag=dailygiftshuf-20', network: 'amazon', recipients: ['mom', 'her', 'him', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'mothers-day', 'holiday', 'housewarming'] },
-  { id: 'diy-011', name: 'Nest Learning Thermostat (4th Gen)', description: 'Learns your schedule and programs itself to save energy. Works with Alexa, Google, and Siri. ENERGY STAR certified and saves 10-12% on heating bills.', price: 279, priceDisplay: '$279', image: '/images/products/diy-011.jpg', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0DSGBMH6P?tag=dailygiftshuf-20', network: 'amazon', recipients: ['dad', 'mom', 'him', 'her', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech', 'finance'], occasions: ['birthday', 'holiday', 'housewarming'] },
+  { id: 'diy-011', name: 'Nest Learning Thermostat (4th Gen)', description: 'Learns your schedule and programs itself to save energy. Works with Alexa, Google, and Siri. ENERGY STAR certified and saves 10-12% on heating bills.', price: 279, priceDisplay: '$279', image: '/images/products/diy-011.jpg', rating: 4.6, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0DSGBMH6P?tag=dailygiftshuf-20', network: 'amazon', recipients: ['dad', 'mom', 'him', 'her', 'couples'], budgetTier: '100to150', tags: ['diy-tools', 'tech'], occasions: ['birthday', 'holiday', 'housewarming'] },
 
   // More Office
   { id: 'off-009', name: 'Fjallraven Kanken Classic Backpack', description: 'The iconic Swedish backpack with a padded laptop sleeve, ergonomic shoulder straps, and 16L capacity. Built to last a lifetime in 30+ colors.', price: 99, priceDisplay: '$99', image: '/images/products/off-009.jpg', rating: 4.7, reviewCount: 34521, affiliateUrl: 'https://www.amazon.com/dp/B00F179AQW?tag=dailygiftshuf-20', network: 'amazon', recipients: ['teens', 'her', 'him', 'friends'], budgetTier: '50to100', tags: ['office', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
   { id: 'off-010', name: 'Apple Magic Keyboard with Touch ID', description: 'Wireless keyboard with Touch ID for secure logins and Apple Pay. Compact design with full-size function keys and up to a month of battery life.', price: 99, priceDisplay: '$99', image: '/images/products/off-010.jpg', rating: 4.7, reviewCount: 23412, affiliateUrl: 'https://www.amazon.com/dp/B0DL6KW75T?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'her', 'dad', 'friends'], budgetTier: '50to100', tags: ['office', 'tech'], occasions: ['birthday', 'graduation', 'holiday'] },
-  { id: 'off-011', name: 'Autonomous SmartDesk Pro 72"', description: 'Electric standing desk with memory height presets, a 310-lb lifting capacity, and whisper-quiet dual motors. 5-year warranty.', price: 499, priceDisplay: '$499', image: '/images/products/off-011.jpg', rating: 4.5, reviewCount: 12341, affiliateUrl: amzSearch('Autonomous SmartDesk Pro electric standing desk 72'), network: 'amazon', recipients: ['him', 'her', 'dad'], budgetTier: '100to150', tags: ['office', 'finance', 'fitness'], occasions: ['birthday', 'holiday'] },
-
-  // More Luxury
+    // More Luxury
   { id: 'lux-008', name: 'Aesop Resurrection Hand Balm (75ml)', description: 'Cult-favorite hand balm in the iconic amber bottle. Mandarin, rosemary, and cedar wood essential oils leave hands soft without greasiness.', price: 35, priceDisplay: '$35', image: '/images/products/lux-008.jpg', rating: 4.6, reviewCount: 2081, affiliateUrl: 'https://www.amazon.com/dp/B000IB0GYQ?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom', 'friends', 'him'], budgetTier: '25to50', tags: ['luxury', 'beauty'], occasions: ['birthday', 'mothers-day', 'holiday', 'valentines', 'just-because'] },
-  { id: 'lux-009', name: 'Montblanc Meisterstï¿1⁄2ck Pen & Notebook Set', description: 'The iconic Meisterstï¿1⁄2ck 145 fountain pen paired with a fine grain leather notebook. A timeless gift for executives and writers.', price: 780, priceDisplay: '$780', image: '/images/products/lux-009.jpg', rating: 4.8, reviewCount: 3412, affiliateUrl: 'https://www.amazon.com/dp/B01N5BLP76?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'dad', 'her'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'graduation', 'anniversary', 'mothersFathers'] },
+  { id: 'lux-009', name: 'Montblanc Meisterstück Pen & Notebook Set', description: 'The iconic Meisterstück 145 fountain pen paired with a fine grain leather notebook. A timeless gift for executives and writers.', price: 780, priceDisplay: '$780', image: '/images/products/lux-009.jpg', rating: 4.8, reviewCount: 3412, affiliateUrl: 'https://www.amazon.com/dp/B01N5BLP76?tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'dad', 'her'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'graduation', 'anniversary', 'mothersFathers'] },
     // More For Her
-  { id: 'her-007', name: 'Mejuri Fine Jewelry ï¿1⁄2 Gold Hoops', description: 'Solid 14k gold small hoop earrings that go with everything. Fine jewelry at direct-to-consumer prices. Comes in a beautiful gift box.', price: 98, priceDisplay: '$98', image: '/images/products/her-007.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B0GTWMVDRB?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'holiday', 'anniversary'] },
+  { id: 'her-007', name: 'Mejuri Fine Jewelry - Gold Hoops', description: 'Solid 14k gold small hoop earrings that go with everything. Fine jewelry at direct-to-consumer prices. Comes in a beautiful gift box.', price: 98, priceDisplay: '$98', image: '/images/products/her-007.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: 'https://www.amazon.com/dp/B0GTWMVDRB?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom', 'teens'], budgetTier: '50to100', tags: ['luxury'], occasions: ['birthday', 'mothers-day', 'valentines', 'holiday', 'anniversary'] },
   { id: 'her-008', name: 'Cuyana Classic Essential Tote', description: 'Investment-quality leather tote that gets better with age. Made in Italy from smooth vegetable-tanned leather with a magnetic closure.', price: 295, priceDisplay: '$295', image: '/images/products/her-008.jpg', rating: 4.7, reviewCount: 8234, affiliateUrl: 'https://www.amazon.com/dp/B01ANDTERS?tag=dailygiftshuf-20', network: 'amazon', recipients: ['her', 'mom'], budgetTier: '100to150', tags: ['luxury', 'office'], occasions: ['birthday', 'mothers-day', 'holiday', 'graduation'] },
 
   // More For Him
@@ -2069,13 +2050,13 @@ export const products: Product[] = [
   { id: 'teen-005', name: 'Nike Air Force 1 07 Sneakers', description: 'The legendary basketball shoe that became a cultural icon. Premium leather upper, pivot circle on outsole, and foam midsole for all-day comfort.', price: 110, priceDisplay: '$110', image: '/images/products/teen-005.jpg', rating: 4.6, reviewCount: 89234, affiliateUrl: 'https://www.amazon.com/dp/B08QBCX7DP?tag=dailygiftshuf-20', network: 'amazon', recipients: ['teens', 'him', 'her'], budgetTier: '100to150', tags: ['fitness', 'hobby'], occasions: ['birthday', 'graduation', 'holiday'] },
 
   // More For Kids
-  { id: 'par-021', name: 'i Play. Toddler Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat with a neck flap for full coverage. Stretchy, quick-dry fabric â€" perfect for beach days and pool time. Fits toddlers 2T-4T.', price: 13.90, priceDisplay: '$13.90', image: '/images/products/par-021.jpg', rating: 4.6, reviewCount: 7400, affiliateUrl: 'https://www.amazon.com/dp/B0057RBPLY?tag=dailygiftshuf-20', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'weddingHousewarming'] },
-  { id: 'par-022', name: 'i Play. Baby Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat for babies with adjustable chin strap and full neck flap. Stretchy, quick-dry fabric â€" a beach and pool essential for infants.', price: 13.99, priceDisplay: '$13.99', image: '/images/products/par-022.jpg', rating: 4.6, reviewCount: 9200, affiliateUrl: 'https://www.amazon.com/dp/B004VO3OAO?tag=dailygiftshuf-20', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'weddingHousewarming'] },
+  { id: 'par-021', name: 'i Play. Toddler Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat with a neck flap for full coverage. Stretchy, quick-dry fabric - perfect for beach days and pool time. Fits toddlers 2T-4T.', price: 13.90, priceDisplay: '$13.90', image: '/images/products/par-021.jpg', rating: 4.6, reviewCount: 7400, affiliateUrl: 'https://www.amazon.com/dp/B0057RBPLY?tag=dailygiftshuf-20', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'weddingHousewarming'] },
+  { id: 'par-022', name: 'i Play. Baby Flap Sun Protection Swim Hat', description: 'UPF 50+ sun protection swim hat for babies with adjustable chin strap and full neck flap. Stretchy, quick-dry fabric - a beach and pool essential for infants.', price: 13.99, priceDisplay: '$13.99', image: '/images/products/par-022.jpg', rating: 4.6, reviewCount: 9200, affiliateUrl: 'https://www.amazon.com/dp/B004VO3OAO?tag=dailygiftshuf-20', network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting', 'kids', 'sports'], occasions: ['birthday', 'weddingHousewarming'] },
 
   { id: 'kid-005', name: 'Bluey 11-in-1 Jigsaw Puzzle Bundle', description: 'Four wooden puzzles featuring Bluey, Bingo, and the whole family. Helps develop fine motor skills and problem-solving in ages 2-5.', price: 24, priceDisplay: '$24', image: '/images/products/kid-005.jpg', rating: 4.7, reviewCount: 12341, affiliateUrl: amz('B08SJPTTN9'), network: 'amazon', recipients: ['kids', 'baby'], budgetTier: 'under25', tags: ['parenting'], occasions: ['birthday', 'holiday'] },
   { id: 'kid-006', name: 'Learning Resources Coding Critters', description: 'Code your pet to take a nap! Kids use basic sequencing to guide their Coding Critters through activities. No reading required for ages 4+.', price: 39, priceDisplay: '$39', image: '/images/products/kid-006.jpg', rating: 4.6, reviewCount: 8234, affiliateUrl: amz('B07P5P3V5G'), network: 'amazon', recipients: ['kids'], budgetTier: '25to50', tags: ['parenting', 'tech'], occasions: ['birthday', 'holiday'] },
 
-  // â"€â"€â"€ OUTDOORS & CAMPING â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------ OUTDOORS & CAMPING ------------------------------------------------------------
   { id: 'out-001', name: 'LifeStraw Personal Water Filter', description: 'Filter up to 1,000 gallons of contaminated water with no chemicals or batteries. A must-have for camping, hiking, and emergency kits. Tested to EPA standards.', price: 19.95, priceDisplay: '$19.95', image: '/images/products/out-001.jpg', rating: 4.8, reviewCount: 112430, affiliateUrl: 'https://www.amazon.com/s?k=LifeStraw+personal+water+filter&tag=dailygiftshuf-20', network: 'amazon', recipients: ['him', 'dad', 'friends', 'her'], budgetTier: 'under25', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday'] },
   { id: 'out-002', name: 'ENO DoubleNest Camping Hammock', description: 'Lightweight nylon hammock that packs down to fist size. Sets up between any two trees in under two minutes and holds up to 400 lbs. Used by millions of campers.', price: 49.95, priceDisplay: '$49.95', image: '/images/products/out-002.jpg', rating: 4.8, reviewCount: 64230, affiliateUrl: amz('B0BQP7BVXQ'), network: 'amazon', recipients: ['him', 'her', 'teens', 'friends', 'dad'], budgetTier: '25to50', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday', 'graduation'] },
   { id: 'out-003', name: 'Black Diamond Spot 400 Headlamp', description: 'The headlamp guides trust on every trail. 400 lumens, IPX8 waterproof, and a 200-hour battery life on the lowest setting. Red night vision mode included.', price: 39.95, priceDisplay: '$39.95', image: '/images/products/out-003.jpg', rating: 4.7, reviewCount: 38920, affiliateUrl: amz('B09NQL4S1L'), network: 'amazon', recipients: ['him', 'dad', 'her', 'friends', 'teens'], budgetTier: '25to50', tags: ['outdoors', 'sports'], occasions: ['birthday', 'holiday'] },
@@ -2097,12 +2078,12 @@ export const products: Product[] = [
   { id: 'fri-005', name: 'Personalized Engraved Bamboo Cutting Board', description: 'Custom engraved bamboo cutting board with any name, date, or message. Useful enough to cook on and pretty enough to display.', price: 30, priceDisplay: '$30', image: '/images/products/repl-cuttingboard.jpg', rating: 4.8, reviewCount: 1763, affiliateUrl: 'https://www.amazon.com/dp/B0BPGHJ7YX?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['couples', 'friends', 'mom', 'dad'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['wedding', 'housewarming', 'birthday', 'holiday'] },
   { id: 'fri-006', name: 'Catan Base Board Game', description: 'The most popular strategy game in the world. Build settlements, trade resources, and expand your civilization. For 3-4 players, ages 10+.', price: 44, priceDisplay: '$44', image: '/images/products/fri-006.jpg', rating: 4.8, reviewCount: 78234, affiliateUrl: amz('B0DYK1ZH2D'), network: 'amazon', recipients: ['friends', 'couples', 'teens', 'him', 'her'], budgetTier: '25to50', tags: ['hobby'], occasions: ['birthday', 'holiday', 'just-because'] },
 
-  // â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â" BEAUTY & WELLNESS â"â"â"
-  // â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â" TRAVEL â"â"â"
+  // ------------------------------------------------------------ BEAUTY & WELLNESS ------------------------------------------------------------
+  // ------------------------------------------------------------ TRAVEL ------------------------------------------------------------
   {
     id: 'trv-001',
     name: 'Away The Carry-On Luggage',
-    description: 'The iconic hardshell carry-on with a built-in TSA-approved combination lock, 360Â° spinner wheels, and a removable laundry bag. Fits in most overhead bins.',
+    description: 'The iconic hardshell carry-on with a built-in TSA-approved combination lock, 360° spinner wheels, and a removable laundry bag. Fits in most overhead bins.',
     price: 295,
     priceDisplay: '$295',
     image: '/images/products/trv-001.jpg',
@@ -2134,7 +2115,7 @@ export const products: Product[] = [
   {
     id: 'trv-003',
     name: 'Cabeau Evolution S3 Travel Neck Pillow',
-    description: 'Memory foam travel pillow with a rear-entry seat strap, full 360Â° head support, and a machine-washable cover. The gold standard in travel neck pillows.',
+    description: 'Memory foam travel pillow with a rear-entry seat strap, full 360° head support, and a machine-washable cover. The gold standard in travel neck pillows.',
     price: 59,
     priceDisplay: '$59',
     image: '/images/products/trv-003.jpg',
@@ -2180,7 +2161,7 @@ export const products: Product[] = [
     occasions: ['birthday', 'graduation', 'holiday', 'just-because'],
   },
 
-  // â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â" AI & SMART HOME â"â"â"
+  // ------------------------------------------------------------ AI & SMART HOME ------------------------------------------------------------
   {
     id: 'aish-001',
     name: 'Amazon Echo Show 8 (3rd Gen) Smart Display',
@@ -2231,7 +2212,7 @@ export const products: Product[] = [
   },
   {
     id: 'aish-005',
-    name: 'Samsung Galaxy Ring â€" AI Health Tracker',
+    name: 'Samsung Galaxy Ring - AI Health Tracker',
     description: 'Ultra-thin titanium smart ring with AI-powered health tracking: sleep, heart rate, SpO2, cycle tracking, and energy score. No subscription fee. Up to 9-day battery.',
     price: 399,
     priceDisplay: '$399',
@@ -2246,10 +2227,10 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday', 'graduation', 'anniversary'],
   },
 
-  // â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â"â" BEAUTY (additional) â"â"â"
-  { id: 'bty-001', name: 'BodyJ4You Organic Jojoba Oil â€" USDA Organic, 100% Pure', description: 'USDA certified organic jojoba oil, cold-pressed and unrefined. Multitasking beauty staple: face moisturizer, hair serum, cuticle oil, Gua Sha carrier, dermaplaning primer, and scalp massage oil. Hexane-free, non-comedogenic, fragrance-free. 1 fl oz.', price: 7.99, priceDisplay: '$7.99', image: '/images/products/bty-001.jpg', rating: 4.7, reviewCount: 3500, affiliateUrl: 'https://www.amazon.com/BodyJ4You-Organic-Jojoba-Oil-Skin/dp/B0DRML3ZMM?tag=dailygiftshuf-20&linkCode=ll2&linkId=f1adf8fa20773ad33d4a4423837eff4b&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: 'under25', tags: ['fitness', 'luxury', 'beauty'], occasions: ['birthday', 'holiday', 'just-because'] },
-  { id: 'bty-002', name: 'Handcraft Blends Organic Castor Oil â€" 16 fl oz, Pure & Cold-Pressed', description: '100% pure cold-pressed organic castor oil for eyelashes, eyebrows, hair growth, and skin. Packed with ricinoleic acid for nourishment and growth. Use as a lash serum, brow booster, scalp treatment, or body moisturizer. Hexane-free, no additives.', price: 9.99, priceDisplay: '$9.99', image: '/images/products/bty-002.jpg', rating: 4.6, reviewCount: 48200, affiliateUrl: 'https://www.amazon.com/Handcraft-Blends-Organic-Eyelashes-Eyebrows/dp/B0734849YK?tag=dailygiftshuf-20&linkCode=ll2&linkId=63869cbfe9f40224fc3bca96b1b9a295&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: 'under25', tags: ['fitness', 'luxury', 'beauty'], occasions: ['birthday', 'holiday', 'just-because'] },
-  { id: 'bty-003', name: 'VXHDAG Batana Oil for Hair Growth â€" 100% Pure, Cold-Pressed', description: 'Pure cold-pressed batana oil from Central American palm nuts â€" a centuries-old remedy for hair growth, thickness, and scalp health. Repairs damage, reduces breakage, and adds deep shine. Works on all hair types.', price: 7.99, priceDisplay: '$7.99', image: '/images/products/bty-003.jpg', rating: 4.5, reviewCount: 2800, affiliateUrl: 'https://www.amazon.com/VXHDAG-Batana-Oil-Hair-Growth/dp/B0CMXF1NK3?tag=dailygiftshuf-20&linkCode=ll2&linkId=6afd97f11cc99dbe6cecef4e7e7a23d9&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: 'under25', tags: ['fitness', 'luxury', 'beauty'], occasions: ['birthday', 'holiday', 'just-because'] },
+  // ------------------------------------------------------------ BEAUTY (additional) ------------------------------------------------------------
+  { id: 'bty-001', name: 'BodyJ4You Organic Jojoba Oil - USDA Organic, 100% Pure', description: 'USDA certified organic jojoba oil, cold-pressed and unrefined. Multitasking beauty staple: face moisturizer, hair serum, cuticle oil, Gua Sha carrier, dermaplaning primer, and scalp massage oil. Hexane-free, non-comedogenic, fragrance-free. 1 fl oz.', price: 7.99, priceDisplay: '$7.99', image: '/images/products/bty-001.jpg', rating: 4.7, reviewCount: 3500, affiliateUrl: 'https://www.amazon.com/BodyJ4You-Organic-Jojoba-Oil-Skin/dp/B0DRML3ZMM?tag=dailygiftshuf-20&linkCode=ll2&linkId=f1adf8fa20773ad33d4a4423837eff4b&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: 'under25', tags: ['fitness', 'luxury', 'beauty'], occasions: ['birthday', 'holiday', 'just-because'] },
+  { id: 'bty-002', name: 'Handcraft Blends Organic Castor Oil - 16 fl oz, Pure & Cold-Pressed', description: '100% pure cold-pressed organic castor oil for eyelashes, eyebrows, hair growth, and skin. Packed with ricinoleic acid for nourishment and growth. Use as a lash serum, brow booster, scalp treatment, or body moisturizer. Hexane-free, no additives.', price: 9.99, priceDisplay: '$9.99', image: '/images/products/bty-002.jpg', rating: 4.6, reviewCount: 48200, affiliateUrl: 'https://www.amazon.com/Handcraft-Blends-Organic-Eyelashes-Eyebrows/dp/B0734849YK?tag=dailygiftshuf-20&linkCode=ll2&linkId=63869cbfe9f40224fc3bca96b1b9a295&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: 'under25', tags: ['fitness', 'luxury', 'beauty'], occasions: ['birthday', 'holiday', 'just-because'] },
+  { id: 'bty-003', name: 'VXHDAG Batana Oil for Hair Growth - 100% Pure, Cold-Pressed', description: 'Pure cold-pressed batana oil from Central American palm nuts - a centuries-old remedy for hair growth, thickness, and scalp health. Repairs damage, reduces breakage, and adds deep shine. Works on all hair types.', price: 7.99, priceDisplay: '$7.99', image: '/images/products/bty-003.jpg', rating: 4.5, reviewCount: 2800, affiliateUrl: 'https://www.amazon.com/VXHDAG-Batana-Oil-Hair-Growth/dp/B0CMXF1NK3?tag=dailygiftshuf-20&linkCode=ll2&linkId=6afd97f11cc99dbe6cecef4e7e7a23d9&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['her', 'mom', 'friends'], budgetTier: 'under25', tags: ['fitness', 'luxury', 'beauty'], occasions: ['birthday', 'holiday', 'just-because'] },
   {
     id: 'bty-004',
     name: 'FOREO LUNA 4 Facial Cleansing Device',
@@ -2300,9 +2281,9 @@ export const products: Product[] = [
   },
 
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // BABY SHOWER (6)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
     {
     id: 'baby-shower-002',
     name: 'aden + anais Classic Swaddle Blankets (4-Pack)',
@@ -2322,7 +2303,7 @@ export const products: Product[] = [
   {
     id: 'baby-shower-003',
     name: 'Frida Mom Postpartum Recovery Kit',
-    description: 'The must-have postpartum essentials kit â€" hospital-grade disposable underwear, ice maxi pads, perineal foam, and more. Perfect for gifting the mom, not just the baby.',
+    description: 'The must-have postpartum essentials kit - hospital-grade disposable underwear, ice maxi pads, perineal foam, and more. Perfect for gifting the mom, not just the baby.',
     price: 39,
     priceDisplay: '$39',
     image: '/images/products/baby-shower-003.jpg',
@@ -2384,9 +2365,9 @@ export const products: Product[] = [
     occasions: ['baby-shower', 'birthday'],
   },
 
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   // WEDDING GIFTS (6)
-  // â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ------------------------------------------------------------
   {
     id: 'wedding-001',
     name: 'Personalized Cutting Board with Names & Wedding Date',
@@ -2437,7 +2418,7 @@ export const products: Product[] = [
   },
   {
     id: 'wedding-006',
-    name: 'Keepsake Wedding Guest Book Alternative â€" Fingerprint Tree',
+    name: 'Keepsake Wedding Guest Book Alternative - Fingerprint Tree',
     description: 'A beautiful art print where guests press their fingerprint to create a tree of leaves. Comes with ink pads and a signing pen. A unique, interactive keepsake for the reception.',
     price: 38,
     priceDisplay: '$38',
@@ -2452,9 +2433,9 @@ export const products: Product[] = [
     occasions: ['wedding'],
   },
 
-  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // ------------------------------------------------------------
   // GAMING (12)
-  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // ------------------------------------------------------------
   {
     id: 'gaming-001',
     name: 'SteelSeries Arctis Nova 7 Wireless Gaming Headset',
@@ -2506,7 +2487,7 @@ export const products: Product[] = [
     {
     id: 'gaming-005',
     name: 'RESPAWN 110 Racing Style Gaming Chair',
-    description: 'Ergonomic racing-style gaming chair with lumbar support pillow, adjustable headrest, recline to 130Â°, and 275 lb weight capacity. Available in 8 color options.',
+    description: 'Ergonomic racing-style gaming chair with lumbar support pillow, adjustable headrest, recline to 130°, and 275 lb weight capacity. Available in 8 color options.',
     price: 169,
     priceDisplay: '$169',
     image: '/images/products/gaming-005.jpg',
@@ -2616,9 +2597,9 @@ export const products: Product[] = [
     occasions: ['birthday', 'holiday'],
   },
 
-  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // ------------------------------------------------------------
   // GARDENING (12)
-  // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  // ------------------------------------------------------------
   {
     id: 'garden-001',
     name: 'Fiskars Ergo Hand Trowel',
@@ -3286,8 +3267,8 @@ export const products: Product[] = [
     price: 4.38,
     priceDisplay: '$4.38',
     image: '/images/products/finance-rich-dad.jpg',
-    rating: 4.8,
-    reviewCount: 30428,
+    rating: 4.7,
+    reviewCount: 73600,
     affiliateUrl: amz('1612680194'),
     network: 'amazon',
     recipients: ['him', 'her', 'dad', 'friends', 'coworker', 'teens'],
@@ -6732,7 +6713,7 @@ export const products: Product[] = [
   { id: 'retire-zero-gravity', name: 'Zero Gravity Outdoor Lounge Chair', description: 'A reclining zero-gravity chair for the patio, the official throne of a well-earned retirement.', price: 39.99, priceDisplay: '$39.99', image: '/images/products/retire-zero-gravity.jpg', rating: 4.4, reviewCount: 13742, affiliateUrl: 'https://www.amazon.com/dp/B07L635CBD?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['dad', 'mom', 'grandparents'], budgetTier: '25to50', tags: ['outdoors', 'home'], occasions: ['birthday', 'holiday', 'just-because'] },
   { id: 'retire-bocce', name: 'Bocce Ball Set with Carrying Case', description: 'A classic backyard bocce set in a carry case, easy, social and perfect for slow afternoons.', price: 54.99, priceDisplay: '$54.99', image: '/images/products/retire-bocce.jpg', rating: 4.4, reviewCount: 3355, affiliateUrl: 'https://www.amazon.com/dp/B0CGMGQPM3?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['dad', 'grandparents', 'couples', 'friends'], budgetTier: '50to100', tags: ['sports', 'outdoors'], occasions: ['birthday', 'holiday', 'just-because'] },
 
-  // ── GAMING EXPANSION (2026-08-15) ────────────────────────────────────────
+  // ── GAMING EXPANSION (2026-08-15) ------------------------------------------------------------
   // Fills the gaps a category audit found: the guide had ZERO games, gift
   // cards or subscriptions, one storage item and one novelty item. All
   // figures verified against the live Amazon listing.
@@ -6758,7 +6739,7 @@ export const products: Product[] = [
   { id: 'gg-gamer-socks', name: 'Retro Video Game Novelty Crew Socks', description: 'Crew socks with retro controller and arcade artwork, in combed cotton that survives the wash.', why: 'The stocking-filler that actually gets worn. Cheap, specific to them, and it fills out a bigger gift nicely.', price: 23.99, priceDisplay: '$23.99', image: '/images/products/gg-gamer-socks.jpg', rating: 4.7, reviewCount: 303, affiliateUrl: 'https://www.amazon.com/dp/B0832RR6Z6?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['him', 'teens', 'friends', 'her'], budgetTier: 'under25', tags: ['gaming', 'hobby'], occasions: ['birthday', 'holiday', 'just-because'] },
   { id: 'gg-gaming-blanket', name: 'Gamer Sherpa Throw Blanket', description: 'An ultra-soft sherpa-backed flannel throw printed with gaming artwork, sized for a chair or couch.', why: 'Cold hands are the unglamorous problem of long winter sessions. Warm, cheap, and it reads as thoughtful rather than generic.', price: 19.99, priceDisplay: '$19.99', image: '/images/products/gg-gaming-blanket.jpg', rating: 4.7, reviewCount: 829, affiliateUrl: 'https://www.amazon.com/dp/B0CGZTKN24?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['him', 'teens', 'friends', 'her'], budgetTier: 'under25', tags: ['gaming', 'home', 'hobby'], occasions: ['birthday', 'holiday', 'just-because'] },
 
-  // ── RETRO GAMING (2026-08-15) ────────────────────────────────────────────
+  // ── RETRO GAMING (2026-08-15) ------------------------------------------------------------
   // 23 candidates sourced, 5 kept. The rest failed verification on quality
   // (a 2.0-star handheld, a 5.0-from-1-review clock) or were reseller-
   // inflated listings for discontinued hardware. All figures verified live.
