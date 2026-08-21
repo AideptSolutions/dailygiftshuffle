@@ -1,14 +1,16 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import WishlistModal from '@/components/WishlistModal';
+import GeniePanel from '@/components/genie/GeniePanel';
 import AdSlot from '@/components/AdSlot';
 import { shuffleMultiple, clearShownIds } from '@/lib/shuffle';
 
 import { Product, Recipient, BudgetTier, Occasion, NicheTag } from '@/data/products';
 import { useFavorites } from '@/lib/useFavorites';
+import { usePins } from '@/lib/usePins';
 
 const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
   { id: 'her',         label: 'For Her',            image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&crop=faces&auto=format' },
@@ -188,7 +190,10 @@ export default function ShuffleClient() {
   const [budget, setBudget]           = useState<BudgetTier | 'any' | null>(null);
   const [occasion, setOccasion]       = useState<Occasion | null>(null);
   const [products, setProducts]       = useState<Product[]>([]);
-  const [pinnedIds, setPinnedIds]     = useState<Set<string>>(new Set());
+  // Pins live in the shared persistent store; the derived Set keeps existing
+  // has() call sites unchanged.
+  const { pins, togglePin: togglePinStore } = usePins();
+  const pinnedIds = useMemo(() => new Set(pins.map((p) => p.id)), [pins]);
   const [isShuffling, setIsShuffling] = useState(false);
   const [wishlistOpen, setWishlistOpen] = useState(false);
   const [wishlistProduct, setWishlistProduct] = useState<Product | null>(null);
@@ -232,14 +237,6 @@ export default function ShuffleClient() {
   const [count, setCount] = useState(4);
   // Stack of previous result-sets so users can step back to a set they shuffled past.
   const [history, setHistory] = useState<Product[][]>([]);
-
-  const togglePin = useCallback((id: string) => {
-    setPinnedIds(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) { next.delete(id); } else { next.add(id); }
-      return next;
-    });
-  }, []);
 
   const doShuffle = useCallback(
     (rec: Recipient, bud: BudgetTier | 'any', occ: Occasion | null, tags?: NicheTag[], countOverride?: number) => {
@@ -303,9 +300,10 @@ export default function ShuffleClient() {
     });
   }, []);
 
+  // Pins persist across count changes and re-picks; doShuffle already keeps
+  // pinned tiles in place and excludes them from the fresh draw.
   const handleCountChange = useCallback((newCount: number) => {
     setCount(newCount);
-    setPinnedIds(new Set());
     if (step === 'result' && recipient && budget) {
       doShuffle(recipient, budget, occasion, undefined, newCount);
     }
@@ -313,7 +311,6 @@ export default function ShuffleClient() {
 
   const handleRecipient = (r: Recipient) => {
     setRecipient(r);
-    setPinnedIds(new Set());
     setStep('budget');
   };
 
@@ -335,13 +332,14 @@ export default function ShuffleClient() {
 
   const handleShuffleAgain = () => doShuffle(recipient!, budget!, occasion);
 
+  // Note: reset does NOT clear pins; they are a global store with their own
+  // clear control in the Genie panel.
   const handleReset = () => {
     setStep('recipient');
     setRecipient(null);
     setBudget(null);
     setOccasion(null);
     setProducts([]);
-    setPinnedIds(new Set());
     setHistory([]);
     clearShownIds();
   };
@@ -522,7 +520,7 @@ export default function ShuffleClient() {
                         <ProductCard
                           product={product}
                           pinned={isPinned}
-                          onTogglePin={() => togglePin(product.id)}
+                          onTogglePin={() => togglePinStore(product)}
                           isSaved={false}
                           onSave={() => { setWishlistProduct(product); setWishlistOpen(true); }}
                         />
@@ -561,6 +559,8 @@ export default function ShuffleClient() {
                 <p className="text-xs text-center text-gray-300 mt-4">
                   Affiliate links. We may earn a commission at no cost to you.
                 </p>
+                {/* Gift Genie: reads the visitor's persistent pins */}
+                <GeniePanel />
               </>
             ) : (
               <div className="bg-white rounded-3xl shadow-lg p-12 text-center">

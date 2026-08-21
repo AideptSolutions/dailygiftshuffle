@@ -40,7 +40,7 @@ const match = (p: { recipients?: string[] }) => !!p.recipients?.includes('her');
 // push utility categories behind them without excluding a standout like a Kindle.
 const PREFER = ['beauty', 'luxury', 'home', 'fitness'];
 const DEPRIORITIZE = [
-  'kitchen', 'tech', 'diy-tools', 'car-accessories',
+  'kitchen', 'tech', 'diy-tools', 'car-accessories', 'ai-smart-home',
   'outdoors', 'gaming', 'office', 'finance', 'sports',
 ];
 

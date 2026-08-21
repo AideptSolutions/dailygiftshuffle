@@ -1,6 +1,6 @@
 # TheGiftShuffle — Project Todos
 
-_Last updated: 2026-08-17_
+_Last updated: 2026-08-21_
 
 > Credentials never go in this file. Secrets live in `.env.all` / Vercel env vars
 > only — see [DEPLOY.md](DEPLOY.md).
@@ -21,6 +21,10 @@ _Last updated: 2026-08-17_
 - [ ] **AdSense application** — `components/AdSlot.tsx` exists and renders slots;
       confirm whether the account was ever approved and whether a real
       `ca-pub` ID is wired in production.
+- [ ] **Gift Genie Phase 3 (Stripe purchases)** — Phase 2 shipped (accounts,
+      magic-link auth, free runs, AI matcher, share pages). Phase 3 is gated
+      behind `NEXT_PUBLIC_GENIE_PHASE=3` and needs the Stripe env vars and the
+      `/api/stripe/webhook` endpoint verified live. See DEPLOY.md.
 - [ ] **Catalog refresh cadence** — run `scripts/check-dead-links.mjs` on the
       documented schedule. Dead links are the costly failure; ratings are a hard
       cliff at 4.5 with 149 entries sitting within 0.1 of it. Review counts
@@ -51,6 +55,11 @@ _Last updated: 2026-08-17_
 - [x] Upstash Redis wired; click tracking by ASIN via `components/ClickTracker.tsx`
 - [x] Admin panel at `/admin` (password in `ADMIN_PASSWORD`, not in this repo)
 - [x] Brand kit with mascot + social avatars
+
+**Gift Genie (Aug 2026)**
+- [x] Phase 1: cross-surface persistent pins + Gift Genie panel shell
+- [x] Phase 2: accounts, magic-link email auth, free runs, AI matcher
+      (Anthropic with a Gemini fallback), share pages with OG images
 
 **Fixed since this file last got attention**
 - [x] `app/category/[niche]/page.tsx` corruption (outdoors content in the gaming

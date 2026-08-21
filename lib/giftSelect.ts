@@ -85,7 +85,7 @@ export interface CurateOpts {
 const AFFINITY_BOOST = 1.6;
 const AFFINITY_PENALTY = 0.45;
 
-const baseScore = (p: AnyProduct) => p.rating * Math.log10(p.reviewCount + 10);
+export const baseScore = (p: AnyProduct) => p.rating * Math.log10(p.reviewCount + 10);
 
 const score = (
   p: AnyProduct,
@@ -119,7 +119,7 @@ const FILLER = new Set([
   // product ("Large Print Kindle Paperwhite" is the same gift as "Kindle Paperwhite").
   'print', 'complete', 'long', 'multi', 'hd', 'wireless', 'smart', 'portable', 'max', 'ultra',
 ]);
-const variantKey = (name: string) => {
+export const variantKey = (name: string) => {
   const tokens = name
     .toLowerCase()
     .replace(/\([^)]*\)/g, ' ')

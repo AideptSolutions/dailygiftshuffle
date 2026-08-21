@@ -18,6 +18,30 @@ function PinIcon({ pinned }: { pinned: boolean }) {
   );
 }
 
+/**
+ * Amazon merchant mark. Drawn inline rather than hotlinked as a favicon so it
+ * stays crisp, costs no extra request, and cannot break if the remote asset
+ * moves. The glyph carries the destination visually; the sr-only label on the
+ * card link carries it for assistive tech.
+ */
+function AmazonMark() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" focusable="false" className="shrink-0">
+      <rect width="16" height="16" rx="3.5" fill="#FF9900" />
+      <path d="M3.5 9.9c2.5 2.1 6.6 2.1 9.1.1" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" fill="none" />
+      <path d="M11.3 8.8l2.1.7-.8 1.9z" fill="#fff" />
+    </svg>
+  );
+}
+
+function ArrowOut() {
+  return (
+    <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true" focusable="false" className="shrink-0">
+      <path d="M2.5 9.5L9 3M9 3H4.6M9 3v4.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
+  );
+}
+
 function StarRating({ rating }: { rating: number }) {
   const full = Math.floor(rating);
   const half = rating % 1 >= 0.5;
@@ -54,8 +78,25 @@ export default function ProductCard({
 }) {
   const [imgSrc, setImgSrc] = useState(product.image);
   return (
-    <div className="rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-shadow flex flex-col" style={{ background: '#F0F4F8' }}>
-      {/* Image â€" fixed compact height, matches landing page card size */}
+    // `group` + a stretched link: the whole card is the click target (the loud
+    // orange CTA bar is gone), while the pin button stays above it. An <a>
+    // wrapping everything would nest a <button> inside a link, which is invalid.
+    // data-gift-name is what ClickTracker reads to label the click; without it
+    // every click was recorded as the link text.
+    <div
+      data-gift-name={product.name}
+      className="group relative rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 hover:-translate-y-0.5 transition-all duration-200 flex flex-col"
+      style={{ background: '#F0F4F8' }}
+    >
+      <a
+        href={product.affiliateUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        aria-label={`View ${product.name} on Amazon`}
+        className="absolute inset-0 z-[1] rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F04E30]"
+      />
+
+      {/* Image */}
       <div className="relative w-full h-28">
         <Image
           src={imgSrc}
@@ -67,9 +108,9 @@ export default function ProductCard({
         />
         {onTogglePin && (
           <button
-            onClick={(e) => { e.stopPropagation(); onTogglePin(); }}
+            onClick={(e) => { e.stopPropagation(); e.preventDefault(); onTogglePin(); }}
             title="Pin this gift"
-            className="absolute top-1.5 left-1.5 w-6 h-6 flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-colors z-10"
+            className="absolute top-1.5 left-1.5 w-6 h-6 flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-colors z-[2]"
           >
             <PinIcon pinned={!!pinned} />
           </button>
@@ -89,24 +130,23 @@ export default function ProductCard({
         )}
         {(product.why || product.description) && (
           <p className="text-[10px] italic text-gray-500 mt-1.5 pl-2 border-l-2 border-[#F04E30]/30 leading-snug line-clamp-2">
-            {product.why ? <>✦ Why we picked this: {product.why}</> : product.description}
+            {product.why ? <>&#10022; Why we picked this: {product.why}</> : product.description}
           </p>
         )}
-        <p className="text-sm font-extrabold mt-auto pt-2" style={{ color: '#1A202C' }}>
-          {product.priceDisplay}
-        </p>
-      </div>
 
-      {/* Buy button â€" full-width at bottom */}
-      <a
-        href={product.affiliateUrl}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className="btn-amazon block text-center text-xs font-bold py-2 px-3"
-      >
-        Buy on Amazon
-      </a>
+        {/* Merchant + price. Replaces the full-width "Buy on Amazon" bar: the
+            mark says where the link goes without shouting, the arrow only
+            appears on hover so the card reads calm at rest. */}
+        <div className="mt-auto pt-2.5 flex items-center gap-1.5">
+          <AmazonMark />
+          <span className="text-sm font-extrabold" style={{ color: '#1A202C' }}>
+            {product.priceDisplay}
+          </span>
+          <span className="ml-auto text-[#F04E30] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <ArrowOut />
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
-

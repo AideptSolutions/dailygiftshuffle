@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool } from '@/lib/giftSelect';
+import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/best-anniversary-gifts-2026';
 
@@ -29,8 +29,31 @@ export const metadata: Metadata = {
 };
 
 const match = (p: { occasions?: string[] }) => !!p.occasions?.includes('anniversary');
-const grid = curate({ match, sort: 'social', recipientCap: 50 });
-const shuffle = shufflePool(match);
+
+// Ranking by review volume alone put a $370 Le Creuset dutch oven and an
+// 8-quart Instant Pot at the top of a page promising romantic picks for
+// couples: kitchen appliances carry the biggest review counts in the catalog,
+// so they win any purely social sort. Same failure the for-her page had.
+// Favour the romantic and keepsake categories, push the appliances down, and
+// draw from the combined pool, which holds 53 anniversary-eligible products
+// against the 19 the recipient-only default could reach.
+const PREFER = ['luxury', 'beauty', 'home', 'wedding'];
+const DEPRIORITIZE = [
+  'kitchen', 'tech', 'ai-smart-home', 'office', 'diy-tools',
+  'fitness', 'outdoors', 'gaming', 'car-accessories', 'sports', 'finance',
+];
+
+const grid = curate({
+  match,
+  sort: 'social',
+  minRating: 4.5,
+  preferTags: PREFER,
+  deprioritizeTags: DEPRIORITIZE,
+  recipientCap: 50,
+  limit: 30,
+  pool: ALL,
+});
+const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE });
 
 export default function Page() {
   return (

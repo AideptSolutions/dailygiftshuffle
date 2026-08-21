@@ -35,7 +35,7 @@ const match = (p: { recipients?: string[]; occasions?: string[] }) =>
 // over the mass-review electronics and appliances raw social sort surfaces.
 const STANDOUT = /kindle|airpods|apple watch|sonos|bose|beats|instax|polaroid|nespresso|espresso machine|dyson/i;
 const isStandout = (p: { name?: string }) => !!p.name && STANDOUT.test(p.name);
-const DEPRIORITIZE = ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'outdoors', 'gaming', 'office', 'finance', 'sports'];
+const DEPRIORITIZE = ['kitchen', 'tech', 'diy-tools', 'car-accessories', 'ai-smart-home', 'outdoors', 'gaming', 'office', 'finance', 'sports'];
 
 const grid = curate({
   match,

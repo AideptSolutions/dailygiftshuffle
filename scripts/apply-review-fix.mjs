@@ -32,7 +32,7 @@ const overlap = (a, b) => {
 };
 
 let checked = 0, updated = 0, skippedNoData = 0, skippedMismatch = 0, unchanged = 0;
-const changes = [], mismatches = [];
+const changes = [], mismatches = [], volatile = [];
 
 for (const f of ['data/products.ts', 'data/products-catalog.ts']) {
   let t = readFileSync(f, 'utf8');
@@ -53,12 +53,27 @@ for (const f of ['data/products.ts', 'data/products-catalog.ts']) {
     const curC = Number((block.match(/reviewCount:\s*(\d+)/) || [, 0])[1]);
     checked++;
 
-    // Only correct entries that actually look merchant-sourced. Leave the
-    // hand-entered Amazon figures (already in the tens of thousands) alone.
-    if (curC >= 1000) { unchanged++; continue; }
+    // Originally this skipped entries at or above 1000 reviews, on the theory
+    // that a high count meant a real Amazon figure. That turned out to be
+    // wrong: the Stream Deck stored 28,700 against a real 774, and the Anker
+    // 41,203 against 259. Anything present in amazon-live.csv has been read off
+    // the live product page, so it now wins outright whatever the stored value.
+    if (Number(d.r) === curR && Number(d.c) === curC) { unchanged++; continue; }
 
     const newR = Number(d.r), newC = Number(d.c);
     if (!Number.isFinite(newR) || !Number.isFinite(newC) || newC <= 0) { skippedNoData++; continue; }
+
+    // Amazon serves different variant/parent pages for the same ASIN, so a
+    // single page read is not reproducible: B00FLYWNYQ returned 173,482 one day
+    // and 14,032 the next, and the Echo Dot returned 44,766 then 203. A large
+    // swing therefore does not tell us the stored value was wrong, only that the
+    // two reads disagree - and applying the smaller one would invent a decline
+    // that never happened. Hold anything beyond 3x for a source that can settle
+    // it (the Creators API returns authoritative per-ASIN figures).
+    if (curC && Math.max(curC, newC) / Math.min(curC, newC) > 3) {
+      volatile.push({ id, name, from: curC, to: newC });
+      continue;
+    }
 
     block = block
       .replace(/rating:\s*[\d.]+/, `rating: ${newR}`)
@@ -84,5 +99,12 @@ changes.slice(0, 30).forEach((c) =>
 if (mismatches.length) {
   console.log('\nASIN may have drifted to a different product (left untouched):');
   mismatches.forEach((m) => console.log(`  ${m.id.padEnd(28)} ov=${m.ov}\n     ours: ${m.name.slice(0, 60)}\n     amzn: ${m.title.slice(0, 60)}`));
+}
+if (volatile.length) {
+  console.log(`
+HELD BACK - the two reads disagree by more than 3x (${volatile.length}):`);
+  volatile.slice(0, 15).forEach((v) => console.log(`  ${v.id.padEnd(28)} ${v.from} vs ${v.to}   ${v.name.slice(0, 32)}`));
+  writeFileSync('scripts/volatile-counts.json', JSON.stringify(volatile, null, 2));
+  console.log('  full list -> scripts/volatile-counts.json');
 }
 console.log(WRITE ? '\nWROTE changes to both catalogs' : '\n(dry run - pass --write to apply)');
