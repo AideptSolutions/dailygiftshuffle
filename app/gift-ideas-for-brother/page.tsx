@@ -30,8 +30,15 @@ export const metadata: Metadata = {
 
 // Brother-tagged items lead the pool; broaden with him-suited picks since the
 // dedicated brother recipient set is small.
-const match = (p: { recipients?: string[] }) =>
-  !!(p.recipients?.includes('brother') || p.recipients?.includes('him') || p.recipients?.includes('teens'));
+// 'teens' is included so teenage brothers are served, but on its own it also
+// admits products aimed squarely at teenage girls: a Rare Beauty blush is
+// recipients ['her','teens'] and was reaching this page that way. A teens
+// product therefore qualifies only if it is not exclusively for her.
+const match = (p: { recipients?: string[] }) => {
+  const r = p.recipients ?? [];
+  if (r.includes('brother') || r.includes('him')) return true;
+  return r.includes('teens') && !r.includes('her');
+};
 const grid = curate({ match, minPrice: 15, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 40, pool: ALL });
 const shuffle = shufflePool(match, ALL);
 
