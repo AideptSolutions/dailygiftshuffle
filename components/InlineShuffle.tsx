@@ -1,7 +1,9 @@
 'use client';
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import CategoryIcon from '@/components/CategoryIcon';
+import { usePins } from '@/lib/usePins';
+import GeniePanel from '@/components/genie/GeniePanel';
 
 interface Props {
   products: CompactProduct[];
@@ -35,7 +37,10 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
   // Deterministic first render: SSR and client hydration must agree, so seed with a
   // fixed slice (never Math.random) and only randomize after mount in the effect below.
   const [picks, setPicks] = useState<CompactProduct[]>(() => products.slice(0, 4));
-  const [pinnedIds, setPinnedIds] = useState<Set<string>>(new Set());
+  // Pins come from the shared persistent store; the derived Set keeps the
+  // existing has() call sites unchanged.
+  const { pins, togglePin: togglePinStore } = usePins();
+  const pinnedIds = useMemo(() => new Set(pins.map((p) => p.id)), [pins]);
   // Stack of previous pick-sets so users can step back to a set they shuffled past.
   const [history, setHistory] = useState<CompactProduct[][]>([]);
 
@@ -50,18 +55,27 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Once the persisted pins load (their own effect, so a later render), any pin
+  // belonging to this page's pool moves to the front of the deal, once.
+  const seededPins = useRef(false);
+  useEffect(() => {
+    if (seededPins.current || pins.length === 0) return;
+    seededPins.current = true;
+    setPicks(prev => {
+      const pinnedHere = pins
+        .map(p => products.find(c => c.id === p.id))
+        .filter((p): p is CompactProduct => !!p)
+        .slice(0, prev.length || 4);
+      if (!pinnedHere.length) return prev;
+      const rest = prev.filter(c => !pinnedHere.some(p => p.id === c.id));
+      return [...pinnedHere, ...rest].slice(0, prev.length || 4);
+    });
+  }, [pins, products]);
+
   // Respect the OS reduced-motion setting; skip the animation entirely if set.
   useEffect(() => {
     prefersReduced.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     return () => { if (timer.current) clearTimeout(timer.current); };
-  }, []);
-
-  const togglePin = useCallback((id: string) => {
-    setPinnedIds(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
-    });
   }, []);
 
   // Swap in the next set. Pinned cards are kept exactly where they are.
@@ -142,12 +156,14 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
               <ProductCard
                 product={p}
                 pinned={isPinned}
-                onTogglePin={() => togglePin(p.id)}
+                onTogglePin={() => togglePinStore(p)}
               />
             </div>
           );
         })}
       </div>
+      {/* Gift Genie: reads the visitor's persistent pins */}
+      <GeniePanel />
     </div>
   );
 }

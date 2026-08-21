@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { type Product, type Recipient, type BudgetTier, type NicheTag } from '@/data/products';
 import { useFavorites } from '@/lib/useFavorites';
+import { usePins } from '@/lib/usePins';
 import ProductModal from '@/components/ProductModal';
+import GeniePanel from '@/components/genie/GeniePanel';
 
 // --- Random 4-picker from catalog ---
 const SHUFFLE_KEY = 'dgs_home_shuffle_seen';
@@ -218,7 +220,10 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const [isTrending, setIsTrending] = useState(true);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
   const [count, setCount]           = useState(4);
-  const [pinnedIds, setPinnedIds]   = useState<Set<string>>(new Set());
+  // Pins live in the shared persistent store (localStorage) so they survive
+  // reloads and follow the visitor to every shuffle surface + the Genie panel.
+  const { pins, togglePin } = usePins();
+  const pinnedIds = useMemo(() => new Set(pins.map((p) => p.id)), [pins]);
   const [riffling, setRiffling]     = useState(false);
   const prefersReduced = useRef(false);
   const riffleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -228,13 +233,23 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     return () => { if (riffleTimer.current) clearTimeout(riffleTimer.current); };
   }, []);
 
-  const togglePin = useCallback((id: string) => {
-    setPinnedIds(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
+  // Returning visitors see their pinned picks lead the opening deal. Pins are
+  // resolved against the catalog so the grid keeps honest Product objects.
+  const seededPins = useRef(false);
+  useEffect(() => {
+    if (seededPins.current || pins.length === 0 || catalog.length === 0) return;
+    seededPins.current = true;
+    setCards(prev => {
+      const size = prev.length || count;
+      const pinnedInCatalog = pins
+        .map(p => catalog.find(c => c.id === p.id))
+        .filter((p): p is Product => !!p)
+        .slice(0, size);
+      if (!pinnedInCatalog.length) return prev;
+      const rest = prev.filter(c => !pinnedInCatalog.some(p => p.id === c.id));
+      return [...pinnedInCatalog, ...rest].slice(0, size);
     });
-  }, []);
+  }, [pins, catalog, count]);
 
   // Custom shuffle dropdowns
   const [recipient, setRecipient] = useState<Recipient | ''>('');
@@ -262,12 +277,14 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
     riffleTimer.current = setTimeout(() => { setRiffling(false); commit(); }, RIFFLE_MS);
   }, [catalog, cards, pinnedIds, riffling]);
 
+  // Pins persist across count changes: pinned cards stay, only the rest redeal.
   const handleCountChange = useCallback((newCount: number) => {
     setCount(newCount);
-    setPinnedIds(new Set());
-    setCards(pickN(catalog, newCount));
+    const kept = cards.filter(c => pinnedIds.has(c.id)).slice(0, newCount);
+    const fresh = pickN(catalog, Math.max(0, newCount - kept.length), kept.map(c => c.id));
+    setCards([...kept, ...fresh]);
     setIsTrending(false);
-  }, [catalog]);
+  }, [catalog, cards, pinnedIds]);
 
   // Custom Shuffle -> navigate
   const handleCustomShuffle = useCallback(() => {
@@ -421,7 +438,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
                   unoptimized
                 />
                 <button
-                  onClick={(e) => { e.stopPropagation(); togglePin(product.id); }}
+                  onClick={(e) => { e.stopPropagation(); togglePin(product); }}
                   title="Pin this gift"
                   className="absolute top-1.5 left-1.5 w-6 h-6 flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-colors z-10"
                 >
@@ -492,6 +509,9 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
           Affiliate links. We may earn a small commission at no extra cost to you.
         </p>
       </div>
+
+      {/* Gift Genie: reads the visitor's persistent pins */}
+      <GeniePanel />
 
       {/* Product detail modal */}
       {activeProduct && (
