@@ -4,8 +4,17 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/gifts-for-girlfriend';
 
+const match = (p: { recipients?: string[]; occasions?: string[] }) =>
+  (!!p.recipients?.includes('her') || !!p.recipients?.includes('couples')) &&
+  (!!p.occasions?.includes('valentines') ||
+    !!p.occasions?.includes('anniversary') ||
+    !!p.occasions?.includes('justBecause') ||
+    !!p.occasions?.includes('birthday'));
+const grid = curate({ match, minPrice: 20, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 40, pool: ALL });
+const shuffle = shufflePool(match, ALL);
+
 export const metadata: Metadata = {
-  title: 'Gifts for Your Girlfriend: 30 Ideas She Will Actually Love (2026) | TheGiftShuffle',
+  title: `Gifts for Your Girlfriend: ${grid.length} Ideas She Will Actually Love (2026) | TheGiftShuffle`,
   description:
     'Stuck on what to get your girlfriend? 30 top-rated gift ideas for your girlfriend in 2026, from sweet and romantic to fun and practical, at every budget.',
   keywords: [
@@ -22,7 +31,7 @@ export const metadata: Metadata = {
     'gifts for girlfriend 2026',
   ],
   openGraph: {
-    title: 'Gifts for Your Girlfriend: 30 Ideas She Will Actually Love (2026) | TheGiftShuffle',
+    title: `Gifts for Your Girlfriend: ${grid.length} Ideas She Will Actually Love (2026) | TheGiftShuffle`,
     description: '30 top-rated gift ideas for your girlfriend in 2026, from sweet to practical. Every budget covered.',
     type: 'website',
     url: URL,
@@ -31,14 +40,6 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
 };
 
-const match = (p: { recipients?: string[]; occasions?: string[] }) =>
-  (!!p.recipients?.includes('her') || !!p.recipients?.includes('couples')) &&
-  (!!p.occasions?.includes('valentines') ||
-    !!p.occasions?.includes('anniversary') ||
-    !!p.occasions?.includes('justBecause') ||
-    !!p.occasions?.includes('birthday'));
-const grid = curate({ match, minPrice: 20, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 40, pool: ALL });
-const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
   return (
@@ -82,7 +83,7 @@ export default function Page() {
       }}
       shuffleHeading="Shuffle Girlfriend Gift Picks"
       shuffleProducts={shuffle}
-      gridHeading="30 Gift Ideas for Your Girlfriend"
+      gridHeading={`${grid.length} Gift Ideas for Your Girlfriend`}
       gridProducts={grid}
       ctaHeading="Want Something Even More Her Style?"
       ctaText="Tell TheGiftShuffle a little about her and your budget, and get an instant gift idea in one click."

@@ -4,31 +4,6 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/gifts-for-wife';
 
-export const metadata: Metadata = {
-  title: 'Gifts for Your Wife 2026: 40 Ideas She Will Actually Love | TheGiftShuffle',
-  description:
-    'Gift ideas for your wife she will actually love: romantic, thoughtful and luxe picks for her birthday, your anniversary, or just because. The best gifts for your wife in 2026 at every budget.',
-  keywords: [
-    'gifts for wife',
-    'gift ideas for my wife',
-    'gifts for wife 2026',
-    'best gifts for wife',
-    'romantic gifts for wife',
-    'anniversary gifts for wife',
-    'what to get my wife',
-    'gift ideas for wife 2026',
-    'thoughtful gifts for wife',
-  ],
-  openGraph: {
-    title: 'Gifts for Your Wife 2026: 40 Ideas She Will Actually Love | TheGiftShuffle',
-    description: 'Romantic, thoughtful and luxe gift ideas for your wife in 2026, for her birthday, your anniversary, or just because.',
-    type: 'website',
-    url: URL,
-    images: [{ url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20for%20Your%20Wife%20%7C%20TheGiftShuffle', width: 1200, height: 630 }],
-  },
-  alternates: { canonical: URL },
-};
-
 // Broad, quality set of her-suited gifts, framed for a wife (romantic + everyday luxe).
 const match = (p: { recipients?: string[] }) =>
   !!(p.recipients?.includes('her') || p.recipients?.includes('mom') || p.recipients?.includes('couples'));
@@ -51,6 +26,32 @@ const grid = curate({
   pool: ALL,
 });
 const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE, keepMatch: isStandout });
+
+export const metadata: Metadata = {
+  title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love | TheGiftShuffle`,
+  description:
+    'Gift ideas for your wife she will actually love: romantic, thoughtful and luxe picks for her birthday, your anniversary, or just because. The best gifts for your wife in 2026 at every budget.',
+  keywords: [
+    'gifts for wife',
+    'gift ideas for my wife',
+    'gifts for wife 2026',
+    'best gifts for wife',
+    'romantic gifts for wife',
+    'anniversary gifts for wife',
+    'what to get my wife',
+    'gift ideas for wife 2026',
+    'thoughtful gifts for wife',
+  ],
+  openGraph: {
+    title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love | TheGiftShuffle`,
+    description: 'Romantic, thoughtful and luxe gift ideas for your wife in 2026, for her birthday, your anniversary, or just because.',
+    type: 'website',
+    url: URL,
+    images: [{ url: 'https://www.thegiftshuffle.com/api/og?title=Gifts%20for%20Your%20Wife%20%7C%20TheGiftShuffle', width: 1200, height: 630 }],
+  },
+  alternates: { canonical: URL },
+};
+
 
 export default function Page() {
   return (

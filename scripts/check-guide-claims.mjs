@@ -39,9 +39,13 @@ const jobs = pages.map((name) => {
   const title = (src.match(/title:\s*'((?:[^'\\]|\\.)*)'/) || [, ''])[1];
   const grid = (src.match(/gridHeading="([^"]*)"/) || [, ''])[1];
   const h1 = (src.match(/h1="([^"]*)"/) || [, ''])[1];
+  // A page whose count is interpolated from grid.length cannot go stale, so it
+  // is reported as derived rather than counted as "no claim".
+  const derived = /\$\{grid\.length\}/.test(src);
   return {
     name,
-    claim: claimFrom(title) || claimFrom(grid) || claimFrom(h1),
+    derived,
+    claim: derived ? null : (claimFrom(title) || claimFrom(grid) || claimFrom(h1)),
     // curate() with no explicit pool falls back to RECIPIENT
     recipientOnly: /curate\(\{/.test(src) && !/pool:\s*ALL/.test(src),
     hasSteering: /preferTags/.test(src),
@@ -71,11 +75,13 @@ process.stdout.write('\n\n');
 
 const mismatched = results.filter((r) => r.claim && r.count != null && r.count !== r.claim.n);
 const matched = results.filter((r) => r.claim && r.count === r.claim.n);
-const noClaim = results.filter((r) => !r.claim);
+const derivedPages = results.filter((r) => r.derived);
+const noClaim = results.filter((r) => !r.claim && !r.derived);
 const errored = results.filter((r) => r.err);
 
-console.log(`guide pages: ${results.length}   with a count claim: ${results.length - noClaim.length}`);
+console.log(`guide pages: ${results.length}   with a static count claim: ${matched.length + mismatched.length}`);
 console.log(`claim matches what renders: ${matched.length}`);
+console.log(`count derived from grid.length (cannot go stale): ${derivedPages.length}`);
 console.log(`CLAIM DOES NOT MATCH:       ${mismatched.length}`);
 if (errored.length) console.log(`could not fetch:            ${errored.length}`);
 
