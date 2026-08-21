@@ -44,6 +44,22 @@ and (if added) `PEXELS_API_KEY`. Never stage or commit any `.env` file, `*.key`,
 `*.pem`, or files named like secrets. If `git add -A` would stage one, exclude it
 explicitly (e.g. `git add -A -- . ':!path/to/secret'`).
 
+### Gift Genie env vars (Phase 2+)
+
+Set in Vercel (and `.env.all` for the record) when enabling each phase:
+
+- `NEXT_PUBLIC_GENIE_PHASE` - feature gate: unset/`1` = teaser panel only,
+  `2` = accounts + runs live, `3` = Stripe purchases live.
+- `SESSION_SECRET` - 32+ random bytes; signs session/trial cookies. Rotating it
+  logs every user out.
+- `ANTHROPIC_API_KEY` - Genie brain (default model `claude-haiku-4-5`).
+- `GENIE_MODEL` - optional override; `gemini-*` values switch to the Gemini
+  fallback using `GOOGLE_AI_API_KEY`.
+- `RESEND_API_KEY`, `GENIE_EMAIL_FROM` - magic-link email (domain must be
+  verified in Resend with SPF/DKIM DNS records first).
+- `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_GENIE_S/M/L` -
+  Phase 3 purchases; webhook endpoint is `/api/stripe/webhook`.
+
 ## Keep GitHub as the source of truth
 
 Don't leave local commits unpushed. After committing, push to `master` so GitHub
