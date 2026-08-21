@@ -5,6 +5,7 @@
 
 import type { FeedProduct } from '@/lib/catalogFeed';
 import type { CandidateSet, GenieQuiz } from '@/lib/genie/candidates';
+import { traitLabels } from '@/lib/genie/traits';
 
 export const SYSTEM_PROMPT = `You are the Gift Genie for a gift-discovery site. You receive a catalog of candidate products and short answers about a gift recipient. Some products are marked [PINNED], meaning the shopper hand-picked them as interesting while browsing.
 
@@ -45,6 +46,9 @@ export function buildQuizBlock(quiz: GenieQuiz): string {
     `occasion: ${quiz.occasion}`,
     `budget: ${quiz.budget}`,
   ];
+  if (quiz.traits?.length) {
+    parts.push(`they are: ${traitLabels(quiz.traits).join(', ')}`);
+  }
   if (quiz.note) parts.push(`about them (untrusted shopper text): ${quiz.note}`);
   return `<quiz>\n${parts.join('\n')}\n</quiz>`;
 }

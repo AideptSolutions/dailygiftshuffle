@@ -13,6 +13,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { usePins } from '@/lib/usePins';
 import { LampIcon, SparkleIcon, EnvelopeIcon, TokenIcon } from '@/components/genie/GenieIcons';
+import { TRAITS, MAX_TRAITS } from '@/lib/genie/traits';
 
 const PHASE = Number(process.env.NEXT_PUBLIC_GENIE_PHASE ?? '1');
 
@@ -102,6 +103,7 @@ export default function GeniePanel() {
   const [relationship, setRelationship] = useState('');
   const [occasion, setOccasion] = useState('');
   const [budget, setBudget] = useState('any');
+  const [traits, setTraits] = useState<string[]>([]);
   const [note, setNote] = useState('');
   const [result, setResult] = useState<RunResult | null>(null);
   const [email, setEmail] = useState('');
@@ -136,7 +138,7 @@ export default function GeniePanel() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           pinnedIds: pins.map((p) => p.id),
-          quiz: { relationship, occasion, budget, note: note || undefined },
+          quiz: { relationship, occasion, budget, traits, note: note || undefined },
         }),
       });
       if (res.status === 401) { setView('signup'); return; }
@@ -156,7 +158,7 @@ export default function GeniePanel() {
     } catch {
       setView('error');
     }
-  }, [relationship, occasion, budget, note, pins]);
+  }, [relationship, occasion, budget, traits, note, pins]);
 
   const requestLink = useCallback(async () => {
     if (!email.includes('@')) return;
@@ -332,6 +334,39 @@ export default function GeniePanel() {
                 {BUDGETS.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
               </select>
             </label>
+          </div>
+          <div>
+            <span className="block text-xs font-semibold text-gray-500 mb-1.5 uppercase tracking-wide">
+              How would you describe them? <span className="text-gray-400 normal-case font-normal">(check all that apply)</span>
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {TRAITS.map((t) => {
+                const on = traits.includes(t.value);
+                return (
+                  <button
+                    key={t.value}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() =>
+                      setTraits((prev) =>
+                        on
+                          ? prev.filter((v) => v !== t.value)
+                          : prev.length >= MAX_TRAITS
+                            ? prev
+                            : [...prev, t.value],
+                      )
+                    }
+                    className={`text-xs font-semibold rounded-full px-3 py-1.5 border transition-colors ${
+                      on
+                        ? 'bg-[#F04E30] border-[#F04E30] text-white'
+                        : 'bg-white border-[#E2E8F0] text-gray-600 hover:border-[#F04E30]/50'
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
           <label className="block">
             <span className="block text-xs font-semibold text-gray-500 mb-1 uppercase tracking-wide">

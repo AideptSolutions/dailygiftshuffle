@@ -4,11 +4,13 @@
 
 import type { FeedProduct } from '@/lib/catalogFeed';
 import { baseScore, variantKey, type AnyProduct } from '@/lib/giftSelect';
+import { traitTags } from '@/lib/genie/traits';
 
 export interface GenieQuiz {
   relationship: string; // Recipient enum, validated in the route
   occasion: string;     // Occasion enum, validated in the route
   budget: string;       // BudgetTier enum or 'any', validated in the route
+  traits: string[];     // trait enum values, validated in the route
   note?: string;        // free text, capped + sanitized in the route
 }
 
@@ -44,6 +46,7 @@ function budgetWindow(budget: string): [number, number] {
 
 const PIN_THEME_BOOST = 1.6;   // mirrors AFFINITY_BOOST in giftSelect
 const RELATIONSHIP_BOOST = 1.4;
+const TRAIT_BOOST = 1.35;
 const OCCASION_BOOST = 1.2;
 
 export function selectCandidates(
@@ -71,6 +74,8 @@ export function selectCandidates(
     Array.from(tagCounts.entries()).filter(([, n]) => n >= themeThreshold).map(([t]) => t),
   );
 
+  const selectedTraitTags = traitTags(quiz.traits ?? []);
+
   const [lo, hi] = budgetWindow(quiz.budget);
   const excludeRecipients = new Set(['baby', 'pets']);
   if (quiz.relationship === 'baby') excludeRecipients.delete('baby');
@@ -89,6 +94,7 @@ export function selectCandidates(
       let s = baseScore(p as AnyProduct);
       if ((p.tags ?? []).some((t) => themeTags.has(t))) s *= PIN_THEME_BOOST;
       if ((p.recipients ?? []).includes(quiz.relationship)) s *= RELATIONSHIP_BOOST;
+      if (selectedTraitTags.size && (p.tags ?? []).some((t) => selectedTraitTags.has(t))) s *= TRAIT_BOOST;
       if ((p.occasions ?? []).includes(quiz.occasion)) s *= OCCASION_BOOST;
       return { p, s };
     })
