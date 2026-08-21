@@ -17,5 +17,3 @@ export const rlLinkPerIp    = make('link:ip', 10, '1 h');
 export const rlVerifyPerIp  = make('verify:ip', 20, '1 h');
 export const rlMePerIp      = make('me:ip', 60, '1 m');
 export const rlRunPerIp     = make('run:ip', 5, '1 m');
-export const rlRunPerUidDay = make('run:uid', 30, '1 d');
-export const rlCheckoutPerUid = make('checkout:uid', 5, '1 m');

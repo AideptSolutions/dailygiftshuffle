@@ -4,10 +4,10 @@
 //
 // Phase 1 (NEXT_PUBLIC_GENIE_PHASE=1): pins mirror + teaser only.
 // Phase 2 (>=2): the full flow. States: noPins -> idle -> quiz -> loading ->
-// results, plus signup (magic link), outOfCredits, and error. Anonymous
-// visitors get one free run (enforced server-side); the panel reacts to the
-// API's 401 signup-required / 402 no-credits answers rather than trusting any
-// client state.
+// results, plus signup (magic link), daily/weekly limit stops, and error.
+// Anonymous visitors get one free run; signed-in users get 3/day capped at
+// 15/week. All enforcement is server-side; the panel just reacts to the API's
+// 401 signup-required / 429 daily-limit / weekly-limit answers.
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -63,7 +63,9 @@ const LOADING_LINES = [
 interface Me {
   signedIn: boolean;
   email?: string;
-  credits?: number;
+  runsLeftToday?: number;
+  runsLeftThisWeek?: number;
+  runsPerDay?: number;
 }
 
 interface Pick {
@@ -85,12 +87,13 @@ interface RunResult {
   shareId: string;
   recipientProfile: string;
   picks: Pick[];
-  creditsRemaining: number | null;
+  runsLeftToday: number | null;
+  runsLeftThisWeek: number | null;
   trial?: boolean;
   fallback?: boolean;
 }
 
-type View = 'idle' | 'quiz' | 'loading' | 'results' | 'signup' | 'linkSent' | 'outOfCredits' | 'error';
+type View = 'idle' | 'quiz' | 'loading' | 'results' | 'signup' | 'linkSent' | 'dailyLimit' | 'weeklyLimit' | 'error';
 
 export default function GeniePanel() {
   const { pins, removePin, clear } = usePins();
@@ -137,12 +140,17 @@ export default function GeniePanel() {
         }),
       });
       if (res.status === 401) { setView('signup'); return; }
-      if (res.status === 402) { setView('outOfCredits'); return; }
-      if (!res.ok) { setView('error'); return; }
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({} as { error?: string }));
+        if (err?.error === 'daily-limit') { setView('dailyLimit'); return; }
+        if (err?.error === 'weekly-limit') { setView('weeklyLimit'); return; }
+        setView('error');
+        return;
+      }
       const data = (await res.json()) as RunResult;
       setResult(data);
-      if (typeof data.creditsRemaining === 'number') {
-        setMe((m) => (m ? { ...m, credits: data.creditsRemaining ?? m.credits } : m));
+      if (typeof data.runsLeftToday === 'number') {
+        setMe((m) => (m ? { ...m, runsLeftToday: data.runsLeftToday ?? m.runsLeftToday, runsLeftThisWeek: data.runsLeftThisWeek ?? m.runsLeftThisWeek } : m));
       }
       setView('results');
     } catch {
@@ -216,7 +224,7 @@ export default function GeniePanel() {
       {PHASE >= 2 && me?.signedIn ? (
         <span className="inline-flex items-center gap-1 text-[10px] font-bold text-gray-500 border border-gray-300 rounded-full px-2 py-0.5">
           <TokenIcon className="w-3 h-3 text-[#F04E30]" />
-          {me.credits ?? 0} {me.credits === 1 ? 'run' : 'runs'} left
+          {me.runsLeftToday ?? 0} of {me.runsPerDay ?? 3} left today
         </span>
       ) : (
         <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-gray-400 border border-gray-300 rounded-full px-2 py-0.5">
@@ -454,7 +462,8 @@ export default function GeniePanel() {
                 That was your free rub of the lamp.
               </p>
               <p className="text-xs text-gray-500 mb-3">
-                Sign up with just your email to save this result and get 3 more readings free.
+                Sign up with just your email (no password, no card) and the Genie will do
+                3 readings a day for you, free.
               </p>
               <SignupForm email={email} setEmail={setEmail} onSubmit={requestLink} />
             </div>
@@ -473,7 +482,8 @@ export default function GeniePanel() {
         <div>
           <p className="text-sm font-bold text-gray-800 mb-1">Your free reading is used up.</p>
           <p className="text-xs text-gray-500 mb-3">
-            Sign up with just your email (no password) and the Genie will do 3 more readings free.
+            Sign up with just your email (no password, no card) and the Genie will do
+            3 readings a day for you, free.
           </p>
           <SignupForm email={email} setEmail={setEmail} onSubmit={requestLink} />
         </div>
@@ -491,11 +501,20 @@ export default function GeniePanel() {
         </div>
       )}
 
-      {view === 'outOfCredits' && (
+      {view === 'dailyLimit' && (
         <div>
-          <p className="text-sm font-bold text-gray-800 mb-1">You are out of Genie runs.</p>
+          <p className="text-sm font-bold text-gray-800 mb-1">The Genie has done your 3 readings for today.</p>
           <p className="text-xs text-gray-500">
-            Run packs are coming very soon. Your pins and past readings are safe in the meantime.
+            Come back tomorrow for 3 more. Your pins and past readings are safe in the meantime.
+          </p>
+        </div>
+      )}
+
+      {view === 'weeklyLimit' && (
+        <div>
+          <p className="text-sm font-bold text-gray-800 mb-1">You have hit this week&apos;s limit of 15 readings.</p>
+          <p className="text-xs text-gray-500">
+            The lamp needs a rest. Your quota resets at the start of next week.
           </p>
         </div>
       )}

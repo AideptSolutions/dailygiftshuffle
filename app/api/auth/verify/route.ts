@@ -8,16 +8,15 @@ import {
   SESSION_COOKIE,
   SESSION_MAX_AGE,
 } from '@/lib/auth';
-import { magicKey, userEmailKey, userKey, SIGNUP_FREE_RUNS } from '@/lib/genie/keys';
-import { grantCredits } from '@/lib/genie/credits';
+import { magicKey, userEmailKey, userKey } from '@/lib/genie/keys';
 import { rlVerifyPerIp } from '@/lib/ratelimit';
 
 export const dynamic = 'force-dynamic';
 
 // Completes a magic-link sign-in. The token is single-use via GETDEL: a
 // replayed link atomically finds nothing and lands on link-expired. First
-// verify for an email creates the account and grants the free runs, gated by
-// SET NX so a re-login can never re-mint credits.
+// verify for an email creates the account (SET NX gate); daily run quotas are
+// enforced at run time, so nothing is minted here.
 export async function GET(req: NextRequest) {
   const expired = NextResponse.redirect(new URL('/?genie=link-expired', req.nextUrl.origin));
 
@@ -32,12 +31,11 @@ export async function GET(req: NextRequest) {
 
   const email = stored.email.trim().toLowerCase();
 
-  // Atomic account-created gate. The free-run grant lives ONLY in this branch.
+  // Atomic account-created gate.
   let uid = newUid();
   const created = await redis.set(userEmailKey(email), uid, { nx: true });
   if (created === 'OK') {
     await redis.set(userKey(uid), { id: uid, email, createdAt: new Date().toISOString() });
-    await grantCredits(uid, SIGNUP_FREE_RUNS);
   } else {
     const existing = await redis.get<string>(userEmailKey(email));
     if (!existing) return expired; // should not happen; fail safe

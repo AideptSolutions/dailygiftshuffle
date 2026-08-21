@@ -8,15 +8,11 @@ export const sha256 = (s: string) => createHash('sha256').update(s).digest('hex'
 // Accounts
 export const userEmailKey = (email: string) => `user:email:${email.trim().toLowerCase()}`;
 export const userKey      = (uid: string)   => `user:${uid}`;
-export const creditsKey   = (uid: string)   => `credits:${uid}`;
 
 // Magic links: only the hash of the token is ever stored.
 export const magicKey = (rawToken: string) => `magic:${sha256(rawToken)}`;
 export const MAGIC_TTL_SECONDS = 15 * 60;
 
-// Stripe webhook idempotency
-export const stripeEventKey = (eventId: string) => `stripe:evt:${eventId}`;
-export const STRIPE_EVENT_TTL_SECONDS = 30 * 24 * 3600;
 
 // Genie runs
 export const runKey      = (runId: string)   => `genie:run:${runId}`;
@@ -36,6 +32,3 @@ export const ANON_DAY_TTL_SECONDS = 2 * 24 * 3600;
 // Hard daily ceiling on anonymous runs: the absolute worst-case daily LLM spend
 // from trial abuse is ANON_DAY_MAX x ~1.3 cents.
 export const ANON_DAY_MAX = 500;
-
-// Grants
-export const SIGNUP_FREE_RUNS = 3;

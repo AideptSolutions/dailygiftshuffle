@@ -57,7 +57,7 @@ export function EnvelopeIcon({ className = 'w-4 h-4' }: IconProps) {
   );
 }
 
-// Coin/token, for run credits (Phase 2/3).
+// Coin/token, for the daily run counter.
 export function TokenIcon({ className = 'w-4 h-4' }: IconProps) {
   return (
     <svg

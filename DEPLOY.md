@@ -49,7 +49,8 @@ explicitly (e.g. `git add -A -- . ':!path/to/secret'`).
 Set in Vercel (and `.env.all` for the record) when enabling each phase:
 
 - `NEXT_PUBLIC_GENIE_PHASE` - feature gate: unset/`1` = teaser panel only,
-  `2` = accounts + runs live, `3` = Stripe purchases live.
+  `2` = accounts + runs live (free tier: 1 anonymous trial, then 3 runs/day
+  and 15/week per signed-in user).
 - `SESSION_SECRET` - 32+ random bytes; signs session/trial cookies. Rotating it
   logs every user out.
 - `ANTHROPIC_API_KEY` - Genie brain (default model `claude-haiku-4-5`).
@@ -57,8 +58,6 @@ Set in Vercel (and `.env.all` for the record) when enabling each phase:
   fallback using `GOOGLE_AI_API_KEY`.
 - `RESEND_API_KEY`, `GENIE_EMAIL_FROM` - magic-link email (domain must be
   verified in Resend with SPF/DKIM DNS records first).
-- `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_GENIE_S/M/L` -
-  Phase 3 purchases; webhook endpoint is `/api/stripe/webhook`.
 
 ## Keep GitHub as the source of truth
 
