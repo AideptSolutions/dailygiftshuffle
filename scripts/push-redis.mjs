@@ -6,8 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const raw = readFileSync(join(__dirname, '../data/admin-products.json'), 'utf8').replace(/^\uFEFF/, '');
 const products = JSON.parse(raw);
 
-const url = 'https://social-slug-73085.upstash.io';
-const token = 'gQAAAAAAAR19AAIncDFjYmM1MjBkYTJhODA0N2E2YTBkZTc4MDJiNzlkYmU1YnAxNzMwODU';
+import { REDIS_URL as url, REDIS_TOKEN as token } from './lib/redis-env.mjs';
 
 const res = await fetch(`${url}/set/admin:products`, {
   method: 'POST',

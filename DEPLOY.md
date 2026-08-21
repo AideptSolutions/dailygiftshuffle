@@ -44,6 +44,23 @@ and (if added) `PEXELS_API_KEY`. Never stage or commit any `.env` file, `*.key`,
 `*.pem`, or files named like secrets. If `git add -A` would stage one, exclude it
 explicitly (e.g. `git add -A -- . ':!path/to/secret'`).
 
+**This applies to tracked docs too, not just `.env` files.** Never write a
+password, token, or key into a `.md` file, a code comment, or a commit message —
+gitignore does not protect a file that is already tracked. Refer to the env var
+by name (`ADMIN_PASSWORD`) and leave the value in `.env.all` / Vercel.
+Two credentials were committed this way and were removed from the working tree
+on 2026-08-17. Both are still in git history, so deleting the lines is not the
+fix — **both must be rotated**:
+
+| Credential | Was in | Status |
+|---|---|---|
+| `ADMIN_PASSWORD` | `TODOS.md` (since the MVP) | **rotate** |
+| `UPSTASH_REDIS_REST_TOKEN` | 7 scripts, hardcoded | **rotate** |
+
+Standalone scripts get Upstash credentials from `scripts/lib/redis-env.mjs`,
+which loads `.env.all` / `.env.local` and exits with a clear message if either
+variable is missing. Import from it rather than inlining a URL and token again.
+
 ### Gift Genie env vars (Phase 2+)
 
 Set in Vercel (and `.env.all` for the record) when enabling each phase:
