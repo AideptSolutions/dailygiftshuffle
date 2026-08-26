@@ -17,6 +17,26 @@ remediation taken. Companion to CATALOG-DATA-QUALITY.md.
   christmas / coworker clusters lead). Bing is a separate index and was not
   affected; the IndexNow -> Bing -> ChatGPT-search channel still works.
 
+## Drop date confirmed (6-month GSC export, added same day)
+
+Daily data pinpoints the collapse inside the July 2026 core update rollout
+(reported complete July 17 after 2+ weeks):
+
+- Growth ramp peaked the week of Jun 29: ~2,950 impressions, 14 clicks,
+  avg position 26.
+- Positions slid day by day through the rollout: Jul 4 pos 21 -> Jul 8
+  pos 41 -> Jul 11 pos 62; impressions cliffed ~90% on Jul 12
+  (237 -> 21/day). A second leg settled everything at pos 80+ by Jul 27.
+- Pre-collapse winners to watch for recovery: /best-gifts-for-her-2026
+  (19 clicks, pos ~12), the "... 2026" query family (pos 8-10 across a
+  dozen queries), /category/luxury (pos 18), /birthday-gift-ideas
+  (4,049 impressions), /category/gaming (pos 22).
+
+A core update is exactly where site-level quality classifiers get
+reweighted, which fits the doorway-page hypothesis below. Recovery
+typically requires a subsequent core update after cleanup; with the
+current ~quarterly cadence, realistically Sep-Oct 2026.
+
 ## Root-cause hypothesis (high confidence)
 
 ~650 programmatic doorway pages at /gifts/{slug}, generated since the March
