@@ -63,6 +63,14 @@ is the most likely trigger for the sitewide demotion.
 - Verified before deploy: combos 410 with noindex header; kept pages 200;
   no internal links referenced the combos; sitemap never listed them.
 
+## Diagnosis closed 2026-08-26
+
+Owner checked GSC: NO manual actions, NO security issues. The demotion is
+purely algorithmic (July 2026 core update site-level reassessment), which
+means there is nothing to appeal and no reconsideration request to file.
+The recovery path is exactly the cleanup already shipped plus time: Google
+re-evaluates at a subsequent core update.
+
 ## What recovery looks like / next checks
 
 - Owner checklist: GSC -> Manual actions + Security issues (rule out; pattern
