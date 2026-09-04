@@ -20,6 +20,16 @@ export const metadata: Metadata = {
 
 const publishedPosts = [
   {
+    title: 'What Is the Gift Genie? Inside Our Free AI Gift Finder',
+    href: '/blog/what-is-the-gift-genie',
+    description:
+      'A plain-English breakdown of our new AI gift finder: how pin-reading works, why it beats gift quizzes, and how to get the best reading.',
+    image: '/img/blog/what-is-the-gift-genie.jpg',
+    imageAlt: 'Meet the Gift Genie, the free AI gift finder from TheGiftShuffle',
+    category: 'Product',
+    date: 'September 4, 2026',
+  },
+  {
     title: 'Top 10 Gifts for Grandparents Who Already Have Everything',
     href: '/blog/top-10-gifts-for-grandparents-who-have-everything',
     description:

@@ -100,7 +100,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/gifts-for-teenage-girls',
     '/gifts-for-teenage-boys',
     '/gifts/last-minute-mothers-day',
+    '/gift-genie',
     '/blog',
+    '/blog/what-is-the-gift-genie',
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     changeFrequency: 'weekly' as const,

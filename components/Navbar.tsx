@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 import { getWishlistCount } from '@/lib/wishlist';
 import SeasonalBanner from '@/components/SeasonalBanner';
 import CategoryIcon from '@/components/CategoryIcon';
+import { LampIcon } from '@/components/genie/GenieIcons';
 
 const CATEGORIES: { slug: string; label: string }[] = [
   { slug: 'tech',              label: 'Tech & Gadgets' },
@@ -70,6 +71,16 @@ export default function Navbar() {
           TheGiftShuffle
         </Link>
         <div className="relative flex items-center gap-4 text-sm font-medium text-gray-600">
+          <Link
+            href="/gift-genie"
+            className="relative inline-flex items-center gap-1 hover:text-[#F04E30] transition-colors"
+          >
+            <LampIcon className="w-4 h-4 text-[#F04E30]" />
+            <span className="hidden xs:inline sm:inline">Gift Genie</span>
+            <span className="absolute -top-2 -right-5 bg-[#F04E30] text-white text-[8px] font-bold rounded-full px-1 py-0.5 leading-none">
+              NEW
+            </span>
+          </Link>
           <Link href="/shuffle" className="hover:text-[#F04E30] transition-colors hidden sm:block">
             Find a Gift
           </Link>
