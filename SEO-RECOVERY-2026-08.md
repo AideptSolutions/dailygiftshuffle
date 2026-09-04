@@ -83,3 +83,15 @@ re-evaluates at a subsequent core update.
 - Do not rebuild scaled combo pages. New landing pages must be hand-curated
   with real selection logic (see check-fit.mjs / check-guide-quality.mjs
   gates). The Gift Genie + editorial features are the differentiation signal.
+
+## Checkpoint 2026-09-04 (9 days post-cleanup)
+
+- No ranking recovery yet (expected; next core update is the real test).
+  Nothing above pos ~27.
+- Mild positive drift: 86 -> 107 impr/day, weighted pos 83.9 -> 81.6
+  (within noise).
+- Christmas seasonality already ramping: /christmas-gifts-for-her 6 -> 184
+  impr at pos 86. Q4 stakes rising while demoted.
+- 40 doorway /gifts/ URLs still drew 91 impressions: 410s not yet fully
+  processed. If still present in the October export, file a GSC Removals
+  prefix request for /gifts/ to hide them faster.
