@@ -16,7 +16,9 @@ export function loadEnv(file = 'C:/Users/allan/projects/dailygiftshuffle/.env.al
   try {
     const text = readFileSync(file, 'utf8');
     for (const line of text.split('\n')) {
-      const m = line.match(/^([A-Z0-9_]+)=(.*)$/);
+      // trim() guards against CRLF files: JS '.' does not match \r, so an
+      // untrimmed CRLF line silently fails this regex.
+      const m = line.trim().match(/^([A-Z0-9_]+)=(.*)$/);
       if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^"|"$/g, '').trim();
     }
   } catch { /* file optional */ }
