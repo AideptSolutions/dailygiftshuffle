@@ -17,3 +17,5 @@ export const rlLinkPerIp    = make('link:ip', 10, '1 h');
 export const rlVerifyPerIp  = make('verify:ip', 20, '1 h');
 export const rlMePerIp      = make('me:ip', 60, '1 m');
 export const rlRunPerIp     = make('run:ip', 5, '1 m');
+// Anonymous backstop: cookie-clearing cannot farm more than this per IP/day.
+export const rlAnonPerIpDay = make('anonrun:ip', 10, '1 d');

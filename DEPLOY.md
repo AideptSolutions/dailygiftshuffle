@@ -49,15 +49,18 @@ explicitly (e.g. `git add -A -- . ':!path/to/secret'`).
 Set in Vercel (and `.env.all` for the record) when enabling each phase:
 
 - `NEXT_PUBLIC_GENIE_PHASE` - feature gate: unset/`1` = teaser panel only,
-  `2` = accounts + runs live (free tier: 1 anonymous trial, then 3 runs/day
-  and 15/week per signed-in user).
-- `SESSION_SECRET` - 32+ random bytes; signs session/trial cookies. Rotating it
-  logs every user out.
+  `2` = Genie live. No accounts: everyone gets 3 readings/day capped at
+  15/week via a signed anonymous-id cookie, with a 10/day per-IP backstop
+  and a global 500/day ceiling.
+- `SESSION_SECRET` - 32+ random bytes; signs the anonymous quota cookie
+  (and future session cookies). REQUIRED in production or runs 500.
+  Rotating it resets anonymous quotas.
 - `ANTHROPIC_API_KEY` - Genie brain (default model `claude-haiku-4-5`).
 - `GENIE_MODEL` - optional override; `gemini-*` values switch to the Gemini
   fallback using `GOOGLE_AI_API_KEY`.
-- `RESEND_API_KEY`, `GENIE_EMAIL_FROM` - magic-link email (domain must be
-  verified in Resend with SPF/DKIM DNS records first).
+- (Future accounts upgrade only) `RESEND_API_KEY`, `GENIE_EMAIL_FROM` -
+  magic-link email. The auth routes are deployed but dormant; no UI links
+  to them.
 
 ## Keep GitHub as the source of truth
 

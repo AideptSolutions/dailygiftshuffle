@@ -4,15 +4,16 @@
 //
 // Phase 1 (NEXT_PUBLIC_GENIE_PHASE=1): pins mirror + teaser only.
 // Phase 2 (>=2): the full flow. States: noPins -> idle -> quiz -> loading ->
-// results, plus signup (magic link), daily/weekly limit stops, and error.
-// Anonymous visitors get one free run; signed-in users get 3/day capped at
-// 15/week. All enforcement is server-side; the panel just reacts to the API's
-// 401 signup-required / 429 daily-limit / weekly-limit answers.
+// results, plus daily/weekly limit stops and error. No accounts: everyone
+// (anonymous included) gets 3 readings/day capped at 15/week, enforced
+// server-side against a signed anon-id cookie; the panel just reacts to the
+// API's 429 daily-limit / weekly-limit answers. The magic-link auth code
+// stays dormant server-side for a future accounts upgrade.
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { usePins } from '@/lib/usePins';
-import { LampIcon, SparkleIcon, EnvelopeIcon, TokenIcon } from '@/components/genie/GenieIcons';
+import { LampIcon, SparkleIcon, TokenIcon } from '@/components/genie/GenieIcons';
 import { TRAITS, MAX_TRAITS } from '@/lib/genie/traits';
 
 const PHASE = Number(process.env.NEXT_PUBLIC_GENIE_PHASE ?? '1');
@@ -90,11 +91,10 @@ interface RunResult {
   picks: Pick[];
   runsLeftToday: number | null;
   runsLeftThisWeek: number | null;
-  trial?: boolean;
   fallback?: boolean;
 }
 
-type View = 'idle' | 'quiz' | 'loading' | 'results' | 'signup' | 'linkSent' | 'dailyLimit' | 'weeklyLimit' | 'error';
+type View = 'idle' | 'quiz' | 'loading' | 'results' | 'dailyLimit' | 'weeklyLimit' | 'error';
 
 export default function GeniePanel() {
   const { pins, removePin, clear } = usePins();
@@ -106,7 +106,6 @@ export default function GeniePanel() {
   const [traits, setTraits] = useState<string[]>([]);
   const [note, setNote] = useState('');
   const [result, setResult] = useState<RunResult | null>(null);
-  const [email, setEmail] = useState('');
   const [loadingLine, setLoadingLine] = useState(0);
   const [copied, setCopied] = useState(false);
   const lineTimer = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -141,7 +140,6 @@ export default function GeniePanel() {
           quiz: { relationship, occasion, budget, traits, note: note || undefined },
         }),
       });
-      if (res.status === 401) { setView('signup'); return; }
       if (!res.ok) {
         const err = await res.json().catch(() => ({} as { error?: string }));
         if (err?.error === 'daily-limit') { setView('dailyLimit'); return; }
@@ -159,20 +157,6 @@ export default function GeniePanel() {
       setView('error');
     }
   }, [relationship, occasion, budget, traits, note, pins]);
-
-  const requestLink = useCallback(async () => {
-    if (!email.includes('@')) return;
-    try {
-      const res = await fetch('/api/auth/request-link', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, next: window.location.pathname }),
-      });
-      if (res.ok) setView('linkSent');
-    } catch {
-      /* leave the form up */
-    }
-  }, [email]);
 
   const shareUrl = result ? `${typeof window !== 'undefined' ? window.location.origin : ''}/genie/r/${result.shareId}` : '';
   const copyShare = useCallback(async () => {
@@ -223,10 +207,10 @@ export default function GeniePanel() {
         <LampIcon className="w-4 h-4" />
         Gift Genie
       </span>
-      {PHASE >= 2 && me?.signedIn ? (
+      {PHASE >= 2 && typeof me?.runsLeftToday === 'number' ? (
         <span className="inline-flex items-center gap-1 text-[10px] font-bold text-gray-500 border border-gray-300 rounded-full px-2 py-0.5">
           <TokenIcon className="w-3 h-3 text-[#F04E30]" />
-          {me.runsLeftToday ?? 0} of {me.runsPerDay ?? 3} left today
+          {me.runsLeftToday} of {me.runsPerDay ?? 3} left today
         </span>
       ) : (
         <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-gray-400 border border-gray-300 rounded-full px-2 py-0.5">
@@ -291,9 +275,7 @@ export default function GeniePanel() {
             >
               Summon the Genie
             </button>
-            {!me?.signedIn && (
-              <p className="text-xs text-gray-400 mt-2">First reading is free. No sign-up needed.</p>
-            )}
+            <p className="text-xs text-gray-400 mt-2">3 free readings a day. No sign-up, no card.</p>
           </>
         )
       )}
@@ -491,50 +473,23 @@ export default function GeniePanel() {
             </a>
           </div>
 
-          {result.trial ? (
-            <div className="rounded-2xl border border-[#F04E30]/30 bg-white p-4">
-              <p className="text-sm font-bold text-gray-800 mb-1">
-                That was your free rub of the lamp.
-              </p>
-              <p className="text-xs text-gray-500 mb-3">
-                Sign up with just your email (no password, no card) and the Genie will do
-                3 readings a day for you, free.
-              </p>
-              <SignupForm email={email} setEmail={setEmail} onSubmit={requestLink} />
-            </div>
-          ) : (
+          <div className="flex items-center gap-3">
             <button
               onClick={() => setView('quiz')}
               className="text-xs font-bold text-gray-400 hover:text-[#F04E30]"
             >
               Run it again
             </button>
-          )}
-        </div>
-      )}
-
-      {view === 'signup' && (
-        <div>
-          <p className="text-sm font-bold text-gray-800 mb-1">Your free reading is used up.</p>
-          <p className="text-xs text-gray-500 mb-3">
-            Sign up with just your email (no password, no card) and the Genie will do
-            3 readings a day for you, free.
-          </p>
-          <SignupForm email={email} setEmail={setEmail} onSubmit={requestLink} />
-        </div>
-      )}
-
-      {view === 'linkSent' && (
-        <div className="py-4 text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white border border-[#E2E8F0] mb-2 text-[#F04E30]">
-            <EnvelopeIcon className="w-6 h-6" />
+            {typeof result.runsLeftToday === 'number' && (
+              <span className="text-[10px] text-gray-400">
+                {result.runsLeftToday} of 3 readings left today
+              </span>
+            )}
           </div>
-          <p className="text-sm font-bold text-gray-800">Check your inbox</p>
-          <p className="text-xs text-gray-500 mt-1">
-            We sent a one-tap sign-in link to {email}. It works once and expires in 15 minutes.
-          </p>
         </div>
       )}
+
+
 
       {view === 'dailyLimit' && (
         <div>
@@ -570,34 +525,3 @@ export default function GeniePanel() {
   );
 }
 
-function SignupForm({
-  email,
-  setEmail,
-  onSubmit,
-}: {
-  email: string;
-  setEmail: (v: string) => void;
-  onSubmit: () => void;
-}) {
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); onSubmit(); }}
-      className="flex gap-2"
-    >
-      <input
-        type="email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="you@example.com"
-        className="flex-1 rounded-full border border-[#E2E8F0] bg-white px-4 py-2.5 text-sm text-gray-800 min-w-0"
-      />
-      <button
-        type="submit"
-        className="btn-shuffle text-white font-bold px-5 py-2.5 rounded-full text-sm shrink-0"
-      >
-        Send link
-      </button>
-    </form>
-  );
-}

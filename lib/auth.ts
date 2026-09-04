@@ -9,9 +9,10 @@ import { createHmac, timingSafeEqual, randomBytes } from 'crypto';
 import type { NextRequest } from 'next/server';
 
 export const SESSION_COOKIE = 'dgs_sess';
-export const TRIAL_COOKIE = 'dgs_trial';
+// Anonymous visitor id: quotas hang off this signed cookie (no accounts needed).
+export const ANON_COOKIE = 'dgs_anon';
 export const SESSION_MAX_AGE = 90 * 24 * 3600; // seconds
-export const TRIAL_COOKIE_MAX_AGE = 365 * 24 * 3600;
+export const ANON_COOKIE_MAX_AGE = 365 * 24 * 3600;
 
 export interface SessionPayload {
   uid: string;

@@ -21,11 +21,7 @@ export const shareKey    = (shareId: string) => `genie:share:${shareId}`;
 export const RUN_TTL_SECONDS   = 30 * 24 * 3600;
 export const SHARE_TTL_SECONDS = 365 * 24 * 3600;
 
-// Anonymous trial controls
-export const trialIpKey = (ip: string) => `trial:ip:${sha256(ip)}`;
-export const TRIAL_IP_TTL_SECONDS = 30 * 24 * 3600;
-export const TRIAL_PER_IP_MAX = 2; // allow a shared household a second run
-
+// Anonymous run controls
 export const anonDayKey = (d = new Date()) =>
   `genie:anon:day:${d.toISOString().slice(0, 10).replace(/-/g, '')}`;
 export const ANON_DAY_TTL_SECONDS = 2 * 24 * 3600;
