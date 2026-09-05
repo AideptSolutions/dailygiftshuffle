@@ -120,7 +120,14 @@ export default function GiftGeniePage() {
       <main className="flex-1">
         {/* Hero: the first paragraph is a direct answer for search and AI
             answer engines. */}
-        <section className="max-w-3xl mx-auto px-4 pt-12 pb-8 text-center">
+        <section className="max-w-3xl mx-auto px-4 pt-10 pb-8 text-center">
+          <img
+            src="/img/genie/genie-mascot.webp"
+            alt="The Gift Genie rising from his lamp, offering wrapped gifts"
+            width={640}
+            height={764}
+            className="mx-auto w-52 sm:w-60 h-auto mb-2"
+          />
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#6D28D9] mb-3">
             <LampIcon className="w-4 h-4 text-[#D4A017]" />
             New on TheGiftShuffle
