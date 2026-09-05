@@ -209,14 +209,14 @@ export default function WhatIsTheGiftGeniePage() {
             </li>
           </ul>
 
-          <div className="rounded-3xl border border-[#F04E30]/30 p-6 my-8 text-center" style={{ background: '#F0F4F8' }}>
+          <div className="rounded-3xl border border-[#DDD6FE] p-6 my-8 text-center" style={{ background: '#F5F3FF' }}>
             <p className="font-bold text-gray-800 mb-2">Ready to try it?</p>
             <p className="text-sm text-gray-500 mb-4">
               Three readings a day, free, no sign-up. The lamp is waiting.
             </p>
             <Link
               href="/gift-genie"
-              className="btn-shuffle inline-block text-white font-bold px-8 py-3 rounded-full text-sm"
+              className="btn-genie inline-block text-white font-bold px-8 py-3 rounded-full text-sm"
             >
               Summon the Gift Genie
             </Link>

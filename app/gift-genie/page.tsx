@@ -121,12 +121,12 @@ export default function GiftGeniePage() {
         {/* Hero: the first paragraph is a direct answer for search and AI
             answer engines. */}
         <section className="max-w-3xl mx-auto px-4 pt-12 pb-8 text-center">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#F04E30] mb-3">
-            <LampIcon className="w-4 h-4" />
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#6D28D9] mb-3">
+            <LampIcon className="w-4 h-4 text-[#D4A017]" />
             New on TheGiftShuffle
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-4" style={{ color: '#1A202C' }}>
-            Meet the <span style={{ color: '#F04E30' }}>Gift Genie</span>
+            Meet the <span style={{ color: '#6D28D9' }}>Gift Genie</span>
           </h1>
           <p className="text-lg text-gray-600 leading-relaxed">
             The Gift Genie is a free AI gift finder. Pin gifts that feel close, answer
@@ -142,8 +142,8 @@ export default function GiftGeniePage() {
           </h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {STEPS.map((s) => (
-              <div key={s.title} className="rounded-3xl border border-[#E2E8F0] p-6" style={{ background: '#F0F4F8' }}>
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white border border-[#E2E8F0] text-[#F04E30] mb-3">
+              <div key={s.title} className="rounded-3xl border border-[#DDD6FE] p-6" style={{ background: '#F5F3FF' }}>
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white border border-[#DDD6FE] text-[#D4A017] mb-3">
                   {s.icon}
                 </div>
                 <h3 className="font-bold text-gray-800 mb-1.5">{s.title}</h3>
@@ -170,21 +170,21 @@ export default function GiftGeniePage() {
             Why it beats guessing
           </h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            <div className="rounded-3xl border border-[#E2E8F0] p-6 bg-white">
+            <div className="rounded-3xl border border-[#DDD6FE] p-6 bg-white">
               <h3 className="font-bold text-gray-800 mb-1.5">Your pins do the talking</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Quizzes alone miss taste. The gifts you almost picked say more about a
                 person than any dropdown, and the Genie reads exactly that.
               </p>
             </div>
-            <div className="rounded-3xl border border-[#E2E8F0] p-6 bg-white">
+            <div className="rounded-3xl border border-[#DDD6FE] p-6 bg-white">
               <h3 className="font-bold text-gray-800 mb-1.5">Curated, not scraped</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 It only recommends from our hand-curated catalog of highly rated gifts,
                 so every pick is something we would put in a guide ourselves.
               </p>
             </div>
-            <div className="rounded-3xl border border-[#E2E8F0] p-6 bg-white">
+            <div className="rounded-3xl border border-[#DDD6FE] p-6 bg-white">
               <h3 className="font-bold text-gray-800 mb-1.5">Honest confidence</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Each pick carries a confidence score and a one-line reason, and your own
@@ -201,7 +201,7 @@ export default function GiftGeniePage() {
           </h2>
           <div className="space-y-4">
             {FAQS.map((f) => (
-              <div key={f.q} className="rounded-2xl border border-[#E2E8F0] p-5" style={{ background: '#F0F4F8' }}>
+              <div key={f.q} className="rounded-2xl border border-[#DDD6FE] p-5" style={{ background: '#F5F3FF' }}>
                 <h3 className="font-bold text-gray-800 mb-1">{f.q}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{f.a}</p>
               </div>
@@ -209,11 +209,11 @@ export default function GiftGeniePage() {
           </div>
           <p className="text-sm text-gray-500 text-center mt-8">
             Want the full story?{' '}
-            <Link href="/blog/what-is-the-gift-genie" className="text-[#F04E30] font-semibold underline underline-offset-2">
+            <Link href="/blog/what-is-the-gift-genie" className="text-[#6D28D9] font-semibold underline underline-offset-2">
               Read how the Gift Genie works under the hood
             </Link>
             , or{' '}
-            <Link href="/shuffle" className="text-[#F04E30] font-semibold underline underline-offset-2">
+            <Link href="/shuffle" className="text-[#6D28D9] font-semibold underline underline-offset-2">
               start shuffling gifts
             </Link>{' '}
             to build your pins.

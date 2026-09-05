@@ -36,8 +36,8 @@ export default async function SharedGenieRunPage({ params }: Props) {
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFFFF' }}>
       <Navbar />
       <main className="flex-1 w-full max-w-3xl mx-auto px-4 py-10">
-        <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#F04E30] mb-3">
-          <LampIcon className="w-4 h-4" />
+        <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#6D28D9] mb-3">
+          <LampIcon className="w-4 h-4 text-[#D4A017]" />
           Gift Genie reading
         </span>
         <h1 className="text-3xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
@@ -45,11 +45,11 @@ export default async function SharedGenieRunPage({ params }: Props) {
         </h1>
 
         <div
-          className="rounded-3xl border border-[#E2E8F0] p-6 mb-8 text-gray-700 leading-relaxed"
-          style={{ background: '#F0F4F8' }}
+          className="rounded-3xl border border-[#DDD6FE] p-6 mb-8 text-gray-700 leading-relaxed"
+          style={{ background: '#F5F3FF' }}
         >
-          <span className="inline-flex items-center gap-1 text-[#F04E30] font-bold text-sm mb-1">
-            <SparkleIcon className="w-3.5 h-3.5" /> The read
+          <span className="inline-flex items-center gap-1 text-[#6D28D9] font-bold text-sm mb-1">
+            <SparkleIcon className="w-3.5 h-3.5 text-[#D4A017]" /> The read
           </span>
           <p>{run.recipientProfile}</p>
         </div>
@@ -61,8 +61,8 @@ export default async function SharedGenieRunPage({ params }: Props) {
               href={pick.product.affiliateUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="flex items-center gap-4 rounded-2xl border border-[#E2E8F0] p-4 hover:border-[#F04E30]/40 hover:shadow-md transition-all"
-              style={{ background: '#F0F4F8' }}
+              className="flex items-center gap-4 rounded-2xl border border-[#DDD6FE] p-4 hover:border-[#6D28D9]/40 hover:shadow-md transition-all"
+              style={{ background: '#F5F3FF' }}
             >
               <span className="text-lg font-extrabold text-gray-300 w-6 shrink-0">{i + 1}</span>
               <div className="relative w-16 h-16 shrink-0 rounded-xl bg-white overflow-hidden">
@@ -78,7 +78,7 @@ export default async function SharedGenieRunPage({ params }: Props) {
                 <div className="flex items-center gap-2">
                   <p className="font-bold text-sm text-gray-800 truncate">{pick.product.name}</p>
                   {pick.pinned && (
-                    <span className="shrink-0 text-[9px] font-bold uppercase tracking-wide text-[#F04E30] border border-[#F04E30]/40 rounded-full px-1.5 py-0.5">
+                    <span className="shrink-0 text-[9px] font-bold uppercase tracking-wide text-[#A16207] border border-[#D4A017]/60 rounded-full px-1.5 py-0.5">
                       Their pin
                     </span>
                   )}
@@ -87,7 +87,7 @@ export default async function SharedGenieRunPage({ params }: Props) {
                 <div className="flex items-center gap-2 mt-1.5">
                   <div className="h-1.5 rounded-full bg-white overflow-hidden flex-1 max-w-[140px]">
                     <div
-                      className="h-full rounded-full bg-[#F04E30]"
+                      className="h-full rounded-full bg-[#D4A017]"
                       style={{ width: `${pick.confidence}%` }}
                     />
                   </div>
@@ -106,7 +106,7 @@ export default async function SharedGenieRunPage({ params }: Props) {
         <div className="text-center">
           <Link
             href="/"
-            className="btn-shuffle inline-block text-white font-bold px-10 py-4 rounded-full text-base"
+            className="btn-genie inline-block text-white font-bold px-10 py-4 rounded-full text-base"
           >
             Rub the lamp yourself
           </Link>

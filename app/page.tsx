@@ -222,8 +222,8 @@ export default async function HomePage() {
           Shuffle a Gift <span aria-hidden="true">&rarr;</span>
         </Link>
         <p className="text-sm text-gray-500 mb-4">
-          <span className="font-bold text-[#F04E30]">New:</span>{' '}
-          <Link href="/gift-genie" className="font-semibold text-gray-700 underline underline-offset-2 hover:text-[#F04E30]">
+          <span className="font-bold text-[#6D28D9]">New:</span>{' '}
+          <Link href="/gift-genie" className="font-semibold text-gray-700 underline underline-offset-2 hover:text-[#6D28D9]">
             the Gift Genie
           </Link>{' '}
           reads the gifts you pin and conjures 5 perfect matches. Free, no sign-up.

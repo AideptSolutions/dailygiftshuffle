@@ -46,7 +46,7 @@ export default async function OgImage({ params }: { params: { shareId: string } 
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          background: '#F0F4F8',
+          background: 'linear-gradient(135deg, #2E1065 0%, #4C1D95 100%)',
           padding: 64,
           fontFamily: 'Arial, sans-serif',
         }}
@@ -58,8 +58,8 @@ export default async function OgImage({ params }: { params: { shareId: string } 
               width: 56,
               height: 56,
               borderRadius: 28,
-              background: '#F04E30',
-              color: '#fff',
+              background: '#D4A017',
+              color: '#2E1065',
               alignItems: 'center',
               justifyContent: 'center',
               fontSize: 34,
@@ -69,21 +69,21 @@ export default async function OgImage({ params }: { params: { shareId: string } 
             G
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontSize: 30, fontWeight: 800, color: '#F04E30', letterSpacing: 2 }}>
+            <span style={{ fontSize: 30, fontWeight: 800, color: '#EFC75E', letterSpacing: 2 }}>
               GIFT GENIE
             </span>
-            <span style={{ fontSize: 20, color: '#4A5568' }}>thegiftshuffle.com</span>
+            <span style={{ fontSize: 20, color: '#C4B5FD' }}>thegiftshuffle.com</span>
           </div>
         </div>
 
-        <div style={{ display: 'flex', fontSize: 52, fontWeight: 800, color: '#1A202C', marginTop: 44 }}>
+        <div style={{ display: 'flex', fontSize: 52, fontWeight: 800, color: '#FFFFFF', marginTop: 44 }}>
           The Genie read their pins...
         </div>
         <div
           style={{
             display: 'flex',
             fontSize: 28,
-            color: '#4A5568',
+            color: '#DDD6FE',
             marginTop: 20,
             lineHeight: 1.4,
           }}
@@ -100,9 +100,9 @@ export default async function OgImage({ params }: { params: { shareId: string } 
                   width: 34,
                   height: 34,
                   borderRadius: 17,
-                  background: '#ffffff',
-                  border: '2px solid #F04E30',
-                  color: '#F04E30',
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  border: '2px solid #D4A017',
+                  color: '#EFC75E',
                   fontSize: 20,
                   fontWeight: 800,
                   alignItems: 'center',
@@ -111,10 +111,10 @@ export default async function OgImage({ params }: { params: { shareId: string } 
               >
                 {i + 1}
               </div>
-              <span style={{ fontSize: 26, color: '#1A202C', fontWeight: 700 }}>{name}</span>
+              <span style={{ fontSize: 26, color: '#FFFFFF', fontWeight: 700 }}>{name}</span>
             </div>
           ))}
-          <div style={{ display: 'flex', fontSize: 22, color: '#F04E30', fontWeight: 700, marginTop: 12 }}>
+          <div style={{ display: 'flex', fontSize: 22, color: '#EFC75E', fontWeight: 700, marginTop: 12 }}>
             See all 5 matches and rub the lamp yourself
           </div>
         </div>

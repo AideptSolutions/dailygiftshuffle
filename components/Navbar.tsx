@@ -73,11 +73,11 @@ export default function Navbar() {
         <div className="relative flex items-center gap-4 text-sm font-medium text-gray-600">
           <Link
             href="/gift-genie"
-            className="relative inline-flex items-center gap-1 hover:text-[#F04E30] transition-colors"
+            className="relative inline-flex items-center gap-1 hover:text-[#6D28D9] transition-colors"
           >
-            <LampIcon className="w-4 h-4 text-[#F04E30]" />
+            <LampIcon className="w-4 h-4 text-[#D4A017]" />
             <span className="hidden xs:inline sm:inline">Gift Genie</span>
-            <span className="absolute -top-2 -right-5 bg-[#F04E30] text-white text-[8px] font-bold rounded-full px-1 py-0.5 leading-none">
+            <span className="absolute -top-2 -right-5 bg-[#6D28D9] text-white text-[8px] font-bold rounded-full px-1 py-0.5 leading-none">
               NEW
             </span>
           </Link>

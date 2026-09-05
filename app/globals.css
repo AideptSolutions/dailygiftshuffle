@@ -155,6 +155,34 @@ body {
   box-shadow: 0 0px 0px rgba(160, 28, 10, 0.8), 0 2px 8px rgba(230, 65, 38, 0.25);
 }
 
+/* ── Gift Genie CTA (the Genie sub-brand: mystic purple, lamp gold) ─────── */
+.btn-genie {
+  background: linear-gradient(135deg, #6D28D9 0%, #4C1D95 100%);
+  color: #FFFFFF;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s ease;
+  box-shadow: 0 4px 0px rgba(46, 16, 101, 0.85), 0 6px 15px rgba(109, 40, 217, 0.35);
+  transform: translateY(0px);
+}
+
+.btn-genie:hover {
+  background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+  box-shadow: 0 4px 0px rgba(46, 16, 101, 0.85), 0 8px 20px rgba(109, 40, 217, 0.5);
+}
+
+.btn-genie:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0px rgba(46, 16, 101, 0.85), 0 2px 8px rgba(109, 40, 217, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-genie,
+  .btn-genie:hover,
+  .btn-genie:active {
+    transition: background 0.2s ease;
+    transform: none;
+  }
+}
+
 /* ── Affiliate / Amazon buttons ─────────────────────────────────────────── */
 .btn-amazon {
   background: #F97316;
