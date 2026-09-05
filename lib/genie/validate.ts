@@ -30,8 +30,14 @@ const clampInt = (v: unknown, lo: number, hi: number, dflt: number) => {
   return Math.min(hi, Math.max(lo, n));
 };
 
+// House style: no em/en dashes anywhere on the site, model output included.
 const cleanText = (v: unknown, max: number) =>
-  String(v ?? '').replace(/\s+/g, ' ').trim().slice(0, max);
+  String(v ?? '')
+    .replace(/\s*—\s*/g, ', ')
+    .replace(/–/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, max);
 
 export function validateOutput(raw: GenieRawOutput, candidates: CandidateSet): ValidatedResult {
   const pinnedIds = new Set(candidates.pinned.map((p) => p.id));
