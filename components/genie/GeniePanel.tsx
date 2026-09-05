@@ -19,7 +19,12 @@ import { TRAITS, MAX_TRAITS } from '@/lib/genie/traits';
 // Genie sub-brand palette (distinct from the site's coral): mystic purple
 // #6D28D9 / deep #4C1D95, lavender wash #F5F3FF, border #DDD6FE, lamp gold
 // #D4A017 (dark gold text #A16207 for small type on white).
-const PHASE = Number(process.env.NEXT_PUBLIC_GENIE_PHASE ?? '1');
+// Phase 2 (the full free flow) is the launched, final state, so it is the
+// default. NEXT_PUBLIC_GENIE_PHASE stays as an emergency off-switch (set 1
+// for teaser-only, 0 to hide the panel). Discovered 2026-09-04: prod was
+// silently stuck on the teaser because the env var never reached the
+// production build; launch state should not depend on dashboard config.
+const PHASE = Number(process.env.NEXT_PUBLIC_GENIE_PHASE ?? '2');
 
 // ---- Quiz options (labels mirror the site's existing selector vocabulary) ----
 const RELATIONSHIPS: { value: string; label: string }[] = [

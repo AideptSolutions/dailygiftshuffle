@@ -48,10 +48,13 @@ explicitly (e.g. `git add -A -- . ':!path/to/secret'`).
 
 Set in Vercel (and `.env.all` for the record) when enabling each phase:
 
-- `NEXT_PUBLIC_GENIE_PHASE` - feature gate: unset/`1` = teaser panel only,
-  `2` = Genie live. No accounts: everyone gets 3 readings/day capped at
-  15/week via a signed anonymous-id cookie, with a 10/day per-IP backstop
-  and a global 500/day ceiling.
+- `NEXT_PUBLIC_GENIE_PHASE` - emergency off-switch, normally UNSET.
+  Default (unset) = `2` = Genie live; set `1` for teaser-only, `0` to hide
+  the panel. Defaulted to live in code 2026-09-04 after prod silently
+  served the teaser because the var never reached the production build.
+  No accounts: everyone gets 3 readings/day capped at 15/week via a signed
+  anonymous-id cookie, with a 10/day per-IP backstop and a global 500/day
+  ceiling.
 - `SESSION_SECRET` - 32+ random bytes; signs the anonymous quota cookie
   (and future session cookies). REQUIRED in production or runs 500.
   Rotating it resets anonymous quotas.
