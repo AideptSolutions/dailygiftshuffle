@@ -36,13 +36,26 @@ export default async function SharedGenieRunPage({ params }: Props) {
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFFFF' }}>
       <Navbar />
       <main className="flex-1 w-full max-w-3xl mx-auto px-4 py-10">
-        <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#6D28D9] mb-3">
-          <LampIcon className="w-4 h-4 text-[#D4A017]" />
-          Gift Genie reading
-        </span>
-        <h1 className="text-3xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-          The Genie read their pins...
-        </h1>
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#6D28D9] mb-3">
+              <LampIcon className="w-4 h-4 text-[#D4A017]" />
+              Gift Genie reading
+            </span>
+            <h1 className="text-3xl font-extrabold" style={{ color: '#1A202C' }}>
+              The Genie read their pins...
+            </h1>
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/img/genie/genie-mascot.webp"
+            alt=""
+            aria-hidden="true"
+            width={640}
+            height={764}
+            className="w-24 sm:w-28 h-auto shrink-0"
+          />
+        </div>
 
         <div
           className="rounded-3xl border border-[#DDD6FE] p-6 mb-8 text-gray-700 leading-relaxed"

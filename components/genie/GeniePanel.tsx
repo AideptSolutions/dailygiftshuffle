@@ -257,30 +257,43 @@ export default function GeniePanel() {
       {header}
 
       {view === 'idle' && (
-        pins.length === 0 ? (
-          <p className="text-sm text-gray-500">
-            Pin a few gifts that feel close (the pin on any card), then the Genie will
-            read your picks, ask three quick questions, and conjure five matches from
-            the whole catalog.
-          </p>
-        ) : (
-          <>
-            <p className="text-sm text-gray-600 mb-3">
-              <span className="font-semibold text-gray-800">
-                {pins.length} {pins.length === 1 ? 'gift' : 'gifts'} pinned.
-              </span>{' '}
-              Ready when you are: three quick questions, then five matched gifts.
-            </p>
-            {pinStrip}
-            <button
-              onClick={() => setView('quiz')}
-              className="btn-genie text-white font-bold px-8 py-3 rounded-full text-sm"
-            >
-              Summon the Genie
-            </button>
-            <p className="text-xs text-gray-400 mt-2">3 free readings a day. No sign-up, no card.</p>
-          </>
-        )
+        <div className="flex items-start gap-4">
+          <div className="flex-1 min-w-0">
+            {pins.length === 0 ? (
+              <p className="text-sm text-gray-500">
+                Pin a few gifts that feel close (the pin on any card), then the Genie will
+                read your picks, ask three quick questions, and conjure five matches from
+                the whole catalog.
+              </p>
+            ) : (
+              <>
+                <p className="text-sm text-gray-600 mb-3">
+                  <span className="font-semibold text-gray-800">
+                    {pins.length} {pins.length === 1 ? 'gift' : 'gifts'} pinned.
+                  </span>{' '}
+                  Ready when you are: three quick questions, then five matched gifts.
+                </p>
+                {pinStrip}
+                <button
+                  onClick={() => setView('quiz')}
+                  className="btn-genie text-white font-bold px-8 py-3 rounded-full text-sm"
+                >
+                  Summon the Genie
+                </button>
+                <p className="text-xs text-gray-400 mt-2">3 free readings a day. No sign-up, no card.</p>
+              </>
+            )}
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/img/genie/genie-mascot.webp"
+            alt=""
+            aria-hidden="true"
+            width={640}
+            height={764}
+            className="w-24 sm:w-28 h-auto shrink-0 -my-2"
+          />
+        </div>
       )}
 
       {view === 'quiz' && (
