@@ -95,3 +95,32 @@ re-evaluates at a subsequent core update.
 - 40 doorway /gifts/ URLs still drew 91 impressions: 410s not yet fully
   processed. If still present in the October export, file a GSC Removals
   prefix request for /gifts/ to hide them faster.
+
+## Checkpoint 2026-09-25 (30 days post-cleanup; export window Aug 27 - Sep 23)
+
+- Still no recovery: 0 clicks in 28 days, weighted position ~83 (flat vs
+  81.6 at the Sep 4 checkpoint; the mild positive drift did not hold). No
+  September core update has been observed to re-evaluate the site yet.
+- Impressions are DECLINING through the window: ~120-170/day in late Aug
+  down to ~22-40/day in the last week. Part of this is doorway impressions
+  finally dropping out, but the core pages are fading too, which reads as
+  the demotion deepening or a seasonal lull, not recovery.
+- Top impression earners: /luxury-gifts-for-her 570 impr at pos 80,
+  /christmas-gifts-for-her 216 at pos 87, /gifts-for-coworkers 140 at pos
+  94. Q4 seasonality is building while the site remains buried.
+- Doorways: 23 /gifts/ URLs still drew ~52 impressions (down from 40 URLs
+  and 91 impressions on Sep 4, but a full month after the 410s shipped).
+  Per the Sep 4 escalation rule, it is time to file the GSC Removals
+  prefix request for https://www.thegiftshuffle.com/gifts/ (owner action,
+  GSC -> Removals -> New request -> Remove all URLs with this prefix).
+  Tradeoff accepted: the prefix also hides the hand-built
+  /gifts/last-minute-mothers-day for ~6 months; it has zero impressions in
+  this export and its season is next May, so nothing is lost.
+- /gift-genie and /blog/what-is-the-gift-genie (both live since Sep 4 with
+  full schema + sitemap + IndexNow): zero Google impressions so far. Worth
+  a URL Inspection in GSC to confirm indexing; the site-level demotion
+  likely suppresses them regardless until a core update lifts it.
+- Bright spots are noise-level but real: /help-me-pick-a-gift pos 30 on 17
+  impr ("pick a gift" pos 26.6), homepage pos 29.9, and a few pos 1-9
+  showings on single-impression long-tail queries. The site is not
+  deindexed, just demoted.
