@@ -239,3 +239,37 @@ both duplicated *and* 404, folded into the live `smart-ring-doorbell` entry.
 - [ ] 52 enriched sweep candidates (wedding/baby-shower/travel/kids/pets/sports/
       gardening) are on hold pending trustworthy numbers; images already
       downloaded to `public/images/products/`
+
+## Dead-link sweep 2026-09-25
+
+Browser same-origin sweep of all 906 catalog ASINs (in-app browser tab on
+amazon.com; anonymous session). Canary validation PASSED: 3 known-dead
+detected dead, 2 known-live intact, so dead verdicts are trustworthy.
+Coverage: 397 confirmed alive, 498 unresolved (Amazon bot-checked the
+session in bursts; unresolved is treated as alive, never dead). Raw run
+output in scripts/_dl-results-2026-09-25.txt, work list in
+scripts/_dead-asins.json (both gitignored scratch).
+
+11 entries confirmed DEAD (page 404s; card still renders and absorbs
+clicks). Re-confirmed individually except the last two, which were
+classified once during a clean window and then blocked on re-check:
+
+| id | ASIN | name |
+|---|---|---|
+| him-50-1 | B0FFSB9VCK | Smart Watch Fitness Tracker |
+| tech-50-1 | B0FZSYSP8Y | Mini Portable Projector |
+| kid-002 | B003ERYIFS | Magna-Tiles Clear Colors 100-Piece Set |
+| kid-004 | B00005BSID | Melissa & Doug Wooden Toy Kitchen |
+| cpl-004 | B07YZSVV6B | Wine & Cheese Gift Basket |
+| fri-002 | B07FSJT23X | The Uncommon Box - Mystery Gift Subscription |
+| fri-001 | B07GCTHNBR | Engraved Whiskey Decanter Set |
+| aish-004 | B01M9AU2SX | Philips Hue White & Color Ambiance Starter Kit |
+| bty-004 | B09TZM7Z9V | FOREO LUNA 4 Facial Cleansing Device |
+| gaming-005 | B07BFQZNFL | RESPAWN 110 Racing Style Gaming Chair |
+| gaming-012 | B07D5M3Q15 | Corsair MM300 Pro Extended Gaming Mouse Pad |
+
+Next: re-source each with scripts/resolve-asins.mjs and verify the live
+page title before re-pointing; never swap in an unverified ASIN. The 498
+unresolved ASINs need a follow-up pass (real signed-in Chrome session via
+the extension avoided all bot checks in August, or Creators API once
+eligible).
