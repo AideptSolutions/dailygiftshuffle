@@ -251,6 +251,50 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Gift Genie: the AI gift finder, in its purple/gold sub-brand. The
+          copy is crawlable answer-engine text, not just a CTA. */}
+      <section className="py-14 px-4" style={{ background: '#FFFFFF' }}>
+        <div className="max-w-4xl mx-auto rounded-3xl border border-[#DDD6FE] p-6 sm:p-10" style={{ background: '#F5F3FF' }}>
+          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/img/genie/genie-mascot.webp"
+              alt="The Gift Genie rising from his lamp, offering wrapped gifts"
+              width={640}
+              height={764}
+              className="w-36 sm:w-44 h-auto shrink-0"
+            />
+            <div className="text-center sm:text-left">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#6D28D9]">
+                Meet the Gift Genie
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold mt-1 mb-3" style={{ color: '#1A202C' }}>
+                A free AI gift finder that reads your pins
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-5">
+                Pin the gifts that feel close while you shuffle, answer three quick
+                questions, and the Genie reads your picks to conjure 5 matched gifts
+                ranked by confidence. Free, no sign-up, 3 readings a day.
+              </p>
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+                <Link
+                  href="/gift-genie"
+                  className="btn-genie inline-block text-white font-bold px-8 py-3 rounded-full text-sm"
+                >
+                  Try the Gift Genie
+                </Link>
+                <Link
+                  href="/blog/what-is-the-gift-genie"
+                  className="text-sm font-semibold text-[#6D28D9] underline underline-offset-2"
+                >
+                  How it works
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gift Package Collections */}
       <GiftPackageCollections />
 

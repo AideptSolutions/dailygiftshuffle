@@ -67,9 +67,15 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
     q: 'How is TheGiftShuffle different from other gift guides?',
     a: "Most gift guides are long static lists you scroll top to bottom. TheGiftShuffle is interactive: tap Shuffle for an instant, top-rated pick matched to the recipient and your budget, pin the ones you like, and use Back to revisit any you passed. It turns scrolling a giant list into a one-click decision, so you spend seconds instead of skimming a hundred items.",
   };
+  // Names the Gift Genie on every guide so answer engines connect the site
+  // to "AI gift finder" queries; the panel under the grid is the live tool.
+  const GENIE_FAQ = {
+    q: 'What is the Gift Genie?',
+    a: 'The Gift Genie is the free AI gift finder built into TheGiftShuffle. Pin a few gifts that feel close while you browse, answer three quick questions about the person, and it reads your pins to recommend 5 matched gifts ranked by confidence. Everyone gets 3 readings a day with no sign-up; you can summon it under any shuffle grid on this page.',
+  };
   const faqs = isHub
-    ? [...props.faqs, DIFFERENTIATOR_FAQ]
-    : [...props.faqs, NO_IDEA_FAQ, DIFFERENTIATOR_FAQ];
+    ? [...props.faqs, GENIE_FAQ, DIFFERENTIATOR_FAQ]
+    : [...props.faqs, NO_IDEA_FAQ, GENIE_FAQ, DIFFERENTIATOR_FAQ];
   const relatedLinks =
     isHub || props.relatedLinks.some((l) => l.href === HUB)
       ? props.relatedLinks

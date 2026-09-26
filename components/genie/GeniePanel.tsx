@@ -12,6 +12,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { usePins } from '@/lib/usePins';
 import { LampIcon, SparkleIcon, TokenIcon } from '@/components/genie/GenieIcons';
 import { TRAITS, MAX_TRAITS } from '@/lib/genie/traits';
@@ -106,6 +108,7 @@ type View = 'idle' | 'quiz' | 'loading' | 'results' | 'dailyLimit' | 'weeklyLimi
 
 export default function GeniePanel() {
   const { pins, removePin, clear } = usePins();
+  const pathname = usePathname();
   const [view, setView] = useState<View>('idle');
   const [me, setMe] = useState<Me | null>(null);
   const [relationship, setRelationship] = useState('');
@@ -209,6 +212,19 @@ export default function GeniePanel() {
     </div>
   );
 
+  // Crawlable link from every surface the panel rides on to the Genie hub
+  // page; hidden on the hub itself. Server-rendered, so it counts as an
+  // internal link on ~150 pages.
+  const hubLink = pathname !== '/gift-genie' && (
+    <p className="text-[11px] text-gray-400 mt-4">
+      New to it? See how our free{' '}
+      <Link href="/gift-genie" className="font-semibold text-[#6D28D9] underline underline-offset-2">
+        AI gift finder
+      </Link>{' '}
+      works: pin, answer three questions, get five matched gifts.
+    </p>
+  );
+
   const header = (
     <div className="flex items-center justify-between mb-3">
       <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-[#6D28D9]">
@@ -252,6 +268,7 @@ export default function GeniePanel() {
             {pinStrip}
           </>
         )}
+        {hubLink}
       </div>
     );
   }
@@ -542,6 +559,7 @@ export default function GeniePanel() {
           </button>
         </div>
       )}
+      {hubLink}
     </div>
   );
 }

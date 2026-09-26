@@ -50,6 +50,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link href="/shuffle" className="hover:text-white transition-colors">Find a Gift</Link></li>
+              <li><Link href="/gift-genie" className="hover:text-white transition-colors">Gift Genie (AI Gift Finder)</Link></li>
               <li><Link href="/wishlist" className="hover:text-white transition-colors">Wishlist</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
