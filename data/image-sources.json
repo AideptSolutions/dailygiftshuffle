@@ -958,5 +958,357 @@
     ],
     "writtenTo": "/images/products/md-020.jpg",
     "provider": "serper"
+  },
+  "kid-004": {
+    "name": "KidKraft Vintage Wooden Play Kitchen",
+    "chosen": "https://i5.walmartimages.com/asr/350c142c-2ded-4d7f-8dd4-28c7d4f7f115.0305e0f9b9a4c92540089d0697d2a241.jpeg",
+    "domain": "Walmart",
+    "width": 3000,
+    "height": 3000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "KidKraft.com",
+        "s": 48
+      },
+      {
+        "d": "KidKraft.com",
+        "s": 48
+      },
+      {
+        "d": "KidKraft.com",
+        "s": 48
+      },
+      {
+        "d": "The Home Depot",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/kid-004.jpg",
+    "provider": "serpapi"
+  },
+  "him-50-1": {
+    "name": "Amazfit Bip Max Smart Watch",
+    "chosen": "https://us.amazfit.com/cdn/shop/files/b9123944a91f0151652d36cc4e13d9ae.png?v=1786434323&width=1946",
+    "domain": "Amazfit",
+    "width": 1500,
+    "height": 1500,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Amazfit",
+        "s": 48
+      },
+      {
+        "d": "Amazfit",
+        "s": 48
+      },
+      {
+        "d": "Amazfit",
+        "s": 48
+      },
+      {
+        "d": "Amazfit",
+        "s": 48
+      },
+      {
+        "d": "Amazfit",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/him-50-1.jpg",
+    "provider": "serpapi"
+  },
+  "kid-002": {
+    "name": "MAGNA-TILES Classic 100-Piece Magnetic Construction Set",
+    "chosen": "https://i5.walmartimages.com/seo/MAGNA-TILES-Classic-100-Piece-Magnetic-Construction-Set-The-ORIGINAL-Magnetic-Building-Brand_cf953354-44af-4bde-b3aa-a1cbe0b106bb.f4e6dd188a0e2a71c382f500c02ea88a.png",
+    "domain": "Walmart",
+    "width": 1504,
+    "height": 1299,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Magna-Tiles",
+        "s": 48
+      },
+      {
+        "d": "Magna-Tiles",
+        "s": 48
+      },
+      {
+        "d": "PicassoTiles",
+        "s": 48
+      },
+      {
+        "d": "Johnco Productions",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/kid-002.jpg",
+    "provider": "serpapi"
+  },
+  "cpl-004": {
+    "name": "Wine Country Gift Baskets Gourmet Choice Basket",
+    "chosen": "https://images.winecountrygiftbaskets.com/is/image/Winecountrygiftbaskets/large775/6036.jpg",
+    "domain": "Wine Country Gift Baskets",
+    "width": 775,
+    "height": 620,
+    "score": 38,
+    "candidates": [
+      {
+        "d": "Wine Country Gift Baskets",
+        "s": 38
+      },
+      {
+        "d": "Wine Country Gift Baskets",
+        "s": 38
+      },
+      {
+        "d": "Wine Country Gift Baskets",
+        "s": 38
+      },
+      {
+        "d": "Wine Country Gift Baskets",
+        "s": 38
+      },
+      {
+        "d": "Wine Country Gift Baskets",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/cpl-004.jpg",
+    "provider": "serpapi"
+  },
+  "aish-004": {
+    "name": "Philips Hue Essential Starter Kit (Bridge + 4 Bulbs)",
+    "chosen": "https://www.assets.signify.com/is/image/Signify/046677608989-929004235506-Hue-Essential-WCA-806-A19-E26-4kit-NAM-RTP",
+    "domain": "Philips Hue",
+    "width": 2400,
+    "height": 2400,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Philips Hue",
+        "s": 48
+      },
+      {
+        "d": "Apple",
+        "s": 48
+      },
+      {
+        "d": "Philips Hue",
+        "s": 48
+      },
+      {
+        "d": "Apple",
+        "s": 48
+      },
+      {
+        "d": "Apple",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/aish-004.jpg",
+    "provider": "serpapi"
+  },
+  "tech-50-1": {
+    "name": "TMY Native 1080P Mini Portable Projector",
+    "chosen": "https://i.ebayimg.com/images/g/15cAAOSw0hJmk0Lh/s-l1200.jpg",
+    "domain": "eBay",
+    "width": 1200,
+    "height": 1200,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      },
+      {
+        "d": "TMY",
+        "s": 28
+      },
+      {
+        "d": "TMY",
+        "s": 28
+      },
+      {
+        "d": "TMY",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/tech-50-1.jpg",
+    "provider": "serpapi"
+  },
+  "fri-002": {
+    "name": "iDventure Cluebox: Davy Jones Locker Puzzle Box",
+    "chosen": "https://www.idventure-shop.de/media/image/product/19/lg/cluebox-ein-60-min-escape-room-in-einer-box-davy-jones-locker.jpg",
+    "domain": "iDventure",
+    "width": 1200,
+    "height": 1200,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "iDventure",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "iDventure Puzzles",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Team JB Hobbies",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/fri-002.jpg",
+    "provider": "serpapi"
+  },
+  "bty-004": {
+    "name": "medicube Booster Pro 6-in-1 Glow Beauty Device",
+    "chosen": "https://medicube.us/cdn/shop/files/US_amazon_booster-pro_th01_da1d2fdc-ef6c-4ba7-955d-cce60e9d73b1.jpg?v=1765875373&width=1946",
+    "domain": "Medicube",
+    "width": 1946,
+    "height": 1946,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Medicube",
+        "s": 48
+      },
+      {
+        "d": "Medicube",
+        "s": 48
+      },
+      {
+        "d": "Medicube",
+        "s": 48
+      },
+      {
+        "d": "Medicube",
+        "s": 48
+      },
+      {
+        "d": "Medicube",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/bty-004.jpg",
+    "provider": "serpapi"
+  },
+  "fri-001": {
+    "name": "Froolu Personalized Whiskey Decanter Set",
+    "chosen": "https://froolu.com/cdn/shop/products/Image2_9b158db6-4ead-4efd-8ad1-04749819d55d_2000x2000.jpg?v=1633536311",
+    "domain": "Froolu",
+    "width": 2000,
+    "height": 2000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Froolu",
+        "s": 48
+      },
+      {
+        "d": "Froolu",
+        "s": 48
+      },
+      {
+        "d": "Froolu",
+        "s": 48
+      },
+      {
+        "d": "Froolu",
+        "s": 48
+      },
+      {
+        "d": "Froolu",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/fri-001.jpg",
+    "provider": "serpapi"
+  },
+  "gaming-012": {
+    "name": "Corsair MM300 PRO Spill-Proof Extended Gaming Mouse Pad",
+    "chosen": "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Mousepads/base-mm300-pro-config/Gallery/MM300_PRO_Extended_10.webp",
+    "domain": "Corsair",
+    "width": 1024,
+    "height": 1024,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Corsair",
+        "s": 48
+      },
+      {
+        "d": "Corsair",
+        "s": 48
+      },
+      {
+        "d": "Corsair",
+        "s": 48
+      },
+      {
+        "d": "Corsair",
+        "s": 48
+      },
+      {
+        "d": "Corsair",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/gaming-012.jpg",
+    "provider": "serpapi"
+  },
+  "gaming-005": {
+    "name": "GTPLAYER Ergonomic Gaming Chair with Footrest",
+    "chosen": "https://gtplayer.com/cdn/shop/files/GT800A_-00_ed6440ae-4f14-4d7c-876b-6c2b67173daa.jpg?v=1743047396&width=1206",
+    "domain": "GTPlayer",
+    "width": 1206,
+    "height": 1206,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "GTPlayer",
+        "s": 48
+      },
+      {
+        "d": "GTPlayer Gaming Chair US",
+        "s": 48
+      },
+      {
+        "d": "GTPlayer",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/gaming-005.jpg",
+    "provider": "serpapi"
   }
 }
