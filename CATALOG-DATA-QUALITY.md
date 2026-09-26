@@ -268,8 +268,17 @@ classified once during a clean window and then blocked on re-check:
 | gaming-005 | B07BFQZNFL | RESPAWN 110 Racing Style Gaming Chair |
 | gaming-012 | B07D5M3Q15 | Corsair MM300 Pro Extended Gaming Mouse Pad |
 
-Next: re-source each with scripts/resolve-asins.mjs and verify the live
-page title before re-pointing; never swap in an unverified ASIN. The 498
-unresolved ASINs need a follow-up pass (real signed-in Chrome session via
-the extension avoided all bot checks in August, or Creators API once
-eligible).
+**RESOLVED 2026-09-26 (commit 653464f):** all 11 re-pointed to live,
+verified ASINs (title, rating, review count, and stock read from each
+product page before re-pointing; prices and budget tiers updated; images
+refetched from brand/retailer sources). Notable swaps: KidKraft Vintage
+Kitchen replaces the delisted Melissa & Doug; medicube Booster Pro
+replaces the FOREO LUNA 4 (her-bty-6 already carries the LUNA 4);
+iDventure Cluebox replaces the defunct mystery subscription; GTPLAYER
+chair replaces the RESPAWN 110; Amazfit Bip Max and TMY projector replace
+no-name generics. Lesson: single-quote-regex field patching truncates on
+TS escaped apostrophes; the build caught it (fri-002).
+
+Still open from the sweep: the 498 unresolved ASINs need a follow-up pass
+(real signed-in Chrome session via the extension avoided all bot checks
+in August, or Creators API once eligible).
