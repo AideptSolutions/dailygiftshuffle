@@ -309,6 +309,18 @@ const NICHE_META: Record<Niche, NicheMeta> = {
       { q: 'What are good AI gifts for someone who already has smart home devices?', a: 'For someone already in the smart home ecosystem, consider upgrading their experience: a smart display (Echo Show), a Matter-compatible smart home hub, a whole-home Wi-Fi mesh system, or an AI-powered security camera system.' },
     ],
   },
+  halloween: {
+    title: 'Best Halloween Party Gifts & Decor for 2026',
+    heading: 'Best Halloween Party Gifts',
+    description: 'Everything for a memorable Halloween party: decor, serveware, games and glow gear, all top-rated and hand-picked.',
+    coverImage: '/img/category-heroes/halloween.jpg',
+    faqs: [
+      { q: 'What do you get someone throwing a Halloween party?', a: 'Party-host gifts that always land: a skull drink dispenser or cauldron serving bowls for the drink station, a coffin charcuterie board, floating LED candles for atmosphere, or an adult party game for after the costume contest.' },
+      { q: 'What are the best Halloween party decorations?', a: 'The highest-impact Halloween decorations are floating candles with a remote wand, purple and orange string lights, floating witch hats, a giant spider with a stretchable web, and a projector that animates the whole front of the house.' },
+      { q: 'What Halloween party supplies work for kids and adults?', a: 'Halloween bingo runs up to 30 players of any age, photo booth props work for every guest, and glow sticks keep both trick-or-treaters and grown-up guests happy. Add a murder mystery kit for an adults-only night.' },
+      { q: 'What are good Halloween gifts under $25?', a: 'Under $25: purple and orange string lights, skull ice cube molds, a coffin charcuterie board, floating witch hats, black light bars, photo booth props, and a 100-pack of glow sticks.' },
+    ],
+  },
 };
 
 // Editorial paragraphs stored as plain text arrays to avoid unescaped entity lint errors
@@ -444,6 +456,12 @@ const EDITORIAL: Record<Niche, string[]> = {
     'For the weekend builder: a cordless oscillating multi-tool from Milwaukee or DeWalt solves more problems than almost any other single tool in a workshop. A good Japanese pull saw, a quality marking gauge, or a set of layout tools from Bridge City Tool Works are the kind of gifts that enthusiasts research and then put off buying for themselves.',
     'Workbench organization is an underrated gift category. Magnetic tool holders, pegboard organizers, and stackable parts bins from Akro-Mils all make a workspace more functional. These are practical, reasonably priced, and immediately appreciated by anyone who has lost a drill bit in a cluttered drawer.',
     'For the smart-home adjacent builder: smart outlets, wire tracers, non-contact voltage testers from Klein Tools, and stud finders from Zircon are the tools that make home improvement projects go smoother. These sit in the $20-$60 range and are used on nearly every project.',
+  ],
+  halloween: [
+    'Halloween party hosting went big in 2026. The floating-candle effect, popularized by a certain wizarding great hall, is now the single most requested party decoration, and the remote wand versions make it a ten-minute setup. Pair them with hanging witch hats and a room reads fully transformed before a single pumpkin is carved.',
+    'The serving table is where hosts win. Cauldron bowls, coffin charcuterie boards and skull drink dispensers photograph better than any store-bought platter, and they pack away for next year. If you are gifting a host, serveware is the safest bet: it is the thing they never buy for themselves.',
+    'Entertainment splits by crowd. Halloween bingo and photo booth props cover all-ages parties; a murder mystery kit or an uncensored voting game turns an adults-only night into the story of the season. Glow gear, black lights plus glow sticks, is the cheapest way to make a basement feel like a venue.',
+    'Under $25 covers more than you would expect: string lights, ice molds, tablecloths, witch hats and props all sit comfortably below the line. Save the bigger spend for one centerpiece item, a projector for the front of the house or the animated candy bowl that startles every trick-or-treater.',
   ],
 };
 

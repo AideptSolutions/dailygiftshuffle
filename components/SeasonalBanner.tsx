@@ -52,6 +52,18 @@ function getBannerConfig(month: number): BannerConfig | null {
           { label: 'Gifts Under $50', href: '/gifts-under-50' },
         ],
       };
+    case 9:
+    case 10:
+      // Halloween party season: search ramps mid-Sep and peaks the first
+      // three weeks of October.
+      return {
+        text: 'Throwing a Halloween party?',
+        gradient: 'linear-gradient(90deg, #EA580C 0%, #6D28D9 100%)',
+        links: [
+          { label: 'Halloween Party Essentials', href: '/halloween-party-gifts' },
+          { label: 'Gifts Under $25', href: '/gifts-under-25' },
+        ],
+      };
     case 11:
       return {
         text: 'Holiday shopping season starts now',

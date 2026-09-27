@@ -1310,5 +1310,677 @@
     ],
     "writtenTo": "/images/products/gaming-005.jpg",
     "provider": "serpapi"
+  },
+  "hw-001": {
+    "name": "Hekation Halloween Projector Lights",
+    "chosen": "https://i.ytimg.com/vi/FTsVXscW9Ss/sddefault.jpg",
+    "domain": "YouTube",
+    "width": 640,
+    "height": 480,
+    "score": 8,
+    "candidates": [
+      {
+        "d": "YouTube",
+        "s": 8
+      }
+    ],
+    "writtenTo": "/images/products/hw-001.jpg",
+    "provider": "serpapi"
+  },
+  "hw-003": {
+    "name": "GenSwin Floating Candles with Wand (22 Pieces)",
+    "chosen": "https://static.platform.michaels.com/2c-prd/en_US/146731222306992.jpeg",
+    "domain": "Michaels",
+    "width": 1440,
+    "height": 1440,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-003.jpg",
+    "provider": "serpapi"
+  },
+  "hw-002": {
+    "name": "42W LED Black Light Bars (2 Pack)",
+    "chosen": "https://mobileimages.lowes.com/productimages/ff6875ac-1550-4997-aece-109d13faacb9/85028847.jpeg",
+    "domain": "Lowe's",
+    "width": 1600,
+    "height": 1600,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Lowe's",
+        "s": 48
+      },
+      {
+        "d": "onforu",
+        "s": 48
+      },
+      {
+        "d": "onforu",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Lowe's",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-002.jpg",
+    "provider": "serpapi"
+  },
+  "hw-006": {
+    "name": "Brizled Purple and Orange Halloween Lights (240 LED)",
+    "chosen": "https://cdn11.bigcommerce.com/s-b4l39fmg4b/images/stencil/1280x1280/products/8634/88543/festive-25m-indoor-and-outdoor-halloween-string-lights-1000-purple-and-orange-leds-10242-5020244437443__76984.1757213506.jpg?c=2",
+    "domain": "Lightbulbs Direct",
+    "width": 1280,
+    "height": 1280,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Lightbulbs Direct",
+        "s": 48
+      },
+      {
+        "d": "Michaels",
+        "s": 28
+      },
+      {
+        "d": "Michaels",
+        "s": 28
+      },
+      {
+        "d": "Michaels",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-006.jpg",
+    "provider": "serpapi"
+  },
+  "hw-007": {
+    "name": "Light-Up Halloween Front Door Cover",
+    "chosen": "https://cdn.thecoolist.com/wp-content/uploads/2025/08/Spooky-Welcome.jpg",
+    "domain": "biglittleisland.com",
+    "width": 1080,
+    "height": 1349,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "biglittleisland.com",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-007.jpg",
+    "provider": "serpapi"
+  },
+  "hw-005": {
+    "name": "OCATO Giant Spider and 200 Inch Web Set",
+    "chosen": "https://i5.walmartimages.com/seo/JEEXI-Full-Set-Halloween-Decorations-Outdoor-200-Triangular-Spider-Web-3-Giant-Fake-Red-Eyes-Spiders-Halloween-D-cor-Indoor-Home-Outside-Yard-Costume_c427e511-f144-4aa2-a068-f45fad2c990e.ffebf2aa39f0befb55a38aa00a18a68a.jpeg",
+    "domain": "Walmart",
+    "width": 2000,
+    "height": 2000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Instagram",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Instagram",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Instagram",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-005.jpg",
+    "provider": "serpapi"
+  },
+  "hw-004": {
+    "name": "Crazy Bonez Gothic Skull Lantern",
+    "chosen": "https://i0.wp.com/www.meandannabellee.com/wp-content/uploads/2025/03/IMG_7805-CWV-patina-lantern-copy.jpg?fit=2000%2C1964&ssl=1",
+    "domain": "Me and Annabel Lee",
+    "width": 2000,
+    "height": 1964,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Me and Annabel Lee",
+        "s": 48
+      },
+      {
+        "d": "Modern Display",
+        "s": 35
+      },
+      {
+        "d": "Halloween Costumes",
+        "s": 28
+      },
+      {
+        "d": "Halloween.com",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-004.jpg",
+    "provider": "serpapi"
+  },
+  "hw-011": {
+    "name": "Skeleton Coffin Charcuterie Board",
+    "chosen": "https://images.squarespace-cdn.com/content/v1/5f6fa40f3aabf937a2caa822/1664384528601-LVN6K7CV54PXD1G7AW2A/97B357BC-8FEA-4EAB-897C-88EDCA85C0C5?format=1500w",
+    "domain": "The Snacky Plate",
+    "width": 1500,
+    "height": 1870,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "The Snacky Plate",
+        "s": 48
+      },
+      {
+        "d": "Instagram",
+        "s": 48
+      },
+      {
+        "d": "Instagram",
+        "s": 38
+      },
+      {
+        "d": "Pinterest",
+        "s": 38
+      },
+      {
+        "d": "The Home Depot",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-011.jpg",
+    "provider": "serpapi"
+  },
+  "hw-009": {
+    "name": "Ceramic Witch Cauldron Serving Bowls (Set of 3)",
+    "chosen": "https://i.ebayimg.com/images/g/tyQAAeSwtEVo3olB/s-l1200.png",
+    "domain": "eBay",
+    "width": 1200,
+    "height": 1200,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Etsy",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-009.jpg",
+    "provider": "serpapi"
+  },
+  "hw-012": {
+    "name": "Oneida Vintro Halloween Stemless Wine Glasses (Set of 4)",
+    "chosen": "https://ak1.ostkcdn.com/images/products/is/images/direct/9ed211375a85c2a545642085515ac26c5985ff47/Oneida-Vintro-Halloween-Can-Coolers%2C-Set-of-4.jpg?imwidth=3840",
+    "domain": "Overstock",
+    "width": 3000,
+    "height": 3000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Overstock",
+        "s": 48
+      },
+      {
+        "d": "Lenox",
+        "s": 38
+      },
+      {
+        "d": "Wayfair",
+        "s": 38
+      },
+      {
+        "d": "Lenox",
+        "s": 38
+      },
+      {
+        "d": "Wayfair",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-012.jpg",
+    "provider": "serpapi"
+  },
+  "hw-010": {
+    "name": "Webake Skull Ice Cube Molds (10 Cavity)",
+    "chosen": "https://webakemall.com/cdn/shop/files/Webake10CavityHalloweenSiliconeSkullIceCubeMoldwithLid_4.jpg?v=1697016354&width=1946",
+    "domain": "Webake",
+    "width": 1500,
+    "height": 1333,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Webake",
+        "s": 48
+      },
+      {
+        "d": "Webake",
+        "s": 48
+      },
+      {
+        "d": "Webake",
+        "s": 48
+      },
+      {
+        "d": "Webake",
+        "s": 48
+      },
+      {
+        "d": "Webake",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/hw-010.jpg",
+    "provider": "serpapi"
+  },
+  "hw-014": {
+    "name": "BAD PEOPLE Party Game with After Dark Expansion",
+    "chosen": "https://i5.walmartimages.com/asr/3fc1f246-96a7-4c04-82c2-f2f73aec7553.8069c287cce7481e19166c0306899b9e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+    "domain": "Walmart",
+    "width": 768,
+    "height": 768,
+    "score": 38,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Target",
+        "s": 28
+      },
+      {
+        "d": "Target",
+        "s": 28
+      },
+      {
+        "d": "Dyce Games",
+        "s": 25
+      }
+    ],
+    "writtenTo": "/images/products/hw-014.jpg",
+    "provider": "serpapi"
+  },
+  "hw-013": {
+    "name": "Godinger Skull and Crossbones Drink Dispenser",
+    "chosen": "https://qvc.scene7.com/is/image/QVC/k/91/k59891.001",
+    "domain": "QVC",
+    "width": 1143,
+    "height": 1015,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "QVC",
+        "s": 48
+      },
+      {
+        "d": "Godinger",
+        "s": 48
+      },
+      {
+        "d": "Perigold",
+        "s": 38
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-013.jpg",
+    "provider": "serpapi"
+  },
+  "hw-018": {
+    "name": "Anlass Animated Pumpkin Candy Bowl",
+    "chosen": "https://images.halloweencostumes.com/products/81337/2-1-237641/pumpkin-candy-bowl-with-shaking-alt-2.jpg",
+    "domain": "Halloween Costumes",
+    "width": 1750,
+    "height": 2500,
+    "score": 28,
+    "candidates": [
+      {
+        "d": "Halloween Costumes",
+        "s": 28
+      },
+      {
+        "d": "Mud Pie",
+        "s": 28
+      },
+      {
+        "d": "Mud Pie",
+        "s": 18
+      },
+      {
+        "d": "Facebook",
+        "s": 18
+      }
+    ],
+    "writtenTo": "/images/products/hw-018.jpg",
+    "provider": "serpapi"
+  },
+  "hw-016": {
+    "name": "Halloween Bingo for Up to 30 Players",
+    "chosen": "https://artcreativity.com/cdn/shop/files/81otmJPxxOL.jpg?v=1753744224&width=1400",
+    "domain": "ArtCreativity",
+    "width": 1400,
+    "height": 1400,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "ArtCreativity",
+        "s": 48
+      },
+      {
+        "d": "Joyousa Holiday & Party Goods",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Etsy",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-016.jpg",
+    "provider": "serpapi"
+  },
+  "hw-017": {
+    "name": "Halloween Photo Booth Props (27 Pieces)",
+    "chosen": "http://www.bigdotofhappiness.com/cdn/shop/files/Pastel-Halloween-Party-10-Piece-Photo-Booth-Props-Kit_206883f4-8e69-4bff-ad3a-3177e86ff4e0.jpg?v=1693510001",
+    "domain": "Big Dot of Happiness",
+    "width": 1000,
+    "height": 1000,
+    "score": 45,
+    "candidates": [
+      {
+        "d": "Big Dot of Happiness",
+        "s": 45
+      },
+      {
+        "d": "Lowe's",
+        "s": 38
+      },
+      {
+        "d": "Lowe's",
+        "s": 38
+      },
+      {
+        "d": "Lowe's",
+        "s": 28
+      },
+      {
+        "d": "Michaels",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-017.jpg",
+    "provider": "serpapi"
+  },
+  "hw-015": {
+    "name": "Murder Mystery Party: The Night Hunter",
+    "chosen": "https://i5.walmartimages.com/seo/University-Games-Murder-Mystery-Party-The-Night-Hunter-Game_a87abf8f-30fb-4d46-9dee-18d5bfd9e1a4.3cdfb877ebb949887baf1a6bbbb9b81d.jpeg",
+    "domain": "Walmart",
+    "width": 3200,
+    "height": 3200,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "AreYouGame.com",
+        "s": 48
+      },
+      {
+        "d": "Puzzle Warehouse",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-015.jpg",
+    "provider": "serpapi"
+  },
+  "hw-024": {
+    "name": "MOYACA Gesture-Sensing LED Mask",
+    "chosen": "https://static.platform.michaels.com/2c-prd/en_US/63122097239472.jpeg",
+    "domain": "Michaels",
+    "width": 1440,
+    "height": 1440,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 28
+      },
+      {
+        "d": "Mercado Libre",
+        "s": 28
+      },
+      {
+        "d": "Mercado Livre",
+        "s": 28
+      },
+      {
+        "d": "Mercado Libre",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-024.jpg",
+    "provider": "serpapi"
+  },
+  "hw-021": {
+    "name": "Skeleton Hands Halloween Doormat",
+    "chosen": "https://i.etsystatic.com/10722227/r/il/8144e4/5235330323/il_fullxfull.5235330323_cmyl.jpg",
+    "domain": "Etsy",
+    "width": 2500,
+    "height": 2500,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Etsy",
+        "s": 48
+      },
+      {
+        "d": "OhaPrints",
+        "s": 48
+      },
+      {
+        "d": "Stencil Revolution",
+        "s": 45
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-021.jpg",
+    "provider": "serpapi"
+  },
+  "hw-022": {
+    "name": "Black Lace Spiderweb Tablecloths (2 Pack)",
+    "chosen": "https://i5.walmartimages.com/seo/Darzheoy-2-Pack-Halloween-Tablecloth-Black-Lace-Spider-Cobweb-Tablecloth-Halloween-Table-Decor-Table-Cloth-Halloween-Party-Dinner-Table-Decoration_f4cfce54-0b5e-4f8c-b4e6-87f4e8598388.03dfe4622a2b951dda9b9525a99983be.jpeg",
+    "domain": "Walmart Business",
+    "width": 1600,
+    "height": 1600,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart Business",
+        "s": 48
+      },
+      {
+        "d": "Wayfair",
+        "s": 38
+      },
+      {
+        "d": "Wayfair",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Wayfair",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-022.jpg",
+    "provider": "serpapi"
+  },
+  "hw-023": {
+    "name": "Floating Witch Hats (12 Pack)",
+    "chosen": "https://static.platform.michaels.com/2c-prd/en_US/317716660443056.jpg",
+    "domain": "Michaels",
+    "width": 1440,
+    "height": 1440,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Michaels",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/hw-023.jpg",
+    "provider": "serpapi"
+  },
+  "hw-025": {
+    "name": "PartySticks Glow Sticks Party Pack (100 Count)",
+    "chosen": "https://static.platform.michaels.com/2c-prd/en_US/308737938878288.jpeg",
+    "domain": "Michaels",
+    "width": 1440,
+    "height": 1440,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "DM Merchandising",
+        "s": 48
+      },
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/hw-025.jpg",
+    "provider": "serpapi"
   }
 }

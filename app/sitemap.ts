@@ -6,6 +6,7 @@ const NICHES = [
   'tech', 'diy-tools', 'home', 'gaming', 'sports', 'gardening', 'finance', 'fitness', 'parenting',
   'office', 'luxury', 'hobby', 'kitchen', 'pets',
   'kids', 'car-accessories', 'outdoors', 'travel', 'beauty', 'ai-smart-home', 'baby-shower', 'wedding',
+  'halloween',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -65,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/best-beauty-gifts-2026',
     '/patriotic-gifts',
     '/world-cup-gifts',
+    '/halloween-party-gifts',
     '/best-baby-shower-gifts-2026',
     '/gifts-for-camping-and-outdoors',
     '/gifts-under-25',

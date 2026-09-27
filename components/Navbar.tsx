@@ -9,6 +9,7 @@ import CategoryIcon from '@/components/CategoryIcon';
 import { LampIcon } from '@/components/genie/GenieIcons';
 
 const CATEGORIES: { slug: string; label: string }[] = [
+  { slug: 'halloween',         label: 'Halloween Party' },
   { slug: 'tech',              label: 'Tech & Gadgets' },
   { slug: 'gaming',            label: 'Gaming' },
   { slug: 'fitness',           label: 'Fitness' },

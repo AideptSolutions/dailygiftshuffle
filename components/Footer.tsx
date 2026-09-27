@@ -2,6 +2,7 @@ import Link from 'next/link';
 import CategoryIcon from '@/components/CategoryIcon';
 
 const CATEGORIES = [
+  { slug: 'halloween', label: 'Halloween Party' },
   { slug: 'tech', label: 'Tech & Gadgets' },
   { slug: 'diy-tools', label: 'DIY & Tools' },
   { slug: 'home', label: 'Home' },

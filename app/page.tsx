@@ -307,7 +307,7 @@ export default async function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { href: '/gifts-for-college-students', img: '/images/heroes/gifts-for-college-students.jpg', kicker: 'Back to School', title: 'Dorm & College Gifts', alt: 'Back-to-school dorm and college gift ideas' },
+              { href: '/halloween-party-gifts', img: '/images/heroes/halloween-party-gifts.jpg', kicker: 'Halloween Is Coming', title: 'Halloween Party Essentials', alt: 'Halloween party table with cauldron, skull glasses and treats' },
               { href: '/self-care-gifts', img: '/images/heroes/self-care-gifts.jpg', kicker: 'Trending Now', title: 'Self-Care & Wellness Gifts', alt: 'Self-care and wellness gift ideas' },
             ].map((c) => (
               <Link
