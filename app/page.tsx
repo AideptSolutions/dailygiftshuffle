@@ -9,6 +9,7 @@ import MothersDayBanner from '@/components/MothersDayBanner';
 import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 import GiftCupAnimation from '@/components/GiftCupAnimation';
 import GiftPackageCollections from '@/components/GiftPackageCollections';
+import TimelyGuides from '@/components/TimelyGuides';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
 
@@ -305,35 +306,8 @@ export default async function HomePage() {
           <h2 className="text-2xl sm:text-3xl font-extrabold mt-1 mb-6" style={{ color: '#1A202C' }}>
             Timely Gift Guides
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {[
-              { href: '/halloween-party-gifts', img: '/images/heroes/halloween-party-gifts.jpg', kicker: 'Halloween Is Coming', title: 'Halloween Party Essentials', alt: 'Halloween party table with cauldron, skull glasses and treats' },
-              { href: '/self-care-gifts', img: '/images/heroes/self-care-gifts.jpg', kicker: 'Trending Now', title: 'Self-Care & Wellness Gifts', alt: 'Self-care and wellness gift ideas' },
-            ].map((c) => (
-              <Link
-                key={c.href}
-                href={c.href}
-                className="group relative block rounded-2xl overflow-hidden"
-                style={{ aspectRatio: '16 / 9' }}
-              >
-                <Image
-                  src={c.img}
-                  alt={c.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="text-xs font-semibold uppercase tracking-widest text-white/85">{c.kicker}</span>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-white mt-0.5">{c.title}</h3>
-                  <span className="inline-block mt-2 text-sm font-semibold text-white underline underline-offset-2">
-                    Shop the guide &rarr;
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          {/* Month-aware: flips Halloween -> Christmas automatically on Nov 1 */}
+          <TimelyGuides />
         </div>
       </section>
 

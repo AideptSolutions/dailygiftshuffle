@@ -8,8 +8,10 @@ import SeasonalBanner from '@/components/SeasonalBanner';
 import CategoryIcon from '@/components/CategoryIcon';
 import { LampIcon } from '@/components/genie/GenieIcons';
 
-const CATEGORIES: { slug: string; label: string }[] = [
-  { slug: 'halloween',         label: 'Halloween Party' },
+// Seasonal entries carry the months they should appear in; evergreen entries
+// have no months. Month is resolved after mount to stay hydration-safe.
+const CATEGORIES: { slug: string; label: string; months?: number[] }[] = [
+  { slug: 'halloween',         label: 'Halloween Party', months: [9, 10] },
   { slug: 'tech',              label: 'Tech & Gadgets' },
   { slug: 'gaming',            label: 'Gaming' },
   { slug: 'fitness',           label: 'Fitness' },
@@ -32,8 +34,17 @@ const CATEGORIES: { slug: string; label: string }[] = [
 export default function Navbar() {
   const [wishlistCount, setWishlistCount] = useState(0);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
+  const [month, setMonth] = useState<number | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dropdownId = 'categories-dropdown';
+
+  useEffect(() => {
+    setMonth(new Date().getMonth() + 1);
+  }, []);
+
+  const visibleCategories = CATEGORIES.filter(
+    (c) => !c.months || (month !== null && c.months.includes(month)),
+  );
 
   useEffect(() => {
     setWishlistCount(getWishlistCount());
@@ -123,7 +134,7 @@ export default function Navbar() {
                   Shuffle by Category
                 </p>
                 <div className="grid grid-cols-2 gap-1">
-                  {CATEGORIES.map((cat) => (
+                  {visibleCategories.map((cat) => (
                     <Link
                       key={cat.slug}
                       href={`/shuffle/${cat.slug}`}

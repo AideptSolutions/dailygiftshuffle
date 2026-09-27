@@ -180,4 +180,14 @@ export const CATEGORY_META: Record<string, ShuffleCategoryMeta> = {
       { href: '/gifts-for-camping-and-outdoors', label: 'Camping & Outdoors' },
     ],
   },
+  halloween: {
+    label: 'Halloween Party',
+    desc: 'Party decor, serveware, games and glow gear for Halloween hosts.',
+    intro: 'Floating candles, cauldron serveware, party games and glow gear. Shuffle through top-rated Halloween party picks for hosts and guests.',
+    related: [
+      { href: '/category/halloween', label: 'All Halloween Gifts' },
+      { href: '/halloween-party-gifts', label: 'Halloween Party Essentials' },
+      { href: '/gifts-under-25', label: 'Gifts Under $25' },
+    ],
+  },
 };

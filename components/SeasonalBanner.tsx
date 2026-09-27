@@ -66,8 +66,12 @@ function getBannerConfig(month: number): BannerConfig | null {
       };
     case 11:
       return {
-        text: 'Holiday shopping season starts now',
+        text: 'Holiday shopping season starts now:',
         gradient: 'linear-gradient(90deg, #c62828 0%, #388e3c 100%)',
+        links: [
+          { label: 'Christmas Gift Ideas', href: '/christmas-gift-ideas' },
+          { label: 'Stocking Stuffers', href: '/stocking-stuffers' },
+        ],
       };
     case 12:
       return {
