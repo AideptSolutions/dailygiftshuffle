@@ -146,3 +146,18 @@ re-evaluates at a subsequent core update.
 - /gift-genie, the article, and /halloween-party-gifts show no impressions
   yet; the Halloween guide only went live Sep 27, inside this window.
 - Next export should use the 28-day view again for comparability.
+
+### 28-day confirmation (second Oct 4 export, Sep 2 - Sep 29)
+
+The full window makes the break unambiguous: position sat at 78-88 every
+day from Sep 2 through Sep 23, then snapped to 64-72 on Sep 24 and held
+through Sep 28 (Sep 29 drifted back to 79.9, which looks like rollout
+turbulence rather than reversal). A sharp dated break across the whole
+site is the signature of an algorithm update beginning to re-score the
+site, exactly the mechanism the cleanup was waiting for. Impressions are
+unchanged (~30-70/day), so Google is re-rating before re-surfacing;
+impressions and clicks would follow only if positions keep climbing into
+the top 30. The Q4 heads are still 80+ in the 28-day averages, but
+/gift-ideas-for-him already shows the blend (68.9 for the window vs 38.4
+inside the last week). Doorways: 10 in this window, 5 in the last 7 days,
+trending to zero.
