@@ -124,3 +124,25 @@ re-evaluates at a subsequent core update.
   impr ("pick a gift" pos 26.6), homepage pos 29.9, and a few pos 1-9
   showings on single-impression long-tail queries. The site is not
   deindexed, just demoted.
+
+## Checkpoint 2026-10-04 (7-day export, Sep 23-29): FIRST SIGNS OF RE-RATING
+
+- Daily weighted position moved from ~84 (flat since July) to 64-72 across
+  Sep 24-29, the first sustained improvement in any export since the
+  collapse. Multiple pages and queries moved together, which reads as a
+  partial re-rating rather than noise:
+  - /mothers-day-gifts pos 35.9, /gift-ideas-for-him pos 38.4 (both were
+    pinned in the 80s), /help-me-pick-a-gift 24.8, /category/gardening 25.4
+  - Queries: "small birthday gifts for him" 21.3, "pick a gift" 24.8,
+    "gift sets for mom" 25.6, "mothers day experience gifts" 26,
+    "gift ideas for him" 47.6, "gift ideas for husband" 48
+- Still zero clicks, and the heads that matter for Q4 remain buried
+  (/christmas-gifts-for-her 88.9, /luxury-gifts-for-her 82.7), so this is
+  early movement, not recovery. Watch whether the mid-range positions hold
+  and spread in the next export.
+- Doorway cleanup nearly complete: 5 /gifts/ URLs surfaced (23 at the Sep
+  25 checkpoint, 40 on Sep 4). The GSC Removals prefix request filed Sep 25
+  is doing its job.
+- /gift-genie, the article, and /halloween-party-gifts show no impressions
+  yet; the Halloween guide only went live Sep 27, inside this window.
+- Next export should use the 28-day view again for comparability.
