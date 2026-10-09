@@ -97,10 +97,12 @@ export default function Page() {
       ]}
       relatedHeading="More Holiday Gift Guides"
       relatedLinks={[
+        { href: '/stocking-stuffers-under-10', label: 'Stocking Stuffers Under $10' },
+        { href: '/stocking-stuffers-for-her', label: 'Stocking Stuffers for Her' },
+        { href: '/stocking-stuffers-for-him', label: 'Stocking Stuffers for Him' },
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
         { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
-        { href: '/gifts-under-25', label: 'Gifts Under $25' },
         { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
         { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
       ]}

@@ -91,6 +91,7 @@ const PRICE_CAPS = [
   ['/fathers-day-gifts-under-25', 25],
   ['/fathers-day-gifts-under-50', 50],
   ['/fathers-day-gifts-under-100', 100],
+  ['/stocking-stuffers-under-10', 10],
 ];
 
 async function pricesOf(path) {
