@@ -161,3 +161,36 @@ the top 30. The Q4 heads are still 80+ in the 28-day averages, but
 /gift-ideas-for-him already shows the blend (68.9 for the window vs 38.4
 inside the last week). Doorways: 10 in this window, 5 in the last 7 days,
 trending to zero.
+
+## Checkpoint 2026-10-09: cross-channel readout (GSC + Bing WMT + GA4 + Vercel)
+
+GOOGLE (GSC 28d through Oct 6): the Sep 24-28 re-rating partially
+retraced. Daily position settled at ~73-83 for Sep 29 - Oct 6: better
+than the pre-break 83-88 ceiling but not the mid-60s of the break week.
+Holdouts that kept their gains: /mothers-day-gifts 35.1,
+/gift-ideas-for-him 66.4 window avg. Q4 heads still buried
+(/christmas-gifts-for-her 88.8, /christmas-gift-ideas 90.8). Still 0
+Google clicks. /halloween-party-gifts earned its first Google impression
+(pos 77, 9 days after launch). Doorways: 11 in window, old tail only.
+
+BING WMT (Sep 9 - Oct 6): the real story. 22 CLICKS in ~3 weeks,
+starting Sep 15, with impressions tripling from ~5-10/day to ~25-35/day
+through late Sep. First channel delivering actual search clicks since
+the July Google collapse.
+
+GA4 (Sep 11 - Oct 8, 232 active users): source mix proves the
+two-engine strategy: bing 21 + yahoo 12 + duckduckgo 8 + ecosia 2 vs
+google 1. chatgpt.com / ai-assistant sent 12 users: the AEO channel is
+real and roughly matching Bing itself. Direct 173 is inflated by
+datacenter traffic (Singapore 84 + Ashburn 40), which also explains the
+91 percent Vercel bounce rate; engaged-user numbers are the trustworthy
+ones.
+
+CONTENT: /stocking-stuffers is the breakout: top page in both Vercel
+(57 visitors) and GA4 (39 views at 27 percent bounce, the best
+engagement on the site). Teens, girlfriend, mom, and gaming pages
+follow. Halloween guide: 7 Vercel visitors in its first ~10 days.
+
+READ: Google is drifting rather than snapping back; the Bing/ChatGPT
+channel is compounding into Q4. Stocking stuffers is the page to
+strengthen for the season.
