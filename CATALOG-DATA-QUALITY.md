@@ -282,3 +282,20 @@ TS escaped apostrophes; the build caught it (fri-002).
 Still open from the sweep: the 498 unresolved ASINs need a follow-up pass
 (real signed-in Chrome session via the extension avoided all bot checks
 in August, or Creators API once eligible).
+
+## Stocking stuffer additions 2026-10-09 (commit f591543)
+
+15 new stuffer- products, every ASIN read live from its product page
+before adding (title, rating, review count, price, in stock; recorded
+in amazon-live.csv). Headliners by review depth: Dickies Dri-tech socks
+(218,272), INIU 10000mAh charger (87,749), OKeeffes Working Hands
+(83,594), Bananagrams (26,932), Rubiks Cube (14,437), Hot Wheels 5-pack
+(13,829), Summer Fridays Lip Butter Balm (10,921). One candidate was
+dropped during the image audit (generic fuzzy socks, 557 reviews, no
+accurate off-Amazon image). Known imperfections, accepted deliberately:
+Water Wow is a fresh 3-pack listing with only 23 reviews on a classic
+product; the Duke Cannon image shows the Sawtooth scent packaging while
+the ASIN is Sandalwood + Lavender (identical packaging design); the
+Hot Wheels image shows three 5-pack variants for a styles-vary listing.
+Every image visually audited; 5 required tuned re-queries or hand-picked
+brand-site URLs (eos came from evolutionofsmooth.com directly).
