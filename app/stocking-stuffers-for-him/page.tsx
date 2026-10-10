@@ -101,7 +101,7 @@ export default function Page() {
         { href: '/stocking-stuffers-for-her', label: 'Stocking Stuffers for Her' },
         { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
         { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
-        { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
+        { href: '/stocking-stuffers-for-dad', label: 'Stocking Stuffers for Dad' },
         { href: '/best-gaming-gifts-2026', label: 'Best Gaming Gifts' },
         { href: '/gifts-under-25', label: 'Gifts Under $25' },
       ]}

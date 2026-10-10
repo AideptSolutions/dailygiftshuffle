@@ -106,7 +106,7 @@ export default function Page() {
         { href: '/gifts-under-25', label: 'Gifts Under $25' },
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
-        { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
+        { href: '/stocking-stuffers-for-kids', label: 'Stocking Stuffers for Kids' },
         { href: '/help-me-pick-a-gift', label: 'Help Me Pick a Gift' },
       ]}
     />

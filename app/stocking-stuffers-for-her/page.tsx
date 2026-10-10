@@ -101,7 +101,7 @@ export default function Page() {
         { href: '/stocking-stuffers-for-him', label: 'Stocking Stuffers for Him' },
         { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
         { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
-        { href: '/gift-ideas-for-mom', label: 'Gift Ideas for Mom' },
+        { href: '/stocking-stuffers-for-mom', label: 'Stocking Stuffers for Mom' },
         { href: '/best-beauty-gifts-2026', label: 'Best Beauty Gifts' },
         { href: '/gifts-under-25', label: 'Gifts Under $25' },
       ]}

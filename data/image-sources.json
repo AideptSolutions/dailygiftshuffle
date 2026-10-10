@@ -1982,5 +1982,517 @@
     ],
     "writtenTo": "/images/products/hw-025.jpg",
     "provider": "serpapi"
+  },
+  "stuffer-okeeffes": {
+    "name": "OKeeffes Working Hands Hand Cream",
+    "chosen": "https://i5.walmartimages.com/seo/O-Keeffe-s-Working-Hands-Moisturizing-Hand-Cream-2-7-oz-Jar_82b2c482-6dce-48c5-8b14-780484d59651.89569cd03ca52bdea82d5e28f5ea3754.jpeg",
+    "domain": "Walmart",
+    "width": 3000,
+    "height": 3000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Lowe's",
+        "s": 48
+      },
+      {
+        "d": "O'Keeffe's",
+        "s": 48
+      },
+      {
+        "d": "Fred Meyer",
+        "s": 48
+      },
+      {
+        "d": "Care to Beauty",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-okeeffes.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-milani-lip-oil": {
+    "name": "Milani Fruit Fetish Lip Oil (Lychee Nectar)",
+    "chosen": "https://www.kroger.com/product/images/xlarge/front/0071748900142",
+    "domain": "City Market",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "City Market",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "H-E-B",
+        "s": 48
+      },
+      {
+        "d": "Maquibeauty",
+        "s": 48
+      },
+      {
+        "d": "Instagram",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-milani-lip-oil.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-lip-butter": {
+    "name": "Summer Fridays Lip Butter Balm",
+    "chosen": "https://summerfridays.com/cdn/shop/files/PDP-LBBShades_1_16709004-171d-4274-b6aa-5d426b097621.jpg?v=1743713823&width=2000",
+    "domain": "Summer Fridays",
+    "width": 2000,
+    "height": 2000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Summer Fridays",
+        "s": 48
+      },
+      {
+        "d": "Summer Fridays",
+        "s": 48
+      },
+      {
+        "d": "Summer Fridays",
+        "s": 48
+      },
+      {
+        "d": "Space NK",
+        "s": 48
+      },
+      {
+        "d": "Summer Fridays",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-lip-butter.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-uno": {
+    "name": "UNO Card Game (2 Pack)",
+    "chosen": "https://www.tradeinn.com/f/14081/140818498/mattel-games-uno-dos-express-combo-pack-board-game.webp",
+    "domain": "Tradeinn",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "popmarket",
+        "s": 48
+      },
+      {
+        "d": "Tradeinn",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Shein",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-uno.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-iniu-charger": {
+    "name": "INIU 10000mAh 45W Portable Charger",
+    "chosen": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/48e99199-6b82-4fab-85f8-450106deb603.jpg",
+    "domain": "Best Buy",
+    "width": 1600,
+    "height": 1600,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Best Buy",
+        "s": 48
+      },
+      {
+        "d": "INIU",
+        "s": 48
+      },
+      {
+        "d": "INIU",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-iniu-charger.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-bananagrams": {
+    "name": "Bananagrams Classic Word Game",
+    "chosen": "https://www.uniquetoyshop.com/wp-content/uploads/classic-bananagrams-packngrid.png",
+    "domain": "Unique Toy Shop",
+    "width": 2048,
+    "height": 2048,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Unique Toy Shop",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "eBay",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-bananagrams.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-water-wow": {
+    "name": "Melissa and Doug Water Wow! (3 Pack)",
+    "chosen": "https://cdn.shopify.com/s/files/1/0550/8487/5830/files/50282_50285_Water_WOW_Bundle_3_Activity_Drawing_Set_PenPack_-2377_edit.jpg?v=1759170362",
+    "domain": "Melissa & Doug",
+    "width": 2000,
+    "height": 2000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Melissa & Doug",
+        "s": 48
+      },
+      {
+        "d": "Melissa & Doug",
+        "s": 38
+      },
+      {
+        "d": "Melissa & Doug",
+        "s": 38
+      },
+      {
+        "d": "Melissa & Doug",
+        "s": 38
+      },
+      {
+        "d": "Melissa & Doug",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-water-wow.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-beef-sticks": {
+    "name": "Jack Links Zero Sugar Beef Sticks (20 Pack)",
+    "chosen": "https://i5.walmartimages.com/seo/Jack-Link-s-Beef-Sticks-Original-Zero-Sugar-Meat-Sticks-0-92-oz-20-Count_0b94ddc1-7f7f-407b-9292-3220bf920904.490b1f051c1690275a63e797d0fb70d0.jpeg",
+    "domain": "Walmart",
+    "width": 2500,
+    "height": 2500,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Sam's Club",
+        "s": 48
+      },
+      {
+        "d": "Lowe's",
+        "s": 48
+      },
+      {
+        "d": "Jack Link's",
+        "s": 48
+      },
+      {
+        "d": "Costco Business Center",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-beef-sticks.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-rubiks": {
+    "name": "Rubiks Cube, The Original 3x3",
+    "chosen": "https://i5.walmartimages.com/seo/Rubik-s-Cube-The-Original-3x3-Color-Matching-Puzzle_a66803f3-5324-4479-9ca3-53cc57cac002.ab199b4b287a4d4991c848d48aa225f4.jpeg",
+    "domain": "Walmart",
+    "width": 2500,
+    "height": 2500,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Board Game Barrister",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-rubiks.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-eos-balms": {
+    "name": "eos Natural Lip Balm Trio",
+    "chosen": "https://i5.walmartimages.com/dfw/84bce68-a440/k2-_b80ee985-f3a4-4649-a653-57a871d99bfb.v1.webp",
+    "domain": "Walmart",
+    "width": 2000,
+    "height": 2000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "GoSupps.com",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "EOS",
+        "s": 45
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-eos-balms.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-hot-wheels": {
+    "name": "Hot Wheels 5-Car Assortment",
+    "chosen": "https://cdn.shoplightspeed.com/shops/605879/files/21121163/1024x1024x2/hot-wheels-hot-wheels-5-pack.jpg",
+    "domain": "The Toy Store",
+    "width": 1024,
+    "height": 1024,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "The Toy Store",
+        "s": 48
+      },
+      {
+        "d": "AutoZone.com",
+        "s": 48
+      },
+      {
+        "d": "ProTinkerToys.com",
+        "s": 48
+      },
+      {
+        "d": "Walgreens",
+        "s": 38
+      },
+      {
+        "d": "Geppetto's Toys",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-hot-wheels.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-fuzzy-socks": {
+    "name": "Fuzzy Cozy Slipper Socks (5 Pairs)",
+    "chosen": "https://i5.walmartimages.com/seo/AMITOFO-Fuzzy-Socks-5-Pairs-Slipper-Socks-for-Men-Soft-Cozy-Plush-Fluffy-Socks-with-Grips-Non-Slip-Winter-Warm-Sock_c4cb2b4c-6e32-4f9e-9fdb-29349b615df9.b108f9f195d38fcdfe289d1a4faeadf9.jpeg",
+    "domain": "Walmart",
+    "width": 1600,
+    "height": 1600,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Michaels",
+        "s": 48
+      },
+      {
+        "d": "Holiday Hugs Gift Shop",
+        "s": 45
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-fuzzy-socks.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-duke-cannon": {
+    "name": "Duke Cannon Big Brick of Soap",
+    "chosen": "https://dukecannon.com/cdn/shop/files/BABOS_Sawtooth_10oz_SILO_A-0150-1080px_F3F3F5_1024x1024.jpg?v=1772818671",
+    "domain": "Duke Cannon",
+    "width": 1024,
+    "height": 1024,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Duke Cannon",
+        "s": 48
+      },
+      {
+        "d": "Duke Cannon",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Duke Cannon",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-duke-cannon.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-madlibs": {
+    "name": "Stocking Stuffer Mad Libs",
+    "chosen": "https://treehousetoys.us/cdn/shop/products/web_ebc3b280-ed4a-4b7e-b9bb-ca415f091abd.jpg?v=1651078745&width=1500",
+    "domain": "Treehouse Toys",
+    "width": 1500,
+    "height": 1500,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Treehouse Toys",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Facebook",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 28
+      },
+      {
+        "d": "Walmart",
+        "s": 28
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-madlibs.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-callaway": {
+    "name": "Callaway Supersoft Golf Balls (Dozen)",
+    "chosen": "https://cdn11.bigcommerce.com/s-orglemg8yb/images/stencil/1280x1280/products/3733/16583/balls-2025-supersoft_2___1__19136.1744820367.jpg?c=1",
+    "domain": "All Kids Golf Clubs",
+    "width": 1280,
+    "height": 1280,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "All Kids Golf Clubs",
+        "s": 48
+      },
+      {
+        "d": "All Kids Golf Clubs",
+        "s": 48
+      },
+      {
+        "d": "All Kids Golf Clubs",
+        "s": 48
+      },
+      {
+        "d": "Custom Golf Balls",
+        "s": 48
+      },
+      {
+        "d": "Callaway Golf",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-callaway.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-dickies-socks": {
+    "name": "Dickies Dri-tech Crew Socks (6 Pairs)",
+    "chosen": "https://www.kroger.com/product/images/xlarge/front/0073789962137",
+    "domain": "Smith's Food and Drug",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Smith's Food and Drug",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Smith's Food and Drug",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-dickies-socks.jpg",
+    "provider": "serpapi"
   }
 }

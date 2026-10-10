@@ -100,11 +100,11 @@ export default function Page() {
         { href: '/stocking-stuffers-under-10', label: 'Stocking Stuffers Under $10' },
         { href: '/stocking-stuffers-for-her', label: 'Stocking Stuffers for Her' },
         { href: '/stocking-stuffers-for-him', label: 'Stocking Stuffers for Him' },
+        { href: '/stocking-stuffers-for-kids', label: 'Stocking Stuffers for Kids' },
+        { href: '/stocking-stuffers-for-mom', label: 'Stocking Stuffers for Mom' },
+        { href: '/stocking-stuffers-for-dad', label: 'Stocking Stuffers for Dad' },
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
-        { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
         { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
-        { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
-        { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
       ]}
     />
   );
