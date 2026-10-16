@@ -1,5 +1,4 @@
-const REDIS_URL = 'https://social-slug-73085.upstash.io';
-const REDIS_TOKEN = 'gQAAAAAAAR19AAIncDFjYmM1MjBkYTJhODA0N2E2YTBkZTc4MDJiNzlkYmU1YnAxNzMwODU';
+import { REDIS_URL, REDIS_TOKEN } from './lib/redis-env.mjs';
 
 const priceUpdates = {
   'admin-20260319-jojoba-oil':  { price: 7.99,  priceDisplay: '$7.99' },

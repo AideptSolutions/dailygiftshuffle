@@ -1,8 +1,7 @@
 // Fix: re-store the products correctly using the raw REST API
 // The data is currently double-stringified. We need to unwrap it and re-store.
 
-const REDIS_URL = 'https://social-slug-73085.upstash.io';
-const REDIS_TOKEN = 'gQAAAAAAAR19AAIncDFjYmM1MjBkYTJhODA0N2E2YTBkZTc4MDJiNzlkYmU1YnAxNzMwODU';
+import { REDIS_URL, REDIS_TOKEN } from './lib/redis-env.mjs';
 
 async function main() {
   // Step 1: Read the current (broken) data

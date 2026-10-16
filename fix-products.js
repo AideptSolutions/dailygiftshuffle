@@ -1,7 +1,25 @@
 const https = require('https');
+const fs = require('fs');
+const path = require('path');
 
-const UPSTASH_URL = 'https://social-slug-73085.upstash.io';
-const UPSTASH_TOKEN = 'gQAAAAAAAR19AAIncDFjYmM1MjBkYTJhODA0N2E2YTBkZTc4MDJiNzlkYmU1YnAxNzMwODU';
+// Credentials come from .env.all / .env.local (both gitignored), same variable
+// names as lib/redis.ts. Never inline them here. See DEPLOY.md.
+for (const ef of ['.env.all', '.env.local']) {
+  try {
+    for (const line of fs.readFileSync(path.join(__dirname, ef), 'utf8').split('\n')) {
+      const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)$/);
+      if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '').trim();
+    }
+  } catch {}
+}
+
+const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
+const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+if (!UPSTASH_URL || !UPSTASH_TOKEN) {
+  console.error('UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN missing from .env.all (or .env.local).');
+  process.exit(1);
+}
 
 function upstashGet() {
   return new Promise((resolve, reject) => {
