@@ -194,3 +194,31 @@ follow. Halloween guide: 7 Vercel visitors in its first ~10 days.
 READ: Google is drifting rather than snapping back; the Bing/ChatGPT
 channel is compounding into Q4. Stocking stuffers is the page to
 strengthen for the season.
+
+## Checkpoint 2026-10-20 (GSC 28d through Oct 18 + GA4 Sep 22 - Oct 19)
+
+GOOGLE: the Sep 24-28 re-rating FULLY RETRACED. Daily position returned
+to 80-85 from Oct 1 onward and stayed there; the break week was a
+transient test, not the recovery. Still 0 Google clicks. What survived:
+/gift-ideas-for-him and /mothers-day-gifts keep better positions than
+pre-break in their window averages. New pages are at least indexed and
+earning first impressions: /stocking-stuffers 15 impr (pos 85),
+/halloween-party-gifts 2, /gift-genie 1 (pos 81; indexing request
+worked). Doorway tail unchanged at 11 old-window URLs. Bing WMT export
+failed this time (Bing error page instead of CSV); re-export when the
+service cooperates.
+
+GA4 (28d, 249 users): the Bing-ecosystem channel nearly doubled: bing
+40 users (21 prior), duckduckgo 15 (8), yahoo 15 (12), ecosia 2, versus
+google 0. chatgpt.com 8 (12 prior). Average engagement time jumped from
+15.1s to 27.7s per user. First awin referral sessions (4) showed up
+from the owner working the Awin dashboard.
+
+CONTENT: /stocking-stuffers extended its lead: 67 views, 57 users,
+22.7 percent bounce (best on site, improving). The six spokes shipped
+Oct 9 are collecting first visits (for-her 3, under-10 2, others 1
+each). Girlfriend, teens and mom pages follow the hub.
+
+READ: Google recovery remains gated on a future core update; the site
+is compounding where it can win now. Next: re-pull Bing WMT, and the
+late-Oct GSC export may catch the next re-rating attempt.
