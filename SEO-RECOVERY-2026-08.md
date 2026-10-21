@@ -222,3 +222,16 @@ each). Girlfriend, teens and mom pages follow the hub.
 READ: Google recovery remains gated on a future core update; the site
 is compounding where it can win now. Next: re-pull Bing WMT, and the
 late-Oct GSC export may catch the next re-rating attempt.
+
+### Bing WMT follow-up (Oct 21 export, daily series Aug 11 - Oct 18)
+
+The export succeeded on the third attempt and shows a clean compounding
+curve. By month: August 1 click on 70 impressions (3.3/day), September
+20 clicks on 385 (12.8/day), October 1-18 already 30 clicks on 513
+(28.5/day). The most recent week (Oct 12-18) ran 12 clicks on ~35
+impressions/day: roughly 10x the August impression rate and a steady
+~1.7 clicks/day. Inflection points line up with the work: the first
+sustained clicks begin mid-September (Genie prominence + IndexNow full
+resubmit), and the Oct 9 stuffers cluster push precedes the strongest
+week on record. 51 total Bing clicks since Aug 11 vs 0 Google clicks in
+the same span.
