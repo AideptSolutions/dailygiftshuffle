@@ -2494,5 +2494,229 @@
     ],
     "writtenTo": "/images/products/stuffer-dickies-socks.jpg",
     "provider": "serpapi"
+  },
+  "stuffer-pokemon-tin": {
+    "name": "Pokemon TCG Lumiose City Mini Tin",
+    "chosen": "https://www.miniaturemarket.com/media/9b/2e/e4/1775651233/PKU10392-T1-02.webp",
+    "domain": "Miniature Market",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Miniature Market",
+        "s": 48
+      },
+      {
+        "d": "Star City Games",
+        "s": 48
+      },
+      {
+        "d": "TCGplayer",
+        "s": 48
+      },
+      {
+        "d": "Steel City Collectibles",
+        "s": 48
+      },
+      {
+        "d": "Trading Card Market",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-pokemon-tin.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-paw-patrol-marshall": {
+    "name": "Paw Patrol Marshalls Firetruck with Figure",
+    "chosen": "https://www.kroger.com/product/images/xlarge/front/0068114706176",
+    "domain": "Fred Meyer",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Fred Meyer",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "PAW Patrol",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-paw-patrol-marshall.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-paw-patrol-figures": {
+    "name": "Paw Patrol All Paws On Deck 10 Figure Pack",
+    "chosen": "https://i5.walmartimages.com/seo/PAW-Patrol-All-Paws-on-Deck-10-Collectible-Toy-Figures-Gift-Pack-for-Kids-Ages-3_47e21ad7-25a0-4353-be58-926cbb076e59.80650a03fa316fbc734cd13c35f14f98.jpeg",
+    "domain": "Walmart",
+    "width": 2200,
+    "height": 2200,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "PAW Patrol",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "PAW Patrol",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-paw-patrol-figures.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-pokemon-figures": {
+    "name": "Pokemon Battle Figure 6 Pack",
+    "chosen": "https://media.gamestop.com/i/gamestop/20026515/Jazwares-Pokemon-Battle-Figure-6-Pack-Snivy-Oshawott-Tepig-Pikachu-Ninjask-Sandshrew",
+    "domain": "GameStop",
+    "width": 2000,
+    "height": 2000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "GameStop",
+        "s": 48
+      },
+      {
+        "d": "Best Buy",
+        "s": 48
+      },
+      {
+        "d": "GameStop",
+        "s": 48
+      },
+      {
+        "d": "Elbenwald",
+        "s": 45
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-pokemon-figures.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-playdoh": {
+    "name": "Play-Doh 10-Pack of Colors",
+    "chosen": "https://i5.walmartimages.com/seo/Play-Doh-Essential-Colors-10-Pack-of-Refill-Sticks-Kids-Arts-and-Crafts-Toys-2_0808abc4-0b59-4faf-86c8-3312c3169194.c15a994ce0eb7aef9e8324a4c899041e.jpeg",
+    "domain": "Walmart",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Little Learners",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-playdoh.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-princess-ariel": {
+    "name": "Disney Princess Ariel Set of 4 Small Dolls",
+    "chosen": "https://i5.walmartimages.com/seo/Disney-The-Little-Mermaid-Ariel-s-Adventures-Story-Set-with-4-Small-Dolls-and-Accessories_44ebd1a0-34cc-4750-8810-04dc5dbd6f3a.4aff32aa238a024ccb14cef99c43ce53.jpeg",
+    "domain": "Walmart",
+    "width": 2993,
+    "height": 2933,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "eBay",
+        "s": 48
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-princess-ariel.jpg",
+    "provider": "serpapi"
+  },
+  "stuffer-frozen-dolls": {
+    "name": "Disney Frozen Set of 4 Small Dolls",
+    "chosen": "https://www.nfm.com/dw/image/v2/BDFM_PRD/on/demandware.static/-/Sites-nfm-master-catalog/default/dw0395f3ad/images/069/74/69741643-1.jpg?sw=1000&sh=1000&sm=fit",
+    "domain": "NFM",
+    "width": 1000,
+    "height": 1000,
+    "score": 48,
+    "candidates": [
+      {
+        "d": "NFM",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 48
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      },
+      {
+        "d": "Walmart",
+        "s": 38
+      }
+    ],
+    "writtenTo": "/images/products/stuffer-frozen-dolls.jpg",
+    "provider": "serpapi"
   }
 }

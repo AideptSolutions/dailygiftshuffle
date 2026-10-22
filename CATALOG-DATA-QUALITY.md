@@ -299,3 +299,47 @@ the ASIN is Sandalwood + Lavender (identical packaging design); the
 Hot Wheels image shows three 5-pack variants for a styles-vary listing.
 Every image visually audited; 5 required tuned re-queries or hand-picked
 brand-site URLs (eos came from evolutionofsmooth.com directly).
+
+## Kids stocking stuffer additions 2026-10-22
+
+Added 8 licensed-character products to products-catalog.ts for the
+/stocking-stuffers-for-kids spoke (owner request: Pokemon cards, Pokemon
+toys, Paw Patrol, small dolls/princess toys and similar). All ASINs
+live-verified same-origin from a real amazon.com browser tab (title,
+rating, review count, price, In Stock) and logged in
+scripts/amazon-live.csv:
+
+- stuffer-pokemon-tin      B0GWK55V53  4.8/158     $19.97
+- stuffer-pokemon-figures  B09YMJH8BZ  4.8/1,031   $21.39
+- stuffer-paw-patrol-figures B0B4Y639SN 4.8/7,294  $19.97
+- stuffer-paw-patrol-marshall B0DBLS6TPB 4.8/2,740 $11.99
+- stuffer-princess-ariel   B0FGFPX23L  4.8/136     $12.99
+- stuffer-frozen-dolls     B0FGF5YR9M  4.7/289     $19.99
+- stuffer-squishmallow     B0G26PLWJ3  4.9/652     $14.99
+- stuffer-playdoh          B00JM5GW10  4.7/69,566  $7.99
+
+Image notes (licensed products had the worst wrong-variant rate yet,
+5 of 8 needed fixes; Amazon landing images downloaded to scratchpad as
+ground truth only, never used on site):
+- pokemon-tin: first fetch was a 5-tin lineup with baked-in marketing
+  text; replaced with single Meganium/Meowstic tin (common-lands.com).
+- pokemon-figures: first fetch was the WRONG 6-pack variant (Snivy/
+  Tepig/Oshawott); replaced with the correct Battle Ready box showing
+  Pikachu/Squirtle/Charmander/Bulbasaur/Mimikyu/Toxel (Walmart).
+- princess-ariel: first pick was an old Disney Store 5-doll fashion
+  set; replaced with Mattel's official out-of-box shot of the exact
+  animated-style 4-doll set (images.mattel.net).
+- playdoh: three wrong images in a row (party-favor wrappers, an
+  infographic slide, refill sticks); fixed by reading Walmart's own
+  search results in-browser for the exact 10-can SKU hero.
+- squishmallow: serpapi returned 0 candidates on the product name;
+  tuned query found Jazwares' official 2000px shot of Noelani.
+- paw-patrol x2 and frozen-dolls: correct on first fetch.
+
+Caveats: stuffer-pokemon-tin (158 reviews) and stuffer-princess-ariel
+(136) are new-release listings with young review counts; both are
+official brand products (Pokemon Company / Mattel) so rating drift risk
+is low, but worth rechecking in a future sweep. Pokemon TCG booster
+bundles were priced $45-90 everywhere (scalped market) and were
+deliberately avoided; the mini tin is the only card product that fits
+the under-$25 stocking band at MSRP.

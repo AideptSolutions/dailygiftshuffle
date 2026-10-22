@@ -28,7 +28,18 @@ export const metadata: Metadata = {
 
 const match = (p: { price?: number; recipients?: string[] }) =>
   (p.price ?? 999) <= 25 && (p.price ?? 0) >= 3 && !!p.recipients?.includes('kids');
-const grid = curate({ match, minRating: 4.5, sort: 'social', recipientCap: 40, limit: 30, pool: ALL });
+// New official-brand listings with young review counts would miss a pure
+// social sort; kids ask for these by name, so they belong in the grid.
+const STANDOUTS = new Set(['stuffer-pokemon-tin', 'stuffer-princess-ariel']);
+const grid = curate({
+  match,
+  minRating: 4.5,
+  sort: 'social',
+  recipientCap: 40,
+  limit: 32,
+  pool: ALL,
+  preferMatch: (p) => STANDOUTS.has(p.id),
+});
 const shuffle = shufflePool(match, ALL);
 
 export default function Page() {
@@ -61,12 +72,13 @@ export default function Page() {
         body: (
           <p>
             The best stocking stuffers for kids are screen-free and instantly playable: a{' '}
+            <strong>Pokemon card tin</strong>, <strong>Paw Patrol figures</strong>, a{' '}
             <strong>Hot Wheels pack</strong>, <strong>UNO or a card game</strong>, a{' '}
-            <strong>Rubik&apos;s Cube</strong>, <strong>Mad Libs</strong>,{' '}
-            <strong>Water Wow mess-free coloring</strong>, <strong>glow sticks</strong>, and{' '}
-            <strong>Bananagrams</strong> for older kids. One activity, one toy, one game and one
-            treat fills a stocking that stays interesting past breakfast; everything on this page
-            is under $25 and rated 4.5 stars or higher.
+            <strong>Squishmallow</strong>, <strong>Disney Princess small dolls</strong>,{' '}
+            <strong>Play-Doh</strong>, a <strong>Rubik&apos;s Cube</strong>, and{' '}
+            <strong>Water Wow mess-free coloring</strong> for the littlest ones. One activity, one
+            toy, one game and one treat fills a stocking that stays interesting past breakfast;
+            everything on this page is under $25 and rated 4.5 stars or higher.
           </p>
         ),
       }}
@@ -79,7 +91,11 @@ export default function Page() {
       faqs={[
         {
           q: 'What are the best stocking stuffers for kids in 2026?',
-          a: 'The reliable winners are classics with staying power: Hot Wheels packs, UNO, a Rubiks Cube, Mad Libs, Water Wow mess-free coloring for little ones, glow sticks, and Bananagrams for readers. Small activities beat small trinkets: anything they can DO on Christmas morning wins.',
+          a: 'The reliable winners are classics with staying power: Pokemon card tins and battle figures, Paw Patrol figure packs, Hot Wheels, UNO, a Rubiks Cube, Squishmallows, Disney Princess small dolls, Play-Doh, Mad Libs, and Water Wow mess-free coloring for little ones. Small activities beat small trinkets: anything they can DO on Christmas morning wins.',
+        },
+        {
+          q: 'Are Pokemon cards a good stocking stuffer?',
+          a: 'Yes, for most kids 6 and up a Pokemon TCG mini tin is the single most requested stocking item. A mini tin runs about $20, includes two booster packs plus the collectible tin, and fits a stocking perfectly. For younger Pokemon fans who do not play the card game yet, a battle figure pack with Pikachu and the starters lands just as well.',
         },
         {
           q: 'What stocking stuffers work for toddlers?',
