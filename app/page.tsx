@@ -209,6 +209,11 @@ export default async function HomePage() {
             sizes="100vw"
             className="object-cover -z-10"
           />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -z-10"
+            style={{ background: 'radial-gradient(ellipse 42rem 22rem at 50% 55%, rgba(255,255,255,0.72), rgba(255,255,255,0) 70%)' }}
+          />
           <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-20 -z-10 bg-gradient-to-b from-transparent to-white" />
           <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight mb-4 max-w-3xl" style={{ color: '#1A202C' }}>
             Find the{' '}
