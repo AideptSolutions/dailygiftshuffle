@@ -50,8 +50,23 @@ cards: lib/guideImages.ts resolves each link's art at build time (guide
 hero by slug, category art for /category/*, 10 explicit overrides for
 guides whose hero is named differently) and falls back to a tinted text
 card rather than a broken image. Build check: all 354 cards across the
-template guides resolved to an image. The ~42 legacy guide pages that do
-not use GiftGuideTemplate keep their own link sections.
+template guides resolved to an image.
+
+Deploy note: the first version of lib/guideImages.ts probed public/ with
+fs; Vercel's file tracer then bundled the whole image folder into every
+function (528MB vs 250MB) and deploy 795fb09 failed (prod kept serving the
+previous build). Fixed in 5b2ac5f with a prebuild manifest
+(scripts/gen-guide-image-manifest.mjs -> lib/guideImageManifest.json).
+
+Legacy pages (2026-10-26): the card grid moved into
+components/GuideLinkCards.tsx (used by GiftGuideTemplate too), and the 41
+legacy guide pages' inline pill blocks ("Related Gift Guides", "More Gift
+Guides", "More [occasion] Gift Guides") were converted to it by script,
+keeping each page's own link list unchanged. Links without art show the
+coral gift icon; "Home" uses the homepage hero backdrop. Build check: 89
+pages, 578 cards, 578 with a photo, 0 public/ files traced into any
+function. Left as pills on purpose: /category/[niche] "Browse Other
+Categories" and /shuffle/[category] (category navigation, not guide links).
 
 Verification lesson: the in-app browser pane, while hidden, returns blank
 screenshots for any scrolled position (top-of-page captures work). This

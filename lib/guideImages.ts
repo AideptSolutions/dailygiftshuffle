@@ -15,6 +15,7 @@ const OVERRIDES: Record<string, string> = {
   '/retro-gaming-gifts': '/images/heroes/best-gaming-gifts-2026.jpg',
   '/top-10-fathers-day-gifts-2026': '/images/products/fathers-day-hero.jpg',
   '/shuffle': '/img/guide-cta-shuffle.jpg',
+  '/': '/img/home/hero-backdrop.jpg',
 };
 
 /**

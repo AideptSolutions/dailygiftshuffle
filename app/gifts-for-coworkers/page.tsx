@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import GuideLinkCards from '@/components/GuideLinkCards';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -230,8 +231,8 @@ export default function GiftsForCoworkersPage() {
         {/* Internal Links */}
         <section className="max-w-5xl mx-auto px-4 pb-12">
           <h2 className="text-xl font-bold mb-4" style={{ color: '#1A202C' }}>Related Gift Guides</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
+          <GuideLinkCards
+            links={[
               { href: '/gifts-for-boss', label: 'Gifts for Boss' },
               { href: '/gift-ideas-for-teachers', label: 'Gift Ideas for Teachers' },
               { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
@@ -240,16 +241,8 @@ export default function GiftsForCoworkersPage() {
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
               { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
               { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="border border-[#F04E30] text-[#F04E30] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#F04E30] hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+            ]}
+          />
         </section>
       </main>
     </div>

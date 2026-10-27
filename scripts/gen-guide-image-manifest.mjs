@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIRS = ['images/heroes', 'img/category-heroes'];
-const EXTRA = ['/img/mothers-day-hero-2026.jpg', '/images/products/fathers-day-hero.jpg', '/img/guide-cta-shuffle.jpg'];
+const EXTRA = ['/img/mothers-day-hero-2026.jpg', '/images/products/fathers-day-hero.jpg', '/img/guide-cta-shuffle.jpg', '/img/home/hero-backdrop.jpg'];
 
 const files = new Set();
 for (const dir of DIRS) {

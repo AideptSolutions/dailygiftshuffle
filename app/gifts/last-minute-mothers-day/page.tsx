@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import GuideLinkCards from '@/components/GuideLinkCards';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
@@ -227,24 +228,16 @@ export default function GiftsLastMinuteMothersDayPage() {
         {/* Internal Links */}
         <section className="max-w-5xl mx-auto px-4 pb-12">
           <h2 className="text-xl font-bold mb-4" style={{ color: '#1A202C' }}>More Mother&apos;s Day Gift Guides</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
+          <GuideLinkCards
+            links={[
               { href: '/mothers-day-gifts', label: "All Mother's Day Gifts" },
               { href: '/last-minute-mothers-day-gifts', label: "Last-Minute Gifts (Fast Ship)" },
               { href: '/mothers-day-gifts-for-wife', label: "Mother's Day Gifts for Wife" },
               { href: '/mothers-day-gifts-under-50', label: "Mother's Day Gifts Under $50" },
               { href: '/mothers-day-gifts-under-100', label: "Mother's Day Gifts Under $100" },
               { href: '/gift-ideas-for-mom', label: 'Gift Ideas for Mom' },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="border border-[#F04E30] text-[#F04E30] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#F04E30] hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+            ]}
+          />
         </section>
       </main>
     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import GuideLinkCards from '@/components/GuideLinkCards';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -177,23 +178,15 @@ export default function GraduationGiftsUnder100Page() {
         {/* Internal Links */}
         <section className="max-w-5xl mx-auto px-4 pb-12">
           <h2 className="text-xl font-bold mb-4" style={{ color: '#1A202C' }}>More Graduation Gift Guides</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
+          <GuideLinkCards
+            links={[
               { href: '/graduation-gifts', label: 'All Graduation Gifts' },
               { href: '/graduation-gifts-under-50', label: 'Graduation Gifts Under $50' },
               { href: '/gifts-under-100', label: 'All Gifts Under $100' },
               { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
               { href: '/gift-ideas-for-teachers', label: 'Teacher Appreciation Gifts' },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="border border-[#F04E30] text-[#F04E30] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#F04E30] hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+            ]}
+          />
         </section>
       </main>
     </div>
