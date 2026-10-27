@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ShuffleGrid from './ShuffleGrid';
+import GuideLinkCards from '@/components/GuideLinkCards';
 import { CATEGORY_META } from './categoryMeta';
 import { ALL } from '@/lib/giftSelect';
 
@@ -136,35 +137,18 @@ export default function CategoryShufflePage({ params }: { params: { category: st
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">
             Explore {meta.label} gifts in more detail
           </p>
-          <div className="flex flex-wrap gap-3">
-            {meta.related.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="border border-[#F04E30] text-[#F04E30] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#F04E30] hover:text-white transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+          <GuideLinkCards links={meta.related} />
         </section>
 
         {/* Browse other shuffle categories */}
         <section className="mt-10 border-t border-gray-100 pt-8">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">Browse other categories</p>
-          <div className="flex flex-wrap gap-2">
-            {Object.entries(CATEGORY_META)
+          <GuideLinkCards
+            compact
+            links={Object.entries(CATEGORY_META)
               .filter(([slug]) => slug !== category)
-              .map(([slug, m]) => (
-                <Link
-                  key={slug}
-                  href={`/shuffle/${slug}`}
-                  className="px-3 py-1.5 rounded-full text-xs font-semibold border border-gray-200 text-gray-600 hover:border-[#F04E30] hover:text-[#F04E30] transition-colors bg-white"
-                >
-                  {m.label}
-                </Link>
-              ))}
-          </div>
+              .map(([slug, m]) => ({ href: `/shuffle/${slug}`, label: m.label }))}
+          />
         </section>
       </main>
     </div>

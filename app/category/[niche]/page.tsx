@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import CategoryIcon from '@/components/CategoryIcon';
+import GuideLinkCards from '@/components/GuideLinkCards';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
@@ -467,6 +468,14 @@ const EDITORIAL: Record<Niche, string[]> = {
 
 const VALID_NICHES = Object.keys(NICHE_META) as Niche[];
 
+const NICHE_LABELS: Partial<Record<Niche, string>> = {
+  'ai-smart-home': 'AI & Smart Home',
+  'diy-tools': 'DIY & Tools',
+  halloween: 'Halloween Party',
+};
+const nicheLabel = (n: Niche) =>
+  NICHE_LABELS[n] ?? n.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+
 export async function generateStaticParams() {
   return VALID_NICHES.map((niche) => ({ niche }));
 }
@@ -687,17 +696,13 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
         {/* Category Navigation */}
         <section className="max-w-5xl mx-auto px-4 py-10 border-t border-gray-100 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Browse Other Categories</h2>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {VALID_NICHES.filter((n) => n !== params.niche).map((n) => (
-              <Link
-                key={n}
-                href={`/category/${n}`}
-                className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:border-[#F04E30] hover:text-[#F04E30] transition-colors capitalize"
-              >
-                {n.replace(/-/g, ' ')}
-              </Link>
-            ))}
-          </div>
+          <GuideLinkCards
+            compact
+            links={VALID_NICHES.filter((n) => n !== params.niche).map((n) => ({
+              href: `/category/${n}`,
+              label: nicheLabel(n),
+            }))}
+          />
         </section>
 
       </main>

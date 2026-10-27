@@ -28,6 +28,8 @@ export function guideImageFor(href: string): string | null {
   const slug = href.replace(/^\//, '');
   candidates.push(`/images/heroes/${slug}.jpg`);
   if (slug.startsWith('category/')) candidates.push(`/img/category-heroes/${slug.slice(9)}.jpg`);
-  if (slug.startsWith('shuffle/')) candidates.push(`/images/heroes/shuffle-${slug.slice(8)}.jpg`);
+  if (slug.startsWith('shuffle/')) {
+    candidates.push(`/images/heroes/shuffle-${slug.slice(8)}.jpg`, `/img/category-heroes/${slug.slice(8)}.jpg`);
+  }
   return candidates.find((c) => AVAILABLE.has(c)) ?? null;
 }

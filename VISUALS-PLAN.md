@@ -65,8 +65,16 @@ Guides", "More [occasion] Gift Guides") were converted to it by script,
 keeping each page's own link list unchanged. Links without art show the
 coral gift icon; "Home" uses the homepage hero backdrop. Build check: 89
 pages, 578 cards, 578 with a photo, 0 public/ files traced into any
-function. Left as pills on purpose: /category/[niche] "Browse Other
-Categories" and /shuffle/[category] (category navigation, not guide links).
+function.
+
+Category pills (2026-10-26, follow-up): GuideLinkCards gained a `compact`
+variant (6 columns on desktop, smaller labels) for long lists. Converted:
+/category/[niche] "Browse Other Categories" (22 compact cards; readable
+labels via nicheLabel, e.g. "AI & Smart Home" instead of the CSS-capitalized
+slug), /shuffle/[category] "Explore ... in more detail" (standard cards) and
+"Browse other categories" (compact). /shuffle/* links fall back to the
+category art (covers /shuffle/halloween, which has no shuffle hero). Build
+check: 130 pages, 1,444 cards, all with a photo, 0 public/ files traced.
 
 Verification lesson: the in-app browser pane, while hidden, returns blank
 screenshots for any scrolled position (top-of-page captures work). This
