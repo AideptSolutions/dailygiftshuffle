@@ -180,6 +180,56 @@ export const CATEGORY_META: Record<string, ShuffleCategoryMeta> = {
       { href: '/gifts-for-camping-and-outdoors', label: 'Camping & Outdoors' },
     ],
   },
+  travel: {
+    label: 'Travel',
+    desc: 'Packing cubes, adapters, chargers and carry-on upgrades for travelers.',
+    intro: 'Packing cubes, universal adapters, AirTags, power banks and carry-on upgrades for the frequent flyer and the weekend explorer. Shuffle for a fresh travel gift every click.',
+    related: [
+      { href: '/category/travel', label: 'All Travel Gifts' },
+      { href: '/gifts-for-camping-and-outdoors', label: 'Camping & Outdoors Gifts' },
+      { href: '/gifts-under-50', label: 'Gifts Under $50' },
+    ],
+  },
+  beauty: {
+    label: 'Beauty',
+    desc: 'Skincare, haircare, fragrance and self-care gifts.',
+    intro: 'Cult skincare serums, hair repair treatments, fragrance and at-home spa picks, all rated 4.3 stars or higher. Shuffle through beauty gifts she will actually use up.',
+    related: [
+      { href: '/category/beauty', label: 'All Beauty Gifts' },
+      { href: '/best-beauty-gifts-2026', label: 'Best Beauty Gifts 2026' },
+      { href: '/self-care-gifts', label: 'Self-Care Gifts' },
+    ],
+  },
+  'ai-smart-home': {
+    label: 'AI & Smart Home',
+    desc: 'Smart speakers, displays, trackers and connected home upgrades.',
+    intro: 'Echo and Nest smart speakers, smart displays, learning thermostats, trackers and security cams for the connected home. Shuffle for a smart home gift that gets used daily.',
+    related: [
+      { href: '/category/ai-smart-home', label: 'All AI & Smart Home Gifts' },
+      { href: '/tech-gadgets', label: 'Tech Gadget Guide' },
+      { href: '/ai-personalized-gifts', label: 'AI Personalized Gifts' },
+    ],
+  },
+  'baby-shower': {
+    label: 'Baby Shower',
+    desc: 'Registry favorites, keepsakes and new-parent essentials.',
+    intro: 'Swaddles, sound machines, carriers, keepsake frames and postpartum care kits that new parents actually reach for. Shuffle through baby shower gifts beyond the registry.',
+    related: [
+      { href: '/category/baby-shower', label: 'All Baby Shower Gifts' },
+      { href: '/best-baby-shower-gifts-2026', label: 'Best Baby Shower Gifts 2026' },
+      { href: '/top-10-gifts-for-new-dads-under-50', label: 'Gifts for New Dads' },
+    ],
+  },
+  wedding: {
+    label: 'Wedding',
+    desc: 'Registry classics, personalized keepsakes and gifts for the couple.',
+    intro: 'Registry classics like a Le Creuset Dutch oven, champagne flutes and personalized keepsakes engraved with names and the date. Shuffle for a wedding gift the couple will keep.',
+    related: [
+      { href: '/category/wedding', label: 'All Wedding Gifts' },
+      { href: '/best-anniversary-gifts-2026', label: 'Best Anniversary Gifts 2026' },
+      { href: '/housewarming-gifts', label: 'Housewarming Gifts' },
+    ],
+  },
   halloween: {
     label: 'Halloween Party',
     desc: 'Party decor, serveware, games and glow gear for Halloween hosts.',

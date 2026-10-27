@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ShuffleGrid from './ShuffleGrid';
 import GuideLinkCards from '@/components/GuideLinkCards';
+import { guideImageFor } from '@/lib/guideImages';
 import { CATEGORY_META } from './categoryMeta';
 import { ALL } from '@/lib/giftSelect';
 
@@ -48,9 +49,8 @@ const FALLBACK = {
 export default function CategoryShufflePage({ params }: { params: { category: string } }) {
   const category = params.category;
   const meta = CATEGORY_META[category] ?? FALLBACK;
-  const hero = CATEGORY_META[category]
-    ? `/images/heroes/shuffle-${category}.jpg`
-    : '/images/heroes/gifts-under-50.jpg';
+  const hero =
+    (CATEGORY_META[category] && guideImageFor(`/shuffle/${category}`)) || '/images/heroes/gifts-under-50.jpg';
 
   // Representative ItemList from the static catalog so crawlers/answer engines
   // see structured product data (the client grid shuffles a random subset).

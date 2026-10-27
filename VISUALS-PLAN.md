@@ -349,3 +349,15 @@ baby-shower and wedding rendered a generic "Gift Gift Shuffle" fallback
 come from CATEGORY_META, so those 5 are no longer submitted (the pages
 themselves still exist). Giving them real CATEGORY_META entries would make
 them proper pages again. Sitemap: 134 -> 138 URLs.
+
+Shuffle pages (2026-10-26): travel, beauty, ai-smart-home, baby-shower and
+wedding got real CATEGORY_META entries (label, desc, intro written around
+their actual top products, 3 related guides each), so they render as proper
+pages instead of the "Gift Gift Shuffle" fallback and are back in the
+sitemap automatically. The shuffle page hero now resolves through
+guideImageFor, falling back to the category art: this also fixed
+/shuffle/halloween, whose hero (/images/heroes/shuffle-halloween.jpg) was a
+404 on production. Also: two admin products (LifeStraw, GRAYL) had names
+scraped with an "Amazon.com : " prefix; getPublishedAdminProducts now strips
+it on read (stored Redis data unchanged; fix the names in /admin to clean the
+source).

@@ -51,7 +51,10 @@ export async function writeAdminProducts(products: AdminProduct[]): Promise<void
 
 export async function getPublishedAdminProducts(): Promise<AdminProduct[]> {
   const all = await readAdminProducts();
-  return all.filter(p => p.status === 'published');
+  // Imports scraped from Amazon page titles can carry an "Amazon.com : " prefix.
+  return all
+    .filter(p => p.status === 'published')
+    .map(p => ({ ...p, name: p.name.replace(/^\s*amazon\.com\s*:\s*/i, '') }));
 }
 
 // ─── JSON bootstrap helpers (local dev + first-run seeding) ─────────────────
