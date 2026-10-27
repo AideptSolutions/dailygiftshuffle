@@ -1,0 +1,31 @@
+import { existsSync } from 'fs';
+import path from 'path';
+
+// Guides whose hero art does not follow the /images/heroes/{slug}.jpg naming.
+const OVERRIDES: Record<string, string> = {
+  '/luxury-gifts-for-her': '/images/heroes/best-gifts-for-her-2026.jpg',
+  '/self-care-gifts-for-her': '/images/heroes/self-care-gifts.jpg',
+  '/luxury-gifts-under-200': '/images/heroes/best-luxury-gifts-2026.jpg',
+  '/luxury-gifts-under-50': '/images/heroes/best-luxury-gifts-2026.jpg',
+  '/mothers-day-gifts': '/img/mothers-day-hero-2026.jpg',
+  '/camping-gifts-for-women': '/images/heroes/best-camping-gifts.jpg',
+  '/camping-gifts-for-men': '/images/heroes/best-camping-gifts.jpg',
+  '/retro-gaming-gifts': '/images/heroes/best-gaming-gifts-2026.jpg',
+  '/top-10-fathers-day-gifts-2026': '/images/products/fathers-day-hero.jpg',
+  '/shuffle': '/img/guide-cta-shuffle.jpg',
+};
+
+/**
+ * Card image for an internal guide link, or null when none exists.
+ * Guide pages are statically generated, so the existence check runs at build
+ * time; a link without art renders as a text card instead of a broken image.
+ */
+export function guideImageFor(href: string): string | null {
+  const candidates: string[] = [];
+  if (OVERRIDES[href]) candidates.push(OVERRIDES[href]);
+  const slug = href.replace(/^\//, '');
+  candidates.push(`/images/heroes/${slug}.jpg`);
+  if (slug.startsWith('category/')) candidates.push(`/img/category-heroes/${slug.slice(9)}.jpg`);
+  if (slug.startsWith('shuffle/')) candidates.push(`/images/heroes/shuffle-${slug.slice(8)}.jpg`);
+  return candidates.find((c) => existsSync(path.join(process.cwd(), 'public', c))) ?? null;
+}

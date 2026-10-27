@@ -40,8 +40,18 @@ Deliberately NOT done:
 - Unsplash stays in next.config.mjs remotePatterns. No repo code uses it
   anymore, but admin-added products live in Redis and cannot be grepped; an
   admin product pointing at Unsplash would break silently if removed.
-- SVG icons for the homepage feature boxes and image cards for the guide
-  "More Gift Guides" pills (no generation needed; still open).
+- (Done in a follow-up the same day, see below.)
+
+Follow-up 2026-10-26: homepage feature boxes got custom line icons
+(components/FeatureIcon.tsx: gift tag with heart, stopwatch, bag with
+check; same 24px / 1.75 stroke / currentColor system as CategoryIcon, in a
+coral-tint tile). GiftGuideTemplate "More Gift Guides" pills became image
+cards: lib/guideImages.ts resolves each link's art at build time (guide
+hero by slug, category art for /category/*, 10 explicit overrides for
+guides whose hero is named differently) and falls back to a tinted text
+card rather than a broken image. Build check: all 354 cards across the
+template guides resolved to an image. The ~42 legacy guide pages that do
+not use GiftGuideTemplate keep their own link sections.
 
 Verification lesson: the in-app browser pane, while hidden, returns blank
 screenshots for any scrolled position (top-of-page captures work). This

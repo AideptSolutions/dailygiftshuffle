@@ -10,6 +10,7 @@ import HomeFeaturedSection from '@/components/HomeFeaturedSection';
 import GiftCupAnimation from '@/components/GiftCupAnimation';
 import GiftPackageCollections from '@/components/GiftPackageCollections';
 import TimelyGuides from '@/components/TimelyGuides';
+import FeatureIcon, { type FeatureIconName } from '@/components/FeatureIcon';
 import { getPublishedAdminProducts } from '@/lib/admin-store';
 import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
 
@@ -36,10 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
-const features = [
-  { title: 'Personalized', desc: 'Filter by recipient and budget for spot-on recommendations.' },
-  { title: 'Instant',      desc: 'Get a curated gift idea in under 5 seconds. No more decision fatigue.' },
-  { title: 'Ready to Buy', desc: 'Every result comes with a direct Amazon link so you can shop immediately.' },
+const features: { title: string; icon: FeatureIconName; desc: string }[] = [
+  { title: 'Personalized', icon: 'personalized', desc: 'Filter by recipient and budget for spot-on recommendations.' },
+  { title: 'Instant',      icon: 'instant',      desc: 'Get a curated gift idea in under 5 seconds. No more decision fatigue.' },
+  { title: 'Ready to Buy', icon: 'ready',        desc: 'Every result comes with a direct Amazon link so you can shop immediately.' },
 ];
 
 const giftGuides = [
@@ -356,6 +357,9 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {features.map((f) => (
               <div key={f.title} className="rounded-2xl p-6 shadow-sm border border-[#F04E30]/20 text-center" style={{ background: '#FFFFFF' }}>
+                <div className="w-14 h-14 rounded-2xl mx-auto mb-3 flex items-center justify-center ring-1 ring-inset ring-[#F04E30]/15" style={{ background: '#FFF3EE' }}>
+                  <FeatureIcon name={f.icon} className="w-7 h-7 text-[#F04E30]" />
+                </div>
                 <h3 className="font-bold mb-1" style={{ color: '#1A202C' }}>{f.title}</h3>
                 <p className="text-gray-500 text-sm">{f.desc}</p>
               </div>
