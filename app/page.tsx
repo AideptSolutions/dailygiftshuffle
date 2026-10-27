@@ -131,7 +131,9 @@ const giftGuides = [
 ];
 
 export default async function HomePage() {
-  const adminProducts = await getPublishedAdminProducts();
+  // Crane's List items are a personal wishlist, not gift recommendations; same
+  // exclusion as the catalog feed (lib/catalogFeed.ts).
+  const adminProducts = (await getPublishedAdminProducts()).filter((p) => !p.cranes && !/^crane-/i.test(p.id));
   const products = adminProducts.map(p => ({
     id: p.id,
     name: p.name,

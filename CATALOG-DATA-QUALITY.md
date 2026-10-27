@@ -343,3 +343,64 @@ is low, but worth rechecking in a future sweep. Pokemon TCG booster
 bundles were priced $45-90 everywhere (scalped market) and were
 deliberately avoided; the mini tin is the only card product that fits
 the under-$25 stocking band at MSRP.
+
+## Admin products cleanup 2026-10-26
+
+Audited all 134 admin products (Redis key admin:products; 96 gift catalog,
+38 Crane's List) against the data rules, with live Amazon reads for every
+ASIN (same-origin browser probe, canaries B07Y8TM6SW dead / B00FLYWNYQ live
+classified correctly). Backup of the pre-cleanup value:
+data/backups/admin-products-2026-10-26-before-cleanup.json (restore by
+writing it back to admin:products). Write was guarded: aborts unless live
+Redis still equals the backup; read-back verified.
+
+Fixed:
+- HOMEPAGE LEAK: app/page.tsx passed every published admin product,
+  including Crane's List (iron supplements, chili powder, a toddler dress),
+  into the homepage shuffle pool. Now filtered the same way as
+  lib/catalogFeed.ts (!p.cranes && !/^crane-/).
+- Unpublished (status draft, reversible in /admin) 15: one dead ASIN
+  (Sperax walking pad B0DJ8ZL7RX), 13 gift products below the published
+  4.3-star minimum (mole repellent 1.9, no-name smart ring 3.4, Razer
+  Wolverine V3 Pro 3.9, RedThunder K10 3.9, walking pad 4.0, C Cushion Lab
+  pillow 4.0, NACON Revolution 5 Pro 4.0, Astro A50 X 4.1, Creative Co-Op
+  metal boxes 4.1, SAFEJAWZ 4.2, Meta Quest dock 4.2, PowerA controller
+  4.2, GoSports mini cornhole 4.2), and a duplicate eero Pro 7 entry.
+  Crane's List items were not held to the rating rule (personal wishlist).
+- Affiliate links: all normalized to https://www.amazon.com/dp/ASIN?tag=dailygiftshuf-20.
+  8 links had NO dailygiftshuf-20 tag (raw search-result URLs with crid/dib
+  params: 7 Crane's List items and the Amazon Basics dumbbell), so those
+  clicks earned nothing. One /gp/product link and one asin field that
+  disagreed with its link (dumbbell) fixed.
+- Text: mojibake repaired (UTF-8 read as cp1252, e.g. an em dash stored as
+  the a-hat/euro/quote sequence) across 41 fields; "Amazon.com :" name
+  prefixes removed (3); all dashes removed (house rule); one Pokemon record
+  with multiply-corrupted text rewritten by hand.
+- Copy: 59 products got clean short names and/or one-line descriptions
+  written from the live Amazon title and feature bullets (61 gift products
+  had empty descriptions; names up to 188 chars of scraped SEO title).
+- Live data: rating, reviewCount and price refreshed from Amazon for 117
+  live ASINs; priceDisplay and budgetTier recomputed from price (24 tiers
+  were wrong, 4 price labels read just ".99").
+- Images: 4 crane-* items pointed at m.media-amazon.com URLs that were all
+  404 (never real); now the existing verified local images.
+- Tags/recipients: invalid values mapped (dogs->pets, food/snacks/coffee->
+  kitchen, hair/selfcare/skincare->beauty, health/wellness->fitness,
+  smart-home->ai-smart-home, coworkers->coworker); empty ones filled.
+- data/admin-products.json (bundled first-run/outage fallback) synced to
+  the cleaned set so an outage cannot reintroduce the old data.
+
+Result: 119 published (82 gift catalog), 15 draft; every published gift
+product has a description and is rated 4.3+.
+
+Left as-is (needs a later pass):
+- 13 ASINs bot-checked during the probe (Amazon throttled the session):
+  kept their existing data unverified. Only 2 are gift catalog: GRAYL
+  GeoPress (B0C1JHC2M6) and AirPods Pro 3 (B0FQFB8FMG), both show 0 reviews.
+- 2 Crane's List items still link to Amazon search results, not a product
+  (Cosequin Minis, Fairlife Core Power Elite): need the exact ASIN.
+- 20 admin products duplicate main-catalog ASINs; harmless in shuffles
+  (catalogFeed dedupes, static data wins) but they could be removed.
+- Lincoln Logs Collector's Edition (B00V5Y9P5G): the listing's feature text
+  describes a refurbished unit; confirm the buy box sells new before
+  keeping it as a gift pick.
