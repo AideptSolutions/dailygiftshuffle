@@ -331,3 +331,10 @@ purple and gold sub-brand instead of coral.
 4. About, wishlist empty state, custom 404, blog inline image.
 
 Total new images: 20 (60 prompt variants to choose from).
+
+IndexNow (2026-10-26): submitted the 126 changed pages that are in the
+sitemap (homepage, /shuffle, /about, Genie blog post, all template and
+legacy guides, 23 /category pages, 18 /shuffle categories) -> HTTP 200.
+Skipped 9 changed pages that the sitemap deliberately omits (/category
+index, /ai-personalized-gifts, /sustainable-eco-gifts, /tech-gadgets and
+the five /top-10-* pages).
