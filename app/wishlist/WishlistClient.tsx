@@ -232,6 +232,13 @@ export default function WishlistClient() {
 
         {items.length === 0 ? (
           <div className="bg-white rounded-3xl shadow-sm p-12 text-center">
+            <Image
+              src="/img/wishlist-empty.webp"
+              alt=""
+              width={160}
+              height={160}
+              className="mx-auto mb-4"
+            />
             <h2 className="text-xl font-bold text-gray-900 mb-2">Your wishlist is empty</h2>
             <p className="text-gray-500 mb-6">
               Start shuffling to discover gifts and save them here!

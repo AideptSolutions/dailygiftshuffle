@@ -180,17 +180,28 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
 
         {/* CTA */}
         <section className="bg-white py-12 px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4" style={{ color: '#1A202C' }}>
-              {props.ctaHeading}
-            </h2>
-            <p className="text-gray-600 mb-6">{props.ctaText}</p>
-            <Link
-              href="/shuffle"
-              className="inline-block bg-[#F04E30] text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition-opacity text-lg"
-            >
-              Try the Gift Shuffle →
-            </Link>
+          <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-8 items-center">
+            <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden">
+              <Image
+                src="/img/guide-cta-shuffle.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 640px) 100vw, 448px"
+                className="object-cover"
+              />
+            </div>
+            <div className="text-center sm:text-left">
+              <h2 className="text-2xl font-bold mb-4" style={{ color: '#1A202C' }}>
+                {props.ctaHeading}
+              </h2>
+              <p className="text-gray-600 mb-6">{props.ctaText}</p>
+              <Link
+                href="/shuffle"
+                className="inline-block bg-[#F04E30] text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition-opacity text-lg"
+              >
+                Try the Gift Shuffle →
+              </Link>
+            </div>
           </div>
         </section>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 
@@ -62,6 +63,15 @@ export default function AboutPage() {
                 <li><strong>Genuine recipient fit</strong>, would a real person actually want this?</li>
                 <li><strong>No pay-to-play</strong>, brands cannot buy their way into our catalog</li>
               </ul>
+              <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mt-6">
+                <Image
+                  src="/img/about-how-we-pick.jpg"
+                  alt="Three gift candidates compared side by side with a magnifying glass and a five-star card, the winner tied in a coral ribbon"
+                  fill
+                  sizes="(max-width: 672px) 100vw, 544px"
+                  className="object-cover"
+                />
+              </div>
             </section>
 
             <section>

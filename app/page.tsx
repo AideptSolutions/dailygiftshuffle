@@ -127,13 +127,6 @@ const giftGuides = [
     title: 'Travel Gifts',
     desc: 'For the frequent flyer or adventure seeker on your list.',
   },
-  {
-    href: '/graduation-gifts',
-    image: '/img/gift-guides/birthday.jpg',
-    alt: 'Graduation gift ideas, diploma, laptop, and luggage',
-    title: 'Graduation Gifts',
-    desc: 'Practical picks for grads heading to college, work, or their first apartment.',
-  },
 ];
 
 export default async function HomePage() {
@@ -204,46 +197,57 @@ export default async function HomePage() {
 
       {/* Hero */}
       <section
-        className="flex-1 flex flex-col items-center justify-center text-center px-4 py-8"
+        className="flex-1 flex flex-col items-center justify-center text-center px-4 pb-8"
         style={{ background: '#FFFFFF' }}
       >
-        <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight mb-4 max-w-3xl" style={{ color: '#1A202C' }}>
-          Find the{' '}
-          <span style={{ color: '#F04E30' }}>Perfect Gift</span>
-          <br />in Seconds
-        </h1>
-        <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-6">
-          Stuck on what to get them? Tell us the person and your budget, and we&apos;ll match a
-          top-rated gift they&apos;ll actually love, in seconds.
-        </p>
-        <Link
-          href="/shuffle"
-          className="inline-flex items-center gap-2 bg-[#F04E30] text-white font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-lg mb-3"
-        >
-          Shuffle a Gift <span aria-hidden="true">&rarr;</span>
-        </Link>
-        <p className="text-sm text-gray-500 mb-4">
-          <span className="font-bold text-[#6D28D9]">New:</span>{' '}
-          <Link href="/gift-genie" className="font-semibold text-gray-700 underline underline-offset-2 hover:text-[#6D28D9]">
-            the Gift Genie
-          </Link>{' '}
-          reads the gifts you pin and conjures 5 perfect matches. Free, no sign-up.
-        </p>
+        <div className="relative isolate -mx-4 w-[calc(100%+2rem)] px-4 pt-10 sm:pt-16 flex flex-col items-center overflow-hidden">
+          <Image
+            src="/img/home/hero-backdrop.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover -z-10"
+          />
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-20 -z-10 bg-gradient-to-b from-transparent to-white" />
+          <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight mb-4 max-w-3xl" style={{ color: '#1A202C' }}>
+            Find the{' '}
+            <span style={{ color: '#F04E30' }}>Perfect Gift</span>
+            <br />in Seconds
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-6">
+            Stuck on what to get them? Tell us the person and your budget, and we&apos;ll match a
+            top-rated gift they&apos;ll actually love, in seconds.
+          </p>
+          <Link
+            href="/shuffle"
+            className="inline-flex items-center gap-2 bg-[#F04E30] text-white font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity text-lg mb-3"
+          >
+            Shuffle a Gift <span aria-hidden="true">&rarr;</span>
+          </Link>
+          <p className="text-sm text-gray-500 mb-4">
+            <span className="font-bold text-[#6D28D9]">New:</span>{' '}
+            <Link href="/gift-genie" className="font-semibold text-gray-700 underline underline-offset-2 hover:text-[#6D28D9]">
+              the Gift Genie
+            </Link>{' '}
+            reads the gifts you pin and conjures 5 perfect matches. Free, no sign-up.
+          </p>
 
-        {/* Trust strip: surface the editorial rigor that otherwise only lives on /about */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500 mb-2">
-          <span><span className="star-gold">&#9733;</span> 4.3+ rating</span>
-          <span className="text-gray-300" aria-hidden="true">&bull;</span>
-          <span>1,000+ reviews</span>
-          <span className="text-gray-300" aria-hidden="true">&bull;</span>
-          <span>Hand-selected</span>
-          <span className="text-gray-300" aria-hidden="true">&bull;</span>
-          <Link href="/about" className="hover:text-[#F04E30] underline underline-offset-2">No paid placements</Link>
-        </div>
+          {/* Trust strip: surface the editorial rigor that otherwise only lives on /about */}
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500 mb-2">
+            <span><span className="star-gold">&#9733;</span> 4.3+ rating</span>
+            <span className="text-gray-300" aria-hidden="true">&bull;</span>
+            <span>1,000+ reviews</span>
+            <span className="text-gray-300" aria-hidden="true">&bull;</span>
+            <span>Hand-selected</span>
+            <span className="text-gray-300" aria-hidden="true">&bull;</span>
+            <Link href="/about" className="hover:text-[#F04E30] underline underline-offset-2">No paid placements</Link>
+          </div>
 
-        {/* Cup animation */}
-        <div className="-mt-2 -mb-3">
-          <GiftCupAnimation />
+          {/* Cup animation */}
+          <div className="-mt-2 -mb-3">
+            <GiftCupAnimation />
+          </div>
         </div>
 
         {/* Featured gifts + shuffle widgets */}
@@ -319,16 +323,19 @@ export default async function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
-              { step: '1', title: 'Pick a Recipient', desc: 'Choose your Recipient or Product Category.' },
-              { step: '2', title: 'Set Your Budget',  desc: 'Nine budget tiers from under $25 to $250+.' },
-              { step: '3', title: 'Hit Shuffle',      desc: 'Get an instant curated gift with a buy link and save it to your wishlist.' },
+              { step: '1', img: '/img/home/step-1-recipient.webp', title: 'Pick a Recipient', desc: 'Choose your Recipient or Product Category.' },
+              { step: '2', img: '/img/home/step-2-budget.webp',    title: 'Set Your Budget',  desc: 'Nine budget tiers from under $25 to $250+.' },
+              { step: '3', img: '/img/home/step-3-shuffle.webp',   title: 'Hit Shuffle',      desc: 'Get an instant curated gift with a buy link and save it to your wishlist.' },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-extrabold mx-auto mb-4"
-                  style={{ background: '#FFF8EE', border: '2px solid #F04E30', color: '#F04E30' }}
-                >
-                  {item.step}
+                <div className="relative w-36 h-36 sm:w-40 sm:h-40 mx-auto mb-4">
+                  <Image src={item.img} alt="" fill sizes="160px" className="object-contain" />
+                  <span
+                    className="absolute top-0 left-0 w-9 h-9 rounded-full flex items-center justify-center text-base font-extrabold text-white shadow-md"
+                    style={{ background: '#F04E30' }}
+                  >
+                    {item.step}
+                  </span>
                 </div>
                 <h3 className="font-bold text-lg mb-2" style={{ color: '#1A202C' }}>{item.title}</h3>
                 <p className="text-gray-500 text-sm">{item.desc}</p>
@@ -390,32 +397,41 @@ export default async function HomePage() {
       </section>
 
       {/* CTA */}
-      <section
-        className="py-20 px-4 text-center"
-        style={{ background: 'linear-gradient(135deg, #F04E30 0%, #FF7F50 100%)' }}
-      >
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-          Ready to find the perfect gift?
-        </h2>
-        <p className="text-white/80 text-lg mb-8">Free to use. No sign-up required.</p>
-        <Link
-          href="/shuffle"
-          className="bg-white font-bold text-xl px-12 py-5 rounded-full inline-block transition-all hover:opacity-90"
-          style={{ color: '#F04E30' }}
+      <section className="pb-16 px-4 bg-white">
+        <div
+          className="relative isolate overflow-hidden max-w-5xl mx-auto rounded-3xl py-20 sm:py-24 px-4 text-center"
+          style={{ background: 'linear-gradient(135deg, #F04E30 0%, #FF7F50 100%)' }}
         >
-          Start Shuffling
-        </Link>
-
-        {/* ── TEMP: Crane's wishlist page, remove once creator API access is approved ── */}
-        <div className="mt-4">
+          <Image
+            src="/img/home/cta-band.jpg"
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="object-cover -z-10"
+          />
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            Ready to find the perfect gift?
+          </h2>
+          <p className="text-white/80 text-lg mb-8">Free to use. No sign-up required.</p>
           <Link
-            href="/cranes"
-            className="text-white/70 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
+            href="/shuffle"
+            className="bg-white font-bold text-xl px-12 py-5 rounded-full inline-block transition-all hover:opacity-90"
+            style={{ color: '#F04E30' }}
           >
-            Crane&apos;s List
+            Start Shuffling
           </Link>
+
+          {/* ── TEMP: Crane's wishlist page, remove once creator API access is approved ── */}
+          <div className="mt-4">
+            <Link
+              href="/cranes"
+              className="text-white/70 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
+            >
+              Crane&apos;s List
+            </Link>
+          </div>
+          {/* ── END TEMP ── */}
         </div>
-        {/* ── END TEMP ── */}
       </section>
     </div>
   );

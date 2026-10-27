@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import JsonLd from '@/components/JsonLd';
@@ -172,6 +173,20 @@ export default function WhatIsTheGiftGeniePage() {
             a copper herb planter, a linen apron, a novel about a botanist, describe
             exactly one. Taste lives in choices, not categories, and pins are choices.
           </p>
+          <figure className="my-6">
+            <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden">
+              <Image
+                src="/img/blog/gift-genie-pins-trio.jpg"
+                alt="A copper herb planter, a folded linen apron and a sage-green hardcover novel on lavender linen"
+                fill
+                sizes="(max-width: 768px) 100vw, 720px"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="text-sm text-gray-500 mt-2 text-center">
+              Three pins, one very specific person.
+            </figcaption>
+          </figure>
           <p className="text-gray-600 leading-relaxed mb-4">
             That is also why the Genie is entertaining rather than clinical. The
             profile it writes back (&quot;equally at home firing up the grill as he is
