@@ -52,9 +52,16 @@ export async function writeAdminProducts(products: AdminProduct[]): Promise<void
 export async function getPublishedAdminProducts(): Promise<AdminProduct[]> {
   const all = await readAdminProducts();
   // Imports scraped from Amazon page titles can carry an "Amazon.com : " prefix.
+  // Inline data: images are dropped (callers fall back to category art): the
+  // homepage serializes these products into its HTML, and three embedded
+  // images once pushed it to 2.8MB.
   return all
     .filter(p => p.status === 'published')
-    .map(p => ({ ...p, name: p.name.replace(/^\s*amazon\.com\s*:\s*/i, '') }));
+    .map(p => ({
+      ...p,
+      name: p.name.replace(/^\s*amazon\.com\s*:\s*/i, ''),
+      image: p.image?.startsWith('data:') ? '' : p.image,
+    }));
 }
 
 // ─── JSON bootstrap helpers (local dev + first-run seeding) ─────────────────

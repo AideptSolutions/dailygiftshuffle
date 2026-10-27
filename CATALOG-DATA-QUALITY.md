@@ -404,3 +404,45 @@ Left as-is (needs a later pass):
 - Lincoln Logs Collector's Edition (B00V5Y9P5G): the listing's feature text
   describes a refurbished unit; confirm the buy box sells new before
   keeping it as a gift pick.
+
+### Follow-up: remaining items closed (2026-10-26, same day)
+
+Amazon kept bot-checking the in-app browser, so live data for the leftover
+ASINs came from SerpAPI's Amazon engines (key in .env.all). Validated first:
+dead canary returns "hasn't returned any results", live canary matches the
+browser read. Caveat found: engine=amazon_product misreads some ratings
+(Instant Pot 4.4 vs 4.7 on the page; AirPods Pro 3 3.1 vs 4.4 in Amazon
+search), so ratings were only taken when within 0.3 of the stored value.
+
+Fixed (second guarded Redis write, read-back verified):
+- The 13 bot-checked ASINs: live review counts and prices.
+- Lincoln Logs: B00V5Y9P5G is a refurbished listing ("This refurbished
+  product is tested and certified..."); replaced with the new-condition
+  Lincoln Logs 100th Anniversary Tin (B00RWNEN9W, 4.7, 16,579 reviews,
+  $49.99), with a verified image.
+- Crane's List search links resolved to exact products: Cosequin for Small
+  Dogs with MSM and Omega-3s (B0GHCSRWMF) and Core Power Elite 42g Vanilla
+  12-pack (B01DDIRE2W, image replaced: the old one was strawberry).
+- crane-pet-001 / crane-coffee-001 / crane-coffee-002 were created by
+  scripts/add-crane-products.ts with isCranesListItem, a field /cranes never
+  reads, so they never appeared on Crane's List; now cranes: true.
+  crane-iron-001 set to draft (duplicate of the Slow Fe entry on the list).
+- PAGE WEIGHT: three published products (LifeStraw, GRAYL, AirPods Pro 3)
+  stored AI-generated images (Google C2PA metadata) inline as base64, about
+  2.6MB. The homepage serializes admin products into its HTML, so the live
+  homepage was 2,840KB (2MB gzipped). Replaced with real product photos
+  saved as files; getPublishedAdminProducts now drops data: images so this
+  cannot recur. Local homepage after the fix: 193KB.
+
+Static catalog fixes found while resolving the duplicates:
+- data/products.ts carried five crane-* entries that reached every shuffle
+  and guide (iron supplement, dog treats, K-Cups, eero router): removed.
+- college-airpods was named "Apple AirPods (3rd Generation)" at $99.99 with
+  a 3rd-gen photo, but its ASIN (B0FQFB8FMG) is AirPods Pro 3 at $199.99;
+  corrected name, copy, price, tier, rating and photo.
+- Stale prices synced to live: Ring Battery Doorbell $179.99 -> $99.99,
+  Cuisinart TOA-70 $199 -> $218.99 (tier was also wrong), Magna-Tiles
+  $108 -> $112.50.
+- The 20 gift/catalog duplicates are kept on purpose: the homepage reads only
+  admin products, so removing the admin copies would shrink its pool; the
+  two copies now agree on price. check-fit: 0 items over any page's cap.
