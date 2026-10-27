@@ -338,3 +338,14 @@ legacy guides, 23 /category pages, 18 /shuffle categories) -> HTTP 200.
 Skipped 9 changed pages that the sitemap deliberately omits (/category
 index, /ai-personalized-gifts, /sustainable-eco-gifts, /tech-gadgets and
 the five /top-10-* pages).
+
+Sitemap fix (2026-10-26): the 9 pages above were never in app/sitemap.ts
+(no noindex, self-canonical, no recorded reason to exclude), so they were
+added and submitted via IndexNow; /category also got a canonical tag. Found
+on the way: the sitemap listed /shuffle/{slug} for all 23 category niches,
+but only 18 have CATEGORY_META, so /shuffle/travel, beauty, ai-smart-home,
+baby-shower and wedding rendered a generic "Gift Gift Shuffle" fallback
+(200, near-duplicate) and were being submitted. Shuffle sitemap entries now
+come from CATEGORY_META, so those 5 are no longer submitted (the pages
+themselves still exist). Giving them real CATEGORY_META entries would make
+them proper pages again. Sitemap: 134 -> 138 URLs.

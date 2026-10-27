@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { CATEGORY_META } from './shuffle/[category]/categoryMeta';
 
 const BASE_URL = 'https://www.thegiftshuffle.com';
 
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/shuffle`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/wishlist`, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/about`, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE_URL}/category`, changeFrequency: 'weekly', priority: 0.6 },
   ];
 
   // Only include recipient pages that actually exist in /app
@@ -111,6 +113,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/gift-genie',
     '/blog',
     '/blog/what-is-the-gift-genie',
+    '/ai-personalized-gifts',
+    '/sustainable-eco-gifts',
+    '/tech-gadgets',
+    '/top-10-fathers-day-gifts-2026',
+    '/top-10-gifts-for-grandparents-who-have-everything',
+    '/top-10-gifts-for-new-dads-under-50',
+    '/top-10-gifts-that-arrive-in-24-hours',
+    '/top-10-gifts-that-dont-need-batteries-or-wifi',
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     changeFrequency: 'weekly' as const,
@@ -118,9 +128,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // The interactive per-category shuffle pages are real, indexable pages, so
-  // submit them alongside the category browse pages.
-  const shuffleRoutes: MetadataRoute.Sitemap = NICHES.map((niche) => ({
-    url: `${BASE_URL}/shuffle/${niche}`,
+  // submit them alongside the category browse pages. Only categories with
+  // their own CATEGORY_META entry: any other slug renders a generic
+  // "Gift Gift Shuffle" fallback that should not be submitted.
+  const shuffleRoutes: MetadataRoute.Sitemap = Object.keys(CATEGORY_META).map((slug) => ({
+    url: `${BASE_URL}/shuffle/${slug}`,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
