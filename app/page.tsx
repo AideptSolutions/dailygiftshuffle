@@ -11,8 +11,8 @@ import GiftCupAnimation from '@/components/GiftCupAnimation';
 import GiftPackageCollections from '@/components/GiftPackageCollections';
 import TimelyGuides from '@/components/TimelyGuides';
 import FeatureIcon, { type FeatureIconName } from '@/components/FeatureIcon';
-import { getPublishedAdminProducts } from '@/lib/admin-store';
-import { getCategoryImageUrl, isAmazonCdnUrl } from '@/lib/categoryImages';
+import { curate, ALL } from '@/lib/giftSelect';
+import type { Product } from '@/data/products';
 
 export const metadata: Metadata = {
   title: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
@@ -131,28 +131,34 @@ const giftGuides = [
 ];
 
 export default async function HomePage() {
-  // Crane's List items are a personal wishlist, not gift recommendations; same
-  // exclusion as the catalog feed (lib/catalogFeed.ts).
-  const adminProducts = (await getPublishedAdminProducts()).filter((p) => !p.cranes && !/^crane-/i.test(p.id));
-  const products = adminProducts.map(p => ({
-    id: p.id,
-    name: p.name,
-    description: p.description,
-    price: p.price,
-    priceDisplay: p.priceDisplay,
-    image: isAmazonCdnUrl(p.image ?? '') ? getCategoryImageUrl(p.tags ?? []) : (p.image || getCategoryImageUrl(p.tags ?? [])),
-    rating: p.rating,
-    reviewCount: p.reviewCount,
-    affiliateUrl: p.affiliateUrl,
-    recipients: p.recipients,
-    budgetTier: p.budgetTier,
-    occasions: p.occasions,
-    tags: p.tags,
-  }))
-  // Keep the homepage grid/shuffle clean: drop any product that resolved to a
-  // category-icon placeholder (e.g. a blocked Amazon-CDN image) so we never show
-  // a generic icon instead of a real product photo.
-  .filter((p) => !p.image.includes('/img/categories/'));
+  // First-paint pool for the homepage shuffle (HomeFeaturedSection widens it to
+  // the full feed after mount). Same bar as its trending picks: 4.5+, $25+.
+  const products = curate({
+    match: () => true,
+    sort: 'social',
+    minRating: 4.5,
+    minPrice: 25,
+    recipientCap: 15,
+    limit: 60,
+    pool: ALL,
+  }).map((p) => {
+    const full = ALL.find((a) => a.id === p.id)!;
+    return {
+      id: p.id,
+      name: p.name,
+      description: p.description ?? '',
+      price: p.price,
+      priceDisplay: p.priceDisplay,
+      image: p.image,
+      rating: p.rating,
+      reviewCount: p.reviewCount,
+      affiliateUrl: p.affiliateUrl,
+      recipients: full.recipients ?? [],
+      budgetTier: full.budgetTier,
+      occasions: full.occasions ?? [],
+      tags: full.tags ?? [],
+    } as Product;
+  });
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -431,17 +437,6 @@ export default async function HomePage() {
           >
             Start Shuffling
           </Link>
-
-          {/* ── TEMP: Crane's wishlist page, remove once creator API access is approved ── */}
-          <div className="mt-4">
-            <Link
-              href="/cranes"
-              className="text-white/70 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors"
-            >
-              Crane&apos;s List
-            </Link>
-          </div>
-          {/* ── END TEMP ── */}
         </div>
       </section>
     </div>

@@ -1,10 +1,9 @@
 // The single server-side source for the full merged catalog: both static
-// catalogs plus published admin/Redis products, deduped (static data wins).
+// catalogs, deduped (the recipient catalog wins). Admin/Redis products were
+// merged into data/products-catalog.ts on 2026-10-29.
 // Extracted from app/api/products/all/route.ts so the public feed route and
 // the Gift Genie candidate pre-filter share one definition of "the catalog".
 
-import { getPublishedAdminProducts } from '@/lib/admin-store';
-import { getCategoryImageUrl } from '@/lib/categoryImages';
 import { products as recipientCatalog } from '@/data/products';
 import productCatalog from '@/data/products-catalog';
 
@@ -65,17 +64,23 @@ export async function getFullCatalog(): Promise<FeedProduct[]> {
   return (await getFullCatalogWithAliases()).products;
 }
 
-// Crane's List entries (a personal shopping list) stay excluded.
-export async function getFullCatalogWithAliases(): Promise<CatalogWithAliases> {
-  const adminProducts = (await getPublishedAdminProducts())
-    .filter((p) => !p.cranes && !/^crane-/i.test(p.id))
-    .map((p) => ({ ...p, image: p.image || getCategoryImageUrl(p.tags ?? []) }));
+// Ids of admin products retired in the 2026-10-29 merge whose ASIN already had
+// a catalog entry; pins and wishlists saved before the merge still resolve.
+const RETIRED_ADMIN_IDS: Record<string, string> = {
+  'admin-1772855004896-p3ozq': 'smart-ring-doorbell',
+  'admin-1772857769806-94v7k': 'stuffer-callaway',
+  'admin-1773606196376-6o0tb': 'kid-002',
+  'admin-1773607510205-mciu3': 'kit-013',
+  'admin-1773608696241-81xgn': 'game-turtlebeach-stealth600',
+  'admin-1775085313965-n7dj7': 'college-airpods',
+};
 
+export async function getFullCatalogWithAliases(): Promise<CatalogWithAliases> {
   const merged: FeedProduct[] = [];
   const keptIdByKey = new Map<string, string>();
-  const aliases: Record<string, string> = {};
-  // Order matters: recipient catalog, then niche catalog, then admin.
-  for (const p of [...recipientCatalog, ...productCatalog, ...adminProducts] as any[]) {
+  const aliases: Record<string, string> = { ...RETIRED_ADMIN_IDS };
+  // Order matters: recipient catalog first, so it wins duplicates.
+  for (const p of [...recipientCatalog, ...productCatalog] as any[]) {
     if (!p?.affiliateUrl || !p?.image) continue;
     const key = dedupKey(p);
     const kept = key ? keptIdByKey.get(key) : undefined;

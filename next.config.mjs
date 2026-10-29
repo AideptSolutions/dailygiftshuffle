@@ -1,12 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Tell Vercel's bundler to include the admin product catalog in serverless functions
-  outputFileTracingIncludes: {
-    '/api/products/all': ['./data/**/*'],
-    '/api/admin/**/*':   ['./data/**/*'],
-    '/cranes':           ['./data/**/*'],
-  },
-
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'placehold.co' },
@@ -28,6 +21,12 @@ const nextConfig = {
       {
         source: '/category/tech-gadgets',
         destination: '/category/tech',
+        permanent: true,
+      },
+      {
+        // Crane's List was retired on 2026-10-29.
+        source: '/cranes',
+        destination: '/',
         permanent: true,
       },
       {

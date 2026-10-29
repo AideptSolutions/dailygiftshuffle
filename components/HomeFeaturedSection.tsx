@@ -200,17 +200,19 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   const router  = useRouter();
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
-  // Catalog seeded from server props — no client fetch needed
+  // Server props are the first paint; the full catalog feed widens the shuffle
+  // pool after mount (rated 4.3+ with a real photo, the Gift Genie's bar).
   const [catalog, setCatalog] = useState<Product[]>(initialProducts);
 
   useEffect(() => {
-    // Only fetch if server didn't provide products (fallback)
-    if (initialProducts.length > 0) return;
     fetch('/api/products/all')
       .then(r => r.ok ? r.json() : [])
       .then((data: Product[]) => {
-        setCatalog(data);
-        setCards(getTrending(data));
+        if (!Array.isArray(data) || !data.length) return;
+        const seen = new Set(initialProducts.map(p => p.id));
+        const extra = data.filter(p => !seen.has(p.id) && (p.rating ?? 0) >= 4.3 && p.image && !p.image.includes('/img/categories/'));
+        setCatalog([...initialProducts, ...extra]);
+        if (!initialProducts.length) setCards(getTrending(extra));
       })
       .catch(() => {});
   }, []); // eslint-disable-line react-hooks/exhaustive-deps

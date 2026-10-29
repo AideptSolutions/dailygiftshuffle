@@ -1,7 +1,6 @@
 import { readFileSync, writeFileSync } from 'fs';
 
 const files = [
-  'app/cranes/page.tsx',
   'app/gifts/[slug]/page.tsx',
   'app/picks/page.tsx',
   'app/selections/page.tsx',

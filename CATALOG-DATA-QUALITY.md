@@ -446,3 +446,38 @@ Static catalog fixes found while resolving the duplicates:
 - The 20 gift/catalog duplicates are kept on purpose: the homepage reads only
   admin products, so removing the admin copies would shrink its pool; the
   two copies now agree on price. check-fit: 0 items over any page's cap.
+
+## Admin catalog merged; Crane's List retired (2026-10-29)
+
+The Redis admin catalog (admin:products) caused most of this month's catalog
+bugs: duplicates with conflicting prices, Genie pins silently dropped,
+Crane's List items leaking into shuffles, inline base64 images bloating the
+homepage, a JSON fallback that had to be synced by hand, and edits that
+skipped version control and build checks. Admin products were also invisible
+to every guide and category page (giftSelect only reads the catalog files).
+/admin had not been used to add products since April.
+
+What changed:
+- The 82 published admin gift products moved into data/products-catalog.ts
+  (section "MERGED FROM ADMIN"): 76 merged with their ids kept, so existing
+  pins and wishlists resolve; 6 already had catalog entries (Ring doorbell,
+  Callaway balls, Magna-Tiles, Cuisinart TOA-70, Turtle Beach Stealth 600,
+  AirPods Pro 3), and their retired admin ids alias to those entries in
+  lib/catalogFeed.ts (RETIRED_ADMIN_IDS). The catalog Recipient type gained
+  brother, sister, myself-her, myself-him and streamers.
+- The 15 drafts (dead or below 4.3) were not migrated.
+- lib/catalogFeed.ts reads only the two catalog files.
+- Homepage: first paint is curate(ALL) 4.5+ and $25+ (60 products); the
+  shuffle then widens to the full feed (rated 4.3+, real photo). Locally 60
+  shuffles dealt 237 distinct products (the old admin pool was about 80).
+- Removed: Crane's List (/cranes, now a 308 to /), the admin product manager
+  and its APIs (products, import, seed, generate-image), lib/admin-store.ts,
+  lib/asin-parser.ts, data/admin-products.json, and the Redis sync scripts.
+  /admin redirects to /admin/clicks (click analytics unchanged, now naming
+  ASINs from both catalogs). outputFileTracingIncludes for data/** removed.
+- The admin:products key is still in Redis, unread. Snapshot:
+  data/backups/admin-products-2026-10-29-before-merge.json.
+
+Verified: feed still 1,030 products; all 82 published admin gift products
+reachable; 0 crane items; Genie pins on retired and merged ids resolve 4/4;
+check-fit 0 off-theme and 0 over-cap; homepage 177KB; redirects as above.

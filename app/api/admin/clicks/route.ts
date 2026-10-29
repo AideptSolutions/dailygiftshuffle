@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { redis } from '@/lib/redis';
 import { products } from '@/data/products';
-import { readAdminProducts } from '@/lib/admin-store';
+import productCatalog from '@/data/products-catalog';
 import { parseAsin, isAsin } from '@/lib/clickTracking';
 
 export const dynamic = 'force-dynamic';
@@ -24,19 +24,11 @@ export async function GET(req: NextRequest) {
   })) as (string | number)[];
   const storedNames = (await redis.hgetall<Record<string, string>>(NAMES_KEY)) ?? {};
 
-  // Resolve ASIN -> product name from the catalog + admin products.
+  // Resolve ASIN -> product name from both catalogs.
   const nameByKey = new Map<string, string>();
-  for (const p of products) {
+  for (const p of [...products, ...productCatalog]) {
     const a = parseAsin(p.affiliateUrl);
-    if (a) nameByKey.set(a, p.name);
-  }
-  try {
-    for (const p of await readAdminProducts()) {
-      const a = (p.asin && p.asin.trim().toUpperCase()) || parseAsin(p.affiliateUrl);
-      if (a) nameByKey.set(a, p.name);
-    }
-  } catch {
-    /* admin products optional */
+    if (a && !nameByKey.has(a)) nameByKey.set(a, p.name);
   }
 
   const items: { key: string; clicks: number; name: string | null; url: string }[] = [];
