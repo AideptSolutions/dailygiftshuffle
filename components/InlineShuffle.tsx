@@ -8,7 +8,13 @@ import GeniePanel from '@/components/genie/GeniePanel';
 interface Props {
   products: CompactProduct[];
   heading?: string;
+  /** Optional feed (e.g. /api/products/all) loaded after mount to widen the deck
+   *  beyond the server-rendered `products`, which stay as the first paint. */
+  catalogUrl?: string;
 }
+
+// Same quality bar the Gift Genie uses for its candidates.
+const FEED_MIN_RATING = 4.3;
 
 // How long the cards gather before the new set is revealed. Kept short so the
 // interaction still feels instant; must match riffleGather's duration in CSS.
@@ -33,7 +39,27 @@ function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = [])
   return shuffled.slice(0, n);
 }
 
-export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: Props) {
+export default function InlineShuffle({ products, heading = 'Shuffle Picks', catalogUrl }: Props) {
+  const [pool, setPool] = useState<CompactProduct[]>(products);
+
+  useEffect(() => {
+    if (!catalogUrl) return;
+    let cancelled = false;
+    fetch(catalogUrl)
+      .then((r) => (r.ok ? r.json() : []))
+      .then((feed: (CompactProduct & { image?: string })[]) => {
+        if (cancelled || !Array.isArray(feed)) return;
+        const seen = new Set(products.map((p) => p.id));
+        const extra = feed
+          .filter((p) => !seen.has(p.id) && (p.rating ?? 0) >= FEED_MIN_RATING && p.image && !p.image.includes('/img/categories/'))
+          .map(({ id, name, description, why, price, priceDisplay, image, rating, reviewCount, affiliateUrl }) =>
+            ({ id, name, description, why, price, priceDisplay, image, rating, reviewCount, affiliateUrl }));
+        if (extra.length) setPool([...products, ...extra]);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [catalogUrl, products]);
+
   // Deterministic first render: SSR and client hydration must agree, so seed with a
   // fixed slice (never Math.random) and only randomize after mount in the effect below.
   const [picks, setPicks] = useState<CompactProduct[]>(() => products.slice(0, 4));
@@ -63,14 +89,14 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
     seededPins.current = true;
     setPicks(prev => {
       const pinnedHere = pins
-        .map(p => products.find(c => c.id === p.id))
+        .map(p => pool.find(c => c.id === p.id))
         .filter((p): p is CompactProduct => !!p)
         .slice(0, prev.length || 4);
       if (!pinnedHere.length) return prev;
       const rest = prev.filter(c => !pinnedHere.some(p => p.id === c.id));
       return [...pinnedHere, ...rest].slice(0, prev.length || 4);
     });
-  }, [pins, products]);
+  }, [pins, pool]);
 
   // Respect the OS reduced-motion setting; skip the animation entirely if set.
   useEffect(() => {
@@ -82,11 +108,11 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks' }: P
   const commitShuffle = useCallback(() => {
     const pinnedArr = Array.from(pinnedIds);
     const numNew = picks.filter(p => !pinnedIds.has(p.id)).length;
-    const newPicks = numNew > 0 ? pickRandom(products, numNew, pinnedArr) : [];
+    const newPicks = numNew > 0 ? pickRandom(pool, numNew, pinnedArr) : [];
     let newPickIdx = 0;
     setHistory(prev => [...prev, picks].slice(-25));
     setPicks(picks.map(p => pinnedIds.has(p.id) ? p : (newPicks[newPickIdx++] ?? p)));
-  }, [products, picks, pinnedIds]);
+  }, [pool, picks, pinnedIds]);
 
   const shuffle = useCallback(() => {
     if (phase === 'riffle') return; // ignore repeat clicks mid-animation

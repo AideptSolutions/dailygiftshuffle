@@ -81,9 +81,10 @@ const faqSchema = {
   })),
 };
 
-// A broad, giftable pool so visitors can pin right on this page. The GeniePanel
-// rides inside InlineShuffle, so this page is a working demo, not a brochure.
-const demoPool = curate({
+// First paint for the on-page shuffle; InlineShuffle then widens the deck to the
+// full live catalog (catalogUrl), so pins here can come from anything the Genie
+// can recommend.
+const firstDeal = curate({
   match: () => true,
   sort: 'social',
   minRating: 4.5,
@@ -168,7 +169,7 @@ export default function GiftGeniePage() {
           <p className="text-sm text-gray-500 text-center mb-6">
             Shuffle the cards, pin a few that feel close, then summon the Genie below the grid.
           </p>
-          <InlineShuffle products={demoPool} heading="Pin a few of these" />
+          <InlineShuffle products={firstDeal} heading="Pin a few of these" catalogUrl="/api/products/all" />
         </section>
 
         {/* Why it is useful */}
