@@ -53,21 +53,38 @@ function normalize(p: any): FeedProduct {
   };
 }
 
-// Crane's List entries (a personal shopping list) stay excluded.
+export interface CatalogWithAliases {
+  products: FeedProduct[];
+  /** id of a dropped duplicate -> id of the copy the feed kept. Surfaces that
+   *  render a duplicate under its own id (admin products on the homepage,
+   *  catalog entries in guides) still produce pins the Genie can resolve. */
+  aliases: Record<string, string>;
+}
+
 export async function getFullCatalog(): Promise<FeedProduct[]> {
+  return (await getFullCatalogWithAliases()).products;
+}
+
+// Crane's List entries (a personal shopping list) stay excluded.
+export async function getFullCatalogWithAliases(): Promise<CatalogWithAliases> {
   const adminProducts = (await getPublishedAdminProducts())
     .filter((p) => !p.cranes && !/^crane-/i.test(p.id))
     .map((p) => ({ ...p, image: p.image || getCategoryImageUrl(p.tags ?? []) }));
 
   const merged: FeedProduct[] = [];
-  const seen = new Set<string>();
+  const keptIdByKey = new Map<string, string>();
+  const aliases: Record<string, string> = {};
   // Order matters: recipient catalog, then niche catalog, then admin.
   for (const p of [...recipientCatalog, ...productCatalog, ...adminProducts] as any[]) {
     if (!p?.affiliateUrl || !p?.image) continue;
     const key = dedupKey(p);
-    if (key && seen.has(key)) continue;
-    if (key) seen.add(key);
+    const kept = key ? keptIdByKey.get(key) : undefined;
+    if (kept) {
+      if (p.id !== kept) aliases[p.id] = kept;
+      continue;
+    }
+    if (key) keptIdByKey.set(key, p.id);
     merged.push(normalize(p));
   }
-  return merged;
+  return { products: merged, aliases };
 }
