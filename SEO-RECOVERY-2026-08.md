@@ -253,3 +253,7 @@ the same span.
 - Measurement: GA4 event next_gift_nudge with nudge_action shown / click /
   dismiss, from_page, to_page. Click-through rate = click / shown. Also watch
   stocking-page exits vs. views of the target pages in GA4 path exploration.
+- 2026-10-29 (later): OpenAI credits restored; the trending page hero is now
+  a generated flat-lay (gpt-image-2). scripts/gen-image.mjs defaults to
+  gpt-image-2 because gpt-image-1 was retired for generation (the API says
+  the model "does not exist"); pass --model to override.

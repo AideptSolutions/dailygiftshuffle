@@ -1,4 +1,5 @@
-// Generate an image with OpenAI gpt-image-1 and save it (optionally resized).
+// Generate an image with OpenAI (default gpt-image-2) and save it (optionally resized).
+// gpt-image-1 was retired for generation (API: "model does not exist", 2026-10-29).
 //
 // Usage:
 //   node scripts/gen-image.mjs --prompt "..." --out public/images/x.png
@@ -12,6 +13,7 @@
 //   --quality     low | medium | high | auto                 (default high)
 //   --transparent transparent background (PNG)               (default off)
 //   --resize      WxH post-resize with sharp (e.g. 1080x1080) (default none)
+//   --model       OpenAI image model                         (default gpt-image-2)
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import path from 'path';
@@ -44,9 +46,10 @@ const size = flag('size', '1024x1024');
 const quality = flag('quality', 'high');
 const transparent = !!flag('transparent', false);
 const resize = flag('resize', null);
+const model = flag('model', 'gpt-image-2');
 
 const body = {
-  model: 'gpt-image-1',
+  model,
   prompt,
   n: 1,
   size,

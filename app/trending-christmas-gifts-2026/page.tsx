@@ -46,7 +46,7 @@ export default function Page() {
       breadcrumbLabel="Trending Christmas Gifts 2026"
       breadcrumbHref="/trending-christmas-gifts-2026"
       heroSrc="/images/heroes/trending-christmas-gifts-2026.jpg"
-      heroAlt="Trending 2026 gifts: a KPop Demon Hunters doll, Ninja SLUSHi, Labubu pendants, HydroJug, LEGO advent calendar and Sol de Janeiro mist"
+      heroAlt="Trending holiday gifts on cream linen: an insulated tumbler, a toy advent calendar, a plush, a flower bouquet, a perfume mist and a knit beanie with pine and coral ribbon"
       h1="Trending Christmas Gifts of 2026"
       intro={
         <>
