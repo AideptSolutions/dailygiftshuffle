@@ -481,3 +481,30 @@ What changed:
 Verified: feed still 1,030 products; all 82 published admin gift products
 reachable; 0 crane items; Genie pins on retired and merged ids resolve 4/4;
 check-fit 0 off-theme and 0 over-cap; homepage 177KB; redirects as above.
+
+## Trending holiday 2026 batch (2026-10-29)
+
+20 products added to data/products-catalog.ts (section "TRENDING HOLIDAY
+2026", ids trend26-*), chosen where 2026 hot lists agree (Amazon Top Toys,
+Target Bullseye's Top Toys, The Toy Insider Hot 20, GiftList's Oct 26
+wishlist ranking, TikTok Shop holiday trend data) and the catalog had gaps:
+KPop Demon Hunters (Zoey Golden singing doll, Rumi Squishmallow), Tickle Me
+Elmo, furReal Gabby, Bluey Light and Surprise Heeler House, Little People My
+Mario playset, Hatchin' Yoshi, Pikachu Puppetronic, GUI GUI Mega Slime Haul,
+Barbie in the Nutcracker Clara, Ninja SLUSHi FS301, HydroJug Traveler, LEGO
+Marvel and Friends advent calendars 2026, Sol de Janeiro Cheirosa 62 mist,
+medicube PDRN jelly mask, Bluetooth beanie, LEGO Botanicals Pretty Pink
+bouquet, YUSHOW men's flannel pajamas, Pop Mart Labubu Big into Energy.
+
+Verification (Amazon browser still throttled; SerpAPI amazon engines):
+title, rating, review count, price, stock, and no refurbished/renewed text.
+Skipped: heatless curlers (best sets rate 4.1-4.2), LEGO Star Wars advent
+2026 (no buy box), beauty advent calendars (generic brands, few reviews),
+another heated throw (3 in catalog). Labubu confirmed in the browser as
+"Sold by POP MART Official Online Store", ships from Amazon (counterfeits
+are common). Images: brand or retailer packshots only, all 20 audited;
+8 replaced on review (children in shot: furReal, Mario; marketing banner:
+SLUSHi; wrong doll: Barbie Clara was the 25th-anniversary repro; model or
+stylized art vs listing: beanie, pajamas, Labubu; Yoshi fetch crashed).
+Barbie, beanie, Labubu and pajamas were matched against the Amazon listing
+image (reference only, never used on site).

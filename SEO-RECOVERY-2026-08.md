@@ -235,3 +235,21 @@ sustained clicks begin mid-September (Genie prominence + IndexNow full
 resubmit), and the Oct 9 stuffers cluster push precedes the strongest
 week on record. 51 total Bing clicks since Aug 11 vs 0 Google clicks in
 the same span.
+
+## 2026-10-29: Trending gifts page + stocking-stuffer retention
+
+- New page /trending-christmas-gifts-2026 (GiftGuideTemplate, answer box +
+  5 FAQs, 31 products: the 20 trend26 additions plus 11 catalog items on
+  2026 hot lists). Linked from the footer, Christmas Gift Ideas, and every
+  stocking stuffer page; in the sitemap. Hero is a lineup of six product
+  photos (OpenAI image credits ran out again 2026-10-29; swap in a generated
+  hero when topped up).
+- Retention for /stocking-stuffers traffic (the breakout page): every
+  stocking page now has a "main gift" section right after its grid (photo
+  cards matched to the page: her -> Christmas gifts for her, kids -> the
+  trending page, under $10 -> gifts under $25, etc.) and a return nudge:
+  after a product click opens Amazon in a new tab, coming back to our tab
+  shows one dismissible card pointing to the matched page, once per session.
+- Measurement: GA4 event next_gift_nudge with nudge_action shown / click /
+  dismiss, from_page, to_page. Click-through rate = click / shown. Also watch
+  stocking-page exits vs. views of the target pages in GA4 path exploration.

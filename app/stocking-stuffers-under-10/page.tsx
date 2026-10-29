@@ -98,6 +98,17 @@ export default function Page() {
           a: 'Kids do best with small activity items: card games, glow sticks, mini puzzles, slime or putty, fun socks, and character bandages. Skip anything with tiny batteries for young children and lean on the classics that survive every trend cycle.',
         },
       ]}
+      nextStep={{
+        heading: 'Stockings Done? More Gifts That Stay on Budget',
+        text: 'Gift exchanges and main gifts that keep the same small-budget spirit.',
+        links: [
+          { href: '/gifts-under-25', label: 'Gifts Under $25' },
+          { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
+          { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
+          { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
+        ],
+      }}
+      nudge={{ href: '/gifts-under-25', title: 'Stockings sorted?', cta: 'Find a main gift under $25' }}
       relatedHeading="More Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers', label: 'All Stocking Stuffers' },

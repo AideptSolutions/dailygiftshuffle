@@ -5,7 +5,8 @@ import Navbar from '@/components/Navbar';
 import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
-import GuideLinkCards from '@/components/GuideLinkCards';
+import GuideLinkCards, { type GuideLink } from '@/components/GuideLinkCards';
+import NextGiftNudge, { type NextGiftNudgeProps } from '@/components/NextGiftNudge';
 
 export interface GiftGuideFaq {
   q: string;
@@ -42,6 +43,11 @@ export interface GiftGuideTemplateProps {
   ctaText: string;
   faqs: GiftGuideFaq[];
   relatedHeading: string;
+  /** Optional "what next" section right after the product grid, for visitors
+   *  who found what they came for (e.g. stocking stuffers -> the main gift). */
+  nextStep?: { heading: string; text: string; links: GuideLink[] };
+  /** Optional nudge shown when a visitor returns from a product click. */
+  nudge?: NextGiftNudgeProps;
   relatedLinks: GiftGuideLink[];
 }
 
@@ -179,6 +185,16 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
           </div>
         </section>
 
+        {props.nextStep && (
+          <section className="max-w-5xl mx-auto px-4 py-10">
+            <h2 className="text-2xl font-bold mb-2" style={{ color: '#1A202C' }}>
+              {props.nextStep.heading}
+            </h2>
+            <p className="text-gray-600 mb-5">{props.nextStep.text}</p>
+            <GuideLinkCards links={props.nextStep.links} />
+          </section>
+        )}
+
         {/* CTA */}
         <section className="bg-white py-12 px-4">
           <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-8 items-center">
@@ -229,6 +245,7 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
           <GuideLinkCards links={relatedLinks} />
         </section>
       </main>
+      {props.nudge && <NextGiftNudge {...props.nudge} />}
     </div>
   );
 }

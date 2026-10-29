@@ -96,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/gifts-for-coworkers',
     '/gifts-for-boss',
     '/stocking-stuffers',
+    '/trending-christmas-gifts-2026',
     '/white-elephant-gifts',
     '/secret-santa-gifts',
     '/christmas-gifts-for-her',

@@ -110,6 +110,17 @@ export default function Page() {
           a: 'Kids stockings are the cheapest to fill well: 5 or 6 items at $5 to $15 each makes an overflowing stocking for $30 to $60. Spend the top of the range on one anchor item like a card game or puzzle cube and fill around it.',
         },
       ]}
+      nextStep={{
+        heading: 'Stockings Done? Here Are the Big Toys',
+        text: 'The hottest toys of 2026 sell out first: KPop Demon Hunters, Bluey, Hatchin\' Yoshi and more.',
+        links: [
+          { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
+          { href: '/gift-ideas-for-kids', label: 'Gift Ideas for Kids' },
+          { href: '/gift-ideas-for-teens', label: 'Gift Ideas for Teens' },
+          { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
+        ],
+      }}
+      nudge={{ href: '/trending-christmas-gifts-2026', title: 'Stockings sorted?', cta: 'See the hottest toys of 2026' }}
       relatedHeading="More Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers', label: 'All Stocking Stuffers' },

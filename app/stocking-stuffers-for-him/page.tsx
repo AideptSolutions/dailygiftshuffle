@@ -94,6 +94,17 @@ export default function Page() {
           a: 'Plan on 4 to 6 items between $5 and $25, or $40 to $80 for a full stocking. Spend the top of the budget on one hero item like a quality pocket knife or insulated tumbler and fill around it with $5 to $10 picks.',
         },
       ]}
+      nextStep={{
+        heading: 'His Stocking Is Sorted. Now the Main Gift',
+        text: 'The bigger gift for him: gear, tech and upgrades he will actually use.',
+        links: [
+          { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
+          { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
+          { href: '/best-gaming-gifts-2026', label: 'Best Gaming Gifts 2026' },
+          { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
+        ],
+      }}
+      nudge={{ href: '/christmas-gifts-for-him', title: 'His stocking is sorted?', cta: 'Now find his main gift' }}
       relatedHeading="More Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers', label: 'All Stocking Stuffers' },

@@ -29,6 +29,7 @@ const GIFT_GUIDES = [
   { href: '/gift-ideas-for-her', label: 'Gifts for Her' },
   { href: '/gifts-under-50', label: 'Gifts Under $50' },
   { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
+  { href: '/trending-christmas-gifts-2026', label: 'Trending Gifts 2026' },
   { href: '/christmas-gift-ideas', label: 'Christmas Gifts' },
   { href: '/birthday-gift-ideas', label: 'Birthday Gifts' },
 ];

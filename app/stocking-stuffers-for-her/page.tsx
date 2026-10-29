@@ -94,6 +94,17 @@ export default function Page() {
           a: 'A well-packed stocking runs 4 to 6 items at $5 to $25 each, so $40 to $80 total. The trick is range: mix a couple of $6 to $10 items with one or two $20 picks so the stocking has both volume and a small wow.',
         },
       ]}
+      nextStep={{
+        heading: 'Her Stocking Is Sorted. Now the Main Gift',
+        text: 'The bigger gift for her, from cozy splurges to the things she keeps eyeing.',
+        links: [
+          { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
+          { href: '/gifts-for-wife', label: 'Gifts for Your Wife' },
+          { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
+          { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
+        ],
+      }}
+      nudge={{ href: '/christmas-gifts-for-her', title: 'Her stocking is sorted?', cta: 'Now find her main gift' }}
       relatedHeading="More Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers', label: 'All Stocking Stuffers' },

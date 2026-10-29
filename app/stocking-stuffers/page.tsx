@@ -95,6 +95,17 @@ export default function Page() {
         { q: 'What are good stocking stuffers for kids and teens?', a: 'Kids love card games like UNO, crayons and small craft kits, fun bandages and little toys. Teens go for fidget toys, funky socks, phone accessories, mini skincare and candy. Keep it playful and small enough to actually fit in the stocking.' },
         { q: 'What are unique stocking stuffers people do not expect?', a: 'To surprise people, skip candy and go for a mini gag gift like a screaming goat figurine, a wallet multitool, a tiny but bright keychain light, gourmet hot sauce, or magnetic desk spheres. Unexpected but useful is the sweet spot.' },
       ]}
+      nextStep={{
+        heading: 'Stockings Done? Now Find the Main Gifts',
+        text: 'Once the stockings are filled, these are the guides for the gifts under the tree.',
+        links: [
+          { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
+          { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
+          { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
+          { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
+        ],
+      }}
+      nudge={{ href: '/trending-christmas-gifts-2026', title: 'Stockings sorted?', cta: 'See the trending Christmas gifts of 2026' }}
       relatedHeading="More Holiday Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers-under-10', label: 'Stocking Stuffers Under $10' },

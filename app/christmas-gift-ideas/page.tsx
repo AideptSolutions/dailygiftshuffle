@@ -222,6 +222,7 @@ export default function ChristmasGiftIdeasPage() {
           <h2 className="text-xl font-bold mb-4" style={{ color: '#1A202C' }}>Related Gift Guides</h2>
           <GuideLinkCards
             links={[
+              { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
               { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
               { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
               { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
