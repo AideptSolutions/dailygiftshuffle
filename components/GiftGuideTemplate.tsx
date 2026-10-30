@@ -48,6 +48,9 @@ export interface GiftGuideTemplateProps {
   nextStep?: { heading: string; text: string; links: GuideLink[] };
   /** Optional nudge shown when a visitor returns from a product click. */
   nudge?: NextGiftNudgeProps;
+  /** ISO date (YYYY-MM-DD) the page was last reviewed. Shows an "Updated"
+   *  line under the H1 and adds WebPage dateModified to the JSON-LD. */
+  updated?: string;
   relatedLinks: GiftGuideLink[];
 }
 
@@ -133,10 +136,31 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
     })),
   };
 
+  const webPageSchema = props.updated
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: props.schemaName,
+        url: props.canonicalUrl,
+        dateModified: props.updated,
+      }
+    : null;
+  const updatedLabel = props.updated
+    ? new Date(`${props.updated}T12:00:00Z`).toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+        timeZone: 'UTC',
+      })
+    : null;
+
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFAF5' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      {webPageSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      )}
       <Navbar />
       <Breadcrumbs items={[{ label: props.breadcrumbLabel, href: props.breadcrumbHref }]} />
 
@@ -153,6 +177,11 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             {props.h1}
           </h1>
+          {updatedLabel && (
+            <p className="text-sm text-gray-500 -mt-2 mb-5">
+              Updated <time dateTime={props.updated}>{updatedLabel}</time>
+            </p>
+          )}
           <div className="text-base sm:text-lg text-gray-700 leading-relaxed space-y-3">{props.intro}</div>
         </section>
 

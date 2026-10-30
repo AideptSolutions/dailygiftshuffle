@@ -92,7 +92,7 @@ export default function Page() {
         { href: '/category/halloween', label: 'All Halloween Party Gifts' },
         { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
         { href: '/gifts-under-25', label: 'Gifts Under $25' },
-        { href: '/gifts-under-50', label: 'Gifts Under $50' },
+        { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
         { href: '/gifts-for-coworkers', label: 'Gifts for Coworkers' },
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },

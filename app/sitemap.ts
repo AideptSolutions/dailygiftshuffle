@@ -10,6 +10,12 @@ const NICHES = [
   'halloween',
 ];
 
+// Real content-review dates only (they match the page's visible "Updated"
+// line). Bing weighs lastmod for seasonal queries; never bump without a review.
+const LAST_REVIEWED: Record<string, string> = {
+  '/stocking-stuffers': '2026-10-30',
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, changeFrequency: 'weekly', priority: 1.0 },
@@ -126,6 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}${path}`,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
+    ...(LAST_REVIEWED[path] ? { lastModified: LAST_REVIEWED[path] } : {}),
   }));
 
   // The interactive per-category shuffle pages are real, indexable pages, so

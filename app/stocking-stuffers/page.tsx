@@ -7,7 +7,7 @@ const URL = 'https://www.thegiftshuffle.com/stocking-stuffers';
 export const metadata: Metadata = {
   title: 'Best Stocking Stuffers 2026: 40 Small Gifts That Feel Big | TheGiftShuffle',
   description:
-    'The best stocking stuffers for 2026: fun, useful, top-rated small gifts under $25 for him, her, kids and teens. Stocking stuffer ideas that get used, not tossed.',
+    "The best stocking stuffers for 2026: 40 top-rated small gifts under $25 for adults, him, her, kids and teens, plus this season's trending picks. Ideas that get used, not tossed.",
   keywords: [
     'stocking stuffers',
     'stocking stuffer ideas',
@@ -35,9 +35,26 @@ const isStuffer = (p: { id?: string }) => !!p.id?.startsWith('stuffer-');
 const isStufferSized = (p: { price?: number }) => (p.price ?? 999) <= 25 && (p.price ?? 0) >= 5;
 
 const stufferItems = curate({ match: isStuffer, minRating: 4.3, sort: 'social', recipientCap: 30, limit: 12, pool: ALL });
+// This season's trending small gifts (named in the trending FAQ and on
+// /trending-christmas-gifts-2026) follow the classics. Newer listings have
+// young review counts, so they would miss a pure social sort.
+const TRENDING_STUFFERS = new Set([
+  'trend26-kpop-rumi-plush', 'trend26-medicube-pdrn-mask', 'trend26-bluetooth-beanie',
+  'trend26-lego-friends-advent', 'stuffer-lip-butter', 'stuffer-squishmallow',
+]);
+const trendingItems = curate({
+  match: (p) => TRENDING_STUFFERS.has(p.id),
+  minRating: 4.5,
+  sort: 'social',
+  recipientCap: 30,
+  limit: TRENDING_STUFFERS.size,
+  pool: ALL,
+});
 const fillItems = curate({ match: isStufferSized, minRating: 4.6, sort: 'social', recipientCap: 8, limit: 50, pool: ALL });
-const seen = new Set(stufferItems.map((p) => p.id));
-const grid = [...stufferItems, ...fillItems.filter((p) => !seen.has(p.id))].slice(0, 40);
+const seen = new Set<string>();
+const grid = [...stufferItems, ...trendingItems, ...fillItems]
+  .filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)))
+  .slice(0, 40);
 const shuffle = shufflePool((p) => isStuffer(p) || isStufferSized(p), ALL);
 
 export default function Page() {
@@ -51,6 +68,7 @@ export default function Page() {
       heroSrc="/images/heroes/stocking-stuffers.jpg"
       heroAlt="A knit Christmas stocking with stocking stuffers on cream linen: lip balm, striped socks, chocolate, a card game, a mini flashlight and hand cream"
       h1="Best Stocking Stuffers for 2026"
+      updated="2026-10-30"
       intro={
         <>
           <p>
@@ -88,6 +106,7 @@ export default function Page() {
       ctaHeading="Filling More Than One Stocking?"
       ctaText="Tell TheGiftShuffle who it is for and your budget, and get an instant, top-rated small gift idea in one click."
       faqs={[
+        { q: 'What are the trending stocking stuffers for 2026?', a: 'The small gifts trending this season are the KPop Demon Hunters Rumi Squishmallow (about $13), the medicube PDRN pink jelly mask (about $14), a Bluetooth beanie with built-in headphones (about $19), Summer Fridays lip butter balm ($24), and the LEGO Friends advent calendar ($25), which gives a small build every day in December. All are rated 4.6 stars or higher. For bigger trending gifts, see the full 2026 hot list.' },
         { q: 'What are good stocking stuffers for adults?', a: 'Great adult stocking stuffers include an Apple AirTag, a quality lip balm or hand cream, fun socks, a credit-card multitool, a keychain flashlight, gourmet hot sauce or chocolate, and a small desk toy. Useful beats novelty for adults, so pick things they will actually carry or use.' },
         { q: 'How much should you spend on stocking stuffers?', a: 'Most stocking stuffers land between $5 and $25 per item, with three to six items per stocking. The trick is mixing price points: one slightly nicer anchor item like an AirTag or nice hand cream, plus a few small fun or practical picks around $10.' },
         { q: 'What are good stocking stuffers for him?', a: 'For him, reliable stocking stuffers are a credit-card multitool, a keychain flashlight, bold socks, hot sauce, hand warmers for the outdoorsman, a desk fidget toy, or an AirTag for his keys. Small, practical and a little fun always lands.' },

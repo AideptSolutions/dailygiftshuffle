@@ -349,3 +349,26 @@ dimensions registered before its reports will populate.
   best-birthday-gifts-2026 (4.2, 10 percent).
 - Legacy rows (non-www /gifts/* and /category/*) are fine: non-www 308s to
   www and the old /gifts/* doorways return 410, so Bing will drop them.
+
+## 2026-10-30: /stocking-stuffers top-3 push (Bing)
+
+Goal: move /stocking-stuffers from Bing position ~5.2 into the top 3 for
+the Nov-Dec peak (it is 78 percent of Bing clicks). Changes:
+- Freshness: visible "Updated October 30, 2026" line under the H1 plus
+  WebPage dateModified JSON-LD (new optional `updated` prop on
+  GiftGuideTemplate), and a matching sitemap lastmod (new LAST_REVIEWED
+  map in app/sitemap.ts; only real review dates go there).
+- Content refresh: new first FAQ "What are the trending stocking stuffers
+  for 2026?" naming six real catalog picks, and those six now sit in the
+  grid at positions 8 and 13-17 (the Rumi plush and LEGO Friends advent
+  calendar had been dropped by the kids recipient cap).
+- Meta description now names adults and trending picks. Title kept as is:
+  its 7.8 percent CTR at position 5 is already strong, and there is no
+  Bing keyword data yet to justify a rewrite.
+- Inbound links: /halloween-party-gifts (swapped Gifts Under $50 for
+  Stocking Stuffers, catching post-Halloween traffic) and /gifts-under-25
+  (4 related cards to 8, adding stocking stuffers, under $10, Secret Santa
+  and White Elephant). Every Christmas page, spoke, footer, banner and
+  homepage tile already linked to it.
+Measure: Bing page traffic for /stocking-stuffers (position and CTR) in
+the mid-November export.

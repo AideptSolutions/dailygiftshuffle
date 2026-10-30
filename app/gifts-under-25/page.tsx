@@ -193,6 +193,10 @@ export default function GiftsUnder25Page() {
               { href: '/birthday-gift-ideas', label: 'Birthday Gift Ideas' },
               { href: '/gift-ideas-for-her', label: 'Gift Ideas for Her' },
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
+              { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
+              { href: '/stocking-stuffers-under-10', label: 'Stocking Stuffers Under $10' },
+              { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
+              { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
             ]}
           />
         </section>
