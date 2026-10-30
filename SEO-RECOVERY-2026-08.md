@@ -275,3 +275,57 @@ the same span.
   printed text. Same file paths; alt text rewritten to name the items
   (including the homepage Mother's Day tile). halloween-party-gifts kept its
   generated dark party-table hero from 2026-09-27 on purpose.
+
+## Checkpoint 2026-10-30 (GSC 28d Oct 1-28, Bing WMT Sep 30 - Oct 28, Bing AI citations Aug 11 - Oct 28, GA4 Oct 2-29, Vercel 30d)
+
+GOOGLE: unchanged. 1 click on 964 impressions (the first Google click in
+months, /christmas-gift-ideas on Oct 23), daily position 79-87 except two
+one-day blips (Oct 19 68.7, Oct 21 64.7). Still the sitewide demotion.
+Impressions are led by the luxury cluster (luxury-gifts-for-her 247 impr
+at ~81) and Christmas pages (christmas-gift-ideas 139, christmas-gifts-for-her
+103), all page 8-9. The one striking-distance query: "pick a gift" 23 impr
+at 24.1, landing on /help-me-pick-a-gift (page avg 26.8, best on the site).
+The site:instagram.com / site:youtube.com "position 1" rows are operator
+queries, not real rankings; ignore them.
+
+BING SEARCH: steady, not accelerating. 49 clicks on 908 impressions in 29
+days. Impressions per day kept rising (28.5 for Oct 1-18, 36.2 for Oct
+19-28) but clicks held flat at ~1.6-1.7 a day, so CTR slipped. The export
+is overview only; a Bing pages/queries export is needed to see which
+pages gained impressions without clicks.
+
+BING AI CITATIONS (Copilot grounding): by month August 119/day, September
+175/day, October 209/day, but the weekly series peaked at 433/day (week of
+Sep 28) and fell to ~82-92/day from Oct 16 on, while the number of cited
+pages ROSE (9 to 11-13). So citations spread across more pages but each is
+cited far less. The only site change near Oct 16 was a footer link
+(da5dcec), which is not a plausible cause; most likely a Copilot-side
+change or a shift in the query mix. Cause unknown; needs the Bing AI
+performance page-level table to diagnose.
+
+GA4 (297 active users, up from 249): bing 45 (40), duckduckgo 17 (15),
+yahoo 17 (15), ecosia 3, chatgpt.com 6 (8, and 12 the period before),
+perplexity 1, google 0. Engagement 24.8s per user (27.7s prior).
+/stocking-stuffers: 76 views, 65 users, 27.6 percent bounce, still the
+best-engaged page. Pages with real volume and no engagement:
+gifts-for-girlfriend 20 views / 18 users / 100 percent bounce, teens 11 /
+100 percent, mom 13 / 92 percent, brother 12 / 92 percent. The girlfriend
+page does not appear in Vercel's top pages (6+ visitors), so its GA4
+traffic is likely automated; check its session source in GA4 before
+acting on it.
+
+VERCEL (30d): 315 visitors (+51 percent), 384 views (+60 percent),
+bounce 90 percent (inflated by datacenter traffic: Singapore 19 percent,
+China 10 percent). /stocking-stuffers 110 visitors, / 52, /shuffle 16,
+/white-elephant-gifts 16, /category/halloween 10. Referrers: bing 52,
+duckduckgo 49 (big jump), yahoo 24, ecosia 4, google 3. One-day spike to
+~32 visitors on Oct 25-26 (GA4 shows 32 new users that day); source not
+identifiable from these exports.
+
+READ: the Bing-ecosystem channel is holding at its October level and
+traffic grew on Christmas-season demand, led by stocking stuffers. Google
+is still suppressed. The new risk is the AI citation drop since Oct 16.
+Next data to pull: Bing WMT Search Performance pages + queries export,
+Bing AI performance page-level table, GA4 source for gifts-for-girlfriend.
+The next_gift_nudge event (shipped Oct 29) needs its GA4 custom
+dimensions registered before its reports will populate.
