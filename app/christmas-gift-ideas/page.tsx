@@ -120,7 +120,7 @@ export default function ChristmasGiftIdeasPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/christmas-gift-ideas.jpg"
-              alt="Christmas presents wrapped under a decorated tree"
+              alt="Christmas gift ideas on cream linen: a knit beanie, wireless headphones, a candle, a wrapped present, a mug, a board game and a red scarf with pine and coral ribbon"
               fill
               className="object-cover"
               priority

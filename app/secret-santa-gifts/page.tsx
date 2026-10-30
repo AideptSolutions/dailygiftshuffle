@@ -48,7 +48,7 @@ export default function Page() {
       breadcrumbLabel="Secret Santa Gifts"
       breadcrumbHref="/secret-santa-gifts"
       heroSrc="/images/heroes/secret-santa-gifts.jpg"
-      heroAlt="A neatly wrapped secret santa gift with a name tag"
+      heroAlt="Secret Santa gifts on cream linen: a ceramic mug, wool socks, a succulent, playing cards, a candle and two kraft-wrapped presents with tags"
       h1="Best Secret Santa Gifts for 2026"
       intro={
         <>

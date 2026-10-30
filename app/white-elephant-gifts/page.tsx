@@ -49,7 +49,7 @@ export default function Page() {
       breadcrumbLabel="White Elephant Gifts"
       breadcrumbHref="/white-elephant-gifts"
       heroSrc="/images/heroes/white-elephant-gifts.jpg"
-      heroAlt="A wrapped gift exchange present with a playful bow"
+      heroAlt="White elephant gifts on cream linen: a rubber duck, an oversized mug, a hot sauce trio, paw slippers, a puzzle cube and a tiny cactus"
       h1="Best White Elephant Gifts for 2026"
       intro={
         <>

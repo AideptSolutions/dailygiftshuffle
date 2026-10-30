@@ -49,7 +49,7 @@ export default function Page() {
       breadcrumbLabel="Stocking Stuffers"
       breadcrumbHref="/stocking-stuffers"
       heroSrc="/images/heroes/stocking-stuffers.jpg"
-      heroAlt="Christmas stockings filled with small wrapped gifts"
+      heroAlt="A knit Christmas stocking with stocking stuffers on cream linen: lip balm, striped socks, chocolate, a card game, a mini flashlight and hand cream"
       h1="Best Stocking Stuffers for 2026"
       intro={
         <>

@@ -60,7 +60,7 @@ export default function Page() {
       breadcrumbLabel="Christmas Gifts for Her"
       breadcrumbHref="/christmas-gifts-for-her"
       heroSrc="/images/heroes/christmas-gifts-for-her.jpg"
-      heroAlt="Christmas gifts for her wrapped in festive paper with ribbon"
+      heroAlt="Christmas gifts for her on cream linen: a cashmere scarf, perfume, gold hoop earrings, a candle, silk pajamas and skincare with pine and coral ribbon"
       h1="Christmas Gifts for Her"
       intro={
         <>

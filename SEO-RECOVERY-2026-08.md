@@ -257,3 +257,11 @@ the same span.
   a generated flat-lay (gpt-image-2). scripts/gen-image.mjs defaults to
   gpt-image-2 because gpt-image-1 was retired for generation (the API says
   the model "does not exist"); pass --model to override.
+- 2026-10-29 (later): the six older Christmas heroes (christmas-gift-ideas,
+  christmas-gifts-for-her, christmas-gifts-for-him, secret-santa-gifts,
+  white-elephant-gifts, stocking-stuffers) were stock photos, one showing a
+  person's hands. They are replaced with gpt-image-2 flat-lays in the house
+  style (cream linen, pine, coral ribbon only, true product colors, gifts in
+  one row across the center band), same filenames, with new alt text that
+  names the items. The six stocking spoke heroes (2026-10-09) were already
+  generated in this style and were left as is.

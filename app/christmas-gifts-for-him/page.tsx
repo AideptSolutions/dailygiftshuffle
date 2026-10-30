@@ -43,7 +43,7 @@ export default function Page() {
       breadcrumbLabel="Christmas Gifts for Him"
       breadcrumbHref="/christmas-gifts-for-him"
       heroSrc="/images/heroes/christmas-gifts-for-him.jpg"
-      heroAlt="Christmas gifts for him wrapped in kraft paper with festive trim"
+      heroAlt="Christmas gifts for him on cream linen: a leather wallet, a steel watch, wireless headphones, crystal rocks glasses, a plaid flannel shirt and a multitool"
       h1="Christmas Gifts for Him"
       intro={
         <>
