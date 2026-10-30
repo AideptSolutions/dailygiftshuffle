@@ -329,3 +329,23 @@ Next data to pull: Bing WMT Search Performance pages + queries export,
 Bing AI performance page-level table, GA4 source for gifts-for-girlfriend.
 The next_gift_nudge event (shipped Oct 29) needs its GA4 custom
 dimensions registered before its reports will populate.
+
+### Bing WMT page traffic (Oct 30 export; range not stated in the file, totals 1,196 impr / 68 clicks, so longer than the 29-day overview)
+
+- Bing ranks the site on page 1 where Google has it near position 80:
+  most pages sit at average position 2.5-7.
+- /stocking-stuffers: 681 impressions, 53 clicks, CTR 7.8 percent, position
+  5.2. That is 57 percent of Bing impressions and 78 percent of Bing clicks.
+  Moving it from ~5 into the top 3 during the Nov-Dec peak is the largest
+  available gain.
+- /gifts-for-a-crush: 124 impressions at position 5.4 but CTR 1.6 percent
+  (2 clicks), the clearest snippet/intent mismatch; needs the Bing
+  keywords for that page before rewriting the title.
+- Zero clicks at top-5 positions: best-gaming-gifts-2026 (34 impr, 3.7),
+  birthday-gifts-for-gamers (25, 4.2), luxury-gifts-under-200 (19, 3.8).
+  Samples are too small to call (about 1-2 clicks expected at those
+  positions), so watch rather than act.
+- Healthy: luxury-gifts-under-50 (position 2.5, CTR 14.8 percent),
+  best-birthday-gifts-2026 (4.2, 10 percent).
+- Legacy rows (non-www /gifts/* and /category/*) are fine: non-www 308s to
+  www and the old /gifts/* doorways return 410, so Bing will drop them.
