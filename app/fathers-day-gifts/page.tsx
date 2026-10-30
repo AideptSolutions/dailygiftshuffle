@@ -114,7 +114,7 @@ export default function FathersDayGiftsPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/fathers-day-gifts.jpg"
-              alt="A father opening a Father's Day gift with his family"
+              alt="Father's Day gifts on cream linen: a leather wallet, a steel tumbler, a multitool, barbecue tongs, a bag of coffee and wireless earbuds"
               fill
               className="object-cover"
               priority

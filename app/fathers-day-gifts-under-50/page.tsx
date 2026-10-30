@@ -104,7 +104,7 @@ export default function FathersDayGiftsUnder50Page() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/fathers-day-gifts-under-50.jpg"
-              alt="A mid-range Father's Day gift for dad"
+              alt="Father's Day gifts under $50 on cream linen: a leather valet tray, a black tumbler, a navy cap, whiskey stones and wireless earbuds"
               fill
               className="object-cover"
               priority

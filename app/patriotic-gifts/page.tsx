@@ -39,7 +39,7 @@ export default function PatrioticGiftsPage() {
       breadcrumbLabel="Patriotic Gifts"
       breadcrumbHref="/patriotic-gifts"
       heroSrc="/images/heroes/patriotic-gifts-evergreen.jpg"
-      heroAlt="An American flag waving against a blue sky"
+      heroAlt="Patriotic gifts on cream linen: a folded American flag, a navy camp mug, a striped beach towel, aviator sunglasses, a navy star cap and a steel tumbler"
       h1="Patriotic Gifts: American Flag & USA Gift Ideas"
       intro={
         <>

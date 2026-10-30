@@ -121,7 +121,7 @@ export default function LastMinuteMothersDayPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/last-minute-mothers-day-gifts.jpg"
-              alt="A last-minute Mother's Day gift with flowers ready to give"
+              alt="Last-minute Mother's Day gifts on cream linen: tulips in kraft paper, a card, chocolates, a candle and a mug of tea"
               fill
               className="object-cover"
               priority

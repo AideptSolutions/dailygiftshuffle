@@ -117,7 +117,7 @@ export default function MothersDayGiftsForWifePage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/mothers-day-gifts-for-wife.jpg"
-              alt="A Mother's Day gift for a wife with fresh flowers"
+              alt="Mother's Day gifts for a wife on cream linen: a gold necklace in a velvet box, perfume, a cashmere wrap, chocolate truffles and peonies"
               fill
               className="object-cover"
               priority

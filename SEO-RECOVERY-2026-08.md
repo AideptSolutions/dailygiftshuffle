@@ -265,3 +265,13 @@ the same span.
   one row across the center band), same filenames, with new alt text that
   names the items. The six stocking spoke heroes (2026-10-09) were already
   generated in this style and were left as is.
+- 2026-10-29 (later): holiday heroes outside Christmas regenerated the same
+  way. Father's Day (hub, under $25/$50/$100, top 10), Mother's Day (hub,
+  for wife, under $25/$50/$100, last minute) and patriotic-gifts now use
+  gpt-image-2 flat-lays (eucalyptus accent for dad, pink tulips for mom, a
+  folded flag for patriotic; coral ribbon only). Problems fixed: four
+  Mother's Day pages shared one identical stock image, the Father's Day
+  under $25 hero showed a Christmas candy cane, and several showed people or
+  printed text. Same file paths; alt text rewritten to name the items
+  (including the homepage Mother's Day tile). halloween-party-gifts kept its
+  generated dark party-table hero from 2026-09-27 on purpose.

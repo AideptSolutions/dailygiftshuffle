@@ -118,7 +118,7 @@ export default function MothersDayGiftsUnder100Page() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/mothers-day-gifts-under-100.jpg"
-              alt="A Mother's Day gift under $100 with flowers"
+              alt="Mother's Day gifts under $100 on cream linen: a cashmere throw, an oil diffuser, a gold bangle, a skincare set and ranunculus"
               fill
               className="object-cover"
               priority

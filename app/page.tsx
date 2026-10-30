@@ -54,7 +54,7 @@ const giftGuides = [
   {
     href: '/mothers-day-gifts',
     image: '/img/mothers-day-hero-2026.jpg',
-    alt: "Mother's Day gifts including skincare, shower steamers, pajamas, and spa sets",
+    alt: "Mother's Day gifts including satin pajamas, a serum, shower steamers, a silk sleep mask and a candle",
     title: 'Gifts for Mom',
     desc: 'Shower steamers, skincare, cozy pajamas, and spa sets she will actually use.',
   },

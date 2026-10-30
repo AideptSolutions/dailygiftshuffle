@@ -134,7 +134,7 @@ export default function Top10FathersDayGifts2026Page() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/products/fathers-day-hero.jpg"
-              alt="Father unwrapping a gift in his man cave"
+              alt="Top Father's Day gifts on cream linen: a game controller, crystal rocks glasses, a leather wallet, a steel tumbler, a navy cap and a barbecue spatula"
               fill
               className="object-cover"
               priority

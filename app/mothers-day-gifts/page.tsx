@@ -128,7 +128,7 @@ export default function MothersDayGiftsPage() {
           <div className="rounded-2xl overflow-hidden mb-8 shadow-sm">
             <Image
               src="/img/mothers-day-hero-2026.jpg"
-              alt="Mother's Day self-care gifts including skincare, shower steamers, satin pajamas, and fresh flowers"
+              alt="Mother's Day self-care gifts on cream linen: satin pajamas, a serum bottle, shower steamers, a silk sleep mask and a candle with pink tulips"
               className="w-full object-cover"
               style={{ maxHeight: '420px', objectPosition: 'center' }}
               width={1536}
