@@ -537,3 +537,14 @@ Faire, Starbucks, Target, Staples, BJ's), 800x800 contain on white, audited.
   lib/giftSelect's ALL pool now excludes them (stocking stuffers, Secret
   Santa and White Elephant select by price, and had picked up menorahs and
   dreidels). /hanukkah-gifts draws from ALL_WITH_HANUKKAH.
+
+### Halloween items out of the 'holiday' occasion (2026-11-01)
+
+Eight Halloween party products (tag 'halloween') also carried the 'holiday'
+occasion, so they leaked into Christmas guides and shuffles that filter on it
+(a light-up Halloween door cover in the Christmas Gifts for Mom shuffle, a
+pumpkin candy bowl on the kids page). Every 'holiday' consumer means the
+winter holidays (Christmas guides, the shuffle's Holiday filter, the Genie),
+while the Halloween guide selects by tag, so their occasions are now
+['just-because']. A name scan found no untagged Halloween items left on
+'holiday'.

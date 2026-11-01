@@ -6768,7 +6768,7 @@ export const products: Product[] = [
     recipients: ['friends', 'couples', 'him', 'dad'],
     budgetTier: '25to50',
     tags: ['halloween', 'home', 'outdoors'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-002',
@@ -6800,7 +6800,7 @@ export const products: Product[] = [
     recipients: ['friends', 'couples', 'her', 'mom', 'kids'],
     budgetTier: '25to50',
     tags: ['halloween', 'home'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-004',
@@ -6832,7 +6832,7 @@ export const products: Product[] = [
     recipients: ['friends', 'dad', 'him', 'kids'],
     budgetTier: 'under25',
     tags: ['halloween', 'outdoors', 'home'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-006',
@@ -6848,7 +6848,7 @@ export const products: Product[] = [
     recipients: ['friends', 'couples', 'her', 'mom'],
     budgetTier: 'under25',
     tags: ['halloween', 'home', 'outdoors'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-007',
@@ -6864,7 +6864,7 @@ export const products: Product[] = [
     recipients: ['friends', 'mom', 'her'],
     budgetTier: 'under25',
     tags: ['halloween', 'home'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-010',
@@ -7008,7 +7008,7 @@ export const products: Product[] = [
     recipients: ['kids', 'friends', 'dad'],
     budgetTier: '25to50',
     tags: ['halloween', 'home', 'kids'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-022',
@@ -7024,7 +7024,7 @@ export const products: Product[] = [
     recipients: ['her', 'mom', 'friends'],
     budgetTier: 'under25',
     tags: ['halloween', 'home', 'kitchen'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-023',
@@ -7040,7 +7040,7 @@ export const products: Product[] = [
     recipients: ['friends', 'her', 'kids', 'teens'],
     budgetTier: 'under25',
     tags: ['halloween', 'home'],
-    occasions: ['just-because', 'holiday'],
+    occasions: ['just-because'],
   },
   {
     id: 'hw-024',
