@@ -643,3 +643,37 @@ Galaxy, Hulkman Alpha85, Fanttik V10 APEX). Caught on review: a Turkish
 Accepted caveats: digital photo frames show stock family photos on screen;
 the Refasy bank and pull-out money box show a hand demonstrating them; the
 JOYTUTUS mirror image carries a small feature-label overlay.
+
+## Category depth batch 3: gardening, baby shower, wedding (2026-11-01)
+
+83 products added in section "CATEGORY DEPTH 2026-11: GARDENING, BABY
+SHOWER, WEDDING" (ids gdn26-*, bby26-*, wed26-*), same verification and
+eight-candidate, pick-by-eye image process as batch 2. Existing products
+that were already in the catalog gained the category tag instead of being
+duplicated: O'Keeffe's Working Hands (gardening); Yogasleep Dohm, RUVALINO
+diaper bag, HelloBaby monitor (baby-shower); and 17 couples and registry
+staples (wedding): Mikasa and crystal champagne flutes, The Adventure
+Challenge, One Question a Day, Riedel Vinum glasses, Coravin, wine and
+cheese board, Staub cocotte, KitchenAid mixer, All-Clad D3 set, bucket
+list poster, Homesick candle, wine gift basket, Instant Pot Duo Plus,
+Cuisinart coffee maker, OXO tool set, Lodge 12 in skillet. Expected totals:
+gardening 28 -> about 61, baby shower 30 -> about 58, wedding 12 -> about
+60.
+
+Dropped at verification: Doona car seat stroller and Manhattan Toy Winkel
+(third-party sellers), Angelcare bath support (2 left in stock), a 20-book
+board book set (duplicate of the 10-book set). Dropped at the image stage
+(no brand or retailer shot of the actual product): Burritos tortilla
+swaddle, All Natural Shop scratch-off date night cards.
+
+Bug found and fixed: the tag-adding helper located an entry by searching
+back to a line starting with exactly two spaces and "{". About a dozen
+products-catalog.ts entries open with four spaces, so for those the tag
+landed on the previous entry. In batch 2 this put car-accessories on a
+Logitech MX Master mouse (tech-006) instead of the ROVE dash cam (tech-008);
+it was live from batch 2 until batch 3 shipped. In batch 3 it would have
+put wedding on the REI Flash daypack instead of the Lodge skillet, and on
+the Breville Barista Express instead of the Staub cocotte. All corrected
+(the Breville keeps wedding: it is a registry staple and its occasions
+already listed wedding), and every tag added this session was re-checked
+against the entry that actually holds the ASIN.
