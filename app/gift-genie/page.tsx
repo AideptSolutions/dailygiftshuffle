@@ -169,7 +169,7 @@ export default function GiftGeniePage() {
           <p className="text-sm text-gray-500 text-center mb-6">
             Shuffle the cards, pin a few that feel close, then summon the Genie below the grid.
           </p>
-          <InlineShuffle products={firstDeal} heading="Pin a few of these" catalogUrl="/api/products/all" />
+          <InlineShuffle products={firstDeal} heading="Pin a few of these" catalogUrl="/api/products/all" count={8} />
         </section>
 
         {/* Why it is useful */}

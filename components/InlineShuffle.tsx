@@ -11,6 +11,8 @@ interface Props {
   /** Optional feed (e.g. /api/products/all) loaded after mount to widen the deck
    *  beyond the server-rendered `products`, which stay as the first paint. */
   catalogUrl?: string;
+  /** Cards per deal. Default 4 (one row); the Gift Genie page uses 8. */
+  count?: number;
 }
 
 // Same quality bar the Gift Genie uses for its candidates.
@@ -39,7 +41,7 @@ function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = [])
   return shuffled.slice(0, n);
 }
 
-export default function InlineShuffle({ products, heading = 'Shuffle Picks', catalogUrl }: Props) {
+export default function InlineShuffle({ products, heading = 'Shuffle Picks', catalogUrl, count = 4 }: Props) {
   const [pool, setPool] = useState<CompactProduct[]>(products);
 
   useEffect(() => {
@@ -62,7 +64,7 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks', cat
 
   // Deterministic first render: SSR and client hydration must agree, so seed with a
   // fixed slice (never Math.random) and only randomize after mount in the effect below.
-  const [picks, setPicks] = useState<CompactProduct[]>(() => products.slice(0, 4));
+  const [picks, setPicks] = useState<CompactProduct[]>(() => products.slice(0, count));
   // Pins come from the shared persistent store; the derived Set keeps the
   // existing has() call sites unchanged.
   const { pins, togglePin: togglePinStore } = usePins();
@@ -77,7 +79,7 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks', cat
 
   // Randomize once, client-only, after hydration completes — avoids a server/client mismatch.
   useEffect(() => {
-    setPicks(pickRandom(products, 4));
+    setPicks(pickRandom(products, count));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -91,10 +93,10 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks', cat
       const pinnedHere = pins
         .map(p => pool.find(c => c.id === p.id))
         .filter((p): p is CompactProduct => !!p)
-        .slice(0, prev.length || 4);
+        .slice(0, prev.length || count);
       if (!pinnedHere.length) return prev;
       const rest = prev.filter(c => !pinnedHere.some(p => p.id === c.id));
-      return [...pinnedHere, ...rest].slice(0, prev.length || 4);
+      return [...pinnedHere, ...rest].slice(0, prev.length || count);
     });
   }, [pins, pool]);
 
@@ -177,7 +179,7 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks', cat
             <div
               key={p.id}
               className={riffling ? 'tile-riffle' : 'tile-tumble'}
-              style={riffling ? riffleVars(i, picks.length) : { animationDelay: `${i * 85}ms` }}
+              style={riffling ? riffleVars(i % 4, Math.min(picks.length, 4)) : { animationDelay: `${i * 85}ms` }}
             >
               <ProductCard
                 product={p}
