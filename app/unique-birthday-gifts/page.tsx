@@ -135,7 +135,7 @@ export default function UniqueBirthdayGiftsPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/unique-birthday-gifts.jpg"
-              alt="Unique and creative birthday gifts wrapped on a table"
+              alt="Unique birthday gifts on cream linen: a glass terrarium, a brass kaleidoscope, a wooden puzzle box, a mini zen garden and instant photos with confetti"
               fill
               className="object-cover"
               priority

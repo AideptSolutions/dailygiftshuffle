@@ -53,7 +53,7 @@ export default function Page() {
       breadcrumbLabel="Retirement Gifts"
       breadcrumbHref="/retirement-gifts"
       heroSrc="/images/heroes/retirement-gifts.jpg"
-      heroAlt="A relaxing retirement scene with a lounge chair and travel gear"
+      heroAlt="Retirement gifts on cream linen: reading glasses, a book, a bonsai tree, a golf glove with golf balls, a mug of coffee and a garden trowel"
       h1="Best Retirement Gifts for 2026"
       intro={
         <>

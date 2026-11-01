@@ -123,7 +123,7 @@ export default function BirthdayGiftsForGamersPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/birthday-gifts-for-gamers.jpg"
-              alt="A gamer birthday gift setup with headset, controller and RGB lighting"
+              alt="Birthday gifts for gamers on cream linen: a game controller, a gaming headset, a mechanical keyboard, a gaming mouse and a wrapped gift with confetti"
               fill
               className="object-cover"
               priority

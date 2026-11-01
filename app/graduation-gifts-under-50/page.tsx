@@ -102,7 +102,7 @@ export default function GraduationGiftsUnder50Page() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/graduation-gifts-under-50.jpg"
-              alt="An affordable graduation gift under $50"
+              alt="Graduation gifts under $50 on cream linen: a graduation cap with tassel, a canvas tote, notebooks, a portable charger and a travel mug"
               fill
               className="object-cover"
               priority

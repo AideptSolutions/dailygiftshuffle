@@ -50,7 +50,7 @@ export default function Page() {
       breadcrumbLabel="40th Birthday Gifts"
       breadcrumbHref="/40th-birthday-gifts"
       heroSrc="/images/heroes/40th-birthday-gifts.jpg"
-      heroAlt="40th birthday gifts with celebration balloons and confetti"
+      heroAlt="40th birthday gifts on cream linen: a crystal decanter, two rocks glasses, a cashmere scarf, a steel watch and a gift box with gold confetti"
       h1="40th Birthday Gifts"
       intro={
         <>

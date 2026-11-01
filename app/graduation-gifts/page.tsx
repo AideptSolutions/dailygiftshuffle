@@ -125,7 +125,7 @@ export default function GraduationGiftsPage() {
         <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
           <Image
             src="/images/heroes/graduation-gifts.jpg"
-            alt="A graduation gift with cap and diploma"
+            alt="Graduation gifts on cream linen: a graduation cap with tassel, a leather journal, wireless earbuds, a steel water bottle, a fountain pen and a succulent"
             fill
             className="object-cover"
             priority

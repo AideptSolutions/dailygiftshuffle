@@ -63,7 +63,7 @@ export default function Page() {
       breadcrumbLabel="Best Baby Shower Gifts 2026"
       breadcrumbHref="/best-baby-shower-gifts-2026"
       heroSrc="/images/heroes/best-baby-shower-gifts-2026.jpg"
-      heroAlt="The best baby shower gifts arranged with neutral baby clothes, a teether and gift wrap"
+      heroAlt="Baby shower gifts on cream linen: a sage muslin swaddle, knit booties, a plush bunny, a wooden teething ring and board books with baby's breath"
       h1="The Best Baby Shower Gifts for 2026"
       intro={
         <>

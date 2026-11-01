@@ -50,7 +50,7 @@ export default function Page() {
       breadcrumbLabel="50th Birthday Gifts"
       breadcrumbHref="/50th-birthday-gifts"
       heroSrc="/images/heroes/50th-birthday-gifts.jpg"
-      heroAlt="50th birthday gifts with gold balloons and celebration decor"
+      heroAlt="50th birthday gifts on cream linen: a linen photo album, two champagne flutes, white roses, a cashmere throw and a gift box with gold confetti"
       h1="50th Birthday Gifts"
       intro={
         <>

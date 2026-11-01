@@ -46,7 +46,7 @@ export default function Page() {
       breadcrumbLabel="30th Birthday Gifts"
       breadcrumbHref="/30th-birthday-gifts"
       heroSrc="/images/heroes/30th-birthday-gifts.jpg"
-      heroAlt="30th birthday gifts with celebration balloons and confetti"
+      heroAlt="30th birthday gifts on cream linen: sparkling wine, two coupe glasses, a leather card holder, a candle and a gift box with gold confetti"
       h1="30th Birthday Gifts"
       intro={
         <>

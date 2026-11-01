@@ -172,7 +172,7 @@ export default function BirthdayGiftIdeasPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/birthday-gift-ideas.jpg"
-              alt="Wrapped birthday gifts with balloons and confetti"
+              alt="Birthday gift ideas on cream linen: a small frosted cake, a kraft-wrapped gift, a candle, wireless earbuds, a book and sunglasses with confetti and coral ribbon"
               fill
               className="object-cover"
               priority

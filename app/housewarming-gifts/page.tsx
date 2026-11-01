@@ -47,7 +47,7 @@ export default function Page() {
       breadcrumbLabel="Housewarming Gifts"
       breadcrumbHref="/housewarming-gifts"
       heroSrc="/images/heroes/housewarming-gifts.jpg"
-      heroAlt="A cozy housewarming gift with a candle, plant and throw blanket"
+      heroAlt="Housewarming gifts on cream linen: a potted olive tree, an amber candle, a wooden cutting board, linen napkins, olive oil and a brass house key"
       h1="Best Housewarming Gifts for 2026"
       intro={
         <>

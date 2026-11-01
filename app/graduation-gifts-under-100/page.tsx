@@ -101,7 +101,7 @@ export default function GraduationGiftsUnder100Page() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/graduation-gifts-under-100.jpg"
-              alt="A graduation gift under $100"
+              alt="Graduation gifts under $100 on cream linen: a graduation cap with tassel, over-ear headphones, a laptop sleeve, a smartwatch and a leather passport holder"
               fill
               className="object-cover"
               priority

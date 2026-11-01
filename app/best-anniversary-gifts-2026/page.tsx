@@ -64,7 +64,7 @@ export default function Page() {
       breadcrumbLabel="Best Anniversary Gifts 2026"
       breadcrumbHref="/best-anniversary-gifts-2026"
       heroSrc="/images/heroes/best-anniversary-gifts-2026.jpg"
-      heroAlt="The best anniversary gifts for 2026 with roses and a wrapped present"
+      heroAlt="The best anniversary gifts on cream linen: a ring box with a gold band, two wine glasses, a gold frame, chocolate truffles and a red rose with petals"
       h1="The Best Anniversary Gifts for 2026"
       intro={
         <>

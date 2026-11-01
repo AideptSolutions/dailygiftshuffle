@@ -404,3 +404,13 @@ lastmod:
   write-ups (Starbucks, Chipotle, DoorDash, PlayStation "never arrives
   late"). Copy now describes the method ("delivered by email instead of
   shipped") and points shoppers to the retailer's delivery details.
+- 2026-11-01 (later): the 14 occasion-page heroes were all stock photos
+  (people, printed "Feliz"/"Congrats Grad"/"GRADUATE" text, two birthday
+  pages sharing near-identical party shots, a dark gaming screen). Replaced
+  with gpt-image-2 flat-lays in the house style, same file paths, alt text
+  rewritten to name the items: birthday-gift-ideas, best-birthday-gifts-2026,
+  unique-birthday-gifts, birthday-gifts-for-gamers, 30th/40th/50th birthday
+  (pastel confetti for birthdays, gold confetti for the milestones),
+  graduation-gifts plus under $50/$100 (cap and tassel, eucalyptus),
+  best-anniversary-gifts-2026 (rose petals), best-baby-shower-gifts-2026
+  (baby's breath), housewarming-gifts and retirement-gifts (eucalyptus).
