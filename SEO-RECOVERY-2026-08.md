@@ -461,3 +461,18 @@ no page promises arrival.
   help-me-pick-a-gift promises same-day/next-day or fast shipping.
 - All Mother's Day pages still say 2026; they need a 2027 refresh (May 9,
   2027) before next spring.
+
+## 2026-11-01: last delivery promises removed site-wide
+
+The "still open" list above is done. One last-minute FAQ answer each on
+fathers-day-gifts, top-10-fathers-day-gifts-2026, gift-ideas-for-dad, -him,
+-her, -teens, gifts-under-50, birthday-gift-ideas and help-me-pick-a-gift,
+plus three the site-wide scan also caught (best-gaming-gifts-2026 "arrive
+instantly by email", gift-ideas-for-friends "ships same-day", gift-ideas-
+for-mom "fast-shipping"), now recommend well-reviewed picks, tell shoppers
+to check the delivery estimate at checkout, and describe digital gifts as
+"delivered by email instead of shipped". Because these are FAQ answers, the
+FAQPage schema changed with them. A final scan of app/, components/ and
+data/ finds no remaining speed or arrival promises; the leftover "instantly"
+and "in minutes" matches describe the shuffle tool or a product's own
+function (inflates a tire in minutes, DNA results in 2 to 4 weeks).

@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "What's a last-minute gift idea for a teen?",
-    a: "For a last-minute teen gift, choose something available for same-day or next-day delivery: a PopSocket set, a skincare mini set, a cute phone case bundle, wireless earbuds, or a gift card to their favorite brand (Amazon, Sephora, Roblox). Teens are surprisingly happy with practical, high-rated everyday items.",
+    a: "For a last-minute teen gift, choose a well-reviewed everyday item and check the delivery estimate at checkout: a PopSocket set, a skincare mini set, a cute phone case bundle, wireless earbuds, or a gift card to their favorite brand (Amazon, Sephora, Roblox). Teens are surprisingly happy with practical, high-rated everyday items.",
   },
 ];
 

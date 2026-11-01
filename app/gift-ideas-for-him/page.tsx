@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "What's a last-minute gift for him?",
-    a: "For a last-minute gift for him, Amazon same-day options work great: a multi-tool, insulated tumbler, beard grooming kit, Bluetooth speaker, or wireless charger. These ship fast and feel intentional. Alternatively, a digital experience gift card (cooking class, streaming subscription) delivers instantly.",
+    a: "For a last-minute gift for him, well-reviewed staples work great: a multi-tool, insulated tumbler, beard grooming kit, Bluetooth speaker, or wireless charger. Check the delivery estimate at checkout before you order. Alternatively, a digital experience gift card (cooking class, streaming subscription) is delivered by email instead of shipped.",
   },
 ];
 

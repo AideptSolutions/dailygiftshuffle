@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: "What's a last-minute gift for a friend?",
-    a: "For a last-minute friend gift, go with something that ships same-day or is instantly deliverable: a digital gift card to their favorite store, a well-rated skincare set, a funny novelty item, or a bestselling book. Snack gift boxes and self-care sets are especially safe bets that always feel thoughtful even when ordered at the last minute.",
+    a: "For a last-minute friend gift, go with something easy to get right, and check the delivery estimate at checkout: a digital gift card to their favorite store (delivered by email instead of shipped), a well-rated skincare set, a funny novelty item, or a bestselling book. Snack gift boxes and self-care sets are especially safe bets that always feel thoughtful even when ordered at the last minute.",
   },
   {
     q: 'What gifts are trending for friends right now?',

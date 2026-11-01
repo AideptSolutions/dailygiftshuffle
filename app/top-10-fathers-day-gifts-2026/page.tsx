@@ -80,7 +80,7 @@ const faqs = [
   },
   {
     q: "What is a last-minute Father's Day gift that does not look last-minute?",
-    a: "For last-minute Father's Day gifts, focus on Amazon same-day or next-day delivery: a Stanley tumbler, a MEATER thermometer, or a Theragun Relief. A custom star map also delivers digitally and looks genuinely thoughtful.",
+    a: "For last-minute Father's Day gifts, focus on proven favorites and check the delivery estimate at checkout: a Stanley tumbler, a MEATER thermometer, or a Theragun Relief. A custom star map also delivers digitally and looks genuinely thoughtful.",
   },
   {
     q: "When is Father's Day 2026?",

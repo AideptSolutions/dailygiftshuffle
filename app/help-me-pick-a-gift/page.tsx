@@ -93,7 +93,7 @@ export default function Page() {
         },
         {
           q: 'What are the safest last-minute gifts?',
-          a: 'The safest last-minute gifts are crowd-pleasers that ship fast or arrive digitally: a popular tumbler or mug, a premium candle set, a quality blanket, or a digital gift card to a place they actually go. Pair any of them with a short handwritten note and a rushed gift still feels considered.',
+          a: 'The safest last-minute gifts are crowd-pleasers (check the delivery estimate at checkout) or something delivered by email instead of shipped: a popular tumbler or mug, a premium candle set, a quality blanket, or a digital gift card to a place they actually go. Pair any of them with a short handwritten note and a rushed gift still feels considered.',
         },
       ]}
       relatedHeading="More Ways to Find the Perfect Gift"

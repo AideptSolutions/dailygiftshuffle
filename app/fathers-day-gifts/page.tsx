@@ -61,7 +61,7 @@ const faqs = [
   },
   {
     q: "What are last-minute Father's Day gift ideas?",
-    a: "Last-minute Father's Day gifts that still hit: a same-day-delivery BBQ spice set, an insulated tumbler, a pocket multi-tool, or a gift card to his favorite restaurant, hardware store, or sporting goods retailer. For digital delivery: a streaming service subscription or an Audible gift card for the dad who commutes. These all ship fast and feel intentional.",
+    a: "Last-minute Father's Day gifts that still hit: a BBQ spice set, an insulated tumbler, a pocket multi-tool, or a gift card to his favorite restaurant, hardware store, or sporting goods retailer. For something delivered by email instead of shipped: a streaming service subscription or an Audible gift card for the dad who commutes. For anything physical, check the delivery estimate at checkout before you order.",
   },
   {
     q: "What's a good Father's Day gift for a new dad?",

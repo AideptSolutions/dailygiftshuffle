@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "What's a good last-minute birthday gift?",
-    a: 'For a last-minute birthday gift that still lands, go for fast-shipping crowd-pleasers (an insulated tumbler, a candle set, a cozy blanket) or something digital that arrives instantly: an experience gift card, a streaming subscription, or an Amazon gift card paired with a handwritten note.',
+    a: 'For a last-minute birthday gift that still lands, go for well-loved crowd-pleasers (an insulated tumbler, a candle set, a cozy blanket) and check the delivery estimate at checkout, or pick something digital that is delivered by email instead of shipped: an experience gift card, a streaming subscription, or an Amazon gift card paired with a handwritten note.',
   },
   {
     q: 'How is TheGiftShuffle different from other birthday gift guides?',

@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: "What's a thoughtful last-minute gift under $50?",
-    a: "For a thoughtful last-minute gift under $50 that still arrives on time, prioritize items with Amazon same-day or next-day delivery: a cozy sherpa throw blanket, an insulated tumbler, a scented candle set, a beard grooming kit, or a portable Bluetooth speaker. These ship quickly and feel meaningful.",
+    a: "For a thoughtful last-minute gift under $50, pick a well-reviewed crowd-pleaser and check the delivery estimate at checkout: a cozy sherpa throw blanket, an insulated tumbler, a scented candle set, a beard grooming kit, or a portable Bluetooth speaker. Each one feels meaningful, not rushed.",
   },
   {
     q: "What's a good birthday gift under $50?",

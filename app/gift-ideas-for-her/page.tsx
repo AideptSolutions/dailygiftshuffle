@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: "What's a last-minute gift for her?",
-    a: "For a last-minute gift for her that still feels intentional: a cozy sherpa blanket, a scented candle set, bath bombs, a Kindle Paperwhite, or an insulated tumbler are all available for same-day delivery and are genuinely appreciated. A digital gift card for a spa or cooking class also delivers instantly.",
+    a: "For a last-minute gift for her that still feels intentional: a cozy sherpa blanket, a scented candle set, bath bombs, a Kindle Paperwhite, or an insulated tumbler are all genuinely appreciated; check the delivery estimate at checkout before you order. A digital gift card for a spa or cooking class is delivered by email instead of shipped.",
   },
 ];
 

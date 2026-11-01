@@ -102,7 +102,7 @@ export default function Page() {
         { q: 'What are good Christmas gifts for mom?', a: 'Christmas gifts moms love include a cozy throw and slipper set, a premium candle, an Ember mug for unhurried coffee, a luxe skincare or bath set, a digital photo frame the family can send pictures to, or a nice kitchen tool. Comfort plus a touch of luxury is the reliable formula.' },
         { q: 'What do you get a mom who has everything?', a: 'For a mom who has everything, go experiential or sentimental: a digital photo frame the family updates remotely, a custom keepsake with names or dates, a class or membership tied to a hobby, or a premium upgrade to a daily ritual. Connection beats another object at this stage.' },
         { q: 'What are good gifts for mom under $50?', a: 'Under $50, strong picks include a premium candle, a silk pillowcase, a cult-favorite hand cream or lip mask, cozy socks and a throw, an aromatherapy diffuser, a nice tea sampler, or a small personalized keepsake. Wrap it well and it feels far more expensive.' },
-        { q: 'What is a good last-minute gift for mom?', a: 'For a last-minute gift, go with fast-shipping crowd-pleasers she will genuinely use: a candle set, a cozy blanket, a quality mug with great coffee or tea, or a spa set. Pair it with a handwritten card, which is the part she will actually keep.' },
+        { q: 'What is a good last-minute gift for mom?', a: 'For a last-minute gift, go with crowd-pleasers she will genuinely use (check the delivery estimate at checkout): a candle set, a cozy blanket, a quality mug with great coffee or tea, or a spa set. Pair it with a handwritten card, which is the part she will actually keep.' },
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[

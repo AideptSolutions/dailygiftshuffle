@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "What's a last-minute gift for dad?",
-    a: "For a last-minute gift, go with something available for same-day or next-day delivery: a quality multi-tool, an insulated tumbler, a beard grooming kit, or a digital gift card for an experience he'd enjoy. These feel thoughtful even on short notice.",
+    a: "For a last-minute gift, go with a well-reviewed staple and check the delivery estimate at checkout: a quality multi-tool, an insulated tumbler, a beard grooming kit, or a digital gift card for an experience he'd enjoy. These feel thoughtful even on short notice.",
   },
   {
     q: 'What gifts do dads love most?',
