@@ -6722,7 +6722,7 @@ export const products: Product[] = [
   // cards or subscriptions, one storage item and one novelty item. All
   // figures verified against the live Amazon listing.
   { id: 'gg-gamepass-ultimate', name: 'Xbox Game Pass Ultimate (3-Month Membership)', description: 'Three months of Game Pass Ultimate: hundreds of games on console, PC and cloud, with new releases on day one.', why: 'The safest gift for a gamer whose library you do not know. They pick what they play, and it works across console, PC and phone.', price: 68.99, priceDisplay: '$68.99', image: '/images/products/gg-gamepass-ultimate.jpg', rating: 4.7, reviewCount: 192607, affiliateUrl: 'https://www.amazon.com/dp/B07TGNFVWV?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['him', 'teens', 'friends', 'kids'], budgetTier: '50to100', tags: ['gaming', 'tech'], occasions: ['birthday', 'holiday', 'just-because'] },
-  { id: 'gg-psn-giftcard', name: 'PlayStation Store $50 Gift Card (Digital Code)', description: 'A $50 PlayStation Store credit, redeemable for games, add-ons, season passes and PlayStation Plus.', why: 'Digital delivery means it never arrives late, and it covers the one thing they actually want but you cannot guess.', price: 50, priceDisplay: '$50', image: '/images/products/gg-psn-giftcard.jpg', rating: 4.6, reviewCount: 279113, affiliateUrl: 'https://www.amazon.com/dp/B004RMK4P8?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['him', 'teens', 'friends'], budgetTier: '50to100', tags: ['gaming', 'tech'], occasions: ['birthday', 'holiday', 'just-because'] },
+  { id: 'gg-psn-giftcard', name: 'PlayStation Store $50 Gift Card (Digital Code)', description: 'A $50 PlayStation Store credit, redeemable for games, add-ons, season passes and PlayStation Plus.', why: 'Delivered by email instead of shipped, and it covers the one thing they actually want but you cannot guess.', price: 50, priceDisplay: '$50', image: '/images/products/gg-psn-giftcard.jpg', rating: 4.6, reviewCount: 279113, affiliateUrl: 'https://www.amazon.com/dp/B004RMK4P8?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['him', 'teens', 'friends'], budgetTier: '50to100', tags: ['gaming', 'tech'], occasions: ['birthday', 'holiday', 'just-because'] },
   { id: 'gg-nintendo-eshop', name: 'Nintendo eShop $50 Gift Card (Digital Code)', description: 'A $50 Nintendo eShop credit for games, DLC and Nintendo Switch Online across any Nintendo system.', why: 'Nintendo rarely discounts first-party games, so eShop credit goes further than it looks, and it suits every age at once.', price: 50, priceDisplay: '$50', image: '/images/products/gg-nintendo-eshop.jpg', rating: 4.8, reviewCount: 33144, affiliateUrl: 'https://www.amazon.com/dp/B01M1VX5UJ?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['him', 'her', 'teens', 'kids', 'friends'], budgetTier: '50to100', tags: ['gaming', 'tech'], occasions: ['birthday', 'holiday', 'just-because'] },
   { id: 'gg-jackbox-party', name: 'The Jackbox Party Pack 7 (Nintendo Switch)', description: 'Five party games played on phones as controllers, so everyone in the room joins in without extra hardware.', why: 'The rare game that works for people who do not game. One console, up to eight phones, no learning curve.', price: 49.95, priceDisplay: '$49.95', image: '/images/products/gg-jackbox-party.jpg', rating: 4.7, reviewCount: 4703, affiliateUrl: 'https://www.amazon.com/dp/B09JT3LGVV?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['friends', 'couples', 'teens', 'him', 'her'], budgetTier: '25to50', tags: ['gaming', 'hobby'], occasions: ['birthday', 'holiday', 'just-because'] },
   { id: 'gg-mariokart-world', name: 'Mario Kart World (Nintendo Switch 2)', description: 'The open-world Mario Kart for Switch 2, with a connected overworld, 24-racer grids and full local and online play.', why: 'The default reason to own the console, and the one game a mixed-age group will still be playing at midnight.', price: 79, priceDisplay: '$79', image: '/images/products/gg-mariokart-world.jpg', rating: 4.8, reviewCount: 4798, affiliateUrl: 'https://www.amazon.com/dp/B0F66GQLHH?tag=dailygiftshuf-20&linkCode=ll2&language=en_US&ref_=as_li_ss_tl', network: 'amazon', recipients: ['kids', 'teens', 'friends', 'him'], budgetTier: '50to100', tags: ['gaming', 'kids'], occasions: ['birthday', 'holiday'] },
@@ -9014,7 +9014,7 @@ export const products: Product[] = [
   {
     id: 'digital-starbucks-25',
     name: 'Starbucks eGift Card $25 (Email Delivery)',
-    description: 'Twenty-five dollars of coffee runs, delivered by email in minutes and good at any Starbucks. The easy yes for a coworker, a teacher or anyone you forgot until today.',
+    description: 'Twenty-five dollars of coffee runs, delivered by email and good at any Starbucks. The easy yes for a coworker, a teacher or anyone you forgot until today.',
     price: 25,
     priceDisplay: '$25.00',
     image: '/images/products/digital-starbucks-25.jpg',
@@ -9030,7 +9030,7 @@ export const products: Product[] = [
   {
     id: 'digital-doordash-50',
     name: 'DoorDash eGift Card $50 (Email Delivery)',
-    description: 'Fifty dollars toward takeout, groceries or late-night snacks, emailed the moment you buy it. A night off from cooking during the busiest week of the year.',
+    description: 'Fifty dollars toward takeout, groceries or late-night snacks, delivered by email. A night off from cooking during the busiest week of the year.',
     price: 50,
     priceDisplay: '$50.00',
     image: '/images/products/digital-doordash-50.jpg',
@@ -9062,7 +9062,7 @@ export const products: Product[] = [
   {
     id: 'digital-chipotle-25',
     name: 'Chipotle eGift Card $25 (Email Delivery)',
-    description: 'Twenty-five dollars of burritos and bowls, emailed instantly and good in the restaurant, the app or online. Feeds a hungry teen about twice.',
+    description: 'Twenty-five dollars of burritos and bowls, delivered by email and good in the restaurant, the app or online. Feeds a hungry teen about twice.',
     price: 25,
     priceDisplay: '$25.00',
     image: '/images/products/digital-chipotle-25.jpg',

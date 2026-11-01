@@ -78,7 +78,7 @@ function getBannerConfig(month: number): BannerConfig | null {
       };
     case 12:
       return {
-        text: 'Out of time? Last-minute Christmas gifts that arrive instantly',
+        text: 'Out of time? Last-minute Christmas gift ideas, including digital gift cards',
         gradient: 'linear-gradient(90deg, #c62828 0%, #e53935 100%)',
         icon: 'snowflake',
         href: '/last-minute-christmas-gifts',

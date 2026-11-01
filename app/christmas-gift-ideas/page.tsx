@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "What's a good last-minute Christmas gift?",
-    a: "Great last-minute Christmas gifts available for fast delivery: insulated tumbler, cozy sherpa blanket, scented candle set, beard grooming kit, portable Bluetooth speaker, wireless charger, or blue light blocking glasses. For something instantaneous, a digital gift card for Amazon, a streaming service, or an experience delivers right away.",
+    a: "Great last-minute Christmas gifts are easy to find and hard to get wrong: an insulated tumbler, a cozy sherpa blanket, a scented candle set, a portable Bluetooth speaker, or a wireless charger. Check the delivery date at checkout before you order. If time is very short, a digital gift card for a store, a streaming service or an experience is delivered by email instead of shipped.",
   },
   {
     q: 'What are Christmas gift ideas for the whole family?',
@@ -157,7 +157,7 @@ export default function ChristmasGiftIdeasPage() {
               { href: '/stocking-stuffers', label: 'Stocking Stuffers', desc: 'Small gifts under $25' },
               { href: '/secret-santa-gifts', label: 'Secret Santa', desc: 'Office and friend swaps' },
               { href: '/white-elephant-gifts', label: 'White Elephant', desc: 'Gag gifts and steals' },
-              { href: '/last-minute-christmas-gifts', label: 'Last-Minute', desc: 'Instant digital gifts' },
+              { href: '/last-minute-christmas-gifts', label: 'Last-Minute', desc: 'Digital gift cards' },
             ].map((c) => (
               <Link
                 key={c.href}

@@ -396,3 +396,11 @@ lastmod:
   "Shop Christmas by List" (10), trending page, for-her/for-him, and the
   mom/dad/kids stocking pages' next-step links and return nudges now point to
   the matching Christmas page.
+- 2026-11-01 (later): owner flagged that "arrive instantly" promises a
+  delivery time we do not control (we only link to retailers). Removed every
+  delivery-speed claim: the December banner, the last-minute page (title,
+  meta, intro, answer, grid heading, FAQs), the Christmas hub FAQ ("fast
+  delivery", "delivers right away") and card, the mom FAQ, and four product
+  write-ups (Starbucks, Chipotle, DoorDash, PlayStation "never arrives
+  late"). Copy now describes the method ("delivered by email instead of
+  shipped") and points shoppers to the retailer's delivery details.

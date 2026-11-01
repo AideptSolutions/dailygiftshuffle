@@ -5,20 +5,20 @@ import { curate, shufflePool, variantKey, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/last-minute-christmas-gifts';
 
 export const metadata: Metadata = {
-  title: 'Last-Minute Christmas Gifts 2026: Instant Digital Gifts and Easy Wins | TheGiftShuffle',
+  title: 'Last-Minute Christmas Gifts 2026: Digital Gift Cards and Easy Wins | TheGiftShuffle',
   description:
-    'Last-minute Christmas gifts that still feel thoughtful: digital gift cards delivered by email in minutes, plus top-rated crowd-pleasers that are easy to find and hard to get wrong.',
+    'Last-minute Christmas gifts that still feel thoughtful: digital gift cards delivered by email instead of shipped, plus top-rated crowd-pleasers that are easy to find and hard to get wrong.',
   keywords: [
     'last minute christmas gifts',
     'last minute gift ideas',
-    'instant christmas gifts',
+    'digital gift cards for christmas',
     'digital gift cards christmas',
     'last minute christmas gifts for him',
     'last minute christmas gifts for her',
   ],
   openGraph: {
-    title: 'Last-Minute Christmas Gifts 2026: Instant Digital Gifts and Easy Wins',
-    description: 'Digital gift cards delivered in minutes, plus top-rated crowd-pleasers that are hard to get wrong.',
+    title: 'Last-Minute Christmas Gifts 2026: Digital Gift Cards and Easy Wins',
+    description: 'Digital gift cards delivered by email, plus top-rated crowd-pleasers that are hard to get wrong.',
     type: 'website',
     url: URL,
     images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/last-minute-christmas-gifts.jpg', width: 1200, height: 800 }],
@@ -71,15 +71,15 @@ export default function Page() {
       intro={
         <>
           <p>
-            Out of time? The best <strong>last-minute Christmas gifts</strong> are the ones that
-            arrive instantly and still feel chosen: <strong>digital gift cards delivered by
-            email</strong> for the games, apps and treats they already love, plus top-rated
+            Out of time? The best <strong>last-minute Christmas gifts</strong> skip the shipping
+            and still feel chosen: <strong>digital gift cards delivered by email</strong> for the
+            games, apps and treats they already love, plus top-rated
             crowd-pleasers with tens of thousands of reviews that are easy to find and hard to get
             wrong.
           </p>
           <p className="text-base text-gray-600">
-            Digital codes arrive in minutes. For anything physical, check the delivery date shown
-            at checkout before you order.
+            Delivery is handled by the retailer, not by us: check the delivery details on the
+            product page and the date shown at checkout before you order.
           </p>
         </>
       }
@@ -89,8 +89,9 @@ export default function Page() {
           <p>
             The best last-minute Christmas gift is a <strong>digital gift card for something they
             already use</strong>: a PlayStation, Nintendo or Xbox code for a gamer, a Roblox card
-            for a kid, or credit for a favorite app or coffee shop. It is delivered by email in
-            minutes, it never arrives late, and it lets them pick exactly what they want. Print the
+            for a kid, or credit for a favorite app or coffee shop. It is delivered by email
+            instead of shipped, so there is no package to wait on, and it lets them pick exactly
+            what they want. Print the
             code inside a card or tuck it into a small wrapped treat so there is still something to
             open on Christmas morning.
           </p>
@@ -98,14 +99,14 @@ export default function Page() {
       }}
       shuffleHeading="Shuffle Last-Minute Gifts"
       shuffleProducts={shuffle}
-      gridHeading={`${grid.length} Last-Minute Christmas Gifts, Instant Ones First`}
+      gridHeading={`${grid.length} Last-Minute Christmas Gifts, Digital Gift Cards First`}
       gridProducts={grid}
       ctaHeading="Need an Idea in the Next 30 Seconds?"
       ctaText="Tell TheGiftShuffle who it is for and your budget, and get a top-rated gift idea in one click."
       faqs={[
-        { q: 'Can I give a gift card that arrives instantly?', a: 'Yes. Digital gift cards and codes (PlayStation Store, Nintendo eShop, Xbox Game Pass, Roblox and many apps and stores) are delivered by email, usually within minutes of purchase, so they work even on Christmas Eve. Send it to yourself to print, or straight to the recipient.' },
+        { q: 'Can I give a gift card by email?', a: 'Yes. Digital gift cards and codes (PlayStation Store, Nintendo eShop, Xbox Game Pass, Roblox, Starbucks, Netflix and more) are delivered by email instead of shipped, which makes them the usual pick when time is short. Delivery is handled by the retailer, so check the delivery details on the product page before you buy. Send it to yourself to print, or straight to the recipient.' },
         { q: 'How do I make a gift card feel less last-minute?', a: 'Present it well: print the code inside a handwritten card, pair it with a small physical treat like their favorite snack or a candle, or wrap it inside a box with a note about what you hope they buy. A specific gift card (their favorite game store or coffee shop) always feels more thoughtful than a generic one.' },
-        { q: 'What if a gift will not arrive before Christmas?', a: 'Give a photo or printout of the gift in a card with a note that it is on the way. Most people love the surprise either way, and it buys you a few extra days. For anything that must arrive on time, choose a digital gift instead.' },
+        { q: 'What if a gift will not arrive before Christmas?', a: 'Give a photo or printout of the gift in a card with a note that it is on the way. Most people love the surprise either way, and it buys you a few extra days. If timing matters, a digital gift card avoids shipping altogether.' },
         { q: 'What is a good last-minute gift for someone who has everything?', a: 'Choose something consumable or experiential: a digital gift card for their favorite app or game store, a premium coffee or treat they will use up, or a plan to do something together in the new year. These never duplicate what they already own.' },
       ]}
       relatedHeading="More Christmas Gift Guides"
