@@ -34,7 +34,8 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
   useEffect(() => {
     // The Halloween shuffle keeps its items year-round; every other shuffle
     // gets the in-season feed.
-    fetch(tag === 'halloween' ? '/api/products/all?season=all' : '/api/products/all')
+    // (NicheTag in data/products has no 'halloween'; the route passes it anyway.)
+    fetch((tag as string) === 'halloween' ? '/api/products/all?season=all' : '/api/products/all')
       .then((r) => (r.ok ? r.json() : []))
       .then((data: Product[]) => {
         setCatalog(data);
