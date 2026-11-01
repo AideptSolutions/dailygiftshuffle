@@ -13,7 +13,7 @@ const OVERRIDES: Record<string, string> = {
   '/camping-gifts-for-women': '/images/heroes/best-camping-gifts.jpg',
   '/camping-gifts-for-men': '/images/heroes/best-camping-gifts.jpg',
   '/retro-gaming-gifts': '/images/heroes/best-gaming-gifts-2026.jpg',
-  '/top-10-fathers-day-gifts-2026': '/images/products/fathers-day-hero.jpg',
+  '/top-10-fathers-day-gifts': '/images/products/fathers-day-hero.jpg',
   '/shuffle': '/img/guide-cta-shuffle.jpg',
   '/': '/img/home/hero-backdrop.jpg',
 };

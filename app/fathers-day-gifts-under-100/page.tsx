@@ -9,18 +9,18 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $100 (2026): Best Picks for Dad | TheGiftShuffle",
+  title: "Father's Day Gifts Under $100 (2027): Best Picks for Dad | TheGiftShuffle",
   description:
-    "The best Father's Day gifts under $100 in 2026. Smartwatches, massage guns, whiskey decanter sets, cast iron skillets, power tools, and more, all under $100.",
+    "The best Father's Day gifts under $100 in 2027. Smartwatches, massage guns, whiskey decanter sets, cast iron skillets, power tools, and more, all under $100.",
   keywords: [
     "fathers day gifts under 100",
     "fathers day gifts under $100",
-    "fathers day gifts 2026 under 100",
+    "fathers day gifts 2027 under 100",
     "best fathers day gifts under 100 dollars",
     "fathers day gift ideas under 100",
   ],
   openGraph: {
-    title: "Father's Day Gifts Under $100 (2026) | TheGiftShuffle",
+    title: "Father's Day Gifts Under $100 (2027) | TheGiftShuffle",
     description:
       "The best Father's Day gifts under $100, including smartwatches, massage guns, cast iron skillets, whiskey sets, and more.",
     type: 'website',

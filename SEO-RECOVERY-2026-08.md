@@ -495,3 +495,25 @@ to 2027 would have shown it immediately, alongside Christmas. It now has a
 start date: shows 2027-04-01 to 2027-05-09, switches to the last-minute
 message from May 7, new dismiss key. April 1 matches SeasonalBanner, which
 stays quiet in April and May and leaves them to this banner.
+
+## 2026-11-01: Father's Day pages rolled to 2027
+
+/fathers-day-gifts, -under-25, -under-50, -under-100 and the top-10 page now
+say 2027 (Father's Day 2027 is Sunday, June 20, the third Sunday of June).
+- The top-10 page moved to the year-free /top-10-fathers-day-gifts (301 from
+  /top-10-fathers-day-gifts-2026, in next.config.mjs) so it never has to move
+  again; only its text changes each year. The old URL was the best Father's
+  Day page in June 2026 (GSC: 6 clicks, 53 impressions, pos 57); the
+  redirect carries that over. Sitemap, the stocking-stuffers-for-dad link and
+  the guide image key point at the new path.
+- Its "When is Father's Day" FAQ still said "To guarantee delivery in time,
+  order by June 14..." (the earlier delivery scan missed the word
+  "guarantee"); now it points to the delivery estimate at checkout.
+- Year-specific trend claims were reworded rather than relabeled 2027:
+  "ranked by what is trending now", the "trending fathers day gifts" keyword,
+  and the main page's "2026 trends ... #1 gift category ... leading searches
+  ... fastest-growing segments" paragraph.
+- SeasonalBanner's June case was a one-time "2026 World Cup is here" banner
+  that would have run again in June 2027; it is now a Father's Day banner
+  (no date in the text, so it needs no yearly edit).
+- Sitemap lastModified 2026-11-01 for all five.

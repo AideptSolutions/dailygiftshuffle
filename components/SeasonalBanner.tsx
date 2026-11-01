@@ -34,13 +34,14 @@ function getBannerConfig(month: number): BannerConfig | null {
       // Mother's Day banner handles April + May — no duplicate
       return null;
     case 6:
-      // Summer 2026: World Cup co-hosted in the US (one-time event; revisit in 2027)
+      // Father's Day is the third Sunday of June (June 20 in 2027). June 2026
+      // ran a one-time World Cup banner here instead.
       return {
-        text: 'The 2026 World Cup is here:',
-        gradient: 'linear-gradient(90deg, #1565c0 0%, #d32f2f 100%)',
+        text: "Father's Day is coming up:",
+        gradient: 'linear-gradient(90deg, #1565c0 0%, #0d47a1 100%)',
         links: [
-          { label: 'Soccer Fan Gifts', href: '/world-cup-gifts' },
-          { label: 'Patriotic Gifts', href: '/patriotic-gifts' },
+          { label: "Father's Day Gifts", href: '/fathers-day-gifts' },
+          { label: 'Top 10 for Dad', href: '/top-10-fathers-day-gifts' },
         ],
       };
     case 7:

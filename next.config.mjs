@@ -30,6 +30,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Year-free URL since 2026-11-01, so the page never has to move again.
+        source: '/top-10-fathers-day-gifts-2026',
+        destination: '/top-10-fathers-day-gifts',
+        permanent: true,
+      },
+      {
         // Renamed 2026-11-01: we do not promise delivery times.
         source: '/top-10-gifts-that-arrive-in-24-hours',
         destination: '/last-minute-gift-ideas',

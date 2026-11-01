@@ -28,6 +28,11 @@ const LAST_REVIEWED: Record<string, string> = {
   '/mothers-day-gifts-under-100': '2026-11-01',
   '/last-minute-mothers-day-gifts': '2026-11-01',
   '/gifts/last-minute-mothers-day': '2026-11-01',
+  '/fathers-day-gifts': '2026-11-01',
+  '/fathers-day-gifts-under-25': '2026-11-01',
+  '/fathers-day-gifts-under-50': '2026-11-01',
+  '/fathers-day-gifts-under-100': '2026-11-01',
+  '/top-10-fathers-day-gifts': '2026-11-01',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -143,7 +148,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai-personalized-gifts',
     '/sustainable-eco-gifts',
     '/tech-gadgets',
-    '/top-10-fathers-day-gifts-2026',
+    '/top-10-fathers-day-gifts',
     '/top-10-gifts-for-grandparents-who-have-everything',
     '/top-10-gifts-for-new-dads-under-50',
     '/last-minute-gift-ideas',

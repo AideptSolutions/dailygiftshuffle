@@ -9,18 +9,18 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $25 (2026): Best Affordable Picks | TheGiftShuffle",
+  title: "Father's Day Gifts Under $25 (2027): Best Affordable Picks | TheGiftShuffle",
   description:
-    "The best Father's Day gifts under $25 in 2026. Pocket multi-tools, leather card holders, BBQ rub sets, and more, thoughtful picks for Dad at every budget.",
+    "The best Father's Day gifts under $25 in 2027. Pocket multi-tools, leather card holders, BBQ rub sets, and more, thoughtful picks for Dad at every budget.",
   keywords: [
     "fathers day gifts under 25",
     "fathers day gifts under $25",
     "cheap fathers day gifts",
-    "affordable fathers day gifts 2026",
+    "affordable fathers day gifts 2027",
     "best fathers day gifts under 25 dollars",
   ],
   openGraph: {
-    title: "Father's Day Gifts Under $25 (2026) | TheGiftShuffle",
+    title: "Father's Day Gifts Under $25 (2027) | TheGiftShuffle",
     description:
       "Great Father's Day gifts for under $25, including pocket multi-tools, leather wallets, BBQ rubs, and more.",
     type: 'website',

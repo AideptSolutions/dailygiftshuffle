@@ -7,35 +7,34 @@ import { products } from '@/data/products';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Top 10 Fathers Day Gifts for 2026 | Gifts Dads Actually Want | TheGiftShuffle",
+  title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want | TheGiftShuffle",
   description:
-    "Fathers Day 2026 is June 21. Here are the 10 best gifts for dads this year, ranked by what is trending now. From smart grills and noise-canceling headphones to golf watches and whiskey kits.",
+    "Fathers Day 2027 is June 20. Here are the 10 best gifts for dads this year, chosen for what dads actually use. From smart grills and noise-canceling headphones to golf watches and whiskey kits.",
   keywords: [
-    'top 10 fathers day gifts 2026',
-    'best fathers day gifts 2026',
+    'top 10 fathers day gifts 2027',
+    'best fathers day gifts 2027',
     'fathers day gift ideas for him',
     'unique fathers day gifts',
-    'trending fathers day gifts 2026',
-    'best gifts for dad 2026',
+    'best gifts for dad 2027',
     'fathers day gifts under 50',
     'fathers day gifts under 100',
   ],
   openGraph: {
-    title: "Top 10 Fathers Day Gifts for 2026 | Gifts Dads Actually Want | TheGiftShuffle",
+    title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want | TheGiftShuffle",
     description:
-      "Fathers Day is June 21, 2026. These are the 10 best gifts for dads right now, ranked by what is trending, not what has been recycled since 2019.",
+      "Fathers Day is June 20, 2027. These are the 10 best gifts for dads this year, chosen for everyday use, not what has been recycled since 2019.",
     type: 'website',
-    url: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts-2026',
+    url: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts',
     images: [
       {
-        url: 'https://www.thegiftshuffle.com/api/og?title=Top%2010%20Father%27s%20Day%20Gifts%202026%20%7C%20TheGiftShuffle',
+        url: 'https://www.thegiftshuffle.com/api/og?title=Top%2010%20Father%27s%20Day%20Gifts%202027%20%7C%20TheGiftShuffle',
         width: 1200,
         height: 630,
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts-2026',
+    canonical: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts',
   },
 };
 
@@ -63,8 +62,8 @@ const shufflePool = products.filter(
 
 const faqs = [
   {
-    q: "What are the best Father's Day gifts for 2026?",
-    a: "The best Father's Day gifts in 2026 are the ones dads actually use every day: a Bose QuietComfort headset, a smart meat thermometer, a Theragun massager, a Stanley tumbler, or a whiskey cocktail smoker kit. The trend has shifted away from novelty gag gifts and toward practical upgrades that improve something he already does.",
+    q: "What are the best Father's Day gifts for 2027?",
+    a: "The best Father's Day gifts in 2027 are the ones dads actually use every day: a Bose QuietComfort headset, a smart meat thermometer, a Theragun massager, a Stanley tumbler, or a whiskey cocktail smoker kit. The trend has shifted away from novelty gag gifts and toward practical upgrades that improve something he already does.",
   },
   {
     q: "What do dads actually want for Father's Day?",
@@ -83,17 +82,17 @@ const faqs = [
     a: "For last-minute Father's Day gifts, focus on proven favorites and check the delivery estimate at checkout: a Stanley tumbler, a MEATER thermometer, or a Theragun Relief. A custom star map also delivers digitally and looks genuinely thoughtful.",
   },
   {
-    q: "When is Father's Day 2026?",
-    a: "Father's Day 2026 is on Sunday, June 21. It always falls on the third Sunday of June. To guarantee delivery in time, order physical gifts by June 14 with standard shipping, or June 18 with expedited shipping.",
+    q: "When is Father's Day 2027?",
+    a: "Father's Day 2027 is on Sunday, June 20. It always falls on the third Sunday of June. Order physical gifts early and check the estimated delivery date at checkout before you buy; if it lands too late, a digital gift is delivered by email instead of shipped.",
   },
 ];
 
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: "Top 10 Father's Day Gifts for 2026",
-  description: "The best Father's Day gifts for 2026, curated by TheGiftShuffle",
-  url: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts-2026',
+  name: "Top 10 Father's Day Gifts for 2027",
+  description: "The best Father's Day gifts for 2027, curated by TheGiftShuffle",
+  url: 'https://www.thegiftshuffle.com/top-10-fathers-day-gifts',
   numberOfItems: top10.length,
   itemListElement: top10.map((p, i) => ({
     '@type': 'ListItem',
@@ -119,13 +118,13 @@ const faqSchema = {
   })),
 };
 
-export default function Top10FathersDayGifts2026Page() {
+export default function Top10FathersDayGiftsPage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFAF5' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
-      <Breadcrumbs items={[{ label: "Top 10 Father's Day Gifts 2026", href: '/top-10-fathers-day-gifts-2026' }]} />
+      <Breadcrumbs items={[{ label: "Top 10 Father's Day Gifts 2027", href: '/top-10-fathers-day-gifts' }]} />
 
       <main id="main-content" className="flex-1">
 
@@ -146,11 +145,11 @@ export default function Top10FathersDayGifts2026Page() {
         {/* ── SEO BLURB ───────────────────────────────────────────────── */}
         <section className="max-w-3xl mx-auto px-4 pt-8 pb-2 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
-            Top 10 Father&apos;s Day Gifts for 2026
+            Top 10 Father&apos;s Day Gifts for 2027
           </h1>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
-            Father&apos;s Day 2026 is <strong>June 21</strong>. These are the 10 best gifts for dads this year,
-            ranked by what people are actually buying right now, not what has been recycled in listicles since 2019.
+            Father&apos;s Day 2027 is <strong>June 20</strong>. These are the 10 best gifts for dads this year,
+            picked for how much dads actually use them, not what has been recycled in listicles since 2019.
             Every pick here solves a real problem, upgrades a hobby he already has, or gives him 30 minutes of
             daily-use joy. No novelty mugs. No generic gift cards.
           </p>
@@ -165,7 +164,7 @@ export default function Top10FathersDayGifts2026Page() {
         {/* ── TOP 10 LIST ─────────────────────────────────────────────── */}
         <section className="max-w-3xl mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>
-            The 10 Best Father&apos;s Day Gifts for 2026
+            The 10 Best Father&apos;s Day Gifts for 2027
           </h2>
 
           <ol className="flex flex-col gap-4">

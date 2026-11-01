@@ -112,7 +112,7 @@ export default function Page() {
         { href: '/stocking-stuffers-for-kids', label: 'Stocking Stuffers for Kids' },
         { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
         { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
-        { href: '/top-10-fathers-day-gifts-2026', label: 'Top Gifts for Dad' },
+        { href: '/top-10-fathers-day-gifts', label: 'Top Gifts for Dad' },
         { href: '/gifts-under-25', label: 'Gifts Under $25' },
       ]}
     />
