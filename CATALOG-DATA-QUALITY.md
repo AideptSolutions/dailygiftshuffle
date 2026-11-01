@@ -611,3 +611,35 @@ data/image-sources.json (provider "bing-browser-2026-11").
   gear), Muddy Mat keeps its color-swatch strip, EverSnug is shown in green
   (listing is light pink), Travelpro in blue (listing is black), Kitty City
   tunnel bed has two small arrows.
+
+## Category depth batch 2: AI/smart home, car accessories, finance (2026-11-01)
+
+102 products added in section "CATEGORY DEPTH 2026-11: SMART HOME, CAR,
+FINANCE" (ids sh26-*, car26-*, fin26-*), same verification as batch 1
+(same-origin /dp/ reads for title, rating, reviews, price, stock, seller;
+feature bullets read before writing descriptions). Six picks were already
+in the catalog under other categories, so instead of duplicating them the
+existing entries gained the category tag: MEATER Plus, Echo Spot, Hatch
+Baby, Govee smart bulbs and Sonos Era 100 (ai-smart-home), ROVE R2-4K dash
+cam (car-accessories). Expected totals: smart home 26 -> about 61, car
+21 -> about 57, finance 18 -> about 58.
+
+Dropped at verification: LITTLE TREES 10-pack (third-party reseller), The
+Book on Rental Property Investing (one copy left, third-party seller).
+Dropped at the image stage because no brand or retailer shot of the actual
+product exists online (only Amazon re-uploads or lookalikes): VANMASS
+suction phone mount, Valleycomfy steering wheel cover, GRANATAN bull and
+bear statue, Travelambo women's wallet. Their catalog entries were removed
+rather than shown with a lookalike image.
+
+Images: this time the browser-pane Bing pass pulled eight candidates per
+product up front and every pick was made by eye from one-row-per-product
+sheets (batch 1 showed auto-picks are wrong about half the time). Amazon
+listing images were used only as an identification reference for products
+with several similar variants (Refasy ATM bank, Cryptex, pull-out money box,
+Monopoly Junior, coin album, BlueDriver Pro, LetPot LPH-Air, Birdfy, Northern
+Galaxy, Hulkman Alpha85, Fanttik V10 APEX). Caught on review: a Turkish
+"Bitcoin Standardi" cover, wrong-model images for several gadgets.
+Accepted caveats: digital photo frames show stock family photos on screen;
+the Refasy bank and pull-out money box show a hand demonstrating them; the
+JOYTUTUS mirror image carries a small feature-label overlay.
