@@ -9,7 +9,7 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Best Mother's Day Gifts Under $25 (2026) | TheGiftShuffle",
+  title: "Best Mother's Day Gifts Under $25 (2027) | TheGiftShuffle",
   description:
     "The best budget-friendly Mother's Day gifts under $25: shower steamers, eye masks, slipper socks, brightening serums, and more. Great gifts don't require a big budget.",
   keywords: [
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "mothers day gifts under $25",
     "cheap mothers day gifts",
     "budget mothers day gift ideas",
-    "inexpensive mothers day gifts 2026",
+    "inexpensive mothers day gifts 2027",
   ],
   openGraph: {
-    title: "Best Mother's Day Gifts Under $25 (2026) | TheGiftShuffle",
+    title: "Best Mother's Day Gifts Under $25 (2027) | TheGiftShuffle",
     description:
       "Browse the best Mother's Day gifts under $25: shower steamers, eye patches, slipper socks, serums, and more.",
     type: 'website',
@@ -122,7 +122,7 @@ export default function MothersDayGiftsUnder25Page() {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            The Best Mother&apos;s Day Gifts Under $25 in 2026
+            The Best Mother&apos;s Day Gifts Under $25 in 2027
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Great gifts don&apos;t require a big budget. They require knowing what Mom will actually use. Under $25, you can find shower steamers that turn her morning commute prep into a spa moment, under-eye patches she reaches for every night, and slipper socks so soft she&apos;ll never want to take them off. The price isn&apos;t the point. The thought, and the daily ritual it creates, is.

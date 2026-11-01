@@ -8,17 +8,17 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Last-Minute Mother's Day Gifts 2026 That Feel Thoughtful | TheGiftShuffle",
+  title: "Last-Minute Mother's Day Gifts 2027 That Feel Thoughtful | TheGiftShuffle",
   description:
     "Running out of time? Top-rated last-minute Mother's Day gifts: spa sets, skincare, jewelry, plus digital gifts sent by email. Check the delivery estimate at checkout.",
   keywords: [
     "last minute mothers day gifts",
-    "last minute mothers day gift ideas 2026",
+    "last minute mothers day gift ideas 2027",
     "last minute gift ideas for mom",
     "digital mothers day gifts",
   ],
   openGraph: {
-    title: "Last-Minute Mother's Day Gifts 2026 That Feel Thoughtful | TheGiftShuffle",
+    title: "Last-Minute Mother's Day Gifts 2027 That Feel Thoughtful | TheGiftShuffle",
     description:
       "Top-rated last-minute Mother's Day gifts, plus digital options sent by email.",
     type: 'website',
@@ -76,7 +76,7 @@ const faqSchema = {
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: "Last-Minute Mother's Day Gifts 2026",
+  name: "Last-Minute Mother's Day Gifts 2027",
   description: "Top-rated last-minute Mother's Day gifts, curated by TheGiftShuffle",
   url: 'https://www.thegiftshuffle.com/gifts/last-minute-mothers-day',
   numberOfItems: lastMinuteProducts.length,
@@ -123,10 +123,10 @@ export default function GiftsLastMinuteMothersDayPage() {
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           {/* Urgency badge */}
           <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-red-600 font-bold text-sm">Mother&apos;s Day 2026 is Sunday, May 10</span>
+            <span className="text-red-600 font-bold text-sm">Mother&apos;s Day 2027 is Sunday, May 9</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            Last-Minute Mother&apos;s Day Gifts 2026
+            Last-Minute Mother&apos;s Day Gifts 2027
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-3">
             You still have time to choose well. These are the top-rated picks, sorted by rating so you can
@@ -165,7 +165,7 @@ export default function GiftsLastMinuteMothersDayPage() {
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             <strong>The short answer:</strong> aromatherapy shower steamers, premium spa gift sets, silk sleep masks,
-            skincare bundles, and personalized jewelry are the best last-minute Mother&apos;s Day gifts in 2026.
+            skincare bundles, and personalized jewelry are the best last-minute Mother&apos;s Day gifts in 2027.
             None of them look last-minute.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">

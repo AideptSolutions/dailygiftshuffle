@@ -9,7 +9,7 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Best Mother's Day Gifts Under $50 (2026) | TheGiftShuffle",
+  title: "Best Mother's Day Gifts Under $50 (2027) | TheGiftShuffle",
   description:
     "The best Mother's Day gifts under $50: shower steamers, eye masks, slipper socks, bath gift sets, and skincare serums. Thoughtful doesn't have to mean expensive.",
   keywords: [
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "mothers day gifts under $50",
     "affordable mothers day gifts",
     "cheap mothers day gifts",
-    "budget mothers day gifts 2026",
+    "budget mothers day gifts 2027",
   ],
   openGraph: {
-    title: "Best Mother's Day Gifts Under $50 (2026) | TheGiftShuffle",
+    title: "Best Mother's Day Gifts Under $50 (2027) | TheGiftShuffle",
     description:
       "Browse the best Mother's Day gifts under $50: spa sets, skincare, cozy socks, shower steamers, and more.",
     type: 'website',
@@ -122,7 +122,7 @@ export default function MothersDayGiftsUnder50Page() {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            The Best Mother&apos;s Day Gifts Under $50 in 2026
+            The Best Mother&apos;s Day Gifts Under $50 in 2027
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Thoughtful doesn&apos;t have to mean expensive. Some of the most meaningful gifts Mom will receive this Mother&apos;s Day cost under $50, because they&apos;re things she needs, loves, and would never splurge on herself. Shower steamers that turn her morning into a spa, eye patches she&apos;ll use twice a week, slipper socks she&apos;ll wear until they fall apart. The gift doesn&apos;t have to be big. It has to be right.

@@ -11,12 +11,12 @@ import InlineShuffle from '@/components/InlineShuffle';
 export const metadata: Metadata = {
   title: "Mother's Day Gifts Under $100 | TheGiftShuffle",
   description:
-    "The best Mother's Day gifts under $100 for 2026. Thoughtful picks including spa sets, jewelry, skincare, kitchen upgrades, and cozy gifts, all under a hundred dollars.",
+    "The best Mother's Day gifts under $100 for 2027. Thoughtful picks including spa sets, jewelry, skincare, kitchen upgrades, and cozy gifts, all under a hundred dollars.",
   keywords: [
     "mothers day gifts under 100",
     "mothers day gifts under $100",
     "best mothers day gifts under 100",
-    "affordable mothers day gifts 2026",
+    "affordable mothers day gifts 2027",
     "mothers day gift ideas under 100",
   ],
   openGraph: {
@@ -83,8 +83,8 @@ const faqs = [
     a: "Yes. Thoughtfulness comes from the match, not the price. A $40 gift tied to a hobby she loves beats a generic $200 splurge. Personalization, her favorite scent, or an upgrade to something she uses daily all read as genuinely considered.",
   },
   {
-    q: "When is Mother's Day 2026?",
-    a: "Mother's Day 2026 is Sunday, May 10. It always falls on the second Sunday of May. Order physical gifts early and check the estimated delivery date at checkout before you buy.",
+    q: "When is Mother's Day 2027?",
+    a: "Mother's Day 2027 is Sunday, May 9. It always falls on the second Sunday of May. Order physical gifts early and check the estimated delivery date at checkout before you buy.",
   },
 ];
 

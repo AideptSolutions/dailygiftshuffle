@@ -476,3 +476,22 @@ FAQPage schema changed with them. A final scan of app/, components/ and
 data/ finds no remaining speed or arrival promises; the leftover "instantly"
 and "in minutes" matches describe the shuffle tool or a product's own
 function (inflates a tire in minutes, DNA results in 2 to 4 weeks).
+
+## 2026-11-01: Mother's Day pages rolled to 2027
+
+All seven Mother's Day pages (/mothers-day-gifts, -for-wife, -under-25,
+-under-50, -under-100, /last-minute-mothers-day-gifts and
+/gifts/last-minute-mothers-day) now say 2027 in titles, meta, keywords, H1s,
+copy, FAQ (and so FAQPage schema) and ItemList names. The date is Sunday,
+May 9, 2027 (second Sunday of May). The hero image keeps its
+mothers-day-hero-2026.jpg filename (no visible text). The "What Mother's Day
+gifts are trending in 2026?" FAQ became "What Mother's Day gifts are popular
+right now?" and lost its "fastest-growing" claim: relabeling 2026 trend
+observations as a 2027 forecast would be unsupported. Sitemap lastModified
+2026-11-01 for all seven.
+
+MothersDayBanner (homepage) previously had only an end date, so moving that
+to 2027 would have shown it immediately, alongside Christmas. It now has a
+start date: shows 2027-04-01 to 2027-05-09, switches to the last-minute
+message from May 7, new dismiss key. April 1 matches SeasonalBanner, which
+stays quiet in April and May and leaves them to this banner.

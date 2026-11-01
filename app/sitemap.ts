@@ -21,6 +21,13 @@ const LAST_REVIEWED: Record<string, string> = {
   '/last-minute-christmas-gifts': '2026-11-01',
   '/hanukkah-gifts': '2026-11-01',
   '/last-minute-gift-ideas': '2026-11-01',
+  '/mothers-day-gifts': '2026-11-01',
+  '/mothers-day-gifts-for-wife': '2026-11-01',
+  '/mothers-day-gifts-under-25': '2026-11-01',
+  '/mothers-day-gifts-under-50': '2026-11-01',
+  '/mothers-day-gifts-under-100': '2026-11-01',
+  '/last-minute-mothers-day-gifts': '2026-11-01',
+  '/gifts/last-minute-mothers-day': '2026-11-01',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

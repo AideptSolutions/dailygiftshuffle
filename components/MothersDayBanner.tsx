@@ -3,16 +3,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const DISMISS_KEY = 'md-banner-dismissed-2026';
-const HIDE_AFTER = new Date('2026-05-12');
-const LAST_MINUTE_CUTOFF = new Date('2026-05-09');
+// Mother's Day 2027 is Sunday, May 9. The banner runs April 1 through the day
+// after (SeasonalBanner stays quiet in April and May and leaves them to this one),
+// so it does not appear during the Christmas season.
+const DISMISS_KEY = 'md-banner-dismissed-2027';
+const SHOW_FROM = new Date('2027-04-01');
+const HIDE_AFTER = new Date('2027-05-10');
+const LAST_MINUTE_CUTOFF = new Date('2027-05-07');
 
 export default function MothersDayBanner() {
   const [visible, setVisible] = useState(false);
   const [isLastMinute, setIsLastMinute] = useState(false);
 
   useEffect(() => {
-    if (new Date() >= HIDE_AFTER) return;
+    const now = new Date();
+    if (now < SHOW_FROM || now >= HIDE_AFTER) return;
     if (localStorage.getItem(DISMISS_KEY)) return;
     setIsLastMinute(new Date() >= LAST_MINUTE_CUTOFF);
     setVisible(true);
@@ -36,11 +41,11 @@ export default function MothersDayBanner() {
           href="/last-minute-mothers-day-gifts"
           className="text-white text-sm font-semibold tracking-wide hover:underline underline-offset-2"
         >
-          Mother&apos;s Day is May 10! Last-minute picks, plus digital gifts sent by email →
+          Mother&apos;s Day is May 9! Last-minute picks, plus digital gifts sent by email →
         </Link>
       ) : (
         <span className="text-white text-sm font-semibold tracking-wide">
-          Mother&apos;s Day is May 10:{' '}
+          Mother&apos;s Day is May 9:{' '}
           <Link href="/mothers-day-gifts" className="underline underline-offset-2 hover:opacity-90">
             Shop the Best Gifts for Mom
           </Link>

@@ -9,16 +9,16 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Last-Minute Mother's Day Gifts 2026: Top-Rated Picks | TheGiftShuffle",
+  title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks | TheGiftShuffle",
   description:
-    "Last-minute Mother's Day gift ideas for 2026: top-rated spa sets, skincare, jewelry, and more, sorted by rating so you can decide fast.",
+    "Last-minute Mother's Day gift ideas for 2027: top-rated spa sets, skincare, jewelry, and more, sorted by rating so you can decide fast.",
   keywords: [
     "last minute mothers day gifts",
     "last minute mothers day gift ideas",
-    "last minute mothers day 2026",
+    "last minute mothers day 2027",
   ],
   openGraph: {
-    title: "Last-Minute Mother's Day Gifts 2026: Top-Rated Picks | TheGiftShuffle",
+    title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks | TheGiftShuffle",
     description:
       "Top-rated last-minute Mother's Day gifts: spa sets, skincare, jewelry, and more.",
     type: 'website',
@@ -52,7 +52,7 @@ const breadcrumbSchema = {
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: "Last-Minute Mother's Day Gifts 2026",
+  name: "Last-Minute Mother's Day Gifts 2027",
   description: "Top-rated last-minute Mother's Day gifts, curated by TheGiftShuffle",
   url: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts',
   numberOfItems: lastMinuteProducts.length,
@@ -84,8 +84,8 @@ const faqs = [
     a: "Skip the gift card and pick something specific: a custom star map that delivers digitally, an engraved piece of jewelry, or a curated spa set in nice packaging. Add a short handwritten note and it reads thoughtful, not rushed.",
   },
   {
-    q: "When is Mother's Day 2026?",
-    a: "Mother's Day 2026 is Sunday, May 10. Order physical gifts as early as you can and check the estimated delivery date at checkout; if it lands too late, choose a digital gift instead.",
+    q: "When is Mother's Day 2027?",
+    a: "Mother's Day 2027 is Sunday, May 9. Order physical gifts as early as you can and check the estimated delivery date at checkout; if it lands too late, choose a digital gift instead.",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function LastMinuteMothersDayPage() {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            Last-Minute Mother&apos;s Day Gifts 2026
+            Last-Minute Mother&apos;s Day Gifts 2027
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-3">
             Still haven&apos;t ordered yet? These are the top-rated picks, sorted by rating and review count

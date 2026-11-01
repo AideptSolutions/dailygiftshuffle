@@ -9,20 +9,20 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Best Mother's Day Gifts for Wife 2026 | TheGiftShuffle",
+  title: "Best Mother's Day Gifts for Wife 2027 | TheGiftShuffle",
   description:
-    "Find the best Mother's Day gifts for your wife in 2026. Thoughtful picks she will actually love: spa sets, jewelry, skincare, cozy upgrades, and more for every budget.",
+    "Find the best Mother's Day gifts for your wife in 2027. Thoughtful picks she will actually love: spa sets, jewelry, skincare, cozy upgrades, and more for every budget.",
   keywords: [
     "mothers day gifts for wife",
     "mothers day gift ideas for wife",
-    "best mothers day gifts for wife 2026",
+    "best mothers day gifts for wife 2027",
     "mothers day gifts for her",
     "wife mothers day gifts",
   ],
   openGraph: {
-    title: "Best Mother's Day Gifts for Wife 2026 | TheGiftShuffle",
+    title: "Best Mother's Day Gifts for Wife 2027 | TheGiftShuffle",
     description:
-      "Browse the best Mother's Day gifts for your wife in 2026: spa sets, jewelry, skincare, and more.",
+      "Browse the best Mother's Day gifts for your wife in 2027: spa sets, jewelry, skincare, and more.",
     type: 'website',
     url: 'https://www.thegiftshuffle.com/mothers-day-gifts-for-wife',
   },
@@ -82,8 +82,8 @@ const faqs = [
     a: "Romantic picks lean personal: a custom star map of a meaningful date, engraved birthstone jewelry, a couples spa set, or a framed photo book of the year. The romance is in the specificity, not the dollar amount.",
   },
   {
-    q: "When is Mother's Day 2026?",
-    a: "Mother's Day 2026 is Sunday, May 10. It always falls on the second Sunday of May. Order physical gifts early and check the estimated delivery date at checkout before you buy.",
+    q: "When is Mother's Day 2027?",
+    a: "Mother's Day 2027 is Sunday, May 9. It always falls on the second Sunday of May. Order physical gifts early and check the estimated delivery date at checkout before you buy.",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function MothersDayGiftsForWifePage() {
         {/* Hero */}
         <section className="max-w-5xl mx-auto px-4 pt-8 pb-6 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
-            Mother&apos;s Day Gifts for Wife 2026
+            Mother&apos;s Day Gifts for Wife 2027
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             She runs the household, shows up for the kids, and probably hasn&apos;t taken a real break in months.

@@ -10,20 +10,20 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Mother's Day Gifts: The Best Picks for 2026 | TheGiftShuffle",
+  title: "Mother's Day Gifts: The Best Picks for 2027 | TheGiftShuffle",
   description:
-    "Find the best Mother's Day gifts for 2026: personalized jewelry, spa sets, premium kitchen gadgets, and thoughtful picks for every budget. Don't wait until the last minute.",
+    "Find the best Mother's Day gifts for 2027: personalized jewelry, spa sets, premium kitchen gadgets, and thoughtful picks for every budget. Don't wait until the last minute.",
   keywords: [
     "mothers day gifts",
     "mothers day gift ideas",
-    "best mothers day gifts 2026",
+    "best mothers day gifts 2027",
     "unique mothers day gifts",
     "mothers day gifts for mom",
   ],
   openGraph: {
-    title: "Mother's Day Gifts: The Best Picks for 2026 | TheGiftShuffle",
+    title: "Mother's Day Gifts: The Best Picks for 2027 | TheGiftShuffle",
     description:
-      "Browse the best Mother's Day gifts for 2026: personalized jewelry, spa sets, kitchen upgrades, and more.",
+      "Browse the best Mother's Day gifts for 2027: personalized jewelry, spa sets, kitchen upgrades, and more.",
     type: 'website',
     url: 'https://www.thegiftshuffle.com/mothers-day-gifts',
     images: [
@@ -49,8 +49,8 @@ const mothersDayProducts = products.filter(
 
 const faqs = [
   {
-    q: "What are the best Mother's Day gifts in 2026?",
-    a: "The best Mother's Day gifts in 2026 are personalized jewelry (name necklaces, birthstone rings), premium spa and self-care sets, experience gifts (cooking classes, afternoon tea, wine tasting), smart kitchen gadgets she wouldn't buy herself, and subscription boxes tailored to her interests. These are the categories with the highest gifting satisfaction scores. She actually uses and remembers them.",
+    q: "What are the best Mother's Day gifts in 2027?",
+    a: "The best Mother's Day gifts in 2027 are personalized jewelry (name necklaces, birthstone rings), premium spa and self-care sets, experience gifts (cooking classes, afternoon tea, wine tasting), smart kitchen gadgets she wouldn't buy herself, and subscription boxes tailored to her interests. These are the categories with the highest gifting satisfaction scores. She actually uses and remembers them.",
   },
   {
     q: "What does every mom want for Mother's Day?",
@@ -73,12 +73,12 @@ const faqs = [
     a: "Last-minute Mother's Day gifts that still feel intentional: a top-rated spa set or candle collection, an insulated tumbler in her favorite color, a digital gift card for a spa or restaurant experience (sent by email instead of shipped), or a personalized mug. Check the delivery estimate at checkout before you order. If you have more time, even a hand-written letter with a printed photo can be more meaningful than a rushed purchase.",
   },
   {
-    q: "What are the best self-care gifts for Mom in 2026?",
-    a: "The best self-care gifts for Mom in 2026 center on her daily rituals: aromatherapy shower steamers that turn her morning shower into a spa moment, under-eye patches and sheet masks she can use during a quiet evening, luxury skincare serums that improve how her skin looks and feels, and soft loungewear or pajamas that upgrade her downtime. Gifts that improve her everyday routine are what resonate most this year.",
+    q: "What are the best self-care gifts for Mom in 2027?",
+    a: "The best self-care gifts for Mom in 2027 center on her daily rituals: aromatherapy shower steamers that turn her morning shower into a spa moment, under-eye patches and sheet masks she can use during a quiet evening, luxury skincare serums that improve how her skin looks and feels, and soft loungewear or pajamas that upgrade her downtime. Gifts that improve her everyday routine are what resonate most this year.",
   },
   {
-    q: "What Mother's Day gifts are trending in 2026?",
-    a: "The biggest Mother's Day gift trends in 2026: shower steamers and aromatherapy products (fastest-growing self-care category), Korean beauty-inspired skincare rituals (sheet masks, serums, under-eye patches), luxury pajamas and satin loungewear sets, curated spa gift boxes, and premium skincare from La Roche-Posay, The Ordinary, Sunday Riley, and Shiseido. Experiential, restorative gifts are outperforming traditional flower/candy gifting.",
+    q: "What Mother's Day gifts are popular right now?",
+    a: "The most popular Mother's Day gift categories right now: shower steamers and aromatherapy products, Korean beauty-inspired skincare rituals (sheet masks, serums, under-eye patches), luxury pajamas and satin loungewear sets, curated spa gift boxes, and premium skincare from La Roche-Posay, The Ordinary, Sunday Riley, and Shiseido. Experiential, restorative gifts are outperforming traditional flower/candy gifting.",
   },
 ];
 
@@ -140,10 +140,10 @@ export default function MothersDayGiftsPage() {
               Mother&apos;s Day Gifts
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-              Mother&apos;s Day 2026 is Sunday, May 10. This year, the gifts that matter most aren&apos;t the flashiest ones. They&apos;re the ones that give her something she&apos;d never carve out for herself: time to slow down, a bathroom that feels like a spa, skin that finally gets the care it deserves, and the kind of cozy comfort that doesn&apos;t require an occasion.
+              Mother&apos;s Day 2027 is Sunday, May 9. This year, the gifts that matter most aren&apos;t the flashiest ones. They&apos;re the ones that give her something she&apos;d never carve out for herself: time to slow down, a bathroom that feels like a spa, skin that finally gets the care it deserves, and the kind of cozy comfort that doesn&apos;t require an occasion.
             </p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Every pick below is hand-curated for 2026. Shower steamers she&apos;ll actually use, skincare from brands worth the investment, pajamas soft enough to change how her mornings feel, and spa sets that turn an ordinary Tuesday night into something she looks forward to.
+              Every pick below is hand-curated for 2027. Shower steamers she&apos;ll actually use, skincare from brands worth the investment, pajamas soft enough to change how her mornings feel, and spa sets that turn an ordinary Tuesday night into something she looks forward to.
             </p>
           </div>
         </section>
@@ -173,7 +173,7 @@ export default function MothersDayGiftsPage() {
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Here&apos;s what nobody says out loud but everyone knows: Mom spends most of the year taking care of other people. She&apos;s the one who notices when you&apos;re running low on things. She reorganizes the fridge, remembers the dentist appointment, and stays up worrying when she should be sleeping. The best Mother&apos;s Day gift in 2026 is a signal that you see her. That you want her to finally have a moment that&apos;s entirely her own.
+            Here&apos;s what nobody says out loud but everyone knows: Mom spends most of the year taking care of other people. She&apos;s the one who notices when you&apos;re running low on things. She reorganizes the fridge, remembers the dentist appointment, and stays up worrying when she should be sleeping. The best Mother&apos;s Day gift in 2027 is a signal that you see her. That you want her to finally have a moment that&apos;s entirely her own.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-8">
@@ -212,7 +212,7 @@ export default function MothersDayGiftsPage() {
             <CategoryIcon slug="droplet" className="inline-block w-5 h-5 mr-2 align-text-bottom text-coral" aria-hidden="true" />The Spa Night In a Box
           </h3>
           <p className="text-gray-700 leading-relaxed mb-2">
-            There&apos;s something about a beautifully packaged spa gift set that does something no individual product can: it gives her a full evening. A bath bomb for the tub, a face mask for after, a silk sleep mask for when she finally gets into bed. The best sets in 2026 are gift-ready out of the box, filled with enough variety that she can mix and match depending on how much time and energy she has. You&apos;re not just giving her products. You&apos;re giving her a night to herself.
+            There&apos;s something about a beautifully packaged spa gift set that does something no individual product can: it gives her a full evening. A bath bomb for the tub, a face mask for after, a silk sleep mask for when she finally gets into bed. The best sets in 2027 are gift-ready out of the box, filled with enough variety that she can mix and match depending on how much time and energy she has. You&apos;re not just giving her products. You&apos;re giving her a night to herself.
           </p>
         </section>
 
