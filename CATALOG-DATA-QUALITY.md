@@ -566,3 +566,48 @@ the items return on their own: lib/season.ts isInSeason() hides tag
 - Verified: feed 1,041 items with 0 Halloween (1,061 / 20 with
   ?season=all); the three Halloween pages still list them; gifts-under-25,
   white-elephant, gift-ideas-for-mom, category/home and the homepage show none.
+
+## Category depth batch 1: pets, sports, travel (2026-11-01)
+
+Owner asked to deepen the thin category shuffles (target 60 each, looser bar:
+4.3+ rating and 300+ reviews). 81 products added in section "CATEGORY DEPTH
+2026-11: PETS, SPORTS, TRAVEL" (ids pet26-*, spt26-*, trv26-*). Totals go
+pets 33 -> 65, sports 37 -> 61, travel 37 -> 64 (some items carry
+cross-tags: car-accessories, kitchen, beauty, outdoors, office).
+
+Sourcing and verification (all from a real amazon.com tab in the built-in
+browser, same-origin fetch; the pane must not use setTimeout delays because
+hidden-pane timers are throttled to about one per minute):
+- Candidates: ~24 Amazon searches per category parsed for ASIN, rating,
+  review count and price, then hand-picked for giftability and brand.
+- Each pick re-read on its /dp/ page: title, rating, reviews, price, In
+  Stock, seller and fulfiller. Dropped: Callaway 300 Pro rangefinder and
+  Crankbrothers M19 (third-party sellers), Funko Michael Jordan (third-party
+  seller, counterfeit risk), GoSports Slammo (Spikeball clone), Samsonite
+  Omni and Winfield 2 (third-party sellers), MATEIN carry-on and TRIPPED
+  cubes (duplicates of picks or existing items).
+- Description claims checked against the listing's feature bullets; eight
+  travel descriptions and several sports ones were corrected before adding.
+- Logged in scripts/amazon-live.csv.
+
+Images (Serper and both Serper keys out of credits, SerpAPI at 42 searches,
+OpenAI out of credits on 2026-11-01): Bing image search run from the browser
+pane (scripts cannot read Bing image results; they get a stripped page), the
+results ranked in-page with the same rules as scripts/lib/image-search.mjs
+(Amazon, eBay, AliExpress, Temu, Shopee, Pinterest and similar blocked), then
+downloaded locally and normalized to 800x800 contain-on-white. Provenance in
+data/image-sources.json (provider "bing-browser-2026-11").
+- Every image audited on numbered contact sheets. First pass: 45 of 81 were
+  wrong or unusable (German Kobe edition, "50 States 1000 Eats" instead of
+  5000 Ideas, UNO Deluxe instead of UNO NFL, a cowboy-boot mug, a framed
+  sign instead of the memorial blanket, a webpage screenshot, a child in the
+  seat-cover shot, legs in the sock shot, marketing infographics, wrong
+  colors and pack sizes, a "Lumabone" knockoff for Benebone). A targeted
+  second search returned eight candidates per product, rendered one row per
+  product, and each replacement was picked by eye; Amazon listing images
+  were viewed as reference only (lesotc, URPOWER, Kitty City pads, Karma
+  mug), never used.
+- Accepted with minor caveats: some pet products show the pet (fine for pet
+  gear), Muddy Mat keeps its color-swatch strip, EverSnug is shown in green
+  (listing is light pink), Travelpro in blue (listing is black), Kitty City
+  tunnel bed has two small arrows.
