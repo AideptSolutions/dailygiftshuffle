@@ -397,3 +397,12 @@ after mount (hydration-safe, same pattern as before).
 - Mobile: the hero backdrop's decorated edges crop out at phone width (same
   as the evergreen hero); the festive cues on phones are the banner, chip,
   headline and the holiday guides block.
+
+## 2026-11-01: Inline shuffle deals 8 cards
+
+Owner asked for 8 cards per shuffle, first on the Gift Genie page, then on
+every guide. `components/InlineShuffle.tsx` now defaults `count` to 8 (two
+rows of 4 on desktop, four rows of 2 on phones); the riffle animation runs
+per row of 4. This covers every guide (including GiftGuideTemplate pages)
+and the /category pages. Checked in the build output: all 120 pages with a
+shuffle panel render 8 cards on first paint, so no pool is short of 8.

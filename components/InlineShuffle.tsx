@@ -11,7 +11,7 @@ interface Props {
   /** Optional feed (e.g. /api/products/all) loaded after mount to widen the deck
    *  beyond the server-rendered `products`, which stay as the first paint. */
   catalogUrl?: string;
-  /** Cards per deal. Default 4 (one row); the Gift Genie page uses 8. */
+  /** Cards per deal. Default 8 (two rows of 4 on desktop). */
   count?: number;
 }
 
@@ -41,7 +41,7 @@ function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = [])
   return shuffled.slice(0, n);
 }
 
-export default function InlineShuffle({ products, heading = 'Shuffle Picks', catalogUrl, count = 4 }: Props) {
+export default function InlineShuffle({ products, heading = 'Shuffle Picks', catalogUrl, count = 8 }: Props) {
   const [pool, setPool] = useState<CompactProduct[]>(products);
 
   useEffect(() => {
