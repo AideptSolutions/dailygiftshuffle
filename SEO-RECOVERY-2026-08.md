@@ -372,3 +372,27 @@ the Nov-Dec peak (it is 78 percent of Bing clicks). Changes:
   homepage tile already linked to it.
 Measure: Bing page traffic for /stocking-stuffers (position and CTR) in
 the mid-November export.
+
+## 2026-11-01: holiday season build-out
+
+Phase 1 (homepage/nav festive layer, see VISUALS-PLAN.md) shipped first.
+Phase 2 adds six seasonal pages, each with a generated house-style hero,
+answer block, FAQs, an Updated line + WebPage dateModified, and a sitemap
+lastmod:
+- /christmas-gifts-for-mom, /christmas-gifts-for-dad, /christmas-gifts-for-kids,
+  /christmas-gifts-for-teens. To avoid near-duplicates of the evergreen
+  guides (the July demotion's doorway lesson), each grid uses a Christmas
+  angle (cozy winter for mom, winter gear/coffee/grilling for dad, 2026 hot
+  toys for kids, trending picks for teens). Overlap with the evergreen guide,
+  as a share of the new page: mom 39%, dad 8%, kids 6%, teens 6%.
+  Lesson: name-regex boosts need word boundaries ("ugg" matched Luggage,
+  "thermos" Thermostat, "lip" Non-Slip).
+- /last-minute-christmas-gifts: 8 instant digital gift cards lead, then
+  high-review crowd-pleasers; made-to-order items excluded. The December
+  banner now links here (and no longer promises fast shipping).
+- /hanukkah-gifts: Hanukkah 2026 is sundown Fri Dec 4 to nightfall Sat Dec
+  12 (hebcal.com). Six Hanukkah essentials lead, then non-Christmas gifts.
+- Wiring: homepage Holiday Guides (12 cards), Categories menu, Christmas hub
+  "Shop Christmas by List" (10), trending page, for-her/for-him, and the
+  mom/dad/kids stocking pages' next-step links and return nudges now point to
+  the matching Christmas page.

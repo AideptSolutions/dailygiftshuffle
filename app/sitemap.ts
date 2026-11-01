@@ -14,6 +14,12 @@ const NICHES = [
 // line). Bing weighs lastmod for seasonal queries; never bump without a review.
 const LAST_REVIEWED: Record<string, string> = {
   '/stocking-stuffers': '2026-10-30',
+  '/christmas-gifts-for-mom': '2026-11-01',
+  '/christmas-gifts-for-dad': '2026-11-01',
+  '/christmas-gifts-for-kids': '2026-11-01',
+  '/christmas-gifts-for-teens': '2026-11-01',
+  '/last-minute-christmas-gifts': '2026-11-01',
+  '/hanukkah-gifts': '2026-11-01',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -107,6 +113,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/secret-santa-gifts',
     '/christmas-gifts-for-her',
     '/christmas-gifts-for-him',
+    '/christmas-gifts-for-mom',
+    '/christmas-gifts-for-dad',
+    '/christmas-gifts-for-kids',
+    '/christmas-gifts-for-teens',
+    '/last-minute-christmas-gifts',
+    '/hanukkah-gifts',
     '/retirement-gifts',
     '/gifts-for-people-who-have-everything',
     '/housewarming-gifts',

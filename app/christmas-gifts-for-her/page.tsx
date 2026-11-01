@@ -109,6 +109,7 @@ export default function Page() {
       relatedLinks={[
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
+        { href: '/christmas-gifts-for-mom', label: 'Christmas Gifts for Mom' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/luxury-gifts-for-her', label: 'Luxury Gifts for Her' },
         { href: '/stocking-stuffers', label: 'Stocking Stuffers' },

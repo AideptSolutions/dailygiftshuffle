@@ -17,6 +17,12 @@ const HOLIDAY_GUIDES: { href: string; label: string }[] = [
   { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
   { href: '/christmas-gifts-for-her', label: 'Christmas for Her' },
   { href: '/christmas-gifts-for-him', label: 'Christmas for Him' },
+  { href: '/christmas-gifts-for-mom', label: 'Christmas for Mom' },
+  { href: '/christmas-gifts-for-dad', label: 'Christmas for Dad' },
+  { href: '/christmas-gifts-for-kids', label: 'Christmas for Kids' },
+  { href: '/christmas-gifts-for-teens', label: 'Christmas for Teens' },
+  { href: '/last-minute-christmas-gifts', label: 'Last-Minute Gifts' },
+  { href: '/hanukkah-gifts', label: 'Hanukkah Gifts' },
   { href: '/secret-santa-gifts', label: 'Secret Santa' },
   { href: '/white-elephant-gifts', label: 'White Elephant' },
 ];

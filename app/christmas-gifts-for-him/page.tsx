@@ -92,7 +92,7 @@ export default function Page() {
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
         { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
-        { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
+        { href: '/christmas-gifts-for-dad', label: 'Christmas Gifts for Dad' },
         { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
         { href: '/best-gaming-gifts-2026', label: 'Best Gaming Gifts 2026' },
       ]}

@@ -150,9 +150,14 @@ export default function ChristmasGiftIdeasPage() {
             {[
               { href: '/christmas-gifts-for-her', label: 'For Her', desc: 'Wife, girlfriend, mom' },
               { href: '/christmas-gifts-for-him', label: 'For Him', desc: 'Husband, boyfriend, dad' },
+              { href: '/christmas-gifts-for-mom', label: 'For Mom', desc: 'Cozy and thoughtful' },
+              { href: '/christmas-gifts-for-dad', label: 'For Dad', desc: 'Gifts he will use' },
+              { href: '/christmas-gifts-for-kids', label: 'For Kids', desc: 'The hot toys of 2026' },
+              { href: '/christmas-gifts-for-teens', label: 'For Teens', desc: 'What they actually want' },
               { href: '/stocking-stuffers', label: 'Stocking Stuffers', desc: 'Small gifts under $25' },
-              { href: '/white-elephant-gifts', label: 'White Elephant', desc: 'Gag gifts and steals' },
               { href: '/secret-santa-gifts', label: 'Secret Santa', desc: 'Office and friend swaps' },
+              { href: '/white-elephant-gifts', label: 'White Elephant', desc: 'Gag gifts and steals' },
+              { href: '/last-minute-christmas-gifts', label: 'Last-Minute', desc: 'Instant digital gifts' },
             ].map((c) => (
               <Link
                 key={c.href}

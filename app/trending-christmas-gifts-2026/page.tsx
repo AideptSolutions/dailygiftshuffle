@@ -108,10 +108,11 @@ export default function Page() {
         { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
         { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
         { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
-        { href: '/gift-ideas-for-kids', label: 'Gift Ideas for Kids' },
+        { href: '/christmas-gifts-for-kids', label: 'Christmas Gifts for Kids' },
+        { href: '/christmas-gifts-for-teens', label: 'Christmas Gifts for Teens' },
         { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
         { href: '/white-elephant-gifts', label: 'White Elephant Gifts' },
-        { href: '/gifts-under-50', label: 'Gifts Under $50' },
+        { href: '/last-minute-christmas-gifts', label: 'Last-Minute Christmas Gifts' },
       ]}
     />
   );

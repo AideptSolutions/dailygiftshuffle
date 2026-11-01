@@ -97,13 +97,13 @@ export default function Page() {
         heading: 'Dad\'s Stocking Is Sorted. Now His Main Gift',
         text: 'The gift under the tree for dad: tools, tech and things he will use daily.',
         links: [
-          { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
+          { href: '/christmas-gifts-for-dad', label: 'Christmas Gifts for Dad' },
           { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
           { href: '/gifts-for-people-who-have-everything', label: 'For People Who Have Everything' },
           { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
         ],
       }}
-      nudge={{ href: '/gift-ideas-for-dad', title: 'Dad\'s stocking is sorted?', cta: 'Now find his main gift' }}
+      nudge={{ href: '/christmas-gifts-for-dad', title: 'Dad\'s stocking is sorted?', cta: 'Now find his main gift' }}
       relatedHeading="More Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers', label: 'All Stocking Stuffers' },

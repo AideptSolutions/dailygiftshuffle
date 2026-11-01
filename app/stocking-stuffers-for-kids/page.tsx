@@ -115,8 +115,8 @@ export default function Page() {
         text: 'The hottest toys of 2026 sell out first: KPop Demon Hunters, Bluey, Hatchin\' Yoshi and more.',
         links: [
           { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
-          { href: '/gift-ideas-for-kids', label: 'Gift Ideas for Kids' },
-          { href: '/gift-ideas-for-teens', label: 'Gift Ideas for Teens' },
+          { href: '/christmas-gifts-for-kids', label: 'Christmas Gifts for Kids' },
+          { href: '/christmas-gifts-for-teens', label: 'Christmas Gifts for Teens' },
           { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         ],
       }}

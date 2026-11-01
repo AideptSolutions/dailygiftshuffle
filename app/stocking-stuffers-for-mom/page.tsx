@@ -97,13 +97,13 @@ export default function Page() {
         heading: 'Mom\'s Stocking Is Sorted. Now Her Main Gift',
         text: 'The gift under the tree for mom: comfort, self-care and little luxuries.',
         links: [
-          { href: '/gift-ideas-for-mom', label: 'Gift Ideas for Mom' },
+          { href: '/christmas-gifts-for-mom', label: 'Christmas Gifts for Mom' },
           { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
           { href: '/self-care-gifts', label: 'Self-Care Gifts' },
           { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
         ],
       }}
-      nudge={{ href: '/gift-ideas-for-mom', title: 'Mom\'s stocking is sorted?', cta: 'Now find her main gift' }}
+      nudge={{ href: '/christmas-gifts-for-mom', title: 'Mom\'s stocking is sorted?', cta: 'Now find her main gift' }}
       relatedHeading="More Gift Guides"
       relatedLinks={[
         { href: '/stocking-stuffers', label: 'All Stocking Stuffers' },
