@@ -23,6 +23,22 @@ export function isChristmasSeason(now: Date = new Date()): boolean {
   return month === 11 || (month === 12 && day <= 25);
 }
 
+/** Halloween party season: September and October, US Eastern. */
+export function isHalloweenSeason(now: Date = new Date()): boolean {
+  const { month } = easternParts(now);
+  return month === 9 || month === 10;
+}
+
+/**
+ * Seasonal catalog visibility. Halloween items (tag 'halloween') are offered
+ * only in Halloween season; the rest of the year they are hidden from every
+ * shuffle, guide, the Genie and the feed, and only the Halloween pages
+ * themselves (which keep their rankings) still list them.
+ */
+export function isInSeason(p: { tags?: readonly string[] }, now: Date = new Date()): boolean {
+  return !p.tags?.includes('halloween') || isHalloweenSeason(now);
+}
+
 /** Whole days from today (Eastern) until Dec 25; 0 on Christmas Day. */
 export function daysUntilChristmas(now: Date = new Date()): number {
   const { year, month, day } = easternParts(now);

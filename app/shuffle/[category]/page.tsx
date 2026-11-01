@@ -7,7 +7,7 @@ import ShuffleGrid from './ShuffleGrid';
 import GuideLinkCards from '@/components/GuideLinkCards';
 import { guideImageFor } from '@/lib/guideImages';
 import { CATEGORY_META } from './categoryMeta';
-import { ALL } from '@/lib/giftSelect';
+import { ALL, ALL_INCL_SEASONAL } from '@/lib/giftSelect';
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_META).map((category) => ({ category }));
@@ -56,7 +56,7 @@ export default function CategoryShufflePage({ params }: { params: { category: st
   // see structured product data (the client grid shuffles a random subset).
   const BASE = 'https://www.thegiftshuffle.com';
   const absImg = (img: string) => (img?.startsWith('http') ? img : `${BASE}${img}`);
-  const schemaProducts = ALL.filter((p) => p.tags?.includes(category) && p.rating >= 4.3)
+  const schemaProducts = (category === 'halloween' ? ALL_INCL_SEASONAL : ALL).filter((p) => p.tags?.includes(category) && p.rating >= 4.3)
     .sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0))
     .slice(0, 12);
   const itemListSchema =

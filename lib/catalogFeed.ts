@@ -6,6 +6,7 @@
 
 import { products as recipientCatalog } from '@/data/products';
 import productCatalog from '@/data/products-catalog';
+import { isInSeason } from '@/lib/season';
 
 export interface FeedProduct {
   id: string;
@@ -60,8 +61,14 @@ export interface CatalogWithAliases {
   aliases: Record<string, string>;
 }
 
-export async function getFullCatalog(): Promise<FeedProduct[]> {
-  return (await getFullCatalogWithAliases()).products;
+export interface CatalogOptions {
+  /** Include out-of-season items (Halloween outside Sep-Oct). Only the
+   *  seasonal pages ask for this; everything else gets the in-season feed. */
+  includeOffSeason?: boolean;
+}
+
+export async function getFullCatalog(opts: CatalogOptions = {}): Promise<FeedProduct[]> {
+  return (await getFullCatalogWithAliases(opts)).products;
 }
 
 // Ids of admin products retired in the 2026-10-29 merge whose ASIN already had
@@ -75,7 +82,7 @@ const RETIRED_ADMIN_IDS: Record<string, string> = {
   'admin-1775085313965-n7dj7': 'college-airpods',
 };
 
-export async function getFullCatalogWithAliases(): Promise<CatalogWithAliases> {
+export async function getFullCatalogWithAliases(opts: CatalogOptions = {}): Promise<CatalogWithAliases> {
   const merged: FeedProduct[] = [];
   const keptIdByKey = new Map<string, string>();
   const aliases: Record<string, string> = { ...RETIRED_ADMIN_IDS };
@@ -91,5 +98,8 @@ export async function getFullCatalogWithAliases(): Promise<CatalogWithAliases> {
     if (key) keptIdByKey.set(key, p.id);
     merged.push(normalize(p));
   }
-  return { products: merged, aliases };
+  // Season is checked per call (not at module load) so Halloween items return
+  // on Sep 1 with no deploy. Dedupe runs first, so aliases stay complete.
+  const products = opts.includeOffSeason ? merged : merged.filter((p) => isInSeason(p));
+  return { products, aliases };
 }

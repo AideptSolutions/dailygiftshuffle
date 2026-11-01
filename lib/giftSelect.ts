@@ -8,6 +8,7 @@
 import { products as recipientProducts } from '@/data/products';
 import catalog from '@/data/products-catalog';
 import type { CompactProduct } from '@/components/ProductCard';
+import { isInSeason } from '@/lib/season';
 
 export interface AnyProduct {
   id: string;
@@ -37,19 +38,26 @@ export const RECIPIENT: AnyProduct[] = recipientProducts as AnyProduct[];
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 const seenId = new Set<string>();
 const seenName = new Set<string>();
-// Hanukkah-only items (menorahs, dreidels, gelt) stay out of ALL: many guides
-// select by price or recipient alone (stocking stuffers, Secret Santa), and a
-// menorah does not belong in a Christmas stocking grid. /hanukkah-gifts draws
-// from ALL_WITH_HANUKKAH instead.
-export const ALL_WITH_HANUKKAH: AnyProduct[] = [];
+// Every product, seasonal ones included. Only the seasonal pages draw from it
+// directly: /hanukkah-gifts, and the Halloween guide, category and shuffle.
+export const ALL_INCL_SEASONAL: AnyProduct[] = [];
 for (const p of [...recipientProducts, ...catalog] as AnyProduct[]) {
   const nameKey = norm(p.name);
   if (seenId.has(p.id) || seenName.has(nameKey)) continue;
   seenId.add(p.id);
   seenName.add(nameKey);
-  ALL_WITH_HANUKKAH.push(p);
+  ALL_INCL_SEASONAL.push(p);
 }
-export const ALL: AnyProduct[] = ALL_WITH_HANUKKAH.filter((p) => !p.occasions?.includes('hanukkah'));
+// The default pool for every other guide:
+// - Hanukkah-only items (menorahs, dreidels, gelt) are always left out: many
+//   guides select by price or recipient alone (stocking stuffers, Secret
+//   Santa), and a menorah does not belong in a Christmas stocking grid.
+// - Halloween items are left out outside Sep-Oct (lib/season.ts). Guides are
+//   static, so this is evaluated at build time; the live feed re-checks per
+//   request (lib/catalogFeed.ts).
+export const ALL: AnyProduct[] = ALL_INCL_SEASONAL.filter(
+  (p) => !p.occasions?.includes('hanukkah') && isInSeason(p),
+);
 
 // Items that win on review volume but are not giftable headliners.
 const DEFAULT_EXCLUDE_RECIPIENTS = ['baby', 'pets'];

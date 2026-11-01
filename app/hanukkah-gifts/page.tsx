@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, variantKey, ALL_WITH_HANUKKAH as POOL } from '@/lib/giftSelect';
+import { curate, shufflePool, variantKey, ALL_INCL_SEASONAL as POOL } from '@/lib/giftSelect';
 
 const URL = 'https://www.thegiftshuffle.com/hanukkah-gifts';
 

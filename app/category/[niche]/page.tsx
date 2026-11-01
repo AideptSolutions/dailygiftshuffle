@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import type { NicheTag } from '@/data/products-catalog';
-import { ALL } from '@/lib/giftSelect';
+import { ALL, ALL_INCL_SEASONAL } from '@/lib/giftSelect';
 
 type Niche = NicheTag;
 
@@ -509,7 +509,10 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
 
   // Draw from BOTH catalogs (deduped) and lead with social proof, so category
   // pages show the full depth of the niche rather than 12 arbitrary items.
-  const filtered = ALL
+  // The Halloween category keeps its items year-round (out of season they are
+  // hidden everywhere else); every other category uses the in-season pool.
+  const source = params.niche === 'halloween' ? ALL_INCL_SEASONAL : ALL;
+  const filtered = source
     .filter((p) => p.tags?.includes(params.niche as Niche))
     .sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0));
   const trendingPicks = filtered.slice(0, 24);

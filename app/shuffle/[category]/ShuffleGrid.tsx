@@ -32,7 +32,9 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
   useEffect(() => {
-    fetch('/api/products/all')
+    // The Halloween shuffle keeps its items year-round; every other shuffle
+    // gets the in-season feed.
+    fetch(tag === 'halloween' ? '/api/products/all?season=all' : '/api/products/all')
       .then((r) => (r.ok ? r.json() : []))
       .then((data: Product[]) => {
         setCatalog(data);

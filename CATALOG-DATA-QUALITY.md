@@ -548,3 +548,21 @@ winter holidays (Christmas guides, the shuffle's Holiday filter, the Genie),
 while the Halloween guide selects by tag, so their occasions are now
 ['just-because']. A name scan found no untagged Halloween items left on
 'holiday'.
+
+### Halloween items hidden off-season (2026-11-01)
+
+Owner asked to remove Halloween items from the catalog until next September.
+Implemented as a seasonal gate rather than a delete, so nothing is lost and
+the items return on their own: lib/season.ts isInSeason() hides tag
+'halloween' outside Sep-Oct (US Eastern).
+- lib/giftSelect ALL (every guide) excludes them off-season; it is evaluated
+  at build time, so a deploy on or after Sep 1 brings them back to guides.
+- lib/catalogFeed (the /api/products/all feed behind the homepage, Find a
+  Gift, search, category shuffles and the Gift Genie) checks the season per
+  request, so the feed flips back on Sep 1 with no deploy.
+- The Halloween pages keep their products all year to hold their rankings:
+  /halloween-party-gifts and /category/halloween draw from ALL_INCL_SEASONAL,
+  and /shuffle/halloween fetches /api/products/all?season=all.
+- Verified: feed 1,041 items with 0 Halloween (1,061 / 20 with
+  ?season=all); the three Halloween pages still list them; gifts-under-25,
+  white-elephant, gift-ideas-for-mom, category/home and the homepage show none.

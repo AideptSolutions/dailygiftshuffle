@@ -5,6 +5,9 @@ export const dynamic = 'force-dynamic';
 
 // The public feed that powers the shuffle, search, and home-featured surfaces.
 // The merge itself lives in lib/catalogFeed.ts, shared with the Gift Genie.
-export async function GET() {
-  return NextResponse.json(await getFullCatalog());
+// ?season=all also returns out-of-season items (Halloween outside Sep-Oct),
+// used only by the seasonal shuffle page /shuffle/halloween.
+export async function GET(req: Request) {
+  const includeOffSeason = new URL(req.url).searchParams.get('season') === 'all';
+  return NextResponse.json(await getFullCatalog({ includeOffSeason }));
 }
