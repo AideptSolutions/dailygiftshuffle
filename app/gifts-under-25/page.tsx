@@ -112,7 +112,7 @@ export default function GiftsUnder25Page() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/gifts-under-25.jpg"
-              alt="Affordable gift ideas under $25"
+              alt="Gifts under $25 on cream linen: a white mug, a leather keychain, a notebook, a tin candle, wool socks and a wooden puzzle cube"
               fill
               className="object-cover"
               priority
