@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'What are last-minute gifts under $25?',
-    a: "For last-minute gifts under $25, look for Amazon Prime same-day delivery items: a bath bomb set, scented candle, funny coffee mug, card game, or a self-care face mask kit. Many of these ship same-day in metro areas. Digital gift cards are also a zero-judgment last-minute move that always lands well.",
+    a: "For last-minute gifts under $25, pick something simple and well reviewed: a bath bomb set, scented candle, funny coffee mug, card game, or a self-care face mask kit, and check the delivery estimate at checkout. Digital gift cards are delivered by email instead of shipped, a zero-judgment last-minute move that always lands well.",
   },
   {
     q: 'What are unique gifts under $25?',
@@ -126,10 +126,10 @@ export default function GiftsUnder25Page() {
             Gifts Under $25
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-            The demand for quality gifts under $25 has surged, driven by Amazon same-day delivery and social proof culture. Under $25 does not mean cheap. The best-reviewed products in this range consistently prove it. Lip balm sets, skincare essentials, LED book lights, card games, and scented candle collections often have 30,000–100,000+ verified reviews and are bought over and over again as gifts precisely because they deliver. The category thrives because the gifting bar is about perception, not price, and these picks clear it easily.
+            The demand for quality gifts under $25 has surged, driven by social proof culture. Under $25 does not mean cheap. The best-reviewed products in this range consistently prove it. Lip balm sets, skincare essentials, LED book lights, card games, and scented candle collections often have 30,000-100,000+ verified reviews and are bought over and over again as gifts precisely because they deliver. The category thrives because the gifting bar is about perception, not price, and these picks clear it easily.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            The trending segments in sub-$25 gifting are: self-care consumables (bath bombs, face masks, skincare minis), functional desk accessories (LED lamps, PopSockets, phone wallets), stocking stuffers with mass appeal, and snack or food gifts with high gifting velocity. If a product has 10k+ reviews and ships Prime, it&apos;s a proven gift. These picks are curated to hit that sweet spot: thoughtful, deliverable fast, and genuinely useful.
+            The trending segments in sub-$25 gifting are: self-care consumables (bath bombs, face masks, skincare minis), functional desk accessories (LED lamps, PopSockets, phone wallets), stocking stuffers with mass appeal, and snack or food gifts with high gifting velocity. If a product has 10k+ reviews, it&apos;s a proven gift. These picks are curated to hit that sweet spot: thoughtful, affordable, and genuinely useful.
           </p>
         </section>
 

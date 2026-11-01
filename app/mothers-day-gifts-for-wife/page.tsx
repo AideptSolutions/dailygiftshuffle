@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "When is Mother's Day 2026?",
-    a: "Mother's Day 2026 is Sunday, May 10. It always falls on the second Sunday of May. Order physical gifts by May 4 with standard shipping, or May 7 with expedited shipping, to be safe.",
+    a: "Mother's Day 2026 is Sunday, May 10. It always falls on the second Sunday of May. Order physical gifts early and check the estimated delivery date at checkout before you buy.",
   },
 ];
 

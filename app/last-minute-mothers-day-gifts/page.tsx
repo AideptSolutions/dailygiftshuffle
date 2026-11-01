@@ -9,20 +9,18 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 
 export const metadata: Metadata = {
-  title: "Last-Minute Mother's Day Gifts 2026 (Ships Fast) | TheGiftShuffle",
+  title: "Last-Minute Mother's Day Gifts 2026: Top-Rated Picks | TheGiftShuffle",
   description:
-    "Last-minute Mother's Day gift ideas for 2026 that still arrive on time. Top-rated picks with Amazon Prime shipping: spa sets, skincare, jewelry, and more.",
+    "Last-minute Mother's Day gift ideas for 2026: top-rated spa sets, skincare, jewelry, and more, sorted by rating so you can decide fast.",
   keywords: [
     "last minute mothers day gifts",
     "last minute mothers day gift ideas",
-    "mothers day gifts that ship fast",
-    "mothers day gifts prime shipping",
     "last minute mothers day 2026",
   ],
   openGraph: {
-    title: "Last-Minute Mother's Day Gifts 2026 (Ships Fast) | TheGiftShuffle",
+    title: "Last-Minute Mother's Day Gifts 2026: Top-Rated Picks | TheGiftShuffle",
     description:
-      "Top-rated Mother's Day gifts that still ship in time. Prime-eligible spa sets, skincare, jewelry, and more.",
+      "Top-rated last-minute Mother's Day gifts: spa sets, skincare, jewelry, and more.",
     type: 'website',
     url: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts',
   },
@@ -55,7 +53,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: "Last-Minute Mother's Day Gifts 2026",
-  description: "Top-rated Mother's Day gifts available with fast Amazon Prime shipping, curated by TheGiftShuffle",
+  description: "Top-rated last-minute Mother's Day gifts, curated by TheGiftShuffle",
   url: 'https://www.thegiftshuffle.com/last-minute-mothers-day-gifts',
   numberOfItems: lastMinuteProducts.length,
   itemListElement: lastMinuteProducts.map((p, i) => ({
@@ -75,11 +73,11 @@ const itemListSchema = {
 const faqs = [
   {
     q: "What are the best last-minute Mother's Day gifts?",
-    a: "The best last-minute Mother's Day gifts are top-rated items with fast Prime shipping: a spa and bath set, a silk pillowcase, a personalized necklace, a premium candle, or a skincare set. Sort by rating, confirm the delivery window, and order. Quality picks still ship in two days.",
+    a: "Top-rated picks that still feel personal: a spa and bath set, a silk pillowcase, a personalized necklace, a premium candle, or a skincare set. Sort by rating, check the delivery estimate at checkout, and order.",
   },
   {
     q: "Can I still get a Mother's Day gift delivered in time?",
-    a: "Usually yes. Most picks here are Prime-eligible with two-day delivery, so an order placed by the Thursday before Mother's Day typically arrives on time. Always check the estimated arrival date at checkout before you buy.",
+    a: "It depends on the item, the seller and her address, and we do not control shipping. The checkout page shows the estimated delivery date, so check it before you buy. If it lands after Mother's Day, a digital gift card is delivered by email instead of shipped.",
   },
   {
     q: "What is a good last-minute gift that does not look last-minute?",
@@ -87,7 +85,7 @@ const faqs = [
   },
   {
     q: "When is Mother's Day 2026?",
-    a: "Mother's Day 2026 is Sunday, May 10. To be safe with shipping, order physical gifts by May 7 with expedited delivery, or choose a same-day or digital option closer to the date.",
+    a: "Mother's Day 2026 is Sunday, May 10. Order physical gifts as early as you can and check the estimated delivery date at checkout; if it lands too late, choose a digital gift instead.",
   },
 ];
 
@@ -135,12 +133,11 @@ export default function LastMinuteMothersDayPage() {
             Last-Minute Mother&apos;s Day Gifts 2026
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-3">
-            Still haven&apos;t ordered yet? These top-rated picks are available with Amazon Prime and can arrive
-            before Mother&apos;s Day with standard two-day shipping. We sorted by highest rating and review count
-            so you can order fast and still give something she will actually love.
+            Still haven&apos;t ordered yet? These are the top-rated picks, sorted by rating and review count
+            so you can decide fast and still give something she will actually love.
           </p>
           <p className="text-sm text-gray-500 max-w-xl mx-auto">
-            Tip: Check your Prime delivery window at checkout to confirm arrival by May 9.
+            Tip: check the estimated delivery date at checkout before you order. Shipping is up to the seller.
           </p>
         </section>
 
@@ -152,10 +149,10 @@ export default function LastMinuteMothersDayPage() {
         {/* Product Grid */}
         <section className="max-w-5xl mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-2" style={{ color: '#1A202C' }}>
-            Top-Rated Mother&apos;s Day Picks That Ship Fast
+            Top-Rated Last-Minute Mother&apos;s Day Picks
           </h2>
           <p className="text-sm text-gray-500 mb-6">
-            Sorted by customer rating. Most are Prime-eligible with 2-day delivery.
+            Sorted by customer rating. Check each item&apos;s delivery estimate on Amazon before you buy.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {lastMinuteProducts.map((p) => (

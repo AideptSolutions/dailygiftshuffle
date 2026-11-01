@@ -437,3 +437,27 @@ shipping or delivery, so per the owner's rule the page was reworked:
 - Not yet fixed (same delivery-promise problem, flagged to owner): the two
   last-minute Mother's Day pages ("arrive in 1-2 days", "order by May 9")
   and one gifts-under-25 FAQ answer ("ship same-day").
+
+## 2026-11-01: Mother's Day delivery promises removed
+
+Same rule as the /last-minute-gift-ideas rework: we control no shipping, so
+no page promises arrival.
+- /gifts/last-minute-mothers-day and /last-minute-mothers-day-gifts: titles
+  ("Order by May 9", "Ships Fast"), meta, hero copy, grid headings, FAQ
+  answers (and so the FAQPage schema) rewritten. They now point shoppers to
+  the delivery estimate at checkout and to digital gifts "delivered by email
+  instead of shipped". URLs unchanged (they hold Mother's Day rankings).
+- The "Mother's Day is May 11 / Order by May 9 for guaranteed delivery"
+  badge was also the wrong date: Mother's Day 2026 was May 10. The main
+  /mothers-day-gifts intro had the same May 11 error; both fixed.
+- One FAQ line each on /mothers-day-gifts, -for-wife, -under-100 (order-by
+  dates, same-day/next-day claims) and /gifts-under-25 (same-day Prime claim,
+  "deliverable fast", plus an en dash) fixed.
+- MothersDayBanner (shows Apr-May 11): "Order today for guaranteed delivery"
+  and "Ship Fast" removed.
+- Still open (flagged to owner, not yet changed): one last-minute FAQ line
+  each on fathers-day-gifts, top-10-fathers-day-gifts-2026, gift-ideas-for-
+  dad/-him/-her/-teens, gifts-under-50, birthday-gift-ideas and
+  help-me-pick-a-gift promises same-day/next-day or fast shipping.
+- All Mother's Day pages still say 2026; they need a 2027 refresh (May 9,
+  2027) before next spring.

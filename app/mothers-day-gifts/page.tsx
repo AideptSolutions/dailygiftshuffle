@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "What are last-minute Mother's Day gift ideas?",
-    a: "Last-minute Mother's Day gifts that still feel intentional: a same-day-delivery spa set or candle collection, an insulated tumbler in her favorite color, a digital gift card for a spa or restaurant experience, or a next-day-delivery personalized mug. If you have more time, even a hand-written letter with a printed photo can be more meaningful than a rushed purchase.",
+    a: "Last-minute Mother's Day gifts that still feel intentional: a top-rated spa set or candle collection, an insulated tumbler in her favorite color, a digital gift card for a spa or restaurant experience (sent by email instead of shipped), or a personalized mug. Check the delivery estimate at checkout before you order. If you have more time, even a hand-written letter with a printed photo can be more meaningful than a rushed purchase.",
   },
   {
     q: "What are the best self-care gifts for Mom in 2026?",
@@ -140,7 +140,7 @@ export default function MothersDayGiftsPage() {
               Mother&apos;s Day Gifts
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
-              Mother&apos;s Day is May 11. This year, the gifts that matter most aren&apos;t the flashiest ones. They&apos;re the ones that give her something she&apos;d never carve out for herself: time to slow down, a bathroom that feels like a spa, skin that finally gets the care it deserves, and the kind of cozy comfort that doesn&apos;t require an occasion.
+              Mother&apos;s Day 2026 is Sunday, May 10. This year, the gifts that matter most aren&apos;t the flashiest ones. They&apos;re the ones that give her something she&apos;d never carve out for herself: time to slow down, a bathroom that feels like a spa, skin that finally gets the care it deserves, and the kind of cozy comfort that doesn&apos;t require an occasion.
             </p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Every pick below is hand-curated for 2026. Shower steamers she&apos;ll actually use, skincare from brands worth the investment, pajamas soft enough to change how her mornings feel, and spa sets that turn an ordinary Tuesday night into something she looks forward to.
