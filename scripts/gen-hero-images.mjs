@@ -115,7 +115,7 @@ const HEROES = {
   'tech-gadgets':                     { q: 'tech gadgets desk modern', alt: 'Modern tech gadget gifts arranged on a desk' },
   'top-10-gifts-for-grandparents-who-have-everything': { q: 'grandparents gift happy together', alt: 'Grandparents opening a gift together' },
   'top-10-gifts-for-new-dads-under-50': { q: 'new dad holding baby', alt: 'A new dad holding his newborn with a gift nearby' },
-  'top-10-gifts-that-arrive-in-24-hours': { q: 'delivery package doorstep gift', alt: 'A fast-delivery gift package at the front door' },
+  'last-minute-gift-ideas': { q: 'delivery package doorstep gift', alt: 'A wrapped gift waiting at a front door' },
 };
 
 const argv = process.argv.slice(2);

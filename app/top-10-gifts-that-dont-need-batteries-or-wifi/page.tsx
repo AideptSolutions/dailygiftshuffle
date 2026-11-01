@@ -396,7 +396,7 @@ export default function GiftsNoBatteriesPage() {
           <GuideLinkCards
             links={[
               { href: '/top-10-gifts-for-grandparents-who-have-everything', label: 'Gifts for Grandparents' },
-              { href: '/top-10-gifts-that-arrive-in-24-hours', label: 'Gifts That Arrive Fast' },
+              { href: '/last-minute-gift-ideas', label: 'Last-Minute Gift Ideas' },
               { href: '/gifts-for-camping-and-outdoors', label: 'Camping & Outdoors Gifts' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },

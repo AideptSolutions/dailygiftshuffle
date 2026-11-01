@@ -320,7 +320,7 @@ export default function NewDadsGiftsPage() {
               { href: '/gift-ideas-for-dad', label: 'Gift Ideas for Dad' },
               { href: '/gift-ideas-for-him', label: 'Gift Ideas for Him' },
               { href: '/gifts-under-50', label: 'Gifts Under $50' },
-              { href: '/top-10-gifts-that-arrive-in-24-hours', label: 'Gifts That Arrive in 24 Hours' },
+              { href: '/last-minute-gift-ideas', label: 'Last-Minute Gift Ideas' },
             ]}
           />
         </section>

@@ -20,6 +20,7 @@ const LAST_REVIEWED: Record<string, string> = {
   '/christmas-gifts-for-teens': '2026-11-01',
   '/last-minute-christmas-gifts': '2026-11-01',
   '/hanukkah-gifts': '2026-11-01',
+  '/last-minute-gift-ideas': '2026-11-01',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -138,7 +139,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/top-10-fathers-day-gifts-2026',
     '/top-10-gifts-for-grandparents-who-have-everything',
     '/top-10-gifts-for-new-dads-under-50',
-    '/top-10-gifts-that-arrive-in-24-hours',
+    '/last-minute-gift-ideas',
     '/top-10-gifts-that-dont-need-batteries-or-wifi',
   ].map((path) => ({
     url: `${BASE_URL}${path}`,

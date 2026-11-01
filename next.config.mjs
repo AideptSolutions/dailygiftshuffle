@@ -30,6 +30,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Renamed 2026-11-01: we do not promise delivery times.
+        source: '/top-10-gifts-that-arrive-in-24-hours',
+        destination: '/last-minute-gift-ideas',
+        permanent: true,
+      },
+      {
         source: '/category/streamers-gamers',
         destination: '/category/gaming',
         permanent: true,

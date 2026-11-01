@@ -414,3 +414,26 @@ lastmod:
   graduation-gifts plus under $50/$100 (cap and tassel, eucalyptus),
   best-anniversary-gifts-2026 (rose petals), best-baby-shower-gifts-2026
   (baby's breath), housewarming-gifts and retirement-gifts (eucalyptus).
+
+## 2026-11-01: /top-10-gifts-that-arrive-in-24-hours renamed to /last-minute-gift-ideas
+
+The old page promised arrival times ("arrive in 24 hours or less", "lands in
+their inbox in minutes", "reliably arrive within 24 hours"). We control no
+shipping or delivery, so per the owner's rule the page was reworked:
+- New URL /last-minute-gift-ideas, 301 from the old path (next.config.mjs).
+  Safe to move: the old URL had zero impressions in GSC (Oct 30 export) and
+  Bing (PageTrafficReport Oct 30).
+- Copy describes how each gift gets there (by email, local shop, in-store
+  pickup) and points to the seller's own delivery or pickup estimate. No
+  time promises anywhere, including the FAQ schema.
+- Drizly (shut down in 2024) and a generic Toast link removed; the outbound
+  "View Option" links lost rel=sponsored (none are paid links).
+- Disclosure said "Daily Gift Shuffle"; now TheGiftShuffle.
+- Sitemap, LAST_REVIEWED, three inbound related-link cards, the hero file and
+  the hero credit manifest moved to the new slug.
+- Hero: still the older Pexels doorstep photo (alt text neutralized). A
+  house-style replacement could not be generated: OpenAI API credits ran out
+  2026-11-01. Regenerate when credits are added.
+- Not yet fixed (same delivery-promise problem, flagged to owner): the two
+  last-minute Mother's Day pages ("arrive in 1-2 days", "order by May 9")
+  and one gifts-under-25 FAQ answer ("ship same-day").
