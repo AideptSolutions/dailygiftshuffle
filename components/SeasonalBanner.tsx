@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import HolidayIcon, { type HolidayIconName } from '@/components/HolidayIcon';
 
 interface BannerLink {
   label: string;
@@ -12,6 +13,7 @@ interface BannerConfig {
   gradient: string;
   href?: string;
   links?: BannerLink[];
+  icon?: HolidayIconName;
 }
 
 function getBannerConfig(month: number): BannerConfig | null {
@@ -68,6 +70,7 @@ function getBannerConfig(month: number): BannerConfig | null {
       return {
         text: 'Holiday shopping season starts now:',
         gradient: 'linear-gradient(90deg, #c62828 0%, #388e3c 100%)',
+        icon: 'snowflake',
         links: [
           { label: 'Christmas Gift Ideas', href: '/christmas-gift-ideas' },
           { label: 'Stocking Stuffers', href: '/stocking-stuffers' },
@@ -77,6 +80,7 @@ function getBannerConfig(month: number): BannerConfig | null {
       return {
         text: 'Last-minute Christmas gifts that ship fast',
         gradient: 'linear-gradient(90deg, #c62828 0%, #e53935 100%)',
+        icon: 'snowflake',
         href: '/christmas-gift-ideas',
       };
     default:
@@ -93,6 +97,9 @@ export default function SeasonalBanner() {
   return (
     <div style={{ background: config.gradient }} className="w-full py-2.5 px-4 text-center">
       <span className="text-white text-sm font-semibold tracking-wide">
+        {config.icon && (
+          <HolidayIcon name={config.icon} className="inline-block w-4 h-4 -mt-0.5 mr-1.5 align-middle" />
+        )}
         {config.href ? (
           <Link href={config.href} className="hover:underline underline-offset-2">
             {config.text}

@@ -11,6 +11,9 @@ import GiftCupAnimation from '@/components/GiftCupAnimation';
 import GiftPackageCollections from '@/components/GiftPackageCollections';
 import TimelyGuides from '@/components/TimelyGuides';
 import FeatureIcon, { type FeatureIconName } from '@/components/FeatureIcon';
+import HolidayGuides from '@/components/HolidayGuides';
+import HolidayIcon from '@/components/HolidayIcon';
+import { isChristmasSeason, daysUntilChristmas } from '@/lib/season';
 import { curate, ALL } from '@/lib/giftSelect';
 import type { Product } from '@/data/products';
 
@@ -81,8 +84,8 @@ const giftGuides = [
   },
   {
     href: '/christmas-gift-ideas',
-    image: '/img/gift-guides/christmas.jpg',
-    alt: 'Christmas gift ideas, wrapped presents and holiday decor',
+    image: '/images/heroes/christmas-gift-ideas.jpg',
+    alt: 'Christmas gift ideas on cream linen with pine and coral ribbon',
     title: 'Christmas Gift Ideas',
     desc: 'Top holiday picks for everyone on your list.',
   },
@@ -130,7 +133,21 @@ const giftGuides = [
   },
 ];
 
+// Christmas season: the example grid opens on four of this year's hot gifts
+// (one each for the kitchen, gamer, beauty and LEGO crowds).
+const HOLIDAY_LEAD_IDS = ['trend26-ninja-slushi', 'gg-mariokart-world', 'trend26-cheirosa-mist', 'trend26-lego-marvel-advent'];
+
+function countdownLabel(days: number): string {
+  if (days === 0) return 'Merry Christmas';
+  if (days === 1) return 'Christmas is tomorrow';
+  return `${days} days until Christmas`;
+}
+
 export default async function HomePage() {
+  // The page revalidates every 5 minutes, so the season flips on its own.
+  const holiday = isChristmasSeason();
+  const days = daysUntilChristmas();
+
   // First-paint pool for the homepage shuffle (HomeFeaturedSection widens it to
   // the full feed after mount). Same bar as its trending picks: 4.5+, $25+.
   const products = curate({
@@ -141,7 +158,14 @@ export default async function HomePage() {
     recipientCap: 15,
     limit: 60,
     pool: ALL,
-  }).map((p) => {
+  });
+  if (holiday) {
+    for (const id of [...HOLIDAY_LEAD_IDS].reverse()) {
+      const p = ALL.find((a) => a.id === id);
+      if (p && !products.some((x) => x.id === id)) products.unshift(p);
+    }
+  }
+  const initialProducts = products.map((p) => {
     const full = ALL.find((a) => a.id === p.id)!;
     return {
       id: p.id,
@@ -211,7 +235,7 @@ export default async function HomePage() {
       >
         <div className="relative isolate -mx-4 w-[calc(100%+2rem)] px-4 pt-10 sm:pt-16 flex flex-col items-center overflow-hidden">
           <Image
-            src="/img/home/hero-backdrop.jpg"
+            src={holiday ? '/img/home/hero-backdrop-holiday.jpg' : '/img/home/hero-backdrop.jpg'}
             alt=""
             fill
             priority
@@ -224,14 +248,24 @@ export default async function HomePage() {
             style={{ background: 'radial-gradient(ellipse 42rem 22rem at 50% 55%, rgba(255,255,255,0.72), rgba(255,255,255,0) 70%)' }}
           />
           <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-20 -z-10 bg-gradient-to-b from-transparent to-white" />
+          {holiday && (
+            <p
+              className="inline-flex items-center gap-1.5 rounded-full bg-white/85 border border-[#C62828]/20 px-3.5 py-1 mb-4 text-sm font-semibold shadow-sm"
+              style={{ color: '#C62828' }}
+            >
+              <HolidayIcon name="countdown" className="w-4 h-4" />
+              {countdownLabel(days)}
+            </p>
+          )}
           <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight mb-4 max-w-3xl" style={{ color: '#1A202C' }}>
             Find the{' '}
-            <span style={{ color: '#F04E30' }}>Perfect Gift</span>
+            <span style={{ color: '#F04E30' }}>{holiday ? 'Perfect Christmas Gift' : 'Perfect Gift'}</span>
             <br />in Seconds
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-xl mb-6">
-            Stuck on what to get them? Tell us the person and your budget, and we&apos;ll match a
-            top-rated gift they&apos;ll actually love, in seconds.
+            {holiday ? 'Stuck on what to get them this Christmas?' : 'Stuck on what to get them?'} Tell us
+            the person and your budget, and we&apos;ll match a top-rated gift they&apos;ll actually love,
+            in seconds.
           </p>
           <Link
             href="/shuffle"
@@ -266,7 +300,11 @@ export default async function HomePage() {
 
         {/* Featured gifts + shuffle widgets */}
         <div className="w-full mt-2">
-          <HomeFeaturedSection initialProducts={products} />
+          <HomeFeaturedSection
+            initialProducts={initialProducts}
+            leadIds={holiday ? HOLIDAY_LEAD_IDS : undefined}
+            gridLabel={holiday ? 'Popular Christmas Gift Ideas' : undefined}
+          />
         </div>
       </section>
 
@@ -317,7 +355,8 @@ export default async function HomePage() {
       {/* Gift Package Collections */}
       <GiftPackageCollections />
 
-      {/* In-season timely guides */}
+      {/* In-season timely guides (the full holiday shop during Christmas) */}
+      {holiday ? <HolidayGuides /> : (
       <section className="py-14 px-4" style={{ background: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#F04E30' }}>In Season Now</span>
@@ -328,6 +367,7 @@ export default async function HomePage() {
           <TimelyGuides />
         </div>
       </section>
+      )}
 
       {/* How It Works */}
       <section className="py-16 px-4" style={{ background: '#FFF3EE' }}>
@@ -420,14 +460,14 @@ export default async function HomePage() {
           style={{ background: 'linear-gradient(135deg, #F04E30 0%, #FF7F50 100%)' }}
         >
           <Image
-            src="/img/home/cta-band.jpg"
+            src={holiday ? '/img/home/cta-band-holiday.jpg' : '/img/home/cta-band.jpg'}
             alt=""
             fill
             sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover -z-10"
           />
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            Ready to find the perfect gift?
+            {holiday ? 'Ready to finish your Christmas list?' : 'Ready to find the perfect gift?'}
           </h2>
           <p className="text-white/80 text-lg mb-8">Free to use. No sign-up required.</p>
           <Link

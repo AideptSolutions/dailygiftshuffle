@@ -196,7 +196,17 @@ function Dropdown<T extends string>({
 }
 
 // --- Main component ---
-export default function HomeFeaturedSection({ initialProducts = [] }: { initialProducts?: Product[] }) {
+export default function HomeFeaturedSection({
+  initialProducts = [],
+  leadIds,
+  gridLabel = 'Popular Gift Ideas',
+}: {
+  initialProducts?: Product[];
+  /** Seasonal picks that open the example grid (e.g. trending Christmas gifts);
+   *  must be present in initialProducts. Falls back to social-proof trending. */
+  leadIds?: string[];
+  gridLabel?: string;
+}) {
   const router  = useRouter();
   const { toggle: toggleFav, isFavorited } = useFavorites();
 
@@ -218,7 +228,13 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Product cards — seeded from server props immediately
-  const [cards, setCards]           = useState<Product[]>(() => getTrending(initialProducts));
+  const [cards, setCards]           = useState<Product[]>(() => {
+    const lead = (leadIds ?? [])
+      .map((id) => initialProducts.find((p) => p.id === id))
+      .filter((p): p is Product => !!p)
+      .slice(0, 4);
+    return lead.length === 4 ? lead : getTrending(initialProducts);
+  });
   const [isTrending, setIsTrending] = useState(true);
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
   const [count, setCount]           = useState(4);
@@ -396,7 +412,7 @@ export default function HomeFeaturedSection({ initialProducts = [] }: { initialP
         <span className="shuffle-eyebrow mb-2">Interactive gift finder</span>
         <div className="flex items-center justify-between mb-1">
           <h2 className="text-lg font-extrabold text-gray-800 tracking-tight">
-            {isTrending ? 'Popular Gift Ideas' : 'Gift Ideas'}
+            {isTrending ? gridLabel : 'Gift Ideas'}
           </h2>
           <div className="flex items-center gap-1.5">
             <span className="text-xs text-gray-400">Show:</span>

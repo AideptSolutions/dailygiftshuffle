@@ -7,6 +7,19 @@ import { getWishlistCount } from '@/lib/wishlist';
 import SeasonalBanner from '@/components/SeasonalBanner';
 import CategoryIcon from '@/components/CategoryIcon';
 import { LampIcon } from '@/components/genie/GenieIcons';
+import HolidayIcon from '@/components/HolidayIcon';
+import { isChristmasSeason } from '@/lib/season';
+
+// Shown at the top of the Categories menu during the Christmas window.
+const HOLIDAY_GUIDES: { href: string; label: string }[] = [
+  { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
+  { href: '/trending-christmas-gifts-2026', label: 'Trending 2026' },
+  { href: '/stocking-stuffers', label: 'Stocking Stuffers' },
+  { href: '/christmas-gifts-for-her', label: 'Christmas for Her' },
+  { href: '/christmas-gifts-for-him', label: 'Christmas for Him' },
+  { href: '/secret-santa-gifts', label: 'Secret Santa' },
+  { href: '/white-elephant-gifts', label: 'White Elephant' },
+];
 
 // Seasonal entries carry the months they should appear in; evergreen entries
 // have no months. Month is resolved after mount to stay hydration-safe.
@@ -35,11 +48,13 @@ export default function Navbar() {
   const [wishlistCount, setWishlistCount] = useState(0);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [month, setMonth] = useState<number | null>(null);
+  const [holiday, setHoliday] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dropdownId = 'categories-dropdown';
 
   useEffect(() => {
     setMonth(new Date().getMonth() + 1);
+    setHoliday(isChristmasSeason());
   }, []);
 
   const visibleCategories = CATEGORIES.filter(
@@ -130,6 +145,31 @@ export default function Navbar() {
                 aria-label="Gift categories"
                 className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-[#E2E8F0] p-3 z-50"
               >
+                {holiday && (
+                  <>
+                    <p
+                      className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide px-2 mb-2"
+                      style={{ color: '#C62828' }}
+                      aria-hidden="true"
+                    >
+                      <HolidayIcon name="ornament" className="w-3.5 h-3.5" />
+                      Holiday Gift Guides
+                    </p>
+                    <div className="grid grid-cols-2 gap-1 mb-3 pb-3 border-b border-[#E2E8F0]">
+                      {HOLIDAY_GUIDES.map((g) => (
+                        <Link
+                          key={g.href}
+                          href={g.href}
+                          role="menuitem"
+                          onClick={() => setCategoriesOpen(false)}
+                          className="px-2 py-1.5 rounded-xl hover:bg-[#FFF5F5] hover:text-[#C62828] transition-colors text-sm font-medium text-gray-700"
+                        >
+                          {g.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                )}
                 <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide px-2 mb-2" aria-hidden="true">
                   Shuffle by Category
                 </p>

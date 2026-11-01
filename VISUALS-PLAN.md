@@ -361,3 +361,39 @@ guideImageFor, falling back to the category art: this also fixed
 scraped with an "Amazon.com : " prefix; getPublishedAdminProducts now strips
 it on read (stored Redis data unchanged; fix the names in /admin to clean the
 source).
+
+## 2026-11-01: Christmas season layer (self-flipping, Nov 1 - Dec 25)
+
+Owner asked to "Christmas/Holiday out the site" (no snowfall, logo left
+alone). Everything keys off `lib/season.ts` (`isChristmasSeason`,
+`daysUntilChristmas`, US Eastern time), so it switches on Nov 1 and off
+after Dec 25 with no deploy. The homepage revalidates every 5 minutes, so
+its server-rendered holiday hero flips on time; Navbar resolves the season
+after mount (hydration-safe, same pattern as before).
+
+- Homepage hero: generated holiday backdrop
+  (`public/img/home/hero-backdrop-holiday.jpg`, gpt-image-2, gifts and pine
+  only at the edges so the center stays clear for the headline), a
+  "N days until Christmas" chip (countdown icon), and the headline/subcopy
+  switch to "Perfect Christmas Gift". No shipping-deadline claims.
+- Example grid: opens on four 2026 hot gifts (Ninja SLUSHi, Mario Kart
+  World, Sol de Janeiro Cheirosa mist, LEGO Marvel advent) under
+  "Popular Christmas Gift Ideas" (`leadIds`/`gridLabel` props on
+  HomeFeaturedSection).
+- In-season block becomes `HolidayGuides`: two feature cards (Trending
+  2026, Christmas Gift Ideas) plus photo cards for Stocking Stuffers,
+  Christmas for Her/Him, Secret Santa, White Elephant, Gifts Under $25.
+  New seasonal pages get added to its MORE_GUIDES list.
+- Popular Gift Guides: the Christmas card now uses the house-style hero
+  (was a stock photo) year-round.
+- Bottom CTA: "Ready to finish your Christmas list?" over a generated coral
+  band with gifts and pine (`cta-band-holiday.jpg`). The raw render lost its
+  decorations to the wide crop, so the empty middle was cut out with a
+  feathered crossfade (a hard splice showed a seam).
+- Navbar Categories menu: a "Holiday Gift Guides" group (7 links) on top.
+- SeasonalBanner: snowflake accent on the Nov and Dec banners.
+- New `components/HolidayIcon.tsx`: ornament, pine, snowflake, countdown,
+  same line system as FeatureIcon (24 grid, 1.75 stroke, currentColor).
+- Mobile: the hero backdrop's decorated edges crop out at phone width (same
+  as the evergreen hero); the festive cues on phones are the banner, chip,
+  headline and the holiday guides block.
