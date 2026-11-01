@@ -37,14 +37,19 @@ export const RECIPIENT: AnyProduct[] = recipientProducts as AnyProduct[];
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 const seenId = new Set<string>();
 const seenName = new Set<string>();
-export const ALL: AnyProduct[] = [];
+// Hanukkah-only items (menorahs, dreidels, gelt) stay out of ALL: many guides
+// select by price or recipient alone (stocking stuffers, Secret Santa), and a
+// menorah does not belong in a Christmas stocking grid. /hanukkah-gifts draws
+// from ALL_WITH_HANUKKAH instead.
+export const ALL_WITH_HANUKKAH: AnyProduct[] = [];
 for (const p of [...recipientProducts, ...catalog] as AnyProduct[]) {
   const nameKey = norm(p.name);
   if (seenId.has(p.id) || seenName.has(nameKey)) continue;
   seenId.add(p.id);
   seenName.add(nameKey);
-  ALL.push(p);
+  ALL_WITH_HANUKKAH.push(p);
 }
+export const ALL: AnyProduct[] = ALL_WITH_HANUKKAH.filter((p) => !p.occasions?.includes('hanukkah'));
 
 // Items that win on review volume but are not giftable headliners.
 const DEFAULT_EXCLUDE_RECIPIENTS = ['baby', 'pets'];

@@ -508,3 +508,32 @@ SLUSHi; wrong doll: Barbie Clara was the 25th-anniversary repro; model or
 stylized art vs listing: beanie, pajamas, Labubu; Yoshi fetch crashed).
 Barbie, beanie, Labubu and pajamas were matched against the Amazon listing
 image (reference only, never used on site).
+
+## Hanukkah + digital gift cards (2026-11-01)
+
+11 products for the new /hanukkah-gifts and /last-minute-christmas-gifts
+pages, section "HANUKKAH + DIGITAL GIFTS 2026" at the end of
+data/products-catalog.ts. Verified with SerpAPI amazon_product (canaries
+checked first; title, rating, reviews, price, stock, seller, no refurbished
+wording) and ratings cross-checked against Amazon search. Images are brand or
+retailer packshots (Home Depot, Zion Judaica, Penguin Random House, Walmart,
+Faire, Starbucks, Target, Staples, BJ's), 800x800 contain on white, audited.
+
+- Hanukkah (6): Zion Judaica silver-plated menorah B016V0NTZK ($17.99,
+  4.6/2,312), Zion Judaica 10 wooden dreidels B09K75X14R ($9.99, 4.8/899),
+  Hanukkah Bear book 082343169X ($7.45, 4.8/994), Mensch on a Bench plush
+  and book B00KSAA05M ($34.99, 4.7/817), Manischewitz chocolate gelt 24 bags
+  B00QJ2LBCE ($22.85, 4.4/351; weakest pick, third-party seller), Ann Clark
+  Hanukkah cookie cutters B07J2VV8RN ($12.99, 4.7/403).
+- Digital eGift cards (5, sold by ACI Gift Cards LLC, an Amazon company):
+  Starbucks $25 B0FQN639NZ, DoorDash $50 B0FQN3LKFR, Netflix $25
+  B0FQNBFNXH, Chipotle $25 B0FQNB2WJF, Airbnb $100 B0FQMXSDKH.
+- Rejected: Apple (4.1) and Google Play (4.3) gift cards, Spotify (no US
+  listing), Audible (no reviews), Uber (no non-Amazon image of the Standard
+  design), Instacart (same), Hanukkah pajamas/socks/plush (under ~300
+  reviews), images with people, overlays or old packaging.
+- New occasion value 'hanukkah' (catalog Occasion type). The six Hanukkah
+  items use it instead of 'holiday' so Christmas guides skip them, and
+  lib/giftSelect's ALL pool now excludes them (stocking stuffers, Secret
+  Santa and White Elephant select by price, and had picked up menorahs and
+  dreidels). /hanukkah-gifts draws from ALL_WITH_HANUKKAH.
