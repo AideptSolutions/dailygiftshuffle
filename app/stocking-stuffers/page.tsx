@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 
@@ -57,6 +58,8 @@ const grid = [...stufferItems, ...trendingItems, ...fillItems]
   .slice(0, 40);
 const shuffle = shufflePool((p) => isStuffer(p) || isStufferSized(p), ALL);
 
+const inlineLink = 'text-[#F04E30] font-semibold underline underline-offset-2';
+
 export default function Page() {
   return (
     <GiftGuideTemplate
@@ -68,7 +71,7 @@ export default function Page() {
       heroSrc="/images/heroes/stocking-stuffers.jpg"
       heroAlt="A knit Christmas stocking with stocking stuffers on cream linen: lip balm, striped socks, chocolate, a card game, a mini flashlight and hand cream"
       h1="Best Stocking Stuffers for 2026"
-      updated="2026-10-30"
+      updated="2026-11-04"
       intro={
         <>
           <p>
@@ -80,6 +83,18 @@ export default function Page() {
           <p className="text-base text-gray-600">
             Stuffing more than one stocking? Hit shuffle for a fresh set of small-gift ideas every
             click, or browse the full ranked list below.
+          </p>
+          <p className="text-base text-gray-600">
+            Shopping for the main gifts too? Start with our{' '}
+            <Link href="/christmas-gift-ideas" className={inlineLink}>Christmas gift ideas</Link>, or go
+            straight to Christmas gifts for{' '}
+            <Link href="/christmas-gifts-for-mom" className={inlineLink}>mom</Link>,{' '}
+            <Link href="/christmas-gifts-for-dad" className={inlineLink}>dad</Link>,{' '}
+            <Link href="/christmas-gifts-for-kids" className={inlineLink}>kids</Link> or{' '}
+            <Link href="/christmas-gifts-for-teens" className={inlineLink}>teens</Link>. Running short on
+            time? See our <Link href="/last-minute-christmas-gifts" className={inlineLink}>last-minute
+            Christmas gifts</Link>. Celebrating Hanukkah? Browse our{' '}
+            <Link href="/hanukkah-gifts" className={inlineLink}>Hanukkah gifts</Link>.
           </p>
         </>
       }
@@ -122,6 +137,10 @@ export default function Page() {
           { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
           { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
           { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },
+          { href: '/christmas-gifts-for-mom', label: 'Christmas Gifts for Mom' },
+          { href: '/christmas-gifts-for-dad', label: 'Christmas Gifts for Dad' },
+          { href: '/christmas-gifts-for-kids', label: 'Christmas Gifts for Kids' },
+          { href: '/christmas-gifts-for-teens', label: 'Christmas Gifts for Teens' },
         ],
       }}
       nudge={{ href: '/trending-christmas-gifts-2026', title: 'Stockings sorted?', cta: 'See the trending Christmas gifts of 2026' }}
@@ -133,7 +152,8 @@ export default function Page() {
         { href: '/stocking-stuffers-for-kids', label: 'Stocking Stuffers for Kids' },
         { href: '/stocking-stuffers-for-mom', label: 'Stocking Stuffers for Mom' },
         { href: '/stocking-stuffers-for-dad', label: 'Stocking Stuffers for Dad' },
-        { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
+        { href: '/last-minute-christmas-gifts', label: 'Last-Minute Christmas Gifts' },
+        { href: '/hanukkah-gifts', label: 'Hanukkah Gifts' },
         { href: '/secret-santa-gifts', label: 'Secret Santa Gifts' },
       ]}
     />

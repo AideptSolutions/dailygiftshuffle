@@ -517,3 +517,77 @@ say 2027 (Father's Day 2027 is Sunday, June 20, the third Sunday of June).
   that would have run again in June 2027; it is now a Father's Day banner
   (no date in the text, so it needs no yearly edit).
 - Sitemap lastModified 2026-11-01 for all five.
+
+## Checkpoint 2026-11-04 (GSC 28d Oct 6 - Nov 2, Bing WMT overview to Nov 2, GA4 Oct 7 - Nov 3, Vercel 30d)
+
+Baseline for the Nov 1 changes (holiday layer, new Christmas pages, 266
+catalog additions, delivery-copy cleanup): these exports hold only 2-3 days
+after them, so nothing below can be attributed to that work yet.
+
+GOOGLE: unchanged. 1 click on 872 impressions, daily position 75-87 (Oct 19
+and 21 blips aside), weighted 81.5 then 80.9 across the two halves.
+Impressions fell in the second half (513 to 359), against the season. The
+new Nov 1 pages do not appear yet; only christmas-gifts-for-her and -him
+from the Christmas set. "pick a gift" is still the one real striking-distance
+query (21 impr at 24.3, /help-me-pick-a-gift 27.2). Product snippets: 241
+impressions, so product markup is being read. site: rows are operator noise.
+
+BING SEARCH: accelerating. Clicks per day 0.67 (Sep), 1.67 (Oct 1-18), 2.15
+(Oct 19-31), 5.0 (Nov 1-2). Impressions per day 12.8, 28.5, 37.8, 77.0. CTR
+steady near 5.5-6.5 percent, so the October impression gains are now turning
+into clicks. Nov 2 (7 clicks) and Nov 1-2 (79, 75 impr) are records. Two
+days only, and Nov 1 is also when seasonal demand turns.
+
+GA4 (291 active users vs 297, window shifted): bing 54 (45), duckduckgo 22
+(17), yahoo 20 (17), chatgpt.com 5 (6), perplexity 1, google 0. Engagement
+31.2s per user (24.8s). /stocking-stuffers 97 views, 81 users, 29.5 percent
+bounce. Automation still heavy: Singapore 56 + Ashburn 53 = 37 percent of
+users, direct 182 of 291. Unexplained 100 percent bounce pages persist
+(gifts-for-girlfriend 17 users, teens 10, Halloween 9); still treat as
+likely automated, source not confirmed. ui.awin.com: 8 sessions, 1 user.
+
+VERCEL (30d): 348 visitors (+49 percent), 429 views (+61 percent), bounce 89
+percent. /stocking-stuffers 136 (39 percent of visitors), / 55, /shuffle 20,
+/white-elephant-gifts 17, /best-gaming-gifts-2026 9 (new to the top list),
+/category/halloween 9, /gift-genie 8. Referrers: bing 67, duckduckgo 56,
+yahoo 26, ecosia 4, google 2.
+
+READ: the Bing ecosystem (Bing, DuckDuckGo, Yahoo, Ecosia) is the whole
+search business and it is growing into the season; Google remains suppressed.
+Next data: Bing page traffic export, Bing AI performance export (the Oct 16
+citation drop is still undiagnosed), and a recheck around Nov 15 for the
+first real read on the Nov 1 work.
+
+### Bing WMT page traffic (Nov 5 export vs Oct 30 export)
+
+Totals 1,452 impr / 89 clicks vs 1,196 / 68, so +256 impressions and +21
+clicks. No page's count fell, so the report behaves as cumulative and the
+differences are the new activity.
+- /stocking-stuffers is the whole jump: +200 impressions (78 percent) and +18
+  clicks (86 percent). CTR on the new traffic is 9.0 percent vs 7.8 percent
+  before. It is now 61 percent of Bing impressions and 80 percent of clicks.
+- The Oct 30 top-3 push has not moved rank yet: the new impressions average
+  about position 5.2, the same as before. Growth is demand, not rank.
+- Everything else is small: gifts-for-a-crush +15 / +1 (CTR 2.2 percent,
+  still the weakest of the bigger pages), luxury-gifts-under-50 +12 / +1,
+  gifts-for-girlfriend +9 / 0.
+- Christmas gap: /christmas-gift-ideas has no row at all; christmas-gifts-
+  for-her, -him and trending-christmas-gifts-2026 have 1 impression each; the
+  Nov 1 pages (last-minute-christmas-gifts, christmas-gifts-for-mom, -dad,
+  -kids, -teens, hanukkah-gifts) have none. Checked as bingbot on 2026-11-04:
+  all return 200 with no noindex, self-canonical, robots.txt open, in the
+  sitemap, so nothing on the site blocks them. Whether Bing has them indexed
+  is unconfirmed: scripted site: searches hit a Bing challenge and returned
+  junk, so that needs URL Inspection in Bing Webmaster Tools.
+
+### 2026-11-04: Christmas links added to /stocking-stuffers
+
+/stocking-stuffers earns 80 percent of Bing clicks while the Christmas pages
+get almost no Bing impressions, so it now passes links to them: a short
+paragraph high in the intro (Christmas gift ideas, mom, dad, kids, teens,
+last-minute, Hanukkah), four more cards in "Stockings Done?" (mom, dad, kids,
+teens), and last-minute plus Hanukkah in the related guides. The page's
+first paragraph and answer block are untouched to avoid disturbing the query
+match that ranks it. Updated date and sitemap lastModified set to 2026-11-04.
+Watch in the next Bing page export: impressions on the linked Christmas
+pages, and that /stocking-stuffers holds position near 5.
