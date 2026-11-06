@@ -677,3 +677,38 @@ the Breville Barista Express instead of the Staub cocotte. All corrected
 (the Breville keeps wedding: it is a registry staple and its occasions
 already listed wedding), and every tag added this session was re-checked
 against the entry that actually holds the ASIN.
+
+## Catalog health review 2026-11-06
+
+Prompted by the owner asking how well upkeep is going. Live feed: 1,326
+products, 1,315 with an ASIN, 923 of those in scripts/amazon-live.csv.
+
+Amazon access changed. A sample of 80 random older ASINs, fetched
+same-origin from the in-app browser, all returned an "Access restricted"
+page aimed at unauthorized AI agents. Zero usable results, so no measured
+figure exists for current dead-link or rating drift. The browser method
+behind the dead-link sweep and the rating-cliff watch must not be used
+again: do not retry it from another browser or route around the notice.
+Amazon verification needs an approved source (Creators API, blocked on 10
+qualifying sales in 30 days) or the owner checking by hand.
+
+Measured from the feed:
+- 18 entries rate under 4.0 (open items said 7) and 90 have under 150
+  reviews (open items said 21). The rise is mostly admin products merged
+  2026-10-29 plus young listings.
+- Suspicious low scores on famous products suggest a wrong listing rather
+  than a bad product: tech-001 AirPods Pro 2nd Gen 3.2, teens-100-2 Beats
+  Studio 3.2, her-100-2 Dyson Airwrap 3.5 (495 reviews).
+- finance-great-now-what has rating 0, reviews 0 (owner's own book).
+- 11 entries have no ASIN.
+- Older models still listed: Oura Gen 3, Apple Watch Series 10, Whoop 4.0,
+  AirPods Pro 2nd Gen, Sony WH-1000XM5. Not confirmed as superseded on
+  Amazon; check before removing.
+
+Trend loop: ShuffleBoss cron jobs write reports to content-drafts/, but those
+files are untracked and nothing feeds them into the catalog. Of the 15 picks
+in weekly-trends-2026-11-02.md, about 4 are in the catalog. Reports cite "LLM
+knowledge" as a source and carry [VERIFY] flags, so treat every pick as a lead.
+
+Demand signal: clicks:ranking holds 54 ASINs and 68 clicks in total, too thin
+to rank 1,300 products.

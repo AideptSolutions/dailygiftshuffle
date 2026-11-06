@@ -591,3 +591,72 @@ first paragraph and answer block are untouched to avoid disturbing the query
 match that ranks it. Updated date and sitemap lastModified set to 2026-11-04.
 Watch in the next Bing page export: impressions on the linked Christmas
 pages, and that /stocking-stuffers holds position near 5.
+
+## Backlink audit 2026-11-06
+
+Read from the owner's signed-in Chrome. Nothing was submitted or changed.
+
+- Google Search Console Links: 2 external links in total, both to the homepage,
+  from aideptsolutions.com (the owner's own site) and connectively.us (not
+  inspected). Internal links: 7,427.
+- Bing Webmaster Backlinks: 1 referring domain, aideptsolutions.com, 2 pages.
+- A web search for the brand found no third-party mentions.
+
+Reading: the site has effectively no independent backlinks. This fits the
+earlier finding that evergreen heads are backlink-gated. It may also contribute
+to the Google suppression, but that is not proven.
+
+Prerequisite: /about names no person, says "editorial team", and shows "Last
+Updated: March 2025". Journalist platforms and outreach need a real, named person.
+
+Targets checked:
+- RankmyAI: free tool submission, review up to 21 days, inclusion at its discretion.
+- StartupTalky roundup: "Get Featured" Google Form, cost and criteria unknown.
+- AIChief: free tier sold out, paid tiers advertise a dofollow backlink. Skip.
+- TheAISurf: paid listings only ($49 to $99). Skip.
+- Weam: no listing route. topai.tools and Krowdbase returned 403, unread.
+
+Do not buy links or use paid "dofollow" listings, link exchanges, or link
+widgets: they fall under Google's link spam policy, a poor risk while suppressed.
+Directories are starter links, not a ranking fix. Editorial links need journalist
+platforms (Qwoted, Featured, Source of Sources) and a linkable data piece.
+Expect links to help 2027 evergreen rankings more than this Christmas.
+
+Not done: Bing "Backlinks To Any Site" can show competitor links, but adding a
+compare site saves to the owner's account, so it was left for owner approval.
+
+## Competitor backlinks: giftlist.com (2026-11-06)
+
+Owner approved adding giftlist.com to Bing "Backlinks To Any Site", where it stays
+saved. GiftShuffle 1 referring domain, GiftList 187. All 188 rows read. Bing shows
+domains only, so how each site links was not seen.
+
+- AI tool directories are the largest group by count: aitools.fyi 87, stork.ai 8,
+  askaiforit.com 7, plus many small ones.
+- Nonprofits and personal sites (cornerstonecenterstl.org 13, mansionkids.org 10,
+  wedding sites) probably link to wish lists they keep on GiftList. Inferred from
+  the domain types and the anchors "public" and "free account on GiftList".
+- Press: financialcontent.com 15, probably release syndication. GiftList issued
+  EIN Presswire releases for Genie in Nov 2023 and Nov 2024, and the syndicated
+  "What the Tech?" TV segment covered it (KOB, WFMZ). fastcompany.com and forbes.cz
+  appear in Bing, but a search found no such coverage: unverified.
+- Gift businesses' blogs: sendfarha.com 11, vertu.com 13, laceduplaces.com 7.
+- Junk to ignore: apk sites and unrelated domains.
+
+Directory terms read 2026-11-06:
+- askaiforit: free tier requires a badge and dofollow link back; $9.99 tier
+  promises a permanent dofollow link. Skip both.
+- stork.ai: $49 only. Skip.
+- SaaSHub: no fee stated for a standard listing, approval required. Its page asks
+  that a person submits rather than an AI agent, so this one is for the owner.
+- aitools.fyi: submissions go to a third-party form, terms unknown.
+- aitoolnet, toolify, ai-tools-catalog, alternativeai: could not be read.
+
+## About page named 2026-11-06
+
+/about now names AJ Crane, founder of AiDept Solutions, as the person leading the
+site, with a press contact line. Organization schema gets the founder on the parent
+company. The published standards were corrected to match the catalog: new products
+need 4.3+ stars and 300+ reviews (the page claimed 1,000 for everything), and the
+homepage trust strip now says "Top-rated picks" and "Most with 1,000+ reviews".
+Catalog at the time: 1,326 products, 1,067 with 1,000+ reviews, 1,253 at 4.3+.
