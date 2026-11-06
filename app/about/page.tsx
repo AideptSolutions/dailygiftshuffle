@@ -6,11 +6,11 @@ import Navbar from '@/components/Navbar';
 export const metadata: Metadata = {
   title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
   description:
-    'Learn how TheGiftShuffle curates gift recommendations. Every product is hand-picked based on Amazon ratings, review count, and real recipient fit. No pay-to-play.',
+    'TheGiftShuffle is led by AJ Crane, founder of AiDept Solutions. Learn how we choose gifts using Amazon ratings, review counts and real recipient fit. No pay-to-play.',
   openGraph: {
     title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
     description:
-      'TheGiftShuffle curates gift recommendations based on Amazon ratings 4.3+, 1,000+ reviews, and genuine value-for-money. Learn about our editorial standards.',
+      'TheGiftShuffle is led by AJ Crane, founder of AiDept Solutions. Learn how we choose gifts and what our editorial standards are.',
     type: 'website',
     url: 'https://www.thegiftshuffle.com/about',
   },
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <div className="text-center mb-8">
             <h1 className="text-3xl font-extrabold text-gray-900 mb-2">About TheGiftShuffle</h1>
             <p className="text-gray-500">Your daily gift discovery engine</p>
-            <p className="text-xs text-gray-400 mt-1">Last Updated: March 2025</p>
+            <p className="text-xs text-gray-400 mt-1">Last Updated: November 2026</p>
           </div>
 
           <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -50,19 +50,34 @@ export default function AboutPage() {
             </section>
 
             <section>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Who Runs TheGiftShuffle</h2>
+              <p>
+                TheGiftShuffle is a venture of{' '}
+                <a href="https://aideptsolutions.com" className="text-[#F04E30] hover:underline">
+                  AiDept Solutions, LLC
+                </a>
+                , led by <strong>AJ Crane</strong>, founder of AiDept Solutions.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-xl font-bold text-gray-900 mb-2">Editorial Policy</h2>
               <p>
-                Every product in our catalog is hand-picked by our editorial team. We do not accept
-                paid placements. Every recommendation earns its spot on merit alone. Our selection
-                criteria:
+                We do not accept paid placements. Every recommendation earns its spot on merit
+                alone. Our standards for new products:
               </p>
               <ul className="list-disc list-inside mt-3 space-y-1 text-gray-600">
                 <li><strong>Amazon rating of 4.3 or higher</strong>, only genuinely well-loved products</li>
-                <li><strong>Minimum 1,000 customer reviews</strong>, enough signal to trust the rating</li>
+                <li><strong>At least 300 customer reviews</strong>, enough signal to trust the rating</li>
                 <li><strong>Strong value for money</strong>, great products at fair prices</li>
                 <li><strong>Genuine recipient fit</strong>, would a real person actually want this?</li>
                 <li><strong>No pay-to-play</strong>, brands cannot buy their way into our catalog</li>
               </ul>
+              <p className="mt-3">
+                Most of our catalog has well over 1,000 reviews. Ratings change over time, and some
+                new releases and specialty gifts have fewer reviews, so a small share of products
+                sit below these marks. We update the catalog as we find them.
+              </p>
               <div className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mt-6">
                 <Image
                   src="/img/about-how-we-pick.jpg"
@@ -134,6 +149,9 @@ export default function AboutPage() {
                 >
                   aj@aideptsolutions.com
                 </a>
+              </p>
+              <p className="mt-1">
+                Journalists and editors can use the same address to reach AJ Crane directly.
               </p>
             </section>
           </div>

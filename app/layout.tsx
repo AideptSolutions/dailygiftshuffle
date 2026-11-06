@@ -99,7 +99,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   logo: 'https://www.thegiftshuffle.com/favicon.png',
                   description:
                     'TheGiftShuffle is an interactive gift discovery engine: pick a recipient and budget, hit Shuffle, and get an instant, hand-curated, top-rated gift recommendation. Every pick is independently selected (4.3+ stars, 1,000+ reviews) with no paid placements.',
-                  parentOrganization: { '@type': 'Organization', name: 'AiDept Solutions, LLC' },
+                  parentOrganization: {
+                    '@type': 'Organization',
+                    name: 'AiDept Solutions, LLC',
+                    url: 'https://aideptsolutions.com',
+                    founder: { '@type': 'Person', name: 'AJ Crane' },
+                  },
                 },
                 {
                   '@type': 'WebSite',

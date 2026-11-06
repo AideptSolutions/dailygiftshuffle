@@ -283,9 +283,9 @@ export default async function HomePage() {
 
           {/* Trust strip: surface the editorial rigor that otherwise only lives on /about */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500 mb-2">
-            <span><span className="star-gold">&#9733;</span> 4.3+ rating</span>
+            <span><span className="star-gold">&#9733;</span> Top-rated picks</span>
             <span className="text-gray-300" aria-hidden="true">&bull;</span>
-            <span>1,000+ reviews</span>
+            <span>Most with 1,000+ reviews</span>
             <span className="text-gray-300" aria-hidden="true">&bull;</span>
             <span>Hand-selected</span>
             <span className="text-gray-300" aria-hidden="true">&bull;</span>
