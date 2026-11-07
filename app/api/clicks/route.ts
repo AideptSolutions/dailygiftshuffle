@@ -1,7 +1,7 @@
 import { randomUUID } from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { redis } from '@/lib/redis';
-import { parseAsin } from '@/lib/clickTracking';
+import { parseAsin, clickDayKey, cleanClickPath, isGenericClickName } from '@/lib/clickTracking';
 
 // Records one affiliate click in Redis. Called via navigator.sendBeacon from the
 // site-wide ClickTracker, so it must never throw — a bad payload just no-ops.
@@ -12,6 +12,7 @@ const NAMES_KEY = 'clicks:names';     // hash: key -> last-seen product name
 const EVENTS_KEY = 'clicks:events';   // sorted set: member = JSON event, score = epoch ms (time-windowed)
 const EVENTS_RETENTION_MS = 7 * 24 * 60 * 60 * 1000; // keep 7 days for daily/recent reporting
 const EVENTS_BACKSTOP_S = 8 * 24 * 60 * 60;
+const DAY_RETENTION_S = 800 * 24 * 60 * 60; // daily counts: long enough to compare two Christmases
 
 export async function POST(req: NextRequest) {
   try {
@@ -19,6 +20,7 @@ export async function POST(req: NextRequest) {
       asin?: string;
       url?: string;
       name?: string;
+      path?: string;
     };
 
     const key =
@@ -28,11 +30,20 @@ export async function POST(req: NextRequest) {
 
     if (!key) return new NextResponse(null, { status: 204 });
 
-    const name = data.name && typeof data.name === 'string' ? data.name.slice(0, 200) : null;
+    const rawName = data.name && typeof data.name === 'string' ? data.name.slice(0, 200) : null;
+    const name = rawName && !isGenericClickName(rawName) ? rawName : null;
+    const path = cleanClickPath(data.path);
 
     await redis.zincrby(RANKING_KEY, 1, key);
     if (name) {
       await redis.hset(NAMES_KEY, { [key]: name });
+    }
+
+    // Daily counts per product and source page, for period reports on /admin/clicks.
+    if (key.length <= 300) {
+      const dayKey = clickDayKey(new Date());
+      await redis.hincrby(dayKey, `${key}|${path}`, 1);
+      await redis.expire(dayKey, DAY_RETENTION_S);
     }
 
     // Timestamped event so time-windowed reports (e.g. the daily digest) can ask
@@ -40,7 +51,7 @@ export async function POST(req: NextRequest) {
     const now = Date.now();
     await redis.zadd(EVENTS_KEY, {
       score: now,
-      member: JSON.stringify({ key, name, at: new Date(now).toISOString(), id: randomUUID() }),
+      member: JSON.stringify({ key, name, path, at: new Date(now).toISOString(), id: randomUUID() }),
     });
     await redis.zremrangebyscore(EVENTS_KEY, 0, now - EVENTS_RETENTION_MS);
     await redis.expire(EVENTS_KEY, EVENTS_BACKSTOP_S);

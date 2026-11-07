@@ -7,7 +7,21 @@ interface ClickRow {
   clicks: number;
   name: string | null;
   url: string;
+  previous?: number;
+  topPage?: string | null;
 }
+
+interface PageRow {
+  path: string;
+  clicks: number;
+}
+
+const PERIODS: { days: number | null; label: string }[] = [
+  { days: null, label: 'All time' },
+  { days: 7, label: '7 days' },
+  { days: 30, label: '30 days' },
+  { days: 90, label: '90 days' },
+];
 
 export default function AdminClicksPage() {
   const [authed, setAuthed] = useState(false);
@@ -16,20 +30,25 @@ export default function AdminClicksPage() {
   const [rows, setRows] = useState<ClickRow[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [days, setDays] = useState<number | null>(null);
+  const [pages, setPages] = useState<PageRow[]>([]);
+  const [previousTotal, setPreviousTotal] = useState<number | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
-    const r = await fetch('/api/admin/clicks');
+    const r = await fetch(days ? `/api/admin/clicks?days=${days}` : '/api/admin/clicks');
     if (r.ok) {
       const data = await r.json();
       setRows(data.items ?? []);
       setTotal(data.total ?? 0);
+      setPages(data.pages ?? []);
+      setPreviousTotal(data.previousTotal ?? null);
       setAuthed(true);
     } else if (r.status === 401) {
       setAuthed(false);
     }
     setLoading(false);
-  }, []);
+  }, [days]);
 
   useEffect(() => {
     load();
@@ -84,7 +103,10 @@ export default function AdminClicksPage() {
         <div>
           <h1 className="text-2xl font-extrabold text-gray-900">Click Analytics</h1>
           <p className="text-sm text-gray-500">
-            {total.toLocaleString()} total affiliate clicks across {rows.length} item(s)
+            {total.toLocaleString()} affiliate clicks across {rows.length} item(s)
+            {days && previousTotal !== null
+              ? `, compared with ${previousTotal.toLocaleString()} in the previous ${days} days`
+              : ''}
           </p>
         </div>
         <button
@@ -96,9 +118,28 @@ export default function AdminClicksPage() {
         </button>
       </div>
 
+      <div className="flex flex-wrap gap-2 mb-4">
+        {PERIODS.map((p) => (
+          <button
+            key={p.label}
+            onClick={() => setDays(p.days)}
+            aria-pressed={days === p.days}
+            className={`text-sm font-semibold rounded-lg px-3 py-1.5 border ${
+              days === p.days
+                ? 'bg-[#F04E30] border-[#F04E30] text-white'
+                : 'bg-white border-gray-200 text-gray-700 hover:bg-gray-50'
+            }`}
+          >
+            {p.label}
+          </button>
+        ))}
+      </div>
+
       {rows.length === 0 ? (
         <div className="bg-white rounded-2xl border border-gray-200 p-10 text-center text-gray-500">
-          No clicks recorded yet. Once visitors start clicking “Buy on Amazon”, they’ll show up here.
+          {days
+            ? `No clicks in the last ${days} days. Dated clicks start on November 7, 2026.`
+            : 'No clicks recorded yet. Once visitors start clicking “Buy on Amazon”, they’ll show up here.'}
         </div>
       ) : (
         <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
@@ -130,9 +171,38 @@ export default function AdminClicksPage() {
                       />
                     </div>
                     {!r.name && <span className="text-xs text-gray-400">{r.key}</span>}
+                    {r.topPage && (
+                      <span className="block mt-1 text-xs text-gray-400">Mostly from {r.topPage}</span>
+                    )}
                   </td>
                   <td className="py-3 px-4 text-right font-bold text-gray-900">
                     {r.clicks.toLocaleString()}
+                    {r.previous !== undefined && (
+                      <span className="block text-xs font-normal text-gray-400">was {r.previous}</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {pages.length > 0 && (
+        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden mt-6">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-xs uppercase tracking-wide text-gray-400 border-b border-gray-100">
+                <th className="py-3 px-4">Page the click came from</th>
+                <th className="py-3 px-4 text-right w-24">Clicks</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pages.map((p) => (
+                <tr key={p.path} className="border-b border-gray-50 last:border-0">
+                  <td className="py-3 px-4 font-medium text-gray-900 break-all">{p.path}</td>
+                  <td className="py-3 px-4 text-right font-bold text-gray-900">
+                    {p.clicks.toLocaleString()}
                   </td>
                 </tr>
               ))}
@@ -142,6 +212,8 @@ export default function AdminClicksPage() {
       )}
 
       <p className="text-xs text-gray-400 mt-4">
+        Dated clicks and source pages start on November 7, 2026, in UTC days, and are kept for about
+        two years. All time counts start on June 20, 2026.{' '}
         First-party counts (instant, ad-blocker-proof). Also mirrored to GA4 as{' '}
         <code>select_item</code> events under Engagement → Events.
       </p>

@@ -660,3 +660,13 @@ company. The published standards were corrected to match the catalog: new produc
 need 4.3+ stars and 300+ reviews (the page claimed 1,000 for everything), and the
 homepage trust strip now says "Top-rated picks" and "Most with 1,000+ reviews".
 Catalog at the time: 1,326 products, 1,067 with 1,000+ reviews, 1,253 at 4.3+.
+
+## Click tracking upgrade 2026-11-07
+
+Each click now records its source page and adds to a daily hash, clicks:day:YYYY-MM-DD
+(UTC, kept about 800 days). /admin/clicks gained All time, 7, 30 and 90 day views, a
+comparison with the previous period, the main source page per gift, and a pages table.
+Button text such as "Buy on Amazon" is no longer stored as a name, and the daily digest
+now uses catalog names. The dashboard already preferred catalog names. Dated data starts
+2026-11-07, with no backfill. Known gaps: bots and owner clicks are not filtered, and
+views per gift are not counted. Note: /api/admin/clicks trusts an unsigned admin-auth cookie.

@@ -30,6 +30,22 @@ export function isAmazonUrl(url: string): boolean {
   }
 }
 
+/** Daily click counts: hash per UTC day, field = "<key>|<path>", value = clicks. */
+export const clickDayKey = (d: Date): string => `clicks:day:${d.toISOString().slice(0, 10)}`;
+export const UNKNOWN_CLICK_PATH = '(unknown)';
+
+/** Keep only a bounded pathname, so query strings are never stored. */
+export function cleanClickPath(v: unknown): string {
+  if (typeof v !== 'string' || !v.startsWith('/')) return UNKNOWN_CLICK_PATH;
+  const path = v.split(/[?#|]/)[0];
+  return path.length <= 120 ? path : UNKNOWN_CLICK_PATH;
+}
+
+/** Link text like "Buy on Amazon" says nothing about the product. */
+export function isGenericClickName(name: string): boolean {
+  return /^(buy|shop|view|see|check)\b.*\b(amazon|price|now|deal)\b/i.test(name.trim());
+}
+
 /** A 10-char ASIN (vs. a raw-URL fallback key). */
 export function isAsin(key: string): boolean {
   return /^[A-Z0-9]{10}$/.test(key);
@@ -51,7 +67,7 @@ export function trackAffiliateClick({ url, name }: TrackArgs): void {
 
   // First-party count via sendBeacon (survives the new-tab navigation).
   try {
-    const body = JSON.stringify({ asin, url, name });
+    const body = JSON.stringify({ asin, url, name, path: window.location.pathname });
     const blob = new Blob([body], { type: 'application/json' });
     navigator.sendBeacon?.('/api/clicks', blob);
   } catch {

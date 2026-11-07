@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { redis } from '@/lib/redis';
+import { catalogNamesByAsin } from '@/lib/clickNames';
 
 // Internal stats for the cross-site daily digest. Auth via a shared secret
 // header (INTERNAL_STATS_KEY) so only our own cron can read it.
@@ -50,6 +51,7 @@ export async function GET(req: NextRequest) {
     raw = [];
   }
 
+  const catalogNames = catalogNamesByAsin();
   const byProduct = new Map<string, { name: string | null; clicks: number }>();
   let clicks24h = 0;
 
@@ -58,7 +60,7 @@ export async function GET(req: NextRequest) {
     if (!e || !e.at) continue;
     if (new Date(e.at).getTime() < since) continue;
     clicks24h++;
-    const cur = byProduct.get(e.key) ?? { name: e.name, clicks: 0 };
+    const cur = byProduct.get(e.key) ?? { name: catalogNames.get(e.key) ?? e.name, clicks: 0 };
     cur.clicks++;
     if (!cur.name && e.name) cur.name = e.name;
     byProduct.set(e.key, cur);
