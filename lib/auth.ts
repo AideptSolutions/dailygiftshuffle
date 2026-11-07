@@ -2,8 +2,7 @@
 //
 // Sessions are stateless HMAC-signed cookies (no JWT dependency):
 //   base64url(payload JSON) + '.' + base64url(HMAC-SHA256(payload, SESSION_SECRET))
-// Verification uses timingSafeEqual. This intentionally does NOT follow the
-// legacy unsigned admin-auth cookie pattern.
+// Verification uses timingSafeEqual. The admin-auth cookie uses the same signing.
 
 import { createHmac, timingSafeEqual, randomBytes } from 'crypto';
 import type { NextRequest } from 'next/server';
@@ -13,6 +12,8 @@ export const SESSION_COOKIE = 'dgs_sess';
 export const ANON_COOKIE = 'dgs_anon';
 export const SESSION_MAX_AGE = 90 * 24 * 3600; // seconds
 export const ANON_COOKIE_MAX_AGE = 365 * 24 * 3600;
+export const ADMIN_COOKIE = 'admin-auth';
+export const ADMIN_MAX_AGE = 7 * 24 * 3600;
 
 export interface SessionPayload {
   uid: string;
@@ -77,6 +78,24 @@ export function verifySession(cookieValue: string | undefined | null): SessionPa
 
 export function getSession(req: NextRequest): SessionPayload | null {
   return verifySession(req.cookies.get(SESSION_COOKIE)?.value);
+}
+
+export function signAdmin(): string {
+  const exp = Math.floor(Date.now() / 1000) + ADMIN_MAX_AGE;
+  return signValue(JSON.stringify({ role: 'admin', exp }));
+}
+
+// The secret also signs session and anon cookies, so check the role, not just
+// the signature. Fails closed if the secret is missing.
+export function isAdmin(req: NextRequest): boolean {
+  try {
+    const data = verifyValue(req.cookies.get(ADMIN_COOKIE)?.value);
+    if (!data) return false;
+    const payload = JSON.parse(data) as { role?: string; exp?: number };
+    return payload.role === 'admin' && (payload.exp ?? 0) > Math.floor(Date.now() / 1000);
+  } catch {
+    return false;
+  }
 }
 
 export function newAuthToken(): string {

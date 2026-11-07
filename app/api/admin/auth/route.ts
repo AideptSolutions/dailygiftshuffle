@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { ADMIN_COOKIE, ADMIN_MAX_AGE, signAdmin } from '@/lib/auth';
 
 export async function POST(req: NextRequest) {
   const { password } = await req.json() as { password: string };
@@ -12,10 +13,11 @@ export async function POST(req: NextRequest) {
   }
 
   const res = NextResponse.json({ ok: true });
-  res.cookies.set('admin-auth', 'true', {
+  res.cookies.set(ADMIN_COOKIE, signAdmin(), {
     httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 7, // 7 days
+    maxAge: ADMIN_MAX_AGE,
     path: '/',
   });
   return res;
@@ -23,6 +25,6 @@ export async function POST(req: NextRequest) {
 
 export async function DELETE() {
   const res = NextResponse.json({ ok: true });
-  res.cookies.delete('admin-auth');
+  res.cookies.delete(ADMIN_COOKIE);
   return res;
 }

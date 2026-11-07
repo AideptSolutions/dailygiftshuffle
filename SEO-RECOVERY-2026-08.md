@@ -669,4 +669,5 @@ comparison with the previous period, the main source page per gift, and a pages 
 Button text such as "Buy on Amazon" is no longer stored as a name, and the daily digest
 now uses catalog names. The dashboard already preferred catalog names. Dated data starts
 2026-11-07, with no backfill. Known gaps: bots and owner clicks are not filtered, and
-views per gift are not counted. Note: /api/admin/clicks trusts an unsigned admin-auth cookie.
+views per gift are not counted. The admin-auth cookie is now HMAC-signed with an expiry
+(isAdmin in lib/auth.ts), so a hand-set cookie no longer opens /api/admin/clicks.

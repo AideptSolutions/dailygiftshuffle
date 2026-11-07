@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { redis } from '@/lib/redis';
+import { isAdmin } from '@/lib/auth';
 import { clickDayKey, isAsin } from '@/lib/clickTracking';
 import { catalogNamesByAsin } from '@/lib/clickNames';
 
@@ -11,10 +12,6 @@ const NAMES_KEY = 'clicks:names';
 
 const PERIODS = new Set([7, 30, 90]);
 const DAY_MS = 24 * 60 * 60 * 1000;
-
-function checkAuth(req: NextRequest): boolean {
-  return req.cookies.get('admin-auth')?.value === 'true';
-}
 
 const itemUrl = (key: string) => (isAsin(key) ? `https://www.amazon.com/dp/${key}` : key);
 
@@ -31,7 +28,7 @@ async function readDays(start: number, count: number) {
 }
 
 export async function GET(req: NextRequest) {
-  if (!checkAuth(req)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  if (!isAdmin(req)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const storedNames = (await redis.hgetall<Record<string, string>>(NAMES_KEY)) ?? {};
   const catalogNames = catalogNamesByAsin();
