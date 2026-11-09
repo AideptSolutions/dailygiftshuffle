@@ -14,6 +14,7 @@ const NICHES = [
 // line). Bing weighs lastmod for seasonal queries; never bump without a review.
 const LAST_REVIEWED: Record<string, string> = {
   '/stocking-stuffers': '2026-11-04',
+  '/trending-christmas-gifts-2026': '2026-11-09',
   '/christmas-gifts-for-mom': '2026-11-01',
   '/christmas-gifts-for-dad': '2026-11-01',
   '/christmas-gifts-for-kids': '2026-11-01',

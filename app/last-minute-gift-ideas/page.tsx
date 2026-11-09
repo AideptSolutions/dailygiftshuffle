@@ -178,7 +178,7 @@ export default function LastMinuteGiftIdeasPage() {
           <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: '3/2', maxHeight: '420px' }}>
             <Image
               src="/images/heroes/last-minute-gift-ideas.jpg"
-              alt="A wrapped gift waiting at a front door"
+              alt="A last-minute gift spread on cream linen: a phone, a gift card in a sealed envelope, two event tickets, a candle and a knit throw"
               fill
               className="object-cover"
               priority

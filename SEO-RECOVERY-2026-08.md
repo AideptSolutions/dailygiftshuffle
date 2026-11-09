@@ -671,3 +671,17 @@ now uses catalog names. The dashboard already preferred catalog names. Dated dat
 2026-11-07, with no backfill. Known gaps: bots and owner clicks are not filtered, and
 views per gift are not counted. The admin-auth cookie is now HMAC-signed with an expiry
 (isAdmin in lib/auth.ts), so a hand-set cookie no longer opens /api/admin/clicks.
+
+## Trending page rebuilt on search data 2026-11-09
+
+/trending-christmas-gifts-2026 now leads with measured US Google Trends growth (six weeks
+to Nov 7, 2026 vs the same weeks of 2025) instead of hot-list picks. Rising: medicube
++119%, rhode blush +58%, Switch 2 +57%, HydroJug +33%, Toniebox +21%. Cooling: Labubu
+-92%, KPop Demon Hunters -85%, Stanley cup -32%, Sol de Janeiro -31%. Google's Holiday 100
+(published 2026-11-09) quoted for instax +190%, Nike V5 RNR +150%, perfume sampler sets.
+Raw data in research/google-trends-2026-11-09.json (9 SerpAPI searches; 33 left).
+New "Is Labubu still popular in 2026?" FAQ. New hero (gpt-image-2) shows rising gift
+types; old hero backed up outside the repo. /last-minute-gift-ideas got its own neutral
+(non-holiday) generated hero, replacing the doorstep photo.
+Catalog gaps for rising gifts (no verified listing yet): Toniebox, Fitbit, rhode blush,
+Nike V5 RNR, perfume sampler sets, instax mini 13, Switch 2 console.

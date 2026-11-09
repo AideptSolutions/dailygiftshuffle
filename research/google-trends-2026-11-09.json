@@ -1,0 +1,10351 @@
+{
+ "source": "Google Trends via SerpAPI (engine=google_trends, geo=US, data_type=TIMESERIES, date=2024-10-01 2026-11-08)",
+ "pulled": "2026-11-09",
+ "method": "Average weekly interest for weeks starting 2026-09-27..2026-11-01 vs 2025-09-28..2025-11-02. Each request is its own 0-100 scale; growth compares a term with itself. Terms averaging under 1 point in either window are not reported as growth.",
+ "windows": {
+  "NOW": [
+   "2026-09-27",
+   "2026-11-01"
+  ],
+  "THEN": [
+   "2025-09-28",
+   "2025-11-02"
+  ]
+ },
+ "summary": [
+  {
+   "term": "KPop Demon Hunters toys",
+   "group": "Owala",
+   "vsAnchor": 0,
+   "now": 0,
+   "then": 0.2,
+   "yoy": null,
+   "peakWeek": "2025-11-02"
+  },
+  {
+   "term": "Ninja Slushi",
+   "group": "Owala",
+   "vsAnchor": 0,
+   "now": 0,
+   "then": 0.2,
+   "yoy": null,
+   "peakWeek": "2026-06-21"
+  },
+  {
+   "term": "instax mini 13",
+   "group": "Owala",
+   "vsAnchor": 0,
+   "now": 0,
+   "then": 0,
+   "yoy": null,
+   "peakWeek": "2024-09-29"
+  },
+  {
+   "term": "rhode pocket blush",
+   "group": "Owala",
+   "vsAnchor": 1,
+   "now": 0.3,
+   "then": 0,
+   "yoy": null,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "Stanley Quencher",
+   "group": "Owala",
+   "vsAnchor": 2,
+   "now": 0.8,
+   "then": 0.8,
+   "yoy": null,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "Always Pan Pro",
+   "group": "Owala",
+   "vsAnchor": 0,
+   "now": 0,
+   "then": 0,
+   "yoy": null,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "Theragun mini",
+   "group": "Owala",
+   "vsAnchor": 1,
+   "now": 0.3,
+   "then": 0,
+   "yoy": null,
+   "peakWeek": "2026-06-07"
+  },
+  {
+   "term": "Ninja Slushi",
+   "group": "Owala",
+   "vsAnchor": 0,
+   "now": 0,
+   "then": 0.2,
+   "yoy": null,
+   "peakWeek": "2026-06-21"
+  },
+  {
+   "term": "instax mini 13",
+   "group": "Toniebox",
+   "vsAnchor": 6,
+   "now": 1.8,
+   "then": 0,
+   "yoy": null,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "Always Pan Pro",
+   "group": "Toniebox",
+   "vsAnchor": 3,
+   "now": 1,
+   "then": 0.5,
+   "yoy": null,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "Nike V5 RNR",
+   "group": "Owala",
+   "vsAnchor": 6,
+   "now": 2.5,
+   "then": 1,
+   "yoy": 150,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "medicube",
+   "group": "Owala",
+   "vsAnchor": 52,
+   "now": 21.2,
+   "then": 9.7,
+   "yoy": 119,
+   "peakWeek": "2026-04-12"
+  },
+  {
+   "term": "rhode blush",
+   "group": "Toniebox",
+   "vsAnchor": 60,
+   "now": 17.7,
+   "then": 11.2,
+   "yoy": 58,
+   "peakWeek": "2026-04-12"
+  },
+  {
+   "term": "Nintendo Switch 2",
+   "group": "Owala",
+   "vsAnchor": 94,
+   "now": 17,
+   "then": 10.8,
+   "yoy": 57,
+   "peakWeek": "2025-06-01"
+  },
+  {
+   "term": "LED face mask",
+   "group": "Owala",
+   "vsAnchor": 4,
+   "now": 1.8,
+   "then": 1.3,
+   "yoy": 38,
+   "peakWeek": "2026-04-05"
+  },
+  {
+   "term": "HydroJug",
+   "group": "Owala",
+   "vsAnchor": 40,
+   "now": 6,
+   "then": 4.5,
+   "yoy": 33,
+   "peakWeek": "2025-11-23"
+  },
+  {
+   "term": "Toniebox",
+   "group": "Owala",
+   "vsAnchor": 9,
+   "now": 3.8,
+   "then": 3.2,
+   "yoy": 21,
+   "peakWeek": "2025-12-21"
+  },
+  {
+   "term": "Kindle Paperwhite",
+   "group": "Owala",
+   "vsAnchor": 13,
+   "now": 2.3,
+   "then": 2,
+   "yoy": 17,
+   "peakWeek": "2026-04-12"
+  },
+  {
+   "term": "Comfrt hoodie",
+   "group": "Owala",
+   "vsAnchor": 11,
+   "now": 4.5,
+   "then": 3.8,
+   "yoy": 17,
+   "peakWeek": "2025-11-23"
+  },
+  {
+   "term": "Theragun mini",
+   "group": "Toniebox",
+   "vsAnchor": 12,
+   "now": 3.5,
+   "then": 3,
+   "yoy": 17,
+   "peakWeek": "2026-06-07"
+  },
+  {
+   "term": "Fitbit",
+   "group": "Owala",
+   "vsAnchor": 57,
+   "now": 23.2,
+   "then": 20.3,
+   "yoy": 14,
+   "peakWeek": "2026-05-24"
+  },
+  {
+   "term": "Olaplex",
+   "group": "Owala",
+   "vsAnchor": 16,
+   "now": 6.7,
+   "then": 6.3,
+   "yoy": 5,
+   "peakWeek": "2026-04-12"
+  },
+  {
+   "term": "Govee lights",
+   "group": "Owala",
+   "vsAnchor": 26,
+   "now": 10.7,
+   "then": 10.3,
+   "yoy": 3,
+   "peakWeek": "2025-11-23"
+  },
+  {
+   "term": "Lovevery",
+   "group": "Owala",
+   "vsAnchor": 8,
+   "now": 3.2,
+   "then": 3.2,
+   "yoy": 0,
+   "peakWeek": "2024-11-24"
+  },
+  {
+   "term": "Bluey toys",
+   "group": "Owala",
+   "vsAnchor": 2,
+   "now": 1,
+   "then": 1,
+   "yoy": 0,
+   "peakWeek": "2024-11-24"
+  },
+  {
+   "term": "LEGO advent calendar",
+   "group": "Owala",
+   "vsAnchor": 9,
+   "now": 3.7,
+   "then": 3.8,
+   "yoy": -4,
+   "peakWeek": "2024-12-01"
+  },
+  {
+   "term": "Cozy Earth",
+   "group": "Owala",
+   "vsAnchor": 7,
+   "now": 2.8,
+   "then": 3.5,
+   "yoy": -19,
+   "peakWeek": "2025-11-23"
+  },
+  {
+   "term": "Squishmallows",
+   "group": "Owala",
+   "vsAnchor": 8,
+   "now": 3.3,
+   "then": 4.3,
+   "yoy": -23,
+   "peakWeek": "2024-12-15"
+  },
+  {
+   "term": "Ray-Ban Meta",
+   "group": "Owala",
+   "vsAnchor": 4,
+   "now": 1.7,
+   "then": 2.2,
+   "yoy": -23,
+   "peakWeek": "2026-05-17"
+  },
+  {
+   "term": "AirPods Pro 3",
+   "group": "Owala",
+   "vsAnchor": 28,
+   "now": 5.2,
+   "then": 6.8,
+   "yoy": -24,
+   "peakWeek": "2025-09-07"
+  },
+  {
+   "term": "Summer Fridays lip balm",
+   "group": "Owala",
+   "vsAnchor": 2,
+   "now": 1,
+   "then": 1.3,
+   "yoy": -25,
+   "peakWeek": "2024-11-24"
+  },
+  {
+   "term": "Sol de Janeiro",
+   "group": "Owala",
+   "vsAnchor": 15,
+   "now": 6.3,
+   "then": 9.2,
+   "yoy": -31,
+   "peakWeek": "2024-11-24"
+  },
+  {
+   "term": "Stanley cup",
+   "group": "Owala",
+   "vsAnchor": 34,
+   "now": 5,
+   "then": 7.3,
+   "yoy": -32,
+   "peakWeek": "2026-06-07"
+  },
+  {
+   "term": "KPop Demon Hunters",
+   "group": "Owala",
+   "vsAnchor": 51,
+   "now": 7.5,
+   "then": 49,
+   "yoy": -85,
+   "peakWeek": "2025-08-24"
+  },
+  {
+   "term": "Labubu",
+   "group": "Owala",
+   "vsAnchor": 18,
+   "now": 2.7,
+   "then": 32.8,
+   "yoy": -92,
+   "peakWeek": "2025-06-15"
+  },
+  {
+   "term": "Labubu",
+   "group": "Owala",
+   "vsAnchor": 18,
+   "now": 2.7,
+   "then": 32.8,
+   "yoy": -92,
+   "peakWeek": "2025-06-15"
+  }
+ ],
+ "raw": {
+  "Owala,KPop Demon Hunters toys,Labubu,Ninja Slushi,HydroJug": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 2,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 0,
+     "HydroJug": 1
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 1
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 1
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 2,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 2,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 2,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 2,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 8,
+     "Ninja Slushi": 2,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 9,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 9,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 8,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 8,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 9,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 11,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 10,
+     "Ninja Slushi": 1,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 13,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 14,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 18,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 19,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 23,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 23,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 25,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 22,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 25,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 36,
+     "Ninja Slushi": 0,
+     "HydroJug": 2
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 38,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 41,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 47,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 53,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 68,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 85,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 98,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 100,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 98,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 91,
+     "Ninja Slushi": 1,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 95,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 98,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 92,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 25,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 85,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 25,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 80,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 82,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 71,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 63,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 68,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 55,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 49,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 44,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 39,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 35,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 34,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 32,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 31,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 26,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 27,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 24,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 27,
+     "Ninja Slushi": 1,
+     "HydroJug": 7
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 37,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 31,
+     "Ninja Slushi": 1,
+     "HydroJug": 10
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 30,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 26,
+     "Ninja Slushi": 1,
+     "HydroJug": 7
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 25,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 26,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 25,
+     "Ninja Slushi": 1,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 31,
+     "Ninja Slushi": 2,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 20,
+     "Ninja Slushi": 1,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 16,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 13,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 11,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 10,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 10,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 9,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 9,
+     "Ninja Slushi": 0,
+     "HydroJug": 3
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 8,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 8,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 9,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 8,
+     "Ninja Slushi": 0,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 7,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 7,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 7,
+     "Ninja Slushi": 1,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 6,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 6,
+     "Ninja Slushi": 1,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 20,
+     "Ninja Slushi": 1,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 1,
+     "Labubu": 6,
+     "Ninja Slushi": 2,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 2,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 5,
+     "Ninja Slushi": 2,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 2,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 2,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 2,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 3,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 3,
+     "HydroJug": 4
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 22,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 22,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 24,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 1,
+     "HydroJug": 7
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 4,
+     "Ninja Slushi": 1,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 1,
+     "HydroJug": 7
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 2,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 2,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 2,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 0,
+     "HydroJug": 5
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 0,
+     "HydroJug": 6
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 2,
+     "Ninja Slushi": 0,
+     "HydroJug": 8
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters toys": 0,
+     "Labubu": 3,
+     "Ninja Slushi": 0,
+     "HydroJug": 9
+    }
+   }
+  ],
+  "Owala,LEGO advent calendar,Sol de Janeiro,Summer Fridays lip balm,medicube": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 33,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 2
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 30,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 3
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 29,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 3
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 36,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 3
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 3
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 40,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 18,
+     "Summer Fridays lip balm": 3,
+     "medicube": 3
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 43,
+     "LEGO advent calendar": 4,
+     "Sol de Janeiro": 24,
+     "Summer Fridays lip balm": 4,
+     "medicube": 4
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 46,
+     "LEGO advent calendar": 5,
+     "Sol de Janeiro": 25,
+     "Summer Fridays lip balm": 5,
+     "medicube": 5
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 62,
+     "LEGO advent calendar": 7,
+     "Sol de Janeiro": 44,
+     "Summer Fridays lip balm": 9,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 53,
+     "LEGO advent calendar": 9,
+     "Sol de Janeiro": 32,
+     "Summer Fridays lip balm": 8,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 50,
+     "LEGO advent calendar": 4,
+     "Sol de Janeiro": 32,
+     "Summer Fridays lip balm": 8,
+     "medicube": 4
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 52,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 34,
+     "Summer Fridays lip balm": 7,
+     "medicube": 4
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 51,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 34,
+     "Summer Fridays lip balm": 6,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 37,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 18,
+     "Summer Fridays lip balm": 3,
+     "medicube": 7
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 35,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 14,
+     "Summer Fridays lip balm": 3,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 34,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 3,
+     "medicube": 5
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 36,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 5
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 48,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 4
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 4
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 40,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 3,
+     "medicube": 5
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 33,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 34,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 5
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 37,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 5
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 35,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 7
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 30,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 8
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 8
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 7
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 33,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 8
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 34,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 7
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 34,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 14,
+     "Summer Fridays lip balm": 1,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 33,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 14,
+     "Summer Fridays lip balm": 1,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 34,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 31,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 30,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 29,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 14,
+     "Summer Fridays lip balm": 1,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 14,
+     "Summer Fridays lip balm": 1,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 32,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 1,
+     "medicube": 6
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 45,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 1,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 48,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 54,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 1,
+     "medicube": 11
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 68,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 14,
+     "Summer Fridays lip balm": 2,
+     "medicube": 12
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 69,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 1,
+     "medicube": 10
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 63,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 10,
+     "Summer Fridays lip balm": 1,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 57,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 49,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 45,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 45,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 7
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 7
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 40,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 8
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 8
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 42,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 11
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 35,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 4,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 2,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 40,
+     "LEGO advent calendar": 4,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 9
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 58,
+     "LEGO advent calendar": 7,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 12
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 62,
+     "LEGO advent calendar": 6,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 2,
+     "medicube": 12
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 66,
+     "LEGO advent calendar": 6,
+     "Sol de Janeiro": 22,
+     "Summer Fridays lip balm": 2,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 100,
+     "LEGO advent calendar": 6,
+     "Sol de Janeiro": 36,
+     "Summer Fridays lip balm": 4,
+     "medicube": 20
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 82,
+     "LEGO advent calendar": 8,
+     "Sol de Janeiro": 27,
+     "Summer Fridays lip balm": 3,
+     "medicube": 15
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 69,
+     "LEGO advent calendar": 4,
+     "Sol de Janeiro": 26,
+     "Summer Fridays lip balm": 4,
+     "medicube": 14
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 70,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 28,
+     "Summer Fridays lip balm": 3,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 71,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 28,
+     "Summer Fridays lip balm": 3,
+     "medicube": 17
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 50,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 15,
+     "Summer Fridays lip balm": 2,
+     "medicube": 19
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 44,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 10,
+     "Summer Fridays lip balm": 1,
+     "medicube": 17
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 43,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 10,
+     "Summer Fridays lip balm": 1,
+     "medicube": 14
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 38,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 10,
+     "Summer Fridays lip balm": 1,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 37,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 12
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 35,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 14
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 34,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 15
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 37,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 14
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 40,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 13
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 1,
+     "medicube": 14
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 42,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 1,
+     "medicube": 23
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 52,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 16,
+     "Summer Fridays lip balm": 2,
+     "medicube": 32
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 48,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 19,
+     "Summer Fridays lip balm": 2,
+     "medicube": 38
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 58,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 20,
+     "Summer Fridays lip balm": 3,
+     "medicube": 43
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 52,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 15,
+     "Summer Fridays lip balm": 2,
+     "medicube": 33
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 48,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 2,
+     "medicube": 26
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 45,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 1,
+     "medicube": 24
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 47,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 16,
+     "Summer Fridays lip balm": 2,
+     "medicube": 31
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 51,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 15,
+     "Summer Fridays lip balm": 2,
+     "medicube": 33
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 46,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 1,
+     "medicube": 27
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 43,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 11,
+     "Summer Fridays lip balm": 2,
+     "medicube": 26
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 44,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 13,
+     "Summer Fridays lip balm": 1,
+     "medicube": 27
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 45,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 1,
+     "medicube": 29
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 49,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 12,
+     "Summer Fridays lip balm": 1,
+     "medicube": 42
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 45,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 24
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 59,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 9,
+     "Summer Fridays lip balm": 1,
+     "medicube": 19
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 58,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 16
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 60,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 17
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 62,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 20
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 72,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 17
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 67,
+     "LEGO advent calendar": 0,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 18
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 62,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 17
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 62,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 17
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 56,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 18
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 56,
+     "LEGO advent calendar": 1,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 16
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 72,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 6,
+     "Summer Fridays lip balm": 1,
+     "medicube": 16
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 43,
+     "LEGO advent calendar": 2,
+     "Sol de Janeiro": 6,
+     "Summer Fridays lip balm": 1,
+     "medicube": 18
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 41,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 6,
+     "Summer Fridays lip balm": 1,
+     "medicube": 16
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 42,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 25
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 38,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 6,
+     "Summer Fridays lip balm": 1,
+     "medicube": 22
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 39,
+     "LEGO advent calendar": 3,
+     "Sol de Janeiro": 6,
+     "Summer Fridays lip balm": 1,
+     "medicube": 21
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 40,
+     "LEGO advent calendar": 4,
+     "Sol de Janeiro": 6,
+     "Summer Fridays lip balm": 1,
+     "medicube": 21
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 46,
+     "LEGO advent calendar": 6,
+     "Sol de Janeiro": 7,
+     "Summer Fridays lip balm": 1,
+     "medicube": 22
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 55,
+     "LEGO advent calendar": 7,
+     "Sol de Janeiro": 8,
+     "Summer Fridays lip balm": 1,
+     "medicube": 30
+    }
+   }
+  ],
+  "Owala,Nintendo Switch 2,AirPods Pro 3,instax mini 13,Kindle Paperwhite": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 2,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 13,
+     "Nintendo Switch 2": 2,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 13,
+     "Nintendo Switch 2": 3,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 16,
+     "Nintendo Switch 2": 3,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 3,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 4,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 3,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 21,
+     "Nintendo Switch 2": 3,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 28,
+     "Nintendo Switch 2": 4,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 24,
+     "Nintendo Switch 2": 3,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 4,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 23,
+     "Nintendo Switch 2": 5,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 23,
+     "Nintendo Switch 2": 6,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 7
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 6,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 16,
+     "Nintendo Switch 2": 7,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 40,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 16,
+     "Nintendo Switch 2": 14,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 7,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 5,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 5,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 6,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 5,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 5,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 5,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 16,
+     "Nintendo Switch 2": 6,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 7,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 77,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 34,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 18,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 38,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 16,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 15,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 14,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 17,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 100,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 13,
+     "Nintendo Switch 2": 59,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 13,
+     "Nintendo Switch 2": 37,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 27,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 14,
+     "Nintendo Switch 2": 24,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 21,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 21,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 24,
+     "Nintendo Switch 2": 22,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 30,
+     "Nintendo Switch 2": 21,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 31,
+     "Nintendo Switch 2": 15,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 28,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 25,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 1,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 10,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 11,
+     "AirPods Pro 3": 2,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 10,
+     "AirPods Pro 3": 18,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 10,
+     "AirPods Pro 3": 15,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 10,
+     "AirPods Pro 3": 15,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 9,
+     "AirPods Pro 3": 9,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 10,
+     "AirPods Pro 3": 8,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 16,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 11,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 10,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 26,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 28,
+     "Nintendo Switch 2": 15,
+     "AirPods Pro 3": 7,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 30,
+     "Nintendo Switch 2": 17,
+     "AirPods Pro 3": 9,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 45,
+     "Nintendo Switch 2": 32,
+     "AirPods Pro 3": 15,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 37,
+     "Nintendo Switch 2": 24,
+     "AirPods Pro 3": 12,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 31,
+     "Nintendo Switch 2": 19,
+     "AirPods Pro 3": 10,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 31,
+     "Nintendo Switch 2": 21,
+     "AirPods Pro 3": 9,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 32,
+     "Nintendo Switch 2": 36,
+     "AirPods Pro 3": 14,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 23,
+     "AirPods Pro 3": 9,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 14,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 11,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 11,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 16,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 15,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 16,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 17,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 16,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 16,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 23,
+     "Nintendo Switch 2": 19,
+     "AirPods Pro 3": 9,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 7
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 20,
+     "AirPods Pro 3": 10,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 11
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 26,
+     "Nintendo Switch 2": 20,
+     "AirPods Pro 3": 12,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 13
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 23,
+     "Nintendo Switch 2": 20,
+     "AirPods Pro 3": 10,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 10
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 21,
+     "Nintendo Switch 2": 16,
+     "AirPods Pro 3": 7,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 8
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 17,
+     "AirPods Pro 3": 8,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 11
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 21,
+     "Nintendo Switch 2": 19,
+     "AirPods Pro 3": 8,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 10
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 23,
+     "Nintendo Switch 2": 20,
+     "AirPods Pro 3": 8,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 5
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 18,
+     "AirPods Pro 3": 7,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 17,
+     "AirPods Pro 3": 7,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 21,
+     "AirPods Pro 3": 9,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 18,
+     "AirPods Pro 3": 10,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 4
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 22,
+     "Nintendo Switch 2": 21,
+     "AirPods Pro 3": 11,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 6
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 18,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 26,
+     "Nintendo Switch 2": 14,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 26,
+     "Nintendo Switch 2": 14,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 27,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 28,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 32,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 30,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 28,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 28,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 25,
+     "Nintendo Switch 2": 12,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 25,
+     "Nintendo Switch 2": 27,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 32,
+     "Nintendo Switch 2": 17,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 19,
+     "Nintendo Switch 2": 15,
+     "AirPods Pro 3": 6,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 3
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 13,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 17,
+     "Nintendo Switch 2": 14,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 18,
+     "Nintendo Switch 2": 20,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 20,
+     "Nintendo Switch 2": 27,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 25,
+     "Nintendo Switch 2": 32,
+     "AirPods Pro 3": 5,
+     "instax mini 13": 0,
+     "Kindle Paperwhite": 2
+    }
+   }
+  ],
+  "Owala,rhode pocket blush,LED face mask,Olaplex,Stanley Quencher": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 33,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 30,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 29,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 36,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 40,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 43,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 46,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 62,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 12,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 53,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 9,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 50,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 8,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 52,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 8,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 51,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 10,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 37,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 9,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 35,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 34,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 36,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 48,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 40,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 33,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 34,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 37,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 35,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 30,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 33,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 34,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 34,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 33,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 34,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 31,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 30,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 29,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 32,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 45,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 48,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 54,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 68,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 11,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 69,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 63,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 57,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 49,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 45,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 45,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 40,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 42,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 35,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 0
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 40,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 58,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 62,
+     "rhode pocket blush": 1,
+     "LED face mask": 2,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 66,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 8,
+     "Stanley Quencher": 4
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 100,
+     "rhode pocket blush": 1,
+     "LED face mask": 5,
+     "Olaplex": 12,
+     "Stanley Quencher": 4
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 82,
+     "rhode pocket blush": 1,
+     "LED face mask": 4,
+     "Olaplex": 11,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 69,
+     "rhode pocket blush": 1,
+     "LED face mask": 4,
+     "Olaplex": 8,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 70,
+     "rhode pocket blush": 1,
+     "LED face mask": 4,
+     "Olaplex": 9,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 71,
+     "rhode pocket blush": 0,
+     "LED face mask": 5,
+     "Olaplex": 10,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 50,
+     "rhode pocket blush": 0,
+     "LED face mask": 5,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 44,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 43,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 38,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 37,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 35,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 34,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 37,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 40,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 9,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 3,
+     "Olaplex": 10,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 42,
+     "rhode pocket blush": 1,
+     "LED face mask": 5,
+     "Olaplex": 13,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 52,
+     "rhode pocket blush": 2,
+     "LED face mask": 10,
+     "Olaplex": 17,
+     "Stanley Quencher": 5
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 48,
+     "rhode pocket blush": 3,
+     "LED face mask": 13,
+     "Olaplex": 22,
+     "Stanley Quencher": 6
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 58,
+     "rhode pocket blush": 3,
+     "LED face mask": 12,
+     "Olaplex": 24,
+     "Stanley Quencher": 6
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 52,
+     "rhode pocket blush": 2,
+     "LED face mask": 10,
+     "Olaplex": 15,
+     "Stanley Quencher": 4
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 48,
+     "rhode pocket blush": 1,
+     "LED face mask": 8,
+     "Olaplex": 12,
+     "Stanley Quencher": 3
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 45,
+     "rhode pocket blush": 1,
+     "LED face mask": 8,
+     "Olaplex": 12,
+     "Stanley Quencher": 3
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 47,
+     "rhode pocket blush": 2,
+     "LED face mask": 10,
+     "Olaplex": 15,
+     "Stanley Quencher": 5
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 51,
+     "rhode pocket blush": 2,
+     "LED face mask": 12,
+     "Olaplex": 15,
+     "Stanley Quencher": 5
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 46,
+     "rhode pocket blush": 1,
+     "LED face mask": 8,
+     "Olaplex": 12,
+     "Stanley Quencher": 3
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 43,
+     "rhode pocket blush": 2,
+     "LED face mask": 8,
+     "Olaplex": 11,
+     "Stanley Quencher": 3
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 44,
+     "rhode pocket blush": 3,
+     "LED face mask": 9,
+     "Olaplex": 13,
+     "Stanley Quencher": 4
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 45,
+     "rhode pocket blush": 2,
+     "LED face mask": 7,
+     "Olaplex": 12,
+     "Stanley Quencher": 4
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 49,
+     "rhode pocket blush": 2,
+     "LED face mask": 9,
+     "Olaplex": 12,
+     "Stanley Quencher": 4
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 45,
+     "rhode pocket blush": 1,
+     "LED face mask": 4,
+     "Olaplex": 9,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 59,
+     "rhode pocket blush": 1,
+     "LED face mask": 3,
+     "Olaplex": 9,
+     "Stanley Quencher": 2
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 58,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 8,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 60,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 62,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 72,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 67,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 0
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 62,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 62,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 56,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 56,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 72,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 43,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 41,
+     "rhode pocket blush": 0,
+     "LED face mask": 1,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 42,
+     "rhode pocket blush": 1,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 38,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 39,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 40,
+     "rhode pocket blush": 0,
+     "LED face mask": 2,
+     "Olaplex": 6,
+     "Stanley Quencher": 1
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 46,
+     "rhode pocket blush": 1,
+     "LED face mask": 2,
+     "Olaplex": 6,
+     "Stanley Quencher": 0
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 55,
+     "rhode pocket blush": 1,
+     "LED face mask": 2,
+     "Olaplex": 7,
+     "Stanley Quencher": 0
+    }
+   }
+  ],
+  "Owala,Toniebox,Lovevery,Bluey toys,Squishmallows": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 33,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 30,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 9
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 37,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 33,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 41,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 9
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 45,
+     "Toniebox": 6,
+     "Lovevery": 4,
+     "Bluey toys": 2,
+     "Squishmallows": 10
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 48,
+     "Toniebox": 5,
+     "Lovevery": 4,
+     "Bluey toys": 2,
+     "Squishmallows": 11
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 64,
+     "Toniebox": 7,
+     "Lovevery": 5,
+     "Bluey toys": 3,
+     "Squishmallows": 13
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 57,
+     "Toniebox": 5,
+     "Lovevery": 5,
+     "Bluey toys": 3,
+     "Squishmallows": 13
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 53,
+     "Toniebox": 4,
+     "Lovevery": 4,
+     "Bluey toys": 3,
+     "Squishmallows": 13
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 52,
+     "Toniebox": 4,
+     "Lovevery": 3,
+     "Bluey toys": 3,
+     "Squishmallows": 14
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 52,
+     "Toniebox": 11,
+     "Lovevery": 3,
+     "Bluey toys": 2,
+     "Squishmallows": 12
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 39,
+     "Toniebox": 5,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 36,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 48,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 41,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 41,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 34,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 38,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 36,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 36,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 34,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 37,
+     "Toniebox": 1,
+     "Lovevery": 2,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 1,
+     "Lovevery": 2,
+     "Bluey toys": 1,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 1,
+     "Lovevery": 2,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 32,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 30,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 30,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 34,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 33,
+     "Toniebox": 1,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 47,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 50,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 55,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 67,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 73,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 65,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 56,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 52,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 48,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 47,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 39,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 41,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 41,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 42,
+     "Toniebox": 4,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 38,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 40,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 41,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 60,
+     "Toniebox": 4,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 64,
+     "Toniebox": 5,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 70,
+     "Toniebox": 7,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 100,
+     "Toniebox": 9,
+     "Lovevery": 5,
+     "Bluey toys": 2,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 83,
+     "Toniebox": 6,
+     "Lovevery": 4,
+     "Bluey toys": 2,
+     "Squishmallows": 9
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 73,
+     "Toniebox": 5,
+     "Lovevery": 4,
+     "Bluey toys": 2,
+     "Squishmallows": 9
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 73,
+     "Toniebox": 5,
+     "Lovevery": 4,
+     "Bluey toys": 2,
+     "Squishmallows": 9
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 74,
+     "Toniebox": 13,
+     "Lovevery": 3,
+     "Bluey toys": 2,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 53,
+     "Toniebox": 7,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 48,
+     "Toniebox": 4,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 44,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 42,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 39,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 39,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 38,
+     "Toniebox": 2,
+     "Lovevery": 2,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 36,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 35,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 40,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 42,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 39,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 44,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 53,
+     "Toniebox": 3,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 52,
+     "Toniebox": 3,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 60,
+     "Toniebox": 3,
+     "Lovevery": 4,
+     "Bluey toys": 0,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 53,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 46,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 46,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 0,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 48,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 52,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 6
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 44,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 45,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 45,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 9
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 44,
+     "Toniebox": 2,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 8
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 52,
+     "Toniebox": 4,
+     "Lovevery": 4,
+     "Bluey toys": 0,
+     "Squishmallows": 7
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 45,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 0,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 64,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 58,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 5
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 62,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 63,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 74,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 0,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 70,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 64,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 65,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 0,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 57,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 54,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 73,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 45,
+     "Toniebox": 2,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 42,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 42,
+     "Toniebox": 5,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 40,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 40,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 40,
+     "Toniebox": 3,
+     "Lovevery": 3,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 48,
+     "Toniebox": 6,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 3
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 57,
+     "Toniebox": 5,
+     "Lovevery": 4,
+     "Bluey toys": 1,
+     "Squishmallows": 4
+    }
+   }
+  ],
+  "Owala,Always Pan Pro,Cozy Earth,Comfrt hoodie,Theragun mini": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 32,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 30,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 30,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 31,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 41,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 44,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 47,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 63,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 8,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 56,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 7,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 50,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 51,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 52,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 34,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 48,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 40,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 34,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 33,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 33,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 30,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 32,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 30,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 31,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 35,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 33,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 34,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 31,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 31,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 30,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 30,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 32,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 32,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 1,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 46,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 48,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 53,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 70,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 69,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 65,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 58,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 50,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 47,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 47,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 41,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 41,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 44,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 37,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 40,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 42,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 60,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 62,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 6,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 70,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 6,
+     "Comfrt hoodie": 7,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 100,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 9,
+     "Comfrt hoodie": 10,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 80,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 8,
+     "Comfrt hoodie": 8,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 74,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 7,
+     "Comfrt hoodie": 7,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 71,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 6,
+     "Comfrt hoodie": 6,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 68,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 7,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 49,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 46,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 44,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 42,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 40,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 38,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 36,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 34,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 38,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 42,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 46,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 50,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 51,
+     "Always Pan Pro": 1,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 6,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 58,
+     "Always Pan Pro": 1,
+     "Cozy Earth": 6,
+     "Comfrt hoodie": 6,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 54,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 46,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 45,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 49,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 6,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 51,
+     "Always Pan Pro": 1,
+     "Cozy Earth": 6,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 43,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 44,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 45,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 45,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 4,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 49,
+     "Always Pan Pro": 1,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 45,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 63,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 58,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 60,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 64,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 72,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 68,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 65,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 63,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 56,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 57,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 72,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 2,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 44,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 41,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 3,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 44,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 2,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 1
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 4,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 40,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 39,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 5,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 48,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 3,
+     "Comfrt hoodie": 6,
+     "Theragun mini": 0
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 58,
+     "Always Pan Pro": 0,
+     "Cozy Earth": 5,
+     "Comfrt hoodie": 7,
+     "Theragun mini": 0
+    }
+   }
+  ],
+  "Owala,Nike V5 RNR,Fitbit,Govee lights,Ray-Ban Meta": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 33,
+     "Nike V5 RNR": 0,
+     "Fitbit": 25,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 30,
+     "Nike V5 RNR": 0,
+     "Fitbit": 25,
+     "Govee lights": 8,
+     "Ray-Ban Meta": 0
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 29,
+     "Nike V5 RNR": 0,
+     "Fitbit": 22,
+     "Govee lights": 8,
+     "Ray-Ban Meta": 0
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 36,
+     "Nike V5 RNR": 0,
+     "Fitbit": 24,
+     "Govee lights": 8,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 0,
+     "Fitbit": 24,
+     "Govee lights": 10,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 40,
+     "Nike V5 RNR": 0,
+     "Fitbit": 24,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 0
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 43,
+     "Nike V5 RNR": 0,
+     "Fitbit": 28,
+     "Govee lights": 13,
+     "Ray-Ban Meta": 0
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 46,
+     "Nike V5 RNR": 0,
+     "Fitbit": 27,
+     "Govee lights": 19,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 62,
+     "Nike V5 RNR": 0,
+     "Fitbit": 35,
+     "Govee lights": 27,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 53,
+     "Nike V5 RNR": 0,
+     "Fitbit": 33,
+     "Govee lights": 19,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 50,
+     "Nike V5 RNR": 0,
+     "Fitbit": 27,
+     "Govee lights": 13,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 52,
+     "Nike V5 RNR": 0,
+     "Fitbit": 27,
+     "Govee lights": 10,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 51,
+     "Nike V5 RNR": 0,
+     "Fitbit": 38,
+     "Govee lights": 9,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 37,
+     "Nike V5 RNR": 0,
+     "Fitbit": 33,
+     "Govee lights": 7,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 35,
+     "Nike V5 RNR": 0,
+     "Fitbit": 29,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 34,
+     "Nike V5 RNR": 0,
+     "Fitbit": 26,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 36,
+     "Nike V5 RNR": 0,
+     "Fitbit": 23,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 48,
+     "Nike V5 RNR": 0,
+     "Fitbit": 25,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 0
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 0,
+     "Fitbit": 25,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 40,
+     "Nike V5 RNR": 0,
+     "Fitbit": 22,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 33,
+     "Nike V5 RNR": 0,
+     "Fitbit": 22,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 34,
+     "Nike V5 RNR": 0,
+     "Fitbit": 23,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 37,
+     "Nike V5 RNR": 0,
+     "Fitbit": 23,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 0,
+     "Fitbit": 24,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 35,
+     "Nike V5 RNR": 0,
+     "Fitbit": 23,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 30,
+     "Nike V5 RNR": 0,
+     "Fitbit": 25,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 0
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 0,
+     "Fitbit": 24,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 0,
+     "Fitbit": 22,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 33,
+     "Nike V5 RNR": 1,
+     "Fitbit": 24,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 34,
+     "Nike V5 RNR": 0,
+     "Fitbit": 24,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 1,
+     "Fitbit": 28,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 34,
+     "Nike V5 RNR": 1,
+     "Fitbit": 25,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 33,
+     "Nike V5 RNR": 1,
+     "Fitbit": 26,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 1,
+     "Fitbit": 21,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 34,
+     "Nike V5 RNR": 1,
+     "Fitbit": 24,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 31,
+     "Nike V5 RNR": 1,
+     "Fitbit": 25,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 30,
+     "Nike V5 RNR": 1,
+     "Fitbit": 27,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 29,
+     "Nike V5 RNR": 1,
+     "Fitbit": 25,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 1,
+     "Fitbit": 25,
+     "Govee lights": 2,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 32,
+     "Nike V5 RNR": 1,
+     "Fitbit": 25,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 45,
+     "Nike V5 RNR": 1,
+     "Fitbit": 30,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 48,
+     "Nike V5 RNR": 1,
+     "Fitbit": 32,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 54,
+     "Nike V5 RNR": 2,
+     "Fitbit": 28,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 68,
+     "Nike V5 RNR": 2,
+     "Fitbit": 29,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 4
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 69,
+     "Nike V5 RNR": 2,
+     "Fitbit": 27,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 63,
+     "Nike V5 RNR": 2,
+     "Fitbit": 25,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 57,
+     "Nike V5 RNR": 2,
+     "Fitbit": 25,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 49,
+     "Nike V5 RNR": 2,
+     "Fitbit": 23,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 45,
+     "Nike V5 RNR": 2,
+     "Fitbit": 25,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 45,
+     "Nike V5 RNR": 1,
+     "Fitbit": 20,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 1,
+     "Fitbit": 21,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 40,
+     "Nike V5 RNR": 1,
+     "Fitbit": 21,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 1,
+     "Fitbit": 20,
+     "Govee lights": 7,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 42,
+     "Nike V5 RNR": 1,
+     "Fitbit": 22,
+     "Govee lights": 10,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 35,
+     "Nike V5 RNR": 1,
+     "Fitbit": 19,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 1,
+     "Fitbit": 19,
+     "Govee lights": 10,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 40,
+     "Nike V5 RNR": 1,
+     "Fitbit": 18,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 58,
+     "Nike V5 RNR": 1,
+     "Fitbit": 24,
+     "Govee lights": 13,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 62,
+     "Nike V5 RNR": 2,
+     "Fitbit": 21,
+     "Govee lights": 17,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 66,
+     "Nike V5 RNR": 2,
+     "Fitbit": 26,
+     "Govee lights": 20,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 100,
+     "Nike V5 RNR": 3,
+     "Fitbit": 28,
+     "Govee lights": 29,
+     "Ray-Ban Meta": 6
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 82,
+     "Nike V5 RNR": 3,
+     "Fitbit": 26,
+     "Govee lights": 22,
+     "Ray-Ban Meta": 6
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 69,
+     "Nike V5 RNR": 2,
+     "Fitbit": 22,
+     "Govee lights": 14,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 70,
+     "Nike V5 RNR": 2,
+     "Fitbit": 20,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 71,
+     "Nike V5 RNR": 3,
+     "Fitbit": 30,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 7
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 50,
+     "Nike V5 RNR": 2,
+     "Fitbit": 28,
+     "Govee lights": 8,
+     "Ray-Ban Meta": 6
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 44,
+     "Nike V5 RNR": 2,
+     "Fitbit": 26,
+     "Govee lights": 6,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 43,
+     "Nike V5 RNR": 2,
+     "Fitbit": 23,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 4
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 2,
+     "Fitbit": 19,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 38,
+     "Nike V5 RNR": 2,
+     "Fitbit": 19,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 4
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 2,
+     "Fitbit": 18,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 4
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 37,
+     "Nike V5 RNR": 2,
+     "Fitbit": 19,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 35,
+     "Nike V5 RNR": 2,
+     "Fitbit": 20,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 34,
+     "Nike V5 RNR": 2,
+     "Fitbit": 19,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 37,
+     "Nike V5 RNR": 2,
+     "Fitbit": 22,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 6
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 40,
+     "Nike V5 RNR": 2,
+     "Fitbit": 22,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 5
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 2,
+     "Fitbit": 22,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 6
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 42,
+     "Nike V5 RNR": 4,
+     "Fitbit": 34,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 6
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 52,
+     "Nike V5 RNR": 7,
+     "Fitbit": 47,
+     "Govee lights": 6,
+     "Ray-Ban Meta": 13
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 48,
+     "Nike V5 RNR": 9,
+     "Fitbit": 50,
+     "Govee lights": 6,
+     "Ray-Ban Meta": 18
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 58,
+     "Nike V5 RNR": 9,
+     "Fitbit": 60,
+     "Govee lights": 6,
+     "Ray-Ban Meta": 22
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 52,
+     "Nike V5 RNR": 7,
+     "Fitbit": 52,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 14
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 48,
+     "Nike V5 RNR": 5,
+     "Fitbit": 42,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 11
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 45,
+     "Nike V5 RNR": 6,
+     "Fitbit": 59,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 10
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 47,
+     "Nike V5 RNR": 6,
+     "Fitbit": 66,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 19
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 51,
+     "Nike V5 RNR": 5,
+     "Fitbit": 53,
+     "Govee lights": 6,
+     "Ray-Ban Meta": 26
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 46,
+     "Nike V5 RNR": 3,
+     "Fitbit": 76,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 14
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 43,
+     "Nike V5 RNR": 3,
+     "Fitbit": 61,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 13
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 44,
+     "Nike V5 RNR": 3,
+     "Fitbit": 53,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 16
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 45,
+     "Nike V5 RNR": 4,
+     "Fitbit": 45,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 17
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 49,
+     "Nike V5 RNR": 3,
+     "Fitbit": 49,
+     "Govee lights": 7,
+     "Ray-Ban Meta": 16
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 45,
+     "Nike V5 RNR": 2,
+     "Fitbit": 38,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 12
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 59,
+     "Nike V5 RNR": 2,
+     "Fitbit": 37,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 8
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 58,
+     "Nike V5 RNR": 2,
+     "Fitbit": 37,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 60,
+     "Nike V5 RNR": 3,
+     "Fitbit": 31,
+     "Govee lights": 3,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 62,
+     "Nike V5 RNR": 3,
+     "Fitbit": 29,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 72,
+     "Nike V5 RNR": 4,
+     "Fitbit": 29,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 67,
+     "Nike V5 RNR": 3,
+     "Fitbit": 29,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 62,
+     "Nike V5 RNR": 3,
+     "Fitbit": 28,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 62,
+     "Nike V5 RNR": 3,
+     "Fitbit": 28,
+     "Govee lights": 4,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 56,
+     "Nike V5 RNR": 2,
+     "Fitbit": 28,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 56,
+     "Nike V5 RNR": 2,
+     "Fitbit": 27,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 72,
+     "Nike V5 RNR": 1,
+     "Fitbit": 26,
+     "Govee lights": 5,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 43,
+     "Nike V5 RNR": 2,
+     "Fitbit": 20,
+     "Govee lights": 6,
+     "Ray-Ban Meta": 3
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 41,
+     "Nike V5 RNR": 2,
+     "Fitbit": 21,
+     "Govee lights": 7,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 42,
+     "Nike V5 RNR": 4,
+     "Fitbit": 25,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 38,
+     "Nike V5 RNR": 3,
+     "Fitbit": 27,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 39,
+     "Nike V5 RNR": 2,
+     "Fitbit": 21,
+     "Govee lights": 10,
+     "Ray-Ban Meta": 2
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 40,
+     "Nike V5 RNR": 2,
+     "Fitbit": 23,
+     "Govee lights": 11,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 46,
+     "Nike V5 RNR": 2,
+     "Fitbit": 22,
+     "Govee lights": 14,
+     "Ray-Ban Meta": 1
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 55,
+     "Nike V5 RNR": 3,
+     "Fitbit": 22,
+     "Govee lights": 19,
+     "Ray-Ban Meta": 1
+    }
+   }
+  ],
+  "Owala,KPop Demon Hunters,Stanley cup,Labubu,Ninja Slushi": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 15,
+     "Labubu": 2,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 15,
+     "Labubu": 4,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 19,
+     "Labubu": 5,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 14,
+     "Labubu": 5,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 15,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 15,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 15,
+     "Labubu": 5,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 16,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 25,
+     "Labubu": 4,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 23,
+     "Labubu": 4,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 22,
+     "Labubu": 4,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 22,
+     "Labubu": 5,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 23,
+     "Labubu": 8,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 19,
+     "Labubu": 9,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 15,
+     "Labubu": 9,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 13,
+     "Labubu": 8,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 11,
+     "Labubu": 8,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 11,
+     "Labubu": 9,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 11,
+     "Labubu": 11,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 11,
+     "Labubu": 10,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 11,
+     "Labubu": 13,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 10,
+     "Labubu": 14,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 10,
+     "Labubu": 18,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 9,
+     "Labubu": 19,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 9,
+     "Labubu": 23,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 10,
+     "Labubu": 23,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 10,
+     "Labubu": 25,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 11,
+     "Labubu": 22,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 14,
+     "Labubu": 25,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 19,
+     "Labubu": 36,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 18,
+     "Labubu": 38,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 22,
+     "Labubu": 41,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 0,
+     "Stanley cup": 18,
+     "Labubu": 47,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 1,
+     "Stanley cup": 20,
+     "Labubu": 53,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 1,
+     "Stanley cup": 28,
+     "Labubu": 68,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters": 1,
+     "Stanley cup": 45,
+     "Labubu": 85,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters": 1,
+     "Stanley cup": 45,
+     "Labubu": 98,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Owala": 11,
+     "KPop Demon Hunters": 10,
+     "Stanley cup": 52,
+     "Labubu": 100,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 50,
+     "Stanley cup": 11,
+     "Labubu": 98,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 47,
+     "Stanley cup": 9,
+     "Labubu": 91,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 50,
+     "Stanley cup": 7,
+     "Labubu": 95,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 53,
+     "Stanley cup": 7,
+     "Labubu": 98,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters": 52,
+     "Stanley cup": 8,
+     "Labubu": 92,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Owala": 25,
+     "KPop Demon Hunters": 53,
+     "Stanley cup": 8,
+     "Labubu": 85,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Owala": 25,
+     "KPop Demon Hunters": 53,
+     "Stanley cup": 7,
+     "Labubu": 80,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters": 60,
+     "Stanley cup": 7,
+     "Labubu": 82,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters": 68,
+     "Stanley cup": 8,
+     "Labubu": 71,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 73,
+     "Stanley cup": 7,
+     "Labubu": 63,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 61,
+     "Stanley cup": 7,
+     "Labubu": 68,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 51,
+     "Stanley cup": 7,
+     "Labubu": 55,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 47,
+     "Stanley cup": 7,
+     "Labubu": 49,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 45,
+     "Stanley cup": 7,
+     "Labubu": 44,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 48,
+     "Stanley cup": 7,
+     "Labubu": 39,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 56,
+     "Stanley cup": 8,
+     "Labubu": 35,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 48,
+     "Stanley cup": 7,
+     "Labubu": 34,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 49,
+     "Stanley cup": 7,
+     "Labubu": 32,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 57,
+     "Stanley cup": 7,
+     "Labubu": 31,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters": 36,
+     "Stanley cup": 8,
+     "Labubu": 26,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters": 29,
+     "Stanley cup": 8,
+     "Labubu": 27,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Owala": 24,
+     "KPop Demon Hunters": 25,
+     "Stanley cup": 10,
+     "Labubu": 27,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Owala": 37,
+     "KPop Demon Hunters": 30,
+     "Stanley cup": 10,
+     "Labubu": 31,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Owala": 30,
+     "KPop Demon Hunters": 27,
+     "Stanley cup": 10,
+     "Labubu": 26,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Owala": 25,
+     "KPop Demon Hunters": 26,
+     "Stanley cup": 11,
+     "Labubu": 26,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters": 21,
+     "Stanley cup": 11,
+     "Labubu": 25,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters": 20,
+     "Stanley cup": 12,
+     "Labubu": 31,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 18,
+     "Stanley cup": 10,
+     "Labubu": 20,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 16,
+     "Stanley cup": 8,
+     "Labubu": 16,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 19,
+     "Stanley cup": 9,
+     "Labubu": 13,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 15,
+     "Stanley cup": 8,
+     "Labubu": 11,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 16,
+     "Stanley cup": 8,
+     "Labubu": 10,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 16,
+     "Stanley cup": 8,
+     "Labubu": 10,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 13,
+     "Stanley cup": 8,
+     "Labubu": 9,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Owala": 13,
+     "KPop Demon Hunters": 12,
+     "Stanley cup": 7,
+     "Labubu": 9,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Owala": 12,
+     "KPop Demon Hunters": 12,
+     "Stanley cup": 8,
+     "Labubu": 8,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 11,
+     "Stanley cup": 7,
+     "Labubu": 8,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 11,
+     "Stanley cup": 7,
+     "Labubu": 9,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 18,
+     "Stanley cup": 6,
+     "Labubu": 8,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 14,
+     "Stanley cup": 7,
+     "Labubu": 7,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters": 22,
+     "Stanley cup": 8,
+     "Labubu": 7,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 16,
+     "Stanley cup": 9,
+     "Labubu": 7,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters": 14,
+     "Stanley cup": 16,
+     "Labubu": 6,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters": 11,
+     "Stanley cup": 20,
+     "Labubu": 6,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 10,
+     "Stanley cup": 20,
+     "Labubu": 5,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 8,
+     "Stanley cup": 18,
+     "Labubu": 20,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 10,
+     "Stanley cup": 17,
+     "Labubu": 6,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Owala": 19,
+     "KPop Demon Hunters": 8,
+     "Stanley cup": 17,
+     "Labubu": 5,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 8,
+     "Stanley cup": 29,
+     "Labubu": 5,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 49,
+     "Labubu": 4,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 8,
+     "Stanley cup": 68,
+     "Labubu": 4,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 8,
+     "Stanley cup": 49,
+     "Labubu": 4,
+     "Ninja Slushi": 2
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Owala": 18,
+     "KPop Demon Hunters": 9,
+     "Stanley cup": 10,
+     "Labubu": 4,
+     "Ninja Slushi": 3
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 8,
+     "Labubu": 4,
+     "Ninja Slushi": 3
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Owala": 22,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 8,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 6,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Owala": 22,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Owala": 24,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Owala": 23,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 4,
+     "Labubu": 3,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Owala": 21,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 4,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 1
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Owala": 26,
+     "KPop Demon Hunters": 5,
+     "Stanley cup": 5,
+     "Labubu": 2,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Owala": 16,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 5,
+     "Labubu": 2,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 6,
+     "Stanley cup": 6,
+     "Labubu": 2,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Owala": 15,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 8,
+     "Stanley cup": 4,
+     "Labubu": 3,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Owala": 14,
+     "KPop Demon Hunters": 10,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Owala": 17,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 5,
+     "Labubu": 2,
+     "Ninja Slushi": 0
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Owala": 20,
+     "KPop Demon Hunters": 7,
+     "Stanley cup": 5,
+     "Labubu": 3,
+     "Ninja Slushi": 0
+    }
+   }
+  ],
+  "Toniebox,instax mini 13,rhode blush,Always Pan Pro,Theragun mini": [
+   {
+    "week": "2024-09-29",
+    "values": {
+     "Toniebox": 14,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2024-10-06",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2024-10-13",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2024-10-20",
+    "values": {
+     "Toniebox": 15,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2024-10-27",
+    "values": {
+     "Toniebox": 23,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2024-11-03",
+    "values": {
+     "Toniebox": 21,
+     "instax mini 13": 0,
+     "rhode blush": 10,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2024-11-10",
+    "values": {
+     "Toniebox": 45,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 2,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2024-11-17",
+    "values": {
+     "Toniebox": 43,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 2,
+     "Theragun mini": 6
+    }
+   },
+   {
+    "week": "2024-11-24",
+    "values": {
+     "Toniebox": 57,
+     "instax mini 13": 0,
+     "rhode blush": 20,
+     "Always Pan Pro": 3,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2024-12-01",
+    "values": {
+     "Toniebox": 38,
+     "instax mini 13": 0,
+     "rhode blush": 16,
+     "Always Pan Pro": 2,
+     "Theragun mini": 8
+    }
+   },
+   {
+    "week": "2024-12-08",
+    "values": {
+     "Toniebox": 35,
+     "instax mini 13": 0,
+     "rhode blush": 14,
+     "Always Pan Pro": 1,
+     "Theragun mini": 7
+    }
+   },
+   {
+    "week": "2024-12-15",
+    "values": {
+     "Toniebox": 33,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 1,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2024-12-22",
+    "values": {
+     "Toniebox": 90,
+     "instax mini 13": 0,
+     "rhode blush": 16,
+     "Always Pan Pro": 1,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2024-12-29",
+    "values": {
+     "Toniebox": 38,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 2,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-01-05",
+    "values": {
+     "Toniebox": 24,
+     "instax mini 13": 0,
+     "rhode blush": 9,
+     "Always Pan Pro": 2,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-01-12",
+    "values": {
+     "Toniebox": 18,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-01-19",
+    "values": {
+     "Toniebox": 15,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-01-26",
+    "values": {
+     "Toniebox": 14,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-02-02",
+    "values": {
+     "Toniebox": 12,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-02-09",
+    "values": {
+     "Toniebox": 12,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-02-16",
+    "values": {
+     "Toniebox": 14,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-02-23",
+    "values": {
+     "Toniebox": 10,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-03-02",
+    "values": {
+     "Toniebox": 11,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-03-09",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-03-16",
+    "values": {
+     "Toniebox": 11,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-03-23",
+    "values": {
+     "Toniebox": 10,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-03-30",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-04-06",
+    "values": {
+     "Toniebox": 10,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-04-13",
+    "values": {
+     "Toniebox": 10,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-04-20",
+    "values": {
+     "Toniebox": 11,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-04-27",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 1,
+     "Theragun mini": 5
+    }
+   },
+   {
+    "week": "2025-05-04",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-05-11",
+    "values": {
+     "Toniebox": 8,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-05-18",
+    "values": {
+     "Toniebox": 8,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-05-25",
+    "values": {
+     "Toniebox": 10,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 0,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-06-01",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-06-08",
+    "values": {
+     "Toniebox": 8,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 0,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-06-15",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-06-22",
+    "values": {
+     "Toniebox": 10,
+     "instax mini 13": 0,
+     "rhode blush": 5,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-06-29",
+    "values": {
+     "Toniebox": 9,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-07-06",
+    "values": {
+     "Toniebox": 15,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-07-13",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-07-20",
+    "values": {
+     "Toniebox": 18,
+     "instax mini 13": 0,
+     "rhode blush": 9,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-07-27",
+    "values": {
+     "Toniebox": 14,
+     "instax mini 13": 0,
+     "rhode blush": 10,
+     "Always Pan Pro": 0,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-08-03",
+    "values": {
+     "Toniebox": 13,
+     "instax mini 13": 0,
+     "rhode blush": 9,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-08-10",
+    "values": {
+     "Toniebox": 14,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-08-17",
+    "values": {
+     "Toniebox": 13,
+     "instax mini 13": 0,
+     "rhode blush": 7,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-08-24",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 0,
+     "rhode blush": 6,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-08-31",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-09-07",
+    "values": {
+     "Toniebox": 13,
+     "instax mini 13": 0,
+     "rhode blush": 11,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-09-14",
+    "values": {
+     "Toniebox": 15,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-09-21",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 0,
+     "rhode blush": 9,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-09-28",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 0,
+     "rhode blush": 9,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2025-10-05",
+    "values": {
+     "Toniebox": 33,
+     "instax mini 13": 0,
+     "rhode blush": 8,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-10-12",
+    "values": {
+     "Toniebox": 23,
+     "instax mini 13": 0,
+     "rhode blush": 9,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-10-19",
+    "values": {
+     "Toniebox": 21,
+     "instax mini 13": 0,
+     "rhode blush": 11,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-10-26",
+    "values": {
+     "Toniebox": 27,
+     "instax mini 13": 0,
+     "rhode blush": 12,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2025-11-02",
+    "values": {
+     "Toniebox": 33,
+     "instax mini 13": 0,
+     "rhode blush": 18,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-11-09",
+    "values": {
+     "Toniebox": 39,
+     "instax mini 13": 0,
+     "rhode blush": 22,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2025-11-16",
+    "values": {
+     "Toniebox": 53,
+     "instax mini 13": 0,
+     "rhode blush": 19,
+     "Always Pan Pro": 2,
+     "Theragun mini": 5
+    }
+   },
+   {
+    "week": "2025-11-23",
+    "values": {
+     "Toniebox": 71,
+     "instax mini 13": 0,
+     "rhode blush": 31,
+     "Always Pan Pro": 3,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2025-11-30",
+    "values": {
+     "Toniebox": 52,
+     "instax mini 13": 0,
+     "rhode blush": 24,
+     "Always Pan Pro": 2,
+     "Theragun mini": 10
+    }
+   },
+   {
+    "week": "2025-12-07",
+    "values": {
+     "Toniebox": 42,
+     "instax mini 13": 1,
+     "rhode blush": 22,
+     "Always Pan Pro": 1,
+     "Theragun mini": 10
+    }
+   },
+   {
+    "week": "2025-12-14",
+    "values": {
+     "Toniebox": 40,
+     "instax mini 13": 1,
+     "rhode blush": 23,
+     "Always Pan Pro": 1,
+     "Theragun mini": 11
+    }
+   },
+   {
+    "week": "2025-12-21",
+    "values": {
+     "Toniebox": 100,
+     "instax mini 13": 0,
+     "rhode blush": 24,
+     "Always Pan Pro": 1,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2025-12-28",
+    "values": {
+     "Toniebox": 61,
+     "instax mini 13": 0,
+     "rhode blush": 18,
+     "Always Pan Pro": 1,
+     "Theragun mini": 6
+    }
+   },
+   {
+    "week": "2026-01-04",
+    "values": {
+     "Toniebox": 32,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2026-01-11",
+    "values": {
+     "Toniebox": 26,
+     "instax mini 13": 0,
+     "rhode blush": 11,
+     "Always Pan Pro": 0,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-01-18",
+    "values": {
+     "Toniebox": 23,
+     "instax mini 13": 0,
+     "rhode blush": 10,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-01-25",
+    "values": {
+     "Toniebox": 18,
+     "instax mini 13": 0,
+     "rhode blush": 11,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-02-01",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 0,
+     "rhode blush": 10,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-02-08",
+    "values": {
+     "Toniebox": 19,
+     "instax mini 13": 0,
+     "rhode blush": 11,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-02-15",
+    "values": {
+     "Toniebox": 19,
+     "instax mini 13": 0,
+     "rhode blush": 12,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-02-22",
+    "values": {
+     "Toniebox": 20,
+     "instax mini 13": 0,
+     "rhode blush": 10,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-03-01",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2026-03-08",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 0,
+     "rhode blush": 13,
+     "Always Pan Pro": 0,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2026-03-15",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 1,
+     "rhode blush": 12,
+     "Always Pan Pro": 1,
+     "Theragun mini": 6
+    }
+   },
+   {
+    "week": "2026-03-22",
+    "values": {
+     "Toniebox": 20,
+     "instax mini 13": 1,
+     "rhode blush": 16,
+     "Always Pan Pro": 1,
+     "Theragun mini": 5
+    }
+   },
+   {
+    "week": "2026-03-29",
+    "values": {
+     "Toniebox": 22,
+     "instax mini 13": 2,
+     "rhode blush": 24,
+     "Always Pan Pro": 3,
+     "Theragun mini": 8
+    }
+   },
+   {
+    "week": "2026-04-05",
+    "values": {
+     "Toniebox": 27,
+     "instax mini 13": 4,
+     "rhode blush": 34,
+     "Always Pan Pro": 5,
+     "Theragun mini": 11
+    }
+   },
+   {
+    "week": "2026-04-12",
+    "values": {
+     "Toniebox": 23,
+     "instax mini 13": 4,
+     "rhode blush": 43,
+     "Always Pan Pro": 5,
+     "Theragun mini": 11
+    }
+   },
+   {
+    "week": "2026-04-19",
+    "values": {
+     "Toniebox": 19,
+     "instax mini 13": 3,
+     "rhode blush": 30,
+     "Always Pan Pro": 3,
+     "Theragun mini": 8
+    }
+   },
+   {
+    "week": "2026-04-26",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 2,
+     "rhode blush": 19,
+     "Always Pan Pro": 2,
+     "Theragun mini": 6
+    }
+   },
+   {
+    "week": "2026-05-03",
+    "values": {
+     "Toniebox": 15,
+     "instax mini 13": 2,
+     "rhode blush": 17,
+     "Always Pan Pro": 2,
+     "Theragun mini": 7
+    }
+   },
+   {
+    "week": "2026-05-10",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 2,
+     "rhode blush": 27,
+     "Always Pan Pro": 3,
+     "Theragun mini": 8
+    }
+   },
+   {
+    "week": "2026-05-17",
+    "values": {
+     "Toniebox": 20,
+     "instax mini 13": 3,
+     "rhode blush": 27,
+     "Always Pan Pro": 5,
+     "Theragun mini": 11
+    }
+   },
+   {
+    "week": "2026-05-24",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 1,
+     "rhode blush": 18,
+     "Always Pan Pro": 3,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2026-05-31",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 2,
+     "rhode blush": 24,
+     "Always Pan Pro": 3,
+     "Theragun mini": 11
+    }
+   },
+   {
+    "week": "2026-06-07",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 2,
+     "rhode blush": 40,
+     "Always Pan Pro": 3,
+     "Theragun mini": 12
+    }
+   },
+   {
+    "week": "2026-06-14",
+    "values": {
+     "Toniebox": 19,
+     "instax mini 13": 3,
+     "rhode blush": 23,
+     "Always Pan Pro": 3,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2026-06-21",
+    "values": {
+     "Toniebox": 29,
+     "instax mini 13": 3,
+     "rhode blush": 24,
+     "Always Pan Pro": 5,
+     "Theragun mini": 9
+    }
+   },
+   {
+    "week": "2026-06-28",
+    "values": {
+     "Toniebox": 18,
+     "instax mini 13": 2,
+     "rhode blush": 17,
+     "Always Pan Pro": 2,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2026-07-05",
+    "values": {
+     "Toniebox": 15,
+     "instax mini 13": 1,
+     "rhode blush": 16,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-07-12",
+    "values": {
+     "Toniebox": 16,
+     "instax mini 13": 2,
+     "rhode blush": 14,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-07-19",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 2,
+     "rhode blush": 15,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-07-26",
+    "values": {
+     "Toniebox": 19,
+     "instax mini 13": 2,
+     "rhode blush": 15,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-08-02",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 1,
+     "rhode blush": 15,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-08-09",
+    "values": {
+     "Toniebox": 17,
+     "instax mini 13": 1,
+     "rhode blush": 14,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-08-16",
+    "values": {
+     "Toniebox": 18,
+     "instax mini 13": 1,
+     "rhode blush": 14,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-08-23",
+    "values": {
+     "Toniebox": 20,
+     "instax mini 13": 2,
+     "rhode blush": 12,
+     "Always Pan Pro": 0,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-08-30",
+    "values": {
+     "Toniebox": 21,
+     "instax mini 13": 2,
+     "rhode blush": 12,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-09-06",
+    "values": {
+     "Toniebox": 21,
+     "instax mini 13": 1,
+     "rhode blush": 16,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-09-13",
+    "values": {
+     "Toniebox": 18,
+     "instax mini 13": 1,
+     "rhode blush": 17,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-09-20",
+    "values": {
+     "Toniebox": 20,
+     "instax mini 13": 2,
+     "rhode blush": 15,
+     "Always Pan Pro": 0,
+     "Theragun mini": 7
+    }
+   },
+   {
+    "week": "2026-09-27",
+    "values": {
+     "Toniebox": 21,
+     "instax mini 13": 2,
+     "rhode blush": 15,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2026-10-04",
+    "values": {
+     "Toniebox": 37,
+     "instax mini 13": 2,
+     "rhode blush": 18,
+     "Always Pan Pro": 1,
+     "Theragun mini": 5
+    }
+   },
+   {
+    "week": "2026-10-11",
+    "values": {
+     "Toniebox": 25,
+     "instax mini 13": 2,
+     "rhode blush": 17,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-10-18",
+    "values": {
+     "Toniebox": 25,
+     "instax mini 13": 2,
+     "rhode blush": 16,
+     "Always Pan Pro": 1,
+     "Theragun mini": 4
+    }
+   },
+   {
+    "week": "2026-10-25",
+    "values": {
+     "Toniebox": 24,
+     "instax mini 13": 1,
+     "rhode blush": 17,
+     "Always Pan Pro": 1,
+     "Theragun mini": 2
+    }
+   },
+   {
+    "week": "2026-11-01",
+    "values": {
+     "Toniebox": 46,
+     "instax mini 13": 2,
+     "rhode blush": 23,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   },
+   {
+    "week": "2026-11-08",
+    "values": {
+     "Toniebox": 42,
+     "instax mini 13": 2,
+     "rhode blush": 28,
+     "Always Pan Pro": 1,
+     "Theragun mini": 3
+    }
+   }
+  ]
+ }
+}
