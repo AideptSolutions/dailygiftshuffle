@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import { curate, shufflePool, byIds, ALL } from '@/lib/giftSelect';
+import { PickThumb, PickThumbLink } from '@/components/AmazonPicks';
 
 const URL = 'https://www.thegiftshuffle.com/trending-christmas-gifts-2026';
 
@@ -41,42 +42,47 @@ const shuffle = shufflePool(match, ALL);
 
 // US Google Trends, weekly. Average interest Sep 27 to Nov 7, 2026 vs the same
 // weeks of 2025, pulled Nov 9, 2026. Raw data: research/google-trends-2026-11-09.json
-const TRENDS: { group: string; rows: [string, string][] }[] = [
+// Third value: catalog product id for the shop link (verified ASIN, local image).
+const TRENDS: { group: string; rows: [string, string, string?][] }[] = [
   {
     group: 'Rising',
     rows: [
-      ['medicube skincare', '+119%'],
-      ['rhode blush', '+58%'],
-      ['Nintendo Switch 2', '+57%'],
-      ['HydroJug', '+33%'],
+      ['medicube skincare', '+119%', 'trend26-medicube-pdrn-mask'],
+      ['rhode blush', '+58%', 'her-trend-2'],
+      ['Nintendo Switch 2', '+57%', 'gg-mariokart-world'],
+      ['HydroJug', '+33%', 'trend26-hydrojug-traveler'],
       ['Toniebox', '+21%'],
-      ['Kindle Paperwhite', '+17%'],
-      ['Theragun Mini', '+17%'],
+      ['Kindle Paperwhite', '+17%', 'tech-002'],
+      ['Theragun Mini', '+17%', 'bday-theragun-mini'],
       ['Fitbit', '+14%'],
     ],
   },
   {
     group: 'Steady',
     rows: [
-      ['Olaplex', '+5%'],
-      ['Govee lights', '+3%'],
-      ['Lovevery', '0%'],
-      ['LEGO advent calendar', '-4%'],
+      ['Olaplex', '+5%', 'beauty-olaplex-kit'],
+      ['Govee lights', '+3%', 'tech-005'],
+      ['Lovevery', '0%', 'par-008'],
+      ['LEGO advent calendar', '-4%', 'trend26-lego-marvel-advent'],
     ],
   },
   {
     group: 'Cooling',
     rows: [
-      ['Squishmallows', '-23%'],
-      ['AirPods Pro 3', '-24%'],
-      ['Summer Fridays lip balm', '-25%'],
-      ['Sol de Janeiro', '-31%'],
-      ['Stanley cup', '-32%'],
-      ['KPop Demon Hunters', '-85%'],
-      ['Labubu', '-92%'],
+      ['Squishmallows', '-23%', 'stuffer-squishmallow'],
+      ['AirPods Pro 3', '-24%', 'college-airpods'],
+      ['Summer Fridays lip balm', '-25%', 'stuffer-lip-butter'],
+      ['Sol de Janeiro', '-31%', 'trend26-cheirosa-mist'],
+      ['Stanley cup', '-32%', 'dad-fd-8'],
+      ['KPop Demon Hunters', '-85%', 'trend26-kpop-zoey-doll'],
+      ['Labubu', '-92%', 'trend26-labubu-big-into-energy'],
     ],
   },
 ];
+
+const PICKS = new Map(
+  byIds(TRENDS.flatMap((g) => g.rows.map((r) => r[2]).filter((id): id is string => !!id))).map((p) => [p.id, p])
+);
 
 export default function Page() {
   return (
@@ -111,21 +117,34 @@ export default function Page() {
                 <tr className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
                   <th scope="col" className="py-2 px-3">Gift</th>
                   <th scope="col" className="py-2 px-3 text-right">Search change</th>
+                  <th scope="col" className="py-2 px-3 text-right"><span className="sr-only">Shop</span></th>
                 </tr>
               </thead>
               {TRENDS.map((g) => (
                 <tbody key={g.group}>
                   <tr>
-                    <th scope="rowgroup" colSpan={2} className="pt-3 pb-1 px-3 text-xs uppercase tracking-wide text-[#F04E30]">
+                    <th scope="rowgroup" colSpan={3} className="pt-3 pb-1 px-3 text-xs uppercase tracking-wide text-[#F04E30]">
                       {g.group}
                     </th>
                   </tr>
-                  {g.rows.map(([name, change]) => (
-                    <tr key={name} className="border-t border-gray-100">
-                      <td className="py-1.5 px-3">{name}</td>
-                      <td className="py-1.5 px-3 text-right font-semibold tabular-nums">{change}</td>
-                    </tr>
-                  ))}
+                  {g.rows.map(([name, change, id]) => {
+                    const pick = id ? PICKS.get(id) : undefined;
+                    return (
+                      <tr key={name} className="border-t border-gray-100">
+                        <td className="py-1.5 px-3">
+                          <div className="flex items-center gap-3">
+                            {pick ? <PickThumb product={pick} /> : <span className="h-11 w-11 shrink-0" aria-hidden="true" />}
+                            <div className="min-w-0">
+                              <span className="block font-medium text-gray-900">{name}</span>
+                              {pick && <span className="block text-xs text-gray-500">{pick.name}</span>}
+                            </div>
+                          </div>
+                        </td>
+                        <td className="py-1.5 px-3 text-right font-semibold tabular-nums">{change}</td>
+                        <td className="py-1.5 px-3 text-right">{pick && <PickThumbLink product={pick} />}</td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               ))}
             </table>

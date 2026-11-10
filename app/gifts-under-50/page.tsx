@@ -134,6 +134,11 @@ export default function GiftsUnder50Page() {
             you need a birthday gift, a holiday pick, or something just because, these picks
             prove you don&apos;t need a big budget to make a big impression.
           </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto mt-3">
+            Under $50 is the sweet spot: 71% of the top-rated gifts in our catalog cost less. See
+            what a typical gift costs for each person in our 
+            <Link href="/holiday-shopping-statistics-2026" className="text-[#F04E30] font-semibold underline underline-offset-2">2026 holiday shopping statistics</Link>.
+          </p>
         </section>
 
         {/* Product Grid */}

@@ -139,6 +139,12 @@ export default function ChristmasGiftIdeasPage() {
             picks for every person on your list and every budget, so you can shop with confidence
             this holiday season.
           </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto mt-3">
+            Curious what everyone else is planning? See our 
+            <Link href="/holiday-shopping-statistics-2026" className="text-[#F04E30] font-semibold underline underline-offset-2">2026 holiday shopping statistics</Link> 
+            and what is rising in our 
+            <Link href="/trending-christmas-gifts-2026" className="text-[#F04E30] font-semibold underline underline-offset-2">trending Christmas gifts</Link>.
+          </p>
         </section>
 
         {/* Christmas cluster: route each list type to its dedicated guide */}

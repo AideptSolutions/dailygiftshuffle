@@ -94,7 +94,10 @@ export default function Page() {
             <Link href="/christmas-gifts-for-teens" className={inlineLink}>teens</Link>. Running short on
             time? See our <Link href="/last-minute-christmas-gifts" className={inlineLink}>last-minute
             Christmas gifts</Link>. Celebrating Hanukkah? Browse our{' '}
-            <Link href="/hanukkah-gifts" className={inlineLink}>Hanukkah gifts</Link>.
+            <Link href="/hanukkah-gifts" className={inlineLink}>Hanukkah gifts</Link>. Wondering what everyone
+            else is spending? See our{' '}
+            <Link href="/holiday-shopping-statistics-2026" className={inlineLink}>2026 holiday shopping
+            statistics</Link>.
           </p>
         </>
       }

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import { curate, shufflePool, byIds, ALL } from '@/lib/giftSelect';
+import { PickStrip } from '@/components/AmazonPicks';
 
 const URL = 'https://www.thegiftshuffle.com/holiday-shopping-statistics-2026';
 
@@ -38,7 +39,8 @@ const SRC = {
 
 type Stat = [figure: string, detail: ReactNode, source: string, href: string];
 
-const SECTIONS: { heading: string; stats: Stat[] }[] = [
+// picks: catalog products (verified ASINs, local images) shown under each table.
+const SECTIONS: { heading: string; stats: Stat[]; picks: { heading: string; ids: string[] } }[] = [
   {
     heading: 'Spending',
     stats: [
@@ -48,6 +50,10 @@ const SECTIONS: { heading: string; stats: Stat[] }[] = [
       ['79%', 'Of consumers expect holiday prices to be higher than last year', 'Deloitte', SRC.deloitte],
       ['35%', 'Of consumers plan to spend more than in 2025; most of them blame inflation', 'Basis', SRC.basis],
     ],
+    picks: {
+      heading: 'Stretch the budget: top-rated gifts under $25',
+      ids: ['stuffer-dickies-socks', 'toy-bs-1', 'out-001', 'stuffer-okeeffes'],
+    },
   },
   {
     heading: 'Online and timing',
@@ -58,6 +64,10 @@ const SECTIONS: { heading: string; stats: Stat[] }[] = [
       ['28%', 'Of holiday budgets are expected to be spent by the end of October, the highest share in six years', 'Deloitte', SRC.deloitte],
       ['57.4%', 'Of online holiday spending is forecast to happen on phones', 'Adobe', SRC.adobe],
     ],
+    picks: {
+      heading: 'Shopping late? Gift cards delivered by email instead of shipped',
+      ids: ['digital-starbucks-25', 'digital-doordash-50', 'digital-netflix-25', 'digital-airbnb-100'],
+    },
   },
   {
     heading: 'What people give and want',
@@ -67,6 +77,10 @@ const SECTIONS: { heading: string; stats: Stat[] }[] = [
       ['27%', 'Of shoppers plan to give an experience, up from 19% five years ago (a narrower question than Deloitte\'s)', 'NRF', SRC.nrfBlog],
       ['47%', 'Prefer to give one meaningful, higher-cost gift rather than several smaller ones', 'Deloitte', SRC.deloitte],
     ],
+    picks: {
+      heading: 'Clothing is the second most wanted gift: cozy top-rated picks',
+      ids: ['him-002', 'md-005', 'mom-001', 'pet26-jeasona-cat-socks'],
+    },
   },
   {
     heading: 'AI and search',
@@ -76,6 +90,10 @@ const SECTIONS: { heading: string; stats: Stat[] }[] = [
       ['16%', 'Would trust AI to complete a purchase for them, even with permission', 'Deloitte', SRC.deloitte],
       ['17%', 'Of shoppers planned in May to use AI for holiday shopping, mostly for deals and gift ideas', 'Basis', SRC.basis],
     ],
+    picks: {
+      heading: 'Rising in search this fall',
+      ids: ['trend26-medicube-pdrn-mask', 'trend26-hydrojug-traveler', 'tech-002', 'bday-theragun-mini'],
+    },
   },
 ];
 
@@ -121,7 +139,8 @@ export default function Page() {
             adds our own data on what top-rated gifts actually cost.
           </p>
           {SECTIONS.map((s) => (
-            <div key={s.heading} className="overflow-x-auto">
+            <div key={s.heading} className="space-y-3">
+            <div className="overflow-x-auto">
               <table className="w-full text-sm sm:text-base text-left border border-[#E2E8F0] rounded-xl overflow-hidden bg-white">
                 <caption className="text-left font-bold text-gray-900 mb-2">{s.heading}</caption>
                 <thead>
@@ -144,6 +163,8 @@ export default function Page() {
                   ))}
                 </tbody>
               </table>
+            </div>
+            <PickStrip heading={s.picks.heading} products={byIds(s.picks.ids)} />
             </div>
           ))}
           <h2 className="text-xl font-bold text-gray-900 pt-2">What a top-rated gift costs in 2026</h2>

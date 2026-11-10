@@ -695,3 +695,15 @@ analysis: 837 top-rated gifts (4.5+, 1,000+ reviews), median $30.99, 41% under $
 $50, median by recipient. PwC (403) and ICSC (forecast not found on its site) left out.
 Deloitte 50% vs NRF 27% experience gifts shown side by side (different questions).
 Built as a citable asset for backlink outreach and AI answers. Linked from the trending page.
+
+## Product links on the data pages 2026-11-09
+
+Owner asked for an image and a tagged Amazon link on every item. Trending page: 17 of 19
+table rows now show a catalog product thumbnail and an "Amazon" button (rhode row links the
+rhode Peptide Lip Treatment and the Switch 2 row links Mario Kart World, each labeled with
+the product name). Toniebox and Fitbit rows are waiting on the owner's hand check before they
+get products. Statistics page: a 4-product strip under each table (under $25, eGift cards,
+clothing, rising in search). New components/AmazonPicks.tsx and byIds() in lib/giftSelect.ts
+(fails the build if an id is missing). Christmas Gift Ideas, Gifts Under $50 and Stocking
+Stuffers now link to the statistics page. GSC indexing requested for the statistics and
+trending pages (both were "URL is not on Google").

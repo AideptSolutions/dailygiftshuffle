@@ -141,6 +141,15 @@ export const variantKey = (name: string) => {
   return tokens.slice(0, 3).join(' ');
 };
 
+/** Look up hand-picked products by id; fails the build if one is missing. */
+export function byIds(ids: string[]): AnyProduct[] {
+  return ids.map((id) => {
+    const p = ALL_INCL_SEASONAL.find((x) => x.id === id);
+    if (!p) throw new Error(`byIds: no product with id ${id}`);
+    return p;
+  });
+}
+
 export function curate(opts: CurateOpts): CompactProduct[] {
   const {
     match,
