@@ -110,7 +110,7 @@ export default function Page() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm sm:text-base text-left border border-[#E2E8F0] rounded-xl overflow-hidden bg-white">
-              <caption className="text-xs text-gray-500 text-left mb-2">
+              <caption className="text-xs text-gray-500 text-left px-3 pb-2">
                 Change in US Google search interest, Sep 27 to Nov 7, 2026 vs the same weeks of 2025
               </caption>
               <thead>

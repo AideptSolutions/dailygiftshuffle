@@ -142,7 +142,7 @@ export default function Page() {
             <div key={s.heading} className="space-y-3">
             <div className="overflow-x-auto">
               <table className="w-full text-sm sm:text-base text-left border border-[#E2E8F0] rounded-xl overflow-hidden bg-white">
-                <caption className="text-left font-bold text-gray-900 mb-2">{s.heading}</caption>
+                <caption className="text-left font-bold text-gray-900 px-3 pb-2">{s.heading}</caption>
                 <thead>
                   <tr className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
                     <th scope="col" className="py-2 px-3 w-28">Figure</th>
@@ -176,7 +176,7 @@ export default function Page() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm sm:text-base text-left border border-[#E2E8F0] rounded-xl overflow-hidden bg-white">
-              <caption className="text-xs text-gray-500 text-left mb-2">
+              <caption className="text-xs text-gray-500 text-left px-3 pb-2">
                 Median price of a top-rated gift by recipient, TheGiftShuffle catalog, November 9, 2026
               </caption>
               <thead>
