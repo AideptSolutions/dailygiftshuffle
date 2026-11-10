@@ -184,6 +184,7 @@ export default function Page() {
       ]}
       relatedHeading="More Christmas Gift Guides"
       relatedLinks={[
+        { href: '/holiday-shopping-statistics-2026', label: 'Holiday Shopping Statistics 2026' },
         { href: '/christmas-gift-ideas', label: 'Christmas Gift Ideas' },
         { href: '/christmas-gifts-for-her', label: 'Christmas Gifts for Her' },
         { href: '/christmas-gifts-for-him', label: 'Christmas Gifts for Him' },

@@ -15,6 +15,7 @@ const NICHES = [
 const LAST_REVIEWED: Record<string, string> = {
   '/stocking-stuffers': '2026-11-04',
   '/trending-christmas-gifts-2026': '2026-11-09',
+  '/holiday-shopping-statistics-2026': '2026-11-09',
   '/christmas-gifts-for-mom': '2026-11-01',
   '/christmas-gifts-for-dad': '2026-11-01',
   '/christmas-gifts-for-kids': '2026-11-01',
@@ -123,6 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/gifts-for-boss',
     '/stocking-stuffers',
     '/trending-christmas-gifts-2026',
+    '/holiday-shopping-statistics-2026',
     '/white-elephant-gifts',
     '/secret-santa-gifts',
     '/christmas-gifts-for-her',

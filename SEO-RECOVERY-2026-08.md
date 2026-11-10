@@ -685,3 +685,13 @@ types; old hero backed up outside the repo. /last-minute-gift-ideas got its own 
 (non-holiday) generated hero, replacing the doorstep photo.
 Catalog gaps for rising gifts (no verified listing yet): Toniebox, Fitbit, rhode blush,
 Nike V5 RNR, perfume sampler sets, instax mini 13, Switch 2 console.
+
+## Holiday shopping statistics page 2026-11-09
+
+New /holiday-shopping-statistics-2026: 18 sourced figures (NRF forecast Oct 15 and survey
+of 8,094 Oct 1-7; Deloitte survey of 4,000 Aug 26 to Sep 10; Adobe forecast Sep 28; Basis
+and GWI survey of 2,006 in May), each linked to the organization's own page, plus our catalog
+analysis: 837 top-rated gifts (4.5+, 1,000+ reviews), median $30.99, 41% under $25, 71% under
+$50, median by recipient. PwC (403) and ICSC (forecast not found on its site) left out.
+Deloitte 50% vs NRF 27% experience gifts shown side by side (different questions).
+Built as a citable asset for backlink outreach and AI answers. Linked from the trending page.
