@@ -5368,5 +5368,25 @@
     "score": 0,
     "writtenTo": "/images/products/gdn26-whalelife-watering-can.jpg",
     "provider": "bing-browser-2026-11"
+  },
+  "trend26-toniebox2-teal": {
+    "chosen": "https://us.tonies.com/cdn/shop/files/Playtime-Puppy-Starter-Set---Tropical-Teal-11003123-PS-TB2Hero1.png?v=1774884098&width=1200",
+    "domain": "us.tonies.com",
+    "page": "https://us.tonies.com/products/playtime-puppy-toniebox-2-starter-set-tropical-teal?variant=46209646985367",
+    "width": 1200,
+    "height": 1200,
+    "score": 0,
+    "writtenTo": "/images/products/trend26-toniebox2-teal.jpg",
+    "provider": "bing-browser-2026-11"
+  },
+  "tech26-fitbit-inspire3": {
+    "chosen": "https://www.virginmegastore.om/medias/829925-main.jpg?context=bWFzdGVyfHJvb3R8NTk0Mjl8aW1hZ2UvanBlZ3xhRE0wTDJnNE9TOHhNREUwTWpNek5EWTRNVEV4T0M4NE1qazVNalZmWDIxaGFXNHVhbkJufDEwNWM1ZTUwOTY4MjU5NTNhMDU4ZDEwMmY3ZmU0YWFlNzlkMGMxZGU3MjNiZjI4ODM5MjI3NWEyYTM0MjI4M2I",
+    "domain": "virginmegastore.om",
+    "page": "https://www.virginmegastore.om/",
+    "width": 1000,
+    "height": 1000,
+    "score": 0,
+    "writtenTo": "/images/products/tech26-fitbit-inspire3.jpg",
+    "provider": "bing-browser-2026-11"
   }
 }

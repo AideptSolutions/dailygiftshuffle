@@ -712,3 +712,12 @@ knowledge" as a source and carry [VERIFY] flags, so treat every pick as a lead.
 
 Demand signal: clicks:ranking holds 54 ASINs and 68 clicks in total, too thin
 to rank 1,300 products.
+
+## Owner hand-checked additions 2026-11-09
+
+Amazon blocks automated checks, so new listings are verified by the owner by hand.
+- trend26-toniebox2-teal, B0FJ3R4FBX: 4.5 stars, 987 reviews, $149.99, shipped and sold
+  by Tonies US (owner screenshot). Image from us.tonies.com. Added to the trending page row.
+- Fitbit Inspire 3 (Midnight Zen), B0B5F9SZW7: listing link from the owner; image saved
+  (tech26-fitbit-inspire3.jpg, retailer photo) but not added until rating, reviews, price
+  and seller are confirmed.

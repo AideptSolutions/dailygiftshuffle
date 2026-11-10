@@ -8911,6 +8911,25 @@ export const products: Product[] = [
     tags: ['hobby'],
     occasions: ['holiday', 'birthday'],
   },
+  // Added 2026-11-09 for the search-data trending page (Toniebox searches +21%).
+  // Owner hand-checked the live listing: 4.5 stars, 987 reviews, $149.99,
+  // shipped and sold by Tonies US. Image: official Tonies store photo.
+  {
+    id: 'trend26-toniebox2-teal',
+    name: 'Toniebox 2 Audio Player Starter Set (Tropical Teal)',
+    description: 'The screen-free audio player kids run themselves: set a Tonie figure on top to play stories and songs. This starter set includes the Playtime Puppy Tonie.',
+    price: 149.99,
+    priceDisplay: '$149.99',
+    image: '/images/products/trend26-toniebox2-teal.jpg',
+    rating: 4.5,
+    reviewCount: 987,
+    affiliateUrl: amz('B0FJ3R4FBX'),
+    network: 'amazon',
+    recipients: ['kids', 'baby'],
+    budgetTier: '100to150',
+    tags: ['kids'],
+    occasions: ['holiday', 'birthday'],
+  },
   // ------------------------------------------------------------ HANUKKAH + DIGITAL GIFTS 2026 (added 2026-11-01) ------------------------------------------------------------
   // Live-verified via SerpAPI amazon_product (title, rating, reviews, price, stock, seller, no refurbished
   // wording), ratings cross-checked against Amazon search. Images: brand or retailer packshots only.

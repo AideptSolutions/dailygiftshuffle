@@ -51,7 +51,7 @@ const TRENDS: { group: string; rows: [string, string, string?][] }[] = [
       ['rhode blush', '+58%', 'her-trend-2'],
       ['Nintendo Switch 2', '+57%', 'gg-mariokart-world'],
       ['HydroJug', '+33%', 'trend26-hydrojug-traveler'],
-      ['Toniebox', '+21%'],
+      ['Toniebox', '+21%', 'trend26-toniebox2-teal'],
       ['Kindle Paperwhite', '+17%', 'tech-002'],
       ['Theragun Mini', '+17%', 'bday-theragun-mini'],
       ['Fitbit', '+14%'],
