@@ -8,7 +8,7 @@ const products = byTheme('patriotic');
 export const metadata: Metadata = {
   title: 'Patriotic Gifts: American Flag Gift Ideas for 2026',
   description:
-    'The best patriotic gifts for 2026: American flag apparel, USA accessories, red-white-and-blue gear, and Americana decor for Independence Day, Memorial Day, Veterans Day, and year-round. Hand-picked, every budget.',
+    'The best patriotic gifts for 2026: American flag apparel, USA accessories and Americana decor for Independence Day, Memorial Day, Veterans Day and year-round.',
   keywords: [
     'patriotic gifts',
     'american flag gifts',

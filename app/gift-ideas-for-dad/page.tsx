@@ -12,7 +12,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use",
   description:
-    "The best gift ideas for dad and useful gifts he'll actually use: tech gadgets, grilling gear, tools, and experiences. Hand-picked presents for dad for birthdays, Father's Day, and just because.",
+    "The best gift ideas for dad: useful gifts he'll actually use, from tech gadgets and grilling gear to tools and experiences, for birthdays and Father's Day.",
   keywords: [
     'gift ideas for dad',
     'gifts for dad',

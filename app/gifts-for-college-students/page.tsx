@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gifts-for-college-students';
 
 export const metadata: Metadata = {
-  title: 'Best Gifts for New College Students 2026: Dorm, Tech & Essentials',
+  title: 'Gifts for New College Students 2026: Dorm, Tech & Essentials',
   description:
     'The best gifts for new college students in 2026: dorm decor, tech like earbuds and headphones, and the everyday essentials first-year students actually need.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'first year college gifts',
   ],
   openGraph: {
-    title: 'Best Gifts for New College Students 2026: Dorm, Tech & Essentials',
+    title: 'Gifts for New College Students 2026: Dorm, Tech & Essentials',
     description: 'Dorm decor, tech and everyday essentials first-year college students actually need. Top-rated picks for every budget.',
     type: 'website',
     url: URL,

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/luxury-gifts-under-200';
 
 export const metadata: Metadata = {
-  title: 'Luxury Gifts Under $200: 30 Premium Picks That Punch Above Their Price',
+  title: 'Luxury Gifts Under $200: 30 Premium Picks Worth the Price',
   description:
     'Luxury gifts under $200 for 2026: 30 premium, top-rated picks that feel high-end without the four-figure price tag. Luxury gift ideas for him and her under $200.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'luxury gift ideas 2026',
   ],
   openGraph: {
-    title: 'Luxury Gifts Under $200: 30 Premium Picks That Punch Above Their Price',
+    title: 'Luxury Gifts Under $200: 30 Premium Picks Worth the Price',
     description: '30 premium, top-rated luxury gifts under $200 for 2026, for him and her. High-end without the four-figure price.',
     type: 'website',
     url: URL,

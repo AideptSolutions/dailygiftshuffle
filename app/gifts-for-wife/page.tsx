@@ -28,7 +28,7 @@ const grid = curate({
 const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE, keepMatch: isStandout });
 
 export const metadata: Metadata = {
-  title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love | TheGiftShuffle`,
+  title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love`,
   description:
     'Gift ideas for your wife she will actually love: romantic, thoughtful and luxe picks for her birthday, your anniversary, or just because.',
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     'thoughtful gifts for wife',
   ],
   openGraph: {
-    title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love | TheGiftShuffle`,
+    title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love`,
     description: 'Romantic, thoughtful and luxe gift ideas for your wife in 2026, for her birthday, your anniversary, or just because.',
     type: 'website',
     url: URL,

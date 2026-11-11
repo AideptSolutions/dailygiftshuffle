@@ -12,7 +12,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: 'Gifts for Boss: Best Boss Gift Ideas 2026 | TheGiftShuffle',
   description:
-    'Find the best gifts for your boss in 2026. Premium desk accessories, insulated mugs, luxury gift sets, and professional picks that hit the right professional note, not too personal, not too cheap.',
+    'The best gifts for your boss in 2026: premium desk accessories, insulated mugs and luxury gift sets that strike a professional note without getting personal.',
   keywords: [
     'gifts for boss',
     'boss gift ideas 2026',

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/camping-gifts-for-women';
 
 export const metadata: Metadata = {
-  title: 'Camping Gifts for Women: Top Outdoor Picks She Will Actually Use',
+  title: 'Camping Gifts for Women: Outdoor Picks She Will Actually Use',
   description:
     'The best camping gifts for women in 2026: top-rated, genuinely useful outdoor picks for the woman who loves to camp, hike and get outside, from cozy upgrades to trail essentials.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for outdoorsy women',
   ],
   openGraph: {
-    title: 'Camping Gifts for Women: Top Outdoor Picks She Will Actually Use',
+    title: 'Camping Gifts for Women: Outdoor Picks She Will Actually Use',
     description: 'Top-rated camping gifts for women in 2026, from cozy upgrades to trail essentials.',
     type: 'website',
     url: URL,

@@ -13,7 +13,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: "Graduation Gifts Under $50 (Class of 2026) | TheGiftShuffle",
   description:
-    "The best graduation gifts under $50 for the Class of 2026. Portable Bluetooth speakers, wireless earbuds, insulated tumblers, journals, and more, thoughtful picks that don't break the bank.",
+    "The best graduation gifts under $50 for the Class of 2026: Bluetooth speakers, wireless earbuds, insulated tumblers, journals and more thoughtful picks.",
   keywords: [
     "graduation gifts under 50",
     "graduation gifts under $50",

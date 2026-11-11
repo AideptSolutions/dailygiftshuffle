@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gifts-for-people-who-have-everything';
 
 export const metadata: Metadata = {
-  title: 'Gifts for People Who Have Everything: 35 Ideas They Do Not Own Yet',
+  title: 'Gifts for People Who Have Everything: 35 Fresh Ideas',
   description:
     'Gift ideas for the person who has everything: unique, experiential and upgrade-everything picks for mom, dad, grandparents or the friend who is impossible to shop for.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for someone impossible to shop for',
   ],
   openGraph: {
-    title: 'Gifts for People Who Have Everything: 35 Ideas They Do Not Own Yet',
+    title: 'Gifts for People Who Have Everything: 35 Fresh Ideas',
     description: 'Unique, experiential and upgrade-everything gift ideas for the impossible-to-shop-for person.',
     type: 'website',
     url: URL,

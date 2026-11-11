@@ -8,7 +8,7 @@ const URL = 'https://www.thegiftshuffle.com/trending-christmas-gifts-2026';
 export const metadata: Metadata = {
   title: 'Trending Christmas Gifts 2026: What Search Data Says Is Hot',
   description:
-    'The trending Christmas gifts of 2026, measured with US Google search data: medicube, the Nintendo Switch 2, rhode blush and HydroJug are rising, while Labubu and KPop Demon Hunters have cooled.',
+    'The trending Christmas gifts of 2026, measured with US Google search data: medicube, Nintendo Switch 2 and rhode blush are rising, while Labubu has cooled.',
   keywords: [
     'trending christmas gifts 2026',
     'hottest gifts 2026',

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-anniversary-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Anniversary Gifts for 2026: 30 Romantic Picks for Couples',
+  title: 'Best Anniversary Gifts 2026: 30 Romantic Picks for Couples',
   description:
     'The best anniversary gifts for 2026: 30 romantic, top-rated picks for him and her, from personalized keepsakes to luxury splurges.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'wedding anniversary gifts',
   ],
   openGraph: {
-    title: 'Best Anniversary Gifts for 2026: 30 Romantic Picks for Couples',
+    title: 'Best Anniversary Gifts 2026: 30 Romantic Picks for Couples',
     description: '30 romantic, top-rated anniversary gifts for 2026 for him and her. Every budget covered.',
     type: 'website',
     url: URL,

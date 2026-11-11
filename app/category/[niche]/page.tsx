@@ -74,7 +74,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
   fitness: {
     title: '30+ Best Fitness Gifts for 2026',
     heading: 'Best Fitness & Wellness Gifts',
-    description: 'The best fitness gifts for 2026, ranked by real reviews: massage guns, resistance bands, recovery tools and smart trackers for runners, lifters and yoga lovers. Find the perfect pick in seconds.',
+    description: 'The best fitness gifts for 2026, ranked by real reviews: massage guns, resistance bands, recovery tools and smart trackers for runners, lifters and yoga lovers.',
     coverImage: '/img/category-heroes/fitness.jpg',
     faqs: [
       { q: 'What are the best fitness gifts under $50?', a: 'Resistance bands, foam rollers, a quality water bottle, and workout journals are fantastic fitness gifts under $50.' },
@@ -112,7 +112,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
   luxury: {
     title: '50+ Best Luxury Gifts for 2026',
     heading: 'Best Luxury Gifts',
-    description: 'The best luxury gifts for 2026: premium, top-rated picks that feel genuinely special, from designer fragrances and fine leather to luxe skincare and jewelry for him and her. Find the perfect splurge in seconds.',
+    description: 'The best luxury gifts for 2026: premium, top-rated picks that feel special, from designer fragrances and fine leather to luxe skincare and jewelry.',
     coverImage: '/img/category-heroes/luxury.jpg',
     faqs: [
       { q: 'What are good luxury gifts under $100?', a: 'Silk pillowcases, premium skincare sets, cashmere scarves, high-end candles, and fine wine accessories make luxurious gifts under $100.' },
@@ -227,7 +227,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
   gaming: {
     title: '30+ Best Gaming Gifts for 2026',
     heading: 'Best Gaming Gifts',
-    description: "The best gaming gifts for 2026, ranked by real reviews: wireless controllers, headsets, gaming chairs, RGB gear and console accessories for PC, PlayStation and Xbox players. Find the perfect pick in seconds.",
+    description: "The best gaming gifts for 2026, ranked by real reviews: wireless controllers, headsets, gaming chairs and RGB gear for PC, PlayStation and Xbox players.",
     coverImage: '/img/category-heroes/gaming.jpg',
     faqs: [
       { q: 'What are the best gaming gifts under $50?', a: 'A gaming headset, controller stand, LED strip lights, a gaming mouse pad, or a gift card to their favorite platform are great gaming gifts under $50.' },

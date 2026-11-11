@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-luxury-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Luxury Gifts for 2026: 30 Premium Picks Worth the Splurge',
+  title: 'Best Luxury Gifts 2026: 30 Premium Picks Worth the Splurge',
   description:
     'The best luxury gifts for 2026: premium, top-rated picks that feel genuinely special. 30 luxury gift ideas for him and her, from elevated everyday upgrades to true splurges.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'high end gifts',
   ],
   openGraph: {
-    title: 'Best Luxury Gifts for 2026: 30 Premium Picks Worth the Splurge',
+    title: 'Best Luxury Gifts 2026: 30 Premium Picks Worth the Splurge',
     description: '30 premium, top-rated luxury gift ideas for 2026 for him and her. Worth the splurge.',
     type: 'website',
     url: URL,

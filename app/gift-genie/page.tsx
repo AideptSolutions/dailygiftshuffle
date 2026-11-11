@@ -11,7 +11,7 @@ const URL = 'https://www.thegiftshuffle.com/gift-genie';
 export const metadata: Metadata = {
   title: 'Gift Genie: Free AI Gift Finder | TheGiftShuffle',
   description:
-    'The Gift Genie is a free AI gift finder. Pin gifts you like, answer three quick questions, and it reads your picks to conjure 5 matched gifts with confidence scores. No sign-up, 3 readings a day.',
+    'The Gift Genie is a free AI gift finder. Pin gifts you like, answer three quick questions, and get 5 matched gifts with confidence scores. No sign-up needed.',
   keywords: [
     'AI gift finder',
     'gift genie',

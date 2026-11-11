@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/self-care-gifts';
 
 export const metadata: Metadata = {
-  title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing, Top-Rated Picks',
+  title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing Picks',
   description:
     'The best self-care and wellness gifts for 2026: massage guns, spa sets, aromatherapy, silk sleep masks, cozy relaxation picks and more.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'stress relief gifts',
   ],
   openGraph: {
-    title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing, Top-Rated Picks',
+    title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing Picks',
     description: 'Massage guns, spa sets, aromatherapy and cozy relaxation picks. Top-rated self-care gift ideas for every budget.',
     type: 'website',
     url: URL,

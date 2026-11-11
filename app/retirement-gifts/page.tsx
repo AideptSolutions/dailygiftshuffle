@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/retirement-gifts';
 
 export const metadata: Metadata = {
-  title: 'Best Retirement Gifts 2026: 30 Ideas for a Well-Earned Next Chapter',
+  title: 'Best Retirement Gifts 2026: 30 Ideas for the Next Chapter',
   description:
     'The best retirement gifts for 2026: thoughtful ideas for mom, dad, a coworker or boss, from new-hobby kits and travel gear to relaxing upgrades for slower mornings.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'best retirement gifts 2026',
   ],
   openGraph: {
-    title: 'Best Retirement Gifts 2026: 30 Ideas for a Well-Earned Next Chapter',
+    title: 'Best Retirement Gifts 2026: 30 Ideas for the Next Chapter',
     description: 'Thoughtful retirement gift ideas for mom, dad, a coworker or boss, from hobby kits to travel gear.',
     type: 'website',
     url: URL,

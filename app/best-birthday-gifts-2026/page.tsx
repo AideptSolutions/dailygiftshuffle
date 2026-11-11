@@ -12,7 +12,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: 'Best Birthday Gifts for 2026: 30 Top-Rated Picks for Anyone',
   description:
-    'The best birthday gifts for 2026, ranked by what people actually love. 30 top-rated birthday gift ideas for him, her, friends and family, spanning every budget from under $25 to splurge-worthy.',
+    'The best birthday gifts for 2026, ranked by what people actually love: 30 top-rated ideas for him, her, friends and family, from under $25 to splurge-worthy.',
   keywords: [
     'best birthday gifts',
     'best birthday gifts 2026',

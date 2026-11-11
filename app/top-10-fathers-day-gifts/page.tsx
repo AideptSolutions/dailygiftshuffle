@@ -10,7 +10,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want",
   description:
-    "Fathers Day 2027 is June 20. Here are the 10 best gifts for dads this year, chosen for what dads actually use. From smart grills and noise-canceling headphones to golf watches and whiskey kits.",
+    "Father's Day 2027 is June 20. The 10 best gifts for dads, chosen for what they actually use: smart grills, noise-canceling headphones, golf watches and more.",
   keywords: [
     'top 10 fathers day gifts 2027',
     'best fathers day gifts 2027',

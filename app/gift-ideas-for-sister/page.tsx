@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gift-ideas-for-sister';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas for Your Sister: 40 Picks She Will Actually Love (2026)',
+  title: 'Gift Ideas for Your Sister: 40 Picks She Will Actually Love',
   description:
     'The best gift ideas for your sister in 2026: top-rated picks for big sisters, little sisters and sisters-in-law, from cozy and beauty favorites to fun surprises at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for sister in law',
   ],
   openGraph: {
-    title: 'Gift Ideas for Your Sister: 40 Picks She Will Actually Love (2026)',
+    title: 'Gift Ideas for Your Sister: 40 Picks She Will Actually Love',
     description: 'Top-rated gift ideas for big sisters, little sisters and sisters-in-law at every budget.',
     type: 'website',
     url: URL,

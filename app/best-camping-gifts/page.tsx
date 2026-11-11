@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-camping-gifts';
 
 export const metadata: Metadata = {
-  title: 'Best Camping Gifts for 2026: 30 Top Picks for Campers & Hikers',
+  title: 'Best Camping Gifts 2026: 30 Top Picks for Campers & Hikers',
   description:
     'The best camping gifts for 2026, hand-picked for campers, hikers and anyone who prefers trees over Wi-Fi. 30 top-rated outdoor gift ideas at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'best gifts for camping',
   ],
   openGraph: {
-    title: 'Best Camping Gifts for 2026: 30 Top Picks for Campers & Hikers',
+    title: 'Best Camping Gifts 2026: 30 Top Picks for Campers & Hikers',
     description: '30 top-rated camping and outdoor gift ideas for 2026, for campers, hikers and weekend adventurers.',
     type: 'website',
     url: URL,
