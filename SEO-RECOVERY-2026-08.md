@@ -888,3 +888,19 @@ NEXT CHECK (about 2026-11-17, then 2026-11-24).
    Googlebot user agent?
 3. Page indexing report: submitted pages indexed (was 60 of 150) and the
    "Duplicate without user-selected canonical" count (was 6).
+
+### 2026-11-10: duplicate last-minute Mother's Day page redirected (commit 8a0467e)
+
+/gifts/last-minute-mothers-day (same H1 as /last-minute-mothers-day-gifts, no
+internal links) now returns a 308 permanent redirect to
+/last-minute-mothers-day-gifts. Page file removed, entry dropped from the
+sitemap (126 URLs), LAST_REVIEWED and lib/pageDates.json. Verified live: old URL
+308 with the new Location, final 200; another retired /gifts/ URL still
+returns 410. Both URLs sent to IndexNow, HTTP 200.
+
+Item 4 (Amazon ratings in AggregateRating markup) is ON HOLD at the owner's
+request: he is one or two qualifying purchases from Amazon API access. API
+access settles the affiliate-terms question for the visible stars. It does not
+settle Google's review-markup rule, which is about ratings collected by the
+site itself, so item 4 is still a decision to make then. Not yet checked:
+whether Bing shows star ratings on the /stocking-stuffers listing.
