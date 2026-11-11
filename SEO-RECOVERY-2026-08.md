@@ -859,3 +859,32 @@ LEFT OPEN.
   (same H1). It is not in the guide directory. Candidate for a 301.
 - Item 4: Amazon star ratings marked up as AggregateRating on 139 pages.
 - 28 long titles and 46 long descriptions, as above.
+
+VERIFIED LIVE 2026-11-10 (commits 186c9cf, a34f674, 22ae9fb, b753f8f; build
+passed, Vercel deploy succeeded, then the same crawl was re-run on the live
+sitemap). Before to after:
+- sitemap URLs 151 to 127; every URL returns 200
+- pages with no canonical 26 to 0
+- sitemap entries with no lastmod 129 to 0
+- pages with Article markup and a named author 0 to 97
+- pages with no share image 21 to 0
+- titles over 60 characters 107 to 40 (28 long without the suffix, the rest
+  protected pages)
+- descriptions over 160 characters 84 to 61
+- pages with no internal links 7 to 1 (/gifts/last-minute-mothers-day, left
+  out on purpose, see LEFT OPEN)
+- /shuffle/tech and /wishlist serve noindex, follow; /api/client-error returns
+  401 without the admin cookie
+IndexNow: full sitemap submitted, 127 URLs, HTTP 200.
+Search Console: indexing requested on 2026-11-10 for the six pages Google had
+matched to other sites: /best-gaming-gifts-2026, /best-luxury-gifts-2026,
+/gifts-for-wife, /mothers-day-gifts, /gifts-for-camping-and-outdoors,
+/best-baby-shower-gifts-2026. Each returned "Indexing requested".
+
+NEXT CHECK (about 2026-11-17, then 2026-11-24).
+1. URL Inspection on those six: is the user-declared canonical now the page
+   itself, and has the Google-selected canonical moved off the betting sites?
+2. /api/client-error (signed in as admin): any entries, and any with a
+   Googlebot user agent?
+3. Page indexing report: submitted pages indexed (was 60 of 150) and the
+   "Duplicate without user-selected canonical" count (was 6).
