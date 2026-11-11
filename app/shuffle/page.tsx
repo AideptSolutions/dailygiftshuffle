@@ -4,6 +4,7 @@ import ShuffleClient from './ShuffleClient';
 export const metadata: Metadata = {
   title: 'Find a Gift: TheGiftShuffle',
   description: 'Pick a recipient, set a budget, and discover the perfect gift instantly.',
+  alternates: { canonical: 'https://www.thegiftshuffle.com/shuffle' },
 };
 
 export default function ShufflePage() {

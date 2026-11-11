@@ -488,6 +488,7 @@ export async function generateMetadata(
   return {
     title: `${meta.title} | TheGiftShuffle`,
     description: meta.description,
+    alternates: { canonical: `https://www.thegiftshuffle.com/category/${params.niche}` },
     openGraph: {
       title: `${meta.title} | TheGiftShuffle`,
       description: meta.description,

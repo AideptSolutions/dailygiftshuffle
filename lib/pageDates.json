@@ -1,0 +1,458 @@
+{
+  "/": {
+    "published": "2026-03-07",
+    "modified": "2026-11-06"
+  },
+  "/30th-birthday-gifts": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/40th-birthday-gifts": {
+    "published": "2026-08-05",
+    "modified": "2026-11-01"
+  },
+  "/50th-birthday-gifts": {
+    "published": "2026-08-05",
+    "modified": "2026-11-01"
+  },
+  "/about": {
+    "published": "2026-03-07",
+    "modified": "2026-11-06"
+  },
+  "/ai-personalized-gifts": {
+    "published": "2026-06-17",
+    "modified": "2026-10-26"
+  },
+  "/best-anniversary-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/best-baby-shower-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/best-beauty-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-08-14"
+  },
+  "/best-birthday-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/best-camping-gifts": {
+    "published": "2026-06-19",
+    "modified": "2026-06-24"
+  },
+  "/best-fitness-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-06-24"
+  },
+  "/best-gaming-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/best-gifts-for-her-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-08-19"
+  },
+  "/best-luxury-gifts-2026": {
+    "published": "2026-06-19",
+    "modified": "2026-08-09"
+  },
+  "/birthday-gift-ideas": {
+    "published": "2026-03-08",
+    "modified": "2026-11-01"
+  },
+  "/birthday-gifts-for-gamers": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/blog": {
+    "published": "2026-03-19",
+    "modified": "2026-09-04"
+  },
+  "/blog/top-10-gifts-for-grandparents-who-have-everything": {
+    "published": "2026-06-17",
+    "modified": "2026-06-24"
+  },
+  "/blog/what-is-the-gift-genie": {
+    "published": "2026-09-04",
+    "modified": "2026-10-26"
+  },
+  "/camping-gifts-for-men": {
+    "published": "2026-06-24",
+    "modified": "2026-06-24"
+  },
+  "/camping-gifts-for-women": {
+    "published": "2026-06-24",
+    "modified": "2026-06-24"
+  },
+  "/category": {
+    "published": "2026-03-07",
+    "modified": "2026-10-26"
+  },
+  "/category/[niche]": {
+    "published": "2026-03-07",
+    "modified": "2026-11-01"
+  },
+  "/christmas-gift-ideas": {
+    "published": "2026-03-08",
+    "modified": "2026-11-09"
+  },
+  "/christmas-gifts-for-dad": {
+    "published": "2026-11-01",
+    "modified": "2026-11-01"
+  },
+  "/christmas-gifts-for-her": {
+    "published": "2026-08-05",
+    "modified": "2026-11-01"
+  },
+  "/christmas-gifts-for-him": {
+    "published": "2026-08-05",
+    "modified": "2026-11-01"
+  },
+  "/christmas-gifts-for-kids": {
+    "published": "2026-11-01",
+    "modified": "2026-11-01"
+  },
+  "/christmas-gifts-for-mom": {
+    "published": "2026-11-01",
+    "modified": "2026-11-01"
+  },
+  "/christmas-gifts-for-teens": {
+    "published": "2026-11-01",
+    "modified": "2026-11-01"
+  },
+  "/fathers-day-gifts": {
+    "published": "2026-03-19",
+    "modified": "2026-11-01"
+  },
+  "/fathers-day-gifts-under-100": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/fathers-day-gifts-under-25": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/fathers-day-gifts-under-50": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/genie/r/[shareId]": {
+    "published": "2026-08-20",
+    "modified": "2026-09-04"
+  },
+  "/gift-genie": {
+    "published": "2026-09-04",
+    "modified": "2026-11-01"
+  },
+  "/gift-ideas-for-brother": {
+    "published": "2026-08-05",
+    "modified": "2026-08-20"
+  },
+  "/gift-ideas-for-dad": {
+    "published": "2026-03-08",
+    "modified": "2026-11-01"
+  },
+  "/gift-ideas-for-friends": {
+    "published": "2026-03-19",
+    "modified": "2026-11-01"
+  },
+  "/gift-ideas-for-grandparents": {
+    "published": "2026-03-19",
+    "modified": "2026-10-26"
+  },
+  "/gift-ideas-for-her": {
+    "published": "2026-03-08",
+    "modified": "2026-11-01"
+  },
+  "/gift-ideas-for-him": {
+    "published": "2026-03-08",
+    "modified": "2026-11-01"
+  },
+  "/gift-ideas-for-kids": {
+    "published": "2026-03-19",
+    "modified": "2026-10-26"
+  },
+  "/gift-ideas-for-mom": {
+    "published": "2026-03-08",
+    "modified": "2026-11-01"
+  },
+  "/gift-ideas-for-sister": {
+    "published": "2026-08-05",
+    "modified": "2026-08-05"
+  },
+  "/gift-ideas-for-teachers": {
+    "published": "2026-04-14",
+    "modified": "2026-10-26"
+  },
+  "/gift-ideas-for-teens": {
+    "published": "2026-03-19",
+    "modified": "2026-11-01"
+  },
+  "/gifts-for-a-crush": {
+    "published": "2026-07-29",
+    "modified": "2026-07-29"
+  },
+  "/gifts-for-boss": {
+    "published": "2026-06-17",
+    "modified": "2026-10-26"
+  },
+  "/gifts-for-camping-and-outdoors": {
+    "published": "2026-03-19",
+    "modified": "2026-10-26"
+  },
+  "/gifts-for-college-students": {
+    "published": "2026-06-29",
+    "modified": "2026-07-01"
+  },
+  "/gifts-for-coworkers": {
+    "published": "2026-06-17",
+    "modified": "2026-10-26"
+  },
+  "/gifts-for-crafters": {
+    "published": "2026-07-29",
+    "modified": "2026-07-29"
+  },
+  "/gifts-for-girlfriend": {
+    "published": "2026-06-19",
+    "modified": "2026-08-20"
+  },
+  "/gifts-for-people-who-have-everything": {
+    "published": "2026-08-05",
+    "modified": "2026-08-05"
+  },
+  "/gifts-for-teenage-boys": {
+    "published": "2026-08-05",
+    "modified": "2026-08-14"
+  },
+  "/gifts-for-teenage-girls": {
+    "published": "2026-08-05",
+    "modified": "2026-08-05"
+  },
+  "/gifts-for-wife": {
+    "published": "2026-07-29",
+    "modified": "2026-08-20"
+  },
+  "/gifts-under-100": {
+    "published": "2026-03-19",
+    "modified": "2026-10-26"
+  },
+  "/gifts-under-25": {
+    "published": "2026-03-19",
+    "modified": "2026-11-01"
+  },
+  "/gifts-under-50": {
+    "published": "2026-03-08",
+    "modified": "2026-11-09"
+  },
+  "/gifts/last-minute-mothers-day": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/graduation-gifts": {
+    "published": "2026-04-06",
+    "modified": "2026-11-01"
+  },
+  "/graduation-gifts-under-100": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/graduation-gifts-under-50": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/halloween-party-gifts": {
+    "published": "2026-09-27",
+    "modified": "2026-11-01"
+  },
+  "/hanukkah-gifts": {
+    "published": "2026-11-01",
+    "modified": "2026-11-01"
+  },
+  "/help-me-pick-a-gift": {
+    "published": "2026-06-26",
+    "modified": "2026-11-01"
+  },
+  "/holiday-shopping-statistics-2026": {
+    "published": "2026-11-09",
+    "modified": "2026-11-09"
+  },
+  "/housewarming-gifts": {
+    "published": "2026-08-05",
+    "modified": "2026-11-01"
+  },
+  "/last-minute-christmas-gifts": {
+    "published": "2026-11-01",
+    "modified": "2026-11-01"
+  },
+  "/last-minute-gift-ideas": {
+    "published": "2026-06-17",
+    "modified": "2026-11-09"
+  },
+  "/last-minute-mothers-day-gifts": {
+    "published": "2026-04-14",
+    "modified": "2026-11-01"
+  },
+  "/luxury-gifts-for-her": {
+    "published": "2026-06-24",
+    "modified": "2026-08-09"
+  },
+  "/luxury-gifts-under-200": {
+    "published": "2026-06-24",
+    "modified": "2026-08-14"
+  },
+  "/luxury-gifts-under-50": {
+    "published": "2026-06-24",
+    "modified": "2026-06-24"
+  },
+  "/mothers-day-gifts": {
+    "published": "2026-03-19",
+    "modified": "2026-11-01"
+  },
+  "/mothers-day-gifts-for-wife": {
+    "published": "2026-04-14",
+    "modified": "2026-11-01"
+  },
+  "/mothers-day-gifts-under-100": {
+    "published": "2026-04-14",
+    "modified": "2026-11-01"
+  },
+  "/mothers-day-gifts-under-25": {
+    "published": "2026-04-06",
+    "modified": "2026-11-01"
+  },
+  "/mothers-day-gifts-under-50": {
+    "published": "2026-04-06",
+    "modified": "2026-11-01"
+  },
+  "/patriotic-gifts": {
+    "published": "2026-06-21",
+    "modified": "2026-10-29"
+  },
+  "/picks": {
+    "published": "2026-03-07",
+    "modified": "2026-03-21"
+  },
+  "/privacy": {
+    "published": "2026-03-07",
+    "modified": "2026-06-24"
+  },
+  "/retirement-gifts": {
+    "published": "2026-08-05",
+    "modified": "2026-11-01"
+  },
+  "/retro-gaming-gifts": {
+    "published": "2026-06-24",
+    "modified": "2026-08-15"
+  },
+  "/romantic-gifts-for-her": {
+    "published": "2026-06-19",
+    "modified": "2026-08-09"
+  },
+  "/secret-santa-gifts": {
+    "published": "2026-08-05",
+    "modified": "2026-10-29"
+  },
+  "/selections": {
+    "published": "2026-03-07",
+    "modified": "2026-06-17"
+  },
+  "/self-care-gifts": {
+    "published": "2026-07-14",
+    "modified": "2026-07-14"
+  },
+  "/self-care-gifts-for-her": {
+    "published": "2026-07-14",
+    "modified": "2026-07-14"
+  },
+  "/shuffle": {
+    "published": "2026-03-07",
+    "modified": "2026-06-17"
+  },
+  "/shuffle/[category]": {
+    "published": "2026-03-07",
+    "modified": "2026-11-01"
+  },
+  "/stocking-stuffers": {
+    "published": "2026-08-05",
+    "modified": "2026-11-09"
+  },
+  "/stocking-stuffers-for-dad": {
+    "published": "2026-10-09",
+    "modified": "2026-11-01"
+  },
+  "/stocking-stuffers-for-her": {
+    "published": "2026-10-09",
+    "modified": "2026-10-29"
+  },
+  "/stocking-stuffers-for-him": {
+    "published": "2026-10-09",
+    "modified": "2026-10-29"
+  },
+  "/stocking-stuffers-for-kids": {
+    "published": "2026-10-09",
+    "modified": "2026-11-01"
+  },
+  "/stocking-stuffers-for-mom": {
+    "published": "2026-10-09",
+    "modified": "2026-11-01"
+  },
+  "/stocking-stuffers-under-10": {
+    "published": "2026-10-09",
+    "modified": "2026-10-29"
+  },
+  "/sustainable-eco-gifts": {
+    "published": "2026-06-17",
+    "modified": "2026-10-26"
+  },
+  "/tech-gadgets": {
+    "published": "2026-06-17",
+    "modified": "2026-10-26"
+  },
+  "/terms": {
+    "published": "2026-03-07",
+    "modified": "2026-06-19"
+  },
+  "/top-10-fathers-day-gifts": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/top-10-gifts-for-grandparents-who-have-everything": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/top-10-gifts-for-new-dads-under-50": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/top-10-gifts-that-dont-need-batteries-or-wifi": {
+    "published": "2026-06-17",
+    "modified": "2026-11-01"
+  },
+  "/trending-christmas-gifts-2026": {
+    "published": "2026-10-29",
+    "modified": "2026-11-09"
+  },
+  "/unique-birthday-gifts": {
+    "published": "2026-06-19",
+    "modified": "2026-11-01"
+  },
+  "/white-elephant-gifts": {
+    "published": "2026-08-05",
+    "modified": "2026-10-29"
+  },
+  "/wishlist": {
+    "published": "2026-03-07",
+    "modified": "2026-06-17"
+  },
+  "/wishlist/[id]": {
+    "published": "2026-03-09",
+    "modified": "2026-06-24"
+  },
+  "/world-cup-gifts": {
+    "published": "2026-06-21",
+    "modified": "2026-06-24"
+  }
+}

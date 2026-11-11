@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
   description:
     'TheGiftShuffle is led by AJ Crane, founder of AiDept Solutions. Learn how we choose gifts using Amazon ratings, review counts and real recipient fit. No pay-to-play.',
+  alternates: { canonical: 'https://www.thegiftshuffle.com/about' },
   openGraph: {
     title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
     description:

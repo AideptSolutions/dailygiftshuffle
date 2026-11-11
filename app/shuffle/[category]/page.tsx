@@ -36,6 +36,9 @@ export function generateMetadata({ params }: { params: { category: string } }): 
       ],
     },
     alternates: { canonical: url },
+    // Interactive tool with little static text; it overlaps /category/[niche],
+    // which is the page meant to rank. Links are still followed.
+    robots: { index: false, follow: true },
   };
 }
 

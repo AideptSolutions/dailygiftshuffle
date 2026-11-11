@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { CATEGORY_META } from './shuffle/[category]/categoryMeta';
+import { pageDates } from '@/lib/pageDates';
 
 const BASE_URL = 'https://www.thegiftshuffle.com';
 
@@ -10,41 +10,21 @@ const NICHES = [
   'halloween',
 ];
 
-// Real content-review dates only (they match the page's visible "Updated"
-// line). Bing weighs lastmod for seasonal queries; never bump without a review.
-const LAST_REVIEWED: Record<string, string> = {
-  '/stocking-stuffers': '2026-11-04',
-  '/trending-christmas-gifts-2026': '2026-11-09',
-  '/holiday-shopping-statistics-2026': '2026-11-09',
-  '/christmas-gifts-for-mom': '2026-11-01',
-  '/christmas-gifts-for-dad': '2026-11-01',
-  '/christmas-gifts-for-kids': '2026-11-01',
-  '/christmas-gifts-for-teens': '2026-11-01',
-  '/last-minute-christmas-gifts': '2026-11-01',
-  '/hanukkah-gifts': '2026-11-01',
-  '/last-minute-gift-ideas': '2026-11-01',
-  '/mothers-day-gifts': '2026-11-01',
-  '/mothers-day-gifts-for-wife': '2026-11-01',
-  '/mothers-day-gifts-under-25': '2026-11-01',
-  '/mothers-day-gifts-under-50': '2026-11-01',
-  '/mothers-day-gifts-under-100': '2026-11-01',
-  '/last-minute-mothers-day-gifts': '2026-11-01',
-  '/gifts/last-minute-mothers-day': '2026-11-01',
-  '/fathers-day-gifts': '2026-11-01',
-  '/fathers-day-gifts-under-25': '2026-11-01',
-  '/fathers-day-gifts-under-50': '2026-11-01',
-  '/fathers-day-gifts-under-100': '2026-11-01',
-  '/top-10-fathers-day-gifts': '2026-11-01',
-};
+
+// Every entry carries a real last-modified date (see lib/pageDates.ts).
+function lastMod(path: string, fileRoute?: string): { lastModified?: string } {
+  const { modified } = pageDates(path, fileRoute);
+  return modified ? { lastModified: modified } : {};
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: BASE_URL, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE_URL}/shuffle`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/wishlist`, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/about`, changeFrequency: 'monthly', priority: 0.4 },
-    { url: `${BASE_URL}/category`, changeFrequency: 'weekly', priority: 0.6 },
+    { url: BASE_URL, changeFrequency: 'weekly', priority: 1.0, ...lastMod('/') },
+    { url: `${BASE_URL}/shuffle`, changeFrequency: 'weekly', priority: 0.9, ...lastMod('/shuffle') },
+    { url: `${BASE_URL}/about`, changeFrequency: 'monthly', priority: 0.4, ...lastMod('/about') },
+    { url: `${BASE_URL}/category`, changeFrequency: 'weekly', priority: 0.6, ...lastMod('/category') },
   ];
+  // /wishlist is a personal, noindex page and is not submitted.
 
   // Only include recipient pages that actually exist in /app
   const recipientLandingPages: MetadataRoute.Sitemap = [
@@ -60,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}${path}`,
     changeFrequency: 'weekly' as const,
     priority: 0.9,
+    ...lastMod(path),
   }));
 
   // Only include occasion/budget pages that actually exist in /app
@@ -160,23 +141,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}${path}`,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
-    ...(LAST_REVIEWED[path] ? { lastModified: LAST_REVIEWED[path] } : {}),
+    ...lastMod(path),
   }));
 
-  // The interactive per-category shuffle pages are real, indexable pages, so
-  // submit them alongside the category browse pages. Only categories with
-  // their own CATEGORY_META entry: any other slug renders a generic
-  // "Gift Gift Shuffle" fallback that should not be submitted.
-  const shuffleRoutes: MetadataRoute.Sitemap = Object.keys(CATEGORY_META).map((slug) => ({
-    url: `${BASE_URL}/shuffle/${slug}`,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
-
+  // The per-category shuffle pages (/shuffle/[category]) are interactive tools
+  // with very little static text and they overlap /category/[niche]. They are
+  // noindex,follow and are not submitted (audit of 2026-11-10).
   const categoryRoutes: MetadataRoute.Sitemap = NICHES.map((niche) => ({
     url: `${BASE_URL}/category/${niche}`,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
+    ...lastMod(`/category/${niche}`, '/category/[niche]'),
   }));
 
   // The programmatic /gifts/[slug] combos (600+) are intentionally NOT submitted:
@@ -189,6 +164,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...recipientLandingPages,
     ...occasionBudgetLandingPages,
     ...categoryRoutes,
-    ...shuffleRoutes,
   ];
 }
