@@ -6,6 +6,7 @@ import './globals.css';
 import Footer from '@/components/Footer';
 import FavoritesSidebar from '@/components/FavoritesSidebar';
 import ClickTracker from '@/components/ClickTracker';
+import ErrorReporter from '@/components/ErrorReporter';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -136,6 +137,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FavoritesSidebar />
         <ClickTracker />
+        <ErrorReporter />
         <Analytics />
         <Script
           id="organization-schema"

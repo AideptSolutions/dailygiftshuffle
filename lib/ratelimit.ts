@@ -19,3 +19,5 @@ export const rlMePerIp      = make('me:ip', 60, '1 m');
 export const rlRunPerIp     = make('run:ip', 5, '1 m');
 // Anonymous backstop: cookie-clearing cannot farm more than this per IP/day.
 export const rlAnonPerIpDay = make('anonrun:ip', 10, '1 d');
+// Client error log: a crashing page reports a handful at most.
+export const rlClientErrorPerIp = make('cerr:ip', 20, '1 h');

@@ -16,7 +16,7 @@ function getSeen(): string[] {
   try { return JSON.parse(sessionStorage.getItem(SHUFFLE_KEY) || '[]'); } catch { return []; }
 }
 function addSeen(ids: string[]) {
-  sessionStorage.setItem(SHUFFLE_KEY, JSON.stringify([...getSeen(), ...ids]));
+  try { sessionStorage.setItem(SHUFFLE_KEY, JSON.stringify([...getSeen(), ...ids])); } catch { /* storage blocked */ }
 }
 
 function pickN(catalog: Product[], n: number, excludeIds: string[] = []): Product[] {
@@ -25,7 +25,7 @@ function pickN(catalog: Product[], n: number, excludeIds: string[] = []): Produc
   const seen = getSeen();
   let pool = catalog.filter((p) => !seen.includes(p.id) && !excludeSet.has(p.id));
   if (pool.length < n) {
-    sessionStorage.removeItem(SHUFFLE_KEY);
+    try { sessionStorage.removeItem(SHUFFLE_KEY); } catch { /* storage blocked */ }
     pool = catalog.filter((p) => !excludeSet.has(p.id));
     if (pool.length < n) pool = catalog;
   }

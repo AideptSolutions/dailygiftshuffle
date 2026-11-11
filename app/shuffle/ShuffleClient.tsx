@@ -132,7 +132,8 @@ function ProductCard({
               toggleFavorite(product);
               return;
             }
-            const gs = typeof window !== 'undefined' ? localStorage.getItem('gs_email') : null;
+            let gs: string | null = null;
+            try { gs = localStorage.getItem('gs_email'); } catch { /* storage blocked */ }
             if (gs) {
               toggleFavorite(product);
             } else {

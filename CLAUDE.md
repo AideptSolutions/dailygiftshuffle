@@ -34,3 +34,7 @@ For the guided workflow use the `/deploy` skill.
 ## Product catalog
 
 All products live in code: `data/products.ts` and `data/products-catalog.ts`, merged and deduped by `lib/catalogFeed.ts` (the feed behind `/api/products/all`, the homepage and Find a Gift shuffles, and the Gift Genie). The Redis admin catalog (`admin:products`) and Crane's List were retired on 2026-10-29: admin products were merged into `data/products-catalog.ts` and `/admin` now redirects to `/admin/clicks`. Add new products to the catalog files, with live-verified ASINs and local images (see `CATALOG-DATA-QUALITY.md`). Never add products via Redis.
+
+## Client error log
+
+`app/error.tsx` and `app/global-error.tsx` are the error boundaries: a script error shows a branded panel and keeps the page's head tags, instead of the framework's generic error screen. `components/ErrorReporter.tsx` (mounted once in `app/layout.tsx`) and both boundaries report through `lib/clientErrors.ts` to GA4 (`exception` event) and to `/api/client-error`, which keeps the newest 200 errors for 60 days in the Redis list `errors:client` with path and user agent. Read it signed in as admin at `/api/client-error` (JSON). Do not remove the boundaries or the reporter: they exist because Google stored blank versions of several guide pages in 2026 (see `SEO-RECOVERY-2026-08.md`, audit of 2026-11-10).

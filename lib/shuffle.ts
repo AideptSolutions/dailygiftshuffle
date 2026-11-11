@@ -19,11 +19,11 @@ function addShownId(id: string): void {
   if (typeof window === 'undefined') return;
   const shown = getShownIds();
   shown.push(id);
-  sessionStorage.setItem(SHOWN_KEY, JSON.stringify(shown));
+  try { sessionStorage.setItem(SHOWN_KEY, JSON.stringify(shown)); } catch { /* storage blocked */ }
 }
 export function clearShownIds(): void {
   if (typeof window === 'undefined') return;
-  sessionStorage.removeItem(SHOWN_KEY);
+  try { sessionStorage.removeItem(SHOWN_KEY); } catch { /* storage blocked */ }
 }
 
 function pickRandom(pool: Product[], shown: string[]): Product | null {

@@ -18,7 +18,11 @@ export default function MothersDayBanner() {
   useEffect(() => {
     const now = new Date();
     if (now < SHOW_FROM || now >= HIDE_AFTER) return;
-    if (localStorage.getItem(DISMISS_KEY)) return;
+    try {
+      if (localStorage.getItem(DISMISS_KEY)) return;
+    } catch {
+      // storage blocked: show the banner
+    }
     setIsLastMinute(new Date() >= LAST_MINUTE_CUTOFF);
     setVisible(true);
   }, []);
@@ -27,7 +31,7 @@ export default function MothersDayBanner() {
 
   function dismiss(e: React.MouseEvent) {
     e.preventDefault();
-    localStorage.setItem(DISMISS_KEY, '1');
+    try { localStorage.setItem(DISMISS_KEY, '1'); } catch { /* storage blocked */ }
     setVisible(false);
   }
 

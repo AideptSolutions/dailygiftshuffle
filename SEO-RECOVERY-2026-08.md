@@ -707,3 +707,69 @@ clothing, rising in search). New components/AmazonPicks.tsx and byIds() in lib/g
 (fails the build if an id is missing). Christmas Gift Ideas, Gifts Under $50 and Stocking
 Stuffers now link to the statistics page. GSC indexing requested for the statistics and
 trending pages (both were "URL is not on Google").
+
+## SEO and AEO audit 2026-11-10
+
+Read-only audit: a crawl of all 151 sitemap URLs on the live site, plus Search
+Console (Page indexing, Manual actions, URL Inspection) in the owner's signed-in
+Chrome. Nothing on the site or in any account was changed. One live URL test was
+run in Search Console (/best-gaming-gifts-2026).
+
+GOOGLE INDEX STATE (report last updated 11/5): 231 indexed and 581 not indexed
+across all known URLs. For the submitted sitemap: 60 indexed, 90 not (60
+discovered and never crawled, 22 crawled and not indexed, 6 duplicate without
+user-selected canonical, 1 redirect error, 1 alternate with canonical). Manual
+actions: no issues detected. The 385 crawled-not-indexed across all known URLs
+are mostly the removed /gifts/ doorways.
+
+FINDING 1, casino canonicals (new, most serious). The 6 "duplicate without
+user-selected canonical" pages are /gifts-for-wife, /mothers-day-gifts,
+/best-gaming-gifts-2026, /gifts-for-camping-and-outdoors,
+/best-baby-shower-gifts-2026, /best-luxury-gifts-2026. URL Inspection on three:
+- /best-gaming-gifts-2026: crawled Sep 10, user-declared canonical None,
+  Google-selected canonical https://www.747live.bet/
+- /best-luxury-gifts-2026: crawled Jun 25, user-declared None, Google-selected
+  https://www.747live.bet/
+- /gifts-for-wife: crawled Oct 23, user-declared None, Google-selected
+  https://www.ichancy.com/ar
+Both are betting sites and both run Next.js. Our pages have declared a self
+canonical in code since they were built (June), the live HTML has it at byte
+2,523 inside head, and a Googlebot user agent gets the same 445 KB page as a
+browser. Controls: /stocking-stuffers (indexed) and /gift-ideas-for-teens
+(crawled, not indexed) both show the correct user-declared canonical. The live
+test of /best-gaming-gifts-2026 on Nov 10 passed: canonical detected, no console
+messages, all resources loaded.
+Read: on those three crawls Google stored a version of the page with no head
+tags, and matched it to other sites showing the same thing. Leading explanation
+(moderate confidence, not reproduced): a script error during Google's render
+replaced the page with the generic Next.js error screen, which looks identical
+on every Next.js site. The app has no app/error.tsx or app/global-error.tsx, so
+any client crash blanks the whole page. Alternative: the betting sites serve
+copied content to Googlebot. The Jun 25 date is before the July collapse, so
+this may be part of that story and not only the doorway pages.
+
+FINDING 2, index hygiene. No canonical tag on 26 pages (all 23 /category/*,
+/about, /shuffle, /wishlist). No lastmod on 129 of 151 sitemap entries.
+/wishlist is in the sitemap (134 words, no H1). The 23 /shuffle/[niche] pages
+carry about 80 words of static text each and overlap /category/[niche].
+
+FINDING 3, authorship and dates. No page has Article markup, an author, or a
+datePublished; 9 pages have a WebPage dateModified. llms.txt and the
+Organization description say "4.3+ stars, 1,000+ reviews" while /about says 300
+and the catalog has 18 products under 4.0.
+
+FINDING 4, ratings markup. 139 pages mark up Amazon's star rating and review
+count as AggregateRating on Product items. Google's review snippet rules require
+ratings collected by the site itself.
+
+FINDING 5, links and snippets. 7 pages have no internal links pointing at them
+(/gifts-for-a-crush, /gifts-for-crafters, /gifts-for-college-students,
+/sustainable-eco-gifts, /top-10-gifts-that-dont-need-batteries-or-wifi,
+/category, /gifts/last-minute-mothers-day) and 23 more have 1 or 2. 107 titles
+run past 60 characters (36 even without the brand suffix), 84 descriptions past
+160. The homepage and 20 other pages have no og:image.
+
+CLEAN: all 151 URLs return 200 (median 209 ms), no duplicate titles or
+descriptions, one H1 per page apart from /shuffle and /wishlist, FAQ markup on
+120 pages, breadcrumbs on 143, robots.txt open to all crawlers, no JSON-LD parse
+errors. Crawl data: scratchpad audit/crawl.json (session temp, not kept).

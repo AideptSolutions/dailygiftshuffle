@@ -16,8 +16,14 @@ function loadFromStorage(): Product[] {
   }
 }
 
+// Storage can throw (blocked, full, or a private window); a failed save must
+// never take the page down.
 function saveToStorage(items: Product[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  } catch {
+    return;
+  }
   window.dispatchEvent(new Event(EVENT_KEY));
 }
 
@@ -51,7 +57,11 @@ export function useFavorites() {
   );
 
   const clear = useCallback(() => {
-    localStorage.removeItem(STORAGE_KEY);
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      return;
+    }
     window.dispatchEvent(new Event(EVENT_KEY));
   }, []);
 
