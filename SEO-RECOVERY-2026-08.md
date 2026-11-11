@@ -904,3 +904,27 @@ access settles the affiliate-terms question for the visible stars. It does not
 settle Google's review-markup rule, which is about ratings collected by the
 site itself, so item 4 is still a decision to make then. Not yet checked:
 whether Bing shows star ratings on the /stocking-stuffers listing.
+
+### 2026-11-10: remaining long titles and descriptions reworded (commit 632c457)
+
+Owner approved a drafted list (kept at
+content-drafts/title-description-rewrites-2026-11.md, before and after for
+each page).
+- Titles: 28 reworded to 60 characters or fewer, plus the brand suffix dropped
+  on /gifts-for-wife (its title is a template literal with a computed count,
+  which the earlier literal-matching pass missed).
+- Descriptions: the 15 over 185 characters reworded to 160 or fewer.
+- Verified live by re-crawl: all 44 match the approved text; 126 URLs, all
+  200. Titles over 60 characters: 40 to 11, and all 11 are the protected
+  pages. Descriptions over 160: 61 to 46 (11 protected; the other 35 run 161
+  to 184 and were left on purpose as low value).
+- 41 changed URLs sent to IndexNow, HTTP 200.
+- lib/pageDates.json was NOT refreshed: a title or description edit is not a
+  content review.
+Cuts with meaning, accepted by the owner: "(2026)" off the brother and sister
+titles; "Best" off the college students title; Secret Santa names only
+coworkers; statistics title loses "Timing" and its description the
+Thanksgiving weekend figure; Gift Genie description loses "3 readings a day";
+trending description no longer names HydroJug or KPop Demon Hunters.
+Watch: Bing clicks and positions on these pages in the next export, since a
+title change can move a ranking either way.
