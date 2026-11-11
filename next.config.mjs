@@ -42,6 +42,13 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Merged 2026-11-10: this page duplicated /last-minute-mothers-day-gifts
+        // (same heading and intent). Listed before the dynamic /gifts/[slug] handler runs.
+        source: '/gifts/last-minute-mothers-day',
+        destination: '/last-minute-mothers-day-gifts',
+        permanent: true,
+      },
+      {
         source: '/category/streamers-gamers',
         destination: '/category/gaming',
         permanent: true,

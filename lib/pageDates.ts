@@ -27,7 +27,6 @@ export const LAST_REVIEWED: Record<string, string> = {
   '/mothers-day-gifts-under-50': '2026-11-01',
   '/mothers-day-gifts-under-100': '2026-11-01',
   '/last-minute-mothers-day-gifts': '2026-11-01',
-  '/gifts/last-minute-mothers-day': '2026-11-01',
   '/fathers-day-gifts': '2026-11-01',
   '/fathers-day-gifts-under-25': '2026-11-01',
   '/fathers-day-gifts-under-50': '2026-11-01',

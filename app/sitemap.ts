@@ -125,7 +125,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/50th-birthday-gifts',
     '/gifts-for-teenage-girls',
     '/gifts-for-teenage-boys',
-    '/gifts/last-minute-mothers-day',
     '/gift-genie',
     '/blog',
     '/blog/what-is-the-gift-genie',

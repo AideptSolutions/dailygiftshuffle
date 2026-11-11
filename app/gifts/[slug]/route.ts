@@ -8,9 +8,10 @@
 // a liability worth removing outright.
 //
 // A hard 410 (rather than 404) tells crawlers the removal is permanent, which
-// drops the URLs from the index faster. Hand-built static siblings (e.g.
-// /gifts/last-minute-mothers-day) take routing precedence over this dynamic
-// segment and are unaffected.
+// drops the URLs from the index faster. The one hand-built page that lived
+// here, /gifts/last-minute-mothers-day, was merged into
+// /last-minute-mothers-day-gifts on 2026-11-10; next.config.mjs redirects it
+// before this handler runs.
 
 const GONE_BODY = 'This page has been permanently removed.';
 
