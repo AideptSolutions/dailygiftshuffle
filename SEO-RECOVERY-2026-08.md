@@ -928,3 +928,22 @@ Thanksgiving weekend figure; Gift Genie description loses "3 readings a day";
 trending description no longer names HydroJug or KPop Demon Hunters.
 Watch: Bing clicks and positions on these pages in the next export, since a
 title change can move a ranking either way.
+
+### 2026-11-10: click baseline for the pages whose titles or descriptions changed
+
+Bing Webmaster Tools, Search Performance by page, 3 months (Aug 11 to Nov 8,
+2026): 126 clicks, 2.2K impressions, read in the owner's Chrome before any of
+today's changes could have been re-crawled. Every page with a click:
+- Untouched title and description, 119 clicks (94 percent):
+  /stocking-stuffers 102 (1.3K impr, position 5.06), /luxury-gifts-under-50 6,
+  /white-elephant-gifts 4, /gifts-for-a-crush 3, /gifts-for-girlfriend 1,
+  / 1, /category/finance 1, /category/office 1.
+- Changed today, 7 clicks (6 percent):
+  /best-birthday-gifts-2026 2 (20 impr, position 4.15; suffix dropped,
+  description reworded), /best-gaming-gifts-2026 1 (38 impr, 3.63; suffix
+  dropped, description reworded), /birthday-gift-ideas 1 (35 impr, 6.29; title
+  and description reworded), /luxury-gifts-for-her 1 (11 impr, 5.18; title
+  reworded, description trimmed), /40th-birthday-gifts 1 (1 impr; title
+  reworded), /help-me-pick-a-gift 1 (7 impr, 3.00; suffix dropped).
+Use these as the before numbers when the next Bing page export comes in. Each
+change is one file in commits b753f8f and 632c457 and can be reverted per page.
