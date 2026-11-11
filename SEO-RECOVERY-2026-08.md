@@ -947,3 +947,15 @@ today's changes could have been re-crawled. Every page with a click:
   reworded), /help-me-pick-a-gift 1 (7 impr, 3.00; suffix dropped).
 Use these as the before numbers when the next Bing page export comes in. Each
 change is one file in commits b753f8f and 632c457 and can be reverted per page.
+
+### 2026-11-10: /best-birthday-gifts-2026 title and description restored
+
+Owner asked for this page to go back to its original title and description
+after the click baseline showed it converts well on Bing (2 clicks from 20
+impressions, position 4.15). Restored exactly: title "Best Birthday Gifts for
+2026: 30 Top-Rated Picks for Anyone | TheGiftShuffle" (76 characters) and the
+original 193-character description. The author byline and Article markup stay.
+Treat this page as protected from now on, alongside /stocking-stuffers and its
+spokes, /gifts-for-a-crush, /luxury-gifts-under-50, /gifts-for-girlfriend,
+/white-elephant-gifts and the homepage description: do not shorten or reword
+their titles or descriptions without the owner's say-so.
