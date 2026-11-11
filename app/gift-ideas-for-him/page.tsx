@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Gift Ideas for Him: Gifts He'll Actually Use | TheGiftShuffle",
@@ -128,6 +129,7 @@ export default function GiftIdeasForHimPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Him
           </h1>
+          <GuideByline path="/gift-ideas-for-him" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-him.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             If you&apos;re looking for gift ideas for him, the best gifts are ones he&apos;ll actually
             use: smart gadgets, quality everyday carry items, grilling accessories, and experiences

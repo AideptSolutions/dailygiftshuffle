@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List | TheGiftShuffle',
@@ -133,6 +134,7 @@ export default function ChristmasGiftIdeasPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Christmas Gift Ideas
           </h1>
+          <GuideByline path="/christmas-gift-ideas" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/christmas-gift-ideas.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best Christmas gift ideas include cozy subscription boxes, personalized keepsakes,
             smart home gadgets, experience gifts, and family game nights. TheGiftShuffle curates

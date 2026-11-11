@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Mother's Day Gifts Under $100 | TheGiftShuffle",
@@ -131,6 +132,7 @@ export default function MothersDayGiftsUnder100Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Mother&apos;s Day Gifts Under $100
           </h1>
+          <GuideByline path="/mothers-day-gifts-under-100" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/mothers-day-gifts-under-100.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             A hundred dollars is the sweet spot for Mother&apos;s Day gifting. It buys you something genuinely special
             without needing a group contribution or an awkward conversation about the budget. In this range you get

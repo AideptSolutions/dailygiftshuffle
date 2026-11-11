@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use | TheGiftShuffle",
@@ -140,6 +141,7 @@ export default function GiftIdeasForDadPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Dad
           </h1>
+          <GuideByline path="/gift-ideas-for-dad" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-dad.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             If you&apos;re looking for gift ideas for dad, the best options include smart gadgets,
             grilling accessories, personalized keepsakes, and experiences like golf lessons or a

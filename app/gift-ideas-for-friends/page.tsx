@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gift Ideas for Friends: Fun & Thoughtful Picks They\'ll Love | TheGiftShuffle',
@@ -125,6 +126,7 @@ export default function GiftIdeasForFriendsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Friends
           </h1>
+          <GuideByline path="/gift-ideas-for-friends" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-friends.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             The biggest trend in friend gifting for 2026 is &quot;experience-adjacent&quot; gifts, items that create shared moments rather than just sit on a shelf. Card games (We Are Not Really Strangers, What Do You Meme), cocktail kits, snack boards, and board games are leading the category. These gifts work because they become an event: you give the cocktail kit, and suddenly you have plans for Friday night. Personalized consumables are also surging, with flavored gummy bear sets, custom protein shakes, and beauty essentials, things that feel curated but get used up and reordered.
           </p>

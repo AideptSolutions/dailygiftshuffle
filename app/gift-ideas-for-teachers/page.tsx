@@ -8,6 +8,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import CategoryIcon from '@/components/CategoryIcon';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Best Teacher Appreciation Gift Ideas 2026 | TheGiftShuffle',
@@ -149,6 +150,7 @@ export default function GiftIdeasForTeachersPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Teacher Appreciation Gift Ideas 2026
           </h1>
+          <GuideByline path="/gift-ideas-for-teachers" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-teachers.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Teacher Appreciation Week lands in May, right before the end-of-school sprint. Whether you are
             shopping for the teacher who shaped your kid&apos;s year or the one who somehow kept the class together

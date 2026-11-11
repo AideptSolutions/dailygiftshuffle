@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Best Mother's Day Gifts Under $25 (2027) | TheGiftShuffle",
@@ -124,6 +125,7 @@ export default function MothersDayGiftsUnder25Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             The Best Mother&apos;s Day Gifts Under $25 in 2027
           </h1>
+          <GuideByline path="/mothers-day-gifts-under-25" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/mothers-day-gifts-under-25.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Great gifts don&apos;t require a big budget. They require knowing what Mom will actually use. Under $25, you can find shower steamers that turn her morning commute prep into a spa moment, under-eye patches she reaches for every night, and slipper socks so soft she&apos;ll never want to take them off. The price isn&apos;t the point. The thought, and the daily ritual it creates, is.
           </p>

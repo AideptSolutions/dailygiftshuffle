@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Father's Day Gifts: Best Picks for Dad in 2027 | TheGiftShuffle",
@@ -127,6 +128,7 @@ export default function FathersDayGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Father&apos;s Day Gifts
           </h1>
+          <GuideByline path="/fathers-day-gifts" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/fathers-day-gifts.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             Father&apos;s Day is the 3rd biggest gifting event of the year, and a few dependable categories make it easy to nail. Outdoor and garage tools are a perennial favorite, from cordless power tools to magnetic tool wristbands and workshop accessories. Tech gadgets are close behind: portable speakers, smartwatches, and compact projectors. Grilling accessories (digital meat thermometers, premium spice sets, BBQ tool kits) are perennial winners with exceptional review counts and high repurchase rates. Sports gear and health and fitness items round out the top five.
           </p>

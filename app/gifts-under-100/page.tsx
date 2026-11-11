@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gifts Under $100: Premium Picks Without the Premium Price | TheGiftShuffle',
@@ -127,6 +128,7 @@ export default function GiftsUnder100Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gifts Under $100
           </h1>
+          <GuideByline path="/gifts-under-100" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gifts-under-100.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             The $50–$100 range is the fastest-growing gift budget segment, and for good reason. It hits the threshold of &quot;feels premium&quot; without the financial stress of going higher. The trending categories in this range are smart home tech (video doorbells, smart alarm clocks, mini projectors), fitness equipment (walking pads, weighted vests, compact resistance systems), premium grooming kits, and kitchen upgrades that feel like a real improvement. These are the gifts people actually use every day, not the ones that collect dust on a shelf.
           </p>

@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love | TheGiftShuffle",
@@ -125,6 +126,7 @@ export default function GiftIdeasForGrandparentsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Grandparents
           </h1>
+          <GuideByline path="/gift-ideas-for-grandparents" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-grandparents.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             The best gifts for grandparents combine thoughtfulness with practicality, and 2026 trends make that easier than ever. Garden tools and accessories are the fastest-growing gift category for the 65+ demographic, with seed starter kits, kneeling pads, and long-reach planters leading the charts. Health and wellness items are close behind: smart health monitors, joint support supplements, heated throws, and cozy weighted blankets are consistently top-rated in this segment. The key is choosing trusted brands with strong reviews. Grandparents specifically appreciate the reassurance of a well-reviewed, well-known product.
           </p>

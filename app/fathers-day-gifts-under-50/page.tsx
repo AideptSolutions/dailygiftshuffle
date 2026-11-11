@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Father's Day Gifts Under $50 (2027): Top Picks for Dad | TheGiftShuffle",
@@ -117,6 +118,7 @@ export default function FathersDayGiftsUnder50Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             The Best Father&apos;s Day Gifts Under $50
           </h1>
+          <GuideByline path="/fathers-day-gifts-under-50" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/fathers-day-gifts-under-50.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The $25-$50 range is the sweet spot of Father&apos;s Day gifting. Enough budget for something genuinely
             useful, a digital meat thermometer he&apos;ll reach for every barbecue, an insulated tumbler he&apos;ll

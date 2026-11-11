@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Best Tech Gifts & Gadgets 2026: Top Picks for Every Budget | TheGiftShuffle',
@@ -216,6 +217,7 @@ export default function TechGadgetsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Best Tech Gifts & Gadgets 2026
           </h1>
+          <GuideByline path="/tech-gadgets" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/tech-gadgets.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best tech gifts in 2026 run on USB-C, solve a real problem, and have specs worth noticing on day one.
             These six picks cover wireless audio, remote work, portable power, and everything in between, curated for

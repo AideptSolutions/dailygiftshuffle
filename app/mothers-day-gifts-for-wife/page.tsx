@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Best Mother's Day Gifts for Wife 2027 | TheGiftShuffle",
@@ -130,6 +131,7 @@ export default function MothersDayGiftsForWifePage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Mother&apos;s Day Gifts for Wife 2027
           </h1>
+          <GuideByline path="/mothers-day-gifts-for-wife" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/mothers-day-gifts-for-wife.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             She runs the household, shows up for the kids, and probably hasn&apos;t taken a real break in months.
             This Mother&apos;s Day, give her something that feels less like an obligation gift and more like genuine appreciation.

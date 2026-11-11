@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks | TheGiftShuffle",
@@ -132,6 +133,7 @@ export default function LastMinuteMothersDayPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Last-Minute Mother&apos;s Day Gifts 2027
           </h1>
+          <GuideByline path="/last-minute-mothers-day-gifts" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/last-minute-mothers-day-gifts.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-3">
             Still haven&apos;t ordered yet? These are the top-rated picks, sorted by rating and review count
             so you can decide fast and still give something she will actually love.

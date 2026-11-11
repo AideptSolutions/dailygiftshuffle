@@ -8,6 +8,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import CategoryIcon from '@/components/CategoryIcon';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Graduation Gifts Under $50 (Class of 2026) | TheGiftShuffle",
@@ -116,6 +117,7 @@ export default function GraduationGiftsUnder50Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Graduation Gifts Under $50: Class of 2026
           </h1>
+          <GuideByline path="/graduation-gifts-under-50" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/graduation-gifts-under-50.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Under $50 is the standard graduation gift range for friends, and it covers a lot of ground. A portable
             Bluetooth speaker for their first apartment. Wireless earbuds for studying and commuting. An insulated

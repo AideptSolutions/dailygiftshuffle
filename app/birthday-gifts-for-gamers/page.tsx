@@ -8,6 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import catalog from '@/data/products-catalog';
 import { products as recipientProducts } from '@/data/products';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026 | TheGiftShuffle',
@@ -137,6 +138,7 @@ export default function BirthdayGiftsForGamersPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Birthday Gifts for Gamers
           </h1>
+          <GuideByline path="/birthday-gifts-for-gamers" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/birthday-gifts-for-gamers.jpg" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             The <strong>best birthday gifts for gamers in 2026</strong> are upgrades to the gear
             they already live in: headsets, keyboards, controllers, stream decks and the RGB

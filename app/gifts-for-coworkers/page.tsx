@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gifts for Coworkers: Best Office Gift Ideas 2026 | TheGiftShuffle',
@@ -133,6 +134,7 @@ export default function GiftsForCoworkersPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gifts for Coworkers
           </h1>
+          <GuideByline path="/gifts-for-coworkers" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gifts-for-coworkers.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             <strong>The best coworker gifts are practical, work-appropriate, and priced to match the relationship.</strong>{' '}
             A funny office mug, a desk succulent planter, a wireless charging pad, or a gourmet snack set. These

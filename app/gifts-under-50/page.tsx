@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gifts Under $50: 30 Great Ideas for Any Occasion | TheGiftShuffle',
@@ -128,6 +129,7 @@ export default function GiftsUnder50Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gifts Under $50
           </h1>
+          <GuideByline path="/gifts-under-50" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gifts-under-50.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best gifts under $50 include cozy self-care sets, personalized keepsakes,
             bestselling tech accessories, quality kitchen tools, and fun experiences. Whether

@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Gift Ideas for Her: Gifts She'll Actually Love | TheGiftShuffle",
@@ -128,6 +129,7 @@ export default function GiftIdeasForHerPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Her
           </h1>
+          <GuideByline path="/gift-ideas-for-her" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-her.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             If you&apos;re looking for gift ideas for her, the best gifts are ones that feel personal
             and indulgent: luxury self-care sets, personalized jewelry, cozy loungewear, and

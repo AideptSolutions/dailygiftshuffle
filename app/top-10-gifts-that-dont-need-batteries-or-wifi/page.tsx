@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Top 10 Gifts That Don't Need Batteries or Wi-Fi | TheGiftShuffle",
@@ -212,6 +213,7 @@ export default function GiftsNoBatteriesPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Top 10 Gifts That Don&apos;t Need Batteries or Wi-Fi
           </h1>
+          <GuideByline path="/top-10-gifts-that-dont-need-batteries-or-wifi" headline={String(metadata.title)} description={metadata.description} />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             Some of the best gifts have no power button, no app, and no firmware update. They work
             the moment they come out of the box and keep working for years. This list is for anyone

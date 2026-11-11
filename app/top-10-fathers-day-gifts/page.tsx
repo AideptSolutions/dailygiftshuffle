@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want | TheGiftShuffle",
@@ -147,6 +148,7 @@ export default function Top10FathersDayGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Top 10 Father&apos;s Day Gifts for 2027
           </h1>
+          <GuideByline path="/top-10-fathers-day-gifts" headline={String(metadata.title)} description={metadata.description} />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             Father&apos;s Day 2027 is <strong>June 20</strong>. These are the 10 best gifts for dads this year,
             picked for how much dads actually use them, not what has been recycled in listicles since 2019.

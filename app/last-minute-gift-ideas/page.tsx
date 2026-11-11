@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
+import GuideByline from '@/components/GuideByline';
 
 // Formerly /top-10-gifts-that-arrive-in-24-hours (301 in next.config.mjs).
 // We do not control shipping or delivery, so this page never promises an
@@ -191,6 +192,7 @@ export default function LastMinuteGiftIdeasPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             10 Last-Minute Gift Ideas for When You&apos;re Out of Time
           </h1>
+          <GuideByline path="/last-minute-gift-ideas" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/last-minute-gift-ideas.jpg" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             You forgot. It happens. Anniversary, birthday, the friend who flew in unexpectedly, the
             colleague whose retirement lunch is tomorrow. The way out is to skip the warehouse and the

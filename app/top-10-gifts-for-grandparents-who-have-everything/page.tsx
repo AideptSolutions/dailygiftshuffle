@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Top 10 Gifts for Grandparents Who Already Have Everything | TheGiftShuffle",
@@ -191,6 +192,7 @@ export default function GrandparentsGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Top 10 Gifts for Grandparents Who Already Have Everything
           </h1>
+          <GuideByline path="/top-10-gifts-for-grandparents-who-have-everything" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/top-10-gifts-for-grandparents-who-have-everything.jpg" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             Buying for grandparents is its own special problem. By the time someone has been alive
             seven or eight decades, they have accumulated a lifetime of mugs, sweaters, and

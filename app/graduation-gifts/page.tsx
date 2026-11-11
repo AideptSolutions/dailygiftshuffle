@@ -9,6 +9,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products-catalog';
 import CategoryIcon from '@/components/CategoryIcon';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads | TheGiftShuffle',
@@ -143,6 +144,7 @@ export default function GraduationGiftsPage() {
         <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4 max-w-3xl mx-auto">
           The Best Graduation Gifts for 2026
         </h1>
+        <GuideByline path="/graduation-gifts" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/graduation-gifts.jpg" />
         <p className="text-gray-600 text-lg max-w-xl mx-auto mb-2">
           Congratulations to the Class of 2026. Whether they are heading to college, entering the workforce, or moving into their first apartment, there is something here for every grad and every budget.
         </p>

@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Gift Ideas for Teens: Trending Gifts They'll Actually Want | TheGiftShuffle",
@@ -122,6 +123,7 @@ export default function GiftIdeasForTeensPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Teens
           </h1>
+          <GuideByline path="/gift-ideas-for-teens" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-teens.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             Shopping for teens in 2026 means keeping up with what&apos;s actually trending, not just what looks good in a store. The top gift categories right now are tech accessories (wireless earbuds, LED gaming lights, ring lights for aspiring content creators), fashion and streetwear, gaming peripherals, skincare and self-care sets for teen girls, and fitness gear. Reviews and social media virality are the #1 purchase signal for teens. They already know what they want, and it usually has 10k+ five-star reviews to back it up.
           </p>

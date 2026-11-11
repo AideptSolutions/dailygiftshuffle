@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Best Birthday Gifts for 2026: 30 Top-Rated Picks for Anyone | TheGiftShuffle',
@@ -160,6 +161,7 @@ export default function BestBirthdayGifts2026Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             The Best Birthday Gifts for 2026
           </h1>
+          <GuideByline path="/best-birthday-gifts-2026" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/best-birthday-gifts-2026.jpg" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             These are the <strong>30 best birthday gifts for 2026</strong>, ranked by what people
             actually love rather than what has been recycled in gift listicles since 2019. Every

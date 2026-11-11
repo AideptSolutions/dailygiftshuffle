@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone | TheGiftShuffle',
@@ -129,6 +130,7 @@ export default function AiPersonalizedGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             AI-Powered Personalized Gifts
           </h1>
+          <GuideByline path="/ai-personalized-gifts" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/ai-personalized-gifts.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The new wave of gifting uses AI to make it personal. Browse the best AI-powered and
             personalized gift ideas, from smart photo frames to custom portraits to DNA kits,

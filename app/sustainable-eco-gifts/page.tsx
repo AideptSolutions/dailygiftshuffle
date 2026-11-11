@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use | TheGiftShuffle',
@@ -130,6 +131,7 @@ export default function SustainableEcoGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Sustainable Eco-Friendly Gifts
           </h1>
+          <GuideByline path="/sustainable-eco-gifts" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/sustainable-eco-gifts.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Eco gifts that do not feel like a punishment. Browse the best sustainable and
             eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful

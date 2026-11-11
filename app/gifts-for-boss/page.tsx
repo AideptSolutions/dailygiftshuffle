@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gifts for Boss: Best Boss Gift Ideas 2026 | TheGiftShuffle',
@@ -140,6 +141,7 @@ export default function GiftsForBossPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gifts for Your Boss
           </h1>
+          <GuideByline path="/gifts-for-boss" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gifts-for-boss.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             <strong>The best boss gifts are professional, practical, and appropriately priced.</strong>{' '}
             A quality insulated tumbler, a premium desk organizer, a gourmet snack gift set. These say &ldquo;I appreciate

@@ -8,6 +8,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import CategoryIcon from '@/components/CategoryIcon';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Graduation Gifts Under $100 (Class of 2026) | TheGiftShuffle",
@@ -115,6 +116,7 @@ export default function GraduationGiftsUnder100Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Graduation Gifts Under $100: Class of 2026
           </h1>
+          <GuideByline path="/graduation-gifts-under-100" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/graduation-gifts-under-100.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Under $100 is the sweet spot for close-family graduation gifting. You&apos;re in Kindle territory.
             Smartwatch territory. Quality massage gun territory, the kind of gift they&apos;ve been wanting but

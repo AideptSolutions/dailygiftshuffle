@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductCard from '@/components/ProductCard';
 import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
@@ -186,6 +187,7 @@ export default function BirthdayGiftIdeasPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Birthday Gift Ideas for 2026
           </h1>
+          <GuideByline path="/birthday-gift-ideas" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/birthday-gift-ideas.jpg" />
           <p className="text-lg text-gray-700 leading-relaxed mb-3">
             The <strong>best birthday gift ideas for 2026</strong> are things people genuinely want
             but rarely buy for themselves: a percussion massage gun, an Ember temperature-control

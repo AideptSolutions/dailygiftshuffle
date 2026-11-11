@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gift Ideas for Kids and Grandkids: Top Picks by Age | TheGiftShuffle',
@@ -130,6 +131,7 @@ export default function GiftIdeasForKidsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gift Ideas for Kids and Grandkids
           </h1>
+          <GuideByline path="/gift-ideas-for-kids" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gift-ideas-for-kids.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best gift ideas for kids and grandkids are the ones they ask about again the next day.
             Whether you are shopping for a toddler, a grade-schooler, or a teen, these hand-picked

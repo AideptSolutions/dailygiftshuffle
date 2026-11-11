@@ -49,31 +49,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.thegiftshuffle.com'),
 };
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'TheGiftShuffle',
-  url: 'https://www.thegiftshuffle.com',
-  description:
-    'AI-curated gift discovery platform. Find unique, personalized gift ideas for anyone, filtered by recipient, occasion, and budget.',
-  sameAs: [],
-};
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': 'https://www.thegiftshuffle.com/#website',
-  url: 'https://www.thegiftshuffle.com',
-  name: 'TheGiftShuffle',
-  description:
-    'Find the perfect gift in seconds. Pick a recipient, set a budget, hit Shuffle.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://www.thegiftshuffle.com/shuffle?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   return (
@@ -99,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   url: 'https://www.thegiftshuffle.com',
                   logo: 'https://www.thegiftshuffle.com/favicon.png',
                   description:
-                    'TheGiftShuffle is an interactive gift discovery engine: pick a recipient and budget, hit Shuffle, and get an instant, hand-curated, top-rated gift recommendation. Every pick is independently selected (4.3+ stars, 1,000+ reviews) with no paid placements.',
+                    'TheGiftShuffle is an interactive gift discovery engine: pick a recipient and budget, hit Shuffle, and get an instant, hand-curated, top-rated gift recommendation. Picks are independently selected with no paid placements: new products need a 4.3-star rating and at least 300 customer reviews, and most of the catalog has more than 1,000.',
                   parentOrganization: {
                     '@type': 'Organization',
                     name: 'AiDept Solutions, LLC',
@@ -139,16 +114,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ClickTracker />
         <ErrorReporter />
         <Analytics />
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <Script
-          id="website-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
       </body>
     </html>
   );

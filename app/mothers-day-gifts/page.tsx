@@ -8,6 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Mother's Day Gifts: The Best Picks for 2027 | TheGiftShuffle",
@@ -139,6 +140,7 @@ export default function MothersDayGiftsPage() {
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
               Mother&apos;s Day Gifts
             </h1>
+            <GuideByline path="/mothers-day-gifts" headline={String(metadata.title)} description={metadata.description} />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
               Mother&apos;s Day 2027 is Sunday, May 9. This year, the gifts that matter most aren&apos;t the flashiest ones. They&apos;re the ones that give her something she&apos;d never carve out for herself: time to slow down, a bathroom that feels like a spa, skin that finally gets the care it deserves, and the kind of cozy comfort that doesn&apos;t require an occasion.
             </p>

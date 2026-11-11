@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Top 10 Gifts for New Dads Under $50 | TheGiftShuffle",
@@ -189,6 +190,7 @@ export default function NewDadsGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Top 10 Gifts for New Dads Under $50
           </h1>
+          <GuideByline path="/top-10-gifts-for-new-dads-under-50" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/top-10-gifts-for-new-dads-under-50.jpg" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             New dad gift guides usually go one of two directions. Either they push novelty items (the
             World&apos;s Best Dad mug) or they pivot to the baby, which is not actually a gift for the

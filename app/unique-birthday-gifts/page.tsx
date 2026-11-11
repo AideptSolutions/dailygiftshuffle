@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Unique Birthday Gifts: 30 Cool, Creative Ideas They Will Remember | TheGiftShuffle',
@@ -149,6 +150,7 @@ export default function UniqueBirthdayGiftsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight" style={{ color: '#1A202C' }}>
             Unique Birthday Gifts They Will Actually Remember
           </h1>
+          <GuideByline path="/unique-birthday-gifts" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/unique-birthday-gifts.jpg" />
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-3">
             Anyone can hand over a gift card. These <strong>30 unique birthday gifts</strong> are
             the cool, creative picks that get a real reaction, then still get used a month later.

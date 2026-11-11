@@ -7,6 +7,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: 'Gifts for Camping and the Outdoors: Top Picks for Every Adventurer | TheGiftShuffle',
@@ -131,6 +132,7 @@ export default function GiftsForOutdoorsPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gifts for Camping and the Outdoors
           </h1>
+          <GuideByline path="/gifts-for-camping-and-outdoors" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gifts-for-camping-and-outdoors.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The best gifts for outdoor people are the ones they reach for on every trip.
             Whether you are shopping for a weekend car camper, a serious backpacker, or someone

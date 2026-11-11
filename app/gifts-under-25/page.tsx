@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Gifts Under $25: Thoughtful Budget Picks | TheGiftShuffle",
@@ -125,6 +126,7 @@ export default function GiftsUnder25Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             Gifts Under $25
           </h1>
+          <GuideByline path="/gifts-under-25" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/gifts-under-25.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
             The demand for quality gifts under $25 has surged, driven by social proof culture. Under $25 does not mean cheap. The best-reviewed products in this range consistently prove it. Lip balm sets, skincare essentials, LED book lights, card games, and scented candle collections often have 30,000-100,000+ verified reviews and are bought over and over again as gifts precisely because they deliver. The category thrives because the gifting bar is about perception, not price, and these picks clear it easily.
           </p>

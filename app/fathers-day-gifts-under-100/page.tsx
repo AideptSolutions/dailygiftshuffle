@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Father's Day Gifts Under $100 (2027): Best Picks for Dad | TheGiftShuffle",
@@ -117,6 +118,7 @@ export default function FathersDayGiftsUnder100Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             The Best Father&apos;s Day Gifts Under $100
           </h1>
+          <GuideByline path="/fathers-day-gifts-under-100" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/fathers-day-gifts-under-100.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Under $100 is where Father&apos;s Day gifting gets genuinely interesting. You&apos;re now in the range
             of a quality smartwatch, a percussion massage gun he&apos;ll use daily, a cast iron skillet he&apos;ll

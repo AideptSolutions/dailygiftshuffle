@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Father's Day Gifts Under $25 (2027): Best Affordable Picks | TheGiftShuffle",
@@ -117,6 +118,7 @@ export default function FathersDayGiftsUnder25Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             The Best Father&apos;s Day Gifts Under $25
           </h1>
+          <GuideByline path="/fathers-day-gifts-under-25" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/fathers-day-gifts-under-25.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             You don&apos;t need a big budget to get Dad something he actually uses. Under $25 covers a genuine
             leather card holder, a pocket multi-tool he&apos;ll carry for years, or an artisan BBQ spice rub set

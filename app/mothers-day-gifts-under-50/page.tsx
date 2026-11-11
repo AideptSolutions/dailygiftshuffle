@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
+import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
   title: "Best Mother's Day Gifts Under $50 (2027) | TheGiftShuffle",
@@ -124,6 +125,7 @@ export default function MothersDayGiftsUnder50Page() {
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ color: '#1A202C' }}>
             The Best Mother&apos;s Day Gifts Under $50 in 2027
           </h1>
+          <GuideByline path="/mothers-day-gifts-under-50" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/mothers-day-gifts-under-50.jpg" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Thoughtful doesn&apos;t have to mean expensive. Some of the most meaningful gifts Mom will receive this Mother&apos;s Day cost under $50, because they&apos;re things she needs, loves, and would never splurge on herself. Shower steamers that turn her morning into a spa, eye patches she&apos;ll use twice a week, slipper socks she&apos;ll wear until they fall apart. The gift doesn&apos;t have to be big. It has to be right.
           </p>
