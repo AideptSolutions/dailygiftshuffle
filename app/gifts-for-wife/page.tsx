@@ -30,7 +30,7 @@ const shuffle = shufflePool(match, ALL, { excludeTags: DEPRIORITIZE, keepMatch: 
 export const metadata: Metadata = {
   title: `Gifts for Your Wife 2026: ${grid.length} Ideas She Will Actually Love | TheGiftShuffle`,
   description:
-    'Gift ideas for your wife she will actually love: romantic, thoughtful and luxe picks for her birthday, your anniversary, or just because. The best gifts for your wife in 2026 at every budget.',
+    'Gift ideas for your wife she will actually love: romantic, thoughtful and luxe picks for her birthday, your anniversary, or just because.',
   keywords: [
     'gifts for wife',
     'gift ideas for my wife',

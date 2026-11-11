@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-beauty-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Beauty Gifts for 2026: 30 Skincare & Makeup Picks She Will Love | TheGiftShuffle',
+  title: 'Best Beauty Gifts for 2026: 30 Skincare & Makeup Picks She Will Love',
   description:
-    'The best beauty gifts for 2026: 30 top-rated skincare, makeup and self-care picks, from affordable favorites to luxe sets. Hand-picked gift ideas for her at every budget.',
+    'The best beauty gifts for 2026: 30 top-rated skincare, makeup and self-care picks, from affordable favorites to luxe sets.',
   keywords: [
     'best beauty gifts 2026',
     'best skincare gifts 2026',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'best mothers day gift sets',
   ],
   openGraph: {
-    title: 'Best Beauty Gifts for 2026: 30 Skincare & Makeup Picks She Will Love | TheGiftShuffle',
+    title: 'Best Beauty Gifts for 2026: 30 Skincare & Makeup Picks She Will Love',
     description: '30 top-rated beauty, skincare and self-care gifts for 2026. Hand-picked for her at every budget.',
     type: 'website',
     url: URL,

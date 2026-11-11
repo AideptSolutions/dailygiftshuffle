@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/40th-birthday-gifts';
 
 export const metadata: Metadata = {
-  title: '40th Birthday Gifts: 30 Milestone Ideas Worth the Occasion (2026) | TheGiftShuffle',
+  title: '40th Birthday Gifts: 30 Milestone Ideas Worth the Occasion (2026)',
   description:
     'The best 40th birthday gifts for 2026: elevated, milestone-worthy ideas for men and women turning 40, from premium upgrades to memorable keepsakes at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'turning 40 gift ideas',
   ],
   openGraph: {
-    title: '40th Birthday Gifts: 30 Milestone Ideas Worth the Occasion (2026) | TheGiftShuffle',
+    title: '40th Birthday Gifts: 30 Milestone Ideas Worth the Occasion (2026)',
     description: 'Elevated, milestone-worthy 40th birthday gift ideas for men and women at every budget.',
     type: 'website',
     url: URL,

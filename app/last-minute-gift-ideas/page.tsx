@@ -13,7 +13,7 @@ import GuideByline from '@/components/GuideByline';
 // a local shop) and sends shoppers to the seller's own delivery estimate.
 
 export const metadata: Metadata = {
-  title: "10 Last-Minute Gift Ideas for When You're Out of Time | TheGiftShuffle",
+  title: "10 Last-Minute Gift Ideas for When You're Out of Time",
   description:
     "Out of time? Ten last-minute gift ideas that skip the shipping wait: gifts sent by email, local shops and in-store pickup, with prices and who each one suits.",
   keywords: [
@@ -24,7 +24,8 @@ export const metadata: Metadata = {
     'local gift ideas',
   ],
   openGraph: {
-    title: "10 Last-Minute Gift Ideas for When You're Out of Time | TheGiftShuffle",
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/last-minute-gift-ideas.jpg', width: 1200, height: 800 }],
+    title: "10 Last-Minute Gift Ideas for When You're Out of Time",
     description:
       'You forgot. It happens. Ten gift ideas that skip the warehouse: sent by email, picked up in person, or handled by a shop near them.',
     type: 'website',

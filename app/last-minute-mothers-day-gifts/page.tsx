@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks | TheGiftShuffle",
+  title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks",
   description:
     "Last-minute Mother's Day gift ideas for 2027: top-rated spa sets, skincare, jewelry, and more, sorted by rating so you can decide fast.",
   keywords: [
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     "last minute mothers day 2027",
   ],
   openGraph: {
-    title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks | TheGiftShuffle",
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/last-minute-mothers-day-gifts.jpg', width: 1200, height: 800 }],
+    title: "Last-Minute Mother's Day Gifts 2027: Top-Rated Picks",
     description:
       "Top-rated last-minute Mother's Day gifts: spa sets, skincare, jewelry, and more.",
     type: 'website',

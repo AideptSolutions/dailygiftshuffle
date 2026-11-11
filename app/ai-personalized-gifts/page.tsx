@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone | TheGiftShuffle',
+  title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone',
   description:
     'The new wave of gifting uses AI to make it personal. Browse the best AI-powered and personalized gift ideas, from smart photo frames to custom portraits to DNA kits, for any budget.',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'unique personalized gifts',
   ],
   openGraph: {
-    title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone | TheGiftShuffle',
+    title: 'AI-Powered Personalized Gifts: Smart Picks for Everyone',
     description:
       'Browse the best AI-powered and personalized gift ideas, from smart photo frames to custom portraits to DNA kits, for any budget.',
     type: 'website',

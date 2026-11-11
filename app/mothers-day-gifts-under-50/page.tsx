@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "budget mothers day gifts 2027",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/mothers-day-gifts-under-50.jpg', width: 1200, height: 800 }],
     title: "Best Mother's Day Gifts Under $50 (2027) | TheGiftShuffle",
     description:
       "Browse the best Mother's Day gifts under $50: spa sets, skincare, cozy socks, shower steamers, and more.",

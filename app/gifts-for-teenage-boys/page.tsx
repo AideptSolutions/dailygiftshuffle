@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gifts-for-teenage-boys';
 
 export const metadata: Metadata = {
-  title: 'Gifts for Teenage Boys 2026: 35 Picks They Actually Want | TheGiftShuffle',
+  title: 'Gifts for Teenage Boys 2026: 35 Picks They Actually Want',
   description:
     'The best gifts for teenage boys in 2026: gaming gear, tech, room upgrades and fun surprises that get used daily instead of shelved, at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gaming gifts for teens',
   ],
   openGraph: {
-    title: 'Gifts for Teenage Boys 2026: 35 Picks They Actually Want | TheGiftShuffle',
+    title: 'Gifts for Teenage Boys 2026: 35 Picks They Actually Want',
     description: 'Gaming gear, tech, room upgrades and fun surprises teen boys actually use.',
     type: 'website',
     url: URL,
@@ -101,6 +101,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/gifts-for-college-students', label: 'Gifts for New College Students' },
         { href: '/gift-ideas-for-teens', label: 'Gift Ideas for Teens' },
         { href: '/gifts-for-teenage-girls', label: 'Gifts for Teenage Girls' },
         { href: '/gift-ideas-for-brother', label: 'Gift Ideas for Brother' },

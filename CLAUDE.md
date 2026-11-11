@@ -38,3 +38,10 @@ All products live in code: `data/products.ts` and `data/products-catalog.ts`, me
 ## Client error log
 
 `app/error.tsx` and `app/global-error.tsx` are the error boundaries: a script error shows a branded panel and keeps the page's head tags, instead of the framework's generic error screen. `components/ErrorReporter.tsx` (mounted once in `app/layout.tsx`) and both boundaries report through `lib/clientErrors.ts` to GA4 (`exception` event) and to `/api/client-error`, which keeps the newest 200 errors for 60 days in the Redis list `errors:client` with path and user agent. Read it signed in as admin at `/api/client-error` (JSON). Do not remove the boundaries or the reporter: they exist because Google stored blank versions of several guide pages in 2026 (see `SEO-RECOVERY-2026-08.md`, audit of 2026-11-10).
+
+## Adding a gift guide page
+
+1. Add the route to `app/sitemap.ts` and to a group in `lib/guideIndex.ts` (the "Every Gift Guide" directory on `/category`, which is what keeps a guide from being an orphan).
+2. Template pages get the author byline and Article markup automatically. On a custom page, put `<GuideByline path="/your-route" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/your-route.jpg" />` right after the H1.
+3. After the page is committed, run `node scripts/page-dates.mjs HEAD /your-route` to record its dates in `lib/pageDates.json` (sitemap lastmod, the visible "Updated" line and the markup all read it). Refresh a route only after a real content review, never every page at once.
+4. Keep the full `<title>` at 60 characters or fewer; drop the " | TheGiftShuffle" suffix if it does not fit.

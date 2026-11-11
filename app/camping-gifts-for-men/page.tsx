@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/camping-gifts-for-men';
 
 export const metadata: Metadata = {
-  title: 'Camping Gifts for Men: Top Outdoor Picks He Will Actually Use | TheGiftShuffle',
+  title: 'Camping Gifts for Men: Top Outdoor Picks He Will Actually Use',
   description:
     'The best camping gifts for men in 2026: top-rated, genuinely useful outdoor picks for the guy who loves to camp, hike and get outside, from trail essentials to campsite upgrades.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for outdoorsy men',
   ],
   openGraph: {
-    title: 'Camping Gifts for Men: Top Outdoor Picks He Will Actually Use | TheGiftShuffle',
+    title: 'Camping Gifts for Men: Top Outdoor Picks He Will Actually Use',
     description: 'Top-rated camping gifts for men in 2026, from trail essentials to campsite upgrades.',
     type: 'website',
     url: URL,

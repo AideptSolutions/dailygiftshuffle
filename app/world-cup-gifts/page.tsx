@@ -8,7 +8,7 @@ const products = byTheme('worldcup');
 export const metadata: Metadata = {
   title: 'World Cup 2026 Gifts: Soccer Fan Gift Ideas | TheGiftShuffle',
   description:
-    'The best World Cup 2026 gifts for soccer fans: USA & Argentina jerseys, fan scarves, official soccer balls, foosball, a Messi Funko, and watch-party gear. Every budget.',
+    'The best World Cup 2026 gifts for soccer fans: USA & Argentina jerseys, fan scarves, official soccer balls, foosball, a Messi Funko, and watch-party gear.',
   keywords: [
     'world cup gifts',
     'world cup 2026 gifts',

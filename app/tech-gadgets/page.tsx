@@ -9,7 +9,7 @@ import { products } from '@/data/products';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Best Tech Gifts & Gadgets 2026: Top Picks for Every Budget | TheGiftShuffle',
+  title: 'Best Tech Gifts & Gadgets 2026: Top Picks for Every Budget',
   description:
     'The best tech gifts of 2026: wireless earbuds with 40+ hour battery, 4K webcams for remote work, and portable power stations. Curated picks with real specs.',
   keywords: [

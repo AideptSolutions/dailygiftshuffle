@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "high school graduation gifts under 50",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/graduation-gifts-under-50.jpg', width: 1200, height: 800 }],
     title: "Graduation Gifts Under $50 (Class of 2026) | TheGiftShuffle",
     description:
       "Top graduation gifts under $50: Bluetooth speakers, earbuds, tumblers, journals, and practical picks for every grad.",

@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts: Best Picks for Dad in 2027 | TheGiftShuffle",
+  title: "Father's Day Gifts: Best Picks for Dad in 2027",
   description:
     "Find the best Father's Day gifts for 2027: tools, tech gadgets, grilling accessories, fitness gear, and picks for every kind of dad. Gifts he'll actually use.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "fathers day gifts for dad",
   ],
   openGraph: {
-    title: "Father's Day Gifts: Best Picks for Dad in 2027 | TheGiftShuffle",
+    title: "Father's Day Gifts: Best Picks for Dad in 2027",
     description:
       "Browse the best Father's Day gift ideas for 2027: tools, tech, grilling gear, and picks dad will actually use.",
     type: 'website',

@@ -71,6 +71,11 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/category" className="text-white font-medium hover:underline">
+                  All Guides and Categories
+                </Link>
+              </li>
             </ul>
           </div>
 

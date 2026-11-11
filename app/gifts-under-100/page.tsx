@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Gifts Under $100: Premium Picks Without the Premium Price | TheGiftShuffle',
+  title: 'Gifts Under $100: Premium Picks Without the Premium Price',
   description:
     'Browse the best gifts under $100: smart home tech, fitness gear, premium grooming kits, and kitchen upgrades that feel expensive without breaking the bank.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'what to get someone under $100',
   ],
   openGraph: {
-    title: 'Gifts Under $100: Premium Picks Without the Premium Price | TheGiftShuffle',
+    title: 'Gifts Under $100: Premium Picks Without the Premium Price',
     description:
       'Discover premium-feeling gifts under $100, the sweet spot for thoughtful, high-impact gifting without the splurge.',
     type: 'website',

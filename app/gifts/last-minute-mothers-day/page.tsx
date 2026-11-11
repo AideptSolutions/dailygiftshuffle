@@ -9,9 +9,9 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Last-Minute Mother's Day Gifts 2027 That Feel Thoughtful | TheGiftShuffle",
+  title: "Last-Minute Mother's Day Gifts 2027 That Feel Thoughtful",
   description:
-    "Running out of time? Top-rated last-minute Mother's Day gifts: spa sets, skincare, jewelry, plus digital gifts sent by email. Check the delivery estimate at checkout.",
+    "Running out of time? Top-rated last-minute Mother's Day gifts: spa sets, skincare, jewelry, plus digital gifts sent by email.",
   keywords: [
     "last minute mothers day gifts",
     "last minute mothers day gift ideas 2027",
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     "digital mothers day gifts",
   ],
   openGraph: {
-    title: "Last-Minute Mother's Day Gifts 2027 That Feel Thoughtful | TheGiftShuffle",
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/last-minute-mothers-day-gifts.jpg', width: 1200, height: 800 }],
+    title: "Last-Minute Mother's Day Gifts 2027 That Feel Thoughtful",
     description:
       "Top-rated last-minute Mother's Day gifts, plus digital options sent by email.",
     type: 'website',

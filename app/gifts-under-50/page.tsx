@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Gifts Under $50: 30 Great Ideas for Any Occasion | TheGiftShuffle',
+  title: 'Gifts Under $50: 30 Great Ideas for Any Occasion',
   description:
     "You don't need to spend a lot to give a great gift. Browse 30+ curated gift ideas under $50: thoughtful picks for birthdays, holidays, and just because.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'good gifts under 50',
   ],
   openGraph: {
-    title: 'Gifts Under $50: 30 Great Ideas for Any Occasion | TheGiftShuffle',
+    title: 'Gifts Under $50: 30 Great Ideas for Any Occasion',
     description:
       "Browse 30+ curated gift ideas under $50: thoughtful picks that prove you don't need a big budget.",
     type: 'website',

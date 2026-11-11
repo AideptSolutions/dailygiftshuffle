@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Her: Gifts She'll Actually Love | TheGiftShuffle",
+  title: "Gift Ideas for Her: Gifts She'll Actually Love",
   description:
     "Browse 25+ thoughtful gift ideas for her: wife, girlfriend, sister, or best friend. From self-care to personal style, these picks make an impression.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'thoughtful gifts for women',
   ],
   openGraph: {
-    title: "Gift Ideas for Her: Gifts She'll Actually Love | TheGiftShuffle",
+    title: "Gift Ideas for Her: Gifts She'll Actually Love",
     description:
       "Browse 25+ thoughtful gift ideas for her: wife, girlfriend, sister, or best friend.",
     type: 'website',

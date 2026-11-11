@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $25 (2027): Best Affordable Picks | TheGiftShuffle",
+  title: "Father's Day Gifts Under $25 (2027): Best Affordable Picks",
   description:
     "The best Father's Day gifts under $25 in 2027. Pocket multi-tools, leather card holders, BBQ rub sets, and more, thoughtful picks for Dad at every budget.",
   keywords: [
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "best fathers day gifts under 25 dollars",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/fathers-day-gifts-under-25.jpg', width: 1200, height: 800 }],
     title: "Father's Day Gifts Under $25 (2027) | TheGiftShuffle",
     description:
       "Great Father's Day gifts for under $25, including pocket multi-tools, leather wallets, BBQ rubs, and more.",

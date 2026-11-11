@@ -5,7 +5,7 @@ import { curate, shufflePool } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-fitness-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Fitness Gifts for 2026: 30 Top Picks for People Who Work Out | TheGiftShuffle',
+  title: 'Best Fitness Gifts for 2026: 30 Top Picks for People Who Work Out',
   description:
     'The best fitness gifts for 2026 for gym-goers, runners and home-workout fans. 30 top-rated picks from recovery tools to activewear and smart trackers, every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'best gifts for athletes',
   ],
   openGraph: {
-    title: 'Best Fitness Gifts for 2026: 30 Top Picks for People Who Work Out | TheGiftShuffle',
+    title: 'Best Fitness Gifts for 2026: 30 Top Picks for People Who Work Out',
     description: '30 top-rated fitness gifts for 2026 for gym-goers, runners and home-workout fans. Every budget covered.',
     type: 'website',
     url: URL,

@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas for Friends: Fun & Thoughtful Picks They\'ll Love | TheGiftShuffle',
+  title: 'Gift Ideas for Friends: Fun & Thoughtful Picks They\'ll Love',
   description:
     'Find the best gift ideas for friends in 2026: fun card games, self-care sets, cocktail kits, and viral TikTok picks. Thoughtful gifts for every best friend and budget.',
   keywords: [

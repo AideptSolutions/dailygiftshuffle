@@ -96,6 +96,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides for Her"
       relatedLinks={[
+        { href: '/gifts-for-a-crush', label: 'Gifts for a Crush' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/romantic-gifts-for-her', label: 'Romantic Gifts for Her' },
         { href: '/best-anniversary-gifts-2026', label: 'Best Anniversary Gifts 2026' },

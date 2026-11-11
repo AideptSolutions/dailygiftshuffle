@@ -5,7 +5,7 @@ import { curate, shufflePool, variantKey, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/last-minute-christmas-gifts';
 
 export const metadata: Metadata = {
-  title: 'Last-Minute Christmas Gifts 2026: Digital Gift Cards and Easy Wins | TheGiftShuffle',
+  title: 'Last-Minute Christmas Gifts 2026: Digital Gift Cards and Easy Wins',
   description:
     'Last-minute Christmas gifts that still feel thoughtful: digital gift cards delivered by email instead of shipped, plus top-rated crowd-pleasers that are easy to find and hard to get wrong.',
   keywords: [

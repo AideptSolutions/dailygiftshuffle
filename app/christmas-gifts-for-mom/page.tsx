@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/christmas-gifts-for-mom';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gifts for Mom 2026: Cozy, Thoughtful Ideas She Will Use | TheGiftShuffle',
+  title: 'Christmas Gifts for Mom 2026: Cozy, Thoughtful Ideas She Will Use',
   description:
     'The best Christmas gifts for mom in 2026: cozy robes and slippers, candles, self-care sets and this season\'s trending picks, all top-rated, at every budget.',
   keywords: [

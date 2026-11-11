@@ -10,9 +10,9 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Teens: Trending Gifts They'll Actually Want | TheGiftShuffle",
+  title: "Gift Ideas for Teens: Trending Gifts They'll Actually Want",
   description:
-    'Discover the best gift ideas for teens in 2026, from wireless earbuds and LED gaming lights to skincare gift sets and streetwear. Find trending teen gifts they actually want.',
+    'Discover the best gift ideas for teens in 2026, from wireless earbuds and LED gaming lights to skincare gift sets and streetwear.',
   keywords: [
     'gift ideas for teens',
     'gifts for teenagers',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'cool gifts for teens',
   ],
   openGraph: {
-    title: "Gift Ideas for Teens: Trending Gifts They'll Actually Want | TheGiftShuffle",
+    title: "Gift Ideas for Teens: Trending Gifts They'll Actually Want",
     description:
       'Browse hand-picked gift ideas for teens: trending tech, gaming gear, skincare, and more.',
     type: 'website',

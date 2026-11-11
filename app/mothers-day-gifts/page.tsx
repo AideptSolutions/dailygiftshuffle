@@ -13,7 +13,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: "Mother's Day Gifts: The Best Picks for 2027 | TheGiftShuffle",
   description:
-    "Find the best Mother's Day gifts for 2027: personalized jewelry, spa sets, premium kitchen gadgets, and thoughtful picks for every budget. Don't wait until the last minute.",
+    "Find the best Mother's Day gifts for 2027: personalized jewelry, spa sets, premium kitchen gadgets, and thoughtful picks for every budget.",
   keywords: [
     "mothers day gifts",
     "mothers day gift ideas",

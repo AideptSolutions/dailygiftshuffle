@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/retro-gaming-gifts';
 
 export const metadata: Metadata = {
-  title: 'Retro Gaming Gifts: Nostalgic Picks Gamers Love in 2026 | TheGiftShuffle',
+  title: 'Retro Gaming Gifts: Nostalgic Picks Gamers Love in 2026',
   description:
     'The best retro gaming gifts for 2026: nostalgic arcade machines, 8-bit decor, classic console accessories and pixel-art picks for the gamer who grew up on the classics.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'retro video game gifts',
   ],
   openGraph: {
-    title: 'Retro Gaming Gifts: Nostalgic Picks Gamers Love in 2026 | TheGiftShuffle',
+    title: 'Retro Gaming Gifts: Nostalgic Picks Gamers Love in 2026',
     description: 'Nostalgic retro gaming gifts for 2026: arcade machines, 8-bit decor and classic console picks.',
     type: 'website',
     url: URL,

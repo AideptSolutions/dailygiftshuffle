@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use | TheGiftShuffle",
+  title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use",
   description:
     "The best gift ideas for dad and useful gifts he'll actually use: tech gadgets, grilling gear, tools, and experiences. Hand-picked presents for dad for birthdays, Father's Day, and just because.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'gifts dad will actually use',
   ],
   openGraph: {
-    title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use | TheGiftShuffle",
+    title: "Gift Ideas for Dad: 25 Unique Picks He'll Actually Use",
     description:
       "Browse 25+ hand-picked gift ideas for Dad: gadgets, grilling gear, and experiences he'll actually use.",
     type: 'website',

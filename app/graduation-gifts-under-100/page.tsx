@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "college graduation gifts under 100",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/graduation-gifts-under-100.jpg', width: 1200, height: 800 }],
     title: "Graduation Gifts Under $100 (Class of 2026) | TheGiftShuffle",
     description:
       "Top graduation gifts under $100: Kindle, smartwatch, massage gun, silk pajamas, and more for every grad.",

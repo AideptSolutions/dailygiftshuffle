@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/50th-birthday-gifts';
 
 export const metadata: Metadata = {
-  title: '50th Birthday Gifts: 30 Golden-Milestone Ideas (2026) | TheGiftShuffle',
+  title: '50th Birthday Gifts: 30 Golden-Milestone Ideas (2026)',
   description:
     'The best 50th birthday gifts for 2026: meaningful, elevated ideas for men and women turning 50, from keepsakes and premium upgrades to experiences worth remembering.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'turning 50 gift ideas',
   ],
   openGraph: {
-    title: '50th Birthday Gifts: 30 Golden-Milestone Ideas (2026) | TheGiftShuffle',
+    title: '50th Birthday Gifts: 30 Golden-Milestone Ideas (2026)',
     description: 'Meaningful, elevated 50th birthday gift ideas for men and women at every budget.',
     type: 'website',
     url: URL,

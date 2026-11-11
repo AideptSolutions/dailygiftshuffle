@@ -12,11 +12,11 @@ import CategoryIcon from '@/components/CategoryIcon';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads | TheGiftShuffle',
+  title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads',
   description:
     'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings, every budget covered.',
   openGraph: {
-    title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads | TheGiftShuffle',
+    title: 'Best Graduation Gifts 2026: Thoughtful Picks for Grads',
     description:
       'Find the best graduation gifts for 2026. From high school to college grads, shop practical picks for dorms, first apartments, and new beginnings, every budget covered.',
     url: 'https://www.thegiftshuffle.com/graduation-gifts',

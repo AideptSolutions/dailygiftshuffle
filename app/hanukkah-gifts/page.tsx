@@ -5,7 +5,7 @@ import { curate, shufflePool, variantKey, ALL_INCL_SEASONAL as POOL } from '@/li
 const URL = 'https://www.thegiftshuffle.com/hanukkah-gifts';
 
 export const metadata: Metadata = {
-  title: 'Hanukkah Gifts 2026: Ideas for All Eight Nights | TheGiftShuffle',
+  title: 'Hanukkah Gifts 2026: Ideas for All Eight Nights',
   description:
     'Hanukkah gift ideas for 2026: menorahs, dreidel sets and gelt, plus top-rated gifts for kids, teens and adults to cover all eight nights, at every budget.',
   keywords: [

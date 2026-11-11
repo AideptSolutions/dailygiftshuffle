@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/help-me-pick-a-gift';
 
 export const metadata: Metadata = {
-  title: 'Help Me Pick a Gift: 30 Foolproof Ideas That Cannot Go Wrong | TheGiftShuffle',
+  title: 'Help Me Pick a Gift: 30 Foolproof Ideas That Cannot Go Wrong',
   description:
     "Bad at picking gifts? Stop guessing. Get an instant pick from our gift tool, or choose from 30 foolproof, top-rated gifts that are genuinely hard to get wrong, for anyone on your list.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'gift for someone i barely know',
   ],
   openGraph: {
-    title: 'Help Me Pick a Gift: 30 Foolproof Ideas That Cannot Go Wrong | TheGiftShuffle',
+    title: 'Help Me Pick a Gift: 30 Foolproof Ideas That Cannot Go Wrong',
     description: "Bad at picking gifts? Get an instant pick from our tool, or browse 30 foolproof, top-rated gifts that are hard to get wrong.",
     type: 'website',
     url: URL,

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL, type AnyProduct } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-baby-shower-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Baby Shower Gifts for 2026: 48 Top-Rated Picks New Parents Love | TheGiftShuffle',
+  title: 'Best Baby Shower Gifts for 2026: 48 Top-Rated Picks New Parents Love',
   description:
     'The best baby shower gifts for 2026, hand-picked for new and expecting parents. 48 top-rated, registry-worthy baby gift ideas at every budget, from under $15 to splurge-worthy.',
   keywords: [

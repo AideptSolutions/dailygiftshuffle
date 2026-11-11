@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gift-ideas-for-brother';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas for Your Brother: 40 Picks He Will Actually Use (2026) | TheGiftShuffle',
+  title: 'Gift Ideas for Your Brother: 40 Picks He Will Actually Use (2026)',
   description:
     'The best gift ideas for your brother in 2026: top-rated picks for big brothers, little brothers and brothers-in-law, from tech and gaming to practical upgrades at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for brother in law',
   ],
   openGraph: {
-    title: 'Gift Ideas for Your Brother: 40 Picks He Will Actually Use (2026) | TheGiftShuffle',
+    title: 'Gift Ideas for Your Brother: 40 Picks He Will Actually Use (2026)',
     description: 'Top-rated gift ideas for big brothers, little brothers and brothers-in-law at every budget.',
     type: 'website',
     url: URL,

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/christmas-gifts-for-dad';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gifts for Dad 2026: Gifts He Will Actually Use | TheGiftShuffle',
+  title: 'Christmas Gifts for Dad 2026: Gifts He Will Actually Use',
   description:
     'The best Christmas gifts for dad in 2026: winter gear, grilling and coffee upgrades, cozy flannel and this season\'s trending gadgets, all top-rated, at every budget.',
   keywords: [

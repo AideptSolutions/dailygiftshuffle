@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/housewarming-gifts';
 
 export const metadata: Metadata = {
-  title: 'Best Housewarming Gifts 2026: 30 Ideas for a New Home | TheGiftShuffle',
+  title: 'Best Housewarming Gifts 2026: 30 Ideas for a New Home',
   description:
     'The best housewarming gifts for 2026: top-rated ideas for couples, friends, family and first-time homeowners, from cozy home upgrades to kitchen essentials they will use daily.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'unique housewarming gifts',
   ],
   openGraph: {
-    title: 'Best Housewarming Gifts 2026: 30 Ideas for a New Home | TheGiftShuffle',
+    title: 'Best Housewarming Gifts 2026: 30 Ideas for a New Home',
     description: 'Top-rated housewarming gift ideas for couples, friends and first-time homeowners.',
     type: 'website',
     url: URL,
@@ -91,6 +91,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/sustainable-eco-gifts', label: 'Sustainable Eco-Friendly Gifts' },
         { href: '/category/home', label: 'Home & Decor Gifts' },
         { href: '/category/kitchen', label: 'Kitchen Gifts' },
         { href: '/gifts-under-50', label: 'Gifts Under $50' },

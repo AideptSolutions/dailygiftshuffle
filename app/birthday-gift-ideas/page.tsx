@@ -10,7 +10,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
+  title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget',
   description:
     'Birthday gift ideas for every person and budget: what to get someone for their birthday, sorted by recipient, with top-rated ranked picks for her, him, teens, friends and parents, plus an instant gift-picker tool.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'last minute birthday gifts',
   ],
   openGraph: {
-    title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
+    title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget',
     description:
       'The best birthday gift ideas for 2026, sorted by recipient and budget, plus an instant gift-picker tool.',
     type: 'website',

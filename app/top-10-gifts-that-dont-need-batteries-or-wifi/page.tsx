@@ -8,7 +8,7 @@ import { products } from '@/data/products';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Top 10 Gifts That Don't Need Batteries or Wi-Fi | TheGiftShuffle",
+  title: "Top 10 Gifts That Don't Need Batteries or Wi-Fi",
   description:
     "The best analog, unplugged gifts that never need charging, an app, or a software update. Real picks for kids, adults, and screen-fatigued recipients with price bands.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts without technology',
   ],
   openGraph: {
-    title: "Top 10 Gifts That Don't Need Batteries or Wi-Fi | TheGiftShuffle",
+    title: "Top 10 Gifts That Don't Need Batteries or Wi-Fi",
     description:
       "No power button, no app, no firmware update. Ten gifts that work the moment they come out of the box and keep working for years.",
     type: 'website',

@@ -6,9 +6,10 @@ import Navbar from '@/components/Navbar';
 export const metadata: Metadata = {
   title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
   description:
-    'TheGiftShuffle is led by AJ Crane, founder of AiDept Solutions. Learn how we choose gifts using Amazon ratings, review counts and real recipient fit. No pay-to-play.',
+    'TheGiftShuffle is led by AJ Crane, founder of AiDept Solutions. Learn how we choose gifts using Amazon ratings, review counts and real recipient fit.',
   alternates: { canonical: 'https://www.thegiftshuffle.com/about' },
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/og-image.png', width: 1200, height: 630 }],
     title: 'About TheGiftShuffle: Our Editorial Policy & Mission',
     description:
       'TheGiftShuffle is led by AJ Crane, founder of AiDept Solutions. Learn how we choose gifts and what our editorial standards are.',

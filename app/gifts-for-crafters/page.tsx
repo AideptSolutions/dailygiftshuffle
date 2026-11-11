@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gifts-for-crafters';
 
 export const metadata: Metadata = {
-  title: 'Gifts for Crafters & Creative People: 30+ Top-Rated Craft & Art Gifts | TheGiftShuffle',
+  title: 'Gifts for Crafters & Creative People: 30+ Top-Rated Craft & Art Gifts',
   description:
-    'The best gifts for crafters, artists and creative people: pottery wheels, art supplies, crochet and knitting kits, resin, candle-making and more. Top-rated craft gift ideas for every maker.',
+    'The best gifts for crafters, artists and creative people: pottery wheels, art supplies, crochet and knitting kits, resin, candle-making and more.',
   keywords: [
     'gifts for crafters',
     'gifts for creative people',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'creative gift ideas',
   ],
   openGraph: {
-    title: 'Gifts for Crafters & Creative People: 30+ Top-Rated Craft & Art Gifts | TheGiftShuffle',
+    title: 'Gifts for Crafters & Creative People: 30+ Top-Rated Craft & Art Gifts',
     description: 'Pottery wheels, art supplies, crochet and knitting kits, resin, candle-making and more. Top-rated craft gift ideas for every maker.',
     type: 'website',
     url: URL,

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/gift-ideas-for-mom';
 
 export const metadata: Metadata = {
-  title: 'Gift Ideas for Mom: 45 Picks She Will Actually Love (2026) | TheGiftShuffle',
+  title: 'Gift Ideas for Mom: 45 Picks She Will Actually Love (2026)',
   description:
     'The best gift ideas for mom in 2026: top-rated picks for her birthday, Christmas, or just because. Cozy comforts, spa and self-care, kitchen upgrades and keepsakes at every budget.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'gifts for mom 2026',
   ],
   openGraph: {
-    title: 'Gift Ideas for Mom: 45 Picks She Will Actually Love (2026) | TheGiftShuffle',
+    title: 'Gift Ideas for Mom: 45 Picks She Will Actually Love (2026)',
     description: 'Top-rated gift ideas for mom for any occasion: cozy comforts, spa and self-care, kitchen upgrades and keepsakes.',
     type: 'website',
     url: URL,

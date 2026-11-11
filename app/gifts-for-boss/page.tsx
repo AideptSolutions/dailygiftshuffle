@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'boss appreciation gifts',
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/gifts-for-boss.jpg', width: 1200, height: 800 }],
     title: 'Gifts for Boss: Best Boss Gift Ideas 2026 | TheGiftShuffle',
     description:
       'The best boss gifts for 2026: premium desk accessories, insulated mugs, luxury sets, and professional picks.',

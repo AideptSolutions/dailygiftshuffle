@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL_INCL_SEASONAL as ALL } from '@/lib/giftSelect'
 const URL = 'https://www.thegiftshuffle.com/halloween-party-gifts';
 
 export const metadata: Metadata = {
-  title: 'Halloween Party Essentials 2026: 20 Host-Tested Picks | TheGiftShuffle',
+  title: 'Halloween Party Essentials 2026: 20 Host-Tested Picks',
   description:
-    'Everything you need to throw a memorable Halloween party in 2026: floating candles, cauldron serveware, party games, glow gear and host gifts. 20 top-rated picks at every budget.',
+    'Everything you need to throw a memorable Halloween party in 2026: floating candles, cauldron serveware, party games, glow gear and host gifts.',
   keywords: [
     'halloween party essentials',
     'halloween party supplies',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'halloween party decor',
   ],
   openGraph: {
-    title: 'Halloween Party Essentials 2026: 20 Host-Tested Picks | TheGiftShuffle',
+    title: 'Halloween Party Essentials 2026: 20 Host-Tested Picks',
     description:
       'Floating candles, cauldron serveware, party games and glow gear: 20 top-rated Halloween party picks for 2026.',
     type: 'website',

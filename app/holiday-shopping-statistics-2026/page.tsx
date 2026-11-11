@@ -7,7 +7,7 @@ import { PickStrip } from '@/components/AmazonPicks';
 const URL = 'https://www.thegiftshuffle.com/holiday-shopping-statistics-2026';
 
 export const metadata: Metadata = {
-  title: 'Holiday Shopping Statistics 2026: Spending, Timing, Gifts and AI | TheGiftShuffle',
+  title: 'Holiday Shopping Statistics 2026: Spending, Timing, Gifts and AI',
   description:
     'Key 2026 holiday shopping statistics from NRF, Deloitte, Adobe and Basis, plus what top-rated gifts actually cost. $1,654 average household spend, $275.1 billion online, 64% shopping Thanksgiving weekend.',
   keywords: [

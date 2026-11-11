@@ -5,7 +5,7 @@ import { curate, shufflePool } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/30th-birthday-gifts';
 
 export const metadata: Metadata = {
-  title: '30th Birthday Gifts: 30 Ideas to Mark the Milestone (2026) | TheGiftShuffle',
+  title: '30th Birthday Gifts: 30 Ideas to Mark the Milestone (2026)',
   description:
     'The best 30th birthday gifts for 2026: 30 top-rated, milestone-worthy ideas for him and her, from upgraded everyday luxuries to experiences worth remembering.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'thirtieth birthday gifts',
   ],
   openGraph: {
-    title: '30th Birthday Gifts: 30 Ideas to Mark the Milestone (2026) | TheGiftShuffle',
+    title: '30th Birthday Gifts: 30 Ideas to Mark the Milestone (2026)',
     description: '30 top-rated, milestone-worthy 30th birthday gift ideas for him and her. Every budget covered.',
     type: 'website',
     url: URL,

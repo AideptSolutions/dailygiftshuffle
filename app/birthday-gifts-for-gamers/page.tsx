@@ -11,7 +11,7 @@ import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026 | TheGiftShuffle',
+  title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026',
   description:
     'The best birthday gifts for gamers in 2026: top-rated headsets, mechanical keyboards, controllers, RGB gear and stream-deck upgrades for the gamer in your life, every budget covered.',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     '30th birthday gifts for gamers',
   ],
   openGraph: {
-    title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026 | TheGiftShuffle',
+    title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026',
     description:
       'Top-rated birthday gifts for gamers in 2026: headsets, mechanical keyboards, controllers, RGB gear and more for every budget.',
     type: 'website',

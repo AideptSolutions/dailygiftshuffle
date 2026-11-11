@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/christmas-gifts-for-teens';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gifts for Teens 2026: What They Actually Want | TheGiftShuffle',
+  title: 'Christmas Gifts for Teens 2026: What They Actually Want',
   description:
     'The best Christmas gifts for teens in 2026: the viral bottles, beauty and tech they are asking for, plus Labubu and KPop Demon Hunters picks, all top-rated and checked this season.',
   keywords: [

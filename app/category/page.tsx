@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import GuideDirectory from '@/components/GuideDirectory';
 
 export const metadata: Metadata = {
   title: 'Gift Categories - TheGiftShuffle',
-  description: 'Browse all gift categories. Find gifts by interest, hobby, or lifestyle.',
+  description: 'Browse every gift category and every gift guide on TheGiftShuffle. Find gifts by interest, recipient, occasion or budget.',
   alternates: { canonical: 'https://www.thegiftshuffle.com/category' },
 };
 
@@ -148,6 +149,8 @@ export default function CategoriesPage() {
             </Link>
           ))}
         </div>
+
+        <GuideDirectory />
 
         {/* CTA */}
         <div className="text-center mt-12">

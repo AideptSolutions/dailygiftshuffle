@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'what to buy for someone',
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/og-image.png', width: 1200, height: 630 }],
     title: 'Gift Genie: Free AI Gift Finder',
     description:
       'Pin gifts you like, answer three quick questions, and the Genie conjures 5 AI-matched gifts. Free, no sign-up.',

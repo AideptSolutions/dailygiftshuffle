@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'father day gifts under 50',
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/top-10-gifts-for-new-dads-under-50.jpg', width: 1200, height: 800 }],
     title: "Top 10 Gifts for New Dads Under $50 | TheGiftShuffle",
     description:
       "Ten gifts for new dads that actually get used. No novelty mugs. No matching outfits. Just useful things for a sleep-deprived first year.",

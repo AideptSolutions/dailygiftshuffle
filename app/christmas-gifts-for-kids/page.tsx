@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/christmas-gifts-for-kids';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gifts for Kids 2026: The Toys on Every Wish List | TheGiftShuffle',
+  title: 'Christmas Gifts for Kids 2026: The Toys on Every Wish List',
   description:
     'The best Christmas gifts for kids in 2026: the hot toys of the year, LEGO and advent calendars, building sets and creative kits, all top-rated and checked this season.',
   keywords: [
@@ -106,6 +106,7 @@ export default function Page() {
       ]}
       relatedHeading="More Christmas Gift Guides"
       relatedLinks={[
+        { href: '/top-10-gifts-that-dont-need-batteries-or-wifi', label: 'Gifts That Need No Batteries or Wi-Fi' },
         { href: '/christmas-gifts-for-teens', label: 'Christmas Gifts for Teens' },
         { href: '/trending-christmas-gifts-2026', label: 'Trending Christmas Gifts 2026' },
         { href: '/stocking-stuffers-for-kids', label: 'Stocking Stuffers for Kids' },

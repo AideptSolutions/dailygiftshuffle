@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/best-gaming-gifts-2026';
 
 export const metadata: Metadata = {
-  title: 'Best Gaming Gifts for 2026: 55 Top-Rated Picks for Gamers | TheGiftShuffle',
+  title: 'Best Gaming Gifts for 2026: 55 Top-Rated Picks for Gamers',
   description:
     'The best gaming gifts for gamers, for men, and for adults: top-rated headsets, mechanical keyboards, controllers, stream decks, starter-pack bundles and RGB gear for PC, PlayStation and Xbox, every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for gamers under 50',
   ],
   openGraph: {
-    title: 'Best Gaming Gifts for 2026: 55 Top-Rated Picks for Gamers | TheGiftShuffle',
+    title: 'Best Gaming Gifts for 2026: 55 Top-Rated Picks for Gamers',
     description: 'The best gaming gifts for 2026 for PC, PlayStation and Xbox gamers. Every budget covered.',
     type: 'website',
     url: URL,

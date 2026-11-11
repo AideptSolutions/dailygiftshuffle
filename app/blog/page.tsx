@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     'The TheGiftShuffle blog: gift guides, trending products, and tips for finding the perfect gift for anyone.',
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/og-image.png', width: 1200, height: 630 }],
     title: 'Gift Ideas Blog: Guides, Trends & Tips | TheGiftShuffle',
     description:
       'Gift guides, trending products, and tips for finding the perfect gift for anyone.',

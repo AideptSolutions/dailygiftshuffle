@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "wife mothers day gifts",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/mothers-day-gifts-for-wife.jpg', width: 1200, height: 800 }],
     title: "Best Mother's Day Gifts for Wife 2027 | TheGiftShuffle",
     description:
       "Browse the best Mother's Day gifts for your wife in 2027: spa sets, jewelry, skincare, and more.",

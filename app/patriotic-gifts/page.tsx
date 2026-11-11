@@ -6,7 +6,7 @@ const URL = 'https://www.thegiftshuffle.com/patriotic-gifts';
 const products = byTheme('patriotic');
 
 export const metadata: Metadata = {
-  title: 'Patriotic Gifts: American Flag Gift Ideas for 2026 | TheGiftShuffle',
+  title: 'Patriotic Gifts: American Flag Gift Ideas for 2026',
   description:
     'The best patriotic gifts for 2026: American flag apparel, USA accessories, red-white-and-blue gear, and Americana decor for Independence Day, Memorial Day, Veterans Day, and year-round. Hand-picked, every budget.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'memorial day gifts',
   ],
   openGraph: {
-    title: 'Patriotic Gifts: American Flag Gift Ideas for 2026 | TheGiftShuffle',
+    title: 'Patriotic Gifts: American Flag Gift Ideas for 2026',
     description:
       'American flag apparel, USA accessories, and Americana decor. The best patriotic gifts for 2026, for every patriotic occasion.',
     type: 'website',

@@ -5,7 +5,7 @@ import { curate, shufflePool } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/romantic-gifts-for-her';
 
 export const metadata: Metadata = {
-  title: 'Romantic Gifts for Her: 30 Sweet, Thoughtful Ideas for 2026 | TheGiftShuffle',
+  title: 'Romantic Gifts for Her: 30 Sweet, Thoughtful Ideas for 2026',
   description:
     'Romantic gifts for her, for your girlfriend, or for your wife that feel personal, not predictable. 30 sweet, thoughtful and unique romantic gift ideas from cozy to luxe, every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'gifts for the woman i love',
   ],
   openGraph: {
-    title: 'Romantic Gifts for Her: 30 Sweet, Thoughtful Ideas for 2026 | TheGiftShuffle',
+    title: 'Romantic Gifts for Her: 30 Sweet, Thoughtful Ideas for 2026',
     description: '30 romantic gift ideas for her that feel personal, not predictable. Every budget covered.',
     type: 'website',
     url: URL,
@@ -94,6 +94,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides for Her"
       relatedLinks={[
+        { href: '/gifts-for-a-crush', label: 'Gifts for a Crush' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },
         { href: '/gifts-for-girlfriend', label: 'Gifts for Your Girlfriend' },
         { href: '/best-anniversary-gifts-2026', label: 'Best Anniversary Gifts 2026' },

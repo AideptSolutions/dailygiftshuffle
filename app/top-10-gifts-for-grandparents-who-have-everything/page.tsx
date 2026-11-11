@@ -8,7 +8,7 @@ import { products } from '@/data/products';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Top 10 Gifts for Grandparents Who Already Have Everything | TheGiftShuffle",
+  title: "Top 10 Gifts for Grandparents Who Already Have Everything",
   description:
     "Stuck on a gift for grandparents who already own everything? Ten ideas that skip clutter and land emotionally, with prices and who each one fits.",
   keywords: [
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     'gifts for elderly grandparents',
   ],
   openGraph: {
-    title: "Top 10 Gifts for Grandparents Who Already Have Everything | TheGiftShuffle",
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/top-10-gifts-for-grandparents-who-have-everything.jpg', width: 1200, height: 800 }],
+    title: "Top 10 Gifts for Grandparents Who Already Have Everything",
     description:
       "Ten gift ideas that skip clutter and land emotionally. For the grandparent who has everything except your time, story, or voice.",
     type: 'website',

@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Unique Birthday Gifts: 30 Cool, Creative Ideas They Will Remember | TheGiftShuffle',
+  title: 'Unique Birthday Gifts: 30 Cool, Creative Ideas They Will Remember',
   description:
     'Unique birthday gifts that beat the gift card. 30 cool, creative and memorable birthday gift ideas for adults, friends and family, hand-picked because nobody else will think of them.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'interesting birthday gifts',
   ],
   openGraph: {
-    title: 'Unique Birthday Gifts: 30 Cool, Creative Ideas They Will Remember | TheGiftShuffle',
+    title: 'Unique Birthday Gifts: 30 Cool, Creative Ideas They Will Remember',
     description:
       '30 unique, cool and creative birthday gifts that beat the gift card, hand-picked because nobody else will think of them.',
     type: 'website',

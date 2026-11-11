@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'end of school year teacher gifts',
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/gift-ideas-for-teachers.jpg', width: 1200, height: 800 }],
     title: 'Best Teacher Appreciation Gift Ideas 2026 | TheGiftShuffle',
     description:
       'Browse the best teacher appreciation gift ideas for 2026: coffee, spa sets, stationery, plants, and more.',

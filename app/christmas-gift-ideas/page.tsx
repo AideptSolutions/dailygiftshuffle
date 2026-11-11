@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List | TheGiftShuffle',
+  title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List',
   description:
     "Find the perfect Christmas gift for everyone on your list. Browse 30+ curated holiday gift ideas sorted by recipient and budget, with no more gift stress.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'best christmas gifts 2026',
   ],
   openGraph: {
-    title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List | TheGiftShuffle',
+    title: 'Christmas Gift Ideas 2026: Top Picks for Everyone on Your List',
     description:
       "Browse 30+ curated Christmas gift ideas for everyone on your list, sorted by recipient and budget.",
     type: 'website',

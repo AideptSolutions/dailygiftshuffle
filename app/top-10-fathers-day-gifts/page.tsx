@@ -8,7 +8,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want | TheGiftShuffle",
+  title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want",
   description:
     "Fathers Day 2027 is June 20. Here are the 10 best gifts for dads this year, chosen for what dads actually use. From smart grills and noise-canceling headphones to golf watches and whiskey kits.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'fathers day gifts under 100',
   ],
   openGraph: {
-    title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want | TheGiftShuffle",
+    title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want",
     description:
       "Fathers Day is June 20, 2027. These are the 10 best gifts for dads this year, chosen for everyday use, not what has been recycled since 2019.",
     type: 'website',

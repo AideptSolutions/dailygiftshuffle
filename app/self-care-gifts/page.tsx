@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/self-care-gifts';
 
 export const metadata: Metadata = {
-  title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing, Top-Rated Picks | TheGiftShuffle',
+  title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing, Top-Rated Picks',
   description:
-    'The best self-care and wellness gifts for 2026: massage guns, spa sets, aromatherapy, silk sleep masks, cozy relaxation picks and more. Top-rated self-care gift ideas for every budget.',
+    'The best self-care and wellness gifts for 2026: massage guns, spa sets, aromatherapy, silk sleep masks, cozy relaxation picks and more.',
   keywords: [
     'self care gifts',
     'wellness gifts',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'stress relief gifts',
   ],
   openGraph: {
-    title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing, Top-Rated Picks | TheGiftShuffle',
+    title: 'Self-Care & Wellness Gifts 2026: 30+ Relaxing, Top-Rated Picks',
     description: 'Massage guns, spa sets, aromatherapy and cozy relaxation picks. Top-rated self-care gift ideas for every budget.',
     type: 'website',
     url: URL,
@@ -103,6 +103,7 @@ export default function Page() {
       ]}
       relatedHeading="More Gift Guides"
       relatedLinks={[
+        { href: '/gifts-for-crafters', label: 'Gifts for Crafters' },
         { href: '/self-care-gifts-for-her', label: 'Self-Care Gifts for Her' },
         { href: '/best-beauty-gifts-2026', label: 'Best Beauty Gifts 2026' },
         { href: '/best-gifts-for-her-2026', label: 'Best Gifts for Her 2026' },

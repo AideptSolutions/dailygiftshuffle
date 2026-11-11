@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/christmas-gifts-for-him';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gifts for Him 2026: 45 Ideas He Will Actually Use | TheGiftShuffle',
+  title: 'Christmas Gifts for Him 2026: 45 Ideas He Will Actually Use',
   description:
     'The best Christmas gifts for him in 2026: top-rated ideas for your husband, boyfriend, dad or brother, from tech and tools to cozy upgrades, at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'unique christmas gifts for him',
   ],
   openGraph: {
-    title: 'Christmas Gifts for Him 2026: 45 Ideas He Will Actually Use | TheGiftShuffle',
+    title: 'Christmas Gifts for Him 2026: 45 Ideas He Will Actually Use',
     description: 'Top-rated Christmas gift ideas for your husband, boyfriend, dad or brother, at every budget.',
     type: 'website',
     url: URL,

@@ -10,9 +10,9 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love | TheGiftShuffle",
+  title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love",
   description:
-    'Find the perfect gift for grandma or grandpa, from garden tools and cozy home items to easy-to-use tech and wellness gifts. Hand-picked thoughtful gifts for grandparents.',
+    'Find the perfect gift for grandma or grandpa, from garden tools and cozy home items to easy-to-use tech and wellness gifts.',
   keywords: [
     'gift ideas for grandparents',
     'gifts for grandma',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'practical gifts for grandparents',
   ],
   openGraph: {
-    title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love | TheGiftShuffle",
+    title: "Gift Ideas for Grandparents: Thoughtful Gifts They'll Love",
     description:
       'Browse thoughtful gift ideas for grandparents: garden tools, cozy home picks, wellness items, and easy tech they will actually use.',
     type: 'website',

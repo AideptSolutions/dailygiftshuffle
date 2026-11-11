@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Gift Ideas for Him: Gifts He'll Actually Use | TheGiftShuffle",
+  title: "Gift Ideas for Him: Gifts He'll Actually Use",
   description:
     "Browse 25+ curated gift ideas for him: husband, boyfriend, brother, or best friend. Practical picks, unique finds, and crowd-pleasers for every budget.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'practical gifts for men',
   ],
   openGraph: {
-    title: "Gift Ideas for Him: Gifts He'll Actually Use | TheGiftShuffle",
+    title: "Gift Ideas for Him: Gifts He'll Actually Use",
     description:
       "Browse 25+ curated gift ideas for him: husband, boyfriend, brother, or best friend.",
     type: 'website',

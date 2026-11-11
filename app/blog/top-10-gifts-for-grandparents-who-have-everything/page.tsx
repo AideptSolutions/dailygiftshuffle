@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Top 10 Gifts for Grandparents Who Already Have Everything | TheGiftShuffle',
+  title: 'Top 10 Gifts for Grandparents Who Already Have Everything',
   description:
     'Stuck on a gift for grandparents who already own everything? Ten ideas that skip clutter and land emotionally, with prices and who each one fits.',
   openGraph: {

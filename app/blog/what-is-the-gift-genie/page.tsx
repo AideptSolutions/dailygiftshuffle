@@ -8,9 +8,9 @@ const URL = 'https://www.thegiftshuffle.com/blog/what-is-the-gift-genie';
 const IMG = 'https://www.thegiftshuffle.com/img/blog/what-is-the-gift-genie.jpg';
 
 export const metadata: Metadata = {
-  title: 'What Is the Gift Genie? Inside Our Free AI Gift Finder | TheGiftShuffle',
+  title: 'What Is the Gift Genie? Inside Our Free AI Gift Finder',
   description:
-    'A plain-English breakdown of the Gift Genie: what it is, how the pin-reading AI actually works, why it beats gift quizzes, and how to get the best reading. Free, no sign-up.',
+    'A plain-English breakdown of the Gift Genie: what it is, how the pin-reading AI actually works, why it beats gift quizzes, and how to get the best reading.',
   openGraph: {
     title: 'What Is the Gift Genie? Inside Our Free AI Gift Finder',
     description:

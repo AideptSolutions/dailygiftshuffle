@@ -12,7 +12,7 @@ import GuideByline from '@/components/GuideByline';
 export const metadata: Metadata = {
   title: "Best Mother's Day Gifts Under $25 (2027) | TheGiftShuffle",
   description:
-    "The best budget-friendly Mother's Day gifts under $25: shower steamers, eye masks, slipper socks, brightening serums, and more. Great gifts don't require a big budget.",
+    "The best budget-friendly Mother's Day gifts under $25: shower steamers, eye masks, slipper socks, brightening serums, and more.",
   keywords: [
     "mothers day gifts under 25",
     "mothers day gifts under $25",
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "inexpensive mothers day gifts 2027",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/mothers-day-gifts-under-25.jpg', width: 1200, height: 800 }],
     title: "Best Mother's Day Gifts Under $25 (2027) | TheGiftShuffle",
     description:
       "Browse the best Mother's Day gifts under $25: shower steamers, eye patches, slipper socks, serums, and more.",

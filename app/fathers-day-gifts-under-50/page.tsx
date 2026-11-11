@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: "Father's Day Gifts Under $50 (2027): Top Picks for Dad | TheGiftShuffle",
+  title: "Father's Day Gifts Under $50 (2027): Top Picks for Dad",
   description:
     "The best Father's Day gifts under $50 in 2027. Digital meat thermometers, insulated tumblers, Bluetooth speakers, leather dopp kits, and more, all under $50.",
   keywords: [
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "best fathers day gifts under 50",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/fathers-day-gifts-under-50.jpg', width: 1200, height: 800 }],
     title: "Father's Day Gifts Under $50 (2027) | TheGiftShuffle",
     description:
       "Great Father's Day gifts for under $50, including digital thermometers, insulated tumblers, Bluetooth speakers, and more.",

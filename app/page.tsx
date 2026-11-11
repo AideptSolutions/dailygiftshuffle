@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     'unique gifts',
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/og-image.png', width: 1200, height: 630 }],
     type: 'website',
     url: 'https://www.thegiftshuffle.com',
   },

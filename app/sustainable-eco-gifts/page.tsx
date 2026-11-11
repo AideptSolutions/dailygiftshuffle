@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use | TheGiftShuffle',
+  title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use',
   description:
     'Eco gifts that do not feel like a punishment. Browse the best sustainable and eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful for any budget.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'zero waste gifts',
   ],
   openGraph: {
-    title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use | TheGiftShuffle',
+    title: 'Sustainable Eco-Friendly Gifts: Green Picks They Will Actually Use',
     description:
       'Browse the best sustainable and eco-friendly gift ideas, reusable, organic, plastic-free, and genuinely useful for any budget.',
     type: 'website',

@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/self-care-gifts-for-her';
 
 export const metadata: Metadata = {
-  title: 'Self-Care Gifts for Her 2026: 30 Every Woman Actually Wants | TheGiftShuffle',
+  title: 'Self-Care Gifts for Her 2026: 30 Every Woman Actually Wants',
   description:
-    'Self-care gifts for her that every woman actually deserves: spa sets, massagers, silk sleep masks, aromatherapy and cozy relaxation picks. The safe, thoughtful gift for your wife or girlfriend.',
+    'Self-care gifts for her that every woman actually deserves: spa sets, massagers, silk sleep masks, aromatherapy and cozy relaxation picks.',
   keywords: [
     'self care gifts for her',
     'self care gifts every woman deserves',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'self care gift box for her',
   ],
   openGraph: {
-    title: 'Self-Care Gifts for Her 2026: 30 Every Woman Actually Wants | TheGiftShuffle',
+    title: 'Self-Care Gifts for Her 2026: 30 Every Woman Actually Wants',
     description: 'Self-care gifts every woman actually deserves: spa sets, massagers, silk sleep masks and cozy relaxation picks. The safe, thoughtful gift for your wife or girlfriend.',
     type: 'website',
     url: URL,

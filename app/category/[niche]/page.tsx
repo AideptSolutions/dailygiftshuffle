@@ -485,12 +485,15 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const meta = NICHE_META[params.niche as Niche];
   if (!meta) return { title: 'Category Not Found' };
+  // Keep the brand suffix only while the whole title fits in about 60 characters.
+  const branded = `${meta.title} | TheGiftShuffle`;
+  const title = branded.length > 60 ? meta.title : branded;
   return {
-    title: `${meta.title} | TheGiftShuffle`,
+    title,
     description: meta.description,
     alternates: { canonical: `https://www.thegiftshuffle.com/category/${params.niche}` },
     openGraph: {
-      title: `${meta.title} | TheGiftShuffle`,
+      title,
       description: meta.description,
       url: `https://www.thegiftshuffle.com/category/${params.niche}`,
       images: [

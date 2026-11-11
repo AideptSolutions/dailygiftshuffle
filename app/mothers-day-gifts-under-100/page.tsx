@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "mothers day gift ideas under 100",
   ],
   openGraph: {
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/mothers-day-gifts-under-100.jpg', width: 1200, height: 800 }],
     title: "Mother's Day Gifts Under $100 | TheGiftShuffle",
     description:
       "Browse the best Mother's Day gifts under $100: spa sets, jewelry, skincare, kitchen tools, and more.",

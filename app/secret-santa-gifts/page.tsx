@@ -5,9 +5,9 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/secret-santa-gifts';
 
 export const metadata: Metadata = {
-  title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers & Friends | TheGiftShuffle',
+  title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers & Friends',
   description:
-    'The best secret santa gift ideas for 2026: thoughtful, safe-but-not-boring picks under $50 for coworkers, friends and family exchanges. Ideas for the person you barely know.',
+    'The best secret santa gift ideas for 2026: thoughtful, safe-but-not-boring picks under $50 for coworkers, friends and family exchanges.',
   keywords: [
     'secret santa gifts',
     'secret santa gift ideas',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'secret santa for someone you dont know',
   ],
   openGraph: {
-    title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers & Friends | TheGiftShuffle',
+    title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers & Friends',
     description: 'Thoughtful, safe-but-not-boring secret santa picks under $50 for any exchange.',
     type: 'website',
     url: URL,

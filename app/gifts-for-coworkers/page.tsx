@@ -10,7 +10,7 @@ import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 
 export const metadata: Metadata = {
-  title: 'Gifts for Coworkers: Best Office Gift Ideas 2026 | TheGiftShuffle',
+  title: 'Gifts for Coworkers: Best Office Gift Ideas 2026',
   description:
     'Find the best gifts for coworkers in 2026. Funny mugs, desk organizers, wireless chargers, snack sets, and thoughtful office gifts for colleagues at every budget.',
   keywords: [
@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     'best gifts for coworkers under 50',
   ],
   openGraph: {
-    title: 'Gifts for Coworkers: Best Office Gift Ideas 2026 | TheGiftShuffle',
+    images: [{ url: 'https://www.thegiftshuffle.com/images/heroes/gifts-for-coworkers.jpg', width: 1200, height: 800 }],
+    title: 'Gifts for Coworkers: Best Office Gift Ideas 2026',
     description:
       'Best coworker gifts for 2026: funny mugs, desk gadgets, snack boxes, and thoughtful picks that work for any office dynamic.',
     type: 'website',
