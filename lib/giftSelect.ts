@@ -17,6 +17,7 @@ export interface AnyProduct {
   why?: string;
   price: number;
   priceDisplay: string;
+  priceAsOf?: string;
   image: string;
   rating: number;
   reviewCount: number;

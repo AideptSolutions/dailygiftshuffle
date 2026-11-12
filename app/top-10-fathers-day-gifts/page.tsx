@@ -6,6 +6,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
+import Price from '@/components/Price';
+import { offerFor } from '@/lib/livePrices';
 
 export const metadata: Metadata = {
   title: "Top 10 Fathers Day Gifts for 2027 | Gifts Dads Actually Want",
@@ -103,7 +105,7 @@ const itemListSchema = {
       name: p.name,
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
-      offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+      ...offerFor(p),
       ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
     },
   })),
@@ -211,7 +213,7 @@ export default function Top10FathersDayGiftsPage() {
                       </p>
                     )}
                     <p className="text-base font-extrabold mt-2" style={{ color: '#1A202C' }}>
-                      {p.priceDisplay}
+                      <Price product={p} />
                     </p>
                   </div>
 

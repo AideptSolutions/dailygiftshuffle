@@ -8,6 +8,7 @@ import GuideLinkCards from '@/components/GuideLinkCards';
 import { guideImageFor } from '@/lib/guideImages';
 import { CATEGORY_META } from './categoryMeta';
 import { ALL, ALL_INCL_SEASONAL } from '@/lib/giftSelect';
+import { offerFor } from '@/lib/livePrices';
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_META).map((category) => ({ category }));
@@ -78,13 +79,7 @@ export default function CategoryShufflePage({ params }: { params: { category: st
               name: p.name,
               image: absImg(p.image),
               ...(p.description ? { description: p.description } : {}),
-              offers: {
-                '@type': 'Offer',
-                price: p.price,
-                priceCurrency: 'USD',
-                availability: 'https://schema.org/InStock',
-                url: p.affiliateUrl,
-              },
+              ...offerFor(p),
               ...(p.rating > 0 && (p.reviewCount ?? 0) > 0
                 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } }
                 : {}),

@@ -1,0 +1,16 @@
+{
+  "refreshedAt": "2026-11-12T08:03:42.989Z",
+  "ok": true,
+  "catalogProducts": 1370,
+  "priced": 1157,
+  "noOffer": 159,
+  "notReturned": 52,
+  "suspect": 2,
+  "notFetched": 0,
+  "carriedFromLastRun": 0,
+  "suspectIds": [
+    "off-25-3",
+    "finance-great-now-what"
+  ],
+  "stopped": null
+}

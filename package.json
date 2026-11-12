@@ -8,7 +8,9 @@
     "start": "next start -p 3334",
     "lint": "next lint",
     "indexnow": "node scripts/indexnow.mjs",
-    "prebuild": "node scripts/gen-guide-image-manifest.mjs"
+    "prebuild": "node scripts/gen-guide-image-manifest.mjs && node scripts/pull-prices.mjs",
+    "predev": "node scripts/pull-prices.mjs",
+    "prices:refresh": "node scripts/refresh-prices.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

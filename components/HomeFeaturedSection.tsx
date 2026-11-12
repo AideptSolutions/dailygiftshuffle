@@ -8,6 +8,7 @@ import { useFavorites } from '@/lib/useFavorites';
 import { usePins } from '@/lib/usePins';
 import ProductModal from '@/components/ProductModal';
 import GeniePanel from '@/components/genie/GeniePanel';
+import Price from '@/components/Price';
 
 // --- Random 4-picker from catalog ---
 const SHUFFLE_KEY = 'dgs_home_shuffle_seen';
@@ -503,7 +504,7 @@ export default function HomeFeaturedSection({
                 >
                   <AmazonMark />
                   <span className="text-sm font-extrabold" style={{ color: '#1A202C' }}>
-                    {product.priceDisplay}
+                    <Price product={product} />
                   </span>
                 </a>
               </div>

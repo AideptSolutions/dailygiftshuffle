@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { getSharedRun } from '@/lib/genie/share';
 import { LampIcon, SparkleIcon } from '@/components/genie/GenieIcons';
+import Price from '@/components/Price';
 
 export const dynamic = 'force-dynamic';
 
@@ -110,7 +111,7 @@ export default async function SharedGenieRunPage({ params }: Props) {
                 </div>
               </div>
               <span className="shrink-0 text-sm font-extrabold" style={{ color: '#1A202C' }}>
-                {pick.product.priceDisplay}
+                <Price product={pick.product} />
               </span>
             </a>
           ))}

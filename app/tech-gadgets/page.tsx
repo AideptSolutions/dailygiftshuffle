@@ -7,6 +7,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import InlineShuffle from '@/components/InlineShuffle';
 import { products } from '@/data/products';
 import GuideByline from '@/components/GuideByline';
+import Price from '@/components/Price';
+import { applyLivePrices, offerFor } from '@/lib/livePrices';
 
 export const metadata: Metadata = {
   title: 'Best Tech Gifts & Gadgets 2026: Top Picks for Every Budget',
@@ -130,6 +132,10 @@ const techProducts = [
   },
 ];
 
+// This page keeps its own six products; give them live prices too. The daily
+// refresh reads their product IDs from this file (see scripts/refresh-prices.mjs).
+applyLivePrices(techProducts);
+
 const techShufflePool = products.filter((p) => p.tags?.includes('tech'));
 
 const faqs = [
@@ -174,7 +180,7 @@ const itemListSchema = {
       name: p.name,
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
-      offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+      ...offerFor(p),
       ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
     },
   })),
@@ -252,7 +258,7 @@ export default function TechGadgetsPage() {
                   <p className="text-xs text-gray-500 mb-2 leading-relaxed line-clamp-2">{p.description}</p>
                 </div>
                 <div className="flex items-center justify-between mt-2">
-                  <span className="font-bold text-[#F04E30]">{p.priceDisplay}</span>
+                  <span className="font-bold text-[#F04E30]"><Price product={p} /></span>
                   <span className="text-xs text-gray-400">★ {p.rating}</span>
                 </div>
               </a>

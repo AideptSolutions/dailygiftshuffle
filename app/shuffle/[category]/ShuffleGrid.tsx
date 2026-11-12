@@ -7,6 +7,7 @@ import ProductModal from '@/components/ProductModal';
 import { useFavorites } from '@/lib/useFavorites';
 import { shuffleMany } from '@/lib/shuffle';
 import { type Product, type NicheTag } from '@/data/products';
+import Price from '@/components/Price';
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -156,7 +157,7 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
                     )}
                   </div>
                 )}
-                <span className="text-[#F04E30] font-extrabold text-sm mt-auto">{p.priceDisplay}</span>
+                <span className="text-[#F04E30] font-extrabold text-sm mt-auto"><Price product={p} /></span>
                 <a
                   href={p.affiliateUrl}
                   target="_blank"

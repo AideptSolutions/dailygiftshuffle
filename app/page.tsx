@@ -174,6 +174,7 @@ export default async function HomePage() {
       description: p.description ?? '',
       price: p.price,
       priceDisplay: p.priceDisplay,
+      priceAsOf: p.priceAsOf,
       image: p.image,
       rating: p.rating,
       reviewCount: p.reviewCount,

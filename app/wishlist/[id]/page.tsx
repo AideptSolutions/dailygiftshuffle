@@ -6,6 +6,8 @@ import Navbar from '@/components/Navbar';
 import { redis, wishlistKey } from '@/lib/redis';
 import type { ShareableWishlist } from '@/lib/redis';
 import PublicWishlistOwnerActions from './PublicWishlistOwnerActions';
+import Price from '@/components/Price';
+import { livePriceFor } from '@/lib/livePrices';
 
 interface Props {
   params: { id: string };
@@ -91,7 +93,8 @@ export default async function PublicWishlistPage({ params }: Props) {
                   <div>
                     <div className="flex items-start justify-between gap-2">
                       <h2 className="font-bold text-gray-900 text-sm leading-tight">{item.name}</h2>
-                      <span className="font-extrabold flex-shrink-0 text-sm text-gray-900">{item.price}</span>
+                      {/* The saved price is ignored on purpose; only a live one is shown. */}
+                      <span className="font-extrabold flex-shrink-0 text-sm text-gray-900"><Price product={livePriceFor(item.affiliateUrl)} /></span>
                     </div>
                     {item.hint && (
                       <p className="text-xs text-[#FF6B6B] italic mt-1">&ldquo;{item.hint}&rdquo;</p>

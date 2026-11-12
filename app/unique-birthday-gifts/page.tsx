@@ -8,6 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
+import { offerFor } from '@/lib/livePrices';
 
 export const metadata: Metadata = {
   title: 'Unique Birthday Gifts: 30 Creative Ideas They Will Remember',
@@ -106,7 +107,7 @@ const itemListSchema = {
       name: p.name,
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
-      offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+      ...offerFor(p),
       ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
     },
   })),

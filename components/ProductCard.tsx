@@ -5,6 +5,7 @@
  */
 import Image from 'next/image';
 import { useState } from 'react';
+import Price from '@/components/Price';
 
 function PinIcon({ pinned }: { pinned: boolean }) {
   return pinned ? (
@@ -61,6 +62,7 @@ export interface CompactProduct {
   why?: string;
   price: number;
   priceDisplay: string;
+  priceAsOf?: string;
   image: string;
   rating: number;
   reviewCount: number;
@@ -140,7 +142,7 @@ export default function ProductCard({
         <div className="mt-auto pt-2.5 flex items-center gap-1.5">
           <AmazonMark />
           <span className="text-sm font-extrabold" style={{ color: '#1A202C' }}>
-            {product.priceDisplay}
+            <Price product={product} />
           </span>
           <span className="ml-auto text-[#F04E30] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             <ArrowOut />

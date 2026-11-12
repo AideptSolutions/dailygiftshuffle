@@ -54,8 +54,8 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks', cat
         const seen = new Set(products.map((p) => p.id));
         const extra = feed
           .filter((p) => !seen.has(p.id) && (p.rating ?? 0) >= FEED_MIN_RATING && p.image && !p.image.includes('/img/categories/'))
-          .map(({ id, name, description, why, price, priceDisplay, image, rating, reviewCount, affiliateUrl }) =>
-            ({ id, name, description, why, price, priceDisplay, image, rating, reviewCount, affiliateUrl }));
+          .map(({ id, name, description, why, price, priceDisplay, priceAsOf, image, rating, reviewCount, affiliateUrl }) =>
+            ({ id, name, description, why, price, priceDisplay, priceAsOf, image, rating, reviewCount, affiliateUrl }));
         if (extra.length) setPool([...products, ...extra]);
       })
       .catch(() => {});

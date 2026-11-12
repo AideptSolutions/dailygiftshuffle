@@ -51,9 +51,21 @@ The feed keeps one entry per Amazon product ID. Before adding or relinking a pro
 
 **Protected titles and descriptions.** Never shorten or reword the title or description of a page that earns search clicks or AI citations without asking the owner first, even when it runs long: `/stocking-stuffers` and its spokes, `/gifts-for-a-crush`, `/luxury-gifts-under-50`, `/gifts-for-girlfriend`, `/white-elephant-gifts`, `/best-birthday-gifts-2026`, `/birthday-gift-ideas`, `/luxury-gifts-under-200`, `/gift-ideas-for-teens`, `/christmas-gifts-for-her`, `/best-gaming-gifts-2026`, `/halloween-party-gifts`, `/category/fitness` and the homepage description. Before any title or description pass, check both Bing Webmaster Tools tables: Search Performance by page and AI Performance by page (see `SEO-RECOVERY-2026-08.md`).
 
+## Live prices (daily refresh)
+
+Prices shown on the site are live Amazon prices, not the numbers in the catalog files. Amazon's license allows a price to be shown only if it came from the API, for 24 hours at most, with the fetch time beside it.
+
+- `.github/workflows/refresh-prices.yml` runs `scripts/refresh-prices.mjs` every day at 09:17 UTC: about 137 API calls, prices stored in Redis under `prices:live` with a 24-hour expiry, then `data/prices-stamp.json` (counts only) is committed. That commit triggers the deploy.
+- Every build and dev start runs `scripts/pull-prices.mjs` (`prebuild`, `predev`), which copies the prices from Redis into `data/prices.generated.json`. That file is gitignored: never commit it, and never write API prices into the catalog files or anywhere else in the repo, which is public and keeps history forever.
+- `lib/livePrices.ts` lays the prices over every product (`applyLivePrices` at the bottom of each data file). A product with a live price gets `priceAsOf`; one without keeps its catalog `price` as a last known value for sorting and budget bands only.
+- Show a price ONLY through `<Price product={p} />` (`components/Price.tsx`). It prints the price with its "as of" time, or "See price on Amazon" when there is no live price or it has passed 24 hours. Never print `priceDisplay` or `price` directly. For schema.org markup use `...offerFor(p)`.
+- The footer carries Amazon's two required notices (`PRICE_DISCLAIMER`, `AMAZON_CONTENT_NOTICE`). Keep them word for word.
+- If the job fails or is throttled, nothing breaks: prices age out and cards say "See price on Amazon" until the next good run. Run it by hand with `npm run prices:refresh` (add `-- --dry` to fetch without storing). The job needs four repository secrets, named at the top of the workflow file.
+- A page that keeps its own product list (only `app/tech-gadgets/page.tsx` today) must call `applyLivePrices` on it and be listed in `FILES` in `scripts/refresh-prices.mjs`.
+
 ## Amazon Creators API
 
-The API is live for this account (since 2026-11-11) and is the only approved way to read Amazon data; never fetch amazon.com pages by script or browser automation. All calls go through `scripts/lib/creators-api.mjs`, which paces calls (1 per 1.1 s), caps them (300 per rolling 24 hours), stops dead on a 429 and identifies itself with an `Agent/<name>` user agent as Amazon requires. Do not bypass it with a direct `fetch`.
+The API is live for this account (since 2026-11-11) and is the only approved way to read Amazon data; never fetch amazon.com pages by script or browser automation. All calls go through `scripts/lib/creators-api.mjs`, which paces calls (one every 2 s), caps them (300 per rolling 24 hours), stops dead on a 429 and identifies itself with an `Agent/<name>` user agent as Amazon requires. Do not bypass it with a direct `fetch`.
 
 - Before running any API job: `node scripts/creators-api-status.mjs <product count>`. When Claude runs a script, set `AMAZON_AGENT_NAME=ClaudeCode`.
 - Never call the API from page code or an API route that a visitor or crawler can trigger; scripts and scheduled jobs only.

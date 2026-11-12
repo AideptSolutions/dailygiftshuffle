@@ -1,0 +1,74 @@
+# Daily Amazon price refresh.
+#
+# Fetches today's prices through the Creators API, stores them in Redis for 24
+# hours, then commits data/prices-stamp.json. That commit is what makes Vercel
+# rebuild the site, and the build pulls the prices out of Redis. No Amazon data
+# is ever committed. Details: scripts/refresh-prices.mjs, lib/livePrices.ts.
+#
+# Needs four repository secrets (Settings > Secrets and variables > Actions):
+#   AMAZON_CREATORS_CLIENT_ID, AMAZON_CREATORS_CLIENT_SECRET,
+#   UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
+#
+# If a run fails (throttled, or the account lost API access), nothing breaks:
+# prices older than 24 hours stop showing and cards say "See price on Amazon"
+# until the next good run.
+
+name: Refresh Amazon prices
+
+on:
+  schedule:
+    # 09:17 UTC, about 1 to 2 AM Pacific. Off the hour on purpose: GitHub
+    # delays jobs scheduled at busy times.
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-prices
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch prices and store them in Redis
+        id: refresh
+        continue-on-error: true
+        env:
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+          AMAZON_CREATORS_VERSION: '3.1'
+          AMAZON_PARTNER_TAG: dailygiftshuf-20
+          AMAZON_AGENT_NAME: TheGiftShufflePriceRefresh
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        run: node scripts/refresh-prices.mjs
+
+      # Runs even when the fetch failed, so the site still rebuilds and stops
+      # showing prices that have aged out. The commit is made under the
+      # repository's usual author so the host accepts it for deployment.
+      - name: Commit the refresh stamp (this triggers the deploy)
+        run: |
+          git config user.name "$(git log -1 --format=%an)"
+          git config user.email "$(git log -1 --format=%ae)"
+          if [ "${{ steps.refresh.outcome }}" != "success" ] && [ -z "$(git status --porcelain data/prices-stamp.json)" ]; then
+            printf '{\n  "refreshedAt": "%s",\n  "ok": false\n}\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > data/prices-stamp.json
+          fi
+          git add data/prices-stamp.json
+          git diff --cached --quiet || git commit -m "chore(prices): daily refresh stamp"
+          git push
+
+      - name: Report a failed refresh
+        if: steps.refresh.outcome != 'success'
+        run: |
+          echo "The price refresh did not complete. See the step above." >&2
+          exit 1

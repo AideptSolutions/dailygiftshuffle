@@ -50,3 +50,7 @@ scripts/_*.json
 
 # local tool state (API usage counter, short-lived access token)
 .cache/
+
+# live Amazon prices pulled from Redis at build time; never committed
+# (Amazon data may not be kept more than 24 hours)
+data/prices.generated.json

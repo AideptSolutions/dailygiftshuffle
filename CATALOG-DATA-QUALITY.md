@@ -1291,3 +1291,68 @@ Notes for whoever picks this up:
   daily-limit response from Amazon.
 - Still open: 160 products with no current offer, 52 the API will not return,
   the daily refresh (step three), and stars for the products whose rating is 0.
+
+### 2026-11-12: daily price refresh built (step three)
+
+Owner approved ("build the daily price refresh"). How it works is written up
+in CLAUDE.md under "Live prices (daily refresh)"; this entry records the
+decisions and the first run.
+
+Design decision that differs from the outline given to the owner: prices are
+NOT stored in a file in the repository. The repository is public and git keeps
+history forever, while Amazon's license allows its price data to be kept for
+24 hours at most. So the job stores prices in Redis with a 24-hour expiry, the
+build pulls them into a gitignored file, and the only thing committed each day
+is data/prices-stamp.json (times and counts, no Amazon data). That commit is
+what triggers the deploy, which keeps the project rule that a push to master
+is the only way the site ships.
+
+What a shopper sees: the live price with "as of Nov 12, 12:03 AM PT" under
+it, or "See price on Amazon" when there is no live price. Amazon's two
+required notices are in the footer of every page. Markup (schema.org offers)
+carries a price only when it is live, and no longer claims InStock.
+
+Safeguards:
+- A price older than 24 hours is never shown: the build drops it, and the
+  page checks again in the browser, so a page built yesterday stops showing
+  its prices on its own. Tested by marking every price 25 hours old: 29 prices
+  in the server HTML, 0 after load, no errors.
+- The job skips a price that looks wrong (under 50 cents, or more than 4
+  times or less than a quarter of the catalog's last known price) and lists
+  the product in the stamp file.
+- If the job is throttled or loses API access, the site falls back to "See
+  price on Amazon" by itself.
+- The Gift Genie is now told never to quote a price, and is given rounded
+  figures for budget fit only.
+- Shared wishlists ignore the price saved with them and show the live one.
+
+First run, by hand on 2026-11-12 08:03 UTC: 1,370 product IDs, 137 calls, no
+throttle. 1,157 priced, 159 with no current offer, 52 not served by the API,
+2 skipped as suspect (off-25-3, finance-great-now-what). 444 calls in the
+rolling 24 hours at that point, still no daily-limit response.
+
+Checked in the browser at desktop and phone width (guide page, homepage, tech
+page): prices and stamps render, nothing spills out of a card after letting
+the stamp wrap, no console errors.
+
+Not verified against the source: the wording of the two notices is Amazon's
+standard text as widely published. The owner's Policies PDF is a scan and was
+not re-read for this; compare the footer with IP License section 2 (i) and (k)
+when convenient.
+
+Owner step still needed for the schedule to run: four repository secrets
+(AMAZON_CREATORS_CLIENT_ID, AMAZON_CREATORS_CLIENT_SECRET,
+UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN). Until then the job fails
+harmlessly each morning and prices from the last manual run age out after 24
+hours.
+
+Known limits:
+- Roughly 210 products never have a live price (no current offer, or not
+  served by the API) and always show "See price on Amazon".
+- Catalog `price` values are now only a fallback for sorting and bands. They
+  were corrected on 2026-11-12 and will drift; that no longer shows.
+- Favorites, pins and picks saved in a visitor's browser keep the price they
+  were saved with for at most 24 hours, then show "See price on Amazon".
+- One run a day means a short gap each night between prices passing 24 hours
+  and the new deploy landing. Two runs a day would close it at twice the
+  calls.

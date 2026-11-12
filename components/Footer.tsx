@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import CategoryIcon from '@/components/CategoryIcon';
+import { AMAZON_CONTENT_NOTICE, PRICE_DISCLAIMER } from '@/lib/livePrices';
 
 const CATEGORIES = [
   { slug: 'tech', label: 'Tech & Gadgets' },
@@ -105,6 +106,15 @@ export default function Footer() {
               AiDept Solutions
             </a>
           </p>
+        </div>
+
+        {/* Required by the Amazon Associates license wherever API prices are
+            shown. Keep both sentences word for word. */}
+        <div id="price-notice" className="mt-5 space-y-1.5 text-[11px] leading-relaxed text-gray-400">
+          <p>
+            Prices shown on this site come from Amazon and carry the time they were last checked. {PRICE_DISCLAIMER}
+          </p>
+          <p>{AMAZON_CONTENT_NOTICE}</p>
         </div>
       </div>
     </footer>

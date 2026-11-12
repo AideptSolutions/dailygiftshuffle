@@ -11,6 +11,7 @@ import { shuffleMultiple, clearShownIds } from '@/lib/shuffle';
 import { Product, Recipient, BudgetTier, Occasion, NicheTag } from '@/data/products';
 import { useFavorites } from '@/lib/useFavorites';
 import { usePins } from '@/lib/usePins';
+import Price from '@/components/Price';
 
 const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
   { id: 'her',         label: 'For Her',            image: '/images/recipients/her.jpg' },
@@ -167,7 +168,7 @@ function ProductCard({
           </p>
         )}
         <p className="text-sm font-extrabold mt-auto pt-2" style={{ color: '#1A202C' }}>
-          {product.priceDisplay}
+          <Price product={product} />
         </p>
       </div>
       {/* Buy button, full width */}

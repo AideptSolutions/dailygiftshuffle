@@ -1,3 +1,4 @@
+import { applyLivePrices } from '@/lib/livePrices';
 export type BudgetTier = 'under25' | '25to50' | 'under50' | '50to100' | '100to150' | 'under150' | '150to250' | '250plus';
 export type Recipient = 'her' | 'him' | 'mom' | 'dad' | 'brother' | 'sister' | 'grandparents' | 'teens' | 'kids' | 'baby' | 'couples' | 'friends' | 'pets' | 'coworker' | 'employees' | 'myself' | 'myself-her' | 'myself-him' | 'streamers';
 export type Occasion = 'birthday' | 'anniversary' | 'holiday' | 'valentines' | 'mothersFathers' | 'weddingHousewarming' | 'graduation' | 'justBecause';
@@ -10,6 +11,8 @@ export interface Product {
   why?: string;
   price: number;
   priceDisplay: string;
+  /** ISO time the live Amazon price was fetched; absent when there is none. Set by applyLivePrices. */
+  priceAsOf?: string;
   image: string;
   rating: number;
   reviewCount: number;
@@ -465,3 +468,6 @@ export const products: Product[] = [
   { id:'pets-100-4', name:'Automatic Cat Laser Toy Rotating USB Rechargeable', description:'Automatic rotating laser toy with 3 speed modes, random pattern, and USB charging. 2-hour auto-shutoff timer.', why:'Automatic laser toys solve the guilt of not having time to play. One of the most-gifted cat toys in the tech-adjacent pet category.', price:20.99, priceDisplay:'$20.99', image:'/images/products/pets-100-4.jpg', rating:4.5, reviewCount:25691, affiliateUrl: 'https://www.amazon.com/dp/B0CRNK2WV2?linkCode=ll2&tag=dailygiftshuf-20&linkId=&language=en_US&ref_=as_li_ss_tl', recipients:['pets','her','friends'], budgetTier:'under25', occasions:['birthday','holiday','justBecause'], tags:['tech'], topicTags:['pets','cat','laser','automatic-toy'] },
   { id:'emp-50-3-2', name:'Full-Grain Leather Padfolio Organizer Professional', description:'Full-grain leather padfolio with notepad, card holder, pen loop, and document pockets. Fits A4/Letter. Gift box packaging.', why:'Leather padfolios are a perennial corporate gift. High perceived value and universally useful in any professional setting.', price:72.99, priceDisplay:'$72.99', image:'/images/products/emp-50-3.jpg', rating:4.3, reviewCount:17794, affiliateUrl: 'https://www.amazon.com/dp/B0DTK9KPVH?linkCode=ll2&tag=dailygiftshuf-20&linkId=&language=en_US&ref_=as_li_ss_tl', recipients:['employees','coworker','him','her'], budgetTier:'50to100', occasions:['birthday','holiday'], tags:['office'], topicTags:['employees','padfolio','professional','leather'] },
 ];
+
+// Live Amazon prices over the hand-kept ones (see lib/livePrices.ts).
+applyLivePrices(products);

@@ -9,6 +9,7 @@ import catalog from '@/data/products-catalog';
 import { products as recipientProducts } from '@/data/products';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
+import { offerFor } from '@/lib/livePrices';
 
 export const metadata: Metadata = {
   title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026',
@@ -94,7 +95,7 @@ const itemListSchema = {
       name: p.name,
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
-      offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+      ...offerFor(p),
       ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
     },
   })),

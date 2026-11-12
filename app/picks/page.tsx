@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { products } from '@/data/products';
+import Price from '@/components/Price';
 
 const STARTER_IDS = [
   // Under $10 everyday picks
@@ -81,7 +82,7 @@ export default function PicksPage() {
                     </div>
                     <div className="p-4 flex flex-col flex-1">
                       <p className="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-1">
-                        {product.priceDisplay}
+                        <Price product={product} />
                       </p>
                       <h3 className="font-semibold text-gray-900 text-sm mb-1 leading-snug">
                         {product.name}

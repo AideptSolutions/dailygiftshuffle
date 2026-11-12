@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import type { Product } from '@/data/products';
 import { useFavorites } from '@/lib/useFavorites';
+import Price from '@/components/Price';
 
 function StarRating({ rating }: { rating: number }) {
   const full  = Math.floor(rating);
@@ -79,7 +80,7 @@ export default function ProductModal({ product, onClose }: Props) {
               {product.name}
             </h2>
             <span className="text-2xl font-extrabold flex-shrink-0" style={{ color: '#F04E30' }}>
-              {product.priceDisplay}
+              <Price product={product} />
             </span>
           </div>
 

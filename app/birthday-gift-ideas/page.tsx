@@ -8,6 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductCard from '@/components/ProductCard';
 import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 import GuideByline from '@/components/GuideByline';
+import { offerFor } from '@/lib/livePrices';
 
 export const metadata: Metadata = {
   title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
@@ -143,7 +144,7 @@ const itemListSchema = {
       name: p.name,
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
-      offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+      ...offerFor(p),
       ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
     },
   })),

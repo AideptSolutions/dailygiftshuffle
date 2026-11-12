@@ -9,6 +9,7 @@ import GuideLinkCards, { type GuideLink } from '@/components/GuideLinkCards';
 import NextGiftNudge, { type NextGiftNudgeProps } from '@/components/NextGiftNudge';
 import GuideByline from '@/components/GuideByline';
 import { pathOf } from '@/lib/pageDates';
+import { offerFor } from '@/lib/livePrices';
 
 export interface GiftGuideFaq {
   q: string;
@@ -108,13 +109,7 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
         name: p.name,
         image: absImg(p.image),
         ...(p.description ? { description: p.description } : {}),
-        offers: {
-          '@type': 'Offer',
-          price: p.price,
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock',
-          url: p.affiliateUrl,
-        },
+        ...offerFor(p),
         ...(p.rating > 0 && p.reviewCount > 0
           ? {
               aggregateRating: {

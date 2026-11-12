@@ -15,6 +15,7 @@ export interface FeedProduct {
   why?: string;
   price: number;
   priceDisplay: string;
+  priceAsOf?: string;
   image: string;
   rating: number;
   reviewCount: number;
@@ -41,6 +42,7 @@ function normalize(p: any): FeedProduct {
     why: p.why,
     price: p.price,
     priceDisplay: p.priceDisplay,
+    priceAsOf: p.priceAsOf,
     image: p.image,
     rating: p.rating,
     reviewCount: p.reviewCount,

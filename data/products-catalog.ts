@@ -5,6 +5,8 @@
 // Non-Amazon links: swap IMPACT_TAG, SHAREASALE_TAG, etc.
 // ============================================================
 
+import { applyLivePrices } from '@/lib/livePrices';
+
 export type BudgetTier = 'under25' | '25to50' | 'under50' | '50to100' | '100to150' | 'under150' | '150to250' | '250plus';
 
 export type Recipient =
@@ -34,6 +36,8 @@ export interface Product {
   why?: string;
   price: number;
   priceDisplay: string;
+  /** ISO time the live Amazon price was fetched; absent when there is none. Set by applyLivePrices. */
+  priceAsOf?: string;
   image: string;
   rating: number;
   reviewCount: number;
@@ -13558,9 +13562,7 @@ export const products: Product[] = [
   },
 ];
 
+// Live Amazon prices over the hand-kept ones (see lib/livePrices.ts).
+applyLivePrices(products);
+
 export default products;
-
-
-
-
-

@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import { useFavorites } from '@/lib/useFavorites';
 import ProductModal from '@/components/ProductModal';
 import type { Product } from '@/data/products';
+import Price from '@/components/Price';
 
 function StarRating({ rating }: { rating: number }) {
   const full = Math.floor(rating);
@@ -94,7 +95,7 @@ export default function SelectionsPage() {
                     <p className="text-xs text-gray-500 line-clamp-2 mb-3">{product.description}</p>
                     <div className="flex items-center justify-between mt-auto">
                       <span className="text-xl font-extrabold" style={{ color: '#1A202C' }}>
-                        {product.priceDisplay}
+                        <Price product={product} />
                       </span>
                       <a
                         href={product.affiliateUrl}

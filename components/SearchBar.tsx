@@ -6,6 +6,7 @@ import Link from 'next/link';
 import type { Product } from '@/data/products';
 import ProductModal from '@/components/ProductModal';
 import CategoryIcon from '@/components/CategoryIcon';
+import Price from '@/components/Price';
 
 const CATEGORIES = [
   { slug: 'tech',            label: 'Tech & Gadgets', desc: 'Gadgets, smart home, wearables, and all things tech.' },
@@ -191,7 +192,7 @@ export default function SearchBar() {
                               <p className="text-sm font-semibold text-gray-800 group-hover:text-[#F04E30] line-clamp-1 transition-colors">
                                 {p.name}
                               </p>
-                              <p className="text-xs text-gray-400">{p.priceDisplay}</p>
+                              <p className="text-xs text-gray-400"><Price product={p} /></p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#F04E30] flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />

@@ -3,6 +3,7 @@
 // are click-tracked automatically. Standards relaxed for novelty items (some
 // have rating 0 = no reviews yet, which hides the star block on the card).
 import type { CompactProduct } from '@/components/ProductCard';
+import { applyLivePrices } from '@/lib/livePrices';
 
 const amz = (asin: string) => `https://www.amazon.com/dp/${asin}?tag=dailygiftshuf-20`;
 
@@ -75,5 +76,8 @@ export const seasonalProducts: SeasonalProduct[] = [
   { id: 'wc-37', name: 'Soccer Keychain Party Favors (Set)', description: 'A bulk set of metal soccer-ball and cleat keychains with thank-you tags, ideal for team parties.', why: 'The perfect end-of-season or birthday-party handout. A small, fun token for a whole soccer team at once.', price: 9.99, priceDisplay: '$9.99', image: '/images/products/wc-37.jpg', rating: 4.2, reviewCount: 5, affiliateUrl: amz('B0BXSQBBHK'), theme: 'worldcup' },
   { id: 'wc-38', name: 'Soccer Pennant Banner', description: 'A soccer-themed pennant flag banner for bedrooms, parties, or World Cup watch gatherings.', why: 'The easy decoration that sets the scene for any soccer celebration. A cheap, cheerful touch for the fan\'s room or party.', price: 8.59, priceDisplay: '$8.59', image: '/images/products/wc-38.jpg', rating: 5, reviewCount: 5, affiliateUrl: amz('B09J2FQBQD'), theme: 'worldcup' },
 ];
+
+// Live Amazon prices over the hand-kept ones (see lib/livePrices.ts).
+applyLivePrices(seasonalProducts);
 
 export const byTheme = (t: SeasonalTheme) => seasonalProducts.filter((p) => p.theme === t);

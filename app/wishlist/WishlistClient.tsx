@@ -8,6 +8,7 @@ import { useToast } from '@/components/Toast';
 import { getWishlist, removeFromWishlist } from '@/lib/wishlist';
 import { Product } from '@/data/products';
 import type { ShareableWishlistItem } from '@/lib/redis';
+import Price from '@/components/Price';
 
 const SHARE_KEY = 'dgs_share';
 
@@ -268,7 +269,7 @@ export default function WishlistClient() {
                     <div className="flex items-start justify-between gap-2">
                       <h3 className="font-bold text-gray-900 text-sm leading-tight">{product.name}</h3>
                       <span className="font-extrabold flex-shrink-0 text-sm" style={{ color: '#1A202C' }}>
-                        {product.priceDisplay}
+                        <Price product={product} />
                       </span>
                     </div>
                     <div className="flex items-center gap-1 mt-1 mb-2">

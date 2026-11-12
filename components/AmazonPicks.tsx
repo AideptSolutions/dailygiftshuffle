@@ -4,6 +4,7 @@
 
 import Image from 'next/image';
 import type { AnyProduct } from '@/lib/giftSelect';
+import Price from '@/components/Price';
 
 const linkProps = { target: '_blank', rel: 'noopener sponsored' } as const;
 
@@ -53,7 +54,7 @@ export function PickStrip({ heading, products }: { heading: string; products: An
               <span className="mt-2 block text-sm font-semibold text-gray-900 leading-snug line-clamp-2">{p.name}</span>
             </a>
             <span className="mt-auto pt-1 flex items-center justify-between gap-2 text-sm">
-              <span className="font-bold text-gray-900 tabular-nums">{p.priceDisplay}</span>
+              <span className="font-bold text-gray-900 tabular-nums"><Price product={p} /></span>
               <a href={p.affiliateUrl} {...linkProps} className="text-xs font-bold text-[#F04E30] underline underline-offset-2">
                 Amazon
               </a>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { products } from '@/data/products';
+import Price from '@/components/Price';
 
 // 4 highest-reviewed products â€” highest demand / trending
 const HOT_PRODUCT_IDS = [
@@ -59,7 +60,7 @@ export default function FeaturedGifts() {
                 <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
               </div>
               <p className="text-sm font-extrabold mt-1.5" style={{ color: '#1A202C' }}>
-                {product.priceDisplay}
+                <Price product={product} />
               </p>
             </div>
             <div className="btn-amazon text-center text-xs font-bold py-2 px-3">

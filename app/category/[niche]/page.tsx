@@ -10,6 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import type { NicheTag } from '@/data/products-catalog';
 import { ALL, ALL_INCL_SEASONAL } from '@/lib/giftSelect';
+import { offerFor } from '@/lib/livePrices';
 
 type Niche = NicheTag;
 
@@ -559,7 +560,7 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
         name: p.name,
         image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
         ...(p.description ? { description: p.description } : {}),
-        offers: { '@type': 'Offer', price: p.price, priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: p.affiliateUrl },
+        ...offerFor(p),
         ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
       },
     })),

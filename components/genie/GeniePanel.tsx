@@ -17,6 +17,7 @@ import { usePathname } from 'next/navigation';
 import { usePins } from '@/lib/usePins';
 import { LampIcon, SparkleIcon, TokenIcon } from '@/components/genie/GenieIcons';
 import { TRAITS, MAX_TRAITS } from '@/lib/genie/traits';
+import Price from '@/components/Price';
 
 // Genie sub-brand palette (distinct from the site's coral): mystic purple
 // #6D28D9 / deep #4C1D95, lavender wash #F5F3FF, border #DDD6FE, lamp gold
@@ -467,7 +468,7 @@ export default function GeniePanel() {
                   </div>
                 </div>
                 <span className="shrink-0 text-xs font-extrabold" style={{ color: '#1A202C' }}>
-                  {pick.product.priceDisplay}
+                  <Price product={pick.product} />
                 </span>
               </a>
             ))}

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useFavorites } from '@/lib/useFavorites';
 import { trackAffiliateClick } from '@/lib/clickTracking';
+import Price from '@/components/Price';
 
 export default function FavoritesSidebar() {
   const { favorites, remove } = useFavorites();
@@ -90,7 +91,7 @@ export default function FavoritesSidebar() {
                     {product.name}
                   </p>
                   <p className="text-sm font-extrabold mt-0.5" style={{ color: '#F04E30' }}>
-                    {product.priceDisplay}
+                    <Price product={product} />
                   </p>
                 </div>
 
