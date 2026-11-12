@@ -22,9 +22,10 @@
 //     current figure, so this client assumes it is small.
 //   - Going over returns 429 TooManyRequests.
 // What this client does about it, for every script that uses it:
-//   1. Paces all calls at least MIN_INTERVAL_MS apart, across separate runs too.
+//   1. Waits 2 seconds after each response before the next call, across
+//      separate runs too (see minIntervalMs for why not 1 second).
 //   2. Counts calls over a rolling 24 hours in .cache/creators-api.json and
-//      refuses to go past a self-imposed cap (AMAZON_API_DAILY_CAP, default 300).
+//      refuses to go past a self-imposed cap (AMAZON_API_DAILY_CAP, default 150).
 //   3. On a 429 it stops at once, does not retry, and refuses further calls
 //      for a cooling-off period (Retry-After if Amazon sends one, else 30 min).
 //   4. Reuses the access token for its full hour instead of asking for a new
@@ -98,17 +99,23 @@ export class BudgetError extends Error {
 }
 
 const num = (v, fallback) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Number(v) : fallback);
-// Never faster than 1.1 s between calls, whatever the environment says.
-const minIntervalMs = () => Math.max(1100, num(process.env.AMAZON_API_MIN_INTERVAL_MS, 1100));
-const dailyCap = () => num(process.env.AMAZON_API_DAILY_CAP, 300);
+// Two seconds between calls, measured from when the previous response ARRIVED,
+// and never less than 1.5 s whatever the environment says. On 2026-11-11 a run
+// paced at 1.1 s between request starts was throttled after 130 calls in a row:
+// network timing can bunch two requests into the same second at Amazon's end.
+const minIntervalMs = () => Math.max(1500, num(process.env.AMAZON_API_MIN_INTERVAL_MS, 2000));
+// 150 until Amazon's real allowance is known: the first throttle came at 147
+// calls in 24 hours, and it is not yet clear whether that was the per-second
+// or the per-day limit.
+const dailyCap = () => num(process.env.AMAZON_API_DAILY_CAP, 150);
 const COOL_OFF_MS = 30 * 60 * 1000;
 
 function readState() {
   try {
     const s = JSON.parse(readFileSync(STATE_FILE, 'utf8'));
-    return { calls: Array.isArray(s.calls) ? s.calls : [], throttledUntil: s.throttledUntil || 0, token: s.token || null, lastThrottle: s.lastThrottle || null };
+    return { calls: Array.isArray(s.calls) ? s.calls : [], lastDoneAt: s.lastDoneAt || 0, throttledUntil: s.throttledUntil || 0, token: s.token || null, lastThrottle: s.lastThrottle || null };
   } catch {
-    return { calls: [], throttledUntil: 0, token: null, lastThrottle: null };
+    return { calls: [], lastDoneAt: 0, throttledUntil: 0, token: null, lastThrottle: null };
   }
 }
 
@@ -163,8 +170,9 @@ async function apiCall(op, body) {
     throw new BudgetError(`daily cap reached: ${state.calls.length} calls in the last 24 hours (cap ${cap}). Raise AMAZON_API_DAILY_CAP only if Amazon's allowance is known to be higher.`);
   }
 
-  // Pace against the most recent call, including one made by an earlier run.
-  const last = state.calls.length ? Math.max(...state.calls) : 0;
+  // Pace against the most recent call, including one made by an earlier run:
+  // from when it finished if known, otherwise from when it started.
+  const last = Math.max(state.lastDoneAt || 0, state.calls.length ? Math.max(...state.calls) : 0);
   const wait = last + minIntervalMs() - Date.now();
   if (wait > 0) await sleep(wait);
 
@@ -186,6 +194,9 @@ async function apiCall(op, body) {
     body: JSON.stringify({ marketplace: MARKETPLACE, partnerTag: process.env.AMAZON_PARTNER_TAG, ...body }),
   });
   const text = await r.text();
+  state = prune(readState());
+  state.lastDoneAt = Date.now();
+  writeState(state);
 
   // Keep any allowance-related response headers from the latest call, in case
   // Amazon reports the limit there (it does not publish the current figure).
