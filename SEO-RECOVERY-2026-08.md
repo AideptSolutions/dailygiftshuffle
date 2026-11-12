@@ -959,3 +959,36 @@ Treat this page as protected from now on, alongside /stocking-stuffers and its
 spokes, /gifts-for-a-crush, /luxury-gifts-under-50, /gifts-for-girlfriend,
 /white-elephant-gifts and the homepage description: do not shorten or reword
 their titles or descriptions without the owner's say-so.
+
+### 2026-11-11: GEO read (AI assistant visibility), and a flag on /birthday-gift-ideas
+
+Read-only check, nothing changed.
+- Bing Webmaster Tools, AI Performance (citations in Microsoft Copilot and
+  partners), Aug 12 to Nov 8, 2026: 15.4K citations, about 7 cited pages a day.
+  Recent days 109 to 280 a day; peak 600 on Oct 3.
+- Cited pages: /birthday-gift-ideas 10.9K (71 percent), /stocking-stuffers
+  1.8K, /luxury-gifts-under-200 348, /white-elephant-gifts 290,
+  /gift-ideas-for-teens 253, /gifts-for-a-crush 237, /christmas-gifts-for-her
+  223, /best-gaming-gifts-2026 208, /halloween-party-gifts 137,
+  /category/fitness 105, /best-birthday-gifts-2026 97.
+- Top grounding queries are the birthday cluster: "birthday gift" 1.6K
+  (39.6 percent citation share), "birthday gifts" 1.4K, "birthday gift ideas"
+  1.2K, "bestbirth day gifts" 816, "birthday present" 582; also "best white
+  elephant gifts 2026" 203 and "stocking stuffers for 2026" 110.
+- AI crawlers are not blocked: GPTBot, OAI-SearchBot, ChatGPT-User,
+  PerplexityBot and ClaudeBot user agents all get 200 with the full page;
+  robots.txt allows everything. The answer block and FAQs are in the plain
+  HTML, so no script is needed to read them.
+- The OpenAI business profile TXT record
+  (openai-business-profile.thegiftshuffle.com) resolves. Whether Verify was
+  clicked before the Nov 10 expiry is not known.
+
+FLAG: /birthday-gift-ideas is the most AI-cited page on the site, and its
+title and description were reworded on 2026-11-10 (commit 632c457). The Bing
+click table showed 1 click, so it was not on the protected list; the citation
+table was not checked first. Its page content, answer block and FAQs are
+unchanged. Other cited pages whose title or description changed that day:
+/luxury-gifts-under-200, /gift-ideas-for-teens, /christmas-gifts-for-her,
+/best-gaming-gifts-2026, /halloween-party-gifts, /category/fitness. Restore is
+pending the owner's decision. LESSON: before any title or description pass,
+check BOTH Bing tables, Search Performance by page and AI Performance by page.
