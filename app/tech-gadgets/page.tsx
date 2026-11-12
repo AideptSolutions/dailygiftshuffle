@@ -241,7 +241,7 @@ export default function TechGadgetsPage() {
                 key={p.id}
                 href={p.affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener sponsored"
                 className="bg-white rounded-2xl p-4 shadow-sm border border-[#E2E8F0] hover:shadow-md transition-shadow flex flex-col"
               >
                 <div className="aspect-square w-full mb-3 rounded-xl overflow-hidden bg-gray-50">

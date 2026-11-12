@@ -96,7 +96,7 @@ export default function PicksPage() {
                       <a
                         href={product.affiliateUrl}
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="noopener sponsored"
                         className="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-2 rounded-lg transition-colors"
                       >
                         Buy on Amazon

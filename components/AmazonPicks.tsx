@@ -5,7 +5,7 @@
 import Image from 'next/image';
 import type { AnyProduct } from '@/lib/giftSelect';
 
-const linkProps = { target: '_blank', rel: 'noopener noreferrer sponsored' } as const;
+const linkProps = { target: '_blank', rel: 'noopener sponsored' } as const;
 
 export function PickThumbLink({ product }: { product: AnyProduct }) {
   return (

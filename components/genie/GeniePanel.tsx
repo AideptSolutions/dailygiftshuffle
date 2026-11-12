@@ -442,7 +442,7 @@ export default function GeniePanel() {
                 key={pick.product.id}
                 href={pick.product.affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="noopener sponsored"
                 className="flex items-center gap-3 rounded-2xl bg-white border border-[#DDD6FE] p-3 hover:border-[#6D28D9]/40 hover:shadow-md transition-all"
               >
                 <span className="text-base font-extrabold text-gray-300 w-5 shrink-0">{i + 1}</span>

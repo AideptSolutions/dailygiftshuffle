@@ -101,7 +101,7 @@ export default function ProductModal({ product, onClose }: Props) {
             <a
               href={product.affiliateUrl}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="noopener sponsored"
               className="btn-amazon block w-full text-center font-bold py-4 rounded-2xl text-base"
             >
               Buy on Amazon

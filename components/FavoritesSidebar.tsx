@@ -117,7 +117,7 @@ export default function FavoritesSidebar() {
                   favorites.forEach((p, i) => {
                     trackAffiliateClick({ url: p.affiliateUrl, name: p.name });
                     setTimeout(() => {
-                      window.open(p.affiliateUrl, '_blank', 'noopener,noreferrer');
+                      window.open(p.affiliateUrl, '_blank', 'noopener');
                     }, i * 300);
                   });
                 }}

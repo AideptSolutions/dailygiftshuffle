@@ -280,7 +280,7 @@ export default function WishlistClient() {
                       <a
                         href={product.affiliateUrl}
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="noopener sponsored"
                         className="text-xs btn-amazon font-bold px-3 py-1.5 rounded-lg"
                       >
                         Buy on Amazon

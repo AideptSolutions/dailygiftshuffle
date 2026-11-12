@@ -237,7 +237,7 @@ export default function NewDadsGiftsPage() {
                       <a
                         href={g.link}
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="noopener sponsored"
                         className="inline-block mt-2 text-xs font-bold text-white px-4 py-1.5 rounded-full"
                         style={{ background: '#F04E30' }}
                       >

@@ -175,7 +175,7 @@ export default function Top10FathersDayGiftsPage() {
                 <a
                   href={p.affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="noopener sponsored"
                   className="flex items-start gap-4 rounded-2xl border border-[#E2E8F0] bg-white hover:border-[#F04E30]/40 hover:shadow-md transition-all p-4 group"
                 >
                   {/* Rank */}

@@ -99,7 +99,7 @@ export default function SelectionsPage() {
                       <a
                         href={product.affiliateUrl}
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="noopener sponsored"
                         onClick={(e) => e.stopPropagation()}
                         className="btn-amazon font-bold text-xs py-2 px-4 rounded-xl inline-block"
                       >
@@ -138,7 +138,7 @@ export default function SelectionsPage() {
                       // Open each affiliate link in a new tab so the user can add all to their Amazon cart
                       favorites.forEach((p, i) => {
                         setTimeout(() => {
-                          window.open(p.affiliateUrl, '_blank', 'noopener,noreferrer');
+                          window.open(p.affiliateUrl, '_blank', 'noopener');
                         }, i * 300); // slight stagger to avoid popup blockers
                       });
                     }}

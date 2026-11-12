@@ -38,7 +38,7 @@ export default function FeaturedGifts() {
             key={product.id}
             href={product.affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer sponsored"
+            rel="noopener sponsored"
             className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E2E8F0] hover:shadow-md hover:border-[#F04E30]/30 transition-all flex flex-col group"
           >
             <div className="relative w-full bg-gray-50" style={{ paddingBottom: '75%' }}>

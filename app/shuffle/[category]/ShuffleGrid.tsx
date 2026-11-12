@@ -160,7 +160,7 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
                 <a
                   href={p.affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="noopener sponsored"
                   onClick={(e) => e.stopPropagation()}
                   className="mt-2 w-full btn-amazon text-xs font-bold py-1.5 rounded-lg flex items-center justify-center"
                 >

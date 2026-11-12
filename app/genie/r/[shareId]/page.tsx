@@ -73,7 +73,7 @@ export default async function SharedGenieRunPage({ params }: Props) {
               key={pick.product.id}
               href={pick.product.affiliateUrl}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="noopener sponsored"
               className="flex items-center gap-4 rounded-2xl border border-[#DDD6FE] p-4 hover:border-[#6D28D9]/40 hover:shadow-md transition-all"
               style={{ background: '#F5F3FF' }}
             >

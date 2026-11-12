@@ -91,7 +91,7 @@ export default function ProductCard({
       <a
         href={product.affiliateUrl}
         target="_blank"
-        rel="noopener noreferrer sponsored"
+        rel="noopener sponsored"
         aria-label={`View ${product.name} on Amazon`}
         className="absolute inset-0 z-[1] rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F04E30]"
       />

@@ -496,7 +496,7 @@ export default function HomeFeaturedSection({
                 <a
                   href={product.affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="noopener sponsored"
                   onClick={(e) => e.stopPropagation()}
                   aria-label={`View ${product.name} on Amazon`}
                   className="mt-1.5 flex items-center gap-1.5 w-fit rounded-md -mx-1 px-1 py-0.5 hover:bg-white/70 transition-colors"

@@ -174,7 +174,7 @@ function ProductCard({
       <a
         href={product.affiliateUrl}
         target="_blank"
-        rel="noopener noreferrer sponsored"
+        rel="noopener sponsored"
         className="btn-amazon block text-center text-xs font-bold py-2 px-3"
       >
         Buy on Amazon
