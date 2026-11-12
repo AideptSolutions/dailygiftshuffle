@@ -984,3 +984,23 @@ that page").
 - The 44 "likely replacements" found by search are NOT to be applied: the
   current IDs mostly work.
 - scripts/check-dead-links.mjs --via-api is disabled for the same reason.
+
+### 2026-11-11: three wrong product IDs fixed, and the link check page
+
+Owner approved (commit f6d4ee6), verified in the live product feed:
+- tech-011 JBL Flip 6 now links to B09GJZKQ3K at 129.95 (was listed 99 and
+  pointed at an unrelated item). The site's image shows a black speaker and
+  this listing is the blue one; no plain new black listing came back in search,
+  only a bundle and a renewed unit.
+- aish-005 Samsung Galaxy Ring now links to B0D3JF9VF8 at 399.99 (pointed at a
+  MacBook Air).
+- her-008 Cuyana Classic Essential Tote removed (pointed at another brand's
+  bag; Cuyana is not sold on Amazon).
+Live feed: 1,297 products.
+
+Link check page for the owner: https://claude.ai/artifact/BVg47ffBaKQdLYbg8YQeZ2
+It lists the 81 products the API would not return by ID that have not been
+hand-checked (86 such IDs, less the 4 confirmed live and the removed serum).
+Links carry no affiliate tag. The owner marks each Works, Dead or Wrong and
+pastes the results back. Until those results arrive, none of the 81 is to be
+changed. API usage: 241 calls in 24 hours, no throttle since pacing went to 2 s.
