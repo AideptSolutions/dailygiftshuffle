@@ -1048,3 +1048,29 @@ POLICY POINTS THAT APPLY TO THIS SITE (quoted from the owner's PDF).
 - The first page of the PDF carries a banner saying the signed-in e-mail "is
   not connected to an Associates account". Owner to confirm which login that
   was.
+
+### 2026-11-11: referrer no longer hidden on Amazon links (commit 40a9848)
+
+All product links to Amazon now use rel="noopener sponsored" (was "noopener
+noreferrer sponsored"): 17 link components and pages, plus the two that open a
+product from a button (selections, FavoritesSidebar). /tech-gadgets product
+links also gained the sponsored marker. Unchanged: links to other sites, the
+admin page, the Genie share buttons. The site's Referrer-Policy header stays
+strict-origin-when-cross-origin, so Amazon receives the site's origin and not
+the full page path. Verified: build has 0 of 5,213 Amazon links with
+noreferrer; live re-scan of all 126 pages shows none once cached copies
+refreshed (32 stale links right after deploy, 0 a few minutes later). Tags
+unchanged: 5,186 of 5,186 still carry dailygiftshuf-20. Rule added to CLAUDE.md.
+
+SEARCH LINKS, NOT YET FIXED. 11 products link to an Amazon search and not a
+product page (74 link placements): gp-u25-3 Talking Photo Album, gp-100-1 Echo
+Show 8, kids-lego-1 LEGO Technic Bugatti Chiron, emp-100-2 Moleskine Smart
+Writing Set, him-trend-1 Cometeer Coffee Capsules, couples-150-1 Couples
+Matching Robes, sis-250-1 Dyson Supersonic Gift Set (all data/products.ts);
+out-001 LifeStraw, out-009 YETI Roadie 24, out-015 Anker 24W Solar Panel
+(data/products-catalog.ts); wc-jersey-usa USA Soccer Jersey
+(data/seasonal-products.ts). Replacing them needs a real product ID per item,
+which means an owner hand check or the Amazon API. Their listed prices, star
+ratings and review counts cannot be traced to a specific product, since no
+product is identified. Waiting on the owner (hand check list given 2026-11-11)
+or API access.
