@@ -721,3 +721,47 @@ Amazon blocks automated checks, so new listings are verified by the owner by han
 - Fitbit Inspire 3 (Midnight Zen), B0B5F9SZW7: listing link from the owner; image saved
   (tech26-fitbit-inspire3.jpg, retailer photo) but not added until rating, reviews, price
   and seller are confirmed.
+
+## Creators API status 2026-11-11: ELIGIBLE, serving data
+
+The account now passes the 10 qualifying sales in 30 days rule. Tested with the
+credential already in `.env.all` (the one created 2026-08-15 under application
+The-Gift-Shuffle; Associates Central also lists two other active credentials
+that this project does not use).
+- `getItems` returns 200 with title, price, image link, parent ASIN and a tagged
+  detail page URL. `searchItems` (keyword search) returns 200 as well.
+- Customer reviews are NOT served: `customerReviews.count` and
+  `customerReviews.starRating` come back empty for every product tried (5
+  products, including when requested alone). No error, just no data.
+- Eligibility is a rolling 30-day test. If sales drop, calls go back to
+  `403 AssociateNotEligible`, so nothing on the live site should depend on a
+  live API call until volume is steadier.
+- `scripts/lib/creators-api.mjs` now sends a user agent of the form
+  `Agent/<name>` on every request, as the Associates Program IP License
+  (section 4, Agents) requires of software acting for the account. Set
+  `AMAZON_AGENT_NAME` to say who runs the script (default
+  TheGiftShuffleCatalogTools).
+
+License rules that apply once API data is used (IP License section 2):
+- (h) API data may be cached for 24 hours at most, then must be refreshed;
+  product images from the API may not be stored at all, only linked for up to
+  24 hours. ASINs may be stored indefinitely.
+- (i) Prices refreshed less than hourly need a date and time stamp next to
+  them, plus the "accurate as of the date/time indicated" disclaimer.
+- (k) A plain-view notice that certain content on the site comes from Amazon.
+- Participation Requirements 2(b) and 6(t): prices and star ratings may be
+  shown only when obtained through the API.
+So a one-time price copy into the catalog files is not compliant on its own;
+a daily refresh with a timestamp would be.
+
+First use, 2026-11-11: keyword lookups for the 11 products that link to an
+Amazon search page. Clean matches: Echo Show 8 B0DC8ZMR1P at $199.99 (listed
+$149.99), LifeStraw B006QF3TW4 at $17.97 (listed $19.95), YETI Roadie 24
+B0F1B4FP49 at $250 (listed $249.99). Near match: Dyson Supersonic Origin
+B0F5DMBGT6 at $399.99 or Nural B0D71BKD7Q at $449.99 (listed as a $429.99 gift
+set). No real match at the listed price: Talking Photo Album (real ones $44.95
+to $54.95, listed $24.99), LEGO Technic Bugatti Chiron 42083 (retired, $599.95
+from a reseller, listed $349.99), Moleskine Smart Writing Set ($279, listed
+$129.99), Cometeer capsules (not sold on Amazon), couples robes ($45.99
+unbranded, listed $79.99), Anker 24W solar panel (not found), USA soccer jersey
+(reseller or unbranded only). Nothing changed yet; owner to decide.

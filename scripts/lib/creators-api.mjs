@@ -38,6 +38,15 @@ const TOKEN_HOST = {
 export const API_BASE = 'https://creatorsapi.amazon';
 export const MARKETPLACE = process.env.AMAZON_MARKETPLACE || 'www.amazon.com';
 
+// Associates Program IP License, section 4 (Agents): software acting on the
+// account's behalf must identify itself in every request with a user agent of
+// the form "Agent/[agent name]". Set AMAZON_AGENT_NAME to say who is running
+// the script (for example ClaudeCode); the default names this project's tools.
+export function agentUserAgent() {
+  const name = (process.env.AMAZON_AGENT_NAME || 'TheGiftShuffleCatalogTools').replace(/[^A-Za-z0-9._-]/g, '');
+  return `Agent/${name} (+https://www.thegiftshuffle.com)`;
+}
+
 let cached = null; // { token, expiresAt }
 
 export async function getAccessToken() {
@@ -54,7 +63,7 @@ export async function getAccessToken() {
 
   const r = await fetch(`${host}/auth/o2/token`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', 'User-Agent': agentUserAgent() },
     body: JSON.stringify({
       grant_type: 'client_credentials',
       client_id: id,
@@ -95,6 +104,7 @@ export async function getItems(asins, resources = DEFAULT_RESOURCES) {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
       'x-marketplace': MARKETPLACE,
+      'User-Agent': agentUserAgent(),
     },
     body: JSON.stringify({
       itemIds: asins,
