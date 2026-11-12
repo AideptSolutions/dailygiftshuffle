@@ -25,7 +25,7 @@
 //   1. Waits 2 seconds after each response before the next call, across
 //      separate runs too (see minIntervalMs for why not 1 second).
 //   2. Counts calls over a rolling 24 hours in .cache/creators-api.json and
-//      refuses to go past a self-imposed cap (AMAZON_API_DAILY_CAP, default 150).
+//      refuses to go past a self-imposed cap (AMAZON_API_DAILY_CAP, default 300).
 //   3. On a 429 it stops at once, does not retry, and refuses further calls
 //      for a cooling-off period (Retry-After if Amazon sends one, else 30 min).
 //   4. Reuses the access token for its full hour instead of asking for a new
@@ -104,10 +104,11 @@ const num = (v, fallback) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Numb
 // paced at 1.1 s between request starts was throttled after 130 calls in a row:
 // network timing can bunch two requests into the same second at Amazon's end.
 const minIntervalMs = () => Math.max(1500, num(process.env.AMAZON_API_MIN_INTERVAL_MS, 2000));
-// 150 until Amazon's real allowance is known: the first throttle came at 147
-// calls in 24 hours, and it is not yet clear whether that was the per-second
-// or the per-day limit.
-const dailyCap = () => num(process.env.AMAZON_API_DAILY_CAP, 150);
+// A backstop against a runaway script, not Amazon's limit (which is unknown and
+// at least 148). The first throttle, at 147 calls in 24 hours, turned out to be
+// the per-second limit: a call 31 minutes later went through. Raise the cap for
+// one run with AMAZON_API_DAILY_CAP when a job needs more.
+const dailyCap = () => num(process.env.AMAZON_API_DAILY_CAP, 300);
 const COOL_OFF_MS = 30 * 60 * 1000;
 
 function readState() {
