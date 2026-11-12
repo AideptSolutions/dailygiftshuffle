@@ -1089,7 +1089,8 @@ Wording change: /gifts-under-100 said "a crystal wine decanter set"; it now
 says "a crystal decanter set", since wed-wine-decanter is a whiskey decanter
 set (which is what its picture always showed).
 
-Known gaps left as they are:
+Known gaps as of the replacement commits (the image gap was closed later the
+same day, see "product pictures brought in line" below):
 - Images that no longer match exactly: fin-006 (picture shows a canvas pouch,
   product is a black padfolio), garden-012 (picture shows a test-tube kit,
   Soil Savvy is a mail-in box; this mismatch predates the change),
@@ -1109,3 +1110,41 @@ Known gaps left as they are:
   for each, plus stars and number of ratings for the 19). When results come
   back, enter the stars and ratings, and swap or remove anything marked
   Problem.
+
+### 2026-11-12: product pictures brought in line with the replacements
+
+Owner asked for the pictures that no longer matched to be fixed. Twelve
+replaced, same file paths (`/images/products/<id>.jpg`), so no catalog edit:
+
+| id | Product | Picture now shows | Source |
+|---|---|---|---|
+| fin-006 | Cossini Zippered Business Portfolio | the padfolio open and closed | cossini.com |
+| stuffer-hothands | HotHands Hand Warmers 10 Pair Pack | the 10-pair Hand Warmer Value Pack | walmart.com |
+| wc-15 | adidas Argentina 26 Home Messi Jersey | 2026 home shirt, front and Messi 10 back | aztecasoccer.com |
+| wc-34 | adidas Japan 26/27 Home Authentic Jersey | 2026 home shirt, front | soccerplus.net |
+| garden-012 | Soil Savvy Soil Test Kit | the Soil Savvy box | plantaddicts.com |
+| aish-002 | Google Nest Thermostat (Charcoal) | the charcoal Nest Thermostat | sears.com |
+| kid-001 | Osmo Little Genius Starter Kit for iPad | the Little Genius box | bestbuy.com |
+| toy-bs-4 | Oball Ball and Rattle Gift Set | the ball and the rattle | walmart.com |
+| bty-006 | Good Molecules Toner and Serum Set | the toner and the serum | makeyebrush.com |
+| garden-011 | Terracotta Pots with Saucers (12-Pack) | twelve small pots with saucers | walmart.com |
+| trv-002 | Eagle Creek Reveal Compression Cube Set | the two black cubes | idealo.de |
+| fri-004 | Yeti Hopper Flip 12 | the Charcoal cooler | shopeagleeye.com |
+
+Process, same as the November batches: Bing image search in the browser pane,
+Amazon and marketplace hosts filtered out (also re-hosted Amazon listing
+images, recognisable by `_AC_` in the file name), up to eight candidates per
+product downloaded to the scratchpad and picked by eye from contact sheets,
+then trimmed and set on white at 800x800 with an even margin. A second search
+was needed for HotHands (the first round only had the Game Day, Canadian and
+two-pack packaging), the portfolio and the Oball set (larger versions of the
+right shot). Sources are logged in `data/image-sources.json` with
+`"replaced": "2026-11-12"`. Every finished picture was checked on a final
+contact sheet. The old pictures are not in the repo any more; they are in
+git history before this commit.
+
+Left as they were, on purpose: teen-003 (the grip in the picture is already
+dark), stk-004 (shows a black scratch map, the linked Original is the same
+product in its classic colours), him-004 and gaming-001 (the newer model looks
+the same), and the lifestyle scenes for the mug, tumblers, decanter and
+candles, which still describe the product.
