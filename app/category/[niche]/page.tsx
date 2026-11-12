@@ -74,7 +74,7 @@ const NICHE_META: Record<Niche, NicheMeta> = {
   fitness: {
     title: '30+ Best Fitness Gifts for 2026',
     heading: 'Best Fitness & Wellness Gifts',
-    description: 'The best fitness gifts for 2026, ranked by real reviews: massage guns, resistance bands, recovery tools and smart trackers for runners, lifters and yoga lovers.',
+    description: 'The best fitness gifts for 2026, ranked by real reviews: massage guns, resistance bands, recovery tools and smart trackers for runners, lifters and yoga lovers. Find the perfect pick in seconds.',
     coverImage: '/img/category-heroes/fitness.jpg',
     faqs: [
       { q: 'What are the best fitness gifts under $50?', a: 'Resistance bands, foam rollers, a quality water bottle, and workout journals are fantastic fitness gifts under $50.' },

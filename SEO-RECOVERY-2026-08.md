@@ -989,8 +989,8 @@ click table showed 1 click, so it was not on the protected list; the citation
 table was not checked first. Its page content, answer block and FAQs are
 unchanged. Other cited pages whose title or description changed that day:
 /luxury-gifts-under-200, /gift-ideas-for-teens, /christmas-gifts-for-her,
-/best-gaming-gifts-2026, /halloween-party-gifts, /category/fitness. Restore is
-pending the owner's decision. LESSON: before any title or description pass,
+/best-gaming-gifts-2026, /halloween-party-gifts, /category/fitness. All seven
+were restored on 2026-11-11 (see the section of that date below). LESSON: before any title or description pass,
 check BOTH Bing tables, Search Performance by page and AI Performance by page.
 
 ### 2026-11-11: affiliate link health check and Amazon reports read
@@ -1074,3 +1074,37 @@ which means an owner hand check or the Amazon API. Their listed prices, star
 ratings and review counts cannot be traced to a specific product, since no
 product is identified. Waiting on the owner (hand check list given 2026-11-11)
 or API access.
+
+### 2026-11-11: titles and descriptions restored on the seven AI-cited pages
+
+Owner asked for all seven AI-cited pages changed on 2026-11-10 to go back to
+their original titles and descriptions. Restored exactly to the pre-audit
+text (commit 791c876), including the " | TheGiftShuffle" suffix on the page
+title and the share title:
+
+| Page | Restored title | Description |
+|---|---|---|
+| /birthday-gift-ideas | Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget, with suffix (87) | original 213 characters |
+| /luxury-gifts-under-200 | Luxury Gifts Under $200: 30 Premium Picks That Punch Above Their Price, with suffix (87) | never changed |
+| /gift-ideas-for-teens | Gift Ideas for Teens: Trending Gifts They'll Actually Want, with suffix (75) | original 174 characters |
+| /christmas-gifts-for-her | Christmas Gifts for Her 2026: 45 Ideas She Will Actually Love, with suffix (78) | never changed |
+| /best-gaming-gifts-2026 | Best Gaming Gifts for 2026: 55 Top-Rated Picks for Gamers, with suffix (74) | original 205 characters |
+| /halloween-party-gifts | Halloween Party Essentials 2026: 20 Host-Tested Picks, with suffix (70) | original 178 characters |
+| /category/fitness | never changed (30+ Best Fitness Gifts for 2026, with suffix) | original 194 characters |
+
+Kept on purpose: the author byline and Article markup, the canonical tags,
+the sitemap dates and the related links. The Article headline still drops the
+suffix (GuideByline does that itself). /category/luxury and /category/gaming
+keep their shortened descriptions; they are not in the citation table.
+
+These seven now join the protected list, with /stocking-stuffers and its
+spokes, /gifts-for-a-crush, /luxury-gifts-under-50, /gifts-for-girlfriend,
+/white-elephant-gifts, /best-birthday-gifts-2026 and the homepage description:
+do not shorten or reword their titles or descriptions without the owner's
+say-so. The rule in CLAUDE.md about 60-character titles does not apply to
+protected pages.
+
+What to watch: the daily citation count for /birthday-gift-ideas in Bing
+Webmaster Tools, AI Performance. The reworded title was live for about one
+day (2026-11-10 evening to 2026-11-11), so any dip in that window is not
+evidence either way.

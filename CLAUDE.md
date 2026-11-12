@@ -47,6 +47,8 @@ All products live in code: `data/products.ts` and `data/products-catalog.ts`, me
 3. After the page is committed, run `node scripts/page-dates.mjs HEAD /your-route` to record its dates in `lib/pageDates.json` (sitemap lastmod, the visible "Updated" line and the markup all read it). Refresh a route only after a real content review, never every page at once.
 4. Keep the full `<title>` at 60 characters or fewer; drop the " | TheGiftShuffle" suffix if it does not fit.
 
+**Protected titles and descriptions.** Never shorten or reword the title or description of a page that earns search clicks or AI citations without asking the owner first, even when it runs long: `/stocking-stuffers` and its spokes, `/gifts-for-a-crush`, `/luxury-gifts-under-50`, `/gifts-for-girlfriend`, `/white-elephant-gifts`, `/best-birthday-gifts-2026`, `/birthday-gift-ideas`, `/luxury-gifts-under-200`, `/gift-ideas-for-teens`, `/christmas-gifts-for-her`, `/best-gaming-gifts-2026`, `/halloween-party-gifts`, `/category/fitness` and the homepage description. Before any title or description pass, check both Bing Webmaster Tools tables: Search Performance by page and AI Performance by page (see `SEO-RECOVERY-2026-08.md`).
+
 ## Amazon Creators API
 
 The API is live for this account (since 2026-11-11) and is the only approved way to read Amazon data; never fetch amazon.com pages by script or browser automation. All calls go through `scripts/lib/creators-api.mjs`, which paces calls (1 per 1.1 s), caps them (300 per rolling 24 hours), stops dead on a 429 and identifies itself with an `Agent/<name>` user agent as Amazon requires. Do not bypass it with a direct `fetch`.

@@ -5,7 +5,7 @@ import { curate, shufflePool, ALL } from '@/lib/giftSelect';
 const URL = 'https://www.thegiftshuffle.com/christmas-gifts-for-her';
 
 export const metadata: Metadata = {
-  title: 'Christmas Gifts for Her 2026: 45 Ideas She Will Love',
+  title: 'Christmas Gifts for Her 2026: 45 Ideas She Will Actually Love | TheGiftShuffle',
   description:
     'The best Christmas gifts for her in 2026: top-rated ideas for your wife, girlfriend, mom or sister, from cozy and luxe to personal and fun, at every budget.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'unique christmas gifts for her',
   ],
   openGraph: {
-    title: 'Christmas Gifts for Her 2026: 45 Ideas She Will Love',
+    title: 'Christmas Gifts for Her 2026: 45 Ideas She Will Actually Love | TheGiftShuffle',
     description: 'Top-rated Christmas gift ideas for your wife, girlfriend, mom or sister, at every budget.',
     type: 'website',
     url: URL,
