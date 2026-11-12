@@ -46,3 +46,12 @@ All products live in code: `data/products.ts` and `data/products-catalog.ts`, me
 2. Template pages get the author byline and Article markup automatically. On a custom page, put `<GuideByline path="/your-route" headline={String(metadata.title)} description={metadata.description} image="/images/heroes/your-route.jpg" />` right after the H1.
 3. After the page is committed, run `node scripts/page-dates.mjs HEAD /your-route` to record its dates in `lib/pageDates.json` (sitemap lastmod, the visible "Updated" line and the markup all read it). Refresh a route only after a real content review, never every page at once.
 4. Keep the full `<title>` at 60 characters or fewer; drop the " | TheGiftShuffle" suffix if it does not fit.
+
+## Amazon Creators API
+
+The API is live for this account (since 2026-11-11) and is the only approved way to read Amazon data; never fetch amazon.com pages by script or browser automation. All calls go through `scripts/lib/creators-api.mjs`, which paces calls (1 per 1.1 s), caps them (300 per rolling 24 hours), stops dead on a 429 and identifies itself with an `Agent/<name>` user agent as Amazon requires. Do not bypass it with a direct `fetch`.
+
+- Before running any API job: `node scripts/creators-api-status.mjs <product count>`. When Claude runs a script, set `AMAZON_AGENT_NAME=ClaudeCode`.
+- Never call the API from page code or an API route that a visitor or crawler can trigger; scripts and scheduled jobs only.
+- The API returns prices, titles and links but no star ratings or review counts for this account.
+- Limits, license rules (24-hour cache, price timestamps) and current status: `CATALOG-DATA-QUALITY.md`.

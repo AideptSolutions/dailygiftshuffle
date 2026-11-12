@@ -47,3 +47,6 @@ new-products-preview.html
 
 # enrichment scratch files
 scripts/_*.json
+
+# local tool state (API usage counter, short-lived access token)
+.cache/

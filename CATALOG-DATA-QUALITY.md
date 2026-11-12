@@ -765,3 +765,45 @@ from a reseller, listed $349.99), Moleskine Smart Writing Set ($279, listed
 $129.99), Cometeer capsules (not sold on Amazon), couples robes ($45.99
 unbranded, listed $79.99), Anker 24W solar panel (not found), USA soccer jersey
 (reseller or unbranded only). Nothing changed yet; owner to decide.
+
+## Creators API rate limits and the guard (2026-11-11)
+
+From Amazon's "API Rates" and "Best Programming Practices" pages, supplied by
+the owner as PDFs on 2026-11-11.
+- One call per second. A call is one transaction whether it carries 1 product
+  or 10.
+- Daily allowance: 8,640 calls a day for the first 30 days after a credential
+  is created. After that, 1 call a day for every 5 cents of shipped revenue
+  that Amazon attributes to Creators API links in the previous 30 days,
+  recalculated daily. Our credential dates from 2026-08-15, so the first 30
+  days are long over. The site's links are hand-built, not API-made, so it is
+  NOT KNOWN how much revenue Amazon counts toward this, and Amazon sends no
+  allowance figure in its responses (checked). Treat the allowance as small.
+- Over the limit returns 429 TooManyRequests.
+- Access is lost after 30 straight days with no qualifying sales and returns
+  within two days of the next shipped sale.
+- Prices may be cached 1 hour, everything else 1 day (the license allows prices
+  to stay up to 24 hours when a date and time stamp is shown).
+- Do not call the API during page rendering: crawlers would spend the allowance.
+- Links returned by the API must be used unaltered to be attributed.
+
+The guard, built into scripts/lib/creators-api.mjs so every script gets it:
+- at least 1.1 seconds between calls, including across separate runs;
+- a rolling 24-hour count in .cache/creators-api.json (gitignored) and a
+  self-imposed cap of 300 calls a day (AMAZON_API_DAILY_CAP);
+- on a 429 it stops at once, does not retry, and refuses calls for 30 minutes
+  (or longer if Amazon says so);
+- the access token is reused for its full hour;
+- 10 products per call: a pass over the 540 product IDs in the data files is
+  54 calls and about a minute.
+Tested offline with a fake network (12 checks: pacing, cap, stop on 429,
+cooling-off, token reuse, 24-hour window) and with one real call.
+
+Before any job that calls the API:
+
+    node scripts/creators-api-status.mjs 540     # usage so far, and whether a pass fits
+    node scripts/creators-api-status.mjs --ping  # one real call to confirm access
+
+Usage on 2026-11-11: 17 calls (16 during setup, 1 ping). No throttling seen.
+Owner check that would settle the allowance question: the Link Type Performance
+report in Associates Central shows sales attributed to Creators API links.
