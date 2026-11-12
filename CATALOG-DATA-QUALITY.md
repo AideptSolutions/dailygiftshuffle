@@ -897,3 +897,26 @@ LifeStraw and YETI Roadie 24 now link to real product pages at the current
 price; seven search-link entries with no real product were removed (gp-u25-3,
 kids-lego-1, emp-100-2, him-trend-1, couples-150-1, out-015, wc-jersey-usa).
 sis-250-1 (Dyson Supersonic) still uses a search link, awaiting a decision.
+
+### 2026-11-11: Dyson entries replaced (commit ab01b9a)
+
+sis-250-1 (search link, "gift set" that does not exist) replaced by two real
+listings: sis-dyson-supersonic-origin (B0F5DMBGT6, 399.99) and
+sis-dyson-supersonic-nural (B0D71BKD7Q, 449.99). IDs and prices from the API on
+2026-11-11. Images from Dyson's own site, logged in data/image-sources.json;
+the first Origin candidate was an internal cutaway on black and the second
+showed five attachments the Origin does not ship with, so the image used is the
+dryer alone from Dyson's Origin page. rating and reviewCount are 0, so no
+stars show and the products are left out of pools that filter on rating; they
+still appear on 10 built pages each. To show stars they need a hand check of
+each listing, the same as the Toniebox. Verified live in the product feed.
+
+Still a search link: dad-002 "Craft Beer-of-the-Month Club (3-Month)" in
+data/products-catalog.ts, built with the amzSearch helper, which is why the
+first sweep for literal search URLs missed it. It is in the shuffle and Genie
+feed but on no static page. Not a product Amazon sells as one listing. Owner
+to decide; recommended: remove.
+
+Open question on the 76 "not accessible" products: that API answer does not
+prove a product is gone. It can also mean a listing the API does not serve.
+Until a few are hand-checked, treat the cause as unknown.
