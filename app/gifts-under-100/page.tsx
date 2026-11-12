@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: 'What are premium-feeling gifts under $100?',
-    a: "Gifts that feel expensive under $100: a real leather wallet or card case, a crystal wine decanter set, a cashmere-blend throw blanket, a Turkish cotton robe, a smart coffee maker, or a gold-plated jewelry organizer. The key is materials and presentation: gifts that look and feel high-end but come in at a fraction of the price.",
+    a: "Gifts that feel expensive under $100: a real leather wallet or card case, a crystal decanter set, a cashmere-blend throw blanket, a Turkish cotton robe, a smart coffee maker, or a gold-plated jewelry organizer. The key is materials and presentation: gifts that look and feel high-end but come in at a fraction of the price.",
   },
   {
     q: 'What tech gifts are under $100?',
