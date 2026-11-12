@@ -1004,3 +1004,105 @@ hand-checked (86 such IDs, less the 4 confirmed live and the removed serum).
 Links carry no affiliate tag. The owner marks each Works, Dead or Wrong and
 pastes the results back. Until those results arrive, none of the 81 is to be
 changed. API usage: 241 calls in 24 hours, no throttle since pacing went to 2 s.
+
+### 2026-11-12: owner link check results, 33 broken products replaced or removed
+
+Owner finished the link check: 81 of 81 checked, 48 work, 32 dead, 1 wrong
+(wc-15, an Argentina jersey that was not the Messi #10). So 40 percent of the
+"not accessible by ID" group really was broken, well above the earlier guess
+of 10 to 25. Owner asked for suitable replacements placed in the guides.
+
+Method: one Creators API search per product (33 calls) plus 6 follow-up
+searches, 39 calls, no throttle (280 calls in the rolling 24 hours afterwards).
+Each pick is a listing the API returned with a live offer on 2026-11-12. The
+site's current image for each product was looked at, and the listing closest
+to the picture and the catalog text was chosen. Entries keep their id, image,
+tags, recipients and occasions, so guides pick the replacement up through the
+same tags; no guide names these products by id.
+
+Rating rule used: where the replacement is the same product at a live listing
+the rating and review count stay. Where it is a newer model or a comparable
+item they are set to 0 (no stars shown), because the old numbers describe a
+different product and the API returns no review data. NOTE: several guides
+and the shuffle only show products rated 4.3 or higher (lib/giftSelect.ts,
+/birthday-gifts-for-gamers, /shuffle/[category], /help-me-pick-a-gift, the
+birthday guides at 4.5), so a cleared product is missing from those until the
+owner reads its stars and review count off the Amazon page. It still shows in
+tag-based listings.
+
+Result (commits f7620ab and bd886b6, verified in the live feed: 1,293
+products, every one with a distinct, tagged product page link):
+
+| id | Was | Now | New product ID | Price | Rating |
+|---|---|---|---|---|---|
+| trv-005 | EPICKA Universal Travel Adapter ($28) | same product | B078S3M2NX | $17.99 | kept |
+| cpl-003 | Homesick Scented Candle, New Home ($34) | same product | B088SBMD51 | $29.95 | kept |
+| kid-003 | Hot Wheels Ultimate Garage Playset ($99) | same product | B07Y94W69D | $133.91 | kept |
+| garden-010 | Kneelo Garden Kneeler Pad ($32) | same product (Moss) | B0H4269CF1 | $29.99 | kept |
+| gaming-002 | Logitech G502 X Plus Wireless Gaming Mouse ($129) | same product | B092CB69Q4 | $151.99 | kept |
+| teen-003 | Magsafe Compatible Pop Socket ($19) | PopSockets MagSafe Phone Grip | B0CDF5M6TW | $29.07 | kept |
+| gaming-003 | Razer Huntsman V3 Pro TKL ($159) | same product | B0CG7BWG7J | $159.99 | kept |
+| stk-004 | Scratch Map Original ($23) | same product | B005J4OTM2 | $22 | kept |
+| garden-012 | Soil Savvy Soil Test Kit ($29) | same product | B01GIMOG8A | $26.95 | kept |
+| fri-004 | Yeti Hopper Flip 12 Soft Cooler ($250) | same product (Charcoal) | B07PB4HJLZ | $250 | kept |
+| stuffer-hothands | HotHands Hand Warmers 10 Pair Pack ($7.48) | same product | B00D7H9LIA | $7.48 | kept |
+| forher-birthstone-ring | Stackable Birthstone Ring ($68) | same listing family, one month and size | B0D1N3JZVX | $16.99 | kept |
+| kid-001 | Osmo Genius Starter Kit for iPad ($99) | Osmo Little Genius Starter Kit for iPad | B085NMRCVL | $96.99 | cleared |
+| gaming-008 | Govee RGBIC LED Gaming Light Strip 10ft ($22) | Govee RGBIC WiFi LED Strip Lights 16.4ft | B0991KSWN9 | $29.99 | cleared |
+| him-004 | Sonos Roam Portable Speaker ($179) | Sonos Roam 2 Portable Speaker | B0CY6S748H | $179 | cleared |
+| gaming-001 | SteelSeries Arctis Nova 7 ($149) | Arctis Nova 7 Wireless Gen 2 | B0FRNR8Y11 | $199.99 | cleared |
+| aish-002 | Google Nest Learning Thermostat ($249) | Google Nest Thermostat (Charcoal) | B08HRPDBFF | $104 | cleared |
+| gaming-007 | PowerA Enhanced Wired Controller for Xbox ($34) | PowerA Wired Controller for Xbox Series X and S | B08F4444HM | $27.99 | cleared |
+| trv-002 | Eagle Creek Pack-It Compression Cubes, 4-Set ($44) | Eagle Creek Pack-It Reveal Compression Cube Set (S/M) | B0D5F6SPV3 | $50 | cleared |
+| bty-006 | Good Molecules Niacinamide Brightening Toner ($12) | Good Molecules Niacinamide Toner and Serum Set | B0C5NXC7XS | $19.94 | cleared |
+| toy-bs-4 | Bright Starts Oball Easy-Grasp Ball ($4.74) | Oball Easy-Grasp Ball and Rattle Gift Set | B0CTJGXHTQ | $9.99 | cleared |
+| wc-15 | Argentina Messi #10 Soccer Jersey ($136.30) | adidas Argentina 26 Home Messi Jersey (Men) | B0F7X8Q8KH | $85.80 | cleared |
+| wc-34 | Japan National Team Soccer Jersey ($100) | adidas Japan 26/27 Home Authentic Jersey (Men) | B0F7X4XYV9 | $135 | cleared |
+| her-004 | Anthropologie Monogrammed Mug ($18) | Peony Floral Monogram Initial Mug | B07CZTSMX8 | $19.99 | cleared |
+| lux-50-1 | Crystal Whiskey Tumblers Pair ($79.99) | Hemswell Crystal Whiskey Tumblers Pair | B08R91HF2G | $64.95 | cleared |
+| wed-wine-decanter | Crystal Wine Decanter Set with Glasses ($45.99) | Crystal Whiskey Decanter Set with 4 Glasses | B093L5161Z | $49.99 | cleared |
+| garden-011 | GROWNEER 18-Pack Terracotta Pots ($23) | Terracotta Pots with Saucers, 3 Inch (12-Pack) | B07YRQHM2L | $23.99 | cleared |
+| fin-006 | Tally Counter & Finance Tracker Pouch ($45) | Cossini Zippered Business Portfolio | B01N74KH32 | $25.99 | cleared |
+| her-003 | Voluspa Japonica Collection Candle Set ($38) | Voluspa Japonica Small Pedestal Candle Set (4-Piece) | B0FHDTJXTB | $55 | cleared |
+
+Names and descriptions were rewritten wherever the listing differs from the
+old text (port counts, scents, battery hours, set sizes), and claims the API
+title does not support were dropped. Budget bands follow the catalog's own
+convention (a price on a boundary goes to the higher band).
+
+Removed, because the live replacement is a product the catalog already
+carries under another entry: teen-002 Xbox Game Pass Ultimate 3-Month (same
+as gg-gamepass-ultimate), bty-005 gua sha and jade roller set (same as
+her-25-4), trv-004 RFID passport holder (same as lux-passport-holder, and the
+catalog has three more passport holders), retro-nes-controller-coasters (same
+as retro-cartridge-coasters).
+
+MISTAKE AND LESSON: the first pass (f7620ab) did not check the new product IDs
+against the rest of the catalog. Six matched an existing entry. The feed keeps
+one entry per product ID (lib/catalogFeed.ts), so each match silently pushed
+one entry of the pair out of the feed; the feed fell from 1,297 to 1,291 and
+that drop is what exposed it. Fixed about 20 minutes later in bd886b6. Before
+adding or relinking any product, grep the new product ID across all three
+data files, and compare the feed size before and after.
+
+Wording change: /gifts-under-100 said "a crystal wine decanter set"; it now
+says "a crystal decanter set", since wed-wine-decanter is a whiskey decanter
+set (which is what its picture always showed).
+
+Known gaps left as they are:
+- Images that no longer match exactly: fin-006 (picture shows a canvas pouch,
+  product is a black padfolio), garden-012 (picture shows a test-tube kit,
+  Soil Savvy is a mail-in box; this mismatch predates the change),
+  stuffer-hothands (picture shows the Super Warmer pack, link is the 10-pair
+  hand warmer pack), wc-15 and wc-34 (pictures show older kit designs),
+  teen-003 and fri-004 (colour only).
+- Size-specific listings: wc-15 and wc-34 are men's large, the birthstone
+  rings are one month and size. The descriptions say to pick on the listing.
+- Stale prices seen in passing on entries that were NOT changed, same product
+  ID, API price on 2026-11-12: lux-passport-holder listed $35, API $13.99;
+  her-25-4 listed $28.99, API $19.95; retro-cartridge-coasters listed $9.99,
+  API $19.99; kd-50-1 listed $79.99, API $74.99; smart-govee-strip listed
+  $24.88, API $14.99. Part of the open stale-price item.
+- 17 replacements plus the two Dyson dryers have no stars until the owner
+  reads them off Amazon. A check page for that was given to the owner on
+  2026-11-12 (link in the next entry of this file once results are in).
