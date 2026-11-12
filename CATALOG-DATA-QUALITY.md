@@ -807,3 +807,93 @@ Before any job that calls the API:
 Usage on 2026-11-11: 17 calls (16 during setup, 1 ping). No throttling seen.
 Owner check that would settle the allowance question: the Link Type Performance
 report in Associates Central shows sales attributed to Creators API links.
+
+## Full catalog check through the API, 2026-11-11 (report only)
+
+One pass over every product with an Amazon product ID in data/products.ts,
+data/products-catalog.ts and data/seasonal-products.ts: 1,377 entries, 1,376
+distinct IDs, 138 calls needed. Amazon throttled the run at call 130 (429,
+"Request rate limit exceeded"), so 1,291 entries were checked and 86 were not.
+The guard stopped at once, did not retry, and blocked calls for 30 minutes. It
+is not yet known whether that was the per-second or the per-day limit; one
+test call after the cooling-off period will tell (success means per-second).
+Pacing has since been slowed to 2 seconds after each response and the default
+cap lowered to 150 a day. No catalog file was changed by the check.
+
+Of the 1,291 entries checked:
+- 76 are not accessible through the API ("ItemNotAccessible"): most likely
+  delisted, or a kind of product the API does not serve.
+- 142 came back with no price, meaning no current offer (out of stock, or a
+  parent listing with no buyable variant).
+- 1,073 came back with a price. Against the price the site shows:
+  332 within 2 percent, 140 off by 2 to 10 percent, 203 off by 10 to 25
+  percent, 207 off by 25 to 50 percent, 191 off by 50 percent or more.
+  Amazon is higher on 351 and lower on 390. Medians: listed 32.29, Amazon 29.99.
+- 277 would land in a different budget band at today's price: 48 listed under
+  25 dollars are now 25 or more, 42 listed under 50 are now 50 or more, 24
+  listed under 100 are now 100 or more.
+- 7 have a name that shares no distinctive word with the Amazon title, so the
+  product ID probably points at a different product: kids-u25-2, pets-u25-1, mom-25-1, md-007, tech-011, her-008, aish-005.
+  Several of the largest price gaps look like the same problem (for example
+  gaming-006, kids-100-1, aish-005).
+
+Read: about a third of the prices on the site are right today, and roughly one
+product in six is unavailable or unreachable. The prices were entered by hand
+or from other retailers months ago and have never been refreshed.
+
+Not accessible through the API (76 entries, our IDs):
+her-rom-1 her-rom-2 friends-u25-2 him-25-3 teens-25-2 kids-100-2
+friends-100-2 tech-50-1 fit-25-1 off-u25-1 off-u25-2 lux-50-1 kit-25-2
+pet2-25-2 cow-u25-1 md-020 analog-lamy-safari-pen gp-u25-2 gp-25-1 sis-u25-1
+kids-ridecar-1 pets-feeder-1 tech-001 fin-006 her-003 her-004 him-004
+teen-002 teen-003 kid-001 kid-003 cpl-003 fri-004 stk-004 tech-019 off-009
+mom-002 out-006 out-012 trv-002 trv-004 trv-005 aish-002 bty-005 bty-006
+gaming-001 gaming-002 gaming-003 gaming-007 gaming-008 garden-010 garden-011
+garden-012 car-seatgap-organizer sport-oofos-slides travel-toiletry-bag
+wed-wine-decanter toy-bs-4 camping-puffy-blanket
+retro-nes-controller-coasters camp-smokeless-fire-pit lux50-cashmere-beanie
+forher-instax-mini12 forher-birthstone-ring forher-satin-pajamas
+gaming2-razer-kraken-kitty her3-ugg-tasman lux3-kendra-scott bday-jbl-flip6
+selfcare-weighted-blanket stuffer-hothands gg-desk-mat-xxl hw-014
+admin-1772857746578-q9r2n admin-1773608794914-24ynf
+gdn26-welland-cedar-stump-stool
+
+Returned with no current offer (142 entries, our IDs):
+her-u25-1 mom-u25-2 her-25-2 couples-25-2 her-50-1 her-50-2 dad-50-1
+couples-50-1 pets-50-2 mom-100-2 dad-100-1 dad-100-2 couples-100-4
+friends-100-1 tech-50-2 diy-25-3 fit-u25-3 off-25-1 lux-100-3 hob-u25-2
+kit-25-3 kit-50-1 fin-u25-1 kd-50-2 u10-6 u10-19 poke-picks-1 trv-u25-1
+trv-u25-4 smt-u25-2 md-010 md-013 md-018 analog-catan-board-game
+analog-hydro-flask-32oz tech-jackery-explorer-500 gp-25-2 bro-resistance-1
+bro-25-2 bro-100-1 sis-u25-3 sis-50-1 pets-u25-4 kids-100-3 her-trend-3
+him-ooni-1 teens-trend-1 couples-250-1 tech-002 tech-005 tech-006 tech-011
+fit-003 fit-008 kit-012 off-007 off-008 lux-004 lux-005 pet-003 hob-001
+hob-003 hob-005 hob-006 him-002 teen-001 stk-002 stk-003 fit-014 fit-015
+kit-014 off-010 mom-001 par-022 out-004 out-005 out-011 out-014 cpl-005
+aish-005 bty-004 wedding-005 gaming-005 garden-004 garden-006
+car-emergency-kit sport-triggerpoint-grid sport-resistance-bands
+sport-stadium-blanket smart-blink-mini game-glorious-model-o
+game-razer-iskur-v2 travel-airtag-4pack travel-compression-socks
+travel-luggage-scale toy-bs-1 bs-02 bs-05 bs-08 bs-24 beauty-olaplex-kit
+beauty-foreo-luna-mini beauty-rare-beauty-blush beauty-makeup-organizer
+sports-stanley-quencher camping-string-lights lux-marble-coasters
+camp-folding-camp-chair lux50-leather-passport-holder
+college-sony-headphones college-academic-planner college-tapestry
+forher-loccitane-handcream forher-cashmere-wrap college-storage-drawers
+selfcare-meditation-cushion gaming2-razer-deathadder lux3-tory-burch-wallet
+lux3-longchamp-tote lux3-mvmt-watch lux3-swarovski-necklace
+selfcare-acupressure-mat craft-pottery-wheel elephant-dundie gg-ps5-ssd
+stuffer-pokemon-tin admin-1772854853091-qevcc admin-1772856864684-372c1
+admin-1772856953569-0qrbm admin-1772857013321-zg1re
+admin-1772857448333-9ejqp admin-1772858103884-9cp0i
+admin-1773605286646-l6pwi admin-1773607432989-siuqa
+admin-1773607596670-gs0r6 admin-1773608087879-auoa3
+admin-1773608296134-23vb4 admin-1773609759337-9gv00 trend26-kpop-zoey-doll
+trend26-tickle-me-elmo trend26-pikachu-puppetronic
+trend26-lego-friends-advent
+
+Same day, owner-approved (commit 184b3d8 and the one before it): Echo Show 8,
+LifeStraw and YETI Roadie 24 now link to real product pages at the current
+price; seven search-link entries with no real product were removed (gp-u25-3,
+kids-lego-1, emp-100-2, him-trend-1, couples-150-1, out-015, wc-jersey-usa).
+sis-250-1 (Dyson Supersonic) still uses a search link, awaiting a decision.
