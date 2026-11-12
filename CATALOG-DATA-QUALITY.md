@@ -1219,12 +1219,75 @@ and time next to them, and requires a refresh after that. So the site is more
 accurate today but the prices start ageing again at once. The durable fix is
 step three below.
 
-Proposed next steps, waiting for the owner's go:
-- Step two: fix the 93 wrong-product links (API search per product, same
-  method and same duplicate check as the 33 replacements).
-- Step three: a daily refresh. A scheduled job calls the API once a day
+Proposed next steps:
+- Step two: fix the 93 wrong-product links. DONE the same day, see the next
+  section.
+- Step three (still waiting for the owner's go): a daily refresh. A scheduled job calls the API once a day
   (about 138 calls), writes a prices file with the fetch time, and the site
   shows each price with its "as of" time plus Amazon's required wording; a
   price older than 24 hours, or one the API cannot supply, is replaced by
   "See price on Amazon". Needs the Amazon credential stored as a secret where
   the job runs, which is the owner's call.
+
+### 2026-11-12: the 93 held products fixed (commit 6f33a4f, step two)
+
+Owner approved. Each of the 93 was read against the Amazon title its link
+opens, and the 24 that looked wrong were also checked against the site's own
+picture. The first read ("the link points at a different product") was only
+right for about a quarter of them. Most were the right kind of product with a
+price that had simply been invented far too high or too low.
+
+- 41 price only: the link is the product the card describes. Price and
+  budget band now follow the API price.
+- 25 price and wording: same, but the card claimed something the listing does
+  not match, so the name and/or description were corrected as well. Examples:
+  Pampers Swaddlers 30-ct is a 186-count box; WHOOP 6-month is the 5.0 with 12
+  months; "Double Camping Hammock with Mosquito Net" has no net; the "leather"
+  padfolio is faux leather; the Raspberry Pi kit is the CanaKit PRO 8GB; the
+  "Custom Pet Portrait" text promised "delivery in 5-7 days" (removed, the
+  site never promises delivery times).
+- 22 relinked to the product the card describes, found by API search (27
+  calls): LEGO Technic Bugatti Chiron Pur Sport, RedThunder K10 keyboard and
+  mouse combo (NPET K10 not sold), Rhode Peptide Lip Tint, Osprey Ultralight
+  Stuff Pack (REI is not on Amazon), Polaroid Go Generation 2 with film,
+  National Geographic Hobby Rock Tumbler Kit, a 12-slot leather tool roll,
+  Philips Hue White and Color Ambiance starter kit, Divoom Pixoo-64, Cards
+  Against Humanity Family Edition, Mr. Pen journaling kit, SNOO Smart Sleeper,
+  Very Hungry Caterpillar reversible plush, Lalo First Bites feeding set
+  (Mushie sells no such set), Nike France 2026 home jersey, Rufus Teague sauce
+  and rub gift set (Traeger sells no such bundle), Manduka PRO mat, a six-watch
+  winder, a personalized wine decanter set, ChapStick Classic variety 3-pack,
+  Estee Lauder Advanced Night Repair 1 oz (the old link was the 0.23 oz travel
+  size), and a six-pack of insulated wine tumblers. Every new product ID was
+  checked against all three data files first (the lesson from the morning).
+  Rating cleared to 0 on five where the brand or product changed: gaming-006,
+  fit-012, bs-11, dad-001, baby-shower-006.
+- 3 removed: couples-100-1 (a hot air balloon ride is not an Amazon product),
+  smt-50-2 (Google Nest Mini is discontinued, only used units at about three
+  times the old price), wc-jersey-netherlands (no licensed listing found).
+- 2 left untouched because the API price is not a real offer:
+  finance-great-now-what (0.99, the owner's own book, probably the Kindle
+  edition) and off-25-3 (0.01).
+
+Verified in the live feed: 1,291 products, every one with a distinct tagged
+product link; the 88 fixed entries carry the new price, band, text and link.
+
+Same day, small follow-ups (next commit):
+- Nine products with no API price had a band that did not match their own
+  listed price (eight sat in 100to150 while priced 169 to 759). Bands now
+  follow the listed price: kids-ridecar-1, tech-001, fit-008, lux-004,
+  lux-005, hob-001, hob-003, hob-005, hob-006.
+- Four pictures replaced because the relinked product looks different:
+  dad-001 (rufusteague.com), baby-shower-006 (walmart.com), gaming-006
+  (flyingphoenixpcs.com), her-trend-2 (rhodeskin.com). Same process as the
+  twelve earlier in the day; sources in data/image-sources.json.
+
+Notes for whoever picks this up:
+- Rhode does not sell on Amazon itself; the lip tint listing is a third-party
+  seller. Same for several jerseys. Worth an owner look.
+- wc-jersey-france now shows a picture with Mbappe 10 on the back while the
+  listing is the plain 2026 home shirt, men's small.
+- API usage after this work: 307 calls in the rolling 24 hours, still no
+  daily-limit response from Amazon.
+- Still open: 160 products with no current offer, 52 the API will not return,
+  the daily refresh (step three), and stars for the products whose rating is 0.

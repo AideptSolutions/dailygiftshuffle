@@ -5552,5 +5552,53 @@
     "writtenTo": "/images/products/fri-004.jpg",
     "provider": "bing-browser-2026-11",
     "replaced": "2026-11-12"
+  },
+  "dad-001": {
+    "name": "Rufus Teague BBQ Sauce and Rub Gift Set (4-Piece)",
+    "chosen": "https://cdn.shopify.com/s/files/1/0877/6070/products/SaucinRubbinKitFront.png?v=1633981315",
+    "domain": "cdn.shopify.com",
+    "page": "https://rufusteague.com/collections/all",
+    "width": 1700,
+    "height": 1700,
+    "score": 0,
+    "writtenTo": "/images/products/dad-001.jpg",
+    "provider": "bing-browser-2026-11",
+    "replaced": "2026-11-12"
+  },
+  "baby-shower-006": {
+    "name": "The Very Hungry Caterpillar Reversible Plush",
+    "chosen": "https://i5.walmartimages.com/seo/The-World-Of-Eric-Carle-The-Very-Hungry-Caterpillar-Reversible-Caterpillar-and-Butterfly-Plush_69d249a9-ac9a-4984-b7f2-67cabf4bd7c1_1.7f7917cf358494d33e5ef7b379f734cc.jpeg",
+    "domain": "i5.walmartimages.com",
+    "page": "https://www.walmart.com/ip/The-World-Of-Eric-Carle-The-Very-Hungry-Caterpillar-Reversible-Caterpillar-and-Butterfly-Plush",
+    "width": 2727,
+    "height": 1938,
+    "score": 0,
+    "writtenTo": "/images/products/baby-shower-006.jpg",
+    "provider": "bing-browser-2026-11",
+    "replaced": "2026-11-12"
+  },
+  "gaming-006": {
+    "name": "RedThunder K10 Wired Gaming Keyboard and Mouse Combo",
+    "chosen": "https://flyingphoenixpcs.com/cdn/shop/files/AOO_ca81e57b-fdbd-4792-a42a-6c896e61e2f9.png?v=1701381455&width=990",
+    "domain": "flyingphoenixpcs.com",
+    "page": "https://flyingphoenixpcs.com/products/redthunder-k10-wired-gaming-keyboard-mouse-and-wrist-rest-combo",
+    "width": 990,
+    "height": 990,
+    "score": 0,
+    "writtenTo": "/images/products/gaming-006.jpg",
+    "provider": "bing-browser-2026-11",
+    "replaced": "2026-11-12"
+  },
+  "her-trend-2": {
+    "name": "Rhode Peptide Lip Tint (Salty Tan)",
+    "chosen": "https://www.rhodeskin.com/cdn/shop/files/mainimage-saltytan-SQ.png?v=1718258327",
+    "domain": "rhodeskin.com",
+    "page": "https://www.rhodeskin.com/products/peptide-lip-tint-salty-tan",
+    "width": 2000,
+    "height": 2000,
+    "score": 0,
+    "writtenTo": "/images/products/her-trend-2.jpg",
+    "provider": "bing-browser-2026-11",
+    "replaced": "2026-11-12"
   }
 }
