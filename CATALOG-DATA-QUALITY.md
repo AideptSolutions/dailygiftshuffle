@@ -1148,3 +1148,83 @@ dark), stk-004 (shows a black scratch map, the linked Original is the same
 product in its classic colours), him-004 and gaming-001 (the newer model looks
 the same), and the lifestyle scenes for the mug, tumblers, decanter and
 candles, which still describe the product.
+
+### 2026-11-12: stale prices corrected (commit 0584b59), first of three steps
+
+Owner asked for the stale prices to be fixed. Step one, done and verified in
+the live feed: a one-time correction from the price data the Creators API
+returned earlier the same day (the full pass of 2026-11-12 03:06Z to 04:05Z,
+no new calls spent).
+
+- 748 products updated: 746 prices and 232 budget bands. 353 prices went up,
+  393 went down; 330 moved by a quarter or more. Median 33.99 before, 29.99
+  after. Bands follow the price (boundary price goes to the higher band).
+- Biggest band moves: 57 from 25to50 down to under25, 36 from under25 up to
+  25to50, 28 from 25to50 up to 50to100, 25 from 50to100 down to 25to50, and 38
+  entries that sat in 100to150 while priced 150 or more (22 of them 250 or
+  more, an old labelling error that put them in "under $150" shuffles).
+- 292 products were already right. 29 were replaced earlier in the day and
+  already carry today's price.
+- Guide check: products on every built page were listed before and after
+  (145 pages with products). 31 pages changed their product pool, mostly the
+  stocking stuffer, Secret Santa, white elephant and "under $X" pages, which
+  now hold what actually fits their price cap. No page lost enough to fall
+  below the number in its title. Titles and descriptions untouched.
+
+Rule used: the API price was applied only when it was between 0.4 and 2.5
+times the old price and the catalog name shares at least one distinctive word
+with the Amazon title.
+
+NOT fixed by this step:
+1. 93 products where the gap is larger than that. Reading them shows the link
+   points at a different product than the card describes, for example "Manduka
+   PRO Yoga Mat" (120) links to a mat carrier (22), "SNOO Smart Bassinet"
+   (1,695) to another brand's bassinet, "Google Nest Mini" to a wall mount,
+   "Philips Hue Starter Kit (4 Pack)" to a single bulb, "Pampers Swaddlers
+   30-ct" to a 186-count box, "Hot Air Balloon Experience" to a wine bottle
+   holder. Changing the number would make these cards worse, so they are left
+   as they were. They need the same fix as the 33 dead links: find the real
+   listing for the product the card describes, or remove the card. Ids:
+   her-bty-9 him-u25-5 him-25-2 dad-25-1 teens-25-1 teens-25-3 teens-25-4
+   kids-25-2 him-50-2 dad-50-2 kids-50-3 couples-50-2 her-100-3 kids-100-1
+   couples-100-1 friends-100-3 pets-100-1 tech-25-1 fit-50-1 par-u25-1
+   par-25-2 off-25-3 lux-100-2 hob-25-2 kit-u25-1 pet2-u25-1 pet2-25-3
+   pet2-50-3 cow-50-1 nursery-light-1 baby-picks-1 baby-picks-2 baby-picks-5
+   smt-50-2 md-007 md-016 baby-100-3 baby-150-2 stream-25-1 emp-50-3 emp-75-1
+   her-trend-2 finance-great-now-what tech-012 fit-009 fit-012 par-005 pet-016
+   stk-005 tech-020 diy-009 dad-001 baby-shower-006 wedding-001 wedding-006
+   gaming-006 garden-fiskars-pruners finance-intelligent-investor
+   finance-rich-dad finance-i-will-teach finance-total-money smart-fire-tv-4k
+   game-mousepad-xl wed-star-map wed-mr-mrs-mugs bs-01 bs-06 bs-11
+   lux-champagne-flutes camp-double-hammock college-string-lights
+   college-mattress-topper forher2-wine-tumbler forher2-capri-blue-candle
+   gaming2-pixoo-64 selfcare-bath-salts craft-crochet-kit craft-chunky-yarn
+   gg-xbox-expansion-card pat-03 pat-04 pat-12 wc-01 wc-02 wc-jersey-france
+   pat-26 wc-jersey-intermiami wc-jersey-netherlands wc-37 wc-38 kids-u25-2
+   pets-u25-1 u10-3
+   (Two API prices in this group are plainly not real offers: 0.01 for
+   off-25-3 and 0.99 for finance-great-now-what, probably a digital edition.)
+2. 160 products the API returned with no current offer. Their listed price
+   cannot be checked. Not the same as unavailable: a parent listing with
+   several variants also comes back without a price.
+3. 52 products the API will not return by ID (the owner hand-checked 48 of
+   these as working links on 2026-11-12). No price is obtainable for them
+   through the API at all.
+4. 11 products in the live feed whose band does not match their own listed
+   price; all are in groups 1 to 3 above.
+
+COMPLIANCE NOTE, unchanged from 2026-11-11: this is a copy of API prices into
+the catalog. The license lets API prices be shown for 24 hours with a date
+and time next to them, and requires a refresh after that. So the site is more
+accurate today but the prices start ageing again at once. The durable fix is
+step three below.
+
+Proposed next steps, waiting for the owner's go:
+- Step two: fix the 93 wrong-product links (API search per product, same
+  method and same duplicate check as the 33 replacements).
+- Step three: a daily refresh. A scheduled job calls the API once a day
+  (about 138 calls), writes a prices file with the fetch time, and the site
+  shows each price with its "as of" time plus Amazon's required wording; a
+  price older than 24 hours, or one the API cannot supply, is replaced by
+  "See price on Amazon". Needs the Amazon credential stored as a secret where
+  the job runs, which is the owner's call.
