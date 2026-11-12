@@ -1356,3 +1356,24 @@ Known limits:
 - One run a day means a short gap each night between prices passing 24 hours
   and the new deploy landing. Two runs a day would close it at twice the
   calls.
+
+### 2026-11-12: price refresh schedule switched on and proven end to end
+
+Owner approved copying the four secrets. They were piped from the local env
+files into the repository's Actions secrets with `gh secret set` (values never
+printed). The workflow was then started by hand once (run 43180963935):
+1,370 product IDs, 137 calls, 1,157 priced, 159 no current offer, 52 not
+served by the API, 2 skipped as suspect, stamp commit deaba6c pushed by the
+job, Vercel deployed it, and the live site showed "as of Nov 12, 12:17 AM PT".
+So the full chain works from GitHub: Amazon, Redis, commit, deploy, page.
+
+From here it runs by itself every day at 09:17 UTC. To check on it: the
+Actions tab, workflow "Refresh Amazon prices", or data/prices-stamp.json for
+the last run's counts. A failed run sends GitHub's usual failure email.
+
+API usage on 2026-11-12: about 580 calls in 24 hours (catalog checks, searches
+and three full price passes) with one per-second throttle early on and no
+daily-limit response. Normal use from now on is about 137 a day.
+
+If the Amazon credential or the Redis token is ever rotated, update the
+repository secret of the same name as well.
