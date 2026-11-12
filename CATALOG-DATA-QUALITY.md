@@ -1104,5 +1104,8 @@ Known gaps left as they are:
   API $19.99; kd-50-1 listed $79.99, API $74.99; smart-govee-strip listed
   $24.88, API $14.99. Part of the open stale-price item.
 - 17 replacements plus the two Dyson dryers have no stars until the owner
-  reads them off Amazon. A check page for that was given to the owner on
-  2026-11-12 (link in the next entry of this file once results are in).
+  reads them off Amazon. Check page given to the owner on 2026-11-12:
+  https://claude.ai/artifact/CAS3TFMzKTHxMhWfsdLid4 (31 rows: Good or Problem
+  for each, plus stars and number of ratings for the 19). When results come
+  back, enter the stars and ratings, and swap or remove anything marked
+  Problem.
