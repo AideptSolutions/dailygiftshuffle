@@ -12,7 +12,7 @@ defects found so far. Read this before adding products or "refreshing" prices.
 `scripts/enrich-products.mjs` gets rating, reviewCount and price from Serper's
 `shopping` endpoint. **Amazon does not feed Google Shopping.** Its
 "find the Amazon result" lookup therefore almost never matches, and the code
-falls through to `rated || list[0]` — Walmart, Target, eBay, whoever.
+falls through to `rated || list[0]`, Walmart, Target, eBay, whoever.
 
 Confirmed three ways on 2026-08-14:
 
@@ -25,9 +25,9 @@ Confirmed three ways on 2026-08-14:
 |---|---|
 | ASIN | Yes (still verify the title, see below) |
 | image | Yes |
-| rating | **No** — some other retailer's rating |
-| reviewCount | **No** — some other retailer's count |
-| price | **No** — some other retailer's price |
+| rating | **No**, some other retailer's rating |
+| reviewCount | **No**, some other retailer's count |
+| price | **No**, some other retailer's price |
 
 ### Why it mattered
 
@@ -152,7 +152,7 @@ history: the products that actually earn deserve accuracy, the long tail does no
 ## Verifying an ASIN is the right product
 
 Always read the **actual Amazon page title**. Word-overlap scoring is not
-enough — it rated a LEGO Bugatti relink 0.6 "MATCH" when the ASIN was a
+enough, it rated a LEGO Bugatti relink 0.6 "MATCH" when the ASIN was a
 third-party **LED light kit for** that set. Other real misses caught this way:
 
 - Craft Beer of the Month -> **Root** Beer of the Month
@@ -182,11 +182,11 @@ earns) until re-sourced.
 
 Two detectors, both in `scripts/find-duplicate-products.mjs`:
 
-1. **Name similarity** — brand + product type. Removed 21 entries on 2026-08-14
+1. **Name similarity**, brand + product type. Removed 21 entries on 2026-08-14
    (Kindle Paperwhite x3, Le Creuset x3, Dyson Airwrap x3). Prone to false
    positives that must be kept: Echo Dot vs Show 5 vs Show 8, Bose headphones vs
    earbuds, Switch OLED vs Lite, Instant Pot 6qt vs 8qt.
-2. **Same ASIN** — definitive; two entries on one ASIN are one product whatever
+2. **Same ASIN**, definitive; two entries on one ASIN are one product whatever
    the copy says. Found 28 groups name matching missed (4x Elgato Stream Deck,
    3x Instant Pot, 3x Star Map, 3x Logitech G502). Cleaned up 2026-08-14:
    **37 entries removed, catalog 940 -> 903.**
@@ -195,7 +195,7 @@ When collapsing a group, **merge before you delete**. Duplicates rarely carry th
 same metadata (the two Laneige entries disagreed on `mom` / `mothersFathers`), so
 deleting the loser outright silently drops the product from pages only the loser
 reached. Each keeper absorbs the union of the removed entries' recipients, tags
-and occasions first — 21 keepers gained coverage that way.
+and occasions first, 21 keepers gained coverage that way.
 
 The two files do **not** share a vocabulary, so merged values must be mapped:
 
@@ -204,7 +204,7 @@ The two files do **not** share a vocabulary, so merged values must be mapped:
 | `justBecause` | `just-because` |
 | `mothersFathers` | `mothers-day` (and `mothersFathers`) |
 | `weddingHousewarming` | `wedding`, `housewarming` |
-| `brother`, `sister`, `streamers`, `myself-her/him` | *(no equivalent — dropped)* |
+| `brother`, `sister`, `streamers`, `myself-her/him` | *(no equivalent, dropped)* |
 | *(no equivalent)* | `baby-shower` |
 
 Duplicates also disagreed on their numbers (one Star Map claimed 14,300 reviews,
@@ -214,7 +214,7 @@ skips: the Stream Deck's real count is 774 (stored 28,700) and the Anker 737's i
 259 (stored 41,203). **Entries with fake-high counts are still uncorrected.**
 
 Also resolved: 4 reused ids (two overlapping `college-*` import batches) and
-5 dead links — 4 re-pointed to verified ASINs, plus a Ring doorbell pair that was
+5 dead links, 4 re-pointed to verified ASINs, plus a Ring doorbell pair that was
 both duplicated *and* 404, folded into the live `smart-ring-doorbell` entry.
 
 ---
