@@ -931,3 +931,34 @@ seconds apart at ours. The 2-second pacing measured from each response is the
 fix for that. What this does not show is how high the daily allowance is, only
 that it is at least 148. The default cap stays at 150 for now; raise it per run
 with AMAZON_API_DAILY_CAP once the owner agrees. Usage: 148 calls in 24 hours.
+
+### 2026-11-11: round two through the API, own cap lifted (owner decision)
+
+Owner asked to run without the self-imposed cap so that Amazon's limit, not
+ours, is what stops a run. Pacing (2 s after each response) and stop-on-429
+stayed on. 92 calls ran with no throttle; usage reached 240 calls in 24 hours.
+Amazon's daily limit was NOT reached, so it is still unknown, now known to be
+above 240. No filler calls were sent to find the ceiling: every call so far has
+been real catalog work. The default cap is back to 300 (commit 4426a9a).
+
+A. Price check finished for the 89 product IDs the first run missed: 79
+   returned, 10 not accessible, 20 with no current offer. Whole catalog now:
+   86 not accessible by ID, 162 with no current offer.
+B. The 7 "name does not match the title" products, looked up by name. Three
+   are real: tech-011 (JBL Flip 6, ID points at an unrelated item; the real
+   one is B09GJZKQ3K at 129.95, listed 99), aish-005 (Samsung Galaxy Ring, ID
+   points at a MacBook Air; real one B0D3JF9VF8 at 399.99, listed 399), her-008
+   (Cuyana Classic Essential Tote, ID points at another brand's bag; Cuyana is
+   not on Amazon). Four are false alarms where a generic name simply shares no
+   word with the listing title: kids-u25-2, pets-u25-1, mom-25-1, md-007.
+   Fixes await owner approval.
+C. The 76 products the API would not return by ID, searched by name: none came
+   back under its own ID. By a rough match of name and price, 44 have a likely
+   replacement listing, 30 only a weak or generic match, 2 nothing. A "likely
+   replacement" is often a different brand, so each needs a human yes or no;
+   nothing was applied. Five links sent to the owner to confirm the IDs are
+   really dead before replacing anything.
+
+Also live: dad-002 (beer club, search link) removed with the unused search-link
+helper. The live product feed has 1,299 products and every one links to a
+product page.
