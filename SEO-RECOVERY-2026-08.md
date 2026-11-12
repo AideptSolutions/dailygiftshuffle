@@ -992,3 +992,59 @@ unchanged. Other cited pages whose title or description changed that day:
 /best-gaming-gifts-2026, /halloween-party-gifts, /category/fitness. Restore is
 pending the owner's decision. LESSON: before any title or description pass,
 check BOTH Bing tables, Search Performance by page and AI Performance by page.
+
+### 2026-11-11: affiliate link health check and Amazon reports read
+
+Owner shared three Associates reports (exported 2026-11-11, date range not
+stated in the files) and Amazon's Associates Program Policies page (updated
+April 14, 2026), worried the site's affiliate links were broken. Read-only;
+nothing changed. Amazon itself was not requested, only the site's own HTML.
+
+REPORTS. Tracking ID dailygiftshuf-20: 151 clicks, 9 items ordered and
+shipped, $166.75 revenue, 2 returns ($85.98), net earnings $1.12 ($4.98 less
+$3.86 for returns). Tracking ID "Other": 21 clicks, 14 items, $245.74, $9.45.
+Account: 172 clicks, 23 items (2 direct, 21 indirect), $412.49, $10.57 net,
+3.5 percent average commission. Product and category detail is lumped into
+"Other", so the reports cannot say which gifts sold or from which page.
+
+LINK CHECK (all 126 sitemap pages on the live site). 5,186 Amazon links on 121
+pages: 100 percent carry tag=dailygiftshuf-20, all point at www.amazon.com,
+all open in a new tab, nothing intercepts or redirects the click. The product
+feed behind the shuffle and the Gift Genie: 1,307 items, all tagged.
+Conclusion: the links are not broken. Amazon recording 151 clicks and 9 orders
+against the tag is the direct evidence that attribution works.
+Two things to tidy:
+- Every Amazon link has rel="noopener noreferrer ...". noreferrer hides the
+  referring page from Amazon. Policy 6(v) says the site URL must not be
+  obscured so that Amazon "cannot reasonably determine the site" a customer
+  clicked from. Commission tracking uses the tag, so this is not why earnings
+  are low, but it should be removed (keep noopener and sponsored).
+- 74 links (about a dozen products in data/products.ts,
+  data/products-catalog.ts, data/seasonal-products.ts) point at an Amazon
+  search (/s?k=...) instead of a product page. They carry the tag, but land on
+  a results page and cannot be counted per product in our tracker.
+
+WHERE CLICKS COME FROM. Amazon's reports do not show the source page. Our own
+tracker does since 2026-11-07: 25 clicks Nov 8 to 12 (UTC), from
+/stocking-stuffers 11, /trending-christmas-gifts-2026 9, /white-elephant-gifts
+2, /shuffle 2, /hanukkah-gifts 1. All-time tracker total since 2026-06-20 is
+92 against Amazon's 151 for the tag. Likely reasons, not confirmed: the date
+ranges differ, and Amazon counts every request to a tagged link, including
+crawlers that follow links, while our tracker only counts clicks in a real
+browser.
+
+POLICY POINTS THAT APPLY TO THIS SITE (quoted from the owner's PDF).
+- 2(b): the site "may only show prices and availability" if Amazon serves the
+  link or the data comes via Creators API or PA API.
+- 6(t): no Amazon customer reviews or star ratings on the site unless obtained
+  through Creators API or PA API.
+  Both are shown on the site today without the API. This is the real reason
+  API access matters, and it is separate from item 4 (Google markup).
+- 6(u): purchases by the associate, friends, relatives, employees or business
+  relations through the links are prohibited.
+- Section 4 of the IP License (Agents): automated agents must identify
+  themselves and must not get around blocks, which matches the standing rule
+  here not to access Amazon by automation.
+- The first page of the PDF carries a banner saying the signed-in e-mail "is
+  not connected to an Associates account". Owner to confirm which login that
+  was.
