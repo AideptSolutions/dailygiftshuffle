@@ -920,3 +920,14 @@ to decide; recommended: remove.
 Open question on the 76 "not accessible" products: that API answer does not
 prove a product is gone. It can also mean a listing the API does not serve.
 Until a few are hand-checked, treat the cause as unknown.
+
+### 2026-11-11: throttle test result
+
+One test call at 03:37 UTC on Nov 12 (31 minutes after the throttle, with 147
+calls already in the rolling 24 hours) SUCCEEDED. So the daily allowance was
+not used up at 147: the throttle was almost certainly the per-second limit,
+with two requests landing in the same second at Amazon's end while paced 1.1
+seconds apart at ours. The 2-second pacing measured from each response is the
+fix for that. What this does not show is how high the daily allowance is, only
+that it is at least 148. The default cap stays at 150 for now; raise it per run
+with AMAZON_API_DAILY_CAP once the owner agrees. Usage: 148 calls in 24 hours.
