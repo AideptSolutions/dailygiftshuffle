@@ -5388,5 +5388,25 @@
     "score": 0,
     "writtenTo": "/images/products/tech26-fitbit-inspire3.jpg",
     "provider": "bing-browser-2026-11"
+  },
+  "sis-dyson-supersonic-origin": {
+    "chosen": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/beauty/hair-dryers/supersonic-origin/Web_Entryskus_Dynamic_specifications_605C.png?$responsive$&fmt=png-alpha",
+    "domain": "dyson-h.assetsadobe2.com",
+    "page": "https://www.dyson.ie/hair-care/hair-dryers/supersonic-origin/nickel-copper",
+    "width": 1200,
+    "height": 1200,
+    "score": 0,
+    "writtenTo": "/images/products/sis-dyson-supersonic-origin.jpg",
+    "provider": "bing-browser-2026-11"
+  },
+  "sis-dyson-supersonic-nural": {
+    "chosen": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/primary-locale/en_US/561776-01.png?$responsive$&fmt=png-alpha",
+    "domain": "dyson-h.assetsadobe2.com",
+    "page": "https://www.dyson.com/hair-care/hair-dryers/supersonic-nural/strawberry-bronze-blush-pink",
+    "width": 1200,
+    "height": 1200,
+    "score": 0,
+    "writtenTo": "/images/products/sis-dyson-supersonic-nural.jpg",
+    "provider": "bing-browser-2026-11"
   }
 }
