@@ -113,8 +113,13 @@ implementation reports "all alive" forever. Measured 2026-08-14:
 | `HEAD /dp/{asin}` | 200, empty | identical |
 | `HEAD /gp/aw/d/{asin}` | 405 | 405 |
 
-Only two signals work: the **Creators API** (an ASIN it does not return is
-delisted) and **same-origin fetch from a real signed-in tab**.
+CORRECTION 2026-11-11: neither signal below can be used any more. The API
+answers ItemNotAccessible for live listings it does not serve (owner hand check:
+4 of 5 such products were live), and Amazon is not to be read by browser
+automation. Dead links are found by the owner checking by hand.
+
+~~Only two signals work: the **Creators API** (an ASIN it does not return is
+delisted) and **same-origin fetch from a real signed-in tab**.~~
 
 Every run self-validates against canary ASINs of known state and **aborts**
 rather than report anything if they classify wrong, because a false "dead"
@@ -962,3 +967,20 @@ C. The 76 products the API would not return by ID, searched by name: none came
 Also live: dad-002 (beer club, search link) removed with the unused search-link
 helper. The live product feed has 1,299 products and every one links to a
 product page.
+
+### 2026-11-11: owner hand check of five "not accessible" products
+
+The owner opened five of the 76 products the API would not return by ID. Four
+are live, buyable listings (Pandora Moments bracelet B0CMYFJFFF, Ember Mug 2
+B07NQRM6ML, LAMY Safari pen B00133X1V8, balance bike B0BZ439ZWF). One is gone:
+The Ordinary Multi-Peptide Lash and Brow Serum B0B5DYY1HQ ("sorry, we can't find
+that page").
+- Conclusion: ItemNotAccessible does NOT mean delisted. Most of the 86 such
+  products are probably fine and simply cannot be price-checked through the
+  API. One in five in this small sample was dead, so a rough guess is 10 to 25
+  dead links among them, and only a hand check can say which.
+- md-020 (the serum) removed: a search by its exact name returned other The
+  Ordinary products but not this one, so there is no replacement.
+- The 44 "likely replacements" found by search are NOT to be applied: the
+  current IDs mostly work.
+- scripts/check-dead-links.mjs --via-api is disabled for the same reason.

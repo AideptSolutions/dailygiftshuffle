@@ -104,6 +104,17 @@ function checkCanaries(deadSet, aliveSet) {
 
 // --- mode: Creators API -----------------------------------------------------
 async function viaApi(entries) {
+  // DISABLED 2026-11-11. This mode assumed a product the API does not return is
+  // delisted. The owner checked five such products by hand: four were live,
+  // buyable listings and one was gone. The API answers ItemNotAccessible for
+  // listings it simply does not serve, so it cannot prove a link is dead and a
+  // false verdict here would replace a good link. The browser method (--emit)
+  // is also retired: Amazon is not to be read by browser automation. Dead links
+  // are found by the owner checking by hand. See CATALOG-DATA-QUALITY.md.
+  console.error('--via-api is disabled: the API cannot tell a dead listing from one it does not serve.');
+  console.error('See the note at the top of viaApi() and CATALOG-DATA-QUALITY.md (2026-11-11).');
+  process.exitCode = 1;
+  if (entries) return;
   const { loadEnv, getAllItems, getItems } = await import('./lib/creators-api.mjs');
   loadEnv();
   const asins = [...new Set([...entries.map((e) => e.asin), ...CANARY_DEAD, ...CANARY_LIVE])];
