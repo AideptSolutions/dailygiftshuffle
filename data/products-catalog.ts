@@ -47,8 +47,8 @@ export interface Product {
 
 const amz = (asin: string) =>
   `https://www.amazon.com/dp/${asin}?tag=dailygiftshuf-20`;
-const amzSearch = (q: string) =>
-  `https://www.amazon.com/s?k=${encodeURIComponent(q)}&tag=dailygiftshuf-20`;
+// Every product links to its own Amazon product page (amz). Search-result links
+// were removed on 2026-11-11: they land on a results list, not a product.
 
 export const products: Product[] = [
 
@@ -2042,7 +2042,6 @@ export const products: Product[] = [
 
   // More For Dad
   { id: 'dad-001', name: 'Traeger Beef Rub & BBQ Sauce Bundle', description: 'The ultimate BBQ companion kit from Traeger. Includes Show Bird seasoning, Fin & Feather rub, Beef rub, and signature BBQ sauce.', price: 36, priceDisplay: '$36', image: '/images/products/dad-001.jpg', rating: 4.7, reviewCount: 18923, affiliateUrl: 'https://www.amazon.com/dp/B0DKVHQ7H2?tag=dailygiftshuf-20', network: 'amazon', recipients: ['dad', 'him'], budgetTier: '25to50', tags: ['kitchen', 'hobby'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
-  { id: 'dad-002', name: 'Craft Beer-of-the-Month Club (3-Month)', description: 'Discover 12 hand-selected craft beers from America\'s best microbreweries delivered every month. Tasting notes and food pairing guides included.', price: 79, priceDisplay: '$79', image: '/images/products/dad-002.jpg', rating: 4.5, reviewCount: 8234, affiliateUrl: amzSearch('craft beer of the month club 3 month gift subscription'), network: 'amazon', recipients: ['dad', 'him', 'friends', 'couples'], budgetTier: '50to100', tags: ['hobby', 'luxury'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
   { id: 'dad-003', name: 'GreenWorks 40V Cordless Lawn Mower', description: '16" push mower with 40V battery and charger included. No gas, no fumes, and quieter than a vacuum cleaner. 70-minute runtime on a single charge.', price: 299, priceDisplay: '$299', image: '/images/products/dad-003.jpg', rating: 4.4, reviewCount: 14523, affiliateUrl: 'https://www.amazon.com/dp/B00BBQVL5U?tag=dailygiftshuf-20', network: 'amazon', recipients: ['dad', 'him', 'couples'], budgetTier: '100to150', tags: ['diy-tools'], occasions: ['mothersFathers', 'birthday', 'holiday'] },
 
   // More For Mom
