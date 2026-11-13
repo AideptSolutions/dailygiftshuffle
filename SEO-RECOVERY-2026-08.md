@@ -1108,3 +1108,28 @@ What to watch: the daily citation count for /birthday-gift-ideas in Bing
 Webmaster Tools, AI Performance. The reworded title was live for about one
 day (2026-11-10 evening to 2026-11-11), so any dip in that window is not
 evidence either way.
+
+### 2026-11-13: does the rating markup earn anything on Google? (read-only check)
+
+Owner worried that changing the rating markup would hurt SEO, while weighing
+a move from Amazon-sourced stars to the site's own editorial score.
+Search Console, last 3 months, read on 2026-11-13:
+- Whole site on Google: 3 clicks, 4.68K impressions, average position 81.5.
+- Search appearance table: one row only, "Product snippets", 0 clicks and 630
+  impressions. There is no "Review snippets" row, so star-rating results as
+  such were not recorded as shown.
+- Enhancements, Review snippets report: 0 invalid, 1.09K valid items. Google
+  reads the aggregateRating markup and considers it well formed.
+Read: the markup is recognised, and results dressed with product details
+appeared 630 times in three months without a single click. At position 81
+nobody sees them. Structured data is not a ranking signal; it only decides
+whether a result can be dressed up. So the measurable cost of changing the
+rating markup today is close to zero on Google. Bing was not measured for
+this (its tools do not report rich results the same way).
+Risk on the other side: the markup presents ratings taken from Amazon and
+other stores as the site's own aggregate customer ratings. Google's review
+snippet rules ask for ratings collected from the site's own users, so the
+current markup is itself a liability, separate from Amazon's rule.
+If the site moves to its own score, it can be marked up as an editorial
+review (Review with the site as author and a reviewRating), which keeps
+product results eligible for a rating line. Nothing changed by this check.
