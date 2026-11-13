@@ -1133,3 +1133,28 @@ current markup is itself a liability, separate from Amazon's rule.
 If the site moves to its own score, it can be marked up as an editorial
 review (Review with the site as author and a reviewRating), which keeps
 product results eligible for a rating line. Nothing changed by this check.
+
+### 2026-11-13: same question for Bing (observed in live results)
+
+Bing Webmaster Tools has no report for rich results, so four searches were
+run in the built-in browser (not signed in, US) and the site's own result was
+read on each page:
+
+| Query | Site's position | Ratings on the site's result | Others with ratings |
+|---|---|---|---|
+| best stocking stuffers 2026 | 4 | none | Southern Living (2), Wirecutter (3) |
+| gifts for a crush | 5 | none | two Amazon results |
+| white elephant gifts 2026 | 9 | none | none |
+| luxury gifts under $50 | 5 | none | Refinery29, Bloomingdale's, Wirecutter |
+
+The site's result is a plain title, date and description every time. The
+aggregateRating markup produces no stars on Bing for these pages, so changing
+it has nothing to lose there either. Limits: four queries, one session;
+Bing personalises results.
+
+Worth noting: the ratings on other sites' results are not their own. They sit
+in a "Top picks from <site>" strip of product cards that Bing builds itself,
+with ratings credited to stores such as Walmart. Wirecutter publishes no star
+ratings at all and still gets the strip. What makes a page eligible for that
+strip is not known; it is a possible opportunity to look into, separate from
+the rating question.
