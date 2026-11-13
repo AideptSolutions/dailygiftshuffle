@@ -1377,3 +1377,43 @@ daily-limit response. Normal use from now on is about 137 a day.
 
 If the Amazon credential or the Redis token is ever rotated, update the
 repository secret of the same name as well.
+
+### 2026-11-12: white elephant additions, research done, waiting on the owner's picks
+
+Owner asked to add gifts to the white elephant list, with separate research
+into retro, wonky and obscure items and novelty items and clothing.
+
+How /white-elephant-gifts chooses products (app/white-elephant-gifts/page.tsx):
+ids starting `elephant-` lead (rating 4.2 or higher, up to 12), then any
+catalog product priced 10 to 30 with a rating of 4.6 or higher fills the grid
+to 30. Only six `elephant-` items exist and one (the giant mug, 3.9) is
+hidden by its rating. The page intro names the yodelling pickle, which is not
+in the catalog. A product with rating 0 will not appear, so every addition
+needs real stars.
+
+Research: 52 Creators API searches (no throttle), plus two web searches for
+what current roundups call most stolen. 42 candidates with a live listing and
+price, none already in the catalog: 14 great all-rounders (Yodeling Pickle,
+Potty Putter, toilet night light, burrito blanket, Bob Ross Chia Pet, Dash
+mini waffle maker, desktop punching bag, Prank-O box, Emergency Underpants,
+useless box, desk vacuum, full-bottle wine glass, The Comfy, Finger Hands),
+15 retro or obscure (Magic 8 Ball, Tamagotchi, Lava Lamp, View-Master,
+Lite-Brite, Etch A Sketch, Slinky, Sea-Monkeys, Big Mouth Billy Bass, Chatter
+Phone, World's Smallest Stretch Armstrong, Snuggie, Rock 'Em Sock 'Em Robots,
+Pet Rock, Bob Ross Talking Clapper) and 13 novelty or clothing (chicken leg
+socks, dad bag, pizza socks, Bigfoot slippers, shark slippers, Viking beard
+beanie, mullet headband, Handerpants, T-Rex onesie, shark blanket hoodie,
+inflatable T-Rex, Tipsy Elves sweater, antler ring toss).
+Left out on purpose: products already in the catalog (Exploding Kittens, SKLZ
+mini hoop), profanity-led designs (Blue Q socks, the hidden-finger mug),
+listings at inflated reseller prices (the plain Clapper at 40.50), Furby.
+
+Review page for the owner: https://claude.ai/artifact/BFLE7UM3p41sh3U4veqesj
+(Add or Skip each, stars and number of ratings for the ones added, Copy
+results). Nothing is added until those results come back.
+
+When they do: add each approved product with an `elephant-` id, a brand or
+retailer photo (same process as 2026-11-12), tags and recipients; check the
+new product ID against all three data files; raise the `elephant-` limit on
+the page so the new gag gifts lead (the grid stays at 30, matching the
+title); leave the title and description alone (protected page).
