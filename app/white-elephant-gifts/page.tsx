@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
 import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import { giftRating } from '@/lib/giftRating';
 
 const URL = 'https://www.thegiftshuffle.com/white-elephant-gifts';
 
@@ -34,7 +35,14 @@ export const metadata: Metadata = {
 const isElephant = (p: { id?: string }) => !!p.id?.startsWith('elephant-');
 const isStealable = (p: { price?: number }) => (p.price ?? 999) <= 30 && (p.price ?? 0) >= 10;
 
-const elephantItems = curate({ match: isElephant, minRating: 4.2, sort: 'social', recipientCap: 30, limit: 12, pool: ALL });
+// The elephant- items are hand-picked one at a time, so they are not gated on
+// a star rating. They lead in order of GiftShuffle rating (lib/giftRating.ts).
+// Only the ones at or under $30 lead, to keep the page's "under $30" promise;
+// pricier ones still turn up in the shuffle below.
+const ELEPHANT_LEAD = 20;
+const elephantItems = ALL.filter((p) => isElephant(p) && p.price <= 30)
+  .sort((a, b) => (giftRating(b.id) ?? 0) - (giftRating(a.id) ?? 0) || a.price - b.price)
+  .slice(0, ELEPHANT_LEAD) as ReturnType<typeof curate>;
 const fillItems = curate({ match: isStealable, minRating: 4.6, sort: 'social', recipientCap: 6, limit: 40, pool: ALL });
 const seen = new Set(elephantItems.map((p) => p.id));
 const grid = [...elephantItems, ...fillItems.filter((p) => !seen.has(p.id))].slice(0, 30);

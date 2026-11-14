@@ -1417,3 +1417,108 @@ retailer photo (same process as 2026-11-12), tags and recipients; check the
 new product ID against all three data files; raise the `elephant-` limit on
 the page so the new gag gifts lead (the grid stays at 30, matching the
 title); leave the title and description alone (protected page).
+
+### 2026-11-13: GiftShuffle rating, catalog rated (step 2 of the switch plan)
+
+Owner moved to a rating of the site's own (plan and rubric:
+content-drafts/giftshuffle-score-plan-2026-11.md). Decisions so far: stars
+stay but must not look like Amazon's (solid coral, rounded, labelled
+"GiftShuffle rating", no review count); 1 to 5 scale; disclosure says
+"reviewed by the Gift Shuffle Editorial Staff"; nothing is delisted for a low
+rating.
+
+Every product now has five marks in data/gift-ratings.json, read through
+lib/giftRating.ts: gift, delight, staying power, value, maker track record
+(1 to 5 each) plus risk flags. Rating = weighted average (30/20/20/15/15)
+minus 0.15 per flag. NOTHING on the site displays or ranks by it yet, except
+the order of the hand-picked gag gifts on /white-elephant-gifts.
+
+How the marks were made: 105 products rated by hand in the pilot, then the
+other 1,310 by six parallel rating passes, each given the rubric, the 105
+pilot ratings as calibration, and the product's name, price, recipients and
+description with star ratings, review counts and any sentence mentioning
+reviews, ratings or sales rank removed. No Amazon rating went into any mark.
+
+Result: 1,415 rated (1,373 in the catalog plus the 42 white elephant
+additions). Batch averages 3.28 to 3.52, so the passes agree. Spread: 33 at
+4.5 and up, 207 at 4.0 to 4.4, 462 at 3.5 to 3.9, 468 at 3.0 to 3.4, 245
+under 3.0; median 3.4, lowest 1.9, highest 4.9. Top: PicassoTiles, Monopoly
+Deal, LEGO Classic, AirPods, Kindle Paperwhite, Switch OLED. Bottom: gnat
+traps, party tablecloths, pillow covers.
+
+Known soft spots before any rating is shown to shoppers:
+- The numbers run about a point below the 4.6 shoppers are used to. Median
+  3.4 means half the catalog would show three and a bit stars. The owner has
+  seen this question and has not ruled on it.
+- The `s` flag was applied unevenly: three passes used it for "needs the
+  right device" (AirTag, MagSafe, console accessories), the others put that
+  in the Gift mark. Worth one consistency pass; it moves a rating by 0.15.
+- Value was judged against the catalog's stored price, which is the last
+  known price, not necessarily today's.
+- Maker marks for Amazon-native brands are the least certain.
+- Owner review still to do: everything 4.5 and up, everything under 3.0, and
+  a one in ten sample.
+
+Catalog problems the rating passes noticed (not fixed here; name, description
+and price disagree, so one of them is wrong):
+- baby-100-1: named SNOO at 399.95 (a SNOO is about 1,500).
+- emp-100-1 Ember Travel Mug at 59.99 looks too low; stream-150-1 Elgato Key
+  Light Mini at 179.99, fit-008 BowFlex 552 at 349, tech-015 Garmin Dash Cam
+  Mini 2 at 180, smt-u25-1 Echo Dot at 79.99, hob-007 LEGO Ferrari at 629.99,
+  rg-lego-nes at 564.99, gg-switch-microsd, gg-ps5-ssd, lux3-slip-silk-
+  pillowcase at 120, wed26-zwilling 19-piece at 498.99, pat-20 pillow covers
+  at 60.73, pat-23 can coolers at 41.26, baby-burp-cloths at 47.88, wc-11 at
+  37.99 all look too high. Several are live API prices from third-party
+  sellers.
+- dad-fd-2 and lux-006 are the same Bose headphones at 213.90 and 359.
+- Name and description contradict each other: college-electric-kettle (0.8L
+  gooseneck vs 1.7L), college-mini-fridge-compact (4L vs 10L), beauty-
+  olaplex-kit (single No.3 vs four-piece set), rg-atari-2600plus (id says
+  2600+, name says Flashback 12), finance-money-clip (wallet vs clip),
+  kid-005 (11-in-1 vs four puzzles), stream-50-2, teens-trend-1,
+  tech-anker-powercore, sis-u25-2, pets-u25-4, bro-dartboard-1, diy-005,
+  sh26-govee-tv-light-bar (text says under 40, price 54.99),
+  garden-fiskars-pruners (text says under 10, price 31.42), out-012.
+- u10-7 Scrub Daddy at 13.99 reads as one sponge; par-007 Munchkin seat does
+  not match a known product; admin-1772856864684-372c1 Oura Ring text says no
+  subscription is needed, which is doubtful.
+- Empty descriptions: mom-25-1, her-u25-6, cow-u25-3, kit-u25-3, par-004,
+  stuffer-milani-lip-oil, admin-1773605163519-z5tl6, trend26-cheirosa-mist.
+
+### 2026-11-13: 42 white elephant products added
+
+Owner said "add all 42" and chose solid coral stars for the future rating
+display. All 42 candidates from the research are in data/products-catalog.ts
+with `elephant-` ids, right after the existing six.
+
+- Product IDs and prices from Creators API searches; each ID checked against
+  all three data files before adding (catalog: 1,415 entries, 1,412 distinct
+  product IDs, the same three older duplicate pairs as before).
+- rating and reviewCount are 0 on purpose: no Amazon stars. Each has
+  GiftShuffle marks in data/gift-ratings.json.
+- Photos: brand or retailer shots found through Bing image search by a
+  background pass, then every one checked on contact sheets here. Three
+  changed at that check: the antler ring toss photo showed a child (replaced
+  with the adult one), Finger Hands now shows the assorted colours the
+  listing sells, and the Dash waffle maker links the aqua listing
+  (B0GZLLQ31T) because every non-Amazon photo found is aqua. Sources in
+  data/image-sources.json. Known small mismatches: the lava lamp photo is the
+  standard silver-base lamp; the inflatable T-Rex photo is the current olive
+  colour; the Tamagotchi shell design may differ from the listing's.
+- Live prices fetched for all 42 the same hour (5 API calls), so they show a
+  price without waiting for the nightly run.
+
+/white-elephant-gifts now builds its lead differently
+(app/white-elephant-gifts/page.tsx): the hand-picked `elephant-` items are no
+longer gated on a star rating; those at or under $30 lead, 20 of the 30
+slots, in order of GiftShuffle rating; the other 10 slots are the existing
+"good steals" fill. Items over $30 (The Comfy, lava lamp, Billy Bass, the
+T-Rex suit and onesie, the sweater) stay out of the lead so the page keeps
+its "under $30" promise, and appear in the shuffle on that page. Title and
+description untouched (protected page). First ten today: Magic 8 Ball,
+burrito blanket, Rock 'Em Sock 'Em Robots, Screaming Goat, Dundie, Yodeling
+Pickle, Tamagotchi, Dash waffle maker, giant mug, Sipski.
+
+Until ratings are displayed, these 48 cards show no stars, and because other
+guides still filter on Amazon-style ratings of 4.3 and up, the new products
+appear only on this page and in tag-based listings.
