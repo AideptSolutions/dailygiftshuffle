@@ -12,6 +12,7 @@ import { Product, Recipient, BudgetTier, Occasion, NicheTag } from '@/data/produ
 import { useFavorites } from '@/lib/useFavorites';
 import { usePins } from '@/lib/usePins';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 const RECIPIENTS: { id: Recipient; label: string; image: string }[] = [
   { id: 'her',         label: 'For Her',            image: '/images/recipients/her.jpg' },
@@ -158,10 +159,10 @@ function ProductCard({
         <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2">
           {product.name}
         </p>
-        <div className="mt-1.5">
+        <RatingSlot product={product} className="mt-1.5">
           <StarRating rating={product.rating} />
           <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
-        </div>
+        </RatingSlot>
         {product.why && (
           <p className="text-[10px] italic text-gray-500 mt-1.5 pl-2 border-l-2 border-[#F04E30]/30 leading-snug line-clamp-2">
             ✦ Why we picked this: {product.why}

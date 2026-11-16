@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, byIds, ALL } from '@/lib/giftSelect';
+import { forPage, byIds, ALL } from '@/lib/giftSelect';
 import { PickThumb, PickThumbLink } from '@/components/AmazonPicks';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/trending-christmas-gifts-2026');
 
 const URL = 'https://www.thegiftshuffle.com/trending-christmas-gifts-2026';
 

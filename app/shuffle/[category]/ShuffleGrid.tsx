@@ -8,6 +8,7 @@ import { useFavorites } from '@/lib/useFavorites';
 import { shuffleMany } from '@/lib/shuffle';
 import { type Product, type NicheTag } from '@/data/products';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -149,14 +150,12 @@ export default function ShuffleGrid({ category, label }: { category: string; lab
               </div>
               <div className="p-3 flex flex-col flex-1">
                 <p className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2 mb-1">{p.name}</p>
-                {p.rating > 0 && (
-                  <div className="flex items-center gap-1 mb-1">
-                    <StarRating rating={p.rating} />
-                    {p.reviewCount > 0 && (
-                      <span className="text-xs text-gray-400">({p.reviewCount.toLocaleString()})</span>
-                    )}
-                  </div>
-                )}
+                <RatingSlot product={p} className="flex items-center gap-1 mb-1" show={p.rating > 0}>
+                  <StarRating rating={p.rating} />
+                  {p.reviewCount > 0 && (
+                    <span className="text-xs text-gray-400">({p.reviewCount.toLocaleString()})</span>
+                  )}
+                </RatingSlot>
                 <span className="text-[#F04E30] font-extrabold text-sm mt-auto"><Price product={p} /></span>
                 <a
                   href={p.affiliateUrl}

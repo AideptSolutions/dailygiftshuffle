@@ -51,6 +51,16 @@ The feed keeps one entry per Amazon product ID. Before adding or relinking a pro
 
 **Protected titles and descriptions.** Never shorten or reword the title or description of a page that earns search clicks or AI citations without asking the owner first, even when it runs long: `/stocking-stuffers` and its spokes, `/gifts-for-a-crush`, `/luxury-gifts-under-50`, `/gifts-for-girlfriend`, `/white-elephant-gifts`, `/best-birthday-gifts-2026`, `/birthday-gift-ideas`, `/luxury-gifts-under-200`, `/gift-ideas-for-teens`, `/christmas-gifts-for-her`, `/best-gaming-gifts-2026`, `/halloween-party-gifts`, `/category/fitness` and the homepage description. Before any title or description pass, check both Bing Webmaster Tools tables: Search Performance by page and AI Performance by page (see `SEO-RECOVERY-2026-08.md`).
 
+## Ratings (the switch)
+
+The site can show and rank by its own editorial rating (the GiftShuffle rating, `lib/giftRating.ts`, marks in `data/gift-ratings.json`) instead of the stored Amazon-style stars. One constant decides: `RATING_MODE` in `lib/ratingMode.ts`. It is `'amazon'` (old behaviour) today. `'staged'` turns the GiftShuffle rating on everywhere except `PROTECTED_PATHS` in that file; `'giftshuffle'` turns it on everywhere. **Changing it changes every guide's order, the stars on every card and the search markup: never change it without the owner's say-so.**
+
+- Show a rating ONLY through `<RatingSlot product={p}>` (`components/RatingSlot.tsx`), with the old stars markup as its children. Never print `rating` or `reviewCount` directly in new code.
+- In a guide page, bind the ranking helpers to the page's own address: `const { curate, shufflePool, rankRating, rankReviews, baseScore } = forPage('/my-guide');` (`lib/giftSelect.ts`). Filter and sort with `rankRating(p)` and `rankReviews(p)`, never `p.rating` or `p.reviewCount`. In browser code use `rankRatingOf(p, pathname)` and `rankReviewsOf(p, pathname)` from `lib/ratingMode.ts`.
+- For schema.org markup use `...ratingMarkup(p, '/my-guide')` (`lib/ratingMarkup.ts`), never a hand-written `aggregateRating`.
+- Amazon's stars and review counts must never feed the GiftShuffle rating, even hidden. To rate a new product, add its id and five marks to `data/gift-ratings.json`.
+- How it works, what was checked and what is left before turning it on: `CATALOG-DATA-QUALITY.md` (2026-11-15) and `content-drafts/giftshuffle-score-plan-2026-11.md`.
+
 ## Live prices (daily refresh)
 
 Prices shown on the site are live Amazon prices, not the numbers in the catalog files. Amazon's license allows a price to be shown only if it came from the API, for 24 hours at most, with the fetch time beside it.

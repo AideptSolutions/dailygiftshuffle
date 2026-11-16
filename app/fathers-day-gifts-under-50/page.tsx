@@ -9,6 +9,11 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { rankRating, rankReviews } = forPage('/fathers-day-gifts-under-50');
 
 export const metadata: Metadata = {
   title: "Father's Day Gifts Under $50 (2027): Top Picks for Dad",
@@ -40,7 +45,7 @@ const fathersDayUnder50 = products
       (p.recipients.includes('dad') || p.recipients.includes('him')) &&
       p.price <= 50
   )
-  .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
+  .sort((a, b) => rankRating(b) - rankRating(a) || rankReviews(b) - rankReviews(a));
 
 const faqs = [
   {
@@ -83,7 +88,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/fathers-day-gifts-under-50'),
     },
   })),
 };

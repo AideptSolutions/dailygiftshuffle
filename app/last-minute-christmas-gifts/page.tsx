@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, variantKey, ALL } from '@/lib/giftSelect';
+import { forPage, variantKey, ALL } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool, rankReviews } = forPage('/last-minute-christmas-gifts');
 
 const URL = 'https://www.thegiftshuffle.com/last-minute-christmas-gifts';
 
@@ -54,7 +57,7 @@ const grid = [...digital, ...easyWins]
     return seen.has(k) ? false : (seen.add(k), true);
   })
   .slice(0, 36);
-const shuffle = shufflePool((p) => isDigital(p) || (!!p.occasions?.includes('holiday') && p.price <= 100 && p.reviewCount >= 10000), ALL);
+const shuffle = shufflePool((p) => isDigital(p) || (!!p.occasions?.includes('holiday') && p.price <= 100 && rankReviews(p) >= 10000), ALL);
 
 export default function Page() {
   return (

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool } from '@/lib/giftSelect';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/30th-birthday-gifts');
 
 const URL = 'https://www.thegiftshuffle.com/30th-birthday-gifts';
 

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, ALL, type AnyProduct } from '@/lib/giftSelect';
+import { forPage, ALL, type AnyProduct } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/best-baby-shower-gifts-2026');
 
 const URL = 'https://www.thegiftshuffle.com/best-baby-shower-gifts-2026';
 

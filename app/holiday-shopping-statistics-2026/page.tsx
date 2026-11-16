@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, byIds, ALL } from '@/lib/giftSelect';
+import { forPage, byIds, ALL } from '@/lib/giftSelect';
 import { PickStrip } from '@/components/AmazonPicks';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/holiday-shopping-statistics-2026');
 
 const URL = 'https://www.thegiftshuffle.com/holiday-shopping-statistics-2026';
 

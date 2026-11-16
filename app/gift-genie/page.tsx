@@ -4,7 +4,10 @@ import Navbar from '@/components/Navbar';
 import JsonLd from '@/components/JsonLd';
 import InlineShuffle from '@/components/InlineShuffle';
 import { LampIcon, SparkleIcon, TokenIcon } from '@/components/genie/GenieIcons';
-import { curate, ALL } from '@/lib/giftSelect';
+import { forPage, ALL } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate } = forPage('/gift-genie');
 
 const URL = 'https://www.thegiftshuffle.com/gift-genie';
 

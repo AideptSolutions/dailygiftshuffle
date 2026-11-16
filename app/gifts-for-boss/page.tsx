@@ -9,6 +9,11 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { rankRating, rankReviews } = forPage('/gifts-for-boss');
 
 export const metadata: Metadata = {
   title: 'Gifts for Boss: Best Boss Gift Ideas 2026 | TheGiftShuffle',
@@ -42,7 +47,7 @@ const bossProducts = products
       (p.recipients.includes('coworker') || p.recipients.includes('employees')) &&
       p.price >= 25
   )
-  .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
+  .sort((a, b) => rankRating(b) - rankRating(a) || rankReviews(b) - rankReviews(a));
 
 // Supplement with premium practical products that work for professional gifting
 const premiumOfficeProducts = products
@@ -54,7 +59,7 @@ const premiumOfficeProducts = products
       p.price >= 25 &&
       p.price <= 150
   )
-  .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)
+  .sort((a, b) => rankRating(b) - rankRating(a) || rankReviews(b) - rankReviews(a))
   .slice(0, 10);
 
 const displayProducts =
@@ -111,7 +116,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/gifts-for-boss'),
     },
   })),
 };

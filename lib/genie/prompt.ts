@@ -6,6 +6,8 @@
 import type { FeedProduct } from '@/lib/catalogFeed';
 import type { CandidateSet, GenieQuiz } from '@/lib/genie/candidates';
 import { traitLabels } from '@/lib/genie/traits';
+import { GENIE_PAGE } from '@/lib/genie/candidates';
+import { usesGiftRating } from '@/lib/ratingMode';
 
 export const SYSTEM_PROMPT = `You are the Gift Genie for a gift-discovery site. You receive a catalog of candidate products and short answers about a gift recipient. Some products are marked [PINNED], meaning the shopper hand-picked them as interesting while browsing.
 
@@ -26,7 +28,11 @@ function productLine(p: FeedProduct, pinned: boolean): string {
     // Budget fit only. The shopper sees live prices on the cards, so the model
     // is told below never to quote one (a quoted price could be out of date).
     `about $${Math.round(p.price)}`,
-    `${p.rating} (${p.reviewCount.toLocaleString('en-US')} reviews)`,
+    // Our own editorial rating once the Genie has switched to it; the stored
+    // stars and review count until then (lib/ratingMode.ts).
+    usesGiftRating(GENIE_PAGE)
+      ? (p.gsRating != null ? `gift rating ${p.gsRating.toFixed(1)} of 5` : '')
+      : `${p.rating} (${p.reviewCount.toLocaleString('en-US')} reviews)`,
     tags ? `tags: ${tags}` : '',
     rec ? `for: ${rec}` : '',
     desc,

@@ -9,6 +9,7 @@ import { getWishlist, removeFromWishlist } from '@/lib/wishlist';
 import { Product } from '@/data/products';
 import type { ShareableWishlistItem } from '@/lib/redis';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 const SHARE_KEY = 'dgs_share';
 
@@ -272,10 +273,10 @@ export default function WishlistClient() {
                         <Price product={product} />
                       </span>
                     </div>
-                    <div className="flex items-center gap-1 mt-1 mb-2">
+                    <RatingSlot product={product} className="flex items-center gap-1 mt-1 mb-2">
                       <StarRating rating={product.rating} />
                       <span className="text-xs text-gray-400">({product.reviewCount.toLocaleString()})</span>
-                    </div>
+                    </RatingSlot>
                     <p className="text-xs text-gray-500 line-clamp-2 mb-3">{product.description}</p>
                     <div className="flex gap-2">
                       <a

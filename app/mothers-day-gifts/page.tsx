@@ -10,6 +10,7 @@ import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
 
 export const metadata: Metadata = {
   title: "Mother's Day Gifts: The Best Picks for 2027 | TheGiftShuffle",
@@ -100,7 +101,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/mothers-day-gifts'),
     },
   })),
 };

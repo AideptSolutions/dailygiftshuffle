@@ -4,6 +4,8 @@ import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import CategoryIcon from '@/components/CategoryIcon';
 import { usePins } from '@/lib/usePins';
 import GeniePanel from '@/components/genie/GeniePanel';
+import { usePathname } from 'next/navigation';
+import { rankRatingOf } from '@/lib/ratingMode';
 
 interface Props {
   products: CompactProduct[];
@@ -42,6 +44,7 @@ function pickRandom(arr: CompactProduct[], n: number, excludeIds: string[] = [])
 }
 
 export default function InlineShuffle({ products, heading = 'Shuffle Picks', catalogUrl, count = 8 }: Props) {
+  const pathname = usePathname();
   const [pool, setPool] = useState<CompactProduct[]>(products);
 
   useEffect(() => {
@@ -53,9 +56,9 @@ export default function InlineShuffle({ products, heading = 'Shuffle Picks', cat
         if (cancelled || !Array.isArray(feed)) return;
         const seen = new Set(products.map((p) => p.id));
         const extra = feed
-          .filter((p) => !seen.has(p.id) && (p.rating ?? 0) >= FEED_MIN_RATING && p.image && !p.image.includes('/img/categories/'))
-          .map(({ id, name, description, why, price, priceDisplay, priceAsOf, image, rating, reviewCount, affiliateUrl }) =>
-            ({ id, name, description, why, price, priceDisplay, priceAsOf, image, rating, reviewCount, affiliateUrl }));
+          .filter((p) => !seen.has(p.id) && rankRatingOf(p, pathname) >= FEED_MIN_RATING && p.image && !p.image.includes('/img/categories/'))
+          .map(({ id, name, description, why, price, priceDisplay, priceAsOf, image, rating, reviewCount, gsRating, rankRating, rankReviews, affiliateUrl }) =>
+            ({ id, name, description, why, price, priceDisplay, priceAsOf, image, rating, reviewCount, gsRating, rankRating, rankReviews, affiliateUrl }));
         if (extra.length) setPool([...products, ...extra]);
       })
       .catch(() => {});

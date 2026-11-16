@@ -10,6 +10,11 @@ import InlineShuffle from '@/components/InlineShuffle';
 import CategoryIcon from '@/components/CategoryIcon';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { rankRating, rankReviews } = forPage('/graduation-gifts-under-100');
 
 export const metadata: Metadata = {
   title: "Graduation Gifts Under $100 (Class of 2026) | TheGiftShuffle",
@@ -37,7 +42,7 @@ export const metadata: Metadata = {
 
 const gradUnder100 = products
   .filter((p) => p.occasions?.includes('graduation') && p.price <= 100)
-  .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
+  .sort((a, b) => rankRating(b) - rankRating(a) || rankReviews(b) - rankReviews(a));
 
 const faqs = [
   {
@@ -80,7 +85,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/graduation-gifts-under-100'),
     },
   })),
 };

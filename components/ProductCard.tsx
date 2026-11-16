@@ -6,6 +6,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 function PinIcon({ pinned }: { pinned: boolean }) {
   return pinned ? (
@@ -63,6 +64,10 @@ export interface CompactProduct {
   price: number;
   priceDisplay: string;
   priceAsOf?: string;
+  /** Set at load: the GiftShuffle rating (lib/giftRating.ts) and its ranking stand-ins (lib/giftRank.ts). */
+  gsRating?: number | null;
+  rankRating?: number;
+  rankReviews?: number;
   image: string;
   rating: number;
   reviewCount: number;
@@ -124,12 +129,10 @@ export default function ProductCard({
         <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2">
           {product.name}
         </p>
-        {product.rating > 0 && (
-          <div className="mt-1.5">
-            <StarRating rating={product.rating} />
-            <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
-          </div>
-        )}
+        <RatingSlot product={product} className="mt-1.5" show={product.rating > 0}>
+          <StarRating rating={product.rating} />
+          <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
+        </RatingSlot>
         {(product.why || product.description) && (
           <p className="text-[10px] italic text-gray-500 mt-1.5 pl-2 border-l-2 border-[#F04E30]/30 leading-snug line-clamp-2">
             {product.why ? <>&#10022; Why we picked this: {product.why}</> : product.description}

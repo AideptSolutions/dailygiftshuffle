@@ -4,6 +4,7 @@
 // have rating 0 = no reviews yet, which hides the star block on the card).
 import type { CompactProduct } from '@/components/ProductCard';
 import { applyLivePrices } from '@/lib/livePrices';
+import { applyGiftRatings } from '@/lib/giftRating';
 
 const amz = (asin: string) => `https://www.amazon.com/dp/${asin}?tag=dailygiftshuf-20`;
 
@@ -79,5 +80,6 @@ export const seasonalProducts: SeasonalProduct[] = [
 
 // Live Amazon prices over the hand-kept ones (see lib/livePrices.ts).
 applyLivePrices(seasonalProducts);
+applyGiftRatings(seasonalProducts);
 
 export const byTheme = (t: SeasonalTheme) => seasonalProducts.filter((p) => p.theme === t);

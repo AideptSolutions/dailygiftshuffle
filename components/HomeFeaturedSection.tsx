@@ -9,9 +9,14 @@ import { usePins } from '@/lib/usePins';
 import ProductModal from '@/components/ProductModal';
 import GeniePanel from '@/components/genie/GeniePanel';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
+import { rankRatingOf, rankReviewsOf } from '@/lib/ratingMode';
 
 // --- Random 4-picker from catalog ---
 const SHUFFLE_KEY = 'dgs_home_shuffle_seen';
+
+// This section only appears on the homepage.
+const HOME = '/';
 
 function getSeen(): string[] {
   try { return JSON.parse(sessionStorage.getItem(SHUFFLE_KEY) || '[]'); } catch { return []; }
@@ -68,10 +73,11 @@ function riffleVars(i: number, total: number): React.CSSProperties {
 // Lead the "examples" grid with genuinely gift-worthy items (skip sub-$25 checkout
 // consumables like lip balm), ranked by social proof. Falls back to the full pool
 // if the gifty set is too small.
+// Ranked by whichever rating the homepage uses (lib/ratingMode.ts).
 function getTrending(catalog: Product[], n: number = 4): Product[] {
-  const gifty = catalog.filter((p) => (p.price ?? 0) >= 25 && (p.rating ?? 0) >= 4.5);
+  const gifty = catalog.filter((p) => (p.price ?? 0) >= 25 && rankRatingOf(p, HOME) >= 4.5);
   const pool = gifty.length >= n ? gifty : catalog;
-  return [...pool].sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0)).slice(0, n);
+  return [...pool].sort((a, b) => rankReviewsOf(b, HOME) - rankReviewsOf(a, HOME)).slice(0, n);
 }
 
 // --- Star rating ---
@@ -221,7 +227,7 @@ export default function HomeFeaturedSection({
       .then((data: Product[]) => {
         if (!Array.isArray(data) || !data.length) return;
         const seen = new Set(initialProducts.map(p => p.id));
-        const extra = data.filter(p => !seen.has(p.id) && (p.rating ?? 0) >= 4.3 && p.image && !p.image.includes('/img/categories/'));
+        const extra = data.filter(p => !seen.has(p.id) && rankRatingOf(p, HOME) >= 4.3 && p.image && !p.image.includes('/img/categories/'));
         setCatalog([...initialProducts, ...extra]);
         if (!initialProducts.length) setCards(getTrending(extra));
       })
@@ -482,10 +488,10 @@ export default function HomeFeaturedSection({
                 <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2 flex-1">
                   {product.name}
                 </p>
-                <div className="mt-1.5">
+                <RatingSlot product={product} className="mt-1.5">
                   <StarRating rating={product.rating} />
                   <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
-                </div>
+                </RatingSlot>
                 {product.description && (
                   <p className="text-[10px] italic text-gray-500 mt-1.5 pl-2 border-l-2 border-[#F04E30]/30 leading-snug line-clamp-2">
                     {product.description}

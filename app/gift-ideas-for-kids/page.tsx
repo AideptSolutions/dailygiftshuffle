@@ -9,6 +9,7 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
 
 export const metadata: Metadata = {
   title: 'Gift Ideas for Kids and Grandkids: Top Picks by Age',
@@ -90,7 +91,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/gift-ideas-for-kids'),
     },
   })),
 };

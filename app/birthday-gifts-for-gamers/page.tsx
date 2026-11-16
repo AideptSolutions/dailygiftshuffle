@@ -10,6 +10,11 @@ import { products as recipientProducts } from '@/data/products';
 import ProductCard, { type CompactProduct } from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { rankRating, rankReviews } = forPage('/birthday-gifts-for-gamers');
 
 export const metadata: Metadata = {
   title: 'Birthday Gifts for Gamers: 20+ Best Picks for 2026',
@@ -46,15 +51,15 @@ export const metadata: Metadata = {
 
 // Pull every gaming-tagged pick from the expanded category catalog, plus any
 // gaming items from the recipient catalog, dedupe by id, rank by rating.
-const gamingCatalog = catalog.filter((p) => p.tags?.includes('gaming') && p.rating >= 4.3);
-const gamingRecipient = recipientProducts.filter((p) => p.tags?.includes('gaming') && p.rating >= 4.3);
+const gamingCatalog = catalog.filter((p) => p.tags?.includes('gaming') && rankRating(p) >= 4.3);
+const gamingRecipient = recipientProducts.filter((p) => p.tags?.includes('gaming') && rankRating(p) >= 4.3);
 
 const byId = new Map<string, CompactProduct>();
 for (const p of [...gamingCatalog, ...gamingRecipient]) {
   if (!byId.has(p.id)) byId.set(p.id, p as CompactProduct);
 }
 const gamerGifts = Array.from(byId.values()).sort(
-  (a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount,
+  (a, b) => rankRating(b) - rankRating(a) || rankReviews(b) - rankReviews(a),
 );
 
 const faqs = [
@@ -96,7 +101,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/birthday-gifts-for-gamers'),
     },
   })),
 };

@@ -1,4 +1,5 @@
 import { applyLivePrices } from '@/lib/livePrices';
+import { applyGiftRatings } from '@/lib/giftRating';
 export type BudgetTier = 'under25' | '25to50' | 'under50' | '50to100' | '100to150' | 'under150' | '150to250' | '250plus';
 export type Recipient = 'her' | 'him' | 'mom' | 'dad' | 'brother' | 'sister' | 'grandparents' | 'teens' | 'kids' | 'baby' | 'couples' | 'friends' | 'pets' | 'coworker' | 'employees' | 'myself' | 'myself-her' | 'myself-him' | 'streamers';
 export type Occasion = 'birthday' | 'anniversary' | 'holiday' | 'valentines' | 'mothersFathers' | 'weddingHousewarming' | 'graduation' | 'justBecause';
@@ -13,6 +14,10 @@ export interface Product {
   priceDisplay: string;
   /** ISO time the live Amazon price was fetched; absent when there is none. Set by applyLivePrices. */
   priceAsOf?: string;
+  /** Set at load: the GiftShuffle rating (lib/giftRating.ts) and its ranking stand-ins (lib/giftRank.ts). */
+  gsRating?: number | null;
+  rankRating?: number;
+  rankReviews?: number;
   image: string;
   rating: number;
   reviewCount: number;
@@ -471,3 +476,4 @@ export const products: Product[] = [
 
 // Live Amazon prices over the hand-kept ones (see lib/livePrices.ts).
 applyLivePrices(products);
+applyGiftRatings(products);

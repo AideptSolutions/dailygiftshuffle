@@ -9,6 +9,8 @@ import { guideImageFor } from '@/lib/guideImages';
 import { CATEGORY_META } from './categoryMeta';
 import { ALL, ALL_INCL_SEASONAL } from '@/lib/giftSelect';
 import { offerFor } from '@/lib/livePrices';
+import { rankRating, rankReviews } from '@/lib/giftRank';
+import { ratingMarkup } from '@/lib/ratingMarkup';
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_META).map((category) => ({ category }));
@@ -60,8 +62,10 @@ export default function CategoryShufflePage({ params }: { params: { category: st
   // see structured product data (the client grid shuffles a random subset).
   const BASE = 'https://www.thegiftshuffle.com';
   const absImg = (img: string) => (img?.startsWith('http') ? img : `${BASE}${img}`);
-  const schemaProducts = (category === 'halloween' ? ALL_INCL_SEASONAL : ALL).filter((p) => p.tags?.includes(category) && p.rating >= 4.3)
-    .sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0))
+  // Ranks and marks up by whichever rating this page uses (lib/ratingMode.ts).
+  const page = `/shuffle/${category}`;
+  const schemaProducts = (category === 'halloween' ? ALL_INCL_SEASONAL : ALL).filter((p) => p.tags?.includes(category) && rankRating(p, page) >= 4.3)
+    .sort((a, b) => rankReviews(b, page) - rankReviews(a, page))
     .slice(0, 12);
   const itemListSchema =
     schemaProducts.length > 0
@@ -80,9 +84,7 @@ export default function CategoryShufflePage({ params }: { params: { category: st
               image: absImg(p.image),
               ...(p.description ? { description: p.description } : {}),
               ...offerFor(p),
-              ...(p.rating > 0 && (p.reviewCount ?? 0) > 0
-                ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } }
-                : {}),
+              ...ratingMarkup(p, page),
             },
           })),
         }

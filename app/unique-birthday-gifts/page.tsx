@@ -9,6 +9,11 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { rankRating, rankReviews } = forPage('/unique-birthday-gifts');
 
 export const metadata: Metadata = {
   title: 'Unique Birthday Gifts: 30 Creative Ideas They Will Remember',
@@ -52,10 +57,10 @@ const uniquePool = products
   .filter(
     (p) =>
       p.occasions?.includes('birthday') &&
-      p.rating >= 4.5 &&
+      rankRating(p) >= 4.5 &&
       (p.tags ?? []).some((t) => UNIQUE_TAGS.has(t)),
   )
-  .sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
+  .sort((a, b) => rankRating(b) - rankRating(a) || rankReviews(b) - rankReviews(a));
 
 const recipientCount: Record<string, number> = {};
 const uniqueBirthday: typeof products = [];
@@ -108,7 +113,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/unique-birthday-gifts'),
     },
   })),
 };

@@ -6,9 +6,13 @@ import Navbar from '@/components/Navbar';
 import InlineShuffle from '@/components/InlineShuffle';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ProductCard from '@/components/ProductCard';
-import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import { forPage, ALL } from '@/lib/giftSelect';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/birthday-gift-ideas');
 
 export const metadata: Metadata = {
   title: 'Birthday Gift Ideas for 2026: The Best Picks for Every Person & Budget | TheGiftShuffle',
@@ -145,7 +149,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/birthday-gift-ideas'),
     },
   })),
 };

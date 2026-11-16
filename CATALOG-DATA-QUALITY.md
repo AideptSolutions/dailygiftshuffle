@@ -1522,3 +1522,92 @@ Pickle, Tamagotchi, Dash waffle maker, giant mug, Sipski.
 Until ratings are displayed, these 48 cards show no stars, and because other
 guides still filter on Amazon-style ratings of 4.3 and up, the new products
 appear only on this page and in tag-based listings.
+
+### 2026-11-15: rating switch built, left OFF (step 3 of the switch plan)
+
+Everything needed to show and rank by the GiftShuffle rating is in the code
+behind one constant, `RATING_MODE` in `lib/ratingMode.ts`. It ships set to
+`'amazon'`, which is the old behaviour. Nothing a visitor or a crawler sees
+changed.
+
+**The three settings**
+
+- `'amazon'`: old stars, old review counts, old ranking, old markup.
+- `'staged'`: the GiftShuffle rating everywhere except the 20 protected pages
+  (`PROTECTED_PATHS` in the same file: the homepage plus the pages that earn
+  search clicks or AI citations). Those keep the old behaviour. This is the
+  setting for the two-week measurement.
+- `'giftshuffle'`: the GiftShuffle rating everywhere.
+
+**What follows the switch**
+
+| Part | File | Off | On |
+|---|---|---|---|
+| Stars on cards | `components/RatingSlot.tsx` | old stars and "N reviews" | five solid coral rounded stars, the number, the label "GiftShuffle rating", never a review count |
+| Order and filters of every guide | `lib/giftRank.ts`, `lib/giftSelect.ts` (`forPage`) | stored rating and review count | stand-in numbers set by GiftShuffle rating |
+| Markup for search engines | `lib/ratingMarkup.ts` | AggregateRating (stars and review count) | an editorial Review by "TheGiftShuffle Editorial Staff" with the rating out of 5, no review count |
+| Homepage and shuffle filters in the browser | `rankRatingOf`, `rankReviewsOf` in `lib/ratingMode.ts` | stored numbers | stand-ins |
+| Gift Genie candidates and the rating it is told | `lib/genie/candidates.ts`, `lib/genie/prompt.ts` | stored numbers | stand-ins; the model is told "gift rating 4.2 of 5" |
+
+**How ranking works when on.** About seventy pages rank and filter on
+thresholds written for the old numbers ("4.5 stars and 500 reviews", the
+best-seller score of rating times log of reviews). The GiftShuffle rating runs
+on a lower scale (median 3.4) and has no count. Instead of rewriting every
+threshold, each product gets two stand-in numbers on the old scales, assigned
+by its place in the GiftShuffle order: the best-rated product gets the highest
+old-scale rating and the largest count, the median gets the median, and so on.
+Each threshold keeps roughly the share of the catalog it always had; the order
+comes entirely from the GiftShuffle rating. Stand-ins are never displayed.
+While the switch is off they are not attached to products at all, so pages
+carry no extra data.
+
+**How pages opt in.** 92 page files were changed by script
+(`rating-codemod.cjs`, `rating-display-codemod.cjs`, `rating-hand-edits.cjs`
+in the session scratchpad; all one-off). Each page binds its helpers to its
+own address: `const { curate, shufflePool, rankRating, rankReviews } =
+forPage('/my-guide');` and uses `...ratingMarkup(p, '/my-guide')` in its
+markup. A new guide must do the same (see CLAUDE.md).
+
+**Checks run (local builds, same price data as the baseline)**
+
+| Setting | Result |
+|---|---|
+| off | 157 of 158 built pages identical to the build before the change, including all structured data; same products on all 145 product pages; total HTML size unchanged. The one page that differs is `/picks` (fix below). |
+| staged | All 20 protected pages identical to the off build. 125 other pages changed. Markup: protected pages 610 AggregateRating and 0 Review; other pages 0 AggregateRating and 3,689 Review. Product lists changed on 63 pages. |
+| fully on | Builds clean. 0 AggregateRating anywhere, 4,312 Review. Product lists changed on a further 17 pages (the protected ones). |
+
+Browser check in staged mode at desktop and phone width: new stars on
+`/gifts-for-wife` (56 cards, no old review counts, no overflow), old stars on
+`/white-elephant-gifts` and the homepage, no console errors.
+
+The staged and fully-on builds were run before one last small change (do not
+attach the rating fields while the switch is off). That change only affects
+the off setting, which was rebuilt and re-checked after it. Rebuild in staged
+mode once more before turning it on for real.
+
+**Findings**
+
+- `/picks` has shown three stray characters in place of each star for an
+  unknown time (the star was saved in the wrong encoding). Fixed in this
+  commit; it is the only visible change.
+- With the rating on, two tag shuffle pages get thin structured-data lists:
+  `/shuffle/office` 10 products down to 4 and `/shuffle/tech` 12 down to 8.
+  Office and tech products rate low as gifts, so few clear the 4.3 stand-in
+  bar. To settle before the switch: lower the bar on those two lists or accept
+  it.
+- Products with no stored stars (the 42 white elephant additions, rating 0)
+  are hidden from most guides today. With the rating on they rank like
+  everything else, which is why most product lists grow.
+- Old saved favorites (kept in the visitor's browser) carry no GiftShuffle
+  rating, so `/selections` and wishlists show no stars for items saved before
+  the switch. New saves carry it.
+- Two pages (`/christmas-gifts-for-her`, `/mothers-day-gifts-under-100`) put
+  the Impact verification tag in a different place in the head from one build
+  to the next. Same tags, different order; not caused by this work.
+
+**Still to do before turning it on** (owner decisions and plan steps 4 to 9):
+the low-numbers question (half the catalog shows about three and a half
+stars), owner review of the ratings, the "How we rate" page and disclosure
+line, the copy sweep ("ranked by real reviews", "4.3 or higher", FAQ answers
+quoting Amazon reviews), the `s` flag consistency pass, and the two thin
+shuffle lists above.

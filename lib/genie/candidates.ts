@@ -5,6 +5,7 @@
 import type { FeedProduct } from '@/lib/catalogFeed';
 import { baseScore, variantKey, type AnyProduct } from '@/lib/giftSelect';
 import { traitTags } from '@/lib/genie/traits';
+import { rankRating } from '@/lib/giftRank';
 
 export interface GenieQuiz {
   relationship: string; // Recipient enum, validated in the route
@@ -22,6 +23,9 @@ export interface CandidateSet {
 
 const NON_PIN_LIMIT = 130;
 const MIN_RATING = 4.3;
+
+// The Genie ranks by whichever rating its own page uses (lib/ratingMode.ts).
+export const GENIE_PAGE = '/gift-genie';
 const TAG_CAP = 20;
 
 // Budget windows per tier, expanded 25% both ways so the model may make one
@@ -83,7 +87,7 @@ export function selectCandidates(
 
   const eligible = catalog.filter((p) => {
     if (pinnedIdSet.has(p.id)) return false;
-    if ((p.rating ?? 0) < MIN_RATING) return false;
+    if (rankRating(p, GENIE_PAGE) < MIN_RATING) return false;
     if (!(p.price >= lo && p.price <= hi)) return false;
     if ((p.recipients ?? []).some((r) => excludeRecipients.has(r))) return false;
     return true;
@@ -91,7 +95,7 @@ export function selectCandidates(
 
   const scored = eligible
     .map((p) => {
-      let s = baseScore(p as AnyProduct);
+      let s = baseScore(p as AnyProduct, GENIE_PAGE);
       if ((p.tags ?? []).some((t) => themeTags.has(t))) s *= PIN_THEME_BOOST;
       if ((p.recipients ?? []).includes(quiz.relationship)) s *= RELATIONSHIP_BOOST;
       if (selectedTraitTags.size && (p.tags ?? []).some((t) => selectedTraitTags.has(t))) s *= TRAIT_BOOST;

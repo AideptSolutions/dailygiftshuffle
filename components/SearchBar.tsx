@@ -7,6 +7,7 @@ import type { Product } from '@/data/products';
 import ProductModal from '@/components/ProductModal';
 import CategoryIcon from '@/components/CategoryIcon';
 import Price from '@/components/Price';
+import { rankReviewsOf } from '@/lib/ratingMode';
 
 const CATEGORIES = [
   { slug: 'tech',            label: 'Tech & Gadgets', desc: 'Gadgets, smart home, wearables, and all things tech.' },
@@ -105,7 +106,7 @@ export default function SearchBar() {
       const aStart = a.name.toLowerCase().startsWith(q) ? 0 : 1;
       const bStart = b.name.toLowerCase().startsWith(q) ? 0 : 1;
       if (aStart !== bStart) return aStart - bStart;
-      return (b.reviewCount ?? 0) - (a.reviewCount ?? 0);
+      return rankReviewsOf(b) - rankReviewsOf(a);
     });
     return filtered.slice(0, 5);
   }, [q, catalog, showResults]);

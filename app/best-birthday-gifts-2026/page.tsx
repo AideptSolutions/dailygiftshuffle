@@ -9,6 +9,11 @@ import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import GuideByline from '@/components/GuideByline';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import { forPage } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { rankRating, rankReviews, baseScore } = forPage('/best-birthday-gifts-2026');
 
 export const metadata: Metadata = {
   title: 'Best Birthday Gifts for 2026: 30 Top-Rated Picks for Anyone | TheGiftShuffle',
@@ -54,13 +59,13 @@ const birthdayPool = products
   .filter(
     (p) =>
       p.occasions?.includes('birthday') &&
-      p.rating >= 4.5 &&
-      p.reviewCount >= 500 &&
+      rankRating(p) >= 4.5 &&
+      rankReviews(p) >= 500 &&
       p.price >= 15 &&
       !(p.recipients ?? []).some((r) => EXCLUDE_RECIPIENTS.has(r)) &&
       !(p.tags ?? []).some((t) => EXCLUDE_TAGS.has(t)),
   )
-  .map((p) => ({ p, score: p.rating * Math.log10(p.reviewCount + 10) }))
+  .map((p) => ({ p, score: baseScore(p) }))
   .sort((a, b) => b.score - a.score);
 
 const recipientCount: Record<string, number> = {};
@@ -119,7 +124,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/best-birthday-gifts-2026'),
     },
   })),
 };

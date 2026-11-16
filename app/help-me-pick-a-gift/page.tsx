@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import { forPage, ALL } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool, rankRating } = forPage('/help-me-pick-a-gift');
 
 const URL = 'https://www.thegiftshuffle.com/help-me-pick-a-gift';
 
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
 // nothing weird sneaks in. recipientCap keeps the grid varied across audiences.
 const match = () => true;
 const grid = curate({ match, minRating: 4.6, sort: 'social', recipientCap: 5, limit: 30, pool: ALL });
-const shuffle = shufflePool((p) => p.rating >= 4.5, ALL);
+const shuffle = shufflePool((p) => rankRating(p) >= 4.5, ALL);
 
 export default function Page() {
   return (

@@ -14,8 +14,11 @@ import FeatureIcon, { type FeatureIconName } from '@/components/FeatureIcon';
 import HolidayGuides from '@/components/HolidayGuides';
 import HolidayIcon from '@/components/HolidayIcon';
 import { isChristmasSeason, daysUntilChristmas } from '@/lib/season';
-import { curate, ALL } from '@/lib/giftSelect';
+import { forPage, ALL } from '@/lib/giftSelect';
 import type { Product } from '@/data/products';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate } = forPage('/');
 
 export const metadata: Metadata = {
   title: 'TheGiftShuffle: Find the Perfect Gift in Seconds',
@@ -178,6 +181,7 @@ export default async function HomePage() {
       image: p.image,
       rating: p.rating,
       reviewCount: p.reviewCount,
+      ...(full.gsRating != null ? { gsRating: full.gsRating, rankRating: full.rankRating, rankReviews: full.rankReviews } : {}),
       affiliateUrl: p.affiliateUrl,
       recipients: full.recipients ?? [],
       budgetTier: full.budgetTier,

@@ -8,6 +8,7 @@ import { useFavorites } from '@/lib/useFavorites';
 import ProductModal from '@/components/ProductModal';
 import type { Product } from '@/data/products';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 function StarRating({ rating }: { rating: number }) {
   const full = Math.floor(rating);
@@ -88,10 +89,10 @@ export default function SelectionsPage() {
                     <h3 className="font-bold text-gray-900 text-sm leading-snug mb-1 flex-1">
                       {product.name}
                     </h3>
-                    <div className="flex items-center gap-1.5 mb-2">
+                    <RatingSlot product={product} className="flex items-center gap-1.5 mb-2">
                       <StarRating rating={product.rating} />
                       <span className="text-xs text-gray-400">({product.reviewCount.toLocaleString()})</span>
-                    </div>
+                    </RatingSlot>
                     <p className="text-xs text-gray-500 line-clamp-2 mb-3">{product.description}</p>
                     <div className="flex items-center justify-between mt-auto">
                       <span className="text-xl font-extrabold" style={{ color: '#1A202C' }}>

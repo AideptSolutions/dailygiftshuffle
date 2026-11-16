@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { products } from '@/data/products';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 // 4 highest-reviewed products â€” highest demand / trending
 const HOT_PRODUCT_IDS = [
@@ -55,10 +56,10 @@ export default function FeaturedGifts() {
               <p className="text-xs font-semibold text-gray-900 leading-snug line-clamp-2 flex-1">
                 {product.name}
               </p>
-              <div className="mt-1.5">
+              <RatingSlot product={product} className="mt-1.5">
                 <StarRating rating={product.rating} />
                 <p className="text-xs text-gray-400">{product.reviewCount.toLocaleString()} reviews</p>
-              </div>
+              </RatingSlot>
               <p className="text-sm font-extrabold mt-1.5" style={{ color: '#1A202C' }}>
                 <Price product={product} />
               </p>

@@ -10,6 +10,7 @@ import NextGiftNudge, { type NextGiftNudgeProps } from '@/components/NextGiftNud
 import GuideByline from '@/components/GuideByline';
 import { pathOf } from '@/lib/pageDates';
 import { offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
 
 export interface GiftGuideFaq {
   q: string;
@@ -110,15 +111,7 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
         image: absImg(p.image),
         ...(p.description ? { description: p.description } : {}),
         ...offerFor(p),
-        ...(p.rating > 0 && p.reviewCount > 0
-          ? {
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: p.rating,
-                reviewCount: p.reviewCount,
-              },
-            }
-          : {}),
+        ...ratingMarkup(p, pathOf(props.canonicalUrl)),
       },
     })),
   };

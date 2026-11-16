@@ -5,6 +5,7 @@ import Image from 'next/image';
 import type { Product } from '@/data/products';
 import { useFavorites } from '@/lib/useFavorites';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 function StarRating({ rating }: { rating: number }) {
   const full  = Math.floor(rating);
@@ -85,12 +86,12 @@ export default function ProductModal({ product, onClose }: Props) {
           </div>
 
           {/* Rating */}
-          <div className="flex items-center gap-2 mb-4">
+          <RatingSlot product={product} className="flex items-center gap-2 mb-4">
             <StarRating rating={product.rating} />
             <span className="text-sm text-gray-400">
               {product.rating.toFixed(1)} ({product.reviewCount.toLocaleString()} reviews)
             </span>
-          </div>
+          </RatingSlot>
 
           {/* Description */}
           <p className="text-gray-600 text-sm leading-relaxed mb-6">

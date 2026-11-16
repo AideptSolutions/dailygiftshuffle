@@ -7,6 +7,8 @@
 import { products as recipientCatalog } from '@/data/products';
 import productCatalog from '@/data/products-catalog';
 import { isInSeason } from '@/lib/season';
+// Loaded for its effect: it puts the ranking stand-ins on every product.
+import '@/lib/giftRank';
 
 export interface FeedProduct {
   id: string;
@@ -16,6 +18,10 @@ export interface FeedProduct {
   price: number;
   priceDisplay: string;
   priceAsOf?: string;
+  /** Set at load: the GiftShuffle rating (lib/giftRating.ts) and its ranking stand-ins (lib/giftRank.ts). */
+  gsRating?: number | null;
+  rankRating?: number;
+  rankReviews?: number;
   image: string;
   rating: number;
   reviewCount: number;
@@ -43,6 +49,9 @@ function normalize(p: any): FeedProduct {
     price: p.price,
     priceDisplay: p.priceDisplay,
     priceAsOf: p.priceAsOf,
+    gsRating: p.gsRating,
+    rankRating: p.rankRating,
+    rankReviews: p.rankReviews,
     image: p.image,
     rating: p.rating,
     reviewCount: p.reviewCount,

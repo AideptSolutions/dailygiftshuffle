@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, ALL } from '@/lib/giftSelect';
+import { forPage, ALL } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/stocking-stuffers-for-him');
 
 const URL = 'https://www.thegiftshuffle.com/stocking-stuffers-for-him';
 

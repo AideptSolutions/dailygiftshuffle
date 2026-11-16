@@ -9,6 +9,9 @@ import { products } from '@/data/products';
 import GuideByline from '@/components/GuideByline';
 import Price from '@/components/Price';
 import { applyLivePrices, offerFor } from '@/lib/livePrices';
+import { ratingMarkup } from '@/lib/ratingMarkup';
+import RatingSlot from '@/components/RatingSlot';
+import { applyGiftRatings } from '@/lib/giftRating';
 
 export const metadata: Metadata = {
   title: 'Best Tech Gifts & Gadgets 2026: Top Picks for Every Budget',
@@ -135,6 +138,7 @@ const techProducts = [
 // This page keeps its own six products; give them live prices too. The daily
 // refresh reads their product IDs from this file (see scripts/refresh-prices.mjs).
 applyLivePrices(techProducts);
+applyGiftRatings(techProducts);
 
 const techShufflePool = products.filter((p) => p.tags?.includes('tech'));
 
@@ -181,7 +185,7 @@ const itemListSchema = {
       image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
       ...(p.description ? { description: p.description } : {}),
       ...offerFor(p),
-      ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+      ...ratingMarkup(p, '/tech-gadgets'),
     },
   })),
 };
@@ -259,7 +263,7 @@ export default function TechGadgetsPage() {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <span className="font-bold text-[#F04E30]"><Price product={p} /></span>
-                  <span className="text-xs text-gray-400">★ {p.rating}</span>
+                  <RatingSlot product={p} as="span" className="text-xs text-gray-400">★ {p.rating}</RatingSlot>
                 </div>
               </a>
             ))}

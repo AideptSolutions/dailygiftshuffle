@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { products } from '@/data/products';
 import Price from '@/components/Price';
+import RatingSlot from '@/components/RatingSlot';
 
 const STARTER_IDS = [
   // Under $10 everyday picks
@@ -90,10 +91,10 @@ export default function PicksPage() {
                       <p className="text-gray-500 text-xs leading-relaxed flex-1 mb-3 line-clamp-3">
                         {product.description}
                       </p>
-                      <div className="flex items-center gap-1 mb-3">
-                        <span className="star-gold text-xs">{'â˜…'.repeat(Math.round(product.rating))}</span>
+                      <RatingSlot product={product} className="flex items-center gap-1 mb-3">
+                        <span className="star-gold text-xs">{'★'.repeat(Math.round(product.rating))}</span>
                         <span className="text-gray-400 text-xs">({product.reviewCount.toLocaleString()})</span>
-                      </div>
+                      </RatingSlot>
                       <a
                         href={product.affiliateUrl}
                         target="_blank"

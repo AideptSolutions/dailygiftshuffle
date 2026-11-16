@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { curate, shufflePool, variantKey, ALL_INCL_SEASONAL as POOL } from '@/lib/giftSelect';
+import { forPage, variantKey, ALL_INCL_SEASONAL as POOL } from '@/lib/giftSelect';
+
+// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
+const { curate, shufflePool } = forPage('/hanukkah-gifts');
 
 const URL = 'https://www.thegiftshuffle.com/hanukkah-gifts';
 

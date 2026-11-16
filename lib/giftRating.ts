@@ -17,6 +17,7 @@
 // add its id and marks to data/gift-ratings.json; nothing needs looking up.
 
 import data from '@/data/gift-ratings.json';
+import { RATING_MODE } from '@/lib/ratingMode';
 
 export type GiftMarks = [number, number, number, number, number, string];
 const MARKS = data as unknown as Record<string, GiftMarks>;
@@ -42,4 +43,17 @@ export function giftRating(id: string): number | null {
   const weighted = WEIGHTS.reduce((sum, w, i) => sum + w * (m[i] as number), 0) / 100;
   const flags = typeof m[5] === 'string' ? m[5].length : 0;
   return Math.round((weighted - Math.min(0.5, 0.15 * flags)) * 10) / 10;
+}
+
+/**
+ * Put each product's GiftShuffle rating on the product itself, in place.
+ * Called once at the bottom of each data file, so the rating travels with the
+ * product to every card without the browser loading the ratings file.
+ */
+export function applyGiftRatings<T extends { id: string; gsRating?: number | null }>(list: T[]): T[] {
+  // While the switch is off the rating is not attached, so pages carry no
+  // extra data until it is needed.
+  if (RATING_MODE === 'amazon') return list;
+  for (const p of list) p.gsRating = giftRating(p.id);
+  return list;
 }

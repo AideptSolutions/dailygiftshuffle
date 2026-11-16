@@ -11,6 +11,8 @@ import InlineShuffle from '@/components/InlineShuffle';
 import type { NicheTag } from '@/data/products-catalog';
 import { ALL, ALL_INCL_SEASONAL } from '@/lib/giftSelect';
 import { offerFor } from '@/lib/livePrices';
+import { rankReviews } from '@/lib/giftRank';
+import { ratingMarkup } from '@/lib/ratingMarkup';
 
 type Niche = NicheTag;
 
@@ -516,10 +518,12 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
   // pages show the full depth of the niche rather than 12 arbitrary items.
   // The Halloween category keeps its items year-round (out of season they are
   // hidden everywhere else); every other category uses the in-season pool.
+  // Ranks and marks up by whichever rating this page uses (lib/ratingMode.ts).
+  const page = `/category/${params.niche}`;
   const source = params.niche === 'halloween' ? ALL_INCL_SEASONAL : ALL;
   const filtered = source
     .filter((p) => p.tags?.includes(params.niche as Niche))
-    .sort((a, b) => (b.reviewCount ?? 0) - (a.reviewCount ?? 0));
+    .sort((a, b) => rankReviews(b, page) - rankReviews(a, page));
   const trendingPicks = filtered.slice(0, 24);
   const editorialParas = EDITORIAL[params.niche as Niche] ?? [];
 
@@ -561,7 +565,7 @@ export default function CategoryPage({ params }: { params: { niche: string } }) 
         image: p.image.startsWith('http') ? p.image : `https://www.thegiftshuffle.com${p.image}`,
         ...(p.description ? { description: p.description } : {}),
         ...offerFor(p),
-        ...(p.rating > 0 && p.reviewCount > 0 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: p.rating, reviewCount: p.reviewCount } } : {}),
+        ...ratingMarkup(p, page),
       },
     })),
   };

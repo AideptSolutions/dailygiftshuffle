@@ -9,6 +9,7 @@ import { products as recipientProducts } from '@/data/products';
 import catalog from '@/data/products-catalog';
 import type { CompactProduct } from '@/components/ProductCard';
 import { isInSeason } from '@/lib/season';
+import { rankRating, rankReviews } from '@/lib/giftRank';
 
 export interface AnyProduct {
   id: string;
@@ -26,6 +27,10 @@ export interface AnyProduct {
   tags?: string[];
   occasions?: string[];
   budgetTier?: string;
+  /** Set at load: the GiftShuffle rating and its ranking stand-ins (lib/giftRank.ts). */
+  gsRating?: number | null;
+  rankRating?: number;
+  rankReviews?: number;
 }
 
 // The recipient catalog (data/products.ts) is a single clean source with rich
@@ -94,20 +99,24 @@ export interface CurateOpts {
    * the standouts have to be named rather than inferred.
    */
   preferMatch?: (p: AnyProduct) => boolean;
+  /** The page this list is for, e.g. '/gifts-under-25'. Decides which rating ranks it (lib/ratingMode.ts). Set for you by forPage(). */
+  page?: string | null;
 }
 
 const AFFINITY_BOOST = 1.6;
 const AFFINITY_PENALTY = 0.45;
 
-export const baseScore = (p: AnyProduct) => p.rating * Math.log10(p.reviewCount + 10);
+export const baseScore = (p: AnyProduct, page?: string | null) =>
+  rankRating(p, page) * Math.log10(rankReviews(p, page) + 10);
 
 const score = (
   p: AnyProduct,
   prefer?: Set<string>,
   demote?: Set<string>,
   preferMatch?: (p: AnyProduct) => boolean,
+  page?: string | null,
 ) => {
-  const s = baseScore(p);
+  const s = baseScore(p, page);
   if (!prefer?.size && !demote?.size && !preferMatch) return s;
   // Named standouts win outright, so a great cross-category gift survives a
   // category demotion.
@@ -165,6 +174,7 @@ export function curate(opts: CurateOpts): CompactProduct[] {
     preferTags,
     deprioritizeTags,
     preferMatch,
+    page,
   } = opts;
 
   const exR = new Set(excludeRecipients);
@@ -175,7 +185,7 @@ export function curate(opts: CurateOpts): CompactProduct[] {
   const ranked = pool
     .filter(
       (p) =>
-        p.rating >= minRating &&
+        rankRating(p, page) >= minRating &&
         p.price >= minPrice &&
         !(p.recipients ?? []).some((r) => exR.has(r)) &&
         !(p.tags ?? []).some((t) => exT.has(t)) &&
@@ -183,8 +193,8 @@ export function curate(opts: CurateOpts): CompactProduct[] {
     )
     .sort((a, b) =>
       sort === 'rating'
-        ? b.rating - a.rating || b.reviewCount - a.reviewCount
-        : score(b, prefer, demote, preferMatch) - score(a, prefer, demote, preferMatch),
+        ? rankRating(b, page) - rankRating(a, page) || rankReviews(b, page) - rankReviews(a, page)
+        : score(b, prefer, demote, preferMatch, page) - score(a, prefer, demote, preferMatch, page),
     );
 
   const perRecipient: Record<string, number> = {};
@@ -215,13 +225,33 @@ export function curate(opts: CurateOpts): CompactProduct[] {
 export function shufflePool(
   match: (p: AnyProduct) => boolean,
   pool: AnyProduct[] = RECIPIENT,
-  opts?: { excludeTags?: string[]; keepMatch?: (p: AnyProduct) => boolean },
+  opts?: { excludeTags?: string[]; keepMatch?: (p: AnyProduct) => boolean; page?: string | null },
 ): CompactProduct[] {
   const ex = opts?.excludeTags ? new Set(opts.excludeTags) : undefined;
   return pool.filter((p) => {
-    if (p.rating < 4.3 || !match(p)) return false;
+    if (rankRating(p, opts?.page) < 4.3 || !match(p)) return false;
     if (!ex?.size) return true;
     if (opts?.keepMatch?.(p)) return true; // named standouts survive the filter
     return !(p.tags ?? []).some((t) => ex.has(t));
   }) as CompactProduct[];
+}
+
+/**
+ * The selection helpers bound to one page, so every list on that page ranks by
+ * the rating that page uses (lib/ratingMode.ts). Each guide starts with:
+ *
+ *   const { curate, shufflePool, rankRating, rankReviews } = forPage('/my-guide');
+ */
+export function forPage(page: string) {
+  return {
+    curate: (opts: CurateOpts) => curate({ ...opts, page }),
+    shufflePool: (
+      match: (p: AnyProduct) => boolean,
+      pool?: AnyProduct[],
+      opts?: { excludeTags?: string[]; keepMatch?: (p: AnyProduct) => boolean },
+    ) => shufflePool(match, pool, { ...opts, page }),
+    baseScore: (p: AnyProduct) => baseScore(p, page),
+    rankRating: (p: AnyProduct) => rankRating(p, page),
+    rankReviews: (p: AnyProduct) => rankReviews(p, page),
+  };
 }
