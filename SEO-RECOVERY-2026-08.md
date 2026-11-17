@@ -1158,3 +1158,157 @@ with ratings credited to stores such as Walmart. Wirecutter publishes no star
 ratings at all and still gets the strip. What makes a page eligible for that
 strip is not known; it is a possible opportunity to look into, separate from
 the rating question.
+
+## Checkpoint 2026-11-17 (Bing WMT Oct 18 - Nov 15: overview, pages, keywords; GA4 Oct 19 - Nov 15; Vercel 30d)
+
+No Google export this time. First read with two full weeks after the Nov 1
+holiday build-out.
+
+BING SEARCH (29 days): 107 clicks, 2,221 impressions, CTR 4.8 percent.
+By week: Oct 18-24 12 clicks / 248 impr; Oct 25-31 16 / 272; Nov 1-7 36 / 596;
+Nov 8-14 42 / 993. Impressions are four times the first week, clicks three
+and a half times. Clicks per day 1.7, 2.3, 5.1, 6.0. CTR fell in the last
+week (6.0 to 4.2 percent) and the last three days read 122 / 5, 118 / 3,
+112 / 1 after a peak of 176 on Nov 10. The newest days in a Bing export are
+usually incomplete, so treat the tail as unconfirmed and recheck in a week.
+/stocking-stuffers was not touched on Nov 10, so the title pass is not the
+cause.
+
+BING PAGES (36 rows, 2,000 impr, 107 clicks):
+- /stocking-stuffers 1,391 impr, 86 clicks, 6.2 percent, position 4.85
+  (5.06 in the three-month baseline). 80 percent of clicks, again.
+- /white-elephant-gifts 312 / 10, 3.2 percent, position 5.7. Second page by
+  a distance and now seasonal.
+- /gifts-for-a-crush 97 / 1, 1.0 percent, position 5.5. Still the weakest
+  CTR of the bigger pages. Its queries are questions ("what should i get my
+  crush"), the kind Bing answers on the results page.
+- Then small: girlfriend 27 / 2, home 23 / 1, birthday-gift-ideas 22 / 0,
+  luxury-under-50 20 / 2 (position 2.5), brother 15 / 0, birthday gamers
+  14 / 0, secret-santa 12 / 0, luxury-under-200 9 / 0, hanukkah 6 / 1,
+  best-gaming 6 / 2, trending-christmas 6 / 0.
+- Christmas set, two weeks after the Nov 4 links from /stocking-stuffers:
+  still almost nothing. christmas-gifts-for-her 1, -for-him 1; no row at all
+  for /christmas-gift-ideas, -for-mom, -for-dad, -for-kids, -for-teens or
+  /last-minute-christmas-gifts. Of the Nov 1 pages only hanukkah-gifts and
+  secret-santa-gifts show. The stocking stuffer spokes are the same: only
+  -under-10 has a row (3 impressions); Bing sends every "for husband",
+  "for mom", "for wife" search to the hub.
+- Pages reworded on Nov 10 and not restored (brother, secret santa,
+  luxury-for-her, 40th, help-me-pick): five days of data, nothing readable.
+
+BING KEYWORDS (338 rows, 650 impr, 90 clicks; the report holds about a third
+of all impressions):
+- CTR by position: 1 to 3, 25 percent (181 impr, 46 clicks); 3 to 6, 15
+  percent (238 / 36); below 6, 3.5 percent (231 / 8). A third of the listed
+  impressions sit below 6 and return almost nothing.
+- Stocking terms are 422 of 650 impressions and 74 of 90 clicks. Modifier
+  searches click far better than head terms: women, wife, mom 39 impr / 11
+  clicks (28 percent); adults and twenty-somethings 31 / 8 (26 percent, at
+  position 6.4); men 16 / 2; teens 13 / 1.
+- Biggest zero-click terms: "small stocking stuffers" 26 at 9.4, "stocking
+  stuffers" 18 at 7.8, "stocking stuffers for 2026" 14 at 1.4 (no clicks at
+  the top, unexplained), "what are good stocking stuffers" 6 at 7.5.
+- White elephant: 77 impr, 7 clicks. Searches with a price in them (mostly
+  $30, also $20 and $25): 10 terms, 17 impr, position 4.7, 0 clicks.
+  Searches for funny or gag: 5 terms, 10 impr, position 7.4, 0 clicks. The
+  page is one undivided list; the description already says "under $30".
+- Crush: 33 terms, 48 impr, 1 click. Many name a boy or a girl.
+- Gaps with no page: stocking stuffers for adults, and for teens (both are
+  in the hub's own keywords and FAQ). Wife and husband searches land on the
+  hub at positions 2 to 3 and click well, so no gap there.
+
+GA4 (431 active users vs 291 on Nov 4, 36.7s engagement vs 31.2s): users by
+first source: direct 231, bing 79 (54), duckduckgo 52 (22), yahoo 38 (20),
+chatgpt.com 11 (5), ecosia 7, perplexity 2, google 1. /stocking-stuffers 168
+views, 142 users, 27 percent bounce; home 119 / 77, 54 percent;
+/white-elephant-gifts 43 / 42, 30 percent; Find a Gift 25 / 20, 8 percent.
+Automation: Singapore 47 + Ashburn 35 + mainland China 12 is 22 percent of
+users (37 percent on Nov 4). Separately, 76 page rows show exactly 3 or 4
+views from 3 or 4 users (263 of 909 views): a handful of crawlers walking
+every page, so the long tail of the GA4 page list is not readers.
+
+VERCEL (30d): 615 visitors (+117 percent), 827 views (+149 percent), bounce
+83 percent (89). /stocking-stuffers 255 (136 on Nov 4), / 81,
+/white-elephant-gifts 67 (17), /trending-christmas-gifts-2026 42 (new),
+/shuffle 34, /gift-genie 12, /best-gaming-gifts-2026 10. Referrers:
+duckduckgo 161 (56), bing 99 (67), yahoo 45 (26), google 8 (2), ecosia 7.
+Singapore 16 percent, China 4 percent of visitors.
+- DuckDuckGo is now the largest referrer, ahead of Bing itself. GA4 shows
+  only a third of it (52 users) because DuckDuckGo's browser blocks GA4;
+  Vercel is the truer count. Bing Webmaster Tools does not count DuckDuckGo
+  clicks at all, so real search traffic from Bing's index is about three
+  times the 107 clicks it reports (about 320 visitors).
+- /white-elephant-gifts: 67 visitors against 10 Bing clicks, and
+  /trending-christmas-gifts-2026: 42 against 0. Most of both comes from
+  outside Bing proper (DuckDuckGo, Yahoo, or visitors moving on from the
+  homepage); the split is not known.
+- Spike on Nov 14 (about 69 visitors in Vercel, 55 new users in GA4) with
+  only 3 Bing clicks that day: source not identified. The Vercel connector
+  could not see this project ("Web Analytics not found"), so no breakdown by
+  referrer and page was possible; it can be read in the dashboard by
+  clicking that day.
+
+READ: growth is real and it is the season meeting one page. The site is
+/stocking-stuffers plus /white-elephant-gifts on Bing's index, reaching
+people through Bing, DuckDuckGo and Yahoo. The Christmas pages built on Nov 1
+have not been picked up. Google is unchanged in the sources (1 GA4 user).
+
+Bearing on the rating switch: pages outside PROTECTED_PATHS now earning
+clicks or steady impressions are /hanukkah-gifts, /help-me-pick-a-gift,
+/40th-birthday-gifts (a click each), /trending-christmas-gifts-2026 (42
+visitors), /secret-santa-gifts, /gift-ideas-for-brother and
+/birthday-gifts-for-gamers. Staged mode would reorder all of them. Proposed
+to the owner: add them to the protected list before anything is turned on.
+Nothing changed by this checkpoint.
+
+## 2026-11-17: /secret-santa-gifts rebuilt as a hand-picked list
+
+Owner asked for a "Best Secret Santa Gifts 2026" page. One already existed at
+/secret-santa-gifts, so it was rebuilt in place rather than duplicated (owner
+agreed).
+
+Before: Bing 12 impressions, position 5.5, 0 clicks in the Oct 18 - Nov 15
+export ("best secret santa gifts 2026" at 6, "top 10 secret santa gifts
+2026" at 3, "best couple secret santa ideas" at 1). The list was automatic:
+any product from $20 to $50 with a rating of 4.6 or more, tagged for
+coworkers, friends, him or her. It led with a body composition scale and
+included a car diagnostic scanner, a financial calculator and a 3-pack of
+light switches; nothing was under $20; one undivided list of 35.
+
+Now (app/secret-santa-gifts/page.tsx):
+- 44 gifts picked one at a time, 23 of them new to the catalog (see
+  CATALOG-DATA-QUALITY.md, same date). Nothing on the page is chosen or
+  ordered by a star rating.
+- Seven labelled groups with jump links: $15 and under (12), $15 to $25 (8),
+  $25 to $50 (8), a coworker you barely know (4), the boss (4), funny but
+  office-safe (4), couples (4). The three budget groups are filled from one
+  ordered list by each product's price on the day of the build, so a heading
+  never promises a price the card does not show; four stand-ins keep the
+  count at 44 if a pick climbs past $50.
+- GiftGuideTemplate has a new optional `gridGroups` prop for this (groups
+  with an id, a jump-link label, a heading and a blurb). Pages that do not
+  pass it are unchanged. The ItemList markup still lists all 44.
+- Answer block names products at each budget. Questions went from 5 to 10:
+  top 10, under $15, under $25, the boss, couples and what not to give were
+  added; the two answers that leaned on review counts were reworded.
+- The intro no longer says "top-rated with serious review counts".
+
+Title and description are NOT changed (still "Best Secret Santa Gifts 2026:
+35 Ideas for Coworkers" and the old description), because the owner approves
+new wording first. Proposed, waiting for a yes:
+- Title: Best Secret Santa Gifts 2026: 44 Ideas for Any Budget (53 characters)
+- Description: The best Secret Santa gifts for 2026: 44 hand-picked ideas
+  sorted by budget ($15, $25 and $50), plus picks for coworkers, the boss and
+  couples. (143 characters)
+Until then the title says 35 and the page shows 44.
+
+Checked before shipping: type check and production build pass (168 pages);
+local preview at desktop and phone width: 44 cards, all with a live price,
+no broken pictures, no sideways scroll, no console errors; ItemList 44 with
+44 offers, FAQPage 13 questions. The new products also appear on nine
+category pages through their tags (/category/fitness, the protected one, is
+not among them).
+
+Watch in the next Bing page export: impressions and clicks on
+/secret-santa-gifts against the 12 / 0 baseline, and whether the price and
+person searches ("under $25", "for coworkers", "for couples") start to show.

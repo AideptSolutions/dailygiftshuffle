@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { forPage, ALL } from '@/lib/giftSelect';
-
-// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
-const { curate, shufflePool } = forPage('/secret-santa-gifts');
+import GiftGuideTemplate, { type GiftGuideGroup } from '@/components/GiftGuideTemplate';
+import { byIds } from '@/lib/giftSelect';
+import type { CompactProduct } from '@/components/ProductCard';
 
 const URL = 'https://www.thegiftshuffle.com/secret-santa-gifts';
 
+// Title and description are unchanged from before the 2026-11-17 rebuild: the
+// owner approves any new wording first (proposal in SEO-RECOVERY-2026-08.md).
 export const metadata: Metadata = {
   title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers',
   description:
@@ -16,9 +16,11 @@ export const metadata: Metadata = {
     'secret santa gift ideas',
     'best secret santa gifts 2026',
     'secret santa gifts for coworkers',
+    'secret santa gifts under 15',
     'secret santa gifts under 25',
     'secret santa gifts under 50',
     'office secret santa ideas',
+    'secret santa gifts for couples',
     'secret santa for someone you dont know',
   ],
   openGraph: {
@@ -31,23 +33,119 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
 };
 
-// Broadly likeable picks in the classic secret santa budget window. Leans on
-// coworker/friends-suitable items with high social proof.
-// Office-exchange lane: $20-50 and suited to a coworker or friend. Keeps this
-// distinct from /white-elephant-gifts, which owns the cheaper gag-gift band.
-const match = (p: { price?: number; recipients?: string[] }) =>
-  (p.price ?? 999) <= 50 &&
-  (p.price ?? 0) >= 20 &&
-  !!p.recipients?.some((r) => ['coworker', 'friends', 'employees', 'him', 'her'].includes(r));
-const grid = curate({ match, minRating: 4.6, sort: 'social', recipientCap: 8, limit: 35, pool: ALL });
-const shuffle = shufflePool(match, ALL);
+// This page is hand-picked, one product at a time, so nothing here is chosen
+// or ordered by a star rating. /white-elephant-gifts owns the gag-gift lane;
+// this page is the gift you would be glad to receive from a coworker.
+
+// Budget picks, in the order they should appear. Each is placed in a budget
+// section by its price on the day of the build, so a section heading never
+// promises a price the card does not show.
+const BUDGET_PICKS = [
+  // $15 and under
+  'santa-ferrero-rocher',
+  'santa-harney-hot-cinnamon',
+  'santa-happy-salmon',
+  'santa-mug-warmer',
+  'santa-yankee-balsam-cedar',
+  'santa-burts-bees-hand-repair',
+  'santa-parker-jotter',
+  'santa-zulay-frother',
+  'santa-mikes-hot-honey',
+  'santa-flybyjing-chili-crisp',
+  'santa-taco-vs-burrito',
+  'santa-paint-by-sticker',
+  // $15 to $25
+  'santa-yeti-lowball',
+  'santa-lego-happy-plants',
+  'santa-codenames',
+  'santa-hydro-flask-mug',
+  'santa-barefoot-dreams-socks',
+  'santa-jlab-earbuds',
+  'santa-ravensburger-reading-room',
+  'santa-hot-chocolate-set',
+  // $25 to $50
+  'santa-jbl-go-4',
+  'santa-atlas-coffee',
+  'forher2-capri-blue-candle',
+  'fri-006', // Catan
+  'elephant-the-comfy',
+  'trv26-crock-pot-lunch-box',
+  'sport-owala-40oz',
+  'selfcare-journal', // The Five Minute Journal
+];
+// Stand-ins, used only if a pick above climbs past $50, to keep the count.
+const BUDGET_RESERVE = ['stuffer-bananagrams', 'wed26-godonlif-candle-warmer', 'cpl-003', 'lux-voluspa-candle'];
+const BUDGET_COUNT = BUDGET_PICKS.length;
+
+const affordable = (p: { price: number }) => p.price <= 50;
+const budget = byIds(BUDGET_PICKS).filter(affordable);
+for (const p of byIds(BUDGET_RESERVE)) {
+  if (budget.length >= BUDGET_COUNT) break;
+  if (affordable(p)) budget.push(p);
+}
+
+const asCards = (list: ReturnType<typeof byIds>) => list as CompactProduct[];
+
+const groups: GiftGuideGroup[] = [
+  {
+    id: 'under-15',
+    label: '$15 and under',
+    heading: 'Secret Santa Gifts for $15 and Under',
+    blurb: 'For the office exchange with a tight limit: small, well-made and easy to like.',
+    products: asCards(budget.filter((p) => p.price <= 15)),
+  },
+  {
+    id: 'under-25',
+    label: '$15 to $25',
+    heading: 'Secret Santa Gifts from $15 to $25',
+    blurb: 'The most common budget, and enough for a name-brand gift people keep.',
+    products: asCards(budget.filter((p) => p.price > 15 && p.price <= 25)),
+  },
+  {
+    id: 'under-50',
+    label: '$25 to $50',
+    heading: 'Secret Santa Gifts from $25 to $50',
+    blurb: 'For family and close-friend exchanges with room for something bigger.',
+    products: asCards(budget.filter((p) => p.price > 25)),
+  },
+  {
+    id: 'coworker',
+    label: 'A coworker you barely know',
+    heading: 'For a Coworker You Barely Know',
+    blurb: 'Safe ground: coffee, a good notebook, a snack to share, a light for reading.',
+    products: asCards(byIds(['digital-starbucks-25', 'off-006', 'wed26-urban-accents-movie-night', 'admin-1772857976780-x8wha'])),
+  },
+  {
+    id: 'boss',
+    label: 'The boss',
+    heading: 'For the Boss',
+    blurb: 'Desk-worthy and modest. Nothing personal, nothing that looks like trying too hard.',
+    products: asCards(byIds(['off-003', 'fin-005', 'selfcare-tea-sampler', 'gdn26-lego-botanicals-succulents'])),
+  },
+  {
+    id: 'funny',
+    label: 'Funny but office-safe',
+    heading: 'Funny but Office-Safe',
+    blurb: 'A laugh nobody has to explain to HR.',
+    products: asCards(byIds(['elephant-desk-punching-bag', 'elephant-useless-box', 'santa-tube-guy', 'elephant-magic-8-ball'])),
+  },
+  {
+    id: 'couples',
+    label: 'Couples',
+    heading: 'Secret Santa Gifts for Couples',
+    blurb: 'For a couples exchange, or when the name you drew comes as a pair.',
+    products: asCards(byIds(['couples-anv-2', 'wed26-lets-get-deep', 'couples-anv-3', 'wed26-electric-fondue-set'])),
+  },
+].filter((g) => g.products.length > 0);
+
+const grid = groups.flatMap((g) => g.products);
 
 export default function Page() {
   return (
     <GiftGuideTemplate
       canonicalUrl={URL}
       schemaName="Best Secret Santa Gifts 2026"
-      schemaDescription="The best secret santa gift ideas for 2026, curated by TheGiftShuffle"
+      schemaDescription="The best secret santa gift ideas for 2026, hand-picked by TheGiftShuffle and sorted by budget"
       breadcrumbLabel="Secret Santa Gifts"
       breadcrumbHref="/secret-santa-gifts"
       heroSrc="/images/heroes/secret-santa-gifts.jpg"
@@ -57,13 +155,13 @@ export default function Page() {
         <>
           <p>
             Drew a name you barely know? These are the <strong>best secret santa gifts</strong> for
-            2026: thoughtful, broadly likeable picks under $50 that work for a coworker, a friend of
-            a friend, or the in-law you see twice a year. Safe enough to never miss, good enough to
-            never feel phoned in.
+            2026: {grid.length} hand-picked ideas sorted by budget, so you can jump straight to the
+            $15, $25 or $50 limit your exchange set. Every one is safe enough to never miss and good
+            enough to never feel phoned in.
           </p>
           <p className="text-base text-gray-600">
-            Every pick is top-rated with serious review counts, which is exactly what you want when
-            you cannot ask them what they like. Shuffle for instant ideas or browse the list below.
+            Further down are picks for a coworker you barely know, for the boss, for an office that
+            likes a laugh, and for couples. Shuffle for an instant idea or browse the list below.
           </p>
         </>
       }
@@ -71,28 +169,35 @@ export default function Page() {
         heading: 'What Should I Get for Secret Santa?',
         body: (
           <p>
-            For secret santa, pick something <strong>broadly likeable and high quality</strong>: a
-            premium candle, an insulated tumbler, a cozy blanket, gourmet chocolate or hot sauce, a
-            fun desk accessory, a nice mug, or a top-rated gadget under the budget. Use the one thing
-            you know about them, their desk, their coffee habit, their team, to pick a lane, keep it
-            around the set budget of <strong>$20 to $50</strong>, and avoid anything too personal like
-            perfume or clothing sizes. Not sure? Hit shuffle below with your budget for an instant
-            crowd-pleaser.
+            For secret santa, pick something <strong>broadly likeable and well made</strong>, right
+            at the budget. For <strong>$15 and under</strong>, a box of Ferrero Rocher, a tin of
+            Harney &amp; Sons tea, a mug warmer or a quick card game like Happy Salmon. For{' '}
+            <strong>$25</strong>, a YETI lowball, Codenames, an insulated coffee mug or a LEGO desk
+            plant. For <strong>$50</strong>, a JBL Go 4 speaker, a coffee sampler or a Capri Blue
+            candle. Use the one thing you know about them, their desk, their coffee habit, their
+            sense of humor, to pick a lane, and avoid anything too personal like perfume or clothing
+            sizes.
           </p>
         ),
       }}
       shuffleHeading="Shuffle Secret Santa Ideas"
-      shuffleProducts={shuffle}
-      gridHeading="Crowd-Pleasing Secret Santa Gifts, Ranked"
+      shuffleProducts={grid}
+      gridHeading={`${grid.length} Secret Santa Gifts, by Budget and by Person`}
       gridProducts={grid}
+      gridGroups={groups}
       ctaHeading="Drew a Name You Know Nothing About?"
       ctaText="Tell TheGiftShuffle the budget, and get an instant, safe-but-good gift idea in one click."
       faqs={[
-        { q: 'What is a good secret santa gift for a coworker?', a: 'For a coworker, safe and appreciated picks are a quality insulated tumbler, a premium candle, a desk organizer or fun desk toy, gourmet coffee or chocolate, cozy socks, or a nice notebook. Office-appropriate, useful, and no personal-taste guessing required.' },
-        { q: 'How much do you spend on secret santa?', a: 'Most secret santa exchanges set a budget of $20 to $30, and office exchanges sometimes $15 to $25. Spend right at the budget; the goal is maximizing thoughtfulness within the limit, not under- or over-shooting it.' },
-        { q: 'What do you get for secret santa when you do not know the person?', a: 'When you barely know them, stay on universal ground: a top-rated candle, a nice tumbler or mug, quality chocolate, a cozy throw, or a clever desk accessory. Things with thousands of five-star reviews are the closest thing to a guaranteed hit.' },
-        { q: 'What are good secret santa gifts under $25?', a: 'Under $25, strong picks include fun socks in a gift box, a scented candle, an insulated tumbler, a card game, gourmet hot sauce, a mini desk toy, hand cream, or a tea sampler. Small but well-made beats big and generic.' },
-        { q: 'Should a secret santa gift be funny or practical?', a: 'Read the room: office exchanges usually reward practical with a touch of personality, while friend groups often want funny. A safe play is practical-but-fun, like a giant mug or a clever gadget, which lands in both settings. For pure gag gifts, see our white elephant guide.' },
+        { q: 'What is a good secret santa gift for a coworker?', a: 'For a coworker, safe and appreciated picks are a mug warmer, an insulated coffee mug or tumbler, a good notebook or pen, a candle, tea or chocolate, or a coffee gift card. Office-appropriate, useful, and no guessing at personal taste required.' },
+        { q: 'How much do you spend on secret santa?', a: 'Most secret santa exchanges set a budget of $20 to $30, and office exchanges sometimes $15 to $25. Spend right at the budget; the goal is the most thoughtful gift within the limit, not going under or over it.' },
+        { q: 'What are the top 10 secret santa gifts for 2026?', a: 'Ten that suit almost any exchange: Ferrero Rocher chocolates, Harney & Sons Hot Cinnamon Spice tea, a Mr. Coffee mug warmer, a Yankee Candle in a holiday scent, the Happy Salmon card game, a YETI Rambler lowball, Codenames, the LEGO Botanicals Happy Plants set, a Hydro Flask coffee mug and a JBL Go 4 speaker.' },
+        { q: 'What are good secret santa gifts under $15?', a: 'For $15 and under, strong picks include a box of Ferrero Rocher, a tin of Harney & Sons tea, a milk frother, a jar of chili crisp or hot honey, a Parker Jotter pen, a hand cream set, or a card game like Happy Salmon or Taco vs Burrito. Small but well made beats big and generic.' },
+        { q: 'What are good secret santa gifts under $25?', a: 'Up to $25 you can give a name-brand gift people keep: a YETI Rambler lowball, a Hydro Flask coffee mug, Codenames, a LEGO desk plant set, soft Barefoot Dreams socks, wireless earbuds, a 1000 piece puzzle or a hot chocolate gift set.' },
+        { q: 'What do you get for secret santa when you do not know the person?', a: 'When you barely know them, stay on universal ground: chocolate, tea or coffee, a candle, a nice mug or tumbler, a notebook, or a coffee gift card. Things people use up or use daily are the closest thing to a guaranteed hit.' },
+        { q: 'What is a good secret santa gift for your boss?', a: 'Keep it modest and desk-worthy: a good pen such as a Lamy Safari or Parker Jotter, a quality notebook, a tea assortment, or a small desk plant that needs no care. Avoid anything personal, expensive or jokey unless you know them well.' },
+        { q: 'What are good secret santa gifts for couples?', a: 'For a couple, choose something they can share: a date night book like The Adventure Challenge, a question card game, a two-person journal, a fondue set, or a board game such as Codenames or Catan.' },
+        { q: 'Should a secret santa gift be funny or practical?', a: 'Read the room: office exchanges usually reward practical with a touch of personality, while friend groups often want funny. A safe play is practical-but-fun, like a desktop punching bag or a clever desk toy, which lands in both settings. For pure gag gifts, see our white elephant guide.' },
+        { q: 'What should you not give for secret santa?', a: 'Skip anything that depends on size or personal taste, such as clothing and perfume, anything that could read as a comment on the person, such as diet or grooming products, and alcohol unless you are sure they drink. Going far over the budget is also a mistake: it makes other gifts look small.' },
       ]}
       relatedHeading="More Holiday Gift Guides"
       relatedLinks={[

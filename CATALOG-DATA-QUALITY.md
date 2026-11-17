@@ -1611,3 +1611,60 @@ stars), owner review of the ratings, the "How we rate" page and disclosure
 line, the copy sweep ("ranked by real reviews", "4.3 or higher", FAQ answers
 quoting Amazon reviews), the `s` flag consistency pass, and the two thin
 shuffle lists above.
+
+### 2026-11-17: 23 Secret Santa products added
+
+Owner asked for /secret-santa-gifts to be rebuilt with a hand-picked list
+(see SEO-RECOVERY-2026-08.md, same date). 23 products new to the catalog, in
+data/products-catalog.ts with `santa-` ids, right after the `elephant-` block:
+Ferrero Rocher 24 count, Harney & Sons Hot Cinnamon Spice tea, Zulay milk
+frother, Happy Salmon, Taco vs Burrito, Fly By Jing chili crisp, Mike's Hot
+Honey, Mr. Coffee mug warmer, Yankee Candle Balsam & Cedar, Burt's Bees Hand
+Repair set, Parker Jotter pen, Paint by Sticker: Plants and Flowers, the
+desk-size Wacky Waving Inflatable Tube Guy, LEGO Botanicals Happy Plants,
+JLab Go Air Pop+ earbuds, Barefoot Dreams CozyChic socks, a 12 Days of
+Christmas hot chocolate set, Ravensburger The Reading Room puzzle, Hydro
+Flask 12 oz coffee mug, Codenames (2nd edition), YETI Rambler 10 oz lowball,
+JBL Go 4 speaker and the Atlas Coffee Club 4-pack.
+
+- Research: three current roundups read (Today, Good Morning America,
+  Engadget; all three group by price) and 40 Creators API keyword searches.
+  Product IDs, titles, colour, size and seller confirmed with GetItems. API
+  use for the whole job: 52 calls, no throttle.
+- Each ID checked against all three data files and the tech-gadgets page
+  before adding. One pick (The Adventure Challenge: Couples Edition) was
+  already in the catalog as couples-anv-2 and is used from there. Feed size
+  1,333 to 1,356, no product ID twice.
+- rating and reviewCount are 0 on purpose (no Amazon stars). Each has marks
+  in data/gift-ratings.json (1,415 to 1,438 ids).
+- `price` in these entries is a whole-dollar budget estimate, used only for
+  sorting and as the sanity check in the price refresh. It is not the API
+  price: the rule is that API prices never go into the repo. Today's prices
+  for the 23 were added to the live price store the same hour (3 calls), so
+  the cards show a price without waiting for the nightly run.
+- Pictures: brand or retailer shots found with the image search helper
+  (scripts/lib/image-search.mjs, Serper), Amazon-hosted and marketplace
+  images filtered out, up to six candidates per product downloaded and picked
+  by eye from contact sheets, then trimmed and set on white at 800x800 with
+  an even margin. Off-white studio backgrounds were lifted to white so no
+  tile shows. Sources are in data/image-sources.json (`"added": "2026-11-17"`).
+  A second search was needed for eleven. Known small differences: Fly By Jing
+  is the brand's own shot on an orange background, used edge to edge; the
+  puzzle shows the finished picture, not the box; LEGO shows the box; the
+  YETI picture is the earlier stainless lowball, which looks the same as the
+  2.0; the Happy Salmon box is the current green one.
+- Dropped at the picture or listing check, on purpose: a desk zen garden (no
+  photo of that exact kit), an OCOOPA hand warmer (third-party seller, and
+  the listing's colour and pack size could not be matched to a photo), a
+  decision-maker paperweight (only a low-quality photo), and the Lindor
+  holiday gift box (no photo of that box; the nearest bag photos were a
+  different size or a Valentine edition).
+- Sold by a third-party seller on the day checked, worth a look at the next
+  link check: Parker Jotter (Mygrow) and the Ravensburger puzzle.
+
+Finding, not changed: the 42 `elephant-` entries added on 2026-11-13 carry
+exact prices taken from Creators API searches in their `price` and
+`priceDisplay` fields (for example 13.35). That conflicts with the rule
+against API prices in the repo. They are never displayed (cards show the live
+price), and they are already in git history, so rounding them now would not
+remove them. Owner decision whether to round them anyway.

@@ -22,6 +22,16 @@ export interface GiftGuideLink {
   label: string;
 }
 
+export interface GiftGuideGroup {
+  /** Anchor for the jump link, e.g. 'under-15'. */
+  id: string;
+  /** Short label for the jump link, e.g. '$15 and under'. */
+  label: string;
+  heading: string;
+  blurb?: string;
+  products: CompactProduct[];
+}
+
 export interface GiftGuideTemplateProps {
   canonicalUrl: string;
   schemaName: string;
@@ -43,6 +53,12 @@ export interface GiftGuideTemplateProps {
   shuffleProducts: CompactProduct[];
   gridHeading: string;
   gridProducts: CompactProduct[];
+  /**
+   * Optional: show the grid as labelled groups with jump links (by budget, by
+   * person) instead of one list. `gridProducts` must still hold every product
+   * in the same order, since the ItemList markup is built from it.
+   */
+  gridGroups?: GiftGuideGroup[];
   ctaHeading: string;
   ctaText: string;
   faqs: GiftGuideFaq[];
@@ -178,11 +194,42 @@ export default function GiftGuideTemplate(props: GiftGuideTemplateProps) {
           <h2 className="text-2xl font-bold mb-6" style={{ color: '#1A202C' }}>
             {props.gridHeading}
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {props.gridProducts.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
+          {props.gridGroups?.length ? (
+            <>
+              <nav aria-label="Jump to a section" className="flex flex-wrap gap-2 mb-8">
+                {props.gridGroups.map((g) => (
+                  <a
+                    key={g.id}
+                    href={`#${g.id}`}
+                    className="inline-flex items-center rounded-full border border-[#F04E30]/40 bg-white px-4 py-2 text-sm font-semibold text-[#1A202C] hover:border-[#F04E30] hover:text-[#F04E30] transition-colors"
+                  >
+                    {g.label}
+                  </a>
+                ))}
+              </nav>
+              <div className="space-y-12">
+                {props.gridGroups.map((g) => (
+                  <div key={g.id} id={g.id} className="scroll-mt-24">
+                    <h3 className="text-xl font-bold mb-1" style={{ color: '#1A202C' }}>
+                      {g.heading}
+                    </h3>
+                    {g.blurb && <p className="text-gray-600 mb-4">{g.blurb}</p>}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      {g.products.map((p) => (
+                        <ProductCard key={p.id} product={p} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {props.gridProducts.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          )}
         </section>
 
         {props.nextStep && (
