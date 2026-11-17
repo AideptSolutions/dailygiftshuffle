@@ -1,16 +1,18 @@
 {
-  "refreshedAt": "2026-11-16T19:39:51.493Z",
+  "refreshedAt": "2026-11-17T18:38:01.351Z",
   "ok": true,
-  "catalogProducts": 1412,
-  "priced": 1191,
-  "noOffer": 166,
+  "catalogProducts": 1435,
+  "priced": 1220,
+  "noOffer": 158,
   "notReturned": 53,
-  "suspect": 2,
+  "suspect": 4,
   "notFetched": 0,
   "carriedFromLastRun": 0,
   "suspectIds": [
     "off-25-3",
-    "finance-great-now-what"
+    "poke-picks-1",
+    "finance-great-now-what",
+    "pat-23"
   ],
   "stopped": null
 }
