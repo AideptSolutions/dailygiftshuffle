@@ -1668,3 +1668,35 @@ exact prices taken from Creators API searches in their `price` and
 against API prices in the repo. They are never displayed (cards show the live
 price), and they are already in git history, so rounding them now would not
 remove them. Owner decision whether to round them anyway.
+
+### 2026-11-17 (later): the 42 white elephant prices rounded
+
+Follow-up to the finding above. Owner decision: round them. The 42
+`elephant-` entries added on 2026-11-13 (yodeling pickle through antler ring
+toss) now hold a whole-dollar estimate in `price` and `priceDisplay`, the same
+rule as the `santa-` entries: 13.35 became 13, 19.99 became 20, and so on. The
+comment above the block says so.
+
+- Nothing a visitor sees changed. All 42 had a live price on the day, and the
+  cards, the sort order and the budget bands use the live price when there is
+  one. The catalog number is only the fallback for sorting and the sanity
+  check in the price refresh (4 times or a quarter), which whole dollars do
+  not affect.
+- Checked the thresholds the pages use (10, 15, 25, 30, 50): the comparisons
+  are "at or under", so 9.99 to 10, 29.99 to 30 and 49.99 to 50 stay in the
+  same band even if a live price is ever missing.
+- The old exact numbers are still in git history (commit of 2026-11-13). The
+  repo is public and history is permanent, so this stops the practice, it
+  does not erase the record. Rewriting history would need a force-push to
+  master, which the project rules forbid.
+- NOT done, and wider than the 42: the price correction of 2026-11-12
+  (commit 0584b59, "correct 746 stale prices") also copied API prices into
+  the catalog, before the daily refresh and the no-API-prices rule existed.
+  It is recorded above with its own compliance note. Those roughly 746 exact
+  numbers are still in the catalog files today (the Screaming Goat at 7.96 is
+  one). Rounding them is the same one-pass change as this one, but it was not
+  asked for, so it waits for the owner. Entries that correction did not touch
+  keep hand-typed prices from before the API and are not API data.
+
+Rule going forward, unchanged: a new catalog entry gets a whole-dollar budget
+estimate in `price`, never the number the API returned.
