@@ -1700,3 +1700,63 @@ comment above the block says so.
 
 Rule going forward, unchanged: a new catalog entry gets a whole-dollar budget
 estimate in `price`, never the number the API returned.
+
+### 2026-11-17 (later still): every API-sourced catalog price rounded
+
+Owner decision: "round the 746 too". Done for every price that came from the
+Creators API, not only the 746.
+
+Which prices counted as "from the API": a product that is new, or whose price
+changed, since commit b753f8f (2026-11-10, the last commit before the API
+went live). That is the 746 from the 2026-11-12 correction, the relinked and
+replacement products from the same two days, and the 42 white elephant
+entries. 820 products in all: 259 in data/products.ts, 28 in
+data/seasonal-products.ts, the rest in data/products-catalog.ts.
+app/tech-gadgets/page.tsx had none.
+
+Not touched: 512 products whose price is the same as before the API existed
+(typed in by hand months ago). 410 of those still show cents. They are not
+API data.
+
+The rounding rule (it replaces plain rounding, including for the 42 done
+earlier today): nearest whole dollar, but never onto a price line the pages
+compare against. So no estimate lands on a multiple of 5 unless the original
+was exactly that (24.99 becomes 24, 25.49 becomes 26, 4.99 becomes 4), and
+nothing rounds up onto 3 or 4 (the floors on the stocking stuffer pages).
+Reason: when a product has no live price, pages fall back to the catalog
+number for budget groups and filters. The first attempt used plain rounding
+and the check below caught it: a $4.99 keepsake with no live price became $5
+and joined the shuffle list on /stocking-stuffers (the page asks for $5 or
+more). With the rule, every product stays on the same side of every line.
+No product changed budget band; no estimate is a dollar or more from the
+original; `priceDisplay` matches `price` on all 820; no other field changed.
+
+Proof that visitors see no change: the site was built twice, once from the
+unrounded files and once from the rounded ones, with the same live prices.
+Across all 162 prerendered pages the product links are identical and in the
+same order, every price printed on a card is identical, and the count of
+"See price on Amazon" cards is identical. The only difference in the page
+source is the hidden fallback number of the 11 rounded products that had no
+live price that day (for example 129.99 became 129).
+
+Finding from that check: the fallback number is not shown, but it is present
+in the page source, inside the product data the shuffle uses. Another reason
+it should be an estimate and not Amazon's number.
+
+Two mistakes made and caught on the way, for the record:
+- The first write corrupted the files: the replacement text contained "$2",
+  which JavaScript reads as "insert the second captured group". The type
+  check and the build both failed, the files were restored from git and the
+  script now uses function replacements. Nothing was committed.
+- The first page comparison reported four pages with a product link missing
+  or added. That was the measuring tool: Next.js cuts page data into chunks
+  and a chunk boundary can cut a link in half. With the chunks joined, the
+  comparison is exact.
+
+Stopping it from coming back:
+- scripts/refresh-catalog-data.mjs (the script that wrote the 746) now
+  reports price differences but never writes them, even with --write.
+- CLAUDE.md, "Live prices", states the rule for new products.
+
+Still true, and cannot be fixed without rewriting public history: the exact
+numbers remain in old commits (0584b59, 6f33a4f, 9e68f19 and others).

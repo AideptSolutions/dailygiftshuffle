@@ -9,6 +9,9 @@
 // Usage:
 //   node scripts/refresh-catalog-data.mjs            # dry run, prints a diff
 //   node scripts/refresh-catalog-data.mjs --write    # apply to both catalogs
+//                                                    # (never prices: since
+//                                                    # 2026-11-17 they are
+//                                                    # report-only, see below)
 //   node scripts/refresh-catalog-data.mjs --check    # verify credentials only
 //
 // Flags:
@@ -142,8 +145,17 @@ if (!WRITE) {
   process.exit(0);
 }
 
+// Prices are report-only. API prices must never be written into the catalog:
+// the repo is public and keeps history forever, while Amazon allows its price
+// data to be kept for 24 hours. The site shows live prices from the daily
+// refresh instead (CLAUDE.md, "Live prices"). The catalog `price` is a
+// whole-dollar estimate, typed by hand.
+const withPrice = changes.filter((c) => c.next.price != null).length;
+if (withPrice) console.log(`\n${withPrice} price differences reported above are NOT written (API prices never go into the catalog).`);
+const writable = changes.filter((c) => { delete c.next.price; return Object.keys(c.next).length > 0; });
+
 const byFile = {};
-for (const c of changes) (byFile[c.file] = byFile[c.file] || []).push(c);
+for (const c of writable) (byFile[c.file] = byFile[c.file] || []).push(c);
 let written = 0;
 for (const f of FILES) {
   const list = byFile[f];
