@@ -1312,3 +1312,24 @@ not among them).
 Watch in the next Bing page export: impressions and clicks on
 /secret-santa-gifts against the 12 / 0 baseline, and whether the price and
 person searches ("under $25", "for coworkers", "for couples") start to show.
+
+### 2026-11-17 (later): /secret-santa-gifts title and description approved
+
+Owner said yes to the proposed wording, so the title no longer says 35 while
+the page shows 44:
+- Title: Best Secret Santa Gifts 2026: 44 Ideas for Any Budget (53 characters)
+- Description: The best Secret Santa gifts for 2026: 44 hand-picked ideas
+  sorted by budget ($15, $25 and $50), plus picks for coworkers, the boss and
+  couples. (143 characters)
+- The social-share (Open Graph) title matches; its description is the same
+  line without the opening clause.
+
+Old wording, in case it needs to come back: "Best Secret Santa Gifts 2026:
+35 Ideas for Coworkers" and "The best secret santa gift ideas for 2026:
+thoughtful, safe-but-not-boring picks under $50 for coworkers, friends and
+family exchanges."
+
+The "44" is written by hand in the title and description. If a gift is added
+or removed, change it in app/secret-santa-gifts/page.tsx too (the page heading
+counts itself). Baseline for the next Bing export stays 12 impressions, 0
+clicks, position 5.5.

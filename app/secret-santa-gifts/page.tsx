@@ -5,12 +5,12 @@ import type { CompactProduct } from '@/components/ProductCard';
 
 const URL = 'https://www.thegiftshuffle.com/secret-santa-gifts';
 
-// Title and description are unchanged from before the 2026-11-17 rebuild: the
-// owner approves any new wording first (proposal in SEO-RECOVERY-2026-08.md).
+// Title and description approved by the owner on 2026-11-17. The "44" must
+// match the number of gifts on the page (grid.length below).
 export const metadata: Metadata = {
-  title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers',
+  title: 'Best Secret Santa Gifts 2026: 44 Ideas for Any Budget',
   description:
-    'The best secret santa gift ideas for 2026: thoughtful, safe-but-not-boring picks under $50 for coworkers, friends and family exchanges.',
+    'The best Secret Santa gifts for 2026: 44 hand-picked ideas sorted by budget ($15, $25 and $50), plus picks for coworkers, the boss and couples.',
   keywords: [
     'secret santa gifts',
     'secret santa gift ideas',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     'secret santa for someone you dont know',
   ],
   openGraph: {
-    title: 'Best Secret Santa Gifts 2026: 35 Ideas for Coworkers',
-    description: 'Thoughtful, safe-but-not-boring secret santa picks under $50 for any exchange.',
+    title: 'Best Secret Santa Gifts 2026: 44 Ideas for Any Budget',
+    description: '44 hand-picked Secret Santa gifts sorted by budget ($15, $25 and $50), plus picks for coworkers, the boss and couples.',
     type: 'website',
     url: URL,
     images: [{ url: 'https://www.thegiftshuffle.com/api/og?title=Secret%20Santa%20Gifts%20%7C%20TheGiftShuffle', width: 1200, height: 630 }],
