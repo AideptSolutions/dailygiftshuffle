@@ -1333,3 +1333,74 @@ The "44" is written by hand in the title and description. If a gift is added
 or removed, change it in app/secret-santa-gifts/page.tsx too (the page heading
 counts itself). Baseline for the next Bing export stays 12 impressions, 0
 clicks, position 5.5.
+
+## 2026-11-18: /white-elephant-gifts split into six groups, all hand-picked
+
+Owner decision (item 3 of the 2026-11-17 traffic read: "split the white
+elephant list into groups"; plan shown first, owner said "proceed").
+
+Before: one undivided list of 30. 20 hand-picked `elephant-` gifts in order
+of GiftShuffle rating, then 10 filled in automatically (price $10 to $30,
+stored stars 4.6 or more). The automatic 10 that day: a body composition
+scale, Dickies socks, a cast iron skillet, a LifeStraw, a laptop backpack, a
+Carhartt beanie, a gaming headset, a Stanley tumbler, a sleep mask and a
+sherpa blanket. 23 of the owner-approved `elephant-` gifts at $30 or less
+were not on the list at all (shuffle only).
+
+Baseline (Bing, Oct 18 to Nov 15): 312 impressions, 10 clicks, 3.2 percent,
+position 5.7. Searches with a price in them ($30, $20, $25): 10 terms, 17
+impressions, position 4.7, 0 clicks. Funny or gag searches: 5 terms, 10
+impressions, position 7.4, 0 clicks. AI citations 290 (earlier table).
+
+Now (app/white-elephant-gifts/page.tsx), 30 gifts in six groups with jump
+links, using the `gridGroups` prop built for /secret-santa-gifts:
+- $10 and under (4): Magic 8 Ball, Screaming Goat, Slinky, Finger Hands
+- $10 to $20 (8): burrito blanket, Rock 'Em Sock 'Em, Tamagotchi,
+  Lite-Brite, Useless Box, pizza socks, shark blanket hoodie, toilet night
+  light
+- $20 to $25 (6): Chia Pet Bob Ross, Snuggie, Bigfoot slippers, desk
+  punching bag, Etch A Sketch, sherpa blanket
+- $25 to $30 (4): shark slippers, Pet Rock, Bob Ross clapper, Viking beanie
+- Funny gag gifts (4): Yodeling Pickle, Potty Putter, Dundie award, bacon
+  bandages
+- Most likely to get stolen (4): giant mug, Stanley Quencher, Dash mini
+  waffle maker, Sipski
+
+What stayed and what changed in the product set: all 20 hand-picked gifts
+stay; the Stanley and the sherpa blanket stay (now named by id, not found by
+rating); the other 8 automatic ones are replaced by 8 unused owner-approved
+picks (Finger Hands, desk punching bag, Etch A Sketch, shark slippers, Pet
+Rock, Bob Ross clapper, Viking beanie, bacon bandages).
+
+How the promises are kept:
+- Each budget pick is placed in a group by its price on the day of the
+  build, so a heading never promises a price the card does not show.
+- Anything priced over $30 that day is left out and replaced from a reserve
+  of five (T-Rex onesie, taco holders, wine bottle glass, View-Master,
+  Sea-Monkeys), so the title's "30 Ideas" and the description's "under $30"
+  stay true. The four $25 to $30 picks all sit at $29.97 to $29.99, so that
+  group is the one most likely to thin out; the group is hidden if empty.
+- The Dundie award has no live price (card says "See price on Amazon"). It
+  is in the funny group, which has no price in its heading.
+
+Title and description: untouched (protected page). Two phrases on the page
+changed because the list is no longer ranked: the list heading ("..., Ranked"
+is now "..., by Budget") and one intro line ("browse the ranked list below"
+is now "jump to your budget in the list below"). Answer block, questions,
+shuffle pool and related links unchanged. Nothing on the list is chosen or
+ordered by a star rating any more.
+
+Checked before shipping: type check and production build pass (168 pages);
+local preview at desktop and phone width: 30 cards, six groups, six jump
+links that land on their group, no broken pictures, no sideways scroll, no
+console errors; ItemList 30 with 29 offers (the Dundie has no live price),
+FAQPage 8 questions as before.
+
+Finding, not changed: the answer block and two answers name things the list
+does not hold (a Nicolas Cage sequin pillow, a "taco holder truck"; the
+catalog has taco holder stands, in the reserve). Left as is, since the page
+is protected and the owner has not asked for a text change.
+
+Watch in the next Bing page export: impressions, clicks and position on
+/white-elephant-gifts against the baseline above, and the price and funny
+search groups in particular.
