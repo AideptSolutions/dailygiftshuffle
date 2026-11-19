@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { forPage, ALL } from '@/lib/giftSelect';
-import { giftRating } from '@/lib/giftRating';
+import GiftGuideTemplate, { type GiftGuideGroup } from '@/components/GiftGuideTemplate';
+import { forPage, byIds, ALL } from '@/lib/giftSelect';
+import type { CompactProduct } from '@/components/ProductCard';
 
-// Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
-const { curate, shufflePool } = forPage('/white-elephant-gifts');
+// The shuffle on this page ranks by whichever rating the page uses
+// (lib/ratingMode.ts). The list itself is hand-picked, see below.
+const { shufflePool } = forPage('/white-elephant-gifts');
 
 const URL = 'https://www.thegiftshuffle.com/white-elephant-gifts';
 
@@ -33,22 +34,112 @@ export const metadata: Metadata = {
   alternates: { canonical: URL },
 };
 
-// Curated elephant- gag items lead, then fill with fun, broadly appealing
-// under-$30 picks that make good "steal" gifts.
 const isElephant = (p: { id?: string }) => !!p.id?.startsWith('elephant-');
 const isStealable = (p: { price?: number }) => (p.price ?? 999) <= 30 && (p.price ?? 0) >= 10;
 
-// The elephant- items are hand-picked one at a time, so they are not gated on
-// a star rating. They lead in order of GiftShuffle rating (lib/giftRating.ts).
-// Only the ones at or under $30 lead, to keep the page's "under $30" promise;
-// pricier ones still turn up in the shuffle below.
-const ELEPHANT_LEAD = 20;
-const elephantItems = ALL.filter((p) => isElephant(p) && p.price <= 30)
-  .sort((a, b) => (giftRating(b.id) ?? 0) - (giftRating(a.id) ?? 0) || a.price - b.price)
-  .slice(0, ELEPHANT_LEAD) as ReturnType<typeof curate>;
-const fillItems = curate({ match: isStealable, minRating: 4.6, sort: 'social', recipientCap: 6, limit: 40, pool: ALL });
-const seen = new Set(elephantItems.map((p) => p.id));
-const grid = [...elephantItems, ...fillItems.filter((p) => !seen.has(p.id))].slice(0, 30);
+// The list is hand-picked, one product at a time, and shown in six groups with
+// jump links (owner decision, 2026-11-18). Nothing in it is chosen or ordered
+// by a star rating. The title promises "30 Ideas" and the description "under
+// $30": the lists below hold 30 ids, and anything priced over $30 on the day
+// of the build is left out and replaced from RESERVE, so both stay true.
+
+// Budget picks, in the order they should appear. Each is placed in a budget
+// group by its price on the day of the build, so a group heading never
+// promises a price the card does not show.
+const BUDGET_PICKS = [
+  // $10 and under
+  'elephant-magic-8-ball',
+  'elephant-screaming-goat',
+  'elephant-slinky',
+  'elephant-finger-hands',
+  // $10 to $20
+  'elephant-burrito-blanket',
+  'elephant-rock-em-sock-em',
+  'elephant-tamagotchi',
+  'elephant-lite-brite',
+  'elephant-useless-box',
+  'elephant-pizza-socks',
+  'elephant-shark-blanket',
+  'elephant-toilet-night-light',
+  // $20 to $25
+  'elephant-chia-bob-ross',
+  'elephant-snuggie',
+  'elephant-bigfoot-slippers',
+  'elephant-desk-punching-bag',
+  'elephant-etch-a-sketch',
+  'her-25-3', // Cozy sherpa blanket
+  // $25 to $30
+  'elephant-shark-slippers',
+  'elephant-pet-rock',
+  'elephant-bob-ross-clapper',
+  'elephant-viking-beanie',
+];
+// Picked for the laugh, whatever the price (all well under $30).
+const FUNNY_PICKS = ['elephant-yodeling-pickle', 'elephant-potty-putter', 'elephant-dundie', 'elephant-bacon-bandages'];
+// Useful with a twist: the ones that change hands every round.
+const STOLEN_PICKS = ['elephant-giant-mug', 'dad-fd-8' /* Stanley Quencher */, 'elephant-mini-waffle-maker', 'elephant-sipski'];
+// Stand-ins, used only if a pick above climbs past $30, to keep the count.
+const RESERVE = ['elephant-trex-onesie', 'elephant-taco-holder', 'elephant-wine-bottle-glass', 'elephant-view-master', 'elephant-sea-monkeys'];
+const TOTAL = BUDGET_PICKS.length + FUNNY_PICKS.length + STOLEN_PICKS.length;
+
+const underLimit = (p: { price: number }) => p.price <= 30;
+const funny = byIds(FUNNY_PICKS).filter(underLimit);
+const stolen = byIds(STOLEN_PICKS).filter(underLimit);
+const budget = byIds(BUDGET_PICKS).filter(underLimit);
+for (const p of byIds(RESERVE)) {
+  if (budget.length + funny.length + stolen.length >= TOTAL) break;
+  if (underLimit(p)) budget.push(p);
+}
+
+const asCards = (list: ReturnType<typeof byIds>) => list as CompactProduct[];
+
+const groups: GiftGuideGroup[] = [
+  {
+    id: 'under-10',
+    label: '$10 and under',
+    heading: 'White Elephant Gifts for $10 and Under',
+    blurb: 'Small money, big reaction. Good for a low limit or as an add-on to a bigger gift.',
+    products: asCards(budget.filter((p) => p.price <= 10)),
+  },
+  {
+    id: 'under-20',
+    label: '$10 to $20',
+    heading: 'White Elephant Gifts from $10 to $20',
+    blurb: 'The sweet spot for most office exchanges: retro toys, silly blankets and desk toys.',
+    products: asCards(budget.filter((p) => p.price > 10 && p.price <= 20)),
+  },
+  {
+    id: 'under-25',
+    label: '$20 to $25',
+    heading: 'White Elephant Gifts from $20 to $25',
+    blurb: 'Right at the most common limit, and good enough that people plan their steal.',
+    products: asCards(budget.filter((p) => p.price > 20 && p.price <= 25)),
+  },
+  {
+    id: 'under-30',
+    label: '$25 to $30',
+    heading: 'White Elephant Gifts from $25 to $30',
+    blurb: 'For a $30 exchange, when the gift has to look the part once it is unwrapped.',
+    products: asCards(budget.filter((p) => p.price > 25)),
+  },
+  {
+    id: 'funny',
+    label: 'Funny gag gifts',
+    heading: 'Funny White Elephant Gag Gifts',
+    blurb: 'Bought for the laugh. Absurd, but well made enough to survive the party.',
+    products: asCards(funny),
+  },
+  {
+    id: 'most-stolen',
+    label: 'Most likely to get stolen',
+    heading: 'White Elephant Gifts That Get Stolen',
+    blurb: 'Useful with a twist. If half the room would use it weekly, it moves every round.',
+    products: asCards(stolen),
+  },
+].filter((g) => g.products.length > 0);
+
+// The ItemList markup is built from this, in the same order as the groups.
+const grid = groups.flatMap((g) => g.products);
 const shuffle = shufflePool((p) => isElephant(p) || isStealable(p), ALL);
 
 export default function Page() {
@@ -72,7 +163,7 @@ export default function Page() {
           </p>
           <p className="text-base text-gray-600">
             Most picks land between $15 and $30, the classic gift exchange budget. Hit shuffle for a
-            fresh idea every click, or browse the ranked list below.
+            fresh idea every click, or jump to your budget in the list below.
           </p>
         </>
       }
@@ -91,8 +182,9 @@ export default function Page() {
       }}
       shuffleHeading="Shuffle White Elephant Ideas"
       shuffleProducts={shuffle}
-      gridHeading="White Elephant Gifts People Fight Over, Ranked"
+      gridHeading="White Elephant Gifts People Fight Over, by Budget"
       gridProducts={grid}
+      gridGroups={groups}
       ctaHeading="Need a Gift for a Specific Budget?"
       ctaText="Tell TheGiftShuffle your gift exchange budget, and get an instant crowd-pleasing idea in one click."
       faqs={[
