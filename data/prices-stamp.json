@@ -1,17 +1,18 @@
 {
-  "refreshedAt": "2026-11-24T20:13:51.863Z",
+  "refreshedAt": "2026-11-25T19:19:30.175Z",
   "ok": true,
   "catalogProducts": 1435,
-  "priced": 1214,
-  "noOffer": 163,
+  "priced": 1212,
+  "noOffer": 164,
   "notReturned": 54,
-  "suspect": 4,
+  "suspect": 5,
   "notFetched": 0,
   "carriedFromLastRun": 0,
   "suspectIds": [
     "off-25-3",
     "poke-picks-1",
     "finance-great-now-what",
+    "college-academic-planner",
     "pat-23"
   ],
   "stopped": null
