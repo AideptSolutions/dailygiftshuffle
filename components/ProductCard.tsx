@@ -1,6 +1,6 @@
 'use client';
 /**
- * Compact ProductCard â€" matches the landing page HomeFeaturedSection card style.
+ * Compact ProductCard: matches the landing page HomeFeaturedSection card style.
  * Used on category pages, gift-guide pages, and any other product grid.
  */
 import Image from 'next/image';

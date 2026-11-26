@@ -121,7 +121,7 @@ export default function ProductModal({ product, onClose }: Props) {
           </div>
 
           <p className="text-xs text-center text-gray-300 mt-4">
-            Affiliate link â€” we may earn a commission at no cost to you.
+            Affiliate link. We may earn a commission at no cost to you.
           </p>
         </div>
       </div>

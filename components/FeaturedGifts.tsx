@@ -3,12 +3,12 @@ import { products } from '@/data/products';
 import Price from '@/components/Price';
 import RatingSlot from '@/components/RatingSlot';
 
-// 4 highest-reviewed products â€” highest demand / trending
+// 4 highest-reviewed products: highest demand / trending
 const HOT_PRODUCT_IDS = [
-  'friends-50-1',  // Instant Pot Duo 6-Qt â€” 112,000 reviews
-  'her-50-2',      // Kindle Paperwhite    â€”  98,700 reviews
-  'her-100-1',     // KitchenAid Mixer     â€”  87,400 reviews
-  'him-50-1',      // Smart Watch          â€”  45,300 reviews
+  'friends-50-1',  // Instant Pot Duo 6-Qt: 112,000 reviews
+  'her-50-2',      // Kindle Paperwhite:     98,700 reviews
+  'her-100-1',     // KitchenAid Mixer:      87,400 reviews
+  'him-50-1',      // Smart Watch:           45,300 reviews
 ];
 
 const hotProducts = HOT_PRODUCT_IDS
@@ -72,7 +72,7 @@ export default function FeaturedGifts() {
       </div>
 
       <p className="text-center text-xs text-gray-400 mt-3">
-        Affiliate links â€” we may earn a small commission at no extra cost to you.
+        Affiliate links. We may earn a small commission at no extra cost to you.
       </p>
     </div>
   );

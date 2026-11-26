@@ -13,7 +13,7 @@ export default function FavoritesSidebar() {
 
   return (
     <>
-      {/* Vertical tab â€” always visible on the right edge */}
+      {/* Vertical tab, always visible on the right edge */}
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label="My Picks"
