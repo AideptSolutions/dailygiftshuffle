@@ -1760,3 +1760,62 @@ Stopping it from coming back:
 
 Still true, and cannot be fixed without rewriting public history: the exact
 numbers remain in old commits (0584b59, 6f33a4f, 9e68f19 and others).
+
+### 2026-11-25: Henoda robot building kit added (owner's pick)
+
+Owner sent a screenshot of an Amazon listing and asked for it on the site, on
+everything related to gifts for kids including the Christmas lists, and (asked
+and confirmed) the teen pages too.
+
+- Product: `kids-henoda-robot-kit` in data/products-catalog.ts, right after
+  the Secret Santa block. Product ID B0925WTHD6, found with one Creators API
+  keyword search (the owner's short link was not followed: no automated
+  access to amazon.com). Title, brand and seller match the screenshot. Not in
+  the catalog before; `kids-50-3` is a different kit.
+- What it is: Henoda's blue, white and yellow version of the Mould King
+  "Miky the Robot", model 15049, 468 pieces, ages 8 and up, driven by remote
+  or phone app (gravity steering, path mode, simple programming).
+- rating and reviewCount are 0 on purpose (no Amazon stars). Marks in
+  data/gift-ratings.json: [4,4,3,4,2,""] (1,438 to 1,439 ids). `price` is a
+  whole-dollar estimate (34). Today's price was added to the live price
+  store the same hour (1 API call), so the card shows a price.
+- Picture: no brand or retailer photo of the blue version exists outside
+  Amazon. Three image searches found only Amazon-hosted pictures, resellers'
+  photos on eBay and Mercari, and Mould King's own photos, which show the
+  white and red version. The owner was shown the choices (reseller's box
+  photo, maker's photo in the wrong colour, a generated illustration, or
+  waiting) and chose the reseller's photo of the real box
+  (ebay.com/itm/168219053631). This is the first catalog picture from a
+  marketplace listing. The warehouse barcode label stuck on the box was
+  covered with the box's own dark background; nothing else was retouched.
+  Trimmed and set on white at 800x800. Logged in data/image-sources.json
+  with a note.
+
+Placement. With no stars the automatic lists skip it (they ask for 4.3 to 4.5
+or more), so it is placed by hand:
+- New helper `withPicks(list, ids, { at, keepLength })` in lib/giftSelect.ts:
+  puts hand-picked products into a list at a position (default: fifth, the
+  start of the second row on a desktop) and keeps the list's length, so the
+  last automatic item drops off and titles such as "35 Picks" stay true.
+- Used on /christmas-gifts-for-kids, /gift-ideas-for-kids,
+  /christmas-gifts-for-teens, /gift-ideas-for-teens, /gifts-for-teenage-boys
+  and /gifts-for-teenage-girls, as `OWNER_PICKS`. On the four template pages
+  it is also added to the page's shuffle pool (at the end, so the first draw
+  a crawler sees is unchanged).
+- Through its tags it also appears on /category/tech and /category/hobby
+  (checked in the page source).
+- Not on /stocking-stuffers-for-kids: that page promises $25 or less.
+- Not in the homepage or Find a Gift shuffle: those only deal products rated
+  4.3 or more. Same limit as the white elephant and Secret Santa additions,
+  until the rating switch is turned on.
+
+Titles and descriptions untouched on all six pages (/gift-ideas-for-teens is
+protected). Finding, not changed: four of the six lists carry a heading that
+says "Top-Rated" or "Ranked", and this product has no rating; it sits there
+as the owner's pick.
+
+Checked before shipping: type check and production build pass; local
+preview: on all six pages the product is fifth, the list length is unchanged
+(36, 24, 36, 24, 35, 35), the card shows the picture, no stars and today's
+price with its time, the search markup has an offer and no rating, no
+console errors, no sideways scroll.

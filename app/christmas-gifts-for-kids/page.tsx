@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { forPage, ALL } from '@/lib/giftSelect';
+import { forPage, withPicks, ALL } from '@/lib/giftSelect';
 
 // Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
 const { curate, shufflePool } = forPage('/christmas-gifts-for-kids');
@@ -44,17 +44,25 @@ const match = (p: { id?: string; name?: string; recipients?: string[]; occasions
   !OFF_SEASON.test(p.name ?? '') &&
   (!!p.tags?.includes('kids') || isPick(p));
 
-const grid = curate({
-  match,
-  minPrice: 10,
-  minRating: 4.4,
-  sort: 'social',
-  preferMatch: isPick,
-  recipientCap: 40,
-  limit: 36,
-  pool: ALL,
-});
-const shuffle = shufflePool(match, ALL);
+// Hand-picked by the owner (2026-11-25). It has no star rating, so the
+// automatic selection below would skip it: withPicks places it at the start
+// of the second row and adds it to the shuffle.
+const OWNER_PICKS = ['kids-henoda-robot-kit'];
+
+const grid = withPicks(
+  curate({
+    match,
+    minPrice: 10,
+    minRating: 4.4,
+    sort: 'social',
+    preferMatch: isPick,
+    recipientCap: 40,
+    limit: 36,
+    pool: ALL,
+  }),
+  OWNER_PICKS,
+);
+const shuffle = withPicks(shufflePool(match, ALL), OWNER_PICKS, { at: Infinity, keepLength: false });
 
 export default function Page() {
   return (

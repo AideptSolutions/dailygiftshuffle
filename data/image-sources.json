@@ -6380,5 +6380,18 @@
     "writtenTo": "/images/products/santa-atlas-coffee.jpg",
     "provider": "serper-2026-11",
     "added": "2026-11-17"
+  },
+  "kids-henoda-robot-kit": {
+    "name": "Henoda Miky the Robot Building Kit (468 Pieces)",
+    "chosen": "https://i.ebayimg.com/images/g/08UAAOSw8yNoVaoV/s-l1200.png",
+    "domain": "eBay",
+    "page": "https://www.ebay.com/itm/168219053631",
+    "width": 1200,
+    "height": 1200,
+    "score": 0,
+    "writtenTo": "/images/products/kids-henoda-robot-kit.jpg",
+    "provider": "serper-2026-11",
+    "added": "2026-11-25",
+    "note": "Reseller photo of the real box, chosen by the owner (no brand or retailer photo of the blue version exists outside Amazon). The warehouse barcode label on the box was covered."
   }
 }

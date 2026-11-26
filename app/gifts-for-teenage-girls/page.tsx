@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import GiftGuideTemplate from '@/components/GiftGuideTemplate';
-import { forPage, ALL } from '@/lib/giftSelect';
+import { forPage, withPicks, ALL } from '@/lib/giftSelect';
 
 // Lists on this page rank by whichever rating the page uses (lib/ratingMode.ts).
 const { curate, shufflePool } = forPage('/gifts-for-teenage-girls');
@@ -33,8 +33,13 @@ export const metadata: Metadata = {
 
 const match = (p: { recipients?: string[] }) =>
   !!p.recipients?.includes('teens') || !!(p.recipients?.includes('her') && p.recipients?.includes('friends'));
-const grid = curate({ match, minPrice: 10, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 35, pool: ALL });
-const shuffle = shufflePool(match, ALL);
+// Hand-picked by the owner (2026-11-25). It has no star rating, so the
+// automatic selection below would skip it: withPicks places it at the start
+// of the second row and adds it to the shuffle.
+const OWNER_PICKS = ['kids-henoda-robot-kit'];
+
+const grid = withPicks(curate({ match, minPrice: 10, minRating: 4.5, sort: 'social', recipientCap: 30, limit: 35, pool: ALL }), OWNER_PICKS);
+const shuffle = withPicks(shufflePool(match, ALL), OWNER_PICKS, { at: Infinity, keepLength: false });
 
 export default function Page() {
   return (

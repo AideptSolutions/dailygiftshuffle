@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { products } from '@/data/products';
+import { withPicks } from '@/lib/giftSelect';
 import ProductCard from '@/components/ProductCard';
 import InlineShuffle from '@/components/InlineShuffle';
 import GuideByline from '@/components/GuideByline';
@@ -38,7 +39,12 @@ export const metadata: Metadata = {
   },
 };
 
-const teenProducts = products.filter((p) => p.recipients.includes('teens')).slice(0, 24);
+// Hand-picked by the owner (2026-11-25). It has no star rating, so the
+// automatic selection below would skip it: withPicks places it at the start
+// of the second row and adds it to the shuffle.
+const OWNER_PICKS = ['kids-henoda-robot-kit'];
+
+const teenProducts = withPicks(products.filter((p) => p.recipients.includes('teens')).slice(0, 24), OWNER_PICKS);
 
 const faqs = [
   {

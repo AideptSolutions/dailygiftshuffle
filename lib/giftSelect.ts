@@ -160,6 +160,29 @@ export function byIds(ids: string[]): AnyProduct[] {
   });
 }
 
+/**
+ * Put hand-picked products (by id) into a list at a given position. For a
+ * product the owner asked to see on a page that the automatic selection would
+ * skip, for example one with no star rating.
+ *
+ * By default the list keeps its length (the last item drops off), so a title
+ * that says "35 picks" stays true. Pass `keepLength: false` for a shuffle
+ * pool, where the pick is simply added.
+ */
+export function withPicks<T extends { id: string }>(
+  list: T[],
+  ids: string[],
+  opts: { at?: number; keepLength?: boolean } = {},
+): T[] {
+  const { at = 4, keepLength = true } = opts;
+  const picks = byIds(ids) as unknown as T[];
+  const picked = new Set(ids);
+  const rest = list.filter((p) => !picked.has(p.id));
+  const pos = Math.min(at, rest.length);
+  const out = [...rest.slice(0, pos), ...picks, ...rest.slice(pos)];
+  return keepLength ? out.slice(0, Math.max(list.length, picks.length)) : out;
+}
+
 export function curate(opts: CurateOpts): CompactProduct[] {
   const {
     match,
