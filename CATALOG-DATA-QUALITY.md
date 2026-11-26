@@ -1802,8 +1802,14 @@ or more), so it is placed by hand:
   and /gifts-for-teenage-girls, as `OWNER_PICKS`. On the four template pages
   it is also added to the page's shuffle pool (at the end, so the first draw
   a crawler sees is unchanged).
-- Through its tags it also appears on /category/tech and /category/hobby
-  (checked in the page source).
+- Category pages: it is in the page data of /category/tech and
+  /category/hobby (its tags), but it is not shown as a card there. Checked on
+  the live site after the deploy. Not looked into further; the likely reason
+  is the same star filter.
+- Live check after the deploy (commit be527dc): all six pages return the
+  product fifth with the list length unchanged, the card price shown, an
+  offer and no rating in the markup; picture loads; feed 1,356 to 1,357;
+  IndexNow sent for the six pages (HTTP 200).
 - Not on /stocking-stuffers-for-kids: that page promises $25 or less.
 - Not in the homepage or Find a Gift shuffle: those only deal products rated
   4.3 or more. Same limit as the white elephant and Secret Santa additions,
