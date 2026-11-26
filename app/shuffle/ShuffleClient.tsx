@@ -217,6 +217,7 @@ export default function ShuffleClient() {
       setRecipient(r);
       setBudget(b);
       setStep('result');
+      setIsShuffling(true); // results wait for the catalog fetch
       pendingRef.current = { rec: r, bud: b, tags: t ? [t] : undefined };
     }
   }, []);
@@ -224,8 +225,11 @@ export default function ShuffleClient() {
   useEffect(() => {
     fetch('/api/products/all')
       .then(r => r.ok ? r.json() : null)
-      .then(data => { if (data) setCatalog(data as Product[]); })
-      .catch(() => {});
+      .then(data => {
+        if (data) setCatalog(data as Product[]);
+        else setIsShuffling(false);
+      })
+      .catch(() => setIsShuffling(false));
   }, []);
 
   useEffect(() => {
@@ -565,6 +569,12 @@ export default function ShuffleClient() {
                 {/* Gift Genie: reads the visitor's persistent pins */}
                 <GeniePanel />
               </>
+            ) : isShuffling ? (
+              // The first set lands after the 400 ms shuffle animation; show this
+              // instead of the empty-state message during that gap.
+              <div className="bg-white rounded-3xl shadow-lg p-12 text-center">
+                <p className="text-gray-600 font-medium">Shuffling your gift ideas...</p>
+              </div>
             ) : (
               <div className="bg-white rounded-3xl shadow-lg p-12 text-center">
                 <p className="text-gray-600 font-medium mb-4">No products found for this combination.</p>
