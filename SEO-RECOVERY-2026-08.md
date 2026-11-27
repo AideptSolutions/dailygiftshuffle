@@ -1404,3 +1404,61 @@ is protected and the owner has not asked for a text change.
 Watch in the next Bing page export: impressions, clicks and position on
 /white-elephant-gifts against the baseline above, and the price and funny
 search groups in particular.
+
+## Checkpoint 2026-11-26: Google Page indexing export (all known pages, data to Nov 22)
+
+Source: the owner's Search Console export
+thegiftshuffle.com-Coverage-2026-11-26.zip (chart Aug 28 to Nov 22, summary
+counts only, no page lists). Nothing was changed.
+
+Counts on Nov 22: 112 indexed, 675 not indexed (787 known pages).
+
+| Reason | Pages | Earlier reading |
+|---|---|---|
+| Crawled, currently not indexed | 421 | 385 (Nov 5) |
+| Not found (404) | 209 | not recorded |
+| Discovered, currently not indexed | 37 | 60 in the sitemap view (Nov 5) |
+| Page with redirect | 4 | not recorded |
+| Redirect error | 1 | 1 |
+| Excluded by noindex | 1 | not recorded |
+| Duplicate without user-selected canonical | 1 | 6 in the sitemap view (Nov 5) |
+| Alternate page with proper canonical | 1 | 1 |
+
+Indexed count over time (all known pages): 550 on Sep 3, 444 on Sep 21, 297
+on Oct 4, 231 on Oct 23, 212 on Nov 6, 196 on Nov 9, 150 on Nov 13, 112 from
+Nov 16. Known pages went from about 792 to 813 and back to 787.
+
+Google impressions in the same chart, average per day by week: 53 (Aug 31),
+49, 37, 42, 34, 34, 40, 32, 19 (Oct 26), 26 (Nov 2), 70 (Nov 9), 69 (Nov 16).
+So impressions rose about 2.7 times from early November while the indexed
+count fell by half.
+
+READ.
+- The fall in indexed pages is, as far as these counts can show, the removed
+  /gifts/ doorway pages leaving the index: about 650 were removed in August
+  and return 410, which Google files under "Not found (404)" (209) and, for
+  a long time, under "Crawled, currently not indexed" (421). The site itself
+  has 126 pages in its sitemap, so 112 indexed is now close to the real size
+  of the site. That is the cleanup working, not pages being lost. Confidence:
+  moderate, because the export has no page lists.
+- The casino canonical problem (audit of Nov 10) looks mostly cleared:
+  "Duplicate without user-selected canonical" is 1 across all known pages,
+  and all known pages includes the six sitemap pages that had it, so at most
+  one of the six still does. This does not say the other five are indexed,
+  only that they are no longer filed as duplicates of another site.
+- "Discovered, currently not indexed" 37, against 60 for the sitemap alone on
+  Nov 5: Google has crawled at least 23 more of the real pages.
+- Only 1 page is filed under noindex, although 24 were set to noindex on
+  Nov 10 (the 23 /shuffle/[niche] pages and /wishlist). Google has not
+  processed the rest yet, or files them elsewhere.
+
+NOT ANSWERED BY THIS EXPORT (needs the report filtered to the submitted
+sitemap, and the page lists behind each reason):
+1. How many of the 126 sitemap pages are indexed (60 of 150 on Nov 5). This
+   is the number that matters.
+2. Which page is the one remaining duplicate, and where the other five of
+   the six went.
+3. Whether any real page is among the 421 crawled and not indexed, or the
+   209 not found.
+These are the same three items as the NEXT CHECK set on Nov 10 (due Nov 17
+and Nov 24), which has not been done.
