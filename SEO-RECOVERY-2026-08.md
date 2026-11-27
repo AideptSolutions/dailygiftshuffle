@@ -1462,3 +1462,102 @@ sitemap, and the page lists behind each reason):
    209 not found.
 These are the same three items as the NEXT CHECK set on Nov 10 (due Nov 17
 and Nov 24), which has not been done.
+
+### 2026-11-26 (later): the Nov 10 NEXT CHECK, done in Search Console
+
+Read-only, in the owner's signed-in Chrome (owner said yes). Report last
+updated 11/22. Nothing was changed and no indexing was requested.
+
+SUBMITTED PAGES (the sitemap, 126): 66 indexed, 60 not. On Nov 5 it was 60
+of 150.
+
+| Reason | Pages | Nov 5 |
+|---|---|---|
+| Discovered, currently not indexed (never crawled) | 37 | 60 |
+| Crawled, currently not indexed | 21 | 22 |
+| Redirect error | 1 | 1 |
+| Alternate page with proper canonical | 1 | 1 |
+| Duplicate without user-selected canonical | 0 | 6 |
+
+ITEM 1, the six pages Google had matched to betting sites: all six are
+indexed again (/best-gaming-gifts-2026, /best-luxury-gifts-2026,
+/gifts-for-wife, /mothers-day-gifts, /gifts-for-camping-and-outdoors,
+/best-baby-shower-gifts-2026). URL Inspection on /best-gaming-gifts-2026:
+"URL is on Google", last crawl Nov 22, user-declared canonical is the page
+itself, Google-selected canonical "Inspected URL". /gifts-for-wife: "URL is
+on Google". The one duplicate left across all known pages is an old doorway
+(/gifts/thoughtful-gifts-for-grandparents-anniversary, crawled Jun 25).
+So the fix of Nov 10 (error boundaries, indexing requested) is followed by
+recovery on all six. Cause still not proven.
+
+ITEM 2, /api/client-error: not read. It returned its signed-out answer in
+the owner's Chrome, and signing in needs the admin password, which is the
+owner's to type.
+
+ITEM 3, the lists.
+Indexed (66) includes: /, /stocking-stuffers, /white-elephant-gifts,
+/secret-santa-gifts, /christmas-gift-ideas, /christmas-gifts-for-her,
+/christmas-gifts-for-him, /trending-christmas-gifts-2026,
+/holiday-shopping-statistics-2026, /birthday-gift-ideas,
+/best-birthday-gifts-2026, /gifts-for-a-crush, /luxury-gifts-under-50,
+/luxury-gifts-under-200, /halloween-party-gifts, /help-me-pick-a-gift,
+/gift-genie, /category/fitness and 12 other category pages.
+
+Discovered, never crawled (37): /christmas-gifts-for-dad, -kids, -mom and
+-teens, /hanukkah-gifts, /last-minute-christmas-gifts,
+/last-minute-gift-ideas, all six stocking stuffer spokes (-for-dad, -her,
+-him, -kids, -mom, -under-10), /gifts-under-25, -50 and -100, /tech-gadgets,
+/gifts-for-teenage-girls, /gift-ideas-for-teachers, /sustainable-eco-gifts,
+/unique-birthday-gifts, /ai-personalized-gifts, /top-10-fathers-day-gifts,
+the three other top-10 pages, /blog/what-is-the-gift-genie, /category and
+nine category pages (car-accessories, halloween, hobby, kids, kitchen,
+sports, tech, travel, wedding).
+
+Crawled, not indexed (21), with the last crawl: /gifts-for-people-who-have-
+everything (Nov 10), /mothers-day-gifts-under-100 (Nov 8),
+/gifts-for-coworkers (Oct 17), /gift-ideas-for-teens (Oct 1),
+/gifts-for-boss (Aug 27), then twelve last crawled Aug 6 to 18
+(/last-minute-mothers-day-gifts, /gifts-for-girlfriend,
+/graduation-gifts-under-50, /patriotic-gifts, /mothers-day-gifts-for-wife,
+/30th-birthday-gifts, /gift-ideas-for-grandparents, /gifts-for-teenage-boys,
+/40th-birthday-gifts, /gift-ideas-for-brother, /gift-ideas-for-sister,
+/housewarming-gifts), and /best-beauty-gifts-2026 (Jul 9),
+/gift-ideas-for-friends (Jul 4), /romantic-gifts-for-her (Jun 25),
+/category/ai-smart-home (May 29).
+Redirect error: /gift-ideas-for-mom (crawled May 30). Alternate with
+canonical: /fathers-day-gifts-under-100 (May 29).
+
+All known pages, the two big groups confirmed from the lists:
+- Not found, 209: every one is a removed /gifts/ doorway.
+- Crawled, not indexed, 421: 368 removed /gifts/ doorways, the 21 real
+  pages above, and about 30 share-image addresses (/api/og?...), style
+  files and non-www duplicates. No real page is hiding there.
+- Excluded by noindex, 1: /wishlist (crawled Nov 22). The 23 /shuffle/
+  pages set to noindex on Nov 10 are not listed anywhere yet.
+- Page with redirect, 4: the non-www addresses, as intended.
+
+READ.
+- The Nov 26 export was read correctly: the fall in indexed pages is the
+  doorways leaving. Among real pages the count rose from 60 to 66.
+- Google's problem with this site is now crawling, not errors. 37 pages
+  have never been fetched, and 17 of the 21 crawled and not indexed were
+  last fetched in August or earlier, before most of the recovery work. Half
+  the Christmas layer (four recipient pages, all six stocking stuffer
+  spokes, Hanukkah, last-minute) has not been seen by Google at all, with
+  Christmas four weeks away. This matches the Nov 17 read: the pages built
+  on Nov 1 have not been picked up.
+- Two protected earners are among the crawled and not indexed:
+  /gifts-for-girlfriend (last crawl Aug 18) and /gift-ideas-for-teens
+  (Oct 1). Their traffic comes from Bing.
+
+NOT DONE, owner decision: Search Console lets the owner request indexing
+for single pages (a limited number each day). Candidates in order: the six stocking
+stuffer spokes, /christmas-gifts-for-kids, -mom, -dad and -teens,
+/hanukkah-gifts, /last-minute-christmas-gifts, /gifts-under-25.
+
+Same day, separate: the unpushed shuffle fix from another session
+(fix(shuffle): show a loading line instead of "No products found" during
+the first shuffle) was replayed on top of GitHub's copy, checked in the
+local preview (click-through path goes loading then cards, 430 ms, never
+the empty message; the ?recipient= link lands on cards), built, and pushed
+on the owner's say-so as commit fc625f6. Live code contains the new line.
